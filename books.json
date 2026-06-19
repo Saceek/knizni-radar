@@ -1,32 +1,16 @@
 {
-  "updatedAt": "2026-06-19T21:15:52.075Z",
+  "updatedAt": "2026-06-19T21:33:45.280Z",
   "books": [
-    {
-      "title": "Trieste Centrale",
-      "author": "Jaroslav Rudiš",
-      "cat": [
-        "Čeští autoři"
-      ],
-      "rating": null,
-      "ratingSource": null,
-      "readers": 31,
-      "series": null,
-      "lang": null,
-      "year": null,
-      "pages": null,
-      "publisher": null,
-      "desc": null,
-      "cover": "https://obalky.kosmas.cz/ArticleCovers/506/882_base.jpg",
-      "link": "https://www.databazeknih.cz/prehled-knihy/winterbergova-posledni-cesta-trieste-centrale-495419",
-      "prices": []
-    },
     {
       "title": "Zámek",
       "author": "Franz Kafka",
-      "cat": [],
+      "cat": [
+        "Literatura světová",
+        "Romány"
+      ],
       "rating": null,
       "ratingSource": null,
-      "readers": 27,
+      "readers": 42,
       "series": null,
       "lang": null,
       "year": null,
@@ -38,15 +22,36 @@
       "prices": []
     },
     {
-      "title": "O tom Benešovi",
-      "author": "Pavel Kosatík",
+      "title": "Trieste Centrale",
+      "author": "Jaroslav Rudiš",
       "cat": [
-        "Životopisné",
-        "Čeští autoři"
+        "Novely",
+        "Literatura česká"
       ],
       "rating": null,
       "ratingSource": null,
-      "readers": 25,
+      "readers": 41,
+      "series": null,
+      "lang": null,
+      "year": null,
+      "pages": null,
+      "publisher": null,
+      "desc": null,
+      "cover": "https://obalky.kosmas.cz/ArticleCovers/506/882_base.jpg",
+      "link": "https://www.databazeknih.cz/prehled-knihy/winterbergova-posledni-cesta-trieste-centrale-495419",
+      "prices": []
+    },
+    {
+      "title": "O tom Benešovi",
+      "author": "Pavel Kosatík",
+      "cat": [
+        "Literatura faktu",
+        "Literatura česká",
+        "Historie"
+      ],
+      "rating": null,
+      "ratingSource": null,
+      "readers": 35,
       "series": null,
       "lang": null,
       "year": null,
@@ -58,142 +63,15 @@
       "prices": []
     },
     {
-      "title": "Zoufalství",
-      "author": "Milan Exner",
-      "cat": [],
-      "rating": null,
-      "ratingSource": null,
-      "readers": 20,
-      "series": null,
-      "lang": null,
-      "year": null,
-      "pages": null,
-      "publisher": null,
-      "desc": null,
-      "cover": "https://obalky.kosmas.cz/ArticleCovers/132/496.gif",
-      "link": "https://www.databazeknih.cz/prehled-knihy/zoufalstvi-15138",
-      "prices": []
-    },
-    {
-      "title": "Marek Dvořák: Už letím",
-      "author": "Martin Moravec",
-      "cat": [
-        "Životopisné"
-      ],
-      "rating": null,
-      "ratingSource": null,
-      "readers": 20,
-      "series": null,
-      "lang": null,
-      "year": null,
-      "pages": null,
-      "publisher": null,
-      "desc": null,
-      "cover": "https://www.knihydobrovsky.cz/thumbs/product-preview-big/default.image.png",
-      "link": "https://www.databazeknih.cz/prehled-knihy/marek-dvorak-uz-letim-599493",
-      "prices": [
-        {
-          "shop": "Dobrovský",
-          "price": 384,
-          "url": "https://www.knihydobrovsky.cz/kniha/uz-letim-803544005"
-        }
-      ]
-    },
-    {
-      "title": "Pohádky z nemocnice",
-      "author": "Drahomíra Holmannová",
-      "cat": [
-        "Čeští autoři"
-      ],
-      "rating": null,
-      "ratingSource": null,
-      "readers": 19,
-      "series": null,
-      "lang": null,
-      "year": null,
-      "pages": null,
-      "publisher": null,
-      "desc": null,
-      "cover": "https://obalky.kosmas.cz/ArticleCovers/569/602_base.jpg",
-      "link": "https://www.databazeknih.cz/prehled-knihy/pohadky-z-nemocnice-220818",
-      "prices": []
-    },
-    {
-      "title": "Hřbitov",
-      "author": "František Kotleta",
-      "cat": [
-        "Čeští autoři"
-      ],
-      "rating": null,
-      "ratingSource": null,
-      "readers": 19,
-      "series": null,
-      "lang": null,
-      "year": null,
-      "pages": null,
-      "publisher": null,
-      "desc": null,
-      "cover": "https://www.knihydobrovsky.cz/thumbs/product-preview-big/default.image.png",
-      "link": "https://www.databazeknih.cz/prehled-knihy/hrbitov-595656",
-      "prices": [
-        {
-          "shop": "Dobrovský",
-          "price": 399,
-          "url": "https://www.knihydobrovsky.cz/kniha/atomove-selmy-hrbitov-803378826"
-        }
-      ]
-    },
-    {
-      "title": "Mluvit a naslouchat",
-      "author": "Gertrude Stein",
-      "cat": [],
-      "rating": null,
-      "ratingSource": null,
-      "readers": 18,
-      "series": null,
-      "lang": null,
-      "year": null,
-      "pages": null,
-      "publisher": null,
-      "desc": null,
-      "cover": "https://obalky.kosmas.cz/ArticleCovers/266/955_base.jpg",
-      "link": "https://www.databazeknih.cz/prehled-knihy/mluvit-a-naslouchat-419178",
-      "prices": []
-    },
-    {
-      "title": "Kdo chytá v lese",
-      "author": "Tess M. Puffrová",
-      "cat": [
-        "Čeští autoři"
-      ],
-      "rating": null,
-      "ratingSource": null,
-      "readers": 18,
-      "series": null,
-      "lang": null,
-      "year": null,
-      "pages": null,
-      "publisher": null,
-      "desc": null,
-      "cover": "https://www.knihydobrovsky.cz/thumbs/product-preview-big/default.image.png",
-      "link": "https://www.databazeknih.cz/prehled-knihy/kdo-chyta-v-lese-595985",
-      "prices": [
-        {
-          "shop": "Dobrovský",
-          "price": 319,
-          "url": "https://www.knihydobrovsky.cz/kniha/kdo-chyta-v-lese-803378822"
-        }
-      ]
-    },
-    {
       "title": "Zlatá krev",
       "author": "F. P. Tavarnok",
       "cat": [
-        "Detektivky"
+        "Detektivky, krimi",
+        "Literatura česká"
       ],
       "rating": null,
       "ratingSource": null,
-      "readers": 17,
+      "readers": 27,
       "series": null,
       "lang": null,
       "year": null,
@@ -216,12 +94,177 @@
       ]
     },
     {
-      "title": "Adam Haberberg",
-      "author": "Yasmina Reza",
-      "cat": [],
+      "title": "Zoufalství",
+      "author": "Milan Exner",
+      "cat": [
+        "Romány",
+        "Literatura česká"
+      ],
       "rating": null,
       "ratingSource": null,
-      "readers": 17,
+      "readers": 25,
+      "series": null,
+      "lang": null,
+      "year": null,
+      "pages": null,
+      "publisher": null,
+      "desc": null,
+      "cover": "https://obalky.kosmas.cz/ArticleCovers/132/496.gif",
+      "link": "https://www.databazeknih.cz/prehled-knihy/zoufalstvi-15138",
+      "prices": []
+    },
+    {
+      "title": "Marek Dvořák: Už letím",
+      "author": "Martin Moravec",
+      "cat": [
+        "Literatura naučná",
+        "Biografie a memoáry",
+        "Příběhy"
+      ],
+      "rating": null,
+      "ratingSource": null,
+      "readers": 25,
+      "series": null,
+      "lang": null,
+      "year": null,
+      "pages": null,
+      "publisher": null,
+      "desc": null,
+      "cover": "https://www.knihydobrovsky.cz/thumbs/product-preview-big/default.image.png",
+      "link": "https://www.databazeknih.cz/prehled-knihy/marek-dvorak-uz-letim-599493",
+      "prices": [
+        {
+          "shop": "Dobrovský",
+          "price": 384,
+          "url": "https://www.knihydobrovsky.cz/kniha/uz-letim-803544005"
+        }
+      ]
+    },
+    {
+      "title": "Pohádky z nemocnice",
+      "author": "Drahomíra Holmannová",
+      "cat": [
+        "Pro děti a mládež",
+        "Pohádky a bajky"
+      ],
+      "rating": null,
+      "ratingSource": null,
+      "readers": 24,
+      "series": null,
+      "lang": null,
+      "year": null,
+      "pages": null,
+      "publisher": null,
+      "desc": null,
+      "cover": "https://obalky.kosmas.cz/ArticleCovers/569/602_base.jpg",
+      "link": "https://www.databazeknih.cz/prehled-knihy/pohadky-z-nemocnice-220818",
+      "prices": []
+    },
+    {
+      "title": "Hřbitov",
+      "author": "František Kotleta",
+      "cat": [
+        "Romány",
+        "Literatura česká",
+        "Sci-fi"
+      ],
+      "rating": null,
+      "ratingSource": null,
+      "readers": 24,
+      "series": null,
+      "lang": null,
+      "year": null,
+      "pages": null,
+      "publisher": null,
+      "desc": null,
+      "cover": "https://www.knihydobrovsky.cz/thumbs/product-preview-big/default.image.png",
+      "link": "https://www.databazeknih.cz/prehled-knihy/hrbitov-595656",
+      "prices": [
+        {
+          "shop": "Dobrovský",
+          "price": 399,
+          "url": "https://www.knihydobrovsky.cz/kniha/atomove-selmy-hrbitov-803378826"
+        }
+      ]
+    },
+    {
+      "title": "Přetrvávající primární reflexy - opomíjený faktor problémů učení a chování",
+      "author": "Marja Volemanová",
+      "cat": [
+        "Literatura naučná",
+        "Psychologie a pedagogika",
+        "Vzdělávání, školství"
+      ],
+      "rating": null,
+      "ratingSource": null,
+      "readers": 23,
+      "series": null,
+      "lang": null,
+      "year": null,
+      "pages": null,
+      "publisher": null,
+      "desc": null,
+      "cover": "https://obalky.kosmas.cz/ArticleCovers/564/425_base.jpg",
+      "link": "https://www.databazeknih.cz/prehled-knihy/pretrvavajici-primarni-reflexy-opomijeny-faktor-problemu-uceni-a-chovani-467305",
+      "prices": []
+    },
+    {
+      "title": "Mluvit a naslouchat",
+      "author": "Gertrude Stein",
+      "cat": [
+        "Literatura světová",
+        "Fejetony, eseje"
+      ],
+      "rating": null,
+      "ratingSource": null,
+      "readers": 23,
+      "series": null,
+      "lang": null,
+      "year": null,
+      "pages": null,
+      "publisher": null,
+      "desc": null,
+      "cover": "https://obalky.kosmas.cz/ArticleCovers/266/955_base.jpg",
+      "link": "https://www.databazeknih.cz/prehled-knihy/mluvit-a-naslouchat-419178",
+      "prices": []
+    },
+    {
+      "title": "Kdo chytá v lese",
+      "author": "Tess M. Puffrová",
+      "cat": [
+        "Romány",
+        "Pro ženy",
+        "Literatura česká"
+      ],
+      "rating": null,
+      "ratingSource": null,
+      "readers": 23,
+      "series": null,
+      "lang": null,
+      "year": null,
+      "pages": null,
+      "publisher": null,
+      "desc": null,
+      "cover": "https://www.knihydobrovsky.cz/thumbs/product-preview-big/default.image.png",
+      "link": "https://www.databazeknih.cz/prehled-knihy/kdo-chyta-v-lese-595985",
+      "prices": [
+        {
+          "shop": "Dobrovský",
+          "price": 319,
+          "url": "https://www.knihydobrovsky.cz/kniha/kdo-chyta-v-lese-803378822"
+        }
+      ]
+    },
+    {
+      "title": "Adam Haberberg",
+      "author": "Yasmina Reza",
+      "cat": [
+        "Literatura světová",
+        "Romány"
+      ],
+      "rating": null,
+      "ratingSource": null,
+      "readers": 22,
       "series": null,
       "lang": null,
       "year": null,
@@ -235,10 +278,14 @@
     {
       "title": "Satanova aféra",
       "author": "H. D. Carlton",
-      "cat": [],
+      "cat": [
+        "Literatura světová",
+        "Pro ženy",
+        "Erotika"
+      ],
       "rating": null,
       "ratingSource": null,
-      "readers": 17,
+      "readers": 22,
       "series": null,
       "lang": null,
       "year": null,
@@ -258,10 +305,12 @@
     {
       "title": "Přítel",
       "author": "Helen Exley",
-      "cat": [],
+      "cat": [
+        "Literatura světová"
+      ],
       "rating": null,
       "ratingSource": null,
-      "readers": 15,
+      "readers": 20,
       "series": null,
       "lang": null,
       "year": null,
@@ -282,11 +331,12 @@
       "title": "Noční chodci",
       "author": "Jaroslav Rudiš",
       "cat": [
-        "Čeští autoři"
+        "Literatura světová",
+        "Komiksy"
       ],
       "rating": null,
       "ratingSource": null,
-      "readers": 14,
+      "readers": 19,
       "series": null,
       "lang": null,
       "year": null,
@@ -300,10 +350,14 @@
     {
       "title": "Nocticadia",
       "author": "Keri Lake",
-      "cat": [],
+      "cat": [
+        "Literatura světová",
+        "Romány",
+        "Fantasy"
+      ],
       "rating": null,
       "ratingSource": null,
-      "readers": 14,
+      "readers": 19,
       "series": null,
       "lang": null,
       "year": null,
@@ -321,33 +375,16 @@
       ]
     },
     {
-      "title": "Přetrvávající primární reflexy - opomíjený faktor problémů učení a chování",
-      "author": "Marja Volemanová",
-      "cat": [
-        "Čeští autoři"
-      ],
-      "rating": null,
-      "ratingSource": null,
-      "readers": 13,
-      "series": null,
-      "lang": null,
-      "year": null,
-      "pages": null,
-      "publisher": null,
-      "desc": null,
-      "cover": "https://obalky.kosmas.cz/ArticleCovers/564/425_base.jpg",
-      "link": "https://www.databazeknih.cz/prehled-knihy/pretrvavajici-primarni-reflexy-opomijeny-faktor-problemu-uceni-a-chovani-467305",
-      "prices": []
-    },
-    {
       "title": "Íllias",
       "author": "Homér",
       "cat": [
-        "Čeští autoři"
+        "Literatura světová",
+        "Poezie",
+        "Pověsti"
       ],
       "rating": null,
       "ratingSource": null,
-      "readers": 13,
+      "readers": 18,
       "series": null,
       "lang": null,
       "year": null,
@@ -365,14 +402,36 @@
       ]
     },
     {
-      "title": "Odysseia",
-      "author": "Homér",
+      "title": "Spravedlivý růst",
+      "author": "Daniel Prokop",
       "cat": [
-        "Čeští autoři"
+        "Literatura naučná",
+        "Společnost"
       ],
       "rating": null,
       "ratingSource": null,
-      "readers": 12,
+      "readers": 17,
+      "series": null,
+      "lang": null,
+      "year": null,
+      "pages": null,
+      "publisher": null,
+      "desc": null,
+      "cover": "https://obalky.kosmas.cz/ArticleCovers/557/209_base.jpg",
+      "link": "https://www.databazeknih.cz/prehled-knihy/spravedlivy-rust-602380",
+      "prices": []
+    },
+    {
+      "title": "Odysseia",
+      "author": "Homér",
+      "cat": [
+        "Literatura světová",
+        "Dobrodružné",
+        "Poezie"
+      ],
+      "rating": null,
+      "ratingSource": null,
+      "readers": 17,
       "series": null,
       "lang": null,
       "year": null,
@@ -393,11 +452,11 @@
       "title": "Český román a jiné texty",
       "author": "Ladislav Klíma",
       "cat": [
-        "Čeští autoři"
+        "Literatura česká"
       ],
       "rating": null,
       "ratingSource": null,
-      "readers": 11,
+      "readers": 16,
       "series": null,
       "lang": null,
       "year": null,
@@ -412,12 +471,13 @@
       "title": "Tajemná postava",
       "author": "Vlastimil Vondruška",
       "cat": [
-        "Detektivky",
-        "Čeští autoři"
+        "Detektivky, krimi",
+        "Literatura česká",
+        "Historické romány"
       ],
       "rating": null,
       "ratingSource": null,
-      "readers": 11,
+      "readers": 16,
       "series": null,
       "lang": null,
       "year": null,
@@ -437,10 +497,13 @@
     {
       "title": "Král vlků",
       "author": "Ernest Thompson Seton",
-      "cat": [],
+      "cat": [
+        "Literatura světová",
+        "Dobrodružné"
+      ],
       "rating": null,
       "ratingSource": null,
-      "readers": 10,
+      "readers": 15,
       "series": null,
       "lang": null,
       "year": null,
@@ -460,10 +523,14 @@
     {
       "title": "Penzion v Portugalsku",
       "author": "Julie Caplin",
-      "cat": [],
+      "cat": [
+        "Literatura světová",
+        "Romány",
+        "Pro ženy"
+      ],
       "rating": null,
       "ratingSource": null,
-      "readers": 9,
+      "readers": 14,
       "series": null,
       "lang": null,
       "year": null,
@@ -483,10 +550,14 @@
     {
       "title": "Sojka & Sekáč",
       "author": "Brynne Weaver",
-      "cat": [],
+      "cat": [
+        "Literatura světová",
+        "Romány",
+        "Pro ženy"
+      ],
       "rating": null,
       "ratingSource": null,
-      "readers": 8,
+      "readers": 13,
       "series": null,
       "lang": null,
       "year": null,
@@ -504,31 +575,15 @@
       ]
     },
     {
-      "title": "Spravedlivý růst",
-      "author": "Daniel Prokop",
-      "cat": [],
-      "rating": null,
-      "ratingSource": null,
-      "readers": 7,
-      "series": null,
-      "lang": null,
-      "year": null,
-      "pages": null,
-      "publisher": null,
-      "desc": null,
-      "cover": "https://obalky.kosmas.cz/ArticleCovers/557/209_base.jpg",
-      "link": "https://www.databazeknih.cz/prehled-knihy/spravedlivy-rust-602380",
-      "prices": []
-    },
-    {
       "title": "Finále",
       "author": "František Kožík",
       "cat": [
-        "Čeští autoři"
+        "Pro děti a mládež",
+        "Dívčí romány"
       ],
       "rating": null,
       "ratingSource": null,
-      "readers": 7,
+      "readers": 12,
       "series": null,
       "lang": null,
       "year": null,
@@ -548,10 +603,14 @@
     {
       "title": "Průvodce temného pána pro randění a další válečné zločiny",
       "author": "Tiffany Hunt",
-      "cat": [],
+      "cat": [
+        "Literatura světová",
+        "Romány",
+        "Fantasy"
+      ],
       "rating": null,
       "ratingSource": null,
-      "readers": 6,
+      "readers": 11,
       "series": null,
       "lang": null,
       "year": null,
@@ -567,6 +626,341 @@
           "url": "https://www.knihydobrovsky.cz/kniha/pruvodce-temneho-pana-pro-randeni-a-dalsi-valecne-zlociny-803544941"
         }
       ]
+    },
+    {
+      "title": "Táňa, Praha 3, Žižkov",
+      "author": "Marie Zelbová",
+      "cat": [
+        "Literatura česká",
+        "Biografie a memoáry",
+        "Rodina"
+      ],
+      "rating": null,
+      "ratingSource": null,
+      "readers": 10,
+      "series": null,
+      "lang": null,
+      "year": null,
+      "pages": null,
+      "publisher": null,
+      "desc": null,
+      "cover": "https://obalky.kosmas.cz/ArticleCovers/568/184_base.jpg",
+      "link": "https://www.databazeknih.cz/prehled-knihy/tana-praha-3-zizkov-581780",
+      "prices": []
+    },
+    {
+      "title": "Pod jednou střechou",
+      "author": "Nora Adamjan",
+      "cat": [
+        "Literatura světová",
+        "Povídky"
+      ],
+      "rating": null,
+      "ratingSource": null,
+      "readers": 10,
+      "series": null,
+      "lang": null,
+      "year": null,
+      "pages": null,
+      "publisher": null,
+      "desc": null,
+      "cover": "https://www.knihydobrovsky.cz/thumbs/product-preview-big/default.image.png",
+      "link": "https://www.databazeknih.cz/prehled-knihy/pod-jednou-strechou-234610",
+      "prices": [
+        {
+          "shop": "Dobrovský",
+          "price": 319,
+          "url": "https://www.knihydobrovsky.cz/kniha/pod-jednou-strechou-803367570"
+        }
+      ]
+    },
+    {
+      "title": "Vona",
+      "author": "Petra Klabouchová",
+      "cat": [
+        "Detektivky, krimi",
+        "Horory",
+        "Thrillery"
+      ],
+      "rating": null,
+      "ratingSource": null,
+      "readers": 9,
+      "series": null,
+      "lang": null,
+      "year": null,
+      "pages": null,
+      "publisher": null,
+      "desc": null,
+      "cover": "https://obalky.kosmas.cz/ArticleCovers/564/615_base.jpg",
+      "link": "https://www.databazeknih.cz/prehled-knihy/vona-591365",
+      "prices": []
+    },
+    {
+      "title": "Kouzelná třída",
+      "author": "Zuzana Pospíšilová",
+      "cat": [
+        "Literatura česká",
+        "Fantasy",
+        "Pro děti a mládež"
+      ],
+      "rating": null,
+      "ratingSource": null,
+      "readers": 9,
+      "series": null,
+      "lang": null,
+      "year": null,
+      "pages": null,
+      "publisher": null,
+      "desc": null,
+      "cover": "https://www.knihydobrovsky.cz/thumbs/product-preview-big/default.image.png",
+      "link": "https://www.databazeknih.cz/prehled-knihy/kouzelna-trida-kouzelna-trida-49873",
+      "prices": [
+        {
+          "shop": "Dobrovský",
+          "price": 179,
+          "url": "https://www.knihydobrovsky.cz/kniha/kouzelna-trida-10175"
+        }
+      ]
+    },
+    {
+      "title": "Král Nezemě",
+      "author": "Nikki St. Crowe",
+      "cat": [
+        "Literatura světová",
+        "Pro ženy"
+      ],
+      "rating": null,
+      "ratingSource": null,
+      "readers": 8,
+      "series": null,
+      "lang": null,
+      "year": null,
+      "pages": null,
+      "publisher": null,
+      "desc": null,
+      "cover": "https://www.knihydobrovsky.cz/thumbs/product-preview-big/default.image.png",
+      "link": "https://www.databazeknih.cz/prehled-knihy/kral-nezeme-594032",
+      "prices": [
+        {
+          "shop": "Dobrovský",
+          "price": 330,
+          "url": "https://www.knihydobrovsky.cz/kniha/kral-nezeme-803367779"
+        }
+      ]
+    },
+    {
+      "title": "Krev Kruh Černá: O squatech, antifě a Palestině",
+      "author": "Radek Wollmann",
+      "cat": [
+        "Romány",
+        "Literatura česká"
+      ],
+      "rating": null,
+      "ratingSource": null,
+      "readers": 7,
+      "series": null,
+      "lang": null,
+      "year": null,
+      "pages": null,
+      "publisher": null,
+      "desc": null,
+      "cover": "https://obalky.kosmas.cz/ArticleCovers/562/981_base.jpg",
+      "link": "https://www.databazeknih.cz/prehled-knihy/krev-kruh-cerna-o-squatech-antife-a-palestine-579744",
+      "prices": []
+    },
+    {
+      "title": "Tohle nikdo nečekal",
+      "author": "Shari Lapena",
+      "cat": [
+        "Literatura světová",
+        "Thrillery"
+      ],
+      "rating": null,
+      "ratingSource": null,
+      "readers": 7,
+      "series": null,
+      "lang": null,
+      "year": null,
+      "pages": null,
+      "publisher": null,
+      "desc": null,
+      "cover": "https://www.knihydobrovsky.cz/thumbs/product-preview-big/default.image.png",
+      "link": "https://www.databazeknih.cz/prehled-knihy/tohle-nikdo-necekal-600150",
+      "prices": [
+        {
+          "shop": "Dobrovský",
+          "price": 359,
+          "url": "https://www.knihydobrovsky.cz/kniha/tohle-nikdo-necekal-803540355"
+        }
+      ]
+    },
+    {
+      "title": "Hamsun",
+      "author": "Per Olov Enquist",
+      "cat": [
+        "Literatura světová",
+        "Romány",
+        "Biografie a memoáry"
+      ],
+      "rating": null,
+      "ratingSource": null,
+      "readers": 6,
+      "series": null,
+      "lang": null,
+      "year": null,
+      "pages": null,
+      "publisher": null,
+      "desc": null,
+      "cover": "https://obalky.kosmas.cz/ArticleCovers/107/449.gif",
+      "link": "https://www.databazeknih.cz/prehled-knihy/hamsun-14560",
+      "prices": []
+    },
+    {
+      "title": "Nejsmutnější kapela na světě",
+      "author": "László Darvasi",
+      "cat": [
+        "Literatura světová",
+        "Povídky"
+      ],
+      "rating": null,
+      "ratingSource": null,
+      "readers": 5,
+      "series": null,
+      "lang": null,
+      "year": null,
+      "pages": null,
+      "publisher": null,
+      "desc": null,
+      "cover": "https://obalky.kosmas.cz/ArticleCovers/138/257.gif",
+      "link": "https://www.databazeknih.cz/prehled-knihy/nejsmutnejsi-kapela-na-svete-14026",
+      "prices": []
+    },
+    {
+      "title": "Tvůj nůž v mém srdci",
+      "author": "K. M. Moronova",
+      "cat": [
+        "Literatura světová",
+        "Pro ženy",
+        "Erotika"
+      ],
+      "rating": null,
+      "ratingSource": null,
+      "readers": 5,
+      "series": null,
+      "lang": null,
+      "year": null,
+      "pages": null,
+      "publisher": null,
+      "desc": null,
+      "cover": "https://www.knihydobrovsky.cz/thumbs/product-preview-big/default.image.png",
+      "link": "https://www.databazeknih.cz/prehled-knihy/tvuj-nuz-v-mem-srdci-589952",
+      "prices": [
+        {
+          "shop": "Dobrovský",
+          "price": 356,
+          "url": "https://www.knihydobrovsky.cz/kniha/tvuj-nuz-v-mem-srdci-803230531"
+        }
+      ]
+    },
+    {
+      "title": "Nevyměkni",
+      "author": "Stephen King",
+      "cat": [
+        "Literatura světová",
+        "Romány",
+        "Thrillery"
+      ],
+      "rating": null,
+      "ratingSource": null,
+      "readers": 4,
+      "series": null,
+      "lang": null,
+      "year": null,
+      "pages": null,
+      "publisher": null,
+      "desc": null,
+      "cover": "https://www.knihydobrovsky.cz/thumbs/product-preview-big/default.image.png",
+      "link": "https://www.databazeknih.cz/prehled-knihy/nevymekni-593460",
+      "prices": [
+        {
+          "shop": "Dobrovský",
+          "price": 439,
+          "url": "https://www.knihydobrovsky.cz/kniha/nevymekni-803330793"
+        }
+      ]
+    },
+    {
+      "title": "Nevhodný letní románek",
+      "author": "Ali Hazelwood",
+      "cat": [
+        "Literatura světová",
+        "Romány",
+        "Pro ženy"
+      ],
+      "rating": null,
+      "ratingSource": null,
+      "readers": 3,
+      "series": null,
+      "lang": null,
+      "year": null,
+      "pages": null,
+      "publisher": null,
+      "desc": null,
+      "cover": "https://www.knihydobrovsky.cz/thumbs/product-preview-big/default.image.png",
+      "link": "https://www.databazeknih.cz/prehled-knihy/nevhodny-letni-romanek-586599",
+      "prices": [
+        {
+          "shop": "Dobrovský",
+          "price": 402,
+          "url": "https://www.knihydobrovsky.cz/kniha/nevhodny-letni-romanek-803102911"
+        }
+      ]
+    },
+    {
+      "title": "Hodná holka",
+      "author": "Mary Kubica",
+      "cat": [
+        "Literatura světová",
+        "Thrillery"
+      ],
+      "rating": null,
+      "ratingSource": null,
+      "readers": 2,
+      "series": null,
+      "lang": null,
+      "year": null,
+      "pages": null,
+      "publisher": null,
+      "desc": null,
+      "cover": "https://www.knihydobrovsky.cz/thumbs/product-preview-big/default.image.png",
+      "link": "https://www.databazeknih.cz/prehled-knihy/hodna-holka-259968",
+      "prices": [
+        {
+          "shop": "Dobrovský",
+          "price": 319,
+          "url": "https://www.knihydobrovsky.cz/kniha/hodna-holka-803346302"
+        }
+      ]
+    },
+    {
+      "title": "Jsem tu novej",
+      "author": "Matt Field",
+      "cat": [
+        "Literatura světová",
+        "Cestopisy a místopisy"
+      ],
+      "rating": null,
+      "ratingSource": null,
+      "readers": 1,
+      "series": null,
+      "lang": null,
+      "year": null,
+      "pages": null,
+      "publisher": null,
+      "desc": null,
+      "cover": "https://obalky.kosmas.cz/ArticleCovers/553/841_base.jpg",
+      "link": "https://www.databazeknih.cz/prehled-knihy/jsem-tu-novej-594447",
+      "prices": []
     }
   ]
 }
