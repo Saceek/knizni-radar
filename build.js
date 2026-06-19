@@ -1,20 +1,16 @@
 /**
- * Knižní radar – sběr z PRODEJNÍCH bestsellerů obchodů + hodnocení databazeknih
- * ----------------------------------------------------------------------------
- * Node 18+ (globální fetch). Závislost: cheerio.
- *   npm i cheerio
- *   node build.js
+ * Knižní radar – prodejní bestsellery obchodů + hodnocení databazeknih
+ * --------------------------------------------------------------------
+ * Node 18+ (globální fetch). Závislost: cheerio.   npm i cheerio && node build.js
  *
- * Logika (dle zadání – relevantní je reálný prodej, ne „právě čtu"):
- *   1) seed = prodejní žebříčky obchodů (Kosmas, Dobrovský, Luxor)
- *   2) agregace napříč obchody → ceny pro porovnání; kniha u víc obchodů = výš
- *   3) hodnocení (%), kategorie, autor, popis a obálka z databazeknih.cz
+ * KLÍČOVÁ OPRAVA proti minulé verzi:
+ *   Název knihy NEBEREME z textu odkazu (tam jsou štítky „-71 %", „Kniha", „Bestseller…"),
+ *   ale z URL produktu (slug) a knihy slučujeme podle ID z URL. Z čistého názvu pak
+ *   hledáme na databazeknih → přesný název, autor, hodnocení, žánr, obálka.
  *
- * UPOZORNĚNÍ (čti):
- *   - Tohle je SCRAPING. Je křehký (změní-li obchod HTML, je třeba doladit selektory)
- *     a e-shopy mohou blokovat IP GitHub Actions (bot-ochrana). Pokud nějaký obchod
- *     vrátí 0 knih, uvidíš to v logu → robustní cesta je pak jeho affiliate/produktový feed.
- *   - Slušně: 1×/den, vlastní User-Agent, pauzy. Respektuj robots.txt a podmínky obchodů.
+ * POZN.: Je to scraping (křehké, e-shopy mohou blokovat / renderovat JS). Robustní
+ *   dlouhodobá cesta je affiliate/produktový feed obchodu. Luxor přes prostý fetch
+ *   nejede (JS render) → buď feed, nebo vypnuto.
  */
 
 const cheerio = require("cheerio");
@@ -23,22 +19,27 @@ const path = require("path");
 
 const OUT = path.join(__dirname, "books.json");
 const DBK = "https://www.databazeknih.cz";
-const UA = "KnizniRadar/1.0 (+kontakt@example.cz)"; // dosaď reálný kontakt
+const UA = "KnizniRadar/1.0 (+kontakt@example.cz)";
 const DELAY = 700;
-const PER_SHOP = 20;   // kolik bestsellerů brát z každého obchodu
-const MAX_BOOKS = 26;  // kolik nakonec dotáhnout z databazeknih
+const PER_SHOP = 20;
+const MAX_BOOKS = 26;
 
+// re: zachytí ID i slug z URL produktu (idG/slugG = index capture group)
 const SHOPS = [
-  { name: "Kosmas",    base: "https://www.kosmas.cz",         url: "https://www.kosmas.cz/bestsellery/1x20/?articleTypeIds=3563,3564,3565", detail: /\/knihy\/\d+\// },
-  { name: "Dobrovský", base: "https://www.knihydobrovsky.cz", url: "https://www.knihydobrovsky.cz/bestsellery/knihy",                       detail: /\/kniha\/[\w-]+-\d+/ },
-  { name: "Luxor",     base: "https://www.luxor.cz",          url: "https://www.luxor.cz/c/9548/knihy",                                     detail: /\/v\/\d+\// },
-  // Palmknihy (hlavně e-knihy) – ověř URL/selektory, pak odkomentuj:
-  // { name: "Palmknihy", base: "https://www.palmknihy.cz", url: "https://www.palmknihy.cz/elektronicke-knihy", detail: /\/kniha\// },
+  { name: "Kosmas", base: "https://www.kosmas.cz", url: "https://www.kosmas.cz/bestsellery/1x20/?articleTypeIds=3563,3564,3565",
+    re: /\/knihy\/(\d+)\/([^/?#]+)/, idG: 1, slugG: 2 },
+  { name: "Dobrovský", base: "https://www.knihydobrovsky.cz", url: "https://www.knihydobrovsky.cz/bestsellery/knihy",
+    re: /\/kniha\/([a-z0-9-]+)-(\d+)\b/, idG: 2, slugG: 1 },
+  // Luxor: JS-render → prostý fetch nestačí; zapnout až přes feed.
 ];
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const norm = (s = "") => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
 const abs = (base, href) => (!href ? null : href.startsWith("http") ? href : base + href);
+function slugToTitle(slug) {
+  const t = slug.replace(/[-_]/g, " ").replace(/\s+/g, " ").trim();
+  return t ? t.charAt(0).toUpperCase() + t.slice(1) : "";
+}
 
 async function getHtml(url) {
   const res = await fetch(url, { headers: { "User-Agent": UA, "Accept-Language": "cs" } });
@@ -46,43 +47,49 @@ async function getHtml(url) {
   return res.text();
 }
 
-// --- scrape jednoho obchodu: vrátí [{title, url, price, cover}] v pořadí žebříčku ---
+// --- scrape obchodu: dedup podle ID z URL, název ze slugu, cena+obálka z karty ---
 function scrapeShop(html, shop) {
   const $ = cheerio.load(html);
-  const seen = new Set();
-  const items = [];
-  $("a").each((_, a) => {
+  const byId = new Map(); // id → {id, slugTitle, url, price, cover, order}
+  let order = 0;
+  $("a[href]").each((_, a) => {
     const href = $(a).attr("href") || "";
-    if (!shop.detail.test(href)) return;
-    const title = ($(a).attr("title") || $(a).text() || "").replace(/\s+/g, " ").trim();
-    if (title.length < 2) return;
-    const key = norm(title);
-    if (seen.has(key)) return;
-
-    // karta = nejbližší rozumný kontejner
-    let scope = $(a).closest("li");
-    if (!scope.length) scope = $(a).closest("article");
-    if (!scope.length) scope = $(a).parent().parent();
-    const text = scope.text();
-    const prices = [...text.matchAll(/(\d[\d\s]*)\s*Kč/g)]
-      .map((m) => parseInt(m[1].replace(/\s/g, ""), 10))
-      .filter((n) => n >= 20 && n < 5000);
-    const price = prices.length ? Math.min(...prices) : null; // nejnižší uvedená = aktuální/akční
+    const m = shop.re.exec(href);
+    if (!m) return;
+    const id = m[shop.idG];
+    const slug = m[shop.slugG];
+    if (byId.has(id)) {
+      // doplň cenu/obálku, kdyby chyběly (různé odkazy téže karty)
+      const b = byId.get(id);
+      if (!b.price || !b.cover) {
+        const sc = $(a).closest("li, article, [class*='product'], [class*='item']");
+        const scope = sc.length ? sc : $(a).parent().parent();
+        if (!b.price) {
+          const pr = [...scope.text().matchAll(/(\d[\d\s]*)\s*Kč/g)].map((x) => parseInt(x[1].replace(/\s/g, ""), 10)).filter((n) => n >= 20 && n < 5000);
+          if (pr.length) b.price = Math.min(...pr);
+        }
+        if (!b.cover) { const img = scope.find("img").first(); b.cover = abs(shop.base, img.attr("src") || img.attr("data-src") || img.attr("data-original")); }
+      }
+      return;
+    }
+    const sc = $(a).closest("li, article, [class*='product'], [class*='item']");
+    const scope = sc.length ? sc : $(a).parent().parent();
+    const prices = [...scope.text().matchAll(/(\d[\d\s]*)\s*Kč/g)].map((x) => parseInt(x[1].replace(/\s/g, ""), 10)).filter((n) => n >= 20 && n < 5000);
     const img = scope.find("img").first();
-    const cover = img.attr("src") || img.attr("data-src") || img.attr("data-original") || null;
-
-    seen.add(key);
-    items.push({ title, url: abs(shop.base, href), price, cover: cover ? abs(shop.base, cover) : null });
+    byId.set(id, {
+      id, slugTitle: slugToTitle(slug), url: abs(shop.base, href),
+      price: prices.length ? Math.min(...prices) : null,
+      cover: abs(shop.base, img.attr("src") || img.attr("data-src") || img.attr("data-original")),
+      order: order++,
+    });
   });
-  return items.slice(0, PER_SHOP);
+  return [...byId.values()].sort((a, b) => a.order - b.order).slice(0, PER_SHOP);
 }
 
-// --- databazeknih: detail knihy ---
+// --- databazeknih: detail (název, autor, hodnocení, žánr, popis, rok, obálka) ---
 function parseDetail($) {
-  const author =
-    $("[itemprop='author']").first().text().trim() ||
-    $("a[href*='/autori/']").first().text().trim() || "neznámý autor";
-
+  const title = $("h1[itemprop='name'], h1.book_title, h1").first().text().replace(/\s+/g, " ").trim() || null;
+  const author = $("[itemprop='author']").first().text().trim() || $("a[href*='/autori/']").first().text().trim() || null;
   let rating = null;
   for (const sel of ["[itemprop='ratingValue']", ".bookRatingValue", ".ratingValue", ".bRatingValue"]) {
     const raw = $(sel).first().text().replace(",", ".").replace(/[^\d.]/g, "");
@@ -94,19 +101,18 @@ function parseDetail($) {
   if (desc.length > 180) desc = desc.slice(0, 180) + "…";
   const year = parseInt(($("[itemprop='datePublished']").first().text().match(/\d{4}/) || [])[0], 10) || null;
   const cover = $("[itemprop='image']").attr("src") || $(".kniha_img img, .book_cover img").first().attr("src") || null;
-  return { author, rating, genreTxt, desc: desc || null, year, cover: cover ? abs(DBK, cover) : null };
+  return { title, author, rating, genreTxt, desc: desc || null, year, cover: cover ? abs(DBK, cover) : null };
 }
 
-async function enrichDatabazeknih(title) {
+async function enrichDatabazeknih(query) {
   try {
-    const $ = cheerio.load(await getHtml(`${DBK}/search?q=${encodeURIComponent(title)}&in=books`));
+    const $ = cheerio.load(await getHtml(`${DBK}/search?q=${encodeURIComponent(query)}&in=books`));
     const href = $("a[href*='/prehled-knihy/']").first().attr("href") || $("a[href*='/knihy/']").first().attr("href");
     if (!href) return {};
     const detailUrl = href.startsWith("http") ? href : DBK + href;
     await sleep(DELAY);
-    const d = parseDetail(cheerio.load(await getHtml(detailUrl)));
-    return { ...d, link: detailUrl };
-  } catch (e) { console.warn("[dbk]", title, "→", e.message); return {}; }
+    return { ...parseDetail(cheerio.load(await getHtml(detailUrl))), link: detailUrl };
+  } catch (e) { console.warn("[dbk]", query, "→", e.message); return {}; }
 }
 
 function classify(genreTxt = "", author = "") {
@@ -121,45 +127,40 @@ function classify(genreTxt = "", author = "") {
 
 async function main() {
   console.log("[build] start", new Date().toISOString());
-  const map = new Map(); // norm(title) → agregovaná kniha
+  const map = new Map(); // norm(slugTitle) → agregovaná kniha
 
   for (const shop of SHOPS) {
     let items = [];
     try { items = scrapeShop(await getHtml(shop.url), shop); console.log(`[shop] ${shop.name}: ${items.length} knih`); }
     catch (e) { console.warn(`[shop] ${shop.name} chyba: ${e.message}`); }
     items.forEach((it, i) => {
-      const key = norm(it.title);
-      if (!map.has(key)) map.set(key, { title: it.title, prices: [], cover: null, score: 0, shops: 0 });
+      const key = norm(it.slugTitle);
+      if (!key) return;
+      if (!map.has(key)) map.set(key, { slugTitle: it.slugTitle, prices: [], cover: null, score: 0, shops: 0 });
       const b = map.get(key);
       if (it.price) b.prices.push({ shop: shop.name, price: it.price, url: it.url });
       if (!b.cover && it.cover) b.cover = it.cover;
-      b.score += PER_SHOP - i; // vyšší pozice v žebříčku = víc bodů
+      b.score += PER_SHOP - i;
       b.shops += 1;
     });
     await sleep(DELAY);
   }
 
-  const agg = [...map.values()]
-    .sort((a, b) => b.shops - a.shops || b.score - a.score) // víc obchodů + lepší pozice = výš
-    .slice(0, MAX_BOOKS);
+  const agg = [...map.values()].sort((a, b) => b.shops - a.shops || b.score - a.score).slice(0, MAX_BOOKS);
   console.log(`[build] agregováno ${agg.length} titulů, dotahuji databazeknih…`);
 
   const books = [];
   for (const b of agg) {
-    const d = await enrichDatabazeknih(b.title);
+    const d = await enrichDatabazeknih(b.slugTitle);
     await sleep(DELAY);
     books.push({
-      title: b.title,
+      title: d.title || b.slugTitle,                 // přesný název z databazeknih, jinak ze slugu
       author: d.author || "neznámý autor",
       cat: classify(d.genreTxt, d.author || ""),
       rating: d.rating ?? null,
       ratingSource: d.rating != null ? "databazeknih.cz" : null,
-      readers: b.score,         // ~ popularita dle prodejů (víc obchodů/lepší pozice)
-      series: null,
-      lang: null,
-      year: d.year ?? null,
-      pages: null,
-      publisher: null,
+      readers: b.score,                              // ~ prodejní popularita
+      series: null, lang: null, year: d.year ?? null, pages: null, publisher: null,
       desc: d.desc ?? null,
       cover: b.cover || d.cover || null,
       link: d.link || null,
@@ -167,9 +168,7 @@ async function main() {
     });
   }
 
-  // výchozí řazení dle prodejní popularity (žebříček); frontend umí přeřadit dle hodnocení/ceny
-  books.sort((a, b) => b.readers - a.readers);
-
+  books.sort((a, b) => b.readers - a.readers); // žebříček dle prodejní popularity
   fs.writeFileSync(OUT, JSON.stringify({ updatedAt: new Date().toISOString(), books }, null, 2));
   console.log(`[build] hotovo: ${books.length} titulů → books.json`);
 }
