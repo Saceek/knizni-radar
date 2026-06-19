@@ -1,118 +1,174 @@
 /**
- * Knižní radar – sběrací skript (Google Books API)
- * ------------------------------------------------
- * Node 18+ (globální fetch). BEZ závislostí, bez scrapingu.
- * Spustí se přes GitHub Actions, vyrobí ./books.json.
- *
+ * Knižní radar – sběr z PRODEJNÍCH bestsellerů obchodů + hodnocení databazeknih
+ * ----------------------------------------------------------------------------
+ * Node 18+ (globální fetch). Závislost: cheerio.
+ *   npm i cheerio
  *   node build.js
  *
- * Proč Google Books: je to oficiální, strukturované JSON API → spolehlivé.
- * Dává: titul, autor, obálka, popis, ISBN, počet stran, rok, vydavatel,
- *       kde je k dispozici i hodnocení (averageRating) a cenu (Google Play).
+ * Logika (dle zadání – relevantní je reálný prodej, ne „právě čtu"):
+ *   1) seed = prodejní žebříčky obchodů (Kosmas, Dobrovský, Luxor)
+ *   2) agregace napříč obchody → ceny pro porovnání; kniha u víc obchodů = výš
+ *   3) hodnocení (%), kategorie, autor, popis a obálka z databazeknih.cz
  *
- * Co tím PROZATÍM nemáme (vyžaduje affiliate feedy / domluvu, ne scraping):
- *   - hodnocení z databazeknih.cz
- *   - ceny z Kosmas / Dobrovský / Luxor / Palmknihy
- * Tyhle zdroje se dají přidat později jako další "providers".
+ * UPOZORNĚNÍ (čti):
+ *   - Tohle je SCRAPING. Je křehký (změní-li obchod HTML, je třeba doladit selektory)
+ *     a e-shopy mohou blokovat IP GitHub Actions (bot-ochrana). Pokud nějaký obchod
+ *     vrátí 0 knih, uvidíš to v logu → robustní cesta je pak jeho affiliate/produktový feed.
+ *   - Slušně: 1×/den, vlastní User-Agent, pauzy. Respektuj robots.txt a podmínky obchodů.
  */
 
+const cheerio = require("cheerio");
 const fs = require("fs");
 const path = require("path");
 
 const OUT = path.join(__dirname, "books.json");
-const KEY = process.env.GOOGLE_BOOKS_KEY ? `&key=${process.env.GOOGLE_BOOKS_KEY}` : "";
-const PER_QUERY = 20;   // kolik výsledků na dotaz
-const MAX_TOTAL = 30;   // kolik titulů nakonec ponechat
+const DBK = "https://www.databazeknih.cz";
+const UA = "KnizniRadar/1.0 (+kontakt@example.cz)"; // dosaď reálný kontakt
+const DELAY = 700;
+const PER_SHOP = 20;   // kolik bestsellerů brát z každého obchodu
+const MAX_BOOKS = 26;  // kolik nakonec dotáhnout z databazeknih
 
-// Kategorie → vyhledávací dotazy (čeština). Klidně uprav/přidej.
-const QUERIES = [
-  { cat: "Detektivky", q: "detektivka" },
-  { cat: "Detektivky", q: "krimi thriller" },
-  { cat: "Životopisné", q: "biografie" },
-  { cat: "Životopisné", q: "životopis memoáry" },
-  { cat: "Rozhovory", q: "rozhovory kniha" },
-  { cat: "Čeští autoři", q: "český román" },
-  { cat: "Čeští autoři", q: "česká próza novinka" },
+const SHOPS = [
+  { name: "Kosmas",    base: "https://www.kosmas.cz",         url: "https://www.kosmas.cz/bestsellery/1x20/?articleTypeIds=3563,3564,3565", detail: /\/knihy\/\d+\// },
+  { name: "Dobrovský", base: "https://www.knihydobrovsky.cz", url: "https://www.knihydobrovsky.cz/bestsellery/knihy",                       detail: /\/kniha\/[\w-]+-\d+/ },
+  { name: "Luxor",     base: "https://www.luxor.cz",          url: "https://www.luxor.cz/c/9548/knihy",                                     detail: /\/v\/\d+\// },
+  // Palmknihy (hlavně e-knihy) – ověř URL/selektory, pak odkomentuj:
+  // { name: "Palmknihy", base: "https://www.palmknihy.cz", url: "https://www.palmknihy.cz/elektronicke-knihy", detail: /\/kniha\// },
 ];
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-const norm = (s = "") => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]/g, "").trim();
-const hasCzechChars = (s = "") => /[ěščřžýáíéúůňťďĚŠČŘŽÝÁÍÉÚŮ]/.test(s);
+const norm = (s = "") => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
+const abs = (base, href) => (!href ? null : href.startsWith("http") ? href : base + href);
 
-async function googleBooks(q) {
-  const url = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&langRestrict=cs&country=CZ&orderBy=relevance&maxResults=${PER_QUERY}${KEY}`;
-  try {
-    const res = await fetch(url, { headers: { "User-Agent": "KnizniRadar/1.0" } });
-    const data = await res.json();
-    if (data.error) { console.warn("GB error:", data.error.message); return []; }
-    return data.items || [];
-  } catch (e) { console.warn("GB fetch:", e.message); return []; }
+async function getHtml(url) {
+  const res = await fetch(url, { headers: { "User-Agent": UA, "Accept-Language": "cs" } });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return res.text();
 }
 
-function mapVolume(item, cat) {
-  const v = item.volumeInfo || {};
-  const sale = item.saleInfo || {};
-  if (!v.title) return null;
+// --- scrape jednoho obchodu: vrátí [{title, url, price, cover}] v pořadí žebříčku ---
+function scrapeShop(html, shop) {
+  const $ = cheerio.load(html);
+  const seen = new Set();
+  const items = [];
+  $("a").each((_, a) => {
+    const href = $(a).attr("href") || "";
+    if (!shop.detail.test(href)) return;
+    const title = ($(a).attr("title") || $(a).text() || "").replace(/\s+/g, " ").trim();
+    if (title.length < 2) return;
+    const key = norm(title);
+    if (seen.has(key)) return;
 
-  const author = (v.authors || []).join(", ") || "neznámý autor";
-  const cats = new Set([cat]);
-  if (hasCzechChars(author)) cats.add("Čeští autoři");
+    // karta = nejbližší rozumný kontejner
+    let scope = $(a).closest("li");
+    if (!scope.length) scope = $(a).closest("article");
+    if (!scope.length) scope = $(a).parent().parent();
+    const text = scope.text();
+    const prices = [...text.matchAll(/(\d[\d\s]*)\s*Kč/g)]
+      .map((m) => parseInt(m[1].replace(/\s/g, ""), 10))
+      .filter((n) => n >= 20 && n < 5000);
+    const price = prices.length ? Math.min(...prices) : null; // nejnižší uvedená = aktuální/akční
+    const img = scope.find("img").first();
+    const cover = img.attr("src") || img.attr("data-src") || img.attr("data-original") || null;
 
-  const isbn = (v.industryIdentifiers || []).find((i) => i.type === "ISBN_13" || i.type === "ISBN_10")?.identifier || null;
-  const cover = (v.imageLinks?.thumbnail || v.imageLinks?.smallThumbnail || "").replace("http://", "https://").replace("&edge=curl", "") || null;
+    seen.add(key);
+    items.push({ title, url: abs(shop.base, href), price, cover: cover ? abs(shop.base, cover) : null });
+  });
+  return items.slice(0, PER_SHOP);
+}
 
-  // cena z Google Play (jediný zdroj v této verzi)
-  let prices = [];
-  if (sale.saleability === "FOR_SALE" && sale.retailPrice) {
-    prices = [{ shop: "Google Play", price: Math.round(sale.retailPrice.amount), url: sale.buyLink || item.canonicalVolumeLink || null }];
+// --- databazeknih: detail knihy ---
+function parseDetail($) {
+  const author =
+    $("[itemprop='author']").first().text().trim() ||
+    $("a[href*='/autori/']").first().text().trim() || "neznámý autor";
+
+  let rating = null;
+  for (const sel of ["[itemprop='ratingValue']", ".bookRatingValue", ".ratingValue", ".bRatingValue"]) {
+    const raw = $(sel).first().text().replace(",", ".").replace(/[^\d.]/g, "");
+    const n = parseFloat(raw);
+    if (Number.isFinite(n) && n > 0) { rating = n <= 5 ? Math.round(n * 20) : Math.round(n); break; }
   }
+  const genreTxt = $("a[href*='/zanry/']").map((_, el) => $(el).text().trim()).get().filter(Boolean).join(", ");
+  let desc = ($("[itemprop='description']").first().text() || $(".perex, .summary").first().text() || "").replace(/\s+/g, " ").trim();
+  if (desc.length > 180) desc = desc.slice(0, 180) + "…";
+  const year = parseInt(($("[itemprop='datePublished']").first().text().match(/\d{4}/) || [])[0], 10) || null;
+  const cover = $("[itemprop='image']").attr("src") || $(".kniha_img img, .book_cover img").first().attr("src") || null;
+  return { author, rating, genreTxt, desc: desc || null, year, cover: cover ? abs(DBK, cover) : null };
+}
 
-  return {
-    title: v.title + (v.subtitle ? ": " + v.subtitle : ""),
-    author,
-    cat: [...cats],
-    rating: v.averageRating ? Math.round(v.averageRating * 20) : null, // 0-5 → 0-100 %
-    ratingCount: v.ratingsCount || null,
-    ratingSource: v.averageRating ? "Google Books" : null,
-    readers: v.ratingsCount || null,
-    series: null,
-    lang: v.language === "cs" ? "Čeština" : v.language || null,
-    year: v.publishedDate ? parseInt(v.publishedDate.slice(0, 4), 10) || null : null,
-    pages: v.pageCount || null,
-    publisher: v.publisher || null,
-    desc: (v.description || "").replace(/<[^>]+>/g, "").slice(0, 160) || null,
-    isbn,
-    cover,
-    prices,
-  };
+async function enrichDatabazeknih(title) {
+  try {
+    const $ = cheerio.load(await getHtml(`${DBK}/search?q=${encodeURIComponent(title)}&in=books`));
+    const href = $("a[href*='/prehled-knihy/']").first().attr("href") || $("a[href*='/knihy/']").first().attr("href");
+    if (!href) return {};
+    const detailUrl = href.startsWith("http") ? href : DBK + href;
+    await sleep(DELAY);
+    const d = parseDetail(cheerio.load(await getHtml(detailUrl)));
+    return { ...d, link: detailUrl };
+  } catch (e) { console.warn("[dbk]", title, "→", e.message); return {}; }
+}
+
+function classify(genreTxt = "", author = "") {
+  const g = genreTxt.toLowerCase();
+  const cats = new Set();
+  if (/detektiv|krimi|thriller/.test(g)) cats.add("Detektivky");
+  if (/biografie|memoár|memoar|životopis|zivotopis|pamět|pamet|literatura faktu/.test(g)) cats.add("Životopisné");
+  if (/rozhovor/.test(g)) cats.add("Rozhovory");
+  if (/[ěščřžýáíéúůňťďĚŠČŘŽÝÁÍÉÚŮ]/.test(author)) cats.add("Čeští autoři");
+  return [...cats];
 }
 
 async function main() {
   console.log("[build] start", new Date().toISOString());
-  const byKey = new Map();
+  const map = new Map(); // norm(title) → agregovaná kniha
 
-  for (const { cat, q } of QUERIES) {
-    const items = await googleBooks(q);
-    for (const it of items) {
-      const b = mapVolume(it, cat);
-      if (!b) continue;
-      const key = norm(b.title + "|" + b.author);
-      if (byKey.has(key)) {
-        const ex = byKey.get(key);
-        ex.cat = [...new Set([...ex.cat, ...b.cat])]; // sluč kategorie u duplicit
-        if (!ex.cover && b.cover) ex.cover = b.cover;
-        if (!ex.rating && b.rating) { ex.rating = b.rating; ex.ratingSource = b.ratingSource; ex.ratingCount = b.ratingCount; }
-        if (!ex.prices.length && b.prices.length) ex.prices = b.prices;
-      } else {
-        byKey.set(key, b);
-      }
-    }
-    await sleep(300); // slušný odstup
+  for (const shop of SHOPS) {
+    let items = [];
+    try { items = scrapeShop(await getHtml(shop.url), shop); console.log(`[shop] ${shop.name}: ${items.length} knih`); }
+    catch (e) { console.warn(`[shop] ${shop.name} chyba: ${e.message}`); }
+    items.forEach((it, i) => {
+      const key = norm(it.title);
+      if (!map.has(key)) map.set(key, { title: it.title, prices: [], cover: null, score: 0, shops: 0 });
+      const b = map.get(key);
+      if (it.price) b.prices.push({ shop: shop.name, price: it.price, url: it.url });
+      if (!b.cover && it.cover) b.cover = it.cover;
+      b.score += PER_SHOP - i; // vyšší pozice v žebříčku = víc bodů
+      b.shops += 1;
+    });
+    await sleep(DELAY);
   }
 
-  let books = [...byKey.values()]
-    .sort((a, b) => (b.rating ?? -1) - (a.rating ?? -1)) // od nejvyššího hodnocení; bez hodnocení dolů
-    .slice(0, MAX_TOTAL);
+  const agg = [...map.values()]
+    .sort((a, b) => b.shops - a.shops || b.score - a.score) // víc obchodů + lepší pozice = výš
+    .slice(0, MAX_BOOKS);
+  console.log(`[build] agregováno ${agg.length} titulů, dotahuji databazeknih…`);
+
+  const books = [];
+  for (const b of agg) {
+    const d = await enrichDatabazeknih(b.title);
+    await sleep(DELAY);
+    books.push({
+      title: b.title,
+      author: d.author || "neznámý autor",
+      cat: classify(d.genreTxt, d.author || ""),
+      rating: d.rating ?? null,
+      ratingSource: d.rating != null ? "databazeknih.cz" : null,
+      readers: b.score,         // ~ popularita dle prodejů (víc obchodů/lepší pozice)
+      series: null,
+      lang: null,
+      year: d.year ?? null,
+      pages: null,
+      publisher: null,
+      desc: d.desc ?? null,
+      cover: b.cover || d.cover || null,
+      link: d.link || null,
+      prices: b.prices.sort((x, y) => x.price - y.price),
+    });
+  }
+
+  // výchozí řazení dle prodejní popularity (žebříček); frontend umí přeřadit dle hodnocení/ceny
+  books.sort((a, b) => b.readers - a.readers);
 
   fs.writeFileSync(OUT, JSON.stringify({ updatedAt: new Date().toISOString(), books }, null, 2));
   console.log(`[build] hotovo: ${books.length} titulů → books.json`);
