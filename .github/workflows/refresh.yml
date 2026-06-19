@@ -1,0 +1,25 @@
+name: Refresh knihovny
+on:
+  schedule:
+    - cron: '0 4 * * *'     # denně 04:00 UTC (~5–6 ráno v ČR; cron je vždy v UTC)
+  workflow_dispatch: {}      # přidá tlačítko "Run workflow" pro ruční spuštění
+permissions:
+  contents: write            # aby mohl commitnout výsledný JSON
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: npm ci || npm i
+      - run: node build.js
+        env:
+          GOOGLE_BOOKS_KEY: ${{ secrets.GOOGLE_BOOKS_KEY }}   # nepovinné
+      - name: Ulož books.json
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add books.json
+          git diff --staged --quiet || git commit -m "data: refresh [skip ci]"
+          git push
