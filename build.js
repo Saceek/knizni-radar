@@ -1,16 +1,14 @@
 /**
- * Knižní radar – prodejní bestsellery obchodů + hodnocení databazeknih
- * --------------------------------------------------------------------
+ * Knižní radar – prodejní bestsellery obchodů + hodnocení/žánry z databazeknih
+ * ---------------------------------------------------------------------------
  * Node 18+ (globální fetch). Závislost: cheerio.   npm i cheerio && node build.js
  *
- * KLÍČOVÁ OPRAVA proti minulé verzi:
- *   Název knihy NEBEREME z textu odkazu (tam jsou štítky „-71 %", „Kniha", „Bestseller…"),
- *   ale z URL produktu (slug) a knihy slučujeme podle ID z URL. Z čistého názvu pak
- *   hledáme na databazeknih → přesný název, autor, hodnocení, žánr, obálka.
+ * - název knihy z URL produktu (slug) + slučování podle ID z URL (ne z textu odkazu)
+ * - z čistého názvu se na databazeknih dotáhne přesný název, autor, hodnocení, ŽÁNRY, obálka
+ * - kategorie = reálné žánry z databazeknih (tagy), žádné škatulkování; zobrazí se vše
  *
- * POZN.: Je to scraping (křehké, e-shopy mohou blokovat / renderovat JS). Robustní
- *   dlouhodobá cesta je affiliate/produktový feed obchodu. Luxor přes prostý fetch
- *   nejede (JS render) → buď feed, nebo vypnuto.
+ * POZN.: scraping (křehké, e-shopy mohou blokovat / renderovat JS). Robustní cesta = feed.
+ *   Luxor přes prostý fetch nejede (JS render) → vypnuto, případně přes feed.
  */
 
 const cheerio = require("cheerio");
@@ -19,10 +17,10 @@ const path = require("path");
 
 const OUT = path.join(__dirname, "books.json");
 const DBK = "https://www.databazeknih.cz";
-const UA = "KnizniRadar/1.0 (+kontakt@example.cz)";
+const UA = "KnizniRadar/1.0 (+kontakt@example.cz)"; // dosaď reálný kontakt
 const DELAY = 700;
-const PER_SHOP = 20;
-const MAX_BOOKS = 26;
+const PER_SHOP = 25;
+const MAX_BOOKS = 40;
 
 // re: zachytí ID i slug z URL produktu (idG/slugG = index capture group)
 const SHOPS = [
@@ -50,7 +48,7 @@ async function getHtml(url) {
 // --- scrape obchodu: dedup podle ID z URL, název ze slugu, cena+obálka z karty ---
 function scrapeShop(html, shop) {
   const $ = cheerio.load(html);
-  const byId = new Map(); // id → {id, slugTitle, url, price, cover, order}
+  const byId = new Map();
   let order = 0;
   $("a[href]").each((_, a) => {
     const href = $(a).attr("href") || "";
@@ -58,22 +56,16 @@ function scrapeShop(html, shop) {
     if (!m) return;
     const id = m[shop.idG];
     const slug = m[shop.slugG];
+    const scope = (() => { const sc = $(a).closest("li, article, [class*='product'], [class*='item']"); return sc.length ? sc : $(a).parent().parent(); })();
     if (byId.has(id)) {
-      // doplň cenu/obálku, kdyby chyběly (různé odkazy téže karty)
       const b = byId.get(id);
-      if (!b.price || !b.cover) {
-        const sc = $(a).closest("li, article, [class*='product'], [class*='item']");
-        const scope = sc.length ? sc : $(a).parent().parent();
-        if (!b.price) {
-          const pr = [...scope.text().matchAll(/(\d[\d\s]*)\s*Kč/g)].map((x) => parseInt(x[1].replace(/\s/g, ""), 10)).filter((n) => n >= 20 && n < 5000);
-          if (pr.length) b.price = Math.min(...pr);
-        }
-        if (!b.cover) { const img = scope.find("img").first(); b.cover = abs(shop.base, img.attr("src") || img.attr("data-src") || img.attr("data-original")); }
+      if (!b.price) {
+        const pr = [...scope.text().matchAll(/(\d[\d\s]*)\s*Kč/g)].map((x) => parseInt(x[1].replace(/\s/g, ""), 10)).filter((n) => n >= 20 && n < 5000);
+        if (pr.length) b.price = Math.min(...pr);
       }
+      if (!b.cover) { const img = scope.find("img").first(); b.cover = abs(shop.base, img.attr("src") || img.attr("data-src") || img.attr("data-original")); }
       return;
     }
-    const sc = $(a).closest("li, article, [class*='product'], [class*='item']");
-    const scope = sc.length ? sc : $(a).parent().parent();
     const prices = [...scope.text().matchAll(/(\d[\d\s]*)\s*Kč/g)].map((x) => parseInt(x[1].replace(/\s/g, ""), 10)).filter((n) => n >= 20 && n < 5000);
     const img = scope.find("img").first();
     byId.set(id, {
@@ -86,7 +78,7 @@ function scrapeShop(html, shop) {
   return [...byId.values()].sort((a, b) => a.order - b.order).slice(0, PER_SHOP);
 }
 
-// --- databazeknih: detail (název, autor, hodnocení, žánr, popis, rok, obálka) ---
+// --- databazeknih: detail (název, autor, hodnocení, žánry, popis, rok, obálka) ---
 function parseDetail($) {
   const title = $("h1[itemprop='name'], h1.book_title, h1").first().text().replace(/\s+/g, " ").trim() || null;
   const author = $("[itemprop='author']").first().text().trim() || $("a[href*='/autori/']").first().text().trim() || null;
@@ -96,12 +88,12 @@ function parseDetail($) {
     const n = parseFloat(raw);
     if (Number.isFinite(n) && n > 0) { rating = n <= 5 ? Math.round(n * 20) : Math.round(n); break; }
   }
-  const genreTxt = $("a[href*='/zanry/']").map((_, el) => $(el).text().trim()).get().filter(Boolean).join(", ");
+  const genres = $("a[href*='/zanry/']").map((_, el) => $(el).text().trim()).get().filter(Boolean);
   let desc = ($("[itemprop='description']").first().text() || $(".perex, .summary").first().text() || "").replace(/\s+/g, " ").trim();
   if (desc.length > 180) desc = desc.slice(0, 180) + "…";
   const year = parseInt(($("[itemprop='datePublished']").first().text().match(/\d{4}/) || [])[0], 10) || null;
   const cover = $("[itemprop='image']").attr("src") || $(".kniha_img img, .book_cover img").first().attr("src") || null;
-  return { title, author, rating, genreTxt, desc: desc || null, year, cover: cover ? abs(DBK, cover) : null };
+  return { title, author, rating, genres, desc: desc || null, year, cover: cover ? abs(DBK, cover) : null };
 }
 
 async function enrichDatabazeknih(query) {
@@ -113,16 +105,6 @@ async function enrichDatabazeknih(query) {
     await sleep(DELAY);
     return { ...parseDetail(cheerio.load(await getHtml(detailUrl))), link: detailUrl };
   } catch (e) { console.warn("[dbk]", query, "→", e.message); return {}; }
-}
-
-function classify(genreTxt = "", author = "") {
-  const g = genreTxt.toLowerCase();
-  const cats = new Set();
-  if (/detektiv|krimi|thriller/.test(g)) cats.add("Detektivky");
-  if (/biografie|memoár|memoar|životopis|zivotopis|pamět|pamet|literatura faktu/.test(g)) cats.add("Životopisné");
-  if (/rozhovor/.test(g)) cats.add("Rozhovory");
-  if (/[ěščřžýáíéúůňťďĚŠČŘŽÝÁÍÉÚŮ]/.test(author)) cats.add("Čeští autoři");
-  return [...cats];
 }
 
 async function main() {
@@ -154,12 +136,12 @@ async function main() {
     const d = await enrichDatabazeknih(b.slugTitle);
     await sleep(DELAY);
     books.push({
-      title: d.title || b.slugTitle,                 // přesný název z databazeknih, jinak ze slugu
+      title: d.title || b.slugTitle,            // přesný název z databazeknih, jinak ze slugu
       author: d.author || "neznámý autor",
-      cat: classify(d.genreTxt, d.author || ""),
+      cat: (d.genres || []).slice(0, 4),        // reálné žánry jako tagy (žádné škatulkování)
       rating: d.rating ?? null,
       ratingSource: d.rating != null ? "databazeknih.cz" : null,
-      readers: b.score,                              // ~ prodejní popularita
+      readers: b.score,                          // ~ prodejní popularita
       series: null, lang: null, year: d.year ?? null, pages: null, publisher: null,
       desc: d.desc ?? null,
       cover: b.cover || d.cover || null,
