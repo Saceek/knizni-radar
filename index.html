@@ -2,18 +2,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knižní radar</title>
 <style>
-  :root{
-    --bg:#020617; --text:#f1f5f9; --sub:#94a3b8; --card:rgba(15,23,42,.7); --cb:#1e293b;
-    --chip:#1e293b; --chipt:#cbd5e1; --chipon:#fff; --chipont:#0f172a; --input:#0f172a;
-    --emerald:#34d399; --amber:#fbbf24;
-  }
-  .light{
-    --bg:#fafaf9; --text:#292524; --sub:#78716c; --card:#fff; --cb:#e7e5e4;
-    --chip:#fff; --chipt:#57534e; --chipon:#292524; --chipont:#fff; --input:#fff;
-    --emerald:#059669; --amber:#f59e0b;
-  }
+  :root{ --bg:#020617; --text:#f1f5f9; --sub:#94a3b8; --card:rgba(15,23,42,.7); --cb:#1e293b;
+    --chip:#1e293b; --chipt:#cbd5e1; --chipon:#fff; --chipont:#0f172a; --input:#0f172a; --emerald:#34d399; --amber:#fbbf24; }
+  .light{ --bg:#fafaf9; --text:#292524; --sub:#78716c; --card:#fff; --cb:#e7e5e4;
+    --chip:#fff; --chipt:#57534e; --chipon:#292524; --chipont:#fff; --input:#fff; --emerald:#059669; --amber:#f59e0b; }
   *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;transition:background .2s}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
   .wrap{max-width:980px;margin:0 auto;padding:24px 16px}
   .row{display:flex;align-items:center;justify-content:space-between;gap:12px}
   h1{font-size:24px;margin:0;letter-spacing:-.02em}
@@ -41,8 +35,8 @@
   .price{font-size:18px;font-weight:700;color:var(--emerald)}
   .tiny{font-size:11px;color:var(--sub)}
   .meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:8px}
-  .tag{font-size:11px;padding:2px 8px;border-radius:999px;background:var(--chip);color:var(--chipt)}
-  .tag.src{background:rgba(16,185,129,.15);color:var(--emerald)}
+  .tag{font-size:11px;padding:2px 8px;border-radius:999px;background:var(--chip);color:var(--chipt);border:1px solid var(--cb)}
+  .tag.src{background:rgba(16,185,129,.15);color:var(--emerald);border-color:transparent}
   .desc{font-size:14px;color:var(--sub);margin:8px 0 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
   .more{background:none;border:none;color:var(--sub);font-size:12px;font-weight:600;cursor:pointer;padding:8px 0 0}
   .detail{border-top:1px solid var(--cb);margin-top:12px;padding-top:12px}
@@ -57,7 +51,7 @@
   <div class="row">
     <div style="display:flex;align-items:center;gap:12px">
       <span class="logo">📚</span>
-      <div><h1>Knižní radar</h1><p class="muted">databazeknih.cz · ceny obchodů</p></div>
+      <div><h1>Knižní radar</h1><p class="muted">prodejní bestsellery · hodnocení databazeknih.cz</p></div>
     </div>
     <div style="display:flex;gap:8px">
       <button class="btn" id="refresh">⟳ Aktualizovat</button>
@@ -70,33 +64,28 @@
   <div class="controls">
     <input id="q" placeholder="Hledat titul nebo autora…" />
     <select id="sort">
+      <option value="readers">Dle prodejní popularity</option>
       <option value="rating">Dle hodnocení</option>
-      <option value="readers">Nejčtenější</option>
       <option value="price">Nejnižší cena</option>
       <option value="year">Novinky (nejnovější)</option>
-      <option value="series">Série jako první</option>
     </select>
   </div>
   <div id="list"></div>
-  <p class="tiny" style="text-align:center;margin-top:24px">Data z books.json (GitHub Actions, 1×/den) · hodnocení databazeknih.cz · obálky Google Books.</p>
+  <p class="tiny" style="text-align:center;margin-top:24px">Bestsellery Kosmas / Dobrovský · hodnocení a žánry databazeknih.cz · obálky Google Books.</p>
 </div>
 
 <script>
-const DATA_URL = "books.json"; // stejná doména na GitHub Pages → žádné CORS
-const CATS = ["Detektivky","Životopisné","Rozhovory","Čeští autoři"];
-const GRAD = {
-  "Detektivky":"linear-gradient(135deg,#4f46e5,#312e81)",
-  "Životopisné":"linear-gradient(135deg,#d97706,#78350f)",
-  "Rozhovory":"linear-gradient(135deg,#0d9488,#134e4a)",
-  "Čeští autoři":"linear-gradient(135deg,#e11d48,#881337)"
-};
+const DATA_URL = "books.json";
+const PALETTE = ["#4f46e5,#312e81","#d97706,#78350f","#0d9488,#134e4a","#e11d48,#881337","#7c3aed,#4c1d95","#0369a1,#0c4a6e","#15803d,#14532d","#b45309,#7c2d12"];
+function grad(seed=""){ let h=0; for(const ch of seed) h=(h*31+ch.charCodeAt(0))>>>0; const p=PALETTE[h%PALETTE.length].split(","); return `linear-gradient(135deg,${p[0]},${p[1]})`; }
+
 const DEMO = [
-  {title:"Hladový hrob",author:"Robert Galbraith (J. K. Rowling)",cat:["Detektivky"],rating:94,ratingSource:"databazeknih.cz",series:"Cormoran Strike (7. díl)",lang:"Čeština",year:2024,pages:944,publisher:"Plus",readers:4820,desc:"Sedmý případ detektiva Strika a Robin Ellacottové.",prices:[{shop:"Palmknihy",price:529,url:"#"},{shop:"Dobrovský",price:539,url:"#"},{shop:"Kosmas",price:559,url:"#"}]},
-  {title:"Stíny minulosti",author:"Robert Bryndza",cat:["Detektivky"],rating:92,ratingSource:"databazeknih.cz",series:"Kate Marshallová",lang:"Čeština",year:2025,pages:360,publisher:"Cosmopolis",readers:3540,desc:"Bývalá detektivka znovu otevírá dávno uzavřený případ.",prices:[{shop:"Palmknihy",price:339,url:"#"},{shop:"Kosmas",price:369,url:"#"}]},
-  {title:"Noční chodci",author:"Jaroslav Rudiš",cat:["Čeští autoři"],rating:80,ratingSource:"databazeknih.cz",series:null,lang:"Čeština",year:2025,pages:240,publisher:"Labyrint",readers:1980,desc:"Jedna noc, dva kamarádi a pouť pražskými hospodami.",prices:[{shop:"Kosmas",price:134,url:"#"},{shop:"Luxor",price:159,url:"#"}]}
+  {title:"Hladový hrob",author:"Robert Galbraith (J. K. Rowling)",cat:["Detektivní","Thriller"],rating:94,ratingSource:"databazeknih.cz",readers:38,year:2024,desc:"Sedmý případ detektiva Strika a Robin Ellacottové.",cover:null,prices:[{shop:"Dobrovský",price:539,url:"#"},{shop:"Kosmas",price:559,url:"#"}]},
+  {title:"Vona",author:"Petra Klabouchová",cat:["Česká próza","Román"],rating:88,ratingSource:"databazeknih.cz",readers:34,year:2025,desc:"Oceňovaný český román.",cover:null,prices:[{shop:"Kosmas",price:349,url:"#"}]},
+  {title:"O tom Benešovi",author:"Pavel Kosatík",cat:["Literatura faktu","Biografie"],rating:78,ratingSource:"databazeknih.cz",readers:25,year:2025,desc:"Nový pohled na prezidenta Edvarda Beneše.",cover:null,prices:[{shop:"Kosmas",price:539,url:"#"}]},
 ];
 
-let S = {dark:true, cat:"Vše", sort:"rating", q:"", books:DEMO, status:"loading", updatedAt:null, expanded:null};
+let S = {dark:true, cat:"Vše", sort:"readers", q:"", books:DEMO, status:"loading", updatedAt:null, expanded:null};
 
 const esc = s => (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const stars = r => {const v=Math.round((r||0)/100*5); return "★".repeat(v)+"☆".repeat(5-v);};
@@ -108,14 +97,17 @@ async function load(){
   try{
     const r = await fetch(DATA_URL + "?t=" + Date.now(), {cache:"no-store"});
     if(!r.ok) throw new Error("HTTP "+r.status);
-    const d = await r.json();
-    const arr = d.books || d;
+    const d = await r.json(); const arr = d.books || d;
     if(!Array.isArray(arr) || !arr.length) throw new Error("prázdno");
     S.books = arr; S.updatedAt = d.updatedAt || null; S.status="live";
   }catch(e){ S.books = DEMO; S.status="demo"; }
   render();
 }
 
+function genreChips(){
+  const c={}; S.books.forEach(b=>(b.cat||[]).forEach(g=>{ if(g) c[g]=(c[g]||0)+1; }));
+  return Object.entries(c).sort((a,b)=>b[1]-a[1]).slice(0,8).map(x=>x[0]);
+}
 function listFiltered(){
   const q = S.q.trim().toLowerCase();
   let r = S.books.filter(b => (!q || (b.title+" "+b.author).toLowerCase().includes(q)) && (S.cat==="Vše" || (b.cat||[]).includes(S.cat)));
@@ -123,7 +115,6 @@ function listFiltered(){
     S.sort==="readers" ? (b.readers||0)-(a.readers||0) :
     S.sort==="price"   ? minPrice(a)-minPrice(b) :
     S.sort==="year"    ? (b.year||0)-(a.year||0) :
-    S.sort==="series"  ? ((b.series?1:0)-(a.series?1:0))||((b.rating||0)-(a.rating||0)) :
                          (b.rating??-1)-(a.rating??-1));
 }
 
@@ -131,31 +122,29 @@ function render(){
   document.body.className = S.dark ? "" : "light";
   document.getElementById("theme").textContent = S.dark ? "🌞" : "🌙";
 
-  // status
   let st="";
   if(S.status==="loading") st='<div class="note warn">Načítám…</div>';
   else if(S.status==="live") st='<div class="note ok">✓ Živá data'+(S.updatedAt?" · aktualizováno "+new Date(S.updatedAt).toLocaleString("cs-CZ"):"")+'</div>';
-  else if(S.status==="demo") st='<div class="note warn">Soubor se nepodařilo načíst (na GitHub Pages bude OK – stejná doména). Zobrazuji ukázková data.</div>';
+  else if(S.status==="demo") st='<div class="note warn">Soubor se nepodařilo načíst – zobrazuji ukázková data.</div>';
   document.getElementById("status").innerHTML = st;
 
-  // chips
-  document.getElementById("cats").innerHTML = ["Vše",...CATS].map(c=>
-    `<button class="chip ${S.cat===c?"on":""}" data-cat="${c}">${c}</button>`).join("");
+  document.getElementById("cats").innerHTML = ["Vše",...genreChips()].map(c=>
+    `<button class="chip ${S.cat===c?"on":""}" data-cat="${esc(c)}">${esc(c)}</button>`).join("");
 
-  // list
   const items = listFiltered();
   document.getElementById("list").innerHTML = items.length ? items.map((b,i)=>card(b,i)).join("")
     : '<p class="muted" style="text-align:center;padding:40px 0">Žádný titul neodpovídá filtru.</p>';
+
+  hydrateCovers();
 }
 
 function card(b,i){
   const vp = validPrices(b).sort((x,y)=>x.price-y.price);
   const min = vp.length?vp[0].price:null;
   const open = S.expanded===b.title;
-  const cover = `<div class="cover" style="background:${GRAD[(b.cat||[])[0]]||"#334155"}">
-      <span class="cv-cat">${esc((b.cat||[])[0]||"")}</span>
-      <span class="cv-title">${esc(b.title)}</span>
-      ${b.cover?`<img src="${esc(b.cover)}" onerror="this.style.display='none'">`:""}
+  const firstCat = (b.cat||[])[0]||"";
+  const cover = `<div class="cover" data-pending data-cover="${esc(b.cover||'')}" data-q="${esc((b.title||'')+' '+(b.author||''))}" style="background:${grad(firstCat||b.title)}">
+      <span class="cv-cat">${esc(firstCat)}</span><span class="cv-title">${esc(b.title)}</span>
     </div>`;
   return `<div class="card">
     <div><div class="rank">#${i+1}</div>${cover}</div>
@@ -166,9 +155,8 @@ function card(b,i){
       </div>
       <div class="meta">
         <span class="stars">${stars(b.rating)}</span><span class="tiny">${b.rating!=null?b.rating+"%":"—"}</span>
-        ${b.ratingSource?`<span class="tag src">✓ ${esc(b.ratingSource)}</span>`:`<span class="tag">bez zdroje</span>`}
-        ${b.readers!=null?`<span class="tiny">👥 ${Number(b.readers).toLocaleString("cs-CZ")}</span>`:""}
-        ${(b.cat||[]).map(c=>`<span class="tag">${esc(c)}</span>`).join("")}
+        ${b.ratingSource?`<span class="tag src">✓ ${esc(b.ratingSource)}</span>`:`<span class="tag">bez hodnocení</span>`}
+        ${(b.cat||[]).slice(0,4).map(c=>`<span class="tag">${esc(c)}</span>`).join("")}
       </div>
       ${b.desc?`<p class="desc">${esc(b.desc)}</p>`:""}
       <button class="more" data-title="${esc(b.title)}">${open?"Méně ▲":"Detail & ceny ▼"}</button>
@@ -178,17 +166,30 @@ function card(b,i){
 }
 
 function detail(b,vp,min){
-  const m = [];
+  const m=[];
   if(b.year) m.push("📅 "+b.year);
-  if(b.pages) m.push("📄 "+b.pages+" str.");
-  if(b.publisher) m.push("🏢 "+esc(b.publisher));
-  if(b.lang) m.push("🌐 "+esc(b.lang));
-  if(b.series) m.push("📚 "+esc(b.series));
+  if(b.link) m.push(`<a href="${esc(b.link)}" target="_blank" rel="noreferrer">databazeknih ↗</a>`);
   const shops = vp.length?`<div class="tiny" style="font-weight:600;margin:10px 0 6px">🛒 Ceny v obchodech</div>
     <div class="grid">${vp.map(p=>`<a class="shop ${p.price===min?"min":""}" href="${esc(p.url||"#")}" target="_blank" rel="noreferrer">
       <div class="tiny">${esc(p.shop)}</div><div style="font-weight:700;${p.price===min?"color:var(--emerald)":""}">${p.price} Kč</div>
-      ${p.price===min?'<div class="tiny" style="color:var(--emerald)">nejlevnější</div>':""}</a>`).join("")}</div>`:"";
-  return `<div class="detail"><div class="tiny" style="line-height:1.8">${m.join(" &nbsp; ")}</div>${shops}</div>`;
+      ${p.price===min?'<div class="tiny" style="color:var(--emerald)">nejlevnější</div>':""}</a>`).join("")}</div>`:'<div class="tiny">Ceny se zatím nepodařilo načíst.</div>';
+  return `<div class="detail"><div class="tiny" style="line-height:1.8">${m.join(" &nbsp; ")||"&nbsp;"}</div>${shops}</div>`;
+}
+
+// obálky: data-cover → Google Books → stylizovaná záloha. no-referrer kvůli hotlink-ochraně.
+function hydrateCovers(){
+  document.querySelectorAll('.cover[data-pending]').forEach(el=>{
+    el.removeAttribute('data-pending');
+    const direct = el.dataset.cover, q = el.dataset.q;
+    const showImg = (src, onFail)=>{
+      const img=document.createElement('img'); img.alt=''; img.referrerPolicy='no-referrer';
+      img.onerror=()=>{ img.remove(); onFail&&onFail(); };
+      img.src=src; el.appendChild(img);
+    };
+    const google = ()=> fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=1&country=CZ`)
+      .then(r=>r.json()).then(d=>{ const im=d?.items?.[0]?.volumeInfo?.imageLinks; const u=(im?.thumbnail||im?.smallThumbnail||'').replace('http://','https://').replace('&edge=curl',''); if(u) showImg(u); }).catch(()=>{});
+    if(direct) showImg(direct, google); else google();
+  });
 }
 
 document.getElementById("refresh").onclick = load;
