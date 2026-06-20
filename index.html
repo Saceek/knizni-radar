@@ -35,6 +35,8 @@
   .cv-title{font-size:11px;font-weight:700;color:#fff;line-height:1.1}
   .body{flex:1;min-width:0}
   .title{font-weight:600;margin:0}
+  .title a{text-decoration:none}
+  .title a:hover{text-decoration:underline}
   .price{font-size:18px;font-weight:700;color:var(--emerald)}
   .tiny{font-size:11px;color:var(--sub)}
   .meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:8px}
@@ -70,7 +72,7 @@
   <div id="status"></div>
   <div id="view"></div>
 
-  <p class="tiny" style="text-align:center;margin-top:24px">Bestsellery Kosmas / Dobrovský · hodnocení databazeknih.cz · obálky Google Books · backlog uložen v prohlížeči.</p>
+  <p class="tiny" style="text-align:center;margin-top:24px">Bestsellery Kosmas / Dobrovský · hodnocení a obálky databazeknih.cz · backlog uložen v prohlížeči.</p>
 </div>
 
 <script>
@@ -80,9 +82,9 @@ const PALETTE = ["#4f46e5,#312e81","#d97706,#78350f","#0d9488,#134e4a","#e11d48,
 function grad(seed=""){ let h=0; for(const ch of seed) h=(h*31+ch.charCodeAt(0))>>>0; const p=PALETTE[h%PALETTE.length].split(","); return `linear-gradient(135deg,${p[0]},${p[1]})`; }
 
 const DEMO = [
-  {title:"Už letím",author:"Martin Moravec, Marek Dvořák",cat:["Dobrovský"],rating:null,ratingSource:null,readers:3,cover:null,prices:[{shop:"Dobrovský",price:384,url:"#"}]},
-  {title:"Vona",author:"Petra Klabouchová",cat:["Kosmas"],rating:88,ratingSource:"databazeknih.cz",readers:2,cover:null,prices:[{shop:"Kosmas",price:329,url:"#"}]},
-  {title:"O tom Benešovi",author:"Pavel Kosatík",cat:["Kosmas"],rating:78,ratingSource:"databazeknih.cz",readers:1,cover:null,prices:[{shop:"Kosmas",price:539,url:"#"}]},
+  {title:"Už letím",author:"Martin Moravec, Marek Dvořák",cat:["Dobrovský"],rating:null,ratingSource:null,readers:3,cover:null,link:null,prices:[{shop:"Dobrovský",price:384,url:"#"}]},
+  {title:"Vona",author:"Petra Klabouchová",cat:["Kosmas"],rating:88,ratingSource:"databazeknih.cz",readers:2,cover:null,link:null,prices:[{shop:"Kosmas",price:329,url:"#"}]},
+  {title:"O tom Benešovi",author:"Pavel Kosatík",cat:["Kosmas"],rating:78,ratingSource:"databazeknih.cz",readers:1,cover:null,link:null,prices:[{shop:"Kosmas",price:539,url:"#"}]},
 ];
 
 let mem = null;
@@ -123,8 +125,12 @@ function listFiltered(){
 }
 
 function coverHtml(b){
-  return `<div class="cover" data-pending data-cover="${esc(b.cover||'')}" data-q="${esc((b.title||'')+' '+(b.author||''))}" data-title="${esc(b.title||'')}" style="background:${grad((b.cat||[])[0]||b.title)}">
+  const inner = `<div class="cover" data-pending data-cover="${esc(b.cover||'')}" data-q="${esc((b.title||'')+' '+(b.author||''))}" data-title="${esc(b.title||'')}" style="background:${grad((b.cat||[])[0]||b.title)}">
       <span class="cv-cat">${esc((b.cat||[])[0]||'')}</span><span class="cv-title">${esc(b.title)}</span></div>`;
+  return b.link ? `<a href="${esc(b.link)}" target="_blank" rel="noreferrer" title="Otevřít na databazeknih.cz">${inner}</a>` : inner;
+}
+function titleHtml(b){
+  return b.link ? `<a href="${esc(b.link)}" target="_blank" rel="noreferrer">${esc(b.title)}</a>` : esc(b.title);
 }
 function ratingHtml(b){
   return `<span class="stars">${stars(b.rating)}</span><span class="tiny">${b.rating!=null?b.rating+"%":"—"}</span>
@@ -143,7 +149,7 @@ function card(b,i){
   return `<div class="card">
     <div><div class="rank">#${i+1}</div>${coverHtml(b)}</div>
     <div class="body">
-      <div class="row"><div style="min-width:0"><p class="title">${esc(b.title)}</p><p class="muted">${esc(b.author)}</p></div>${priceHtml(b)}</div>
+      <div class="row"><div style="min-width:0"><p class="title">${titleHtml(b)}</p><p class="muted">${esc(b.author)}</p></div>${priceHtml(b)}</div>
       <div class="meta">${ratingHtml(b)}</div>
       <div class="actions">
         <button class="link" data-more="${esc(b.title)}">${open?"Méně ▲":"Detail & ceny ▼"}</button>
@@ -158,7 +164,7 @@ function backlogCard(b){
   return `<div class="card">
     <div>${coverHtml(b)}</div>
     <div class="body">
-      <div class="row"><div style="min-width:0"><p class="title">${esc(b.title)}</p><p class="muted">${esc(b.author)}</p></div>${priceHtml(b)}</div>
+      <div class="row"><div style="min-width:0"><p class="title">${titleHtml(b)}</p><p class="muted">${esc(b.author)}</p></div>${priceHtml(b)}</div>
       <div class="meta">${ratingHtml(b)}</div>
       <div class="actions">
         <button class="link" data-more="${esc(b.title)}">${open?"Méně ▲":"Detail & ceny ▼"}</button>
@@ -203,14 +209,12 @@ function render(){
         </select>
       </div>
       ${items.length?items.map((b,i)=>card(b,i)).join(""):'<div class="empty">Žádný titul neodpovídá filtru.</div>'}`;
-    const qi=document.getElementById("q"); if(qi){ qi.oninput=e=>{S.q=e.target.value; render(); qi2focus(); }; }
+    const qi=document.getElementById("q"); if(qi){ qi.oninput=e=>{S.q=e.target.value; render(); }; }
     const so=document.getElementById("sort"); if(so) so.onchange=e=>{S.sort=e.target.value; render();};
   }
   hydrateCovers();
 }
-let _focus=false; function qi2focus(){ const qi=document.getElementById("q"); if(qi){ qi.focus(); qi.setSelectionRange(qi.value.length,qi.value.length);} }
 
-// obálky: data-cover → Google Books(title+autor) → Google Books(title) → stylizovaná záloha; sekvenčně
 function tryImg(el, src){ return new Promise(res=>{ const img=document.createElement('img'); img.referrerPolicy='no-referrer';
   img.onload=()=>{ el.appendChild(img); res(true); }; img.onerror=()=>res(false); img.src=src; }); }
 async function googleCover(q){ try{
