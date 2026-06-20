@@ -5,7 +5,7 @@
  *
  *  - název, autor, cena, pořadí = z obchodů (Kosmas, Dobrovský)
  *  - z databazeknih.cz: procentuální HODNOCENÍ + OBÁLKA + ODKAZ na stránku knihy
- *  - obálka: Kosmas vlastní (obalky.kosmas.cz); u Dobrovský doplní databazeknih
+ *  - obálka: Kosmas vlastní (obalky.kosmas.cz) → databazeknih → Google Books (poslední záloha, dle názvu+autora)
  *  - pořadí: combined rank = nejnižší pozice napříč obchody; shoda → víc obchodů → nižší součet
  */
 
@@ -91,6 +91,28 @@ async function enrichDatabazeknih(title) {
   } catch (e) { console.warn("[dbk]", title, "→", e.message); return {}; }
 }
 
+// Google Books – poslední záloha obálky (typicky když Dobrovský nemá vlastní a databazeknih taky ne).
+// ISBN v datech nemáme, hledá se podle názvu (+ autora). Volitelně GOOGLE_BOOKS_API_KEY pro vyšší limity.
+async function googleCover(title, author) {
+  const hasAuthor = author && author !== "neznámý autor";
+  const q = `intitle:${title}` + (hasAuthor ? `+inauthor:${author}` : "");
+  const params = new URLSearchParams({ q, country: "CZ", maxResults: "3" });
+  if (process.env.GOOGLE_BOOKS_API_KEY) params.set("key", process.env.GOOGLE_BOOKS_API_KEY);
+  try {
+    const res = await fetch(`https://www.googleapis.com/books/v1/volumes?${params.toString()}`,
+      { headers: { "User-Agent": UA, "Accept-Language": "cs" } });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    for (const it of data.items || []) {
+      const links = it.volumeInfo && it.volumeInfo.imageLinks;
+      const raw = links && (links.thumbnail || links.smallThumbnail);
+      // Google vrací http:// se "zohýbaným" rohem a malým zoomem → uklidíme na ostřejší https náhled
+      if (raw) return raw.replace(/^http:/, "https:").replace("&edge=curl", "").replace("zoom=1", "zoom=2");
+    }
+    return null;
+  } catch (e) { console.warn("[google]", title, "→", e.message); return null; }
+}
+
 async function main() {
   console.log("[build] start", new Date().toISOString(), "| Kosmas měsíc:", MONTH);
   const map = new Map();
@@ -120,10 +142,21 @@ async function main() {
   console.log(`[build] agregováno ${agg.length} titulů, dotahuji databazeknih…`);
 
   const books = [];
+  let googleFilled = 0;
   for (let i = 0; i < agg.length; i++) {
     const b = agg[i];
     const e = await enrichDatabazeknih(b.title);
     await sleep(DELAY);
+
+    // obálka: vlastní z obchodu → databazeknih → Google Books (poslední záloha)
+    let cover = b.cover || e.cover || null;
+    let coverSource = b.cover ? "shop" : (e.cover ? "databazeknih.cz" : null);
+    if (!cover) {
+      const gc = await googleCover(b.title, b.author);
+      if (gc) { cover = gc; coverSource = "google-books"; googleFilled++; }
+      await sleep(DELAY);
+    }
+
     books.push({
       title: b.title,
       author: b.author || "neznámý autor",
@@ -132,14 +165,15 @@ async function main() {
       ratingSource: e.rating != null ? "databazeknih.cz" : null,
       readers: agg.length - i,
       series: null, lang: null, year: null, pages: null, publisher: null, desc: null,
-      cover: b.cover || e.cover || null,   // Kosmas vlastní → jinak obálka z databazeknih
-      link: e.link || null,                // odkaz na stránku knihy na databazeknih
+      cover,                 // vlastní z obchodu → databazeknih → Google Books
+      coverSource,           // shop | databazeknih.cz | google-books | null
+      link: e.link || null,  // odkaz na stránku knihy na databazeknih
       prices: b.prices.sort((x, y) => x.price - y.price),
     });
   }
 
   fs.writeFileSync(OUT, JSON.stringify({ updatedAt: new Date().toISOString(), books }, null, 2));
-  console.log(`[build] hotovo: ${books.length} titulů → books.json`);
+  console.log(`[build] hotovo: ${books.length} titulů → books.json (Google Books doplnil ${googleFilled} obálek)`);
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });
