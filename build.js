@@ -3,14 +3,10 @@
  * -------------------------------------------------------------
  * Node 18+ (globální fetch). Závislost: cheerio.   npm i cheerio && node build.js
  *
- * PRAVIDLA (dle zadání):
- *  - název, autor, cena, OBÁLKA, pořadí = JEN z obchodů (Kosmas, Dobrovský)
- *  - databazeknih.cz = VÝHRADNĚ procentuální hodnocení
- *  - pořadí: combined rank = nejlepší (nejnižší) pozice napříč obchody;
- *            shoda → víc obchodů, pak nižší součet pozic. #1 na obchodě = nahoře.
- *  - Kosmas: měsíční žebříček aktuálního měsíce (mainstream, ne 14denní výprodejový)
- *
- * POZN.: scraping je křehký; když obchod změní HTML / zablokuje IP, projeví se to v logu.
+ *  - název, autor, cena, pořadí = z obchodů (Kosmas, Dobrovský)
+ *  - z databazeknih.cz: procentuální HODNOCENÍ + OBÁLKA + ODKAZ na stránku knihy
+ *  - obálka: Kosmas vlastní (obalky.kosmas.cz); u Dobrovský doplní databazeknih
+ *  - pořadí: combined rank = nejnižší pozice napříč obchody; shoda → víc obchodů → nižší součet
  */
 
 const cheerio = require("cheerio");
@@ -24,7 +20,6 @@ const DELAY = 700;
 const PER_SHOP = 20;
 const MAX_BOOKS = 40;
 
-// aktuální měsíc pro Kosmas (formát "2026-6")
 const NOW = new Date();
 const MONTH = `${NOW.getFullYear()}-${NOW.getMonth() + 1}`;
 
@@ -39,7 +34,7 @@ const SHOPS = [
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const norm = (s = "") => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
-const abs = (base, href) => (!href ? null : href.startsWith("http") ? href : base + href);
+const abs = (base, href) => (!href ? null : href.startsWith("http") ? href : href.startsWith("//") ? "https:" + href : base + href);
 const isPlaceholder = (u = "") => /blank\.gif|1px|placeholder|spacer|loading/i.test(u);
 function slugToTitle(slug) {
   const t = slug.replace(/[-_]/g, " ").replace(/\s+/g, " ").trim();
@@ -52,7 +47,6 @@ async function getHtml(url) {
   return res.text();
 }
 
-// --- scrape obchodu: pořadí dle žebříčku; vše z karty (titul slug, autor, cena, obálka) ---
 function scrapeShop(html, shop) {
   const $ = cheerio.load(html);
   const byId = new Map();
@@ -63,39 +57,38 @@ function scrapeShop(html, shop) {
     if (!m) return;
     const id = m[shop.idG], slug = m[shop.slugG];
     if (byId.has(id)) return;
-
     const scope = (() => { const sc = $(a).closest("li, article, [class*='product'], [class*='item']"); return sc.length ? sc : $(a).parent().parent().parent(); })();
-
     let author = null;
     scope.find("a[href]").each((__, x) => { if (author) return; const h = $(x).attr("href") || ""; if (shop.authorRe.test(h)) { const t = $(x).text().replace(/\s+/g, " ").trim(); if (t) author = t; } });
-
     const prices = [...scope.text().matchAll(/(\d[\d\s]*)\s*Kč/g)].map((x) => parseInt(x[1].replace(/\s/g, ""), 10)).filter((n) => n >= 20 && n < 5000);
-    const price = prices.length ? Math.min(...prices) : null; // sleva = aktuální (nižší)
-
+    const price = prices.length ? Math.min(...prices) : null;
     const img = scope.find("img").first();
     let cover = img.attr("src") || img.attr("data-src") || img.attr("data-original") || null;
     if (cover && isPlaceholder(cover)) cover = null;
-
     byId.set(id, { title: slugToTitle(slug), author, price, cover: cover ? abs(shop.base, cover) : null, url: abs(shop.base, href), pos: ++order });
   });
   return [...byId.values()].slice(0, PER_SHOP);
 }
 
-// --- databazeknih: VÝHRADNĚ % hodnocení ---
-async function ratingDatabazeknih(title) {
+// databazeknih: % hodnocení + obálka + odkaz na stránku knihy
+async function enrichDatabazeknih(title) {
   try {
     const $ = cheerio.load(await getHtml(`${DBK}/search?q=${encodeURIComponent(title)}&in=books`));
     const href = $("a[href*='/prehled-knihy/']").first().attr("href");
-    if (!href) return null;
+    if (!href) return {};
+    const link = href.startsWith("http") ? href : DBK + href;
     await sleep(DELAY);
-    const $$ = cheerio.load(await getHtml(href.startsWith("http") ? href : DBK + href));
+    const $$ = cheerio.load(await getHtml(link));
+    let rating = null;
     for (const sel of ["[itemprop='ratingValue']", ".bookRatingValue", ".ratingValue", ".bRatingValue"]) {
       const raw = $$(sel).first().text().replace(",", ".").replace(/[^\d.]/g, "");
       const n = parseFloat(raw);
-      if (Number.isFinite(n) && n > 0) return n <= 5 ? Math.round(n * 20) : Math.round(n);
+      if (Number.isFinite(n) && n > 0) { rating = n <= 5 ? Math.round(n * 20) : Math.round(n); break; }
     }
-    return null;
-  } catch (e) { console.warn("[dbk]", title, "→", e.message); return null; }
+    let cover = $$("[itemprop='image']").attr("src") || $$(".kniha_img img, .book_cover img, #icover_mid img, .cover_mid img, .booktopmainpic img").first().attr("src") || null;
+    cover = cover ? abs(DBK, cover) : null;
+    return { rating, cover, link };
+  } catch (e) { console.warn("[dbk]", title, "→", e.message); return {}; }
 }
 
 async function main() {
@@ -120,33 +113,27 @@ async function main() {
     await sleep(DELAY);
   }
 
-  // combined rank: nejnižší pozice → víc obchodů → nižší součet pozic
   const agg = [...map.values()].map((b) => ({
-    ...b,
-    minRank: Math.min(...b.ranks),
-    shopsCount: new Set(b.shops).size,
-    sumRank: b.ranks.reduce((a, c) => a + c, 0),
-  })).sort((a, b) => a.minRank - b.minRank || b.shopsCount - a.shopsCount || a.sumRank - b.sumRank)
-    .slice(0, MAX_BOOKS);
+    ...b, minRank: Math.min(...b.ranks), shopsCount: new Set(b.shops).size, sumRank: b.ranks.reduce((a, c) => a + c, 0),
+  })).sort((a, b) => a.minRank - b.minRank || b.shopsCount - a.shopsCount || a.sumRank - b.sumRank).slice(0, MAX_BOOKS);
 
-  console.log(`[build] agregováno ${agg.length} titulů, dotahuji % z databazeknih…`);
+  console.log(`[build] agregováno ${agg.length} titulů, dotahuji databazeknih…`);
 
   const books = [];
   for (let i = 0; i < agg.length; i++) {
     const b = agg[i];
-    const rating = await ratingDatabazeknih(b.title);
+    const e = await enrichDatabazeknih(b.title);
     await sleep(DELAY);
     books.push({
       title: b.title,
       author: b.author || "neznámý autor",
-      cat: [...new Set(b.shops)],                 // tag = u kterých obchodů je bestseller
-      rating,
-      ratingSource: rating != null ? "databazeknih.cz" : null,
-      readers: agg.length - i,                    // pořadí dle prodejní popularity (sestupně)
-      series: null, lang: null, year: null, pages: null, publisher: null,
-      desc: null,
-      cover: b.cover || null,                     // Kosmas má obálku; u Dobrovský dotáhne web z Google Books
-      link: null,
+      cat: [...new Set(b.shops)],
+      rating: e.rating ?? null,
+      ratingSource: e.rating != null ? "databazeknih.cz" : null,
+      readers: agg.length - i,
+      series: null, lang: null, year: null, pages: null, publisher: null, desc: null,
+      cover: b.cover || e.cover || null,   // Kosmas vlastní → jinak obálka z databazeknih
+      link: e.link || null,                // odkaz na stránku knihy na databazeknih
       prices: b.prices.sort((x, y) => x.price - y.price),
     });
   }
