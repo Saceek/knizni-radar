@@ -16,9 +16,12 @@
   .btn{background:var(--chip);color:var(--chipt);border:1px solid var(--cb);border-radius:12px;padding:9px 12px;font-size:14px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
   .btn:hover{opacity:.85}
   .note{font-size:12px;border-radius:12px;padding:8px 12px;margin:16px 0;line-height:1.5}
-  .note.warn{background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.3);color:var(--amber)}
   .note.ok{background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.3);color:var(--emerald)}
-  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+  .note.warn{background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.3);color:var(--amber)}
+  .nav{display:flex;gap:8px;margin:16px 0 8px}
+  .nav .tab{padding:8px 16px;border-radius:12px;font-size:15px;font-weight:700;border:1px solid var(--cb);background:var(--chip);color:var(--chipt);cursor:pointer}
+  .nav .tab.on{background:var(--chipon);color:var(--chipont);border-color:transparent}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
   .chip{padding:6px 12px;border-radius:999px;font-size:14px;font-weight:600;border:1px solid var(--cb);background:var(--chip);color:var(--chipt);cursor:pointer}
   .chip.on{background:var(--chipon);color:var(--chipont);border-color:transparent}
   .controls{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
@@ -37,14 +40,18 @@
   .meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:8px}
   .tag{font-size:11px;padding:2px 8px;border-radius:999px;background:var(--chip);color:var(--chipt);border:1px solid var(--cb)}
   .tag.src{background:rgba(16,185,129,.15);color:var(--emerald);border-color:transparent}
-  .desc{font-size:14px;color:var(--sub);margin:8px 0 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-  .more{background:none;border:none;color:var(--sub);font-size:12px;font-weight:600;cursor:pointer;padding:8px 0 0}
+  .actions{display:flex;align-items:center;gap:14px;margin-top:8px;flex-wrap:wrap}
+  .link{background:none;border:none;color:var(--sub);font-size:12px;font-weight:600;cursor:pointer;padding:0}
+  .bk{border:1px solid var(--cb);background:var(--chip);color:var(--chipt);border-radius:999px;padding:4px 12px;font-size:12px;font-weight:700;cursor:pointer}
+  .bk.on{background:rgba(16,185,129,.15);color:var(--emerald);border-color:transparent}
+  .bk.rm{color:#f87171}
   .detail{border-top:1px solid var(--cb);margin-top:12px;padding-top:12px}
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:8px}
   .shop{border:1px solid var(--cb);border-radius:10px;padding:8px;text-align:center;text-decoration:none;color:var(--text)}
   .shop.min{border-color:var(--emerald);background:rgba(16,185,129,.1)}
   .stars{color:var(--amber);letter-spacing:1px}
   a{color:inherit}
+  .empty{text-align:center;color:var(--sub);padding:48px 16px}
 </style>
 
 <div class="wrap">
@@ -59,38 +66,36 @@
     </div>
   </div>
 
+  <div class="nav" id="nav"></div>
   <div id="status"></div>
-  <div class="chips" id="cats"></div>
-  <div class="controls">
-    <input id="q" placeholder="Hledat titul nebo autora…" />
-    <select id="sort">
-      <option value="readers">Dle prodejní popularity</option>
-      <option value="rating">Dle hodnocení</option>
-      <option value="price">Nejnižší cena</option>
-      <option value="year">Novinky (nejnovější)</option>
-    </select>
-  </div>
-  <div id="list"></div>
-  <p class="tiny" style="text-align:center;margin-top:24px">Bestsellery Kosmas / Dobrovský · hodnocení a žánry databazeknih.cz · obálky Google Books.</p>
+  <div id="view"></div>
+
+  <p class="tiny" style="text-align:center;margin-top:24px">Bestsellery Kosmas / Dobrovský · hodnocení databazeknih.cz · obálky Google Books · backlog uložen v prohlížeči.</p>
 </div>
 
 <script>
 const DATA_URL = "books.json";
-const PALETTE = ["#4f46e5,#312e81","#d97706,#78350f","#0d9488,#134e4a","#e11d48,#881337","#7c3aed,#4c1d95","#0369a1,#0c4a6e","#15803d,#14532d","#b45309,#7c2d12"];
+const LS_KEY = "knizniRadarBacklog";
+const PALETTE = ["#4f46e5,#312e81","#d97706,#78350f","#0d9488,#134e4a","#e11d48,#881337","#7c3aed,#4c1d95","#0369a1,#0c4a6e","#15803d,#14532d"];
 function grad(seed=""){ let h=0; for(const ch of seed) h=(h*31+ch.charCodeAt(0))>>>0; const p=PALETTE[h%PALETTE.length].split(","); return `linear-gradient(135deg,${p[0]},${p[1]})`; }
 
 const DEMO = [
-  {title:"Hladový hrob",author:"Robert Galbraith (J. K. Rowling)",cat:["Detektivní","Thriller"],rating:94,ratingSource:"databazeknih.cz",readers:38,year:2024,desc:"Sedmý případ detektiva Strika a Robin Ellacottové.",cover:null,prices:[{shop:"Dobrovský",price:539,url:"#"},{shop:"Kosmas",price:559,url:"#"}]},
-  {title:"Vona",author:"Petra Klabouchová",cat:["Česká próza","Román"],rating:88,ratingSource:"databazeknih.cz",readers:34,year:2025,desc:"Oceňovaný český román.",cover:null,prices:[{shop:"Kosmas",price:349,url:"#"}]},
-  {title:"O tom Benešovi",author:"Pavel Kosatík",cat:["Literatura faktu","Biografie"],rating:78,ratingSource:"databazeknih.cz",readers:25,year:2025,desc:"Nový pohled na prezidenta Edvarda Beneše.",cover:null,prices:[{shop:"Kosmas",price:539,url:"#"}]},
+  {title:"Už letím",author:"Martin Moravec, Marek Dvořák",cat:["Dobrovský"],rating:null,ratingSource:null,readers:3,cover:null,prices:[{shop:"Dobrovský",price:384,url:"#"}]},
+  {title:"Vona",author:"Petra Klabouchová",cat:["Kosmas"],rating:88,ratingSource:"databazeknih.cz",readers:2,cover:null,prices:[{shop:"Kosmas",price:329,url:"#"}]},
+  {title:"O tom Benešovi",author:"Pavel Kosatík",cat:["Kosmas"],rating:78,ratingSource:"databazeknih.cz",readers:1,cover:null,prices:[{shop:"Kosmas",price:539,url:"#"}]},
 ];
 
-let S = {dark:true, cat:"Vše", sort:"readers", q:"", books:DEMO, status:"loading", updatedAt:null, expanded:null};
+let mem = null;
+function loadBacklog(){ try{ return JSON.parse(localStorage.getItem(LS_KEY))||[]; }catch(e){ return mem||[]; } }
+function saveBacklog(a){ try{ localStorage.setItem(LS_KEY, JSON.stringify(a)); }catch(e){ mem=a; } }
+
+let S = {dark:true, view:"list", filter:"Vše", sort:"readers", q:"", books:DEMO, status:"loading", updatedAt:null, expanded:null, backlog:loadBacklog()};
 
 const esc = s => (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const stars = r => {const v=Math.round((r||0)/100*5); return "★".repeat(v)+"☆".repeat(5-v);};
-const validPrices = b => (b.prices||[]).filter(p=>p&&p.price);
-const minPrice = b => {const v=validPrices(b); return v.length?Math.min(...v.map(p=>p.price)):Infinity;};
+const vPrices = b => (b.prices||[]).filter(p=>p&&p.price);
+const minPrice = b => {const v=vPrices(b); return v.length?Math.min(...v.map(p=>p.price)):Infinity;};
+const inBacklog = t => S.backlog.some(b=>b.title===t);
 
 async function load(){
   S.status="loading"; render();
@@ -104,100 +109,142 @@ async function load(){
   render();
 }
 
-function genreChips(){
+function filterChips(){
   const c={}; S.books.forEach(b=>(b.cat||[]).forEach(g=>{ if(g) c[g]=(c[g]||0)+1; }));
-  return Object.entries(c).sort((a,b)=>b[1]-a[1]).slice(0,8).map(x=>x[0]);
+  return Object.entries(c).sort((a,b)=>b[1]-a[1]).map(x=>x[0]);
 }
 function listFiltered(){
   const q = S.q.trim().toLowerCase();
-  let r = S.books.filter(b => (!q || (b.title+" "+b.author).toLowerCase().includes(q)) && (S.cat==="Vše" || (b.cat||[]).includes(S.cat)));
+  let r = S.books.filter(b => (!q || (b.title+" "+b.author).toLowerCase().includes(q)) && (S.filter==="Vše" || (b.cat||[]).includes(S.filter)));
   return r.sort((a,b)=>
     S.sort==="readers" ? (b.readers||0)-(a.readers||0) :
     S.sort==="price"   ? minPrice(a)-minPrice(b) :
-    S.sort==="year"    ? (b.year||0)-(a.year||0) :
                          (b.rating??-1)-(a.rating??-1));
+}
+
+function coverHtml(b){
+  return `<div class="cover" data-pending data-cover="${esc(b.cover||'')}" data-q="${esc((b.title||'')+' '+(b.author||''))}" data-title="${esc(b.title||'')}" style="background:${grad((b.cat||[])[0]||b.title)}">
+      <span class="cv-cat">${esc((b.cat||[])[0]||'')}</span><span class="cv-title">${esc(b.title)}</span></div>`;
+}
+function ratingHtml(b){
+  return `<span class="stars">${stars(b.rating)}</span><span class="tiny">${b.rating!=null?b.rating+"%":"—"}</span>
+    ${b.ratingSource?`<span class="tag src">✓ ${esc(b.ratingSource)}</span>`:`<span class="tag">bez hodnocení</span>`}
+    ${(b.cat||[]).map(c=>`<span class="tag">${esc(c)}</span>`).join("")}`;
+}
+function priceHtml(b){ const vp=vPrices(b); if(!vp.length) return ""; const m=Math.min(...vp.map(p=>p.price)); const s=vp.find(p=>p.price===m);
+  return `<div style="text-align:right"><div class="tiny">nejnižší cena</div><div class="price">${m} Kč</div><div class="tiny">${esc(s.shop)}</div></div>`; }
+function detailHtml(b){ const vp=vPrices(b).sort((x,y)=>x.price-y.price); const m=vp.length?vp[0].price:null;
+  return `<div class="detail"><div class="grid">${vp.map(p=>`<a class="shop ${p.price===m?'min':''}" href="${esc(p.url||'#')}" target="_blank" rel="noreferrer">
+    <div class="tiny">${esc(p.shop)}</div><div style="font-weight:700;${p.price===m?'color:var(--emerald)':''}">${p.price} Kč</div>
+    ${p.price===m?'<div class="tiny" style="color:var(--emerald)">nejlevnější</div>':''}</a>`).join("")||'<div class="tiny">Ceny se nepodařilo načíst.</div>'}</div></div>`; }
+
+function card(b,i){
+  const open = S.expanded===b.title; const bk=inBacklog(b.title);
+  return `<div class="card">
+    <div><div class="rank">#${i+1}</div>${coverHtml(b)}</div>
+    <div class="body">
+      <div class="row"><div style="min-width:0"><p class="title">${esc(b.title)}</p><p class="muted">${esc(b.author)}</p></div>${priceHtml(b)}</div>
+      <div class="meta">${ratingHtml(b)}</div>
+      <div class="actions">
+        <button class="link" data-more="${esc(b.title)}">${open?"Méně ▲":"Detail & ceny ▼"}</button>
+        <button class="bk ${bk?'on':''}" data-bk="${esc(b.title)}">${bk?'✓ V backlogu':'+ Backlog'}</button>
+      </div>
+      ${open?detailHtml(b):""}
+    </div>
+  </div>`;
+}
+function backlogCard(b){
+  const open = S.expanded===b.title;
+  return `<div class="card">
+    <div>${coverHtml(b)}</div>
+    <div class="body">
+      <div class="row"><div style="min-width:0"><p class="title">${esc(b.title)}</p><p class="muted">${esc(b.author)}</p></div>${priceHtml(b)}</div>
+      <div class="meta">${ratingHtml(b)}</div>
+      <div class="actions">
+        <button class="link" data-more="${esc(b.title)}">${open?"Méně ▲":"Detail & ceny ▼"}</button>
+        <button class="bk rm" data-rm="${esc(b.title)}">✕ Odebrat z backlogu</button>
+      </div>
+      ${open?detailHtml(b):""}
+    </div>
+  </div>`;
 }
 
 function render(){
   document.body.className = S.dark ? "" : "light";
   document.getElementById("theme").textContent = S.dark ? "🌞" : "🌙";
 
+  document.getElementById("nav").innerHTML =
+    `<button class="tab ${S.view==='list'?'on':''}" data-view="list">Bestsellery</button>
+     <button class="tab ${S.view==='backlog'?'on':''}" data-view="backlog">Backlog (${S.backlog.length})</button>`;
+
   let st="";
-  if(S.status==="loading") st='<div class="note warn">Načítám…</div>';
-  else if(S.status==="live") st='<div class="note ok">✓ Živá data'+(S.updatedAt?" · aktualizováno "+new Date(S.updatedAt).toLocaleString("cs-CZ"):"")+'</div>';
-  else if(S.status==="demo") st='<div class="note warn">Soubor se nepodařilo načíst – zobrazuji ukázková data.</div>';
+  if(S.view==="list"){
+    if(S.status==="loading") st='<div class="note warn">Načítám…</div>';
+    else if(S.status==="live") st='<div class="note ok">✓ Živá data'+(S.updatedAt?" · aktualizováno "+new Date(S.updatedAt).toLocaleString("cs-CZ"):"")+'</div>';
+    else if(S.status==="demo") st='<div class="note warn">Soubor se nepodařilo načíst – ukázková data.</div>';
+  }
   document.getElementById("status").innerHTML = st;
 
-  document.getElementById("cats").innerHTML = ["Vše",...genreChips()].map(c=>
-    `<button class="chip ${S.cat===c?"on":""}" data-cat="${esc(c)}">${esc(c)}</button>`).join("");
-
-  const items = listFiltered();
-  document.getElementById("list").innerHTML = items.length ? items.map((b,i)=>card(b,i)).join("")
-    : '<p class="muted" style="text-align:center;padding:40px 0">Žádný titul neodpovídá filtru.</p>';
-
+  const view = document.getElementById("view");
+  if(S.view==="backlog"){
+    view.innerHTML = S.backlog.length
+      ? S.backlog.map(b=>backlogCard(b)).join("")
+      : '<div class="empty">Backlog je prázdný.<br>U knih v žebříčku klikni na <b>+ Backlog</b>.</div>';
+  } else {
+    const chips = ["Vše",...filterChips()].map(c=>`<button class="chip ${S.filter===c?'on':''}" data-filter="${esc(c)}">${esc(c)}</button>`).join("");
+    const items = listFiltered();
+    view.innerHTML = `<div class="chips">${chips}</div>
+      <div class="controls">
+        <input id="q" placeholder="Hledat titul nebo autora…" value="${esc(S.q)}" />
+        <select id="sort">
+          <option value="readers"${S.sort==='readers'?' selected':''}>Dle prodejní popularity</option>
+          <option value="rating"${S.sort==='rating'?' selected':''}>Dle hodnocení</option>
+          <option value="price"${S.sort==='price'?' selected':''}>Nejnižší cena</option>
+        </select>
+      </div>
+      ${items.length?items.map((b,i)=>card(b,i)).join(""):'<div class="empty">Žádný titul neodpovídá filtru.</div>'}`;
+    const qi=document.getElementById("q"); if(qi){ qi.oninput=e=>{S.q=e.target.value; render(); qi2focus(); }; }
+    const so=document.getElementById("sort"); if(so) so.onchange=e=>{S.sort=e.target.value; render();};
+  }
   hydrateCovers();
 }
+let _focus=false; function qi2focus(){ const qi=document.getElementById("q"); if(qi){ qi.focus(); qi.setSelectionRange(qi.value.length,qi.value.length);} }
 
-function card(b,i){
-  const vp = validPrices(b).sort((x,y)=>x.price-y.price);
-  const min = vp.length?vp[0].price:null;
-  const open = S.expanded===b.title;
-  const firstCat = (b.cat||[])[0]||"";
-  const cover = `<div class="cover" data-pending data-cover="${esc(b.cover||'')}" data-q="${esc((b.title||'')+' '+(b.author||''))}" style="background:${grad(firstCat||b.title)}">
-      <span class="cv-cat">${esc(firstCat)}</span><span class="cv-title">${esc(b.title)}</span>
-    </div>`;
-  return `<div class="card">
-    <div><div class="rank">#${i+1}</div>${cover}</div>
-    <div class="body">
-      <div class="row">
-        <div style="min-width:0"><p class="title">${esc(b.title)}</p><p class="muted">${esc(b.author)}</p></div>
-        ${min!=null?`<div style="text-align:right"><div class="tiny">nejnižší cena</div><div class="price">${min} Kč</div><div class="tiny">${esc(vp[0].shop)}</div></div>`:""}
-      </div>
-      <div class="meta">
-        <span class="stars">${stars(b.rating)}</span><span class="tiny">${b.rating!=null?b.rating+"%":"—"}</span>
-        ${b.ratingSource?`<span class="tag src">✓ ${esc(b.ratingSource)}</span>`:`<span class="tag">bez hodnocení</span>`}
-        ${(b.cat||[]).slice(0,4).map(c=>`<span class="tag">${esc(c)}</span>`).join("")}
-      </div>
-      ${b.desc?`<p class="desc">${esc(b.desc)}</p>`:""}
-      <button class="more" data-title="${esc(b.title)}">${open?"Méně ▲":"Detail & ceny ▼"}</button>
-      ${open?detail(b,vp,min):""}
-    </div>
-  </div>`;
-}
-
-function detail(b,vp,min){
-  const m=[];
-  if(b.year) m.push("📅 "+b.year);
-  if(b.link) m.push(`<a href="${esc(b.link)}" target="_blank" rel="noreferrer">databazeknih ↗</a>`);
-  const shops = vp.length?`<div class="tiny" style="font-weight:600;margin:10px 0 6px">🛒 Ceny v obchodech</div>
-    <div class="grid">${vp.map(p=>`<a class="shop ${p.price===min?"min":""}" href="${esc(p.url||"#")}" target="_blank" rel="noreferrer">
-      <div class="tiny">${esc(p.shop)}</div><div style="font-weight:700;${p.price===min?"color:var(--emerald)":""}">${p.price} Kč</div>
-      ${p.price===min?'<div class="tiny" style="color:var(--emerald)">nejlevnější</div>':""}</a>`).join("")}</div>`:'<div class="tiny">Ceny se zatím nepodařilo načíst.</div>';
-  return `<div class="detail"><div class="tiny" style="line-height:1.8">${m.join(" &nbsp; ")||"&nbsp;"}</div>${shops}</div>`;
-}
-
-// obálky: data-cover → Google Books → stylizovaná záloha. no-referrer kvůli hotlink-ochraně.
-function hydrateCovers(){
-  document.querySelectorAll('.cover[data-pending]').forEach(el=>{
+// obálky: data-cover → Google Books(title+autor) → Google Books(title) → stylizovaná záloha; sekvenčně
+function tryImg(el, src){ return new Promise(res=>{ const img=document.createElement('img'); img.referrerPolicy='no-referrer';
+  img.onload=()=>{ el.appendChild(img); res(true); }; img.onerror=()=>res(false); img.src=src; }); }
+async function googleCover(q){ try{
+  const r=await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=1&country=CZ`);
+  const d=await r.json(); const im=d?.items?.[0]?.volumeInfo?.imageLinks;
+  const u=(im?.thumbnail||im?.smallThumbnail||"").replace("http://","https://").replace("&edge=curl",""); return u||null;
+}catch(e){ return null; } }
+let _hydrating=false;
+async function hydrateCovers(){
+  if(_hydrating) return; _hydrating=true;
+  const els=[...document.querySelectorAll('.cover[data-pending]')];
+  for(const el of els){
     el.removeAttribute('data-pending');
-    const direct = el.dataset.cover, q = el.dataset.q;
-    const showImg = (src, onFail)=>{
-      const img=document.createElement('img'); img.alt=''; img.referrerPolicy='no-referrer';
-      img.onerror=()=>{ img.remove(); onFail&&onFail(); };
-      img.src=src; el.appendChild(img);
-    };
-    const google = ()=> fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=1&country=CZ`)
-      .then(r=>r.json()).then(d=>{ const im=d?.items?.[0]?.volumeInfo?.imageLinks; const u=(im?.thumbnail||im?.smallThumbnail||'').replace('http://','https://').replace('&edge=curl',''); if(u) showImg(u); }).catch(()=>{});
-    if(direct) showImg(direct, google); else google();
-  });
+    const direct=el.dataset.cover, q=el.dataset.q, t=el.dataset.title;
+    if(direct && await tryImg(el,direct)) continue;
+    let u=await googleCover(q); if(u && await tryImg(el,u)) continue;
+    u=await googleCover(t); if(u) await tryImg(el,u);
+  }
+  _hydrating=false;
 }
 
-document.getElementById("refresh").onclick = load;
-document.getElementById("theme").onclick = ()=>{S.dark=!S.dark; render();};
-document.getElementById("q").oninput = e=>{S.q=e.target.value; render();};
-document.getElementById("sort").onchange = e=>{S.sort=e.target.value; render();};
-document.getElementById("cats").onclick = e=>{const c=e.target.dataset.cat; if(c){S.cat=c; render();}};
-document.getElementById("list").onclick = e=>{const t=e.target.dataset.title; if(t){S.expanded = S.expanded===t?null:t; render();}};
+function addBacklog(t){ const b=S.books.find(x=>x.title===t); if(b && !inBacklog(t)){ S.backlog.push(b); saveBacklog(S.backlog); render(); } }
+function removeBacklog(t){ S.backlog=S.backlog.filter(x=>x.title!==t); saveBacklog(S.backlog); render(); }
+function toggleBacklog(t){ inBacklog(t)?removeBacklog(t):addBacklog(t); }
+
+document.getElementById("refresh").onclick=load;
+document.getElementById("theme").onclick=()=>{S.dark=!S.dark; render();};
+document.getElementById("nav").onclick=e=>{const v=e.target.dataset.view; if(v){S.view=v; S.expanded=null; render();}};
+document.getElementById("view").onclick=e=>{
+  const f=e.target.dataset.filter; if(f){S.filter=f; render(); return;}
+  const m=e.target.dataset.more; if(m){S.expanded=S.expanded===m?null:m; render(); return;}
+  const bk=e.target.dataset.bk; if(bk){toggleBacklog(bk); return;}
+  const rm=e.target.dataset.rm; if(rm){removeBacklog(rm); return;}
+};
 
 load();
 </script>
