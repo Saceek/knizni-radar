@@ -17,6 +17,7 @@ const path = require("path");
 const OUT = path.join(__dirname, "books.json");
 const DBK = "https://www.databazeknih.cz";
 const UA = "KnizniRadar/1.0 (+kontakt@example.cz)";
+const UA_BROWSER = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
 const DELAY = 700;
 const PER_SHOP = 20;
 const MAX_BOOKS = 40;
@@ -50,8 +51,8 @@ function cleanOgTitle(ogTitle) {
   return t || null;
 }
 
-async function getHtml(url) {
-  const res = await fetch(url, { headers: { "User-Agent": UA, "Accept-Language": "cs" } });
+async function getHtml(url, ua = UA) {
+  const res = await fetch(url, { headers: { "User-Agent": ua, "Accept-Language": "cs" } });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   return res.text();
 }
@@ -96,23 +97,31 @@ function scrapeShop(html, shop) {
   return [...byId.values()].slice(0, PER_SHOP);
 }
 
-// databazeknih: % hodnocení + obálka + odkaz na stránku knihy
+// databazeknih: PROCENTUÁLNÍ hodnocení (0–100) + obálka + odkaz na stránku knihy
 async function enrichDatabazeknih(title) {
   try {
-    const $ = cheerio.load(await getHtml(`${DBK}/search?q=${encodeURIComponent(title)}&in=books`));
-    const href = $("a[href*='/prehled-knihy/']").first().attr("href");
+    const $ = cheerio.load(await getHtml(`${DBK}/search?q=${encodeURIComponent(title)}&in=books`, UA_BROWSER));
+    // první odkaz na detail knihy: /knihy/<slug>-<id> i /prehled-knihy/<slug>-<id>
+    let href = null;
+    $("a[href]").each((_, a) => {
+      if (href) return;
+      const h = $(a).attr("href") || "";
+      if (/\/(prehled-knihy|knihy)\/[^/?#]+-\d+(?:[/?#]|$)/.test(h)) href = h;
+    });
     if (!href) return {};
-    const link = href.startsWith("http") ? href : DBK + href;
+    let link = (href.startsWith("http") ? href : DBK + href).replace("/knihy/", "/prehled-knihy/");
     await sleep(DELAY);
-    const $$ = cheerio.load(await getHtml(link));
+    const $$ = cheerio.load(await getHtml(link, UA_BROWSER));
+
+    // procento je text odkazu na /hodnoceni-knihy/... ve tvaru "96 %"
     let rating = null;
-    for (const sel of ["[itemprop='ratingValue']", ".bookRatingValue", ".ratingValue", ".bRatingValue"]) {
-      const raw = $$(sel).first().text().replace(",", ".").replace(/[^\d.]/g, "");
-      const n = parseFloat(raw);
-      if (Number.isFinite(n) && n > 0) { rating = n <= 5 ? Math.round(n * 20) : Math.round(n); break; }
-    }
-    let cover = $$("[itemprop='image']").attr("src") || $$(".kniha_img img, .book_cover img, #icover_mid img, .cover_mid img, .booktopmainpic img").first().attr("src") || null;
-    cover = cover ? abs(DBK, cover) : null;
+    $$("a[href*='/hodnoceni-knihy/']").each((_, el) => {
+      if (rating != null) return;
+      const m = $$(el).text().replace(/\s+/g, "").match(/(\d{1,3})%/);
+      if (m) { const n = parseInt(m[1], 10); if (n >= 0 && n <= 100) rating = n; }
+    });
+
+    const cover = $$("meta[property='og:image']").attr("content") || null;
     return { rating, cover, link };
   } catch (e) { console.warn("[dbk]", title, "→", e.message); return {}; }
 }
