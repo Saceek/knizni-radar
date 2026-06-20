@@ -3,9 +3,10 @@
  * -------------------------------------------------------------
  * Node 18+ (globální fetch). Závislost: cheerio.   npm i cheerio && node build.js
  *
- *  - název, autor, cena, pořadí = z obchodů (Kosmas, Dobrovský)
- *  - z databazeknih.cz: procentuální HODNOCENÍ + OBÁLKA + ODKAZ na stránku knihy
- *  - obálka: Kosmas vlastní (obalky.kosmas.cz) → databazeknih → Google Books (poslední záloha, dle názvu+autora)
+ *  - pořadí + cena = z výpisu bestsellerů (Kosmas, Dobrovský)
+ *  - NÁZEV (s diakritikou) + OBÁLKA = z detailu knihy v obchodě (og:title / og:image)
+ *  - z databazeknih.cz: procentuální HODNOCENÍ + ODKAZ na stránku knihy
+ *  - obálka: og:image z obchodu → databazeknih → Google Books (poslední záloha)
  *  - pořadí: combined rank = nejnižší pozice napříč obchody; shoda → víc obchodů → nižší součet
  */
 
@@ -41,10 +42,30 @@ function slugToTitle(slug) {
   return t ? t.charAt(0).toUpperCase() + t.slice(1) : "";
 }
 
+// "Už letím - Martin Moravec,Marek Dvořák"  ->  "Už letím"
+function cleanOgTitle(ogTitle) {
+  if (!ogTitle) return null;
+  let t = ogTitle.split("|")[0].trim();          // pryč "| Knihy Dobrovský" / "| KOSMAS.cz"
+  t = t.replace(/\s+[–-]\s+[^–-]+$/, "").trim();  // pryč koncové " - Autor(é)"
+  return t || null;
+}
+
 async function getHtml(url) {
   const res = await fetch(url, { headers: { "User-Agent": UA, "Accept-Language": "cs" } });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   return res.text();
+}
+
+// detail knihy v obchodě → skutečný název (og:title) + obálka (og:image)
+async function shopDetail(url) {
+  try {
+    const $ = cheerio.load(await getHtml(url));
+    const og = (p) => $(`meta[property='${p}']`).attr("content") || $(`meta[name='${p}']`).attr("content") || null;
+    const title = cleanOgTitle(og("og:title"));
+    let cover = og("og:image");
+    if (cover && isPlaceholder(cover)) cover = null;
+    return { title, cover: cover || null };
+  } catch (e) { console.warn("[detail]", url, "→", e.message); return {}; }
 }
 
 function scrapeShop(html, shop) {
@@ -65,7 +86,12 @@ function scrapeShop(html, shop) {
     const img = scope.find("img").first();
     let cover = img.attr("src") || img.attr("data-src") || img.attr("data-original") || null;
     if (cover && isPlaceholder(cover)) cover = null;
-    byId.set(id, { title: slugToTitle(slug), author, price, cover: cover ? abs(shop.base, cover) : null, url: abs(shop.base, href), pos: ++order });
+    byId.set(id, {
+      titleFallback: slugToTitle(slug),     // jen záloha, hlavní název přijde z detailu
+      author, price,
+      cover: cover ? abs(shop.base, cover) : null,
+      url: abs(shop.base, href), pos: ++order,
+    });
   });
   return [...byId.values()].slice(0, PER_SHOP);
 }
@@ -91,8 +117,7 @@ async function enrichDatabazeknih(title) {
   } catch (e) { console.warn("[dbk]", title, "→", e.message); return {}; }
 }
 
-// Google Books – poslední záloha obálky (typicky když Dobrovský nemá vlastní a databazeknih taky ne).
-// ISBN v datech nemáme, hledá se podle názvu (+ autora). Volitelně GOOGLE_BOOKS_API_KEY pro vyšší limity.
+// Google Books – úplně poslední záloha obálky (dle názvu + autora). Volitelně GOOGLE_BOOKS_API_KEY.
 async function googleCover(title, author) {
   const hasAuthor = author && author !== "neznámý autor";
   const q = `intitle:${title}` + (hasAuthor ? `+inauthor:${author}` : "");
@@ -106,7 +131,6 @@ async function googleCover(title, author) {
     for (const it of data.items || []) {
       const links = it.volumeInfo && it.volumeInfo.imageLinks;
       const raw = links && (links.thumbnail || links.smallThumbnail);
-      // Google vrací http:// se "zohýbaným" rohem a malým zoomem → uklidíme na ostřejší https náhled
       if (raw) return raw.replace(/^http:/, "https:").replace("&edge=curl", "").replace("zoom=1", "zoom=2");
     }
     return null;
@@ -121,6 +145,15 @@ async function main() {
     let items = [];
     try { items = scrapeShop(await getHtml(shop.url), shop); console.log(`[shop] ${shop.name}: ${items.length} knih`); }
     catch (e) { console.warn(`[shop] ${shop.name} chyba: ${e.message}`); }
+
+    // dotáhni z detailu skutečný název + obálku (og:title / og:image)
+    for (const it of items) {
+      const d = await shopDetail(it.url);
+      it.title = d.title || it.titleFallback;           // hlavní = og:title, jinak slug-záloha
+      if (d.cover) it.cover = d.cover;                  // og:image je spolehlivá obálka
+      await sleep(DELAY);
+    }
+
     items.forEach((it) => {
       const key = norm(it.title);
       if (!key) return;
@@ -148,7 +181,7 @@ async function main() {
     const e = await enrichDatabazeknih(b.title);
     await sleep(DELAY);
 
-    // obálka: vlastní z obchodu → databazeknih → Google Books (poslední záloha)
+    // obálka: og:image z obchodu → databazeknih → Google Books (poslední záloha)
     let cover = b.cover || e.cover || null;
     let coverSource = b.cover ? "shop" : (e.cover ? "databazeknih.cz" : null);
     if (!cover) {
@@ -165,7 +198,7 @@ async function main() {
       ratingSource: e.rating != null ? "databazeknih.cz" : null,
       readers: agg.length - i,
       series: null, lang: null, year: null, pages: null, publisher: null, desc: null,
-      cover,                 // vlastní z obchodu → databazeknih → Google Books
+      cover,                 // og:image z obchodu → databazeknih → Google Books
       coverSource,           // shop | databazeknih.cz | google-books | null
       link: e.link || null,  // odkaz na stránku knihy na databazeknih
       prices: b.prices.sort((x, y) => x.price - y.price),
