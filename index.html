@@ -100,6 +100,10 @@
 
 <script>
 const DATA_URL = "books.json";
+// Volitelný Google Books API klíč (z Google Cloud, omezený na referer = tvoje doména).
+// Bez klíče platí nízký anonymní limit a hrozí chyba 429. S klíčem ~1000 dotazů/den.
+const GBOOKS_KEY = "";
+const gbKey = () => GBOOKS_KEY ? "&key="+GBOOKS_KEY : "";
 const LS_KEY = "knizniRadarBacklog";
 const PALETTE = ["#4f46e5,#312e81","#d97706,#78350f","#0d9488,#134e4a","#e11d48,#881337","#7c3aed,#4c1d95","#0369a1,#0c4a6e","#15803d,#14532d"];
 function grad(seed=""){ let h=0; for(const ch of seed) h=(h*31+ch.charCodeAt(0))>>>0; const p=PALETTE[h%PALETTE.length].split(","); return `linear-gradient(135deg,${p[0]},${p[1]})`; }
@@ -247,7 +251,7 @@ function render(){
 function tryImg(el, src){ return new Promise(res=>{ const img=document.createElement('img'); img.referrerPolicy='no-referrer';
   img.onload=()=>{ el.appendChild(img); res(true); }; img.onerror=()=>res(false); img.src=src; }); }
 async function googleCover(q){ try{
-  const r=await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=1&country=CZ`);
+  const r=await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=1&country=CZ`+gbKey());
   const d=await r.json(); const im=d?.items?.[0]?.volumeInfo?.imageLinks;
   const u=(im?.thumbnail||im?.smallThumbnail||"").replace("http://","https://").replace("&edge=curl",""); return u||null;
 }catch(e){ return null; } }
@@ -287,7 +291,7 @@ function searchPanelHtml(){
 function resultsHtml(){
   if(S.addBusy) return '<div class="tiny" style="padding:8px">Hledám…</div>';
   if(S.addErr) return `<div class="tiny" style="padding:8px;color:#f87171">Vyhledávání selhalo: ${esc(S.addErr)}<br>Nejčastěji blokace googleapis.com (adblock/rozšíření), dočasný limit Google, nebo CSP v náhledu. Zkus jiný prohlížeč/připojení, nebo použij ruční režim.</div>`;
-  if(!S.addQ.trim()) return '<div class="tiny" style="padding:8px">Začni psát název – obálku, autora i rok doplní Google Books.</div>';
+  if(!S.addQ.trim()) return '<div class="tiny" style="padding:8px">Napiš název a stiskni Enter nebo Hledat – obálku, autora i rok doplní Google Books.</div>';
   if(!S.addResults.length) return '<div class="tiny" style="padding:8px">Nic nenalezeno.</div>';
   return S.addResults.map((r,i)=>`<div class="rres">
     <div class="rcover" style="background:${grad(r.title)}">${r.cover?`<img src="${esc(r.cover)}" referrerpolicy="no-referrer" />`:''}</div>
@@ -316,17 +320,20 @@ function manualPanelHtml(){
     <button class="addbtn" id="mf-submit">Přidat do backlogu</button>
   </div>`;
 }
+const _gbCache={};
 async function gbSearch(q){
-  const base=`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=8`;
-  let r=await fetch(base+"&country=CZ");
-  if(r.status===403) r=await fetch(base);            // některé IP/region: zkus bez country
+  if(_gbCache[q]) return _gbCache[q];
+  const u=`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=8`+gbKey();
+  let r=await fetch(u+"&country=CZ");
+  if(r.status===403) r=await fetch(u);                // některé IP/region: zkus bez country
   if(!r.ok) throw new Error("Google Books HTTP "+r.status);
   const d=await r.json();
   if(d.error) throw new Error(d.error.message||("kód "+(d.error.code||"?")));
-  return (d.items||[]).map(it=>{ const v=it.volumeInfo||{}; const im=v.imageLinks||{};
+  const out=(d.items||[]).map(it=>{ const v=it.volumeInfo||{}; const im=v.imageLinks||{};
     const cover=(im.thumbnail||im.smallThumbnail||"").replace("http://","https://").replace("&edge=curl","");
     return {title:v.title||"", author:(v.authors||[]).join(", "), cover:cover||null, year:(v.publishedDate||"").slice(0,4)||null};
   }).filter(x=>x.title);
+  _gbCache[q]=out; return out;
 }
 let _searchTimer=null;
 function scheduleSearch(){ clearTimeout(_searchTimer); _searchTimer=setTimeout(runSearch,350); }
@@ -373,7 +380,7 @@ function mountAddPanel(){
   if(S.addMode==='search'){
     const inp=document.getElementById('addq');
     if(inp){
-      inp.oninput=e=>{S.addQ=e.target.value; S.addMsg=""; scheduleSearch();};
+      inp.oninput=e=>{S.addQ=e.target.value; S.addMsg="";};
       inp.onkeydown=e=>{ if(e.key==='Enter'){ e.preventDefault(); runSearch(); } };
     }
     const go=document.getElementById('addgo'); if(go) go.onclick=runSearch;
