@@ -58,6 +58,21 @@
   .rating.r-high{background:rgba(220,38,38,.16);color:#ef4444}
   .rating.r-mid{background:rgba(37,99,235,.16);color:#3b82f6}
   .rating.r-low{background:var(--chip);color:var(--sub);border:1px solid var(--cb)}
+  .addbox{background:var(--card);border:1px solid var(--cb);border-radius:18px;padding:14px;margin-bottom:16px}
+  .addbox input{width:100%}
+  .addtabs{display:flex;gap:8px;margin-bottom:10px}
+  .atab{padding:6px 12px;border-radius:999px;font-size:13px;font-weight:700;border:1px solid var(--cb);background:var(--chip);color:var(--chipt);cursor:pointer}
+  .atab.on{background:var(--chipon);color:var(--chipont);border-color:transparent}
+  .addmsg{font-size:12px;color:var(--emerald);margin:0 0 8px}
+  .addresults{display:flex;flex-direction:column;gap:8px;margin-top:10px;max-height:360px;overflow:auto}
+  .rres{display:flex;align-items:center;gap:10px;padding:8px;border:1px solid var(--cb);border-radius:12px}
+  .rcover{width:38px;height:54px;border-radius:4px;overflow:hidden;flex:none;position:relative;box-shadow:0 2px 6px rgba(0,0,0,.3)}
+  .rcover img{width:100%;height:100%;object-fit:cover}
+  .mform{display:flex;flex-direction:column;gap:8px}
+  .mrow{display:flex;gap:8px;flex-wrap:wrap}
+  .mrow input{min-width:120px}
+  .addbtn{align-self:flex-start;border:1px solid transparent;background:rgba(16,185,129,.15);color:var(--emerald);border-radius:12px;padding:9px 16px;font-size:14px;font-weight:700;cursor:pointer}
+  .addbtn:hover{opacity:.85}
   a{color:inherit}
   .empty{text-align:center;color:var(--sub);padding:48px 16px}
 </style>
@@ -99,7 +114,9 @@ let mem = null;
 function loadBacklog(){ try{ return JSON.parse(localStorage.getItem(LS_KEY))||[]; }catch(e){ return mem||[]; } }
 function saveBacklog(a){ try{ localStorage.setItem(LS_KEY, JSON.stringify(a)); }catch(e){ mem=a; } }
 
-let S = {dark:true, view:"list", filter:"Vše", sort:"readers", q:"", books:DEMO, status:"loading", updatedAt:null, expanded:null, backlog:loadBacklog()};
+let S = {dark:true, view:"list", filter:"Vše", sort:"readers", q:"", books:DEMO, status:"loading", updatedAt:null, expanded:null, backlog:loadBacklog(),
+  addMode:"search", addQ:"", addResults:[], addBusy:false, addMsg:"",
+  addForm:{title:"",author:"",cover:"",rating:"",link:"",shop:"",price:"",url:""}};
 
 const esc = s => (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const ratingClass = r => r>=80?"r-high":r>=40?"r-mid":"r-low";
@@ -203,9 +220,11 @@ function render(){
 
   const view = document.getElementById("view");
   if(S.view==="backlog"){
-    view.innerHTML = S.backlog.length
+    const list = S.backlog.length
       ? S.backlog.map(b=>backlogCard(b)).join("")
-      : '<div class="empty">Backlog je prázdný.<br>U knih v žebříčku klikni na <b>+ Backlog</b>.</div>';
+      : '<div class="empty" style="padding:24px 16px">Backlog je prázdný.<br>Přidej knihu níže, nebo u titulů v žebříčku klikni na <b>+ Backlog</b>.</div>';
+    view.innerHTML = addPanelHtml() + list;
+    mountAddPanel();
   } else {
     const chips = ["Vše",...filterChips()].map(c=>`<button class="chip ${S.filter===c?'on':''}" data-filter="${esc(c)}">${esc(c)}</button>`).join("");
     const items = listFiltered();
@@ -244,6 +263,112 @@ async function hydrateCovers(){
     u=await googleCover(t); if(u) await tryImg(el,u);
   }
   _hydrating=false;
+}
+
+/* ---- přidání do backlogu: vyhledání (Google Books) + ruční zápis ---- */
+function addPanelHtml(){
+  const m=S.addMode;
+  return `<div class="addbox">
+    <div class="addtabs">
+      <button class="atab ${m==='search'?'on':''}" data-amode="search">🔍 Vyhledat</button>
+      <button class="atab ${m==='manual'?'on':''}" data-amode="manual">✏️ Ručně</button>
+    </div>
+    ${S.addMsg?`<div class="addmsg">${esc(S.addMsg)}</div>`:""}
+    ${m==='search'?searchPanelHtml():manualPanelHtml()}
+  </div>`;
+}
+function searchPanelHtml(){
+  return `<input id="addq" placeholder="Najdi knihu (název, autor)…" value="${esc(S.addQ)}" autocomplete="off" />
+    <div id="addresults" class="addresults">${resultsHtml()}</div>`;
+}
+function resultsHtml(){
+  if(S.addBusy) return '<div class="tiny" style="padding:8px">Hledám…</div>';
+  if(!S.addQ.trim()) return '<div class="tiny" style="padding:8px">Začni psát název – obálku, autora i rok doplní Google Books.</div>';
+  if(!S.addResults.length) return '<div class="tiny" style="padding:8px">Nic nenalezeno.</div>';
+  return S.addResults.map((r,i)=>`<div class="rres">
+    <div class="rcover" style="background:${grad(r.title)}">${r.cover?`<img src="${esc(r.cover)}" referrerpolicy="no-referrer" />`:''}</div>
+    <div style="flex:1;min-width:0">
+      <div class="title" style="font-size:14px">${esc(r.title)}</div>
+      <div class="muted">${esc(r.author||'neznámý autor')}${r.year?' · '+esc(r.year):''}</div>
+    </div>
+    <button class="bk" data-add="${i}">+ Přidat</button>
+  </div>`).join("");
+}
+function manualPanelHtml(){
+  const f=S.addForm;
+  return `<div class="mform">
+    <input id="mf-title" placeholder="Název * (povinné)" value="${esc(f.title)}" autocomplete="off" />
+    <input id="mf-author" placeholder="Autor (doporučeno – zpřesní obálku)" value="${esc(f.author)}" autocomplete="off" />
+    <input id="mf-cover" placeholder="URL obálky (nepovinné – jinak z Google Books)" value="${esc(f.cover)}" autocomplete="off" />
+    <div class="mrow">
+      <input id="mf-rating" placeholder="Hodnocení % 0–100 (nepovinné)" value="${esc(f.rating)}" inputmode="numeric" autocomplete="off" />
+      <input id="mf-link" placeholder="Odkaz na databazeknih (nepovinné)" value="${esc(f.link)}" autocomplete="off" />
+    </div>
+    <div class="mrow">
+      <input id="mf-shop" placeholder="Obchod" value="${esc(f.shop)}" autocomplete="off" />
+      <input id="mf-price" placeholder="Cena Kč" value="${esc(f.price)}" inputmode="numeric" autocomplete="off" />
+      <input id="mf-url" placeholder="Odkaz na obchod" value="${esc(f.url)}" autocomplete="off" />
+    </div>
+    <button class="addbtn" id="mf-submit">Přidat do backlogu</button>
+  </div>`;
+}
+async function gbSearch(q){
+  const r=await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=8&country=CZ`);
+  const d=await r.json();
+  return (d.items||[]).map(it=>{ const v=it.volumeInfo||{}; const im=v.imageLinks||{};
+    const cover=(im.thumbnail||im.smallThumbnail||"").replace("http://","https://").replace("&edge=curl","");
+    return {title:v.title||"", author:(v.authors||[]).join(", "), cover:cover||null, year:(v.publishedDate||"").slice(0,4)||null};
+  }).filter(x=>x.title);
+}
+let _searchTimer=null;
+function scheduleSearch(){ clearTimeout(_searchTimer); _searchTimer=setTimeout(runSearch,350); }
+async function runSearch(){
+  const q=S.addQ.trim();
+  if(!q){ S.addResults=[]; updateResults(); return; }
+  S.addBusy=true; updateResults();
+  try{ S.addResults=await gbSearch(q); }catch(e){ S.addResults=[]; }
+  S.addBusy=false; updateResults();
+}
+function bindAddButtons(rc){
+  rc.querySelectorAll('[data-add]').forEach(btn=>btn.onclick=()=>{
+    const r=S.addResults[+btn.dataset.add];
+    if(r) addCustomBook({title:r.title, author:r.author||"neznámý autor", cat:["Vlastní"],
+      rating:null, ratingSource:null, readers:0, cover:r.cover||null, link:null, prices:[], year:r.year||null, manual:true});
+  });
+}
+function updateResults(){
+  const rc=document.getElementById('addresults');
+  if(rc){ rc.innerHTML=resultsHtml(); bindAddButtons(rc); }
+}
+function submitManual(){
+  const f=S.addForm; const title=(f.title||"").trim();
+  if(!title){ S.addMsg="Vyplň alespoň název."; render(); return; }
+  let rating=null; const rn=parseInt((f.rating||"").replace(/[^\d]/g,""),10);
+  if(Number.isFinite(rn)) rating=Math.max(0,Math.min(100,rn));
+  let prices=[]; const pn=parseInt((f.price||"").replace(/[^\d]/g,""),10);
+  if(Number.isFinite(pn)) prices=[{shop:(f.shop||"").trim()||"Obchod", price:pn, url:(f.url||"").trim()||"#"}];
+  addCustomBook({title, author:(f.author||"").trim()||"neznámý autor", cat:["Vlastní"],
+    rating, ratingSource: rating!=null?"ručně":null, readers:0,
+    cover:(f.cover||"").trim()||null, link:(f.link||"").trim()||null, prices, manual:true});
+}
+function addCustomBook(book){
+  if(inBacklog(book.title)){ S.addMsg=book.title+" už v backlogu je."; render(); return; }
+  S.backlog.push(book); saveBacklog(S.backlog);
+  S.addQ=""; S.addResults=[]; S.addMsg="Přidáno ✓ – "+book.title;
+  S.addForm={title:"",author:"",cover:"",rating:"",link:"",shop:"",price:"",url:""};
+  render();
+}
+function mountAddPanel(){
+  document.querySelectorAll('.atab').forEach(b=>b.onclick=()=>{S.addMode=b.dataset.amode; S.addMsg=""; render();});
+  if(S.addMode==='search'){
+    const inp=document.getElementById('addq');
+    if(inp) inp.oninput=e=>{S.addQ=e.target.value; S.addMsg=""; scheduleSearch();};
+    const rc=document.getElementById('addresults'); if(rc) bindAddButtons(rc);
+  } else {
+    const map={title:'mf-title',author:'mf-author',cover:'mf-cover',rating:'mf-rating',link:'mf-link',shop:'mf-shop',price:'mf-price',url:'mf-url'};
+    for(const k in map){ const el=document.getElementById(map[k]); if(el) el.oninput=(e=>{S.addForm[k]=e.target.value;}); }
+    const sub=document.getElementById('mf-submit'); if(sub) sub.onclick=submitManual;
+  }
 }
 
 function addBacklog(t){ const b=S.books.find(x=>x.title===t); if(b && !inBacklog(t)){ S.backlog.push(b); saveBacklog(S.backlog); render(); } }
