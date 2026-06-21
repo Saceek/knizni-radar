@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Knižní radar</title>
@@ -51,10 +54,15 @@
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:8px}
   .shop{border:1px solid var(--cb);border-radius:10px;padding:8px;text-align:center;text-decoration:none;color:var(--text)}
   .shop.min{border-color:var(--emerald);background:rgba(16,185,129,.1)}
-  .stars{color:var(--amber);letter-spacing:1px}
+  .rating{font-weight:800;font-size:13px;padding:2px 10px;border-radius:999px;line-height:1.6;white-space:nowrap}
+  .rating.r-high{background:rgba(220,38,38,.16);color:#ef4444}
+  .rating.r-mid{background:rgba(37,99,235,.16);color:#3b82f6}
+  .rating.r-low{background:var(--chip);color:var(--sub);border:1px solid var(--cb)}
   a{color:inherit}
   .empty{text-align:center;color:var(--sub);padding:48px 16px}
 </style>
+</head>
+<body>
 
 <div class="wrap">
   <div class="row">
@@ -94,7 +102,7 @@ function saveBacklog(a){ try{ localStorage.setItem(LS_KEY, JSON.stringify(a)); }
 let S = {dark:true, view:"list", filter:"Vše", sort:"readers", q:"", books:DEMO, status:"loading", updatedAt:null, expanded:null, backlog:loadBacklog()};
 
 const esc = s => (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const stars = r => {const v=Math.round((r||0)/100*5); return "★".repeat(v)+"☆".repeat(5-v);};
+const ratingClass = r => r>=80?"r-high":r>=40?"r-mid":"r-low";
 const vPrices = b => (b.prices||[]).filter(p=>p&&p.price);
 const minPrice = b => {const v=vPrices(b); return v.length?Math.min(...v.map(p=>p.price)):Infinity;};
 const inBacklog = t => S.backlog.some(b=>b.title===t);
@@ -133,9 +141,11 @@ function titleHtml(b){
   return b.link ? `<a href="${esc(b.link)}" target="_blank" rel="noreferrer">${esc(b.title)}</a>` : esc(b.title);
 }
 function ratingHtml(b){
-  return `<span class="stars">${stars(b.rating)}</span><span class="tiny">${b.rating!=null?b.rating+"%":"—"}</span>
-    ${b.ratingSource?`<span class="tag src">✓ ${esc(b.ratingSource)}</span>`:`<span class="tag">bez hodnocení</span>`}
-    ${(b.cat||[]).map(c=>`<span class="tag">${esc(c)}</span>`).join("")}`;
+  const r = b.rating;
+  const badge = r!=null
+    ? `<span class="rating ${ratingClass(r)}" title="Hodnocení databazeknih.cz">${r} %</span>`
+    : `<span class="tag">bez hodnocení</span>`;
+  return `${badge}${(b.cat||[]).map(c=>`<span class="tag">${esc(c)}</span>`).join("")}`;
 }
 function priceHtml(b){ const vp=vPrices(b); if(!vp.length) return ""; const m=Math.min(...vp.map(p=>p.price)); const s=vp.find(p=>p.price===m);
   return `<div style="text-align:right"><div class="tiny">nejnižší cena</div><div class="price">${m} Kč</div><div class="tiny">${esc(s.shop)}</div></div>`; }
@@ -252,3 +262,5 @@ document.getElementById("view").onclick=e=>{
 
 load();
 </script>
+</body>
+</html>
