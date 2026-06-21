@@ -115,7 +115,7 @@ function loadBacklog(){ try{ return JSON.parse(localStorage.getItem(LS_KEY))||[]
 function saveBacklog(a){ try{ localStorage.setItem(LS_KEY, JSON.stringify(a)); }catch(e){ mem=a; } }
 
 let S = {dark:true, view:"list", filter:"Vše", sort:"readers", q:"", books:DEMO, status:"loading", updatedAt:null, expanded:null, backlog:loadBacklog(),
-  addMode:"search", addQ:"", addResults:[], addBusy:false, addMsg:"",
+  addMode:"search", addQ:"", addResults:[], addBusy:false, addMsg:"", addErr:"",
   addForm:{title:"",author:"",cover:"",rating:"",link:"",shop:"",price:"",url:""}};
 
 const esc = s => (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -278,11 +278,15 @@ function addPanelHtml(){
   </div>`;
 }
 function searchPanelHtml(){
-  return `<input id="addq" placeholder="Najdi knihu (název, autor)…" value="${esc(S.addQ)}" autocomplete="off" />
+  return `<div class="mrow">
+      <input id="addq" placeholder="Najdi knihu (název, autor)…" value="${esc(S.addQ)}" autocomplete="off" />
+      <button class="addbtn" id="addgo" style="align-self:auto">Hledat</button>
+    </div>
     <div id="addresults" class="addresults">${resultsHtml()}</div>`;
 }
 function resultsHtml(){
   if(S.addBusy) return '<div class="tiny" style="padding:8px">Hledám…</div>';
+  if(S.addErr) return `<div class="tiny" style="padding:8px;color:#f87171">Vyhledávání selhalo: ${esc(S.addErr)}<br>Nejčastěji blokace googleapis.com (adblock/rozšíření), dočasný limit Google, nebo CSP v náhledu. Zkus jiný prohlížeč/připojení, nebo použij ruční režim.</div>`;
   if(!S.addQ.trim()) return '<div class="tiny" style="padding:8px">Začni psát název – obálku, autora i rok doplní Google Books.</div>';
   if(!S.addResults.length) return '<div class="tiny" style="padding:8px">Nic nenalezeno.</div>';
   return S.addResults.map((r,i)=>`<div class="rres">
@@ -313,8 +317,12 @@ function manualPanelHtml(){
   </div>`;
 }
 async function gbSearch(q){
-  const r=await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=8&country=CZ`);
+  const base=`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=8`;
+  let r=await fetch(base+"&country=CZ");
+  if(r.status===403) r=await fetch(base);            // některé IP/region: zkus bez country
+  if(!r.ok) throw new Error("Google Books HTTP "+r.status);
   const d=await r.json();
+  if(d.error) throw new Error(d.error.message||("kód "+(d.error.code||"?")));
   return (d.items||[]).map(it=>{ const v=it.volumeInfo||{}; const im=v.imageLinks||{};
     const cover=(im.thumbnail||im.smallThumbnail||"").replace("http://","https://").replace("&edge=curl","");
     return {title:v.title||"", author:(v.authors||[]).join(", "), cover:cover||null, year:(v.publishedDate||"").slice(0,4)||null};
@@ -323,10 +331,12 @@ async function gbSearch(q){
 let _searchTimer=null;
 function scheduleSearch(){ clearTimeout(_searchTimer); _searchTimer=setTimeout(runSearch,350); }
 async function runSearch(){
+  clearTimeout(_searchTimer);
   const q=S.addQ.trim();
-  if(!q){ S.addResults=[]; updateResults(); return; }
-  S.addBusy=true; updateResults();
-  try{ S.addResults=await gbSearch(q); }catch(e){ S.addResults=[]; }
+  if(!q){ S.addResults=[]; S.addErr=""; updateResults(); return; }
+  S.addBusy=true; S.addErr=""; updateResults();
+  try{ S.addResults=await gbSearch(q); }
+  catch(e){ S.addResults=[]; S.addErr=e.message||"chyba sítě"; }
   S.addBusy=false; updateResults();
 }
 function bindAddButtons(rc){
@@ -362,7 +372,11 @@ function mountAddPanel(){
   document.querySelectorAll('.atab').forEach(b=>b.onclick=()=>{S.addMode=b.dataset.amode; S.addMsg=""; render();});
   if(S.addMode==='search'){
     const inp=document.getElementById('addq');
-    if(inp) inp.oninput=e=>{S.addQ=e.target.value; S.addMsg=""; scheduleSearch();};
+    if(inp){
+      inp.oninput=e=>{S.addQ=e.target.value; S.addMsg=""; scheduleSearch();};
+      inp.onkeydown=e=>{ if(e.key==='Enter'){ e.preventDefault(); runSearch(); } };
+    }
+    const go=document.getElementById('addgo'); if(go) go.onclick=runSearch;
     const rc=document.getElementById('addresults'); if(rc) bindAddButtons(rc);
   } else {
     const map={title:'mf-title',author:'mf-author',cover:'mf-cover',rating:'mf-rating',link:'mf-link',shop:'mf-shop',price:'mf-price',url:'mf-url'};
