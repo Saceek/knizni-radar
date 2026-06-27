@@ -171,11 +171,25 @@ function steamFiltered(){
     return inWin && inGenre;
   }).sort((a,b)=>(Date.parse(b.released)||0)-(Date.parse(a.released)||0) || (b.rating||0)-(a.rating||0));
 }
+function gimgErr(el){
+  try{
+    const list=JSON.parse(el.dataset.fb||"[]");
+    const i=(+el.dataset.i||0)+1;
+    if(i<list.length){ el.dataset.i=String(i); el.src=list[i]; }
+    else { el.style.visibility="hidden"; }
+  }catch(e){ el.style.visibility="hidden"; }
+}
 function gameCard(g){
   const rel=g.released?new Date(g.released).toLocaleDateString("cs-CZ"):"";
   const rev=g.reviews?` · ${Number(g.reviews).toLocaleString("cs-CZ")} recenzí`:"";
+  const cands=[...new Set([g.image,
+    `https://cdn.cloudflare.steamstatic.com/steam/apps/${g.appid}/header.jpg`,
+    `https://cdn.akamai.steamstatic.com/steam/apps/${g.appid}/header.jpg`,
+    `https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/${g.appid}/header.jpg`
+  ].filter(Boolean))];
+  const fb=esc(JSON.stringify(cands));
   return `<div class="card">
-    <a href="${esc(g.url)}" target="_blank" rel="noreferrer"><img class="gimg" src="${esc(g.image)}" referrerpolicy="no-referrer" onerror="this.style.visibility='hidden'" alt="" /></a>
+    <a href="${esc(g.url)}" target="_blank" rel="noreferrer"><img class="gimg" src="${esc(cands[0]||'')}" data-fb='${fb}' data-i="0" onerror="gimgErr(this)" alt="" /></a>
     <div class="body">
       <div class="row"><div style="min-width:0">
         <p class="title"><a href="${esc(g.url)}" target="_blank" rel="noreferrer">${esc(g.name)}</a></p>
