@@ -182,10 +182,13 @@ function gimgErr(el){
 function gameCard(g){
   const rel=g.released?new Date(g.released).toLocaleDateString("cs-CZ"):"";
   const rev=g.reviews?` · ${Number(g.reviews).toLocaleString("cs-CZ")} recenzí`:"";
-  const cands=[...new Set([g.image,
-    `https://cdn.cloudflare.steamstatic.com/steam/apps/${g.appid}/header.jpg`,
-    `https://cdn.akamai.steamstatic.com/steam/apps/${g.appid}/header.jpg`,
-    `https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/${g.appid}/header.jpg`
+  const img=g.image||"";
+  const swap=h=> img ? img.replace(/^https:\/\/shared\.akamai\.steamstatic\.com/,"https://"+h) : null;
+  const cands=[...new Set([
+    swap("shared.cloudflare.steamstatic.com"),
+    swap("shared.fastly.steamstatic.com"),
+    img,
+    `https://cdn.cloudflare.steamstatic.com/steam/apps/${g.appid}/header.jpg`
   ].filter(Boolean))];
   const fb=esc(JSON.stringify(cands));
   return `<div class="card">
