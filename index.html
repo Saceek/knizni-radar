@@ -76,6 +76,7 @@
   a{color:inherit}
   .empty{text-align:center;color:var(--sub);padding:48px 16px}
   .gimg{width:184px;height:86px;border-radius:8px;object-fit:cover;flex:none;background:var(--chip);box-shadow:0 4px 10px rgba(0,0,0,.3)}
+  .gprice{font-size:14px;font-weight:700;color:var(--emerald);margin-top:6px}
   @media(max-width:560px){ .gimg{width:120px;height:56px} }
 </style>
 </head>
@@ -118,8 +119,8 @@ const DEMO = [
 
 let mem = null;
 const GAMES_DEMO = [
-  {appid:0,name:"(ukázka) Hollow Knight: Silksong",rating:96,reviews:12000,scoreDesc:"Overwhelmingly Positive",released:new Date(Date.now()-3*864e5).toISOString(),tags:["Metroidvania","Akční"],image:"",url:"https://store.steampowered.com/"},
-  {appid:0,name:"(ukázka) Nová strategie",rating:90,reviews:850,scoreDesc:"Very Positive",released:new Date(Date.now()-10*864e5).toISOString(),tags:["Strategické"],image:"",url:"https://store.steampowered.com/"},
+  {appid:0,name:"(ukázka) Hollow Knight: Silksong",rating:96,reviews:12000,scoreDesc:"Overwhelmingly Positive",released:new Date(Date.now()-3*864e5).toISOString(),tags:["Akční","Dobrodružné","Indie"],price:"419 Kč",image:"",url:"https://store.steampowered.com/"},
+  {appid:0,name:"(ukázka) Nová strategie",rating:90,reviews:850,scoreDesc:"Very Positive",released:new Date(Date.now()-10*864e5).toISOString(),tags:["Strategie","Indie"],price:"Zdarma",image:"",url:"https://store.steampowered.com/"},
 ];
 function loadBacklog(){ try{ return JSON.parse(localStorage.getItem(LS_KEY))||[]; }catch(e){ return mem||[]; } }
 function saveBacklog(a){ try{ localStorage.setItem(LS_KEY, JSON.stringify(a)); }catch(e){ mem=a; } }
@@ -127,7 +128,7 @@ function saveBacklog(a){ try{ localStorage.setItem(LS_KEY, JSON.stringify(a)); }
 let S = {dark:true, view:"list", filter:"Vše", sort:"readers", q:"", books:DEMO, status:"loading", updatedAt:null, expanded:null, backlog:loadBacklog(),
   addMode:"search", addQ:"", addResults:[], addBusy:false, addMsg:"", addErr:"",
   addForm:{title:"",author:"",cover:"",rating:"",link:"",shop:"",price:"",url:""},
-  games:GAMES_DEMO, gamesStatus:"idle", gamesUpdatedAt:null, gameWin:14, gameGenre:"Vše"};
+  games:GAMES_DEMO, gamesStatus:"idle", gamesUpdatedAt:null, gameWin:14, gameGenre:"Vše", gameSort:"reviews"};
 
 const esc = s => (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const ratingClass = r => r>=80?"r-high":r>=40?"r-mid":"r-low";
@@ -169,7 +170,10 @@ function steamFiltered(){
     const inWin=d && (now-d)<=win && d<=now+864e5;
     const inGenre=S.gameGenre==="Vše" || (g.tags||[]).includes(S.gameGenre);
     return inWin && inGenre;
-  }).sort((a,b)=>(Date.parse(b.released)||0)-(Date.parse(a.released)||0) || (b.rating||0)-(a.rating||0));
+  }).sort((a,b)=>
+    S.gameSort==="released" ? (Date.parse(b.released)||0)-(Date.parse(a.released)||0) :
+    S.gameSort==="rating"   ? (b.rating||0)-(a.rating||0) :
+                              (b.reviews||0)-(a.reviews||0));
 }
 function gimgErr(el){
   try{
@@ -198,7 +202,10 @@ function gameCard(g){
         <p class="title"><a href="${esc(g.url)}" target="_blank" rel="noreferrer">${esc(g.name)}</a></p>
         <p class="muted">${esc(rel)}${rev}</p>
       </div>
-      <span class="rating ${ratingClass(g.rating)}" title="${esc(g.scoreDesc||'Steam')}">${g.rating} %</span></div>
+      <div style="text-align:right;white-space:nowrap">
+        <span class="rating ${ratingClass(g.rating)}" title="${esc(g.scoreDesc||'Steam')}">${g.rating} %</span>
+        ${g.price?`<div class="gprice">${esc(g.price)}</div>`:""}
+      </div></div>
       <div class="meta">${(g.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
     </div>
   </div>`;
@@ -276,8 +283,8 @@ function render(){
 
   document.getElementById("nav").innerHTML =
     `<button class="tab ${S.view==='list'?'on':''}" data-view="list">Bestsellery</button>
-     <button class="tab ${S.view==='backlog'?'on':''}" data-view="backlog">Backlog (${S.backlog.length})</button>
-     <button class="tab ${S.view==='steam'?'on':''}" data-view="steam">Steam</button>`;
+     <button class="tab ${S.view==='steam'?'on':''}" data-view="steam">Steam</button>
+     <button class="tab ${S.view==='backlog'?'on':''}" data-view="backlog">Backlog (${S.backlog.length})</button>`;
 
   let st="";
   if(S.view==="list"){
@@ -296,10 +303,17 @@ function render(){
     const wins=[7,14,30].map(w=>`<button class="chip ${S.gameWin===w?'on':''}" data-gwin="${w}">${w} dní</button>`).join("");
     const genres=["Vše",...steamGenres()].map(c=>`<button class="chip ${S.gameGenre===c?'on':''}" data-ggenre="${esc(c)}">${esc(c)}</button>`).join("");
     const items=steamFiltered();
+    const gsort=`<div class="controls"><select id="gsort">
+        <option value="reviews"${S.gameSort==='reviews'?' selected':''}>Nejvíc recenzí</option>
+        <option value="released"${S.gameSort==='released'?' selected':''}>Nejnovější</option>
+        <option value="rating"${S.gameSort==='rating'?' selected':''}>Nejvyšší hodnocení</option>
+      </select></div>`;
     view.innerHTML = gst
       + `<div class="chips">${wins}</div>`
       + `<div class="chips">${genres}</div>`
+      + gsort
       + (items.length?items.map(gameCard).join(""):'<div class="empty">Žádná hra v tomto období a žánru.</div>');
+    const gs=document.getElementById("gsort"); if(gs) gs.onchange=e=>{S.gameSort=e.target.value; render();};
   } else if(S.view==="backlog"){
     const list = S.backlog.length
       ? S.backlog.map(b=>backlogCard(b)).join("")
