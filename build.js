@@ -43,11 +43,28 @@ function slugToTitle(slug) {
   return t ? t.charAt(0).toUpperCase() + t.slice(1) : "";
 }
 
+// odřízne koncové formátové/edicní značky: "[e-kniha]", "(audiokniha)", "[brožovaná vazba]"…
+// (jen když závorka obsahuje známé klíčové slovo – běžné názvy v závorkách zůstanou)
+const EDITION_RE = /\s*[\[(]\s*(e-?kniha|e-?book|audiokniha|audio|mp3|cd|dvd|kniha|bro\u017eovan\xe1|v\xe1zan\xe1|pevn\xe1 vazba|paperback|hardback|hardcover|defektn\xed|po\u0161kozen\xfd obal|bazar)[^\])]*[\])]\s*$/i;
+function stripEdition(t) {
+  let s = t || "", prev;
+  do { prev = s; s = s.replace(EDITION_RE, "").trim(); } while (s !== prev);
+  return s.replace(/\s{2,}/g, " ").trim();
+}
+
+// slučovací klíč: bez diakritiky/interpunkce + bez zbylých formátových slov (e kniha, audiokniha…)
+function mergeKey(title) {
+  return norm(stripEdition(title))
+    .replace(/\b(e ?kniha|e ?book|audiokniha)\b/g, "")
+    .replace(/\s{2,}/g, " ").trim();
+}
+
 // "Už letím - Martin Moravec,Marek Dvořák"  ->  "Už letím"
 function cleanOgTitle(ogTitle) {
   if (!ogTitle) return null;
   let t = ogTitle.split("|")[0].trim();          // pryč "| Knihy Dobrovský" / "| KOSMAS.cz"
   t = t.replace(/\s+[–-]\s+[^–-]+$/, "").trim();  // pryč koncové " - Autor(é)"
+  t = stripEdition(t);                            // pryč "[e-kniha]" apod.
   return t || null;
 }
 
@@ -158,13 +175,13 @@ async function main() {
     // dotáhni z detailu skutečný název + obálku (og:title / og:image)
     for (const it of items) {
       const d = await shopDetail(it.url);
-      it.title = d.title || it.titleFallback;           // hlavní = og:title, jinak slug-záloha
+      it.title = d.title || stripEdition(it.titleFallback); // hlavní = og:title, jinak slug-záloha
       if (d.cover) it.cover = d.cover;                  // og:image je spolehlivá obálka
       await sleep(DELAY);
     }
 
     items.forEach((it) => {
-      const key = norm(it.title);
+      const key = mergeKey(it.title);                   // tištěná i e-kniha → stejný klíč
       if (!key) return;
       if (!map.has(key)) map.set(key, { title: it.title, author: null, cover: null, prices: [], ranks: [], shops: [] });
       const b = map.get(key);
