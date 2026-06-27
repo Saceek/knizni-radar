@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Knižní radar</title>
+<title>Sáčkův radar</title>
 <style>
   :root{ --bg:#020617; --text:#f1f5f9; --sub:#94a3b8; --card:rgba(15,23,42,.7); --cb:#1e293b;
     --chip:#1e293b; --chipt:#cbd5e1; --chipon:#fff; --chipont:#0f172a; --input:#0f172a; --emerald:#34d399; --amber:#fbbf24; }
@@ -75,6 +75,8 @@
   .addbtn:hover{opacity:.85}
   a{color:inherit}
   .empty{text-align:center;color:var(--sub);padding:48px 16px}
+  .gimg{width:184px;height:86px;border-radius:8px;object-fit:cover;flex:none;background:var(--chip);box-shadow:0 4px 10px rgba(0,0,0,.3)}
+  @media(max-width:560px){ .gimg{width:120px;height:56px} }
 </style>
 </head>
 <body>
@@ -83,7 +85,7 @@
   <div class="row">
     <div style="display:flex;align-items:center;gap:12px">
       <span class="logo">📚</span>
-      <div><h1>Knižní radar</h1><p class="muted">prodejní bestsellery · hodnocení databazeknih.cz</p></div>
+      <div><h1>Sáčkův radar</h1><p class="muted">prodejní bestsellery · hodnocení databazeknih.cz</p></div>
     </div>
     <div style="display:flex;gap:8px">
       <button class="btn" id="refresh">⟳ Aktualizovat</button>
@@ -115,12 +117,17 @@ const DEMO = [
 ];
 
 let mem = null;
+const GAMES_DEMO = [
+  {appid:0,name:"(ukázka) Hollow Knight: Silksong",rating:96,reviews:12000,scoreDesc:"Overwhelmingly Positive",released:new Date(Date.now()-3*864e5).toISOString(),tags:["Metroidvania","Akční"],image:"",url:"https://store.steampowered.com/"},
+  {appid:0,name:"(ukázka) Nová strategie",rating:90,reviews:850,scoreDesc:"Very Positive",released:new Date(Date.now()-10*864e5).toISOString(),tags:["Strategické"],image:"",url:"https://store.steampowered.com/"},
+];
 function loadBacklog(){ try{ return JSON.parse(localStorage.getItem(LS_KEY))||[]; }catch(e){ return mem||[]; } }
 function saveBacklog(a){ try{ localStorage.setItem(LS_KEY, JSON.stringify(a)); }catch(e){ mem=a; } }
 
 let S = {dark:true, view:"list", filter:"Vše", sort:"readers", q:"", books:DEMO, status:"loading", updatedAt:null, expanded:null, backlog:loadBacklog(),
   addMode:"search", addQ:"", addResults:[], addBusy:false, addMsg:"", addErr:"",
-  addForm:{title:"",author:"",cover:"",rating:"",link:"",shop:"",price:"",url:""}};
+  addForm:{title:"",author:"",cover:"",rating:"",link:"",shop:"",price:"",url:""},
+  games:GAMES_DEMO, gamesStatus:"idle", gamesUpdatedAt:null, gameWin:14, gameGenre:"Vše"};
 
 const esc = s => (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const ratingClass = r => r>=80?"r-high":r>=40?"r-mid":"r-low";
@@ -138,6 +145,46 @@ async function load(){
     S.books = arr; S.updatedAt = d.updatedAt || null; S.status="live";
   }catch(e){ S.books = DEMO; S.status="demo"; }
   render();
+}
+
+async function loadGames(){
+  S.gamesStatus="loading"; render();
+  try{
+    const r = await fetch("games.json?t=" + Date.now(), {cache:"no-store"});
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    const d = await r.json(); const arr = d.games || d;
+    if(!Array.isArray(arr)) throw new Error("prázdno");
+    S.games = arr; S.gamesUpdatedAt = d.updatedAt || null; S.gamesStatus="live";
+  }catch(e){ S.games = GAMES_DEMO; S.gamesStatus="demo"; }
+  render();
+}
+function steamGenres(){
+  const c={}; S.games.forEach(g=>(g.tags||[]).forEach(t=>{ if(t) c[t]=(c[t]||0)+1; }));
+  return Object.keys(c).sort((a,b)=>c[b]-c[a]);
+}
+function steamFiltered(){
+  const now=Date.now(), win=S.gameWin*864e5;
+  return S.games.filter(g=>{
+    const d=g.released?Date.parse(g.released):0;
+    const inWin=d && (now-d)<=win && d<=now+864e5;
+    const inGenre=S.gameGenre==="Vše" || (g.tags||[]).includes(S.gameGenre);
+    return inWin && inGenre;
+  }).sort((a,b)=>(Date.parse(b.released)||0)-(Date.parse(a.released)||0) || (b.rating||0)-(a.rating||0));
+}
+function gameCard(g){
+  const rel=g.released?new Date(g.released).toLocaleDateString("cs-CZ"):"";
+  const rev=g.reviews?` · ${Number(g.reviews).toLocaleString("cs-CZ")} recenzí`:"";
+  return `<div class="card">
+    <a href="${esc(g.url)}" target="_blank" rel="noreferrer"><img class="gimg" src="${esc(g.image)}" referrerpolicy="no-referrer" onerror="this.style.visibility='hidden'" alt="" /></a>
+    <div class="body">
+      <div class="row"><div style="min-width:0">
+        <p class="title"><a href="${esc(g.url)}" target="_blank" rel="noreferrer">${esc(g.name)}</a></p>
+        <p class="muted">${esc(rel)}${rev}</p>
+      </div>
+      <span class="rating ${ratingClass(g.rating)}" title="${esc(g.scoreDesc||'Steam')}">${g.rating} %</span></div>
+      <div class="meta">${(g.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
+    </div>
+  </div>`;
 }
 
 function filterChips(){
@@ -212,7 +259,8 @@ function render(){
 
   document.getElementById("nav").innerHTML =
     `<button class="tab ${S.view==='list'?'on':''}" data-view="list">Bestsellery</button>
-     <button class="tab ${S.view==='backlog'?'on':''}" data-view="backlog">Backlog (${S.backlog.length})</button>`;
+     <button class="tab ${S.view==='backlog'?'on':''}" data-view="backlog">Backlog (${S.backlog.length})</button>
+     <button class="tab ${S.view==='steam'?'on':''}" data-view="steam">Steam</button>`;
 
   let st="";
   if(S.view==="list"){
@@ -223,7 +271,19 @@ function render(){
   document.getElementById("status").innerHTML = st;
 
   const view = document.getElementById("view");
-  if(S.view==="backlog"){
+  if(S.view==="steam"){
+    let gst="";
+    if(S.gamesStatus==="loading") gst='<div class="note warn">Načítám hry…</div>';
+    else if(S.gamesStatus==="live") gst='<div class="note ok">✓ Steam'+(S.gamesUpdatedAt?" · aktualizováno "+new Date(S.gamesUpdatedAt).toLocaleString("cs-CZ"):"")+'</div>';
+    else if(S.gamesStatus==="demo") gst='<div class="note warn">games.json se nepodařilo načíst – ukázková data.</div>';
+    const wins=[7,14,30].map(w=>`<button class="chip ${S.gameWin===w?'on':''}" data-gwin="${w}">${w} dní</button>`).join("");
+    const genres=["Vše",...steamGenres()].map(c=>`<button class="chip ${S.gameGenre===c?'on':''}" data-ggenre="${esc(c)}">${esc(c)}</button>`).join("");
+    const items=steamFiltered();
+    view.innerHTML = gst
+      + `<div class="chips">${wins}</div>`
+      + `<div class="chips">${genres}</div>`
+      + (items.length?items.map(gameCard).join(""):'<div class="empty">Žádná hra v tomto období a žánru.</div>');
+  } else if(S.view==="backlog"){
     const list = S.backlog.length
       ? S.backlog.map(b=>backlogCard(b)).join("")
       : '<div class="empty" style="padding:24px 16px">Backlog je prázdný.<br>Přidej knihu níže, nebo u titulů v žebříčku klikni na <b>+ Backlog</b>.</div>';
@@ -396,14 +456,17 @@ function addBacklog(t){ const b=S.books.find(x=>x.title===t); if(b && !inBacklog
 function removeBacklog(t){ S.backlog=S.backlog.filter(x=>x.title!==t); saveBacklog(S.backlog); render(); }
 function toggleBacklog(t){ inBacklog(t)?removeBacklog(t):addBacklog(t); }
 
-document.getElementById("refresh").onclick=load;
+document.getElementById("refresh").onclick=()=>{ S.view==="steam" ? loadGames() : load(); };
 document.getElementById("theme").onclick=()=>{S.dark=!S.dark; render();};
-document.getElementById("nav").onclick=e=>{const v=e.target.dataset.view; if(v){S.view=v; S.expanded=null; render();}};
+document.getElementById("nav").onclick=e=>{const v=e.target.dataset.view; if(v){S.view=v; S.expanded=null;
+  if(v==="steam" && S.gamesStatus==="idle"){ loadGames(); } else { render(); } }};
 document.getElementById("view").onclick=e=>{
   const f=e.target.dataset.filter; if(f){S.filter=f; render(); return;}
   const m=e.target.dataset.more; if(m){S.expanded=S.expanded===m?null:m; render(); return;}
   const bk=e.target.dataset.bk; if(bk){toggleBacklog(bk); return;}
   const rm=e.target.dataset.rm; if(rm){removeBacklog(rm); return;}
+  const gw=e.target.dataset.gwin; if(gw){S.gameWin=+gw; render(); return;}
+  const gg=e.target.dataset.ggenre; if(gg){S.gameGenre=gg; render(); return;}
 };
 
 load();
