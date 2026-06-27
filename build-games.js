@@ -71,11 +71,15 @@ async function fetchRating(appid) {
   } catch (e) { console.warn("[reviews]", appid, "→", e.message); return null; }
 }
 
-// z URL kapsle v řádku odvodí header.jpg (zachová správný host i ?t= cache-bust); jinak fallback
-function headerImage(rawImg, appid) {
-  if (rawImg && /\/capsule[^/?]*\.(jpg|png)/i.test(rawImg)) return rawImg.replace(/\/capsule[^/?]*\.(jpg|png)/i, "/header.jpg");
-  if (rawImg) return rawImg;
-  return `https://cdn.cloudflare.steamstatic.com/steam/apps/${appid}/header.jpg`;
+// autoritativní detail hry: přesná URL obálky (header_image), typ a jméno
+async function fetchDetails(appid) {
+  try {
+    const text = await getText(`https://store.steampowered.com/api/appdetails?appids=${appid}&filters=basic&l=english&cc=us`);
+    const j = JSON.parse(text);
+    const node = j && j[appid];
+    if (!node || !node.success || !node.data) return null;
+    return { header: node.data.header_image || null, type: node.data.type || null, name: node.data.name || null };
+  } catch (e) { console.warn("[details]", appid, "→", e.message); return null; }
 }
 
 async function main() {
@@ -97,9 +101,7 @@ async function main() {
       if (!d) return;
       const ms = d.getTime();
       if (ms > now + 86400000 || ms < cutoff) return;     // budoucí (coming soon) nebo starší než okno
-      const img = $(el).find("img").first();
-      const rawImg = img.attr("src") || img.attr("data-src") || null;  // aktuální URL z řádku (i pro novější hry)
-      if (!cand.has(appid)) cand.set(appid, { name, released: d.toISOString(), tags: new Set(), img: rawImg });
+      if (!cand.has(appid)) cand.set(appid, { name, released: d.toISOString(), tags: new Set() });
       cand.get(appid).tags.add(t.name);
       inWin++;
     });
@@ -114,15 +116,18 @@ async function main() {
     await sleep(DELAY);
     if (!r) continue;
     if (r.rating < MIN_RATING || r.reviews < MIN_REVIEWS) continue;
+    const det = await fetchDetails(appid);
+    await sleep(DELAY);
+    if (det && det.type && det.type !== "game") continue;   // pryč DLC / soundtrack / demo
     games.push({
       appid: +appid,
-      name: info.name,
+      name: (det && det.name) || info.name,
       rating: r.rating,
       reviews: r.reviews,
       scoreDesc: r.desc,
       released: info.released,
       tags: [...info.tags],
-      image: headerImage(info.img, appid),
+      image: (det && det.header ? det.header.replace("shared.akamai.steamstatic.com", "shared.cloudflare.steamstatic.com") : `https://cdn.cloudflare.steamstatic.com/steam/apps/${appid}/header.jpg`),
       url: `https://store.steampowered.com/app/${appid}/`,
     });
   }
