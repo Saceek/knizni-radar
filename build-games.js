@@ -27,7 +27,7 @@ const TAGS = [
   { id: 19,   name: "Akční" },
   { id: 21,   name: "Dobrodružné" },
   { id: 9,    name: "Strategické" },
-  { id: 3839, name: "FPS" },
+  { id: 1663, name: "FPS" },
 ];
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -71,6 +71,13 @@ async function fetchRating(appid) {
   } catch (e) { console.warn("[reviews]", appid, "→", e.message); return null; }
 }
 
+// z URL kapsle v řádku odvodí header.jpg (zachová správný host i ?t= cache-bust); jinak fallback
+function headerImage(rawImg, appid) {
+  if (rawImg && /\/capsule[^/?]*\.(jpg|png)/i.test(rawImg)) return rawImg.replace(/\/capsule[^/?]*\.(jpg|png)/i, "/header.jpg");
+  if (rawImg) return rawImg;
+  return `https://cdn.cloudflare.steamstatic.com/steam/apps/${appid}/header.jpg`;
+}
+
 async function main() {
   console.log("[games] start", new Date().toISOString());
   const now = Date.now();
@@ -90,7 +97,9 @@ async function main() {
       if (!d) return;
       const ms = d.getTime();
       if (ms > now + 86400000 || ms < cutoff) return;     // budoucí (coming soon) nebo starší než okno
-      if (!cand.has(appid)) cand.set(appid, { name, released: d.toISOString(), tags: new Set() });
+      const img = $(el).find("img").first();
+      const rawImg = img.attr("src") || img.attr("data-src") || null;  // aktuální URL z řádku (i pro novější hry)
+      if (!cand.has(appid)) cand.set(appid, { name, released: d.toISOString(), tags: new Set(), img: rawImg });
       cand.get(appid).tags.add(t.name);
       inWin++;
     });
@@ -113,7 +122,7 @@ async function main() {
       scoreDesc: r.desc,
       released: info.released,
       tags: [...info.tags],
-      image: `https://cdn.cloudflare.steamstatic.com/steam/apps/${appid}/header.jpg`,
+      image: headerImage(info.img, appid),
       url: `https://store.steampowered.com/app/${appid}/`,
     });
   }
