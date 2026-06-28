@@ -135,6 +135,16 @@
   .mtype{font-size:10px;text-transform:uppercase;letter-spacing:.06em;padding:3px 8px;border-radius:999px;font-weight:600}
   .mtype.film{background:rgba(251,77,125,.14);color:var(--rose);border:1px solid rgba(251,77,125,.3)}
   .mtype.serial{background:rgba(55,227,212,.14);color:var(--cyan);border:1px solid rgba(55,227,212,.3)}
+  .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:100;display:flex;align-items:center;justify-content:center}
+  .modal{background:var(--bg);border:1px solid var(--cb);border-radius:18px;padding:24px;max-width:440px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+  .modal h2{font-family:var(--disp);font-size:18px;margin:0 0 12px}
+  .modal label{font-size:13px;color:var(--sub);display:block;margin:10px 0 4px}
+  .modal input{width:100%;font-family:var(--mono);font-size:13px}
+  .modal .mrow{display:flex;gap:8px;margin-top:14px}
+  .sync-badge{font-family:var(--mono);font-size:10px;padding:2px 7px;border-radius:999px;margin-left:6px}
+  .sync-badge.ok{background:rgba(74,222,128,.14);color:var(--emerald)}
+  .sync-badge.off{background:rgba(251,191,36,.12);color:var(--amber)}
+  .sync-badge.err{background:rgba(251,77,125,.14);color:var(--rose)}
   .news-section{margin:18px 0 8px;font-family:var(--disp);font-size:15px;font-weight:700;display:flex;align-items:center;gap:8px}
   .news-section .badge{font-family:var(--mono);font-size:11px;font-weight:600;padding:2px 8px;border-radius:999px;background:rgba(74,222,128,.14);color:var(--emerald)}
   .tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:18px}
@@ -192,6 +202,7 @@ window.addEventListener('resize',snapTetris);
     </div>
     <div style="display:flex;gap:8px">
       <button class="btn" id="refresh">⟳ Aktualizovat</button>
+      <button class="btn" id="sync-btn">☁ Sync</button>
       <button class="btn" id="theme">🌞</button>
     </div>
   </div>
@@ -220,6 +231,123 @@ const DEMO = [
 ];
 
 let mem = null;
+const GIST_FILE = "sackov-radar-backlog.json";
+const LS_TOKEN = "knizniRadarGistToken";
+const LS_GIST_ID = "knizniRadarGistId";
+let _syncStatus = "off"; // off | ok | err | syncing
+
+function getGistToken(){ return localStorage.getItem(LS_TOKEN)||""; }
+function getGistId(){ return localStorage.getItem(LS_GIST_ID)||""; }
+
+async function gistLoad(){
+  const token=getGistToken(), gistId=getGistId();
+  if(!token||!gistId) return null;
+  try{
+    const r=await fetch(`https://api.github.com/gists/${gistId}`,{headers:{Authorization:`Bearer ${token}`}});
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    const d=await r.json();
+    const content=d.files?.[GIST_FILE]?.content;
+    if(!content) return null;
+    return JSON.parse(content);
+  }catch(e){ console.warn("[gist] load error:",e.message); return null; }
+}
+
+async function gistSave(data){
+  const token=getGistToken(); let gistId=getGistId();
+  if(!token) return false;
+  const body={files:{[GIST_FILE]:{content:JSON.stringify(data,null,2)}}};
+  try{
+    if(!gistId){
+      const r=await fetch("https://api.github.com/gists",{method:"POST",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify({description:"Sáčkův radar – backlog",public:false,...body})});
+      if(!r.ok) throw new Error("HTTP "+r.status);
+      const d=await r.json();
+      gistId=d.id;
+      localStorage.setItem(LS_GIST_ID,gistId);
+    } else {
+      const r=await fetch(`https://api.github.com/gists/${gistId}`,{method:"PATCH",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify(body)});
+      if(!r.ok) throw new Error("HTTP "+r.status);
+    }
+    return true;
+  }catch(e){ console.warn("[gist] save error:",e.message); return false; }
+}
+
+async function syncBacklog(){
+  const token=getGistToken();
+  if(!token){ _syncStatus="off"; return; }
+  _syncStatus="syncing"; render();
+  const remote=await gistLoad();
+  if(remote && Array.isArray(remote)){
+    const local=loadBacklog();
+    const merged=mergeBacklogs(local,remote);
+    saveBacklog(merged);
+    S.backlog=merged;
+    if(merged.length!==remote.length) await gistSave(merged);
+    _syncStatus="ok";
+  } else {
+    const ok=await gistSave(S.backlog);
+    _syncStatus=ok?"ok":"err";
+  }
+  render();
+}
+
+function mergeBacklogs(a,b){
+  const map=new Map();
+  [...b,...a].forEach(item=>{ if(item.title) map.set(item.title,item); });
+  return [...map.values()];
+}
+
+async function saveBacklogAndSync(a){
+  saveBacklog(a);
+  if(getGistToken()){
+    _syncStatus="syncing"; render();
+    const ok=await gistSave(a);
+    _syncStatus=ok?"ok":"err";
+    render();
+  }
+}
+
+function showSyncSettings(){
+  const existing=document.getElementById("sync-modal");
+  if(existing){ existing.remove(); return; }
+  const token=getGistToken(), gistId=getGistId();
+  const div=document.createElement("div");
+  div.id="sync-modal";
+  div.className="modal-overlay";
+  div.innerHTML=`<div class="modal">
+    <h2>Sync nastavení</h2>
+    <p style="font-size:13px;color:var(--sub);margin:0 0 8px">Backlog se uloží do privátního GitHub Gistu. Přístupný z jakéhokoliv prohlížeče.</p>
+    <label>GitHub Personal Access Token (scope: gist)</label>
+    <input id="sync-token" type="password" placeholder="ghp_xxxxxxxxxxxx" value="${esc(token)}" />
+    <label>Gist ID (vyplní se automaticky)</label>
+    <input id="sync-gistid" value="${esc(gistId)}" placeholder="automaticky při prvním uložení" />
+    <div class="mrow">
+      <button class="addbtn" id="sync-save">Uložit a synchronizovat</button>
+      <button class="btn" id="sync-close">Zavřít</button>
+      ${token?'<button class="btn" id="sync-disconnect" style="color:var(--rose)">Odpojit</button>':""}
+    </div>
+  </div>`;
+  document.body.appendChild(div);
+  div.querySelector("#sync-close").onclick=()=>div.remove();
+  div.querySelector("#sync-save").onclick=async()=>{
+    const t=document.getElementById("sync-token").value.trim();
+    const g=document.getElementById("sync-gistid").value.trim();
+    if(!t){ alert("Zadej GitHub token"); return; }
+    localStorage.setItem(LS_TOKEN,t);
+    if(g) localStorage.setItem(LS_GIST_ID,g);
+    div.remove();
+    await syncBacklog();
+  };
+  const disc=div.querySelector("#sync-disconnect");
+  if(disc) disc.onclick=()=>{
+    localStorage.removeItem(LS_TOKEN);
+    localStorage.removeItem(LS_GIST_ID);
+    _syncStatus="off";
+    div.remove();
+    render();
+  };
+  div.addEventListener("click",e=>{ if(e.target===div) div.remove(); });
+}
+
 const GAMES_DEMO = [
   {appid:0,name:"(ukázka) Hollow Knight: Silksong",rating:96,reviews:12000,scoreDesc:"Overwhelmingly Positive",released:new Date(Date.now()-3*864e5).toISOString(),tags:["Akční","Dobrodružné","Indie"],price:"419 Kč",image:"",url:"https://store.steampowered.com/"},
   {appid:0,name:"(ukázka) Nová strategie",rating:90,reviews:850,scoreDesc:"Very Positive",released:new Date(Date.now()-10*864e5).toISOString(),tags:["Strategie","Indie"],price:"Zdarma",image:"",url:"https://store.steampowered.com/"},
@@ -551,7 +679,7 @@ function render(){
      <button class="tab ${S.view==='list'?'on':''}" data-view="list">Knižní Bestsellery</button>
      <button class="tab ${S.view==='movies'?'on':''}" data-view="movies">Filmy a Seriály</button>
      <button class="tab ${S.view==='steam'?'on':''}" data-view="steam">Steam</button>
-     <button class="tab ${S.view==='backlog'?'on':''}" data-view="backlog">Backlog (${S.backlog.length})</button>`;
+     <button class="tab ${S.view==='backlog'?'on':''}" data-view="backlog">Backlog (${S.backlog.length})<span class="sync-badge ${_syncStatus==='ok'?'ok':_syncStatus==='err'?'err':'off'}">${_syncStatus==='ok'?'☁':_syncStatus==='syncing'?'…':_syncStatus==='err'?'!':'local'}</span></button>`;
 
   let st="";
   if(S.view==="list"){
@@ -811,7 +939,7 @@ function submitManual(){
 }
 function addCustomBook(book){
   if(inBacklog(book.title)){ S.addMsg=book.title+" už v backlogu je."; render(); return; }
-  S.backlog.push(book); saveBacklog(S.backlog);
+  S.backlog.push(book); saveBacklogAndSync(S.backlog);
   S.addQ=""; S.addResults=[]; S.addMsg="Přidáno ✓ – "+book.title;
   S.addForm={title:"",author:"",cover:"",rating:"",link:"",shop:"",price:"",url:""};
   render();
@@ -833,10 +961,11 @@ function mountAddPanel(){
   }
 }
 
-function addBacklog(t){ const b=S.books.find(x=>x.title===t); if(b && !inBacklog(t)){ S.backlog.push(b); saveBacklog(S.backlog); render(); } }
-function removeBacklog(t){ S.backlog=S.backlog.filter(x=>x.title!==t); saveBacklog(S.backlog); render(); }
+function addBacklog(t){ const b=S.books.find(x=>x.title===t); if(b && !inBacklog(t)){ S.backlog.push(b); saveBacklogAndSync(S.backlog); render(); } }
+function removeBacklog(t){ S.backlog=S.backlog.filter(x=>x.title!==t); saveBacklogAndSync(S.backlog); render(); }
 function toggleBacklog(t){ inBacklog(t)?removeBacklog(t):addBacklog(t); }
 
+document.getElementById("sync-btn").onclick=showSyncSettings;
 document.getElementById("refresh").onclick=()=>{ S.view==="steam" ? loadGames() : S.view==="movies" ? loadMovies() : S.view==="news" ? loadNews() : S.view==="coming" ? loadComing() : load(); };
 document.getElementById("theme").onclick=()=>{S.dark=!S.dark; render();};
 document.getElementById("nav").onclick=e=>{const v=e.target.dataset.view; if(v){S.view=v; S.expanded=null;
@@ -857,6 +986,7 @@ document.getElementById("view").onclick=e=>{
 };
 
 loadNews();
+if(getGistToken()) syncBacklog();
 </script>
 </body>
 </html>

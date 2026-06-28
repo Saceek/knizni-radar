@@ -147,7 +147,7 @@ async function scrapeSteamComing(page) {
   const items = await page.evaluate(() => {
     const results = [];
     document.querySelectorAll("a.search_result_row[data-ds-appid]").forEach((row, i) => {
-      if (i >= 15) return;
+      if (i >= 25) return;
       const appid = (row.getAttribute("data-ds-appid") || "").split(",")[0].trim();
       const name = row.querySelector(".title")?.textContent?.trim() || "";
       const released = row.querySelector(".search_released")?.textContent?.trim() || "";
@@ -314,7 +314,21 @@ async function main() {
       poster: s.poster, url: s.url, genres: s.genres || [],
       country: s.country || null, premiereDate: s.premiereDate || null, vod: s.vod || [],
     })),
-    games: games.slice(0, 10).map((g) => ({
+    games: games.sort((a, b) => {
+      const CZ_MONTHS = {led:0,úno:1,bře:2,dub:3,kvě:4,čvn:5,čvc:6,srp:7,zář:8,říj:9,lis:10,pro:11};
+      function parseCzDate(s) {
+        if (!s) return null;
+        const m = s.match(/(\d{1,2})\.\s*(\S+)\.\s*(\d{4})/);
+        if (!m) { const y = s.match(/\b(20\d{2})\b/); return y ? new Date(+y[1], 6, 1) : null; }
+        const mon = Object.entries(CZ_MONTHS).find(([k]) => m[2].startsWith(k));
+        return mon ? new Date(+m[3], mon[1], +m[1]) : null;
+      }
+      const da = parseCzDate(a.released), db = parseCzDate(b.released);
+      if (da && db) return da - db;
+      if (da) return -1;
+      if (db) return 1;
+      return 0;
+    }).slice(0, 15).map((g) => ({
       title: g.name, released: g.released, image: g.image || null,
       url: g.url, genres: g.genres || [], price: g.price || null,
     })),
