@@ -375,7 +375,7 @@ function render(){
   document.getElementById("theme").textContent = S.dark ? "🌞" : "🌙";
 
   document.getElementById("nav").innerHTML =
-    `<button class="tab ${S.view==='list'?'on':''}" data-view="list">Bestsellery</button>
+    `<button class="tab ${S.view==='list'?'on':''}" data-view="list">Knižní Bestsellery</button>
      <button class="tab ${S.view==='movies'?'on':''}" data-view="movies">Filmy a Seriály</button>
      <button class="tab ${S.view==='steam'?'on':''}" data-view="steam">Steam</button>
      <button class="tab ${S.view==='backlog'?'on':''}" data-view="backlog">Backlog (${S.backlog.length})</button>`;
