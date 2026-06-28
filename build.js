@@ -18,7 +18,7 @@ const OUT = path.join(__dirname, "books.json");
 const DBK = "https://www.databazeknih.cz";
 const UA = "KnizniRadar/1.0 (+kontakt@example.cz)";
 const UA_BROWSER = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
-const DELAY = 700;
+const DELAY = 1200;
 const PER_SHOP = 20;
 const MAX_BOOKS = 40;
 
@@ -117,15 +117,37 @@ function scrapeShop(html, shop) {
 // databazeknih: PROCENTUÁLNÍ hodnocení (0–100) + obálka + odkaz na stránku knihy
 async function enrichDatabazeknih(title) {
   try {
-    const $ = cheerio.load(await getHtml(`${DBK}/search?q=${encodeURIComponent(title)}&in=books`, UA_BROWSER));
-    // první odkaz na detail knihy: /knihy/<slug>-<id> i /prehled-knihy/<slug>-<id>
+    // try both old and new search URL formats
+    const urls = [
+      `${DBK}/search?q=${encodeURIComponent(title)}&in=books`,
+      `${DBK}/vyhledavani/knihy?q=${encodeURIComponent(title)}`,
+    ];
     let href = null;
-    $("a[href]").each((_, a) => {
-      if (href) return;
-      const h = $(a).attr("href") || "";
-      if (/\/(prehled-knihy|knihy)\/[^/?#]+-\d+(?:[/?#]|$)/.test(h)) href = h;
-    });
-    if (!href) return {};
+    for (const searchUrl of urls) {
+      if (href) break;
+      try {
+        const html = await getHtml(searchUrl, UA_BROWSER);
+        const $ = cheerio.load(html);
+        $("a[href]").each((_, a) => {
+          if (href) return;
+          const h = $(a).attr("href") || "";
+          if (/\/(prehled-knihy|knihy)\/[^/?#]+-\d+(?:[/?#]|$)/.test(h)) href = h;
+        });
+        if (!href && html.length > 30000) break;
+      } catch (e) { console.warn("[dbk]", title, "→ search error:", e.message); }
+      if (!href) await sleep(DELAY);
+    }
+    if (!href) {
+      // Fallback: try direct slug URL guess
+      const slug = norm(title).replace(/ /g, "-");
+      const guessUrl = `${DBK}/prehled-knihy/${slug}`;
+      try {
+        const guessRes = await fetch(guessUrl, { headers: { "User-Agent": UA_BROWSER }, redirect: "follow" });
+        if (guessRes.ok && !guessRes.url.includes("/error")) href = new URL(guessRes.url).pathname;
+      } catch (e) { /* ignore */ }
+      await sleep(DELAY);
+    }
+    if (!href) { console.warn("[dbk]", title, "→ no detail link found"); return {}; }
     let link = (href.startsWith("http") ? href : DBK + href).replace("/knihy/", "/prehled-knihy/");
     await sleep(DELAY);
     const $$ = cheerio.load(await getHtml(link, UA_BROWSER));
