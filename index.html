@@ -167,7 +167,7 @@ let S = {dark:true, view:"list", filter:"Vše", sort:"readers", q:"", books:DEMO
   addMode:"search", addQ:"", addResults:[], addBusy:false, addMsg:"", addErr:"",
   addForm:{title:"",author:"",cover:"",rating:"",link:"",shop:"",price:"",url:""},
   games:GAMES_DEMO, gamesStatus:"idle", gamesUpdatedAt:null, gameWin:14, gameGenre:"Vše", gameSort:"reviews",
-  movies:MOVIES_DEMO, moviesStatus:"idle", moviesUpdatedAt:null, movieType:"Vše", movieSort:"default", movieQ:""};
+  movies:MOVIES_DEMO, moviesStatus:"idle", moviesUpdatedAt:null, movieType:"Vše", movieSort:"rating", movieQ:""};
 
 const esc = s => (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const ratingClass = r => r>=80?"r-high":r>=40?"r-mid":"r-low";
