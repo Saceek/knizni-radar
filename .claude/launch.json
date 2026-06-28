@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "radar",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["-e", "require('http').createServer((q,r)=>{const fs=require('fs'),p=require('path'),f=p.join('C:/Users/sakto/Documents/GitHub/knizni-radar',q.url==='/'?'index.html':q.url.split('?')[0]);fs.readFile(f,(e,d)=>{if(e){r.writeHead(404);r.end()}else{const ext=p.extname(f);const t={'.html':'text/html;charset=utf-8','.json':'application/json','.js':'text/javascript','.css':'text/css','.png':'image/png','.jpg':'image/jpeg','.svg':'image/svg+xml'};r.writeHead(200,{'Content-Type':t[ext]||'application/octet-stream'});r.end(d)}})}).listen(3456)"],
+      "port": 3456
+    }
+  ]
+}

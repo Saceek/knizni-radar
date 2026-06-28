@@ -98,7 +98,13 @@
   .empty{text-align:center;color:var(--sub);padding:54px 16px 40px;line-height:1.6}
   .gimg{width:184px;height:86px;border-radius:11px;object-fit:cover;flex:none;background:var(--chip);box-shadow:0 8px 20px rgba(0,0,0,.5)}
   .gprice{font-family:var(--mono);font-size:14px;font-weight:600;color:var(--emerald);margin-top:6px}
-  @media(max-width:560px){ .gimg{width:120px;height:56px} }
+  .mposter{width:64px;height:96px;border-radius:8px;object-fit:cover;flex:none;background:var(--chip);box-shadow:0 8px 20px rgba(0,0,0,.5)}
+  .mvod{font-size:11px;padding:3px 9px;border-radius:999px;background:rgba(139,125,255,.15);color:var(--violet);border:1px solid rgba(139,125,255,.3)}
+  .mvod.kino{background:rgba(251,191,36,.12);color:var(--amber);border-color:rgba(251,191,36,.3)}
+  .mtype{font-size:10px;text-transform:uppercase;letter-spacing:.06em;padding:3px 8px;border-radius:999px;font-weight:600}
+  .mtype.film{background:rgba(251,77,125,.14);color:var(--rose);border:1px solid rgba(251,77,125,.3)}
+  .mtype.serial{background:rgba(55,227,212,.14);color:var(--cyan);border:1px solid rgba(55,227,212,.3)}
+  @media(max-width:560px){ .gimg{width:120px;height:56px} .mposter{width:48px;height:72px} }
 </style>
 </head>
 <body>
@@ -107,7 +113,7 @@
   <div class="row">
     <div style="display:flex;align-items:center;gap:12px">
       <span class="logo"><svg viewBox="0 0 64 64"><g fill="none" stroke="#fff"><circle cx="32" cy="32" r="20" stroke-width="2.5"/><circle cx="32" cy="32" r="11" stroke-width="2" opacity=".8"/><line x1="32" y1="11" x2="32" y2="53" stroke-width="1.4" opacity=".45"/><line x1="11" y1="32" x2="53" y2="32" stroke-width="1.4" opacity=".45"/></g><path d="M32 32 L32 12 A20 20 0 0 1 50 23 Z" fill="#fff" opacity=".3"/><line x1="32" y1="32" x2="50" y2="23" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/><circle cx="43" cy="22.5" r="3.2" fill="#fff"/></svg></span>
-      <div><h1>Sáčkův radar</h1><p class="muted">prodejní bestsellery · hodnocení databazeknih.cz</p></div>
+      <div><h1>Sáčkův radar</h1><p class="muted">knihy · hry · filmy a seriály</p></div>
     </div>
     <div style="display:flex;gap:8px">
       <button class="btn" id="refresh">⟳ Aktualizovat</button>
@@ -119,7 +125,7 @@
   <div id="status"></div>
   <div id="view"></div>
 
-  <p class="tiny" style="text-align:center;margin-top:24px">Bestsellery Kosmas / Dobrovský · hodnocení a obálky databazeknih.cz · backlog uložen v prohlížeči.</p>
+  <p class="tiny" style="text-align:center;margin-top:24px">Bestsellery Kosmas / Dobrovský · hodnocení a obálky databazeknih.cz · filmy a seriály csfd.cz · backlog uložen v prohlížeči.</p>
 </div>
 
 <script>
@@ -146,10 +152,22 @@ const GAMES_DEMO = [
 function loadBacklog(){ try{ return JSON.parse(localStorage.getItem(LS_KEY))||[]; }catch(e){ return mem||[]; } }
 function saveBacklog(a){ try{ localStorage.setItem(LS_KEY, JSON.stringify(a)); }catch(e){ mem=a; } }
 
+const MOVIES_DEMO = [
+  {title:"Supergirl",year:"2026",type:"film",rating:null,poster:null,url:"https://www.csfd.cz/film/852437",genres:["Akční","Dobrodružný"],country:"USA",vod:["Kino"]},
+  {title:"Béé team na stopě",year:"2026",type:"film",rating:null,poster:null,url:"https://www.csfd.cz/film/1032599",genres:["Komedie","Mysteriózní"],country:"Irsko / Velká Británie",vod:["Kino"]},
+  {title:"Citizen Vigilante",year:"2026",type:"film",rating:null,poster:null,url:"https://www.csfd.cz/film/1196789",genres:["Akční","Thriller"],country:"Německo / Chorvatsko",vod:["Kino"]},
+  {title:"Posedlost",year:"2025",type:"film",rating:null,poster:null,url:"https://www.csfd.cz/film/1091284",genres:["Horor","Thriller"],country:"USA",vod:["Kino"]},
+  {title:"Najdu si tě",year:"2026",type:"seriál",rating:null,poster:null,url:"https://www.csfd.cz/film/1234567",genres:["Krimi","Drama"],country:"USA",vod:["Netflix"]},
+  {title:"Medvěd - Série 5",year:"2026",type:"seriál",rating:null,poster:null,url:"https://www.csfd.cz/film/987654",genres:["Komedie","Drama"],country:"USA",vod:["Disney+"]},
+  {title:"My vás naučíme",year:"2026",type:"seriál",rating:null,poster:null,url:"https://www.csfd.cz/film/876543",genres:["Akční","Drama"],country:"Jižní Korea",vod:["Netflix"]},
+  {title:"Rod Draka - Série 3",year:"2026",type:"seriál",rating:null,poster:null,url:"https://www.csfd.cz/film/765432",genres:["Akční","Fantasy"],country:"USA",vod:["Max"]},
+];
+
 let S = {dark:true, view:"list", filter:"Vše", sort:"readers", q:"", books:DEMO, status:"loading", updatedAt:null, expanded:null, backlog:loadBacklog(),
   addMode:"search", addQ:"", addResults:[], addBusy:false, addMsg:"", addErr:"",
   addForm:{title:"",author:"",cover:"",rating:"",link:"",shop:"",price:"",url:""},
-  games:GAMES_DEMO, gamesStatus:"idle", gamesUpdatedAt:null, gameWin:14, gameGenre:"Vše", gameSort:"reviews"};
+  games:GAMES_DEMO, gamesStatus:"idle", gamesUpdatedAt:null, gameWin:14, gameGenre:"Vše", gameSort:"reviews",
+  movies:MOVIES_DEMO, moviesStatus:"idle", moviesUpdatedAt:null, movieType:"Vše", movieSort:"default", movieQ:""};
 
 const esc = s => (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const ratingClass = r => r>=80?"r-high":r>=40?"r-mid":"r-low";
@@ -196,6 +214,60 @@ function steamFiltered(){
     S.gameSort==="rating"   ? (b.rating||0)-(a.rating||0) :
                               (b.reviews||0)-(a.reviews||0));
 }
+async function loadMovies(){
+  S.moviesStatus="loading"; render();
+  try{
+    const r = await fetch("movies.json?t=" + Date.now(), {cache:"no-store"});
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    const d = await r.json(); const arr = d.movies || d;
+    if(!Array.isArray(arr)) throw new Error("prázdno");
+    S.movies = arr; S.moviesUpdatedAt = d.updatedAt || null; S.moviesStatus="live";
+  }catch(e){ S.movies = MOVIES_DEMO; S.moviesStatus="demo"; }
+  render();
+}
+function movieTypes(){
+  const c={}; S.movies.forEach(m=>{ if(m.type) c[m.type]=(c[m.type]||0)+1; });
+  return Object.keys(c).sort();
+}
+function movieVodTags(){
+  const c={}; S.movies.forEach(m=>(m.vod||[]).forEach(v=>{ if(v) c[v]=(c[v]||0)+1; }));
+  return Object.keys(c).sort((a,b)=>c[b]-c[a]);
+}
+function moviesFiltered(){
+  const q=S.movieQ.trim().toLowerCase();
+  return S.movies.filter(m=>{
+    const inType=S.movieType==="Vše" || m.type===S.movieType;
+    const inQ=!q || (m.title||"").toLowerCase().includes(q) || (m.genres||[]).join(" ").toLowerCase().includes(q);
+    return inType && inQ;
+  }).sort((a,b)=>
+    S.movieSort==="rating" ? (b.rating||0)-(a.rating||0) :
+    S.movieSort==="year"   ? ((b.year||"")<(a.year||"")?-1:1) : 0);
+}
+function movieCard(m,i){
+  const posterBg = m.poster ? "" : `background:${grad(m.title)}`;
+  const posterHtml = m.poster
+    ? `<img class="mposter" src="${esc(m.poster)}" alt="" onerror="this.style.visibility='hidden'" />`
+    : `<div class="mposter" style="${posterBg};display:flex;flex-direction:column;justify-content:flex-end;padding:6px"><span style="font-size:10px;font-weight:700;color:#fff;line-height:1.1">${esc(m.title)}</span></div>`;
+  const rHtml = m.rating!=null
+    ? `<span class="rating ${ratingClass(m.rating)}" title="Hodnocení ČSFD">${m.rating} %</span>`
+    : `<span class="tag">bez hodnocení</span>`;
+  const typeClass = m.type==="film"?"film":"serial";
+  const vodHtml = (m.vod||[]).map(v=>`<span class="mvod ${v==='Kino'?'kino':''}">${esc(v)}</span>`).join("");
+  const genreHtml = (m.genres||[]).map(g=>`<span class="tag">${esc(g)}</span>`).join("");
+  return `<div class="card">
+    <div><div class="rank">#${i+1}</div>
+      <a href="${esc(m.url)}" target="_blank" rel="noreferrer">${posterHtml}</a></div>
+    <div class="body">
+      <div class="row"><div style="min-width:0">
+        <p class="title"><a href="${esc(m.url)}" target="_blank" rel="noreferrer">${esc(m.title)}</a></p>
+        <p class="muted">${esc(m.country||"")}${m.year?" · "+esc(m.year):""}</p>
+      </div>
+      <div style="text-align:right">${rHtml}</div></div>
+      <div class="meta"><span class="mtype ${typeClass}">${esc(m.type)}</span>${vodHtml}${genreHtml}</div>
+    </div>
+  </div>`;
+}
+
 function gimgErr(el){
   try{
     const list=JSON.parse(el.dataset.fb||"[]");
@@ -304,6 +376,7 @@ function render(){
 
   document.getElementById("nav").innerHTML =
     `<button class="tab ${S.view==='list'?'on':''}" data-view="list">Bestsellery</button>
+     <button class="tab ${S.view==='movies'?'on':''}" data-view="movies">Filmy a Seriály</button>
      <button class="tab ${S.view==='steam'?'on':''}" data-view="steam">Steam</button>
      <button class="tab ${S.view==='backlog'?'on':''}" data-view="backlog">Backlog (${S.backlog.length})</button>`;
 
@@ -316,7 +389,25 @@ function render(){
   document.getElementById("status").innerHTML = st;
 
   const view = document.getElementById("view");
-  if(S.view==="steam"){
+  if(S.view==="movies"){
+    let mst="";
+    if(S.moviesStatus==="loading") mst='<div class="note warn">Načítám filmy a seriály…</div>';
+    else if(S.moviesStatus==="live") mst='<div class="note ok">✓ ČSFD'+(S.moviesUpdatedAt?" · aktualizováno "+new Date(S.moviesUpdatedAt).toLocaleString("cs-CZ"):"")+'</div>';
+    else if(S.moviesStatus==="demo") mst='<div class="note warn">movies.json se nepodařilo načíst – ukázková data.</div>';
+    const types=["Vše","film","seriál"].map(t=>`<button class="chip ${S.movieType===t?'on':''}" data-mtype="${esc(t)}">${esc(t==="Vše"?t:t.charAt(0).toUpperCase()+t.slice(1)+"y")}</button>`).join("");
+    const msort=`<select id="msort">
+        <option value="default"${S.movieSort==='default'?' selected':''}>Dle návštěvnosti</option>
+        <option value="rating"${S.movieSort==='rating'?' selected':''}>Dle hodnocení</option>
+        <option value="year"${S.movieSort==='year'?' selected':''}>Nejnovější</option>
+      </select>`;
+    const items=moviesFiltered();
+    view.innerHTML = mst
+      + `<div class="chips">${types}</div>`
+      + `<div class="controls"><input id="mq" placeholder="Hledat film nebo seriál…" value="${esc(S.movieQ)}" />${msort}</div>`
+      + (items.length?items.map((m,i)=>movieCard(m,i)).join(""):'<div class="empty">Žádný titul neodpovídá filtru.</div>');
+    const mqi=document.getElementById("mq"); if(mqi) mqi.oninput=e=>{S.movieQ=e.target.value; render();};
+    const ms=document.getElementById("msort"); if(ms) ms.onchange=e=>{S.movieSort=e.target.value; render();};
+  } else if(S.view==="steam"){
     let gst="";
     if(S.gamesStatus==="loading") gst='<div class="note warn">Načítám hry…</div>';
     else if(S.gamesStatus==="live") gst='<div class="note ok">✓ Steam'+(S.gamesUpdatedAt?" · aktualizováno "+new Date(S.gamesUpdatedAt).toLocaleString("cs-CZ"):"")+'</div>';
@@ -508,15 +599,18 @@ function addBacklog(t){ const b=S.books.find(x=>x.title===t); if(b && !inBacklog
 function removeBacklog(t){ S.backlog=S.backlog.filter(x=>x.title!==t); saveBacklog(S.backlog); render(); }
 function toggleBacklog(t){ inBacklog(t)?removeBacklog(t):addBacklog(t); }
 
-document.getElementById("refresh").onclick=()=>{ S.view==="steam" ? loadGames() : load(); };
+document.getElementById("refresh").onclick=()=>{ S.view==="steam" ? loadGames() : S.view==="movies" ? loadMovies() : load(); };
 document.getElementById("theme").onclick=()=>{S.dark=!S.dark; render();};
 document.getElementById("nav").onclick=e=>{const v=e.target.dataset.view; if(v){S.view=v; S.expanded=null;
-  if(v==="steam" && S.gamesStatus==="idle"){ loadGames(); } else { render(); } }};
+  if(v==="steam" && S.gamesStatus==="idle"){ loadGames(); }
+  else if(v==="movies" && S.moviesStatus==="idle"){ loadMovies(); }
+  else { render(); } }};
 document.getElementById("view").onclick=e=>{
   const f=e.target.dataset.filter; if(f){S.filter=f; render(); return;}
   const m=e.target.dataset.more; if(m){S.expanded=S.expanded===m?null:m; render(); return;}
   const bk=e.target.dataset.bk; if(bk){toggleBacklog(bk); return;}
   const rm=e.target.dataset.rm; if(rm){removeBacklog(rm); return;}
+  const mt=e.target.dataset.mtype; if(mt){S.movieType=mt; render(); return;}
   const gw=e.target.dataset.gwin; if(gw){S.gameWin=+gw; render(); return;}
   const gg=e.target.dataset.ggenre; if(gg){S.gameGenre=gg; render(); return;}
 };

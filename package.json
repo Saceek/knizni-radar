@@ -2,5 +2,8 @@
   "name": "knizni-radar-build",
   "private": true,
   "type": "commonjs",
-  "dependencies": { "cheerio": "^1.0.0" }
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "playwright": "^1.61.1"
+  }
 }
