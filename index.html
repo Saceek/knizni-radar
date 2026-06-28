@@ -243,7 +243,8 @@ let S = {dark:true, view:"news", filter:"Vše", sort:"readers", q:"", books:DEMO
   addForm:{title:"",author:"",cover:"",rating:"",link:"",shop:"",price:"",url:""},
   games:GAMES_DEMO, gamesStatus:"idle", gamesUpdatedAt:null, gameWin:14, gameGenre:"Vše", gameSort:"reviews",
   movies:MOVIES_DEMO, moviesStatus:"idle", moviesUpdatedAt:null, movieType:"Vše", movieSort:"rating", movieQ:"",
-  news:null, newsStatus:"idle", newsUpdatedAt:null};
+  news:null, newsStatus:"idle", newsUpdatedAt:null,
+  coming:null, comingStatus:"idle", comingUpdatedAt:null};
 
 const esc = s => (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const ratingClass = r => r>=80?"r-high":r>=40?"r-mid":"r-low";
@@ -336,6 +337,51 @@ function newsGameTile(g){
     <p class="tile-sub">${g.price?esc(g.price):""}</p>
     <div class="tile-meta">${rHtml}${(g.tags||[]).slice(0,3).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
   </div>`;
+}
+
+async function loadComing(){
+  S.comingStatus="loading"; render();
+  try{
+    const r = await fetch("coming.json?t=" + Date.now(), {cache:"no-store"});
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    const d = await r.json();
+    S.coming = d; S.comingUpdatedAt = d.updatedAt || null; S.comingStatus="live";
+  }catch(e){ S.coming = null; S.comingStatus="empty"; }
+  render();
+}
+function comingMovieTile(m){
+  const vodCls = v => {const k=v.toLowerCase().replace(/[^a-z]/g,''); return k.includes('netflix')?'vod-netflix':k.includes('disney')?'vod-disney':k.includes('prime')?'vod-prime':k.includes('sledovani')?'vod-sledovanitv':k.includes('hbo')||k==='max'?'vod-hbo':k.includes('apple')?'vod-apple':k==='kino'?'vod-kino':'';};
+  const posterBg = m.poster ? "" : `style="background:${grad(m.title)};display:flex;align-items:end;padding:6px"`;
+  const posterInner = m.poster
+    ? `<img class="tile-poster" src="${esc(m.poster)}" alt="" onerror="this.style.visibility='hidden'" />`
+    : `<div class="tile-poster" ${posterBg}><span style="font-size:9px;font-weight:700;color:#fff;line-height:1.1">${esc(m.title)}</span></div>`;
+  const typeClass = m.type==="film"?"film":"serial";
+  const vodHtml = (m.vod||[]).map(v=>`<span class="mvod ${vodCls(v)}">${esc(v)}</span>`).join("");
+  const dateHtml = m.premiereDate ? `<span class="tag">${esc(m.premiereDate)}</span>` : "";
+  return `<div class="tile"><div class="tile-row">${posterInner}<div>
+    <p class="tile-title"><a href="${esc(m.url)}" target="_blank" rel="noreferrer">${esc(m.title)}</a></p>
+    <p class="tile-sub">${esc(m.country||"")}${m.year?" · "+esc(m.year):""}</p>
+    <div class="tile-meta"><span class="mtype ${typeClass}">${typeClass==="film"?"FILM":"SERIÁL"}</span>${vodHtml}${dateHtml}</div>
+  </div></div></div>`;
+}
+function comingGameTile(g){
+  const imgHtml = g.image ? `<img class="tile-img" src="${esc(g.image)}" alt="" onerror="this.style.visibility='hidden'" />` : "";
+  return `<div class="tile">${imgHtml}
+    <p class="tile-title"><a href="${esc(g.url||'#')}" target="_blank" rel="noreferrer">${esc(g.title)}</a></p>
+    <p class="tile-sub">${esc(g.released||"")}${g.price?" · "+esc(g.price):""}</p>
+    <div class="tile-meta">${(g.genres||[]).slice(0,3).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
+  </div>`;
+}
+function comingBookTile(b){
+  const coverBg = b.cover ? "" : `style="background:${grad(b.title)};display:flex;align-items:end;padding:6px"`;
+  const coverInner = b.cover
+    ? `<img class="tile-poster" src="${esc(b.cover)}" alt="" onerror="this.style.visibility='hidden'" />`
+    : `<div class="tile-poster" ${coverBg}><span style="font-size:9px;font-weight:700;color:#fff;line-height:1.1">${esc(b.title)}</span></div>`;
+  return `<div class="tile"><div class="tile-row">${coverInner}<div>
+    <p class="tile-title"><a href="${esc(b.url||'#')}" target="_blank" rel="noreferrer">${esc(b.title)}</a></p>
+    <p class="tile-sub">${esc(b.author||"")}${b.releaseDate?" · "+esc(b.releaseDate):""}</p>
+    <div class="tile-meta">${b.price?`<span class="price" style="font-size:13px">${b.price} Kč</span>`:""}</div>
+  </div></div></div>`;
 }
 
 async function loadMovies(){
@@ -501,6 +547,7 @@ function render(){
 
   document.getElementById("nav").innerHTML =
     `<button class="tab ${S.view==='news'?'on':''}" data-view="news">Novinky</button>
+     <button class="tab ${S.view==='coming'?'on':''}" data-view="coming">Očekávané</button>
      <button class="tab ${S.view==='list'?'on':''}" data-view="list">Knižní Bestsellery</button>
      <button class="tab ${S.view==='movies'?'on':''}" data-view="movies">Filmy a Seriály</button>
      <button class="tab ${S.view==='steam'?'on':''}" data-view="steam">Steam</button>
@@ -548,6 +595,34 @@ function render(){
         html += `<div class="news-section">Nové hry <span class="badge">${games.length}</span></div>`;
         html += `<div class="tiles">${games.map(newsGameTile).join("")}</div>`;
       }
+    }
+    view.innerHTML = html;
+  } else if(S.view==="coming"){
+    let cst="";
+    if(S.comingStatus==="loading") cst='<div class="note warn">Načítám očekávané tituly…</div>';
+    else if(S.comingStatus==="live") cst='<div class="note ok">✓ Očekávané'+(S.comingUpdatedAt?" · aktualizováno "+new Date(S.comingUpdatedAt).toLocaleString("cs-CZ"):"")+'</div>';
+    else if(S.comingStatus==="empty") cst='<div class="note warn">coming.json se nepodařilo načíst – spusť build-coming.js.</div>';
+
+    const c = S.coming || {};
+    let html = cst;
+    if(c.films?.length){
+      html += `<div class="news-section">Očekávané filmy <span class="badge">${c.films.length}</span></div>`;
+      html += `<div class="tiles">${c.films.map(comingMovieTile).join("")}</div>`;
+    }
+    if(c.series?.length){
+      html += `<div class="news-section">Očekávané seriály <span class="badge">${c.series.length}</span></div>`;
+      html += `<div class="tiles">${c.series.map(comingMovieTile).join("")}</div>`;
+    }
+    if(c.games?.length){
+      html += `<div class="news-section">Očekávané hry <span class="badge">${c.games.length}</span></div>`;
+      html += `<div class="tiles">${c.games.map(comingGameTile).join("")}</div>`;
+    }
+    if(c.books?.length){
+      html += `<div class="news-section">Předobjednávky knih <span class="badge">${c.books.length}</span></div>`;
+      html += `<div class="tiles">${c.books.map(comingBookTile).join("")}</div>`;
+    }
+    if(!c.films?.length && !c.series?.length && !c.games?.length && !c.books?.length && S.comingStatus==="live"){
+      html += '<div class="news-empty">Žádné očekávané tituly.</div>';
     }
     view.innerHTML = html;
   } else if(S.view==="movies"){
@@ -762,12 +837,13 @@ function addBacklog(t){ const b=S.books.find(x=>x.title===t); if(b && !inBacklog
 function removeBacklog(t){ S.backlog=S.backlog.filter(x=>x.title!==t); saveBacklog(S.backlog); render(); }
 function toggleBacklog(t){ inBacklog(t)?removeBacklog(t):addBacklog(t); }
 
-document.getElementById("refresh").onclick=()=>{ S.view==="steam" ? loadGames() : S.view==="movies" ? loadMovies() : S.view==="news" ? loadNews() : load(); };
+document.getElementById("refresh").onclick=()=>{ S.view==="steam" ? loadGames() : S.view==="movies" ? loadMovies() : S.view==="news" ? loadNews() : S.view==="coming" ? loadComing() : load(); };
 document.getElementById("theme").onclick=()=>{S.dark=!S.dark; render();};
 document.getElementById("nav").onclick=e=>{const v=e.target.dataset.view; if(v){S.view=v; S.expanded=null;
   if(v==="steam" && S.gamesStatus==="idle"){ loadGames(); }
   else if(v==="movies" && S.moviesStatus==="idle"){ loadMovies(); }
   else if(v==="news" && S.newsStatus==="idle"){ loadNews(); }
+  else if(v==="coming" && S.comingStatus==="idle"){ loadComing(); }
   else if(v==="list" && S.status==="idle"){ load(); }
   else { render(); } }};
 document.getElementById("view").onclick=e=>{
