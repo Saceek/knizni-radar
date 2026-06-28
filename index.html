@@ -46,8 +46,9 @@
     top:8%;left:-2%;
     background:var(--orb2,rgba(55,227,212,.14));filter:blur(70px);
     animation:orbPulse2 7s ease-in-out infinite 2s, orbDrift2 25s ease-in-out infinite}
-  @keyframes tetrisFall{0%{top:-92px;opacity:.10}80%{opacity:.08}100%{top:1150px;opacity:0}}
-  .tetris{position:fixed;pointer-events:none;z-index:0;opacity:.10;animation:tetrisFall var(--dur,21.6s) linear infinite var(--del,0s)}
+  @keyframes tetrisFall{0%,14%{opacity:0}16%{opacity:.10}85%{opacity:.08}100%{opacity:0}}
+  @keyframes tetrisMove{0%{top:-200px}100%{top:1150px}}
+  .tetris{position:fixed;pointer-events:none;z-index:0;top:-200px;opacity:0;animation:tetrisMove var(--dur,21.6s) linear infinite var(--del,0s), tetrisFall var(--dur,21.6s) linear infinite var(--del,0s)}
   .tetris svg{display:block}
   .wrap{max-width:980px;margin:0 auto;padding:26px 16px;position:relative;z-index:1}
   .row{display:flex;align-items:center;justify-content:space-between;gap:12px}
@@ -131,15 +132,26 @@
 </head>
 <body>
 <div class="orb2"></div>
-<!-- Tetris pieces (each cell = 46px to match grid) -->
-<div class="tetris" style="left:5%;--del:0s"><svg width="184" height="46" viewBox="0 0 4 1"><rect width="1" height="1" fill="#8b7dff"/><rect x="1" width="1" height="1" fill="#8b7dff"/><rect x="2" width="1" height="1" fill="#8b7dff"/><rect x="3" width="1" height="1" fill="#8b7dff"/></svg></div>
-<div class="tetris" style="left:20%;--del:4s"><svg width="92" height="92" viewBox="0 0 2 2"><rect width="1" height="1" fill="#37e3d4"/><rect x="1" width="1" height="1" fill="#37e3d4"/><rect y="1" width="1" height="1" fill="#37e3d4"/><rect x="1" y="1" width="1" height="1" fill="#37e3d4"/></svg></div>
-<div class="tetris" style="left:38%;--del:7s"><svg width="138" height="92" viewBox="0 0 3 2"><rect x="1" width="1" height="1" fill="#fb4d7d"/><rect y="1" width="1" height="1" fill="#fb4d7d"/><rect x="1" y="1" width="1" height="1" fill="#fb4d7d"/><rect x="2" y="1" width="1" height="1" fill="#fb4d7d"/></svg></div>
-<div class="tetris" style="left:55%;--del:2s"><svg width="138" height="92" viewBox="0 0 3 2"><rect width="1" height="1" fill="#fbbf24"/><rect y="1" width="1" height="1" fill="#fbbf24"/><rect x="1" y="1" width="1" height="1" fill="#fbbf24"/><rect x="2" y="1" width="1" height="1" fill="#fbbf24"/></svg></div>
-<div class="tetris" style="left:72%;--del:9s"><svg width="138" height="92" viewBox="0 0 3 2"><rect width="1" height="1" fill="#4ade80"/><rect x="1" width="1" height="1" fill="#4ade80"/><rect x="1" y="1" width="1" height="1" fill="#4ade80"/><rect x="2" y="1" width="1" height="1" fill="#4ade80"/></svg></div>
-<div class="tetris" style="left:88%;--del:5s"><svg width="92" height="92" viewBox="0 0 2 2"><rect width="1" height="1" fill="#8b7dff"/><rect y="1" width="1" height="1" fill="#8b7dff"/><rect x="1" y="1" width="1" height="1" fill="#8b7dff"/></svg></div>
-<div class="tetris" style="left:12%;--del:12s"><svg width="138" height="92" viewBox="0 0 3 2"><rect x="1" width="1" height="1" fill="#fb4d7d"/><rect x="2" width="1" height="1" fill="#fb4d7d"/><rect y="1" width="1" height="1" fill="#fb4d7d"/><rect x="1" y="1" width="1" height="1" fill="#fb4d7d"/></svg></div>
-<div class="tetris" style="left:48%;--del:15s"><svg width="138" height="92" viewBox="0 0 3 2"><rect width="1" height="1" fill="#37e3d4"/><rect x="1" width="1" height="1" fill="#37e3d4"/><rect x="2" width="1" height="1" fill="#37e3d4"/><rect x="2" y="1" width="1" height="1" fill="#37e3d4"/></svg></div>
+<!-- Tetris pieces (each cell = 46px, positions snapped to grid by JS) -->
+<div class="tetris" data-col="0.06" style="--del:0s"><svg width="184" height="46" viewBox="0 0 4 1"><rect width="1" height="1" fill="#8b7dff"/><rect x="1" width="1" height="1" fill="#8b7dff"/><rect x="2" width="1" height="1" fill="#8b7dff"/><rect x="3" width="1" height="1" fill="#8b7dff"/></svg></div>
+<div class="tetris" data-col="0.20" style="--del:4s"><svg width="92" height="92" viewBox="0 0 2 2"><rect width="1" height="1" fill="#37e3d4"/><rect x="1" width="1" height="1" fill="#37e3d4"/><rect y="1" width="1" height="1" fill="#37e3d4"/><rect x="1" y="1" width="1" height="1" fill="#37e3d4"/></svg></div>
+<div class="tetris" data-col="0.36" style="--del:7s"><svg width="138" height="92" viewBox="0 0 3 2"><rect x="1" width="1" height="1" fill="#fb4d7d"/><rect y="1" width="1" height="1" fill="#fb4d7d"/><rect x="1" y="1" width="1" height="1" fill="#fb4d7d"/><rect x="2" y="1" width="1" height="1" fill="#fb4d7d"/></svg></div>
+<div class="tetris" data-col="0.52" style="--del:2s"><svg width="138" height="92" viewBox="0 0 3 2"><rect width="1" height="1" fill="#fbbf24"/><rect y="1" width="1" height="1" fill="#fbbf24"/><rect x="1" y="1" width="1" height="1" fill="#fbbf24"/><rect x="2" y="1" width="1" height="1" fill="#fbbf24"/></svg></div>
+<div class="tetris" data-col="0.68" style="--del:9s"><svg width="138" height="92" viewBox="0 0 3 2"><rect width="1" height="1" fill="#4ade80"/><rect x="1" width="1" height="1" fill="#4ade80"/><rect x="1" y="1" width="1" height="1" fill="#4ade80"/><rect x="2" y="1" width="1" height="1" fill="#4ade80"/></svg></div>
+<div class="tetris" data-col="0.84" style="--del:5s"><svg width="92" height="92" viewBox="0 0 2 2"><rect width="1" height="1" fill="#8b7dff"/><rect y="1" width="1" height="1" fill="#8b7dff"/><rect x="1" y="1" width="1" height="1" fill="#8b7dff"/></svg></div>
+<div class="tetris" data-col="0.13" style="--del:12s"><svg width="138" height="92" viewBox="0 0 3 2"><rect x="1" width="1" height="1" fill="#fb4d7d"/><rect x="2" width="1" height="1" fill="#fb4d7d"/><rect y="1" width="1" height="1" fill="#fb4d7d"/><rect x="1" y="1" width="1" height="1" fill="#fb4d7d"/></svg></div>
+<div class="tetris" data-col="0.46" style="--del:15s"><svg width="138" height="92" viewBox="0 0 3 2"><rect width="1" height="1" fill="#37e3d4"/><rect x="1" width="1" height="1" fill="#37e3d4"/><rect x="2" width="1" height="1" fill="#37e3d4"/><rect x="2" y="1" width="1" height="1" fill="#37e3d4"/></svg></div>
+<script>
+function snapTetris(){
+  document.querySelectorAll('.tetris[data-col]').forEach(el=>{
+    const pct=parseFloat(el.dataset.col);
+    const px=Math.round(pct*window.innerWidth/46)*46;
+    el.style.left=px+'px';
+  });
+}
+snapTetris();
+window.addEventListener('resize',snapTetris);
+</script>
 
 <div class="wrap">
   <div class="row">
