@@ -13,6 +13,7 @@
     --chip:rgba(255,255,255,.05); --chipt:#c2cbe6; --chipon:#fff; --chipont:#0f172a; --input:rgba(255,255,255,.045);
     --emerald:#4ade80; --amber:#fbbf24; --rose:#fb4d7d; --cyan:#37e3d4; --violet:#8b7dff;
     --glow:rgba(139,125,255,.16); --glow2:rgba(55,227,212,.10); --grid:rgba(140,160,255,.05);
+    --orb1:rgba(139,125,255,.18); --orb2:rgba(55,227,212,.14);
     --disp:"Space Grotesk",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
   }
   .light{
@@ -21,13 +22,33 @@
     --chip:#ffffff; --chipt:#3b4258; --chipon:#141a2b; --chipont:#fff; --input:#ffffff;
     --emerald:#16a34a; --amber:#d9810a; --rose:#e11d63; --cyan:#0b8aa0; --violet:#6d5ef0;
     --glow:rgba(109,94,240,.10); --glow2:rgba(11,138,160,.06); --grid:rgba(40,60,120,.05);
+    --orb1:rgba(109,94,240,.12); --orb2:rgba(11,138,160,.10);
   }
   *{box-sizing:border-box}
   body{margin:0;color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh;
-    background:radial-gradient(900px 480px at 82% -12%,var(--glow),transparent 60%),radial-gradient(700px 420px at -6% 8%,var(--glow2),transparent 55%),var(--bg);background-attachment:fixed}
+    background:var(--bg);background-attachment:fixed}
+  @keyframes gridScroll{0%{background-position:0 0}100%{background-position:0 46px}}
+  @keyframes orbPulse1{0%,100%{opacity:.13;transform:translate(-50%,-50%) scale(1)}50%{opacity:.22;transform:translate(-50%,-50%) scale(1.15)}}
+  @keyframes orbPulse2{0%,100%{opacity:.10;transform:translate(-50%,-50%) scale(1.1)}50%{opacity:.18;transform:translate(-50%,-50%) scale(.9)}}
+  @keyframes orbDrift1{0%{top:-5%;left:75%}25%{top:10%;left:80%}50%{top:5%;left:70%}75%{top:-2%;left:78%}100%{top:-5%;left:75%}}
+  @keyframes orbDrift2{0%{top:8%;left:-2%}25%{top:2%;left:5%}50%{top:12%;left:-5%}75%{top:5%;left:2%}100%{top:8%;left:-2%}}
   body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
     background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:46px 46px;
-    -webkit-mask:radial-gradient(circle at 50% -5%,#000,transparent 75%);mask:radial-gradient(circle at 50% -5%,#000,transparent 75%)}
+    animation:gridScroll 8s linear infinite;
+    -webkit-mask:linear-gradient(#000 60%,transparent);mask:linear-gradient(#000 60%,transparent)}
+  body::after{content:"";position:fixed;pointer-events:none;z-index:0;
+    width:500px;height:500px;border-radius:50%;
+    top:-5%;left:75%;
+    background:var(--orb1,rgba(139,125,255,.18));filter:blur(80px);
+    animation:orbPulse1 5s ease-in-out infinite, orbDrift1 20s ease-in-out infinite}
+  .orb2{position:fixed;pointer-events:none;z-index:0;
+    width:420px;height:420px;border-radius:50%;
+    top:8%;left:-2%;
+    background:var(--orb2,rgba(55,227,212,.14));filter:blur(70px);
+    animation:orbPulse2 7s ease-in-out infinite 2s, orbDrift2 25s ease-in-out infinite}
+  @keyframes tetrisFall{0%{top:-92px;opacity:.10}80%{opacity:.08}100%{top:1150px;opacity:0}}
+  .tetris{position:fixed;pointer-events:none;z-index:0;opacity:.10;animation:tetrisFall var(--dur,21.6s) linear infinite var(--del,0s)}
+  .tetris svg{display:block}
   .wrap{max-width:980px;margin:0 auto;padding:26px 16px;position:relative;z-index:1}
   .row{display:flex;align-items:center;justify-content:space-between;gap:12px}
   h1{font-family:var(--disp);font-size:25px;margin:0;letter-spacing:-.02em;font-weight:700}
@@ -109,6 +130,16 @@
 </style>
 </head>
 <body>
+<div class="orb2"></div>
+<!-- Tetris pieces (each cell = 46px to match grid, left = n×46px) -->
+<div class="tetris" style="left:92px;--del:0s"><svg width="184" height="46" viewBox="0 0 4 1"><rect width="1" height="1" fill="#8b7dff"/><rect x="1" width="1" height="1" fill="#8b7dff"/><rect x="2" width="1" height="1" fill="#8b7dff"/><rect x="3" width="1" height="1" fill="#8b7dff"/></svg></div>
+<div class="tetris" style="left:322px;--del:4s"><svg width="92" height="92" viewBox="0 0 2 2"><rect width="1" height="1" fill="#37e3d4"/><rect x="1" width="1" height="1" fill="#37e3d4"/><rect y="1" width="1" height="1" fill="#37e3d4"/><rect x="1" y="1" width="1" height="1" fill="#37e3d4"/></svg></div>
+<div class="tetris" style="left:552px;--del:7s"><svg width="138" height="92" viewBox="0 0 3 2"><rect x="1" width="1" height="1" fill="#fb4d7d"/><rect y="1" width="1" height="1" fill="#fb4d7d"/><rect x="1" y="1" width="1" height="1" fill="#fb4d7d"/><rect x="2" y="1" width="1" height="1" fill="#fb4d7d"/></svg></div>
+<div class="tetris" style="left:828px;--del:2s"><svg width="138" height="92" viewBox="0 0 3 2"><rect width="1" height="1" fill="#fbbf24"/><rect y="1" width="1" height="1" fill="#fbbf24"/><rect x="1" y="1" width="1" height="1" fill="#fbbf24"/><rect x="2" y="1" width="1" height="1" fill="#fbbf24"/></svg></div>
+<div class="tetris" style="left:1058px;--del:9s"><svg width="138" height="92" viewBox="0 0 3 2"><rect width="1" height="1" fill="#4ade80"/><rect x="1" width="1" height="1" fill="#4ade80"/><rect x="1" y="1" width="1" height="1" fill="#4ade80"/><rect x="2" y="1" width="1" height="1" fill="#4ade80"/></svg></div>
+<div class="tetris" style="left:1288px;--del:5s"><svg width="92" height="92" viewBox="0 0 2 2"><rect width="1" height="1" fill="#8b7dff"/><rect y="1" width="1" height="1" fill="#8b7dff"/><rect x="1" y="1" width="1" height="1" fill="#8b7dff"/></svg></div>
+<div class="tetris" style="left:184px;--del:12s"><svg width="138" height="92" viewBox="0 0 3 2"><rect x="1" width="1" height="1" fill="#fb4d7d"/><rect x="2" width="1" height="1" fill="#fb4d7d"/><rect y="1" width="1" height="1" fill="#fb4d7d"/><rect x="1" y="1" width="1" height="1" fill="#fb4d7d"/></svg></div>
+<div class="tetris" style="left:690px;--del:15s"><svg width="138" height="92" viewBox="0 0 3 2"><rect width="1" height="1" fill="#37e3d4"/><rect x="1" width="1" height="1" fill="#37e3d4"/><rect x="2" width="1" height="1" fill="#37e3d4"/><rect x="2" y="1" width="1" height="1" fill="#37e3d4"/></svg></div>
 
 <div class="wrap">
   <div class="row">
