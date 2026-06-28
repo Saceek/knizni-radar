@@ -122,12 +122,28 @@ async function main() {
           if (m) { const n = parseInt(m[1], 10); if (n >= 0 && n <= 100) rating = n; }
         });
 
-        // VOD platforms from detail page
+        // VOD platforms: prefer "Premiéry" section (has actual platform like HBO Max, Netflix)
         const vod = [];
-        document.querySelectorAll("[class*='vod'] a, [class*='vod'] img, .box-vod a, [class*='streaming'] a").forEach((el) => {
-          const name = (el.getAttribute("title") || el.getAttribute("alt") || el.textContent || "").trim();
-          if (name && name.length > 1 && name.length < 40 && !vod.includes(name)) vod.push(name);
-        });
+        const knownPlatforms = /Netflix|HBO|Max|Disney\+|Amazon|Prime Video|Apple TV|Canal\+|Voyo|SkyShowtime/i;
+
+        // 1. Check "Premiéry" / premiere box for "Na VOD od ... PlatformName"
+        const allText = document.body.innerText || "";
+        const vodPremiere = allText.match(/Na VOD od[\s\S]{0,30}?(Netflix|HBO\s*Max|Disney\+|Amazon Prime|Prime Video|Apple TV\+?|Canal\+|Voyo|SkyShowtime)/i);
+        if (vodPremiere) vod.push(vodPremiere[1].trim());
+
+        // Also check for "V kinech od"
+        const cinemaPremiere = /V kinech od/i.test(allText);
+
+        // 2. Fallback: "Kde sledovat" section links/images (may contain aggregators)
+        if (!vod.length) {
+          document.querySelectorAll("[class*='vod'] a, [class*='vod'] img, .box-vod a, [class*='streaming'] a").forEach((el) => {
+            const name = (el.getAttribute("title") || el.getAttribute("alt") || el.textContent || "").trim();
+            if (name && name.length > 1 && name.length < 40 && !vod.includes(name) && knownPlatforms.test(name)) vod.push(name);
+          });
+        }
+
+        // 3. If still nothing but cinema premiere found
+        if (!vod.length && cinemaPremiere) vod.push("Kino");
 
         return { poster, rating, vod };
       });

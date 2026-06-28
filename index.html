@@ -125,7 +125,13 @@
   .gprice{font-family:var(--mono);font-size:14px;font-weight:600;color:var(--emerald);margin-top:6px}
   .mposter{width:64px;height:96px;border-radius:8px;object-fit:cover;flex:none;background:var(--chip);box-shadow:0 8px 20px rgba(0,0,0,.5)}
   .mvod{font-size:11px;padding:3px 9px;border-radius:999px;background:rgba(139,125,255,.15);color:var(--violet);border:1px solid rgba(139,125,255,.3)}
-  .mvod.kino{background:rgba(251,191,36,.12);color:var(--amber);border-color:rgba(251,191,36,.3)}
+  .mvod.vod-kino{background:rgba(251,191,36,.12);color:#fbbf24;border-color:rgba(251,191,36,.3)}
+  .mvod.vod-netflix{background:rgba(229,9,20,.14);color:#e50914;border-color:rgba(229,9,20,.3)}
+  .mvod.vod-disney{background:rgba(17,60,207,.14);color:#6ea0ff;border-color:rgba(17,60,207,.3)}
+  .mvod.vod-prime{background:rgba(0,168,225,.14);color:#00a8e1;border-color:rgba(0,168,225,.3)}
+  .mvod.vod-sledovanitv{background:rgba(227,109,24,.14);color:#e36d18;border-color:rgba(227,109,24,.3)}
+  .mvod.vod-hbo,.mvod.vod-max{background:rgba(101,52,183,.14);color:#9b6dff;border-color:rgba(101,52,183,.3)}
+  .mvod.vod-apple{background:rgba(168,168,168,.12);color:#a8a8a8;border-color:rgba(168,168,168,.3)}
   .mtype{font-size:10px;text-transform:uppercase;letter-spacing:.06em;padding:3px 8px;border-radius:999px;font-weight:600}
   .mtype.film{background:rgba(251,77,125,.14);color:var(--rose);border:1px solid rgba(251,77,125,.3)}
   .mtype.serial{background:rgba(55,227,212,.14);color:var(--cyan);border:1px solid rgba(55,227,212,.3)}
@@ -307,7 +313,8 @@ function movieCard(m,i){
     ? `<span class="rating ${ratingClass(m.rating)}" title="Hodnocení ČSFD">${m.rating} %</span>`
     : `<span class="tag">bez hodnocení</span>`;
   const typeClass = m.type==="film"?"film":"serial";
-  const vodHtml = (m.vod||[]).map(v=>`<span class="mvod ${v==='Kino'?'kino':''}">${esc(v)}</span>`).join("");
+  const vodClass = v => {const k=v.toLowerCase().replace(/[^a-z]/g,''); return k.includes('netflix')?'vod-netflix':k.includes('disney')?'vod-disney':k.includes('prime')?'vod-prime':k.includes('sledovani')?'vod-sledovanitv':k.includes('hbo')||k==='max'?'vod-hbo':k.includes('apple')?'vod-apple':k==='kino'?'vod-kino':'';};
+  const vodHtml = (m.vod||[]).map(v=>`<span class="mvod ${vodClass(v)}">${esc(v)}</span>`).join("");
   const genreHtml = (m.genres||[]).map(g=>`<span class="tag">${esc(g)}</span>`).join("");
   return `<div class="card">
     <div><div class="rank">#${i+1}</div>
