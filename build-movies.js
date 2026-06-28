@@ -103,7 +103,7 @@ async function main() {
   // Enrich from detail pages: rating + VOD info + better poster
   for (const item of allItems) {
     try {
-      await page.goto(item.url, { waitUntil: "networkidle", timeout: 15000 });
+      await page.goto(item.url, { waitUntil: "domcontentloaded", timeout: 30000 });
       await sleep(DELAY);
 
       const detail = await page.evaluate(() => {
