@@ -96,7 +96,7 @@ function scrapeShop(html, shop) {
     if (!m) return;
     const id = m[shop.idG], slug = m[shop.slugG];
     if (byId.has(id)) return;
-    const scope = (() => { const sc = $(a).closest("li, article, [class*='product'], [class*='item']"); return sc.length ? sc : $(a).parent().parent().parent(); })();
+    const scope = (() => { const sc = $(a).closest(".grid-item, li, article, [class*='product']"); return sc.length ? sc : $(a).parent().parent().parent(); })();
     let author = null;
     scope.find("a[href]").each((__, x) => { if (author) return; const h = $(x).attr("href") || ""; if (shop.authorRe.test(h)) { const t = $(x).text().replace(/\s+/g, " ").trim(); if (t) author = t; } });
     const prices = [...scope.text().matchAll(/(\d[\d\s]*)\s*Kč/g)].map((x) => parseInt(x[1].replace(/\s/g, ""), 10)).filter((n) => n >= 20 && n < 5000);
