@@ -132,7 +132,7 @@ async function main() {
         return { poster, rating, vod };
       });
 
-      if (detail.poster) item.poster = detail.poster;
+      if (detail.poster && !detail.poster.includes("logo-social")) item.poster = detail.poster;
       if (detail.rating != null) item.rating = detail.rating;
       if (detail.vod && detail.vod.length) item.vod = detail.vod.filter((v) => !/^(VOD|více|Koupit|Půjčit)$/i.test(v));
 
