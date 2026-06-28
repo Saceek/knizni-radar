@@ -459,9 +459,10 @@ async function googleCover(q){ try{
   const d=await r.json(); const im=d?.items?.[0]?.volumeInfo?.imageLinks;
   const u=(im?.thumbnail||im?.smallThumbnail||"").replace("http://","https://").replace("&edge=curl",""); return u||null;
 }catch(e){ return null; } }
-let _hydrating=false;
+let _hydrating=false, _hydrateAgain=false;
 async function hydrateCovers(){
-  if(_hydrating) return; _hydrating=true;
+  if(_hydrating){ _hydrateAgain=true; return; }
+  _hydrating=true; _hydrateAgain=false;
   const els=[...document.querySelectorAll('.cover[data-pending]')];
   for(const el of els){
     el.removeAttribute('data-pending');
@@ -471,6 +472,7 @@ async function hydrateCovers(){
     u=await googleCover(t); if(u) await tryImg(el,u);
   }
   _hydrating=false;
+  if(_hydrateAgain) hydrateCovers();
 }
 
 /* ---- přidání do backlogu: vyhledání (Google Books) + ruční zápis ---- */
