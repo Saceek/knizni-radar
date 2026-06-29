@@ -263,14 +263,31 @@ async function saveRemoteBacklog(data){
   const token=getGHToken();
   if(!token) return false;
   try{
-    const getR=await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${BACKLOG_PATH}`,{headers:{Authorization:`Bearer ${token}`}});
+    const apiUrl=`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${BACKLOG_PATH}`;
+    // Always fetch SHA first - required for updating existing files
+    const getR=await fetch(apiUrl+"?t="+Date.now(),{cache:"no-store",headers:{Authorization:`Bearer ${token}`,Accept:"application/vnd.github+json"}});
     let sha=null;
-    if(getR.ok){ const f=await getR.json(); sha=f.sha; }
+    if(getR.ok){
+      const f=await getR.json();
+      sha=f.sha;
+    }
     const body={message:"backlog: sync",content:btoa(unescape(encodeURIComponent(JSON.stringify(data,null,2)))),branch:"main"};
     if(sha) body.sha=sha;
-    const r=await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${BACKLOG_PATH}`,{method:"PUT",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify(body)});
-    if(!r.ok){ const err=await r.json().catch(()=>({})); console.warn("[sync] save failed:",r.status,err.message||""); }
-    return r.ok;
+    const r=await fetch(apiUrl,{method:"PUT",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify(body)});
+    if(!r.ok){
+      const err=await r.json().catch(()=>({}));
+      // SHA conflict - retry with fresh SHA
+      if(r.status===409||r.status===422){
+        const retry=await fetch(apiUrl,{headers:{Authorization:`Bearer ${token}`}});
+        if(retry.ok){ const f2=await retry.json(); body.sha=f2.sha; }
+        const r2=await fetch(apiUrl,{method:"PUT",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify(body)});
+        if(!r2.ok){ console.warn("[sync] retry failed:",r2.status); return false; }
+        return true;
+      }
+      console.warn("[sync] save failed:",r.status,err.message||"");
+      return false;
+    }
+    return true;
   }catch(e){ console.warn("[sync] save error:",e.message); return false; }
 }
 
