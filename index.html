@@ -503,15 +503,16 @@ function comingMovieTile(m){
   return `<div class="tile"><div class="tile-row">${posterInner}<div>
     <p class="tile-title"><a href="${esc(m.url)}" target="_blank" rel="noreferrer">${esc(m.title)}</a></p>
     <p class="tile-sub">${esc(m.country||"")}${m.year?" · "+esc(m.year):""}</p>
-    <div class="tile-meta"><span class="mtype ${typeClass}">${typeClass==="film"?"FILM":"SERIÁL"}</span>${vodHtml}${dateHtml}</div>
+    <div class="tile-meta"><span class="mtype ${typeClass}">${typeClass==="film"?"FILM":"SERIÁL"}</span>${vodHtml}${dateHtml}<button class="bk ${inBacklog(m.title)?'on':''}" data-newsmbk="${esc(m.title)}" style="margin-left:auto">${inBacklog(m.title)?'✓':'+'}</button></div>
   </div></div></div>`;
 }
 function comingGameTile(g){
   const imgHtml = g.image ? `<img class="tile-img" src="${esc(g.image)}" alt="" onerror="this.style.visibility='hidden'" />` : "";
+  const bk=inBacklog(g.title);
   return `<div class="tile">${imgHtml}
     <p class="tile-title"><a href="${esc(g.url||'#')}" target="_blank" rel="noreferrer">${esc(g.title)}</a></p>
     <p class="tile-sub">${esc(g.released||"")}${g.price?" · "+esc(g.price):""}</p>
-    <div class="tile-meta">${(g.genres||[]).slice(0,3).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
+    <div class="tile-meta">${(g.genres||[]).slice(0,3).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}<button class="bk ${bk?'on':''}" data-newsgbk="${esc(g.title)}" style="margin-left:auto">${bk?'✓':'+'}</button></div>
   </div>`;
 }
 function comingBookTile(b){
@@ -795,7 +796,7 @@ function render(){
     function parseCzDate(s){if(!s)return null;const m=s.match(/(\d{1,2})\.\s*(\S+)\.\s*(\d{4})/);if(!m)return null;const mon=Object.entries(CZ_M).find(([k])=>m[2].startsWith(k));return mon?new Date(+m[3],mon[1],+m[1]):null;}
     function parseDate(s){if(!s)return null;const m=s.match(/(\d{1,2})\.(\d{1,2})\.(\d{4})/);if(m)return new Date(+m[3],+m[2]-1,+m[1]);return parseCzDate(s);}
     const tomorrow=new Date(); tomorrow.setHours(0,0,0,0); tomorrow.setDate(tomorrow.getDate()+1);
-    const futureFilter=(arr,max=15)=>(arr||[]).filter(item=>{const d=parseDate(item.premiereDate||item.released);return !d||d>=tomorrow;}).slice(0,max);
+    const futureFilter=(arr,max=15)=>(arr||[]).filter(item=>{const d=parseDate(item.premiereDate||item.released);return !d||d>=tomorrow;}).sort((a,b)=>{const da=parseDate(a.premiereDate||a.released),db=parseDate(b.premiereDate||b.released);if(da&&db)return da-db;if(da)return -1;if(db)return 1;return 0;}).slice(0,max);
     const cFilms=futureFilter(c.films), cSeries=futureFilter(c.series), cGames=futureFilter(c.games), cBooks=c.books||[];
     let html = cst;
     if(cFilms.length){
@@ -1092,8 +1093,12 @@ document.getElementById("view").onclick=e=>{
   const mbk=e.target.dataset.mbk; if(mbk){toggleMovieBacklog(mbk); return;}
   const gbk=e.target.dataset.gbk; if(gbk){toggleGameBacklog(gbk); return;}
   const nbk=e.target.dataset.newsbk; if(nbk){ if(!inBacklog(nbk)){ const item=(S.news?.items||[]).find(i=>i.title===nbk); if(item){S.backlog.push({...item,_category:"book"}); saveBacklogAndSync(S.backlog); render();}} return;}
-  const nmbk=e.target.dataset.newsmbk; if(nmbk){ if(!inBacklog(nmbk)){ const item=(S.news?.items||[]).find(i=>i.title===nmbk); if(item){S.backlog.push({...item,_category:"movie"}); saveBacklogAndSync(S.backlog); render();}} return;}
-  const ngbk=e.target.dataset.newsgbk; if(ngbk){ if(!inBacklog(ngbk)){ const item=(S.news?.items||[]).find(i=>i.title===ngbk); if(item){S.backlog.push({...item,_category:"game"}); saveBacklogAndSync(S.backlog); render();}} return;}
+  const nmbk=e.target.dataset.newsmbk; if(nmbk){ if(!inBacklog(nmbk)){
+    const item=(S.news?.items||[]).find(i=>i.title===nmbk)||(S.coming?.films||[]).find(i=>i.title===nmbk)||(S.coming?.series||[]).find(i=>i.title===nmbk);
+    if(item){S.backlog.push({...item,_category:"movie"}); saveBacklogAndSync(S.backlog); render();}} return;}
+  const ngbk=e.target.dataset.newsgbk; if(ngbk){ if(!inBacklog(ngbk)){
+    const item=(S.news?.items||[]).find(i=>i.title===ngbk)||(S.coming?.games||[]).find(i=>i.title===ngbk);
+    if(item){S.backlog.push({...item,_category:"game"}); saveBacklogAndSync(S.backlog); render();}} return;}
   const gw=e.target.dataset.gwin; if(gw){S.gameWin=+gw; render(); return;}
   const gg=e.target.dataset.ggenre; if(gg){S.gameGenre=gg; render(); return;}
 };
