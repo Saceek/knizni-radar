@@ -449,7 +449,7 @@ function newsBookTile(b){
   return `<div class="tile"><div class="tile-row">${coverInner}<div>
     <p class="tile-title">${b.link?`<a href="${esc(b.link)}" target="_blank" rel="noreferrer">`:""}${esc(b.title)}${b.link?"</a>":""}</p>
     <p class="tile-sub">${esc(b.author||"")}</p>
-    <div class="tile-meta">${rHtml}${price}<button class="bk ${bk?'on':''}" data-bk="${esc(b.title)}" style="margin-left:auto">${bk?'✓':'+'}</button></div>
+    <div class="tile-meta">${rHtml}${price}<button class="bk ${bk?'on':''}" data-newsbk="${esc(b.title)}" style="margin-left:auto">${bk?'✓':'+'}</button></div>
   </div></div></div>`;
 }
 function newsMovieTile(m){
@@ -465,7 +465,7 @@ function newsMovieTile(m){
   return `<div class="tile"><div class="tile-row">${posterInner}<div>
     <p class="tile-title"><a href="${esc(m.url)}" target="_blank" rel="noreferrer">${esc(m.title)}</a></p>
     <p class="tile-sub">${esc(m.country||"")}${m.year?" · "+esc(m.year):""}</p>
-    <div class="tile-meta"><span class="mtype ${typeClass}">${typeClass==="film"?"FILM":"SERIÁL"}</span>${vodHtml}${rHtml}<button class="bk ${bk?'on':''}" data-mbk="${esc(m.title)}" style="margin-left:auto">${bk?'✓':'+'}</button></div>
+    <div class="tile-meta"><span class="mtype ${typeClass}">${typeClass==="film"?"FILM":"SERIÁL"}</span>${vodHtml}${rHtml}<button class="bk ${bk?'on':''}" data-newsmbk="${esc(m.title)}" style="margin-left:auto">${bk?'✓':'+'}</button></div>
   </div></div></div>`;
 }
 function newsGameTile(g){
@@ -475,7 +475,7 @@ function newsGameTile(g){
   return `<div class="tile">${imgHtml}
     <p class="tile-title"><a href="${esc(g.url||'#')}" target="_blank" rel="noreferrer">${esc(g.title)}</a></p>
     <p class="tile-sub">${g.price?esc(g.price):""}</p>
-    <div class="tile-meta">${rHtml}${(g.tags||[]).slice(0,3).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}<button class="bk ${bk?'on':''}" data-gbk="${esc(g.title)}" style="margin-left:auto">${bk?'✓':'+'}</button></div>
+    <div class="tile-meta">${rHtml}${(g.tags||[]).slice(0,3).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}<button class="bk ${bk?'on':''}" data-newsgbk="${esc(g.title)}" style="margin-left:auto">${bk?'✓':'+'}</button></div>
   </div>`;
 }
 
@@ -977,21 +977,39 @@ async function runSearch(){
   (S.games||[]).forEach(g=>{ if(g.name.toLowerCase().includes(ql)) results.push({title:g.name,_category:"game",image:g.image,url:g.url,tags:g.tags,price:g.price,rating:g.rating}); });
   S.addResults=results.slice(0,12);
   updateResults();
-  // Online: Google Books (if few local book results)
-  if(results.filter(r=>r._category==="book").length<3){
+  // Online search if few local results
+  if(results.length<5){
     S.addBusy=true; updateResults();
+    const online=[];
+    // Steam search
+    try{
+      const sr=await fetch(`https://corsproxy.io/?https://store.steampowered.com/api/storesearch/?term=${encodeURIComponent(q)}&l=czech&cc=cz`);
+      if(sr.ok){
+        const sd=await sr.json();
+        (sd.items||[]).slice(0,5).forEach(item=>{
+          if(results.some(r=>r.title===item.name)||online.some(o=>o.title===item.name)) return;
+          let price=item.price?.final!=null?(item.price.final/100).toFixed(2)+"€":null;
+          if(price==="0.00€") price="Zdarma";
+          const img=(item.tiny_image||"").replace("shared.akamai.steamstatic.com","shared.cloudflare.steamstatic.com");
+          online.push({title:item.name,_category:"game",image:img,url:`https://store.steampowered.com/app/${item.id}/`,tags:[],price,rating:item.metascore?+item.metascore:null});
+        });
+      }
+    }catch(e){}
+    // Google Books search
     try{
       const u=`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=5&country=CZ`+gbKey();
       const r=await fetch(u);
       if(r.ok){
         const d=await r.json();
-        const online=(d.items||[]).map(it=>{const v=it.volumeInfo||{};const im=v.imageLinks||{};
+        (d.items||[]).forEach(it=>{const v=it.volumeInfo||{};const im=v.imageLinks||{};
           const cover=(im.thumbnail||im.smallThumbnail||"").replace("http://","https://").replace("&edge=curl","");
-          return {title:v.title||"",author:(v.authors||[]).join(", "),cover:cover||null,_category:"book",cat:["Google Books"]};
-        }).filter(x=>x.title&&!results.some(r=>r.title===x.title));
-        S.addResults=[...results.slice(0,12),...online].slice(0,15);
+          const title=v.title||"";
+          if(title&&!results.some(r=>r.title===title)&&!online.some(o=>o.title===title))
+            online.push({title,author:(v.authors||[]).join(", "),cover:cover||null,_category:"book",cat:["Google Books"]});
+        });
       }
     }catch(e){}
+    S.addResults=[...results.slice(0,12),...online].slice(0,15);
     S.addBusy=false;
     updateResults();
   }
@@ -1071,6 +1089,9 @@ document.getElementById("view").onclick=e=>{
   const mt=e.target.dataset.mtype; if(mt){S.movieType=mt; render(); return;}
   const mbk=e.target.dataset.mbk; if(mbk){toggleMovieBacklog(mbk); return;}
   const gbk=e.target.dataset.gbk; if(gbk){toggleGameBacklog(gbk); return;}
+  const nbk=e.target.dataset.newsbk; if(nbk){ if(!inBacklog(nbk)){ const item=(S.news?.items||[]).find(i=>i.title===nbk); if(item){S.backlog.push({...item,_category:"book"}); saveBacklogAndSync(S.backlog); render();}} return;}
+  const nmbk=e.target.dataset.newsmbk; if(nmbk){ if(!inBacklog(nmbk)){ const item=(S.news?.items||[]).find(i=>i.title===nmbk); if(item){S.backlog.push({...item,_category:"movie"}); saveBacklogAndSync(S.backlog); render();}} return;}
+  const ngbk=e.target.dataset.newsgbk; if(ngbk){ if(!inBacklog(ngbk)){ const item=(S.news?.items||[]).find(i=>i.title===ngbk); if(item){S.backlog.push({...item,_category:"game"}); saveBacklogAndSync(S.backlog); render();}} return;}
   const gw=e.target.dataset.gwin; if(gw){S.gameWin=+gw; render(); return;}
   const gg=e.target.dataset.ggenre; if(gg){S.gameGenre=gg; render(); return;}
 };
