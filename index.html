@@ -284,11 +284,12 @@ async function saveRemoteBacklog(data){
         if(!r2.ok){ console.warn("[sync] retry failed:",r2.status); return false; }
         return true;
       }
-      console.warn("[sync] save failed:",r.status,err.message||"");
+      _syncError=`${r.status}: ${err.message||"unknown"}`;
+      console.warn("[sync] save failed:",_syncError);
       return false;
     }
     return true;
-  }catch(e){ console.warn("[sync] save error:",e.message); return false; }
+  }catch(e){ _syncError=e.message; console.warn("[sync] save error:",e.message); return false; }
 }
 
 async function syncBacklog(){
@@ -306,10 +307,11 @@ async function syncBacklog(){
   render();
 }
 
+let _syncError="";
 async function saveBacklogAndSync(a){
   saveBacklog(a);
   if(getGHToken()){
-    _syncStatus="syncing"; render();
+    _syncStatus="syncing"; _syncError=""; render();
     const ok=await saveRemoteBacklog(a);
     _syncStatus=ok?"ok":"err";
     render();
@@ -725,6 +727,10 @@ function render(){
      <button class="tab ${S.view==='movies'?'on':''}" data-view="movies">Filmy a Seriály</button>
      <button class="tab ${S.view==='steam'?'on':''}" data-view="steam">Steam</button>
      <button class="tab ${S.view==='backlog'?'on':''}" data-view="backlog">Backlog (${S.backlog.length})<span class="sync-badge ${_syncStatus==='ok'?'ok':_syncStatus==='err'?'err':'off'}">${_syncStatus==='ok'?'☁':_syncStatus==='syncing'?'…':_syncStatus==='err'?'!':'local'}</span></button>`;
+
+  if(_syncError && _syncStatus==='err'){
+    document.getElementById("status").innerHTML=`<div class="note warn">Sync chyba: ${esc(_syncError)}</div>`;
+  }
 
   let st="";
   if(S.view==="list"){
