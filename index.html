@@ -271,7 +271,7 @@ async function saveRemoteBacklog(data){
       const f=await getR.json();
       sha=f.sha;
     }
-    const body={message:"backlog: sync",content:btoa(unescape(encodeURIComponent(JSON.stringify(data,null,2)))),branch:"main"};
+    const body={message:"backlog: sync",content:(() => { const bytes = new TextEncoder().encode(JSON.stringify(data,null,2)); let s = ""; for(let i=0;i<bytes.length;i++) s+=String.fromCharCode(bytes[i]); return btoa(s); })(),branch:"main"};
     if(sha) body.sha=sha;
     const r=await fetch(apiUrl,{method:"PUT",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify(body)});
     if(!r.ok){
