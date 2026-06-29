@@ -265,25 +265,16 @@ async function saveRemoteBacklog(data){
 async function syncBacklog(){
   _syncStatus="syncing"; render();
   const remote=await loadRemoteBacklog();
-  const local=loadBacklog();
   if(remote){
-    const merged=mergeBacklogs(local,remote);
-    saveBacklog(merged); S.backlog=merged;
-    if(getGHToken() && merged.length!==remote.length){
-      const ok=await saveRemoteBacklog(merged);
-      _syncStatus=ok?"ok":"err";
-    } else { _syncStatus="ok"; }
-  } else if(getGHToken()){
-    const ok=await saveRemoteBacklog(local);
-    _syncStatus=ok?"ok":"err";
-  } else { _syncStatus="off"; }
+    // Always use remote as source of truth on load
+    saveBacklog(remote); S.backlog=remote;
+    _syncStatus=getGHToken()?"ok":"ok";
+  } else {
+    // No remote: use local
+    S.backlog=loadBacklog();
+    _syncStatus=getGHToken()?"ok":"off";
+  }
   render();
-}
-
-function mergeBacklogs(a,b){
-  const map=new Map();
-  [...b,...a].forEach(item=>{ if(item.title) map.set(item.title,item); });
-  return [...map.values()];
 }
 
 async function saveBacklogAndSync(a){
@@ -364,6 +355,7 @@ const ratingClass = r => r>=80?"r-high":r>=40?"r-mid":"r-low";
 const vPrices = b => (b.prices||[]).filter(p=>p&&p.price);
 const minPrice = b => {const v=vPrices(b); return v.length?Math.min(...v.map(p=>p.price)):Infinity;};
 const inBacklog = t => S.backlog.some(b=>b.title===t);
+const backlogByCategory = cat => S.backlog.filter(b=>(b._category||"book")===cat);
 
 async function load(){
   S.status="loading"; render();
@@ -538,6 +530,7 @@ function movieCard(m,i){
   const vodClass = v => {const k=v.toLowerCase().replace(/[^a-z]/g,''); return k.includes('netflix')?'vod-netflix':k.includes('disney')?'vod-disney':k.includes('prime')?'vod-prime':k.includes('sledovani')?'vod-sledovanitv':k.includes('hbo')||k==='max'?'vod-hbo':k.includes('apple')?'vod-apple':k==='kino'?'vod-kino':'';};
   const vodHtml = (m.vod||[]).map(v=>`<span class="mvod ${vodClass(v)}">${esc(v)}</span>`).join("");
   const genreHtml = (m.genres||[]).map(g=>`<span class="tag">${esc(g)}</span>`).join("");
+  const mbk=inBacklog(m.title);
   return `<div class="card">
     <div><div class="rank">#${i+1}</div>
       <a href="${esc(m.url)}" target="_blank" rel="noreferrer">${posterHtml}</a></div>
@@ -548,6 +541,7 @@ function movieCard(m,i){
       </div>
       <div style="text-align:right">${rHtml}</div></div>
       <div class="meta"><span class="mtype ${typeClass}">${esc(m.type)}</span>${vodHtml}${genreHtml}</div>
+      <div class="actions"><button class="bk ${mbk?'on':''}" data-mbk="${esc(m.title)}">${mbk?'✓ V backlogu':'+ Backlog'}</button></div>
     </div>
   </div>`;
 }
@@ -584,6 +578,7 @@ function gameCard(g){
         ${g.price?`<div class="gprice">${esc(g.price)}</div>`:""}
       </div></div>
       <div class="meta">${(g.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
+      <div class="actions"><button class="bk ${inBacklog(g.name)?'on':''}" data-gbk="${esc(g.name)}">${inBacklog(g.name)?'✓ V backlogu':'+ Backlog'}</button></div>
     </div>
   </div>`;
 }
@@ -647,9 +642,45 @@ function backlogCard(b){
       <div class="meta">${ratingHtml(b)}</div>
       <div class="actions">
         <button class="link" data-more="${esc(b.title)}">${open?"Méně ▲":"Detail & ceny ▼"}</button>
-        <button class="bk rm" data-rm="${esc(b.title)}">✕ Odebrat z backlogu</button>
+        <button class="bk rm" data-rm="${esc(b.title)}">✕ Odebrat</button>
       </div>
       ${open?detailHtml(b):""}
+    </div>
+  </div>`;
+}
+function backlogMovieCard(m){
+  const vodCls = v => {const k=v.toLowerCase().replace(/[^a-z]/g,''); return k.includes('netflix')?'vod-netflix':k.includes('disney')?'vod-disney':k.includes('prime')?'vod-prime':k.includes('sledovani')?'vod-sledovanitv':k.includes('hbo')||k==='max'?'vod-hbo':k.includes('apple')?'vod-apple':k==='kino'?'vod-kino':'';};
+  const posterHtml = m.poster
+    ? `<img class="mposter" src="${esc(m.poster)}" alt="" onerror="this.style.visibility='hidden'" />`
+    : `<div class="mposter" style="background:${grad(m.title)};display:flex;flex-direction:column;justify-content:flex-end;padding:6px"><span style="font-size:10px;font-weight:700;color:#fff;line-height:1.1">${esc(m.title)}</span></div>`;
+  const rHtml = m.rating!=null ? `<span class="rating ${ratingClass(m.rating)}">${m.rating} %</span>` : '';
+  const typeClass = m.type==="film"?"film":"serial";
+  const vodHtml = (m.vod||[]).map(v=>`<span class="mvod ${vodCls(v)}">${esc(v)}</span>`).join("");
+  const genreHtml = (m.genres||[]).map(g=>`<span class="tag">${esc(g)}</span>`).join("");
+  return `<div class="card">
+    <div><a href="${esc(m.url)}" target="_blank" rel="noreferrer">${posterHtml}</a></div>
+    <div class="body">
+      <div class="row"><div style="min-width:0">
+        <p class="title"><a href="${esc(m.url)}" target="_blank" rel="noreferrer">${esc(m.title)}</a></p>
+        <p class="muted">${esc(m.country||"")}${m.year?" · "+esc(m.year):""}</p>
+      </div><div style="text-align:right">${rHtml}</div></div>
+      <div class="meta"><span class="mtype ${typeClass}">${esc(m.type||"film")}</span>${vodHtml}${genreHtml}</div>
+      <div class="actions"><button class="bk rm" data-rm="${esc(m.title)}">✕ Odebrat</button></div>
+    </div>
+  </div>`;
+}
+function backlogGameCard(g){
+  const imgHtml = g.image ? `<img class="gimg" src="${esc(g.image)}" alt="" onerror="this.style.visibility='hidden'" />` : "";
+  const rHtml = g.rating ? `<span class="rating ${ratingClass(g.rating)}" title="${esc(g.scoreDesc||'Steam')}">${g.rating} %</span>` : "";
+  return `<div class="card">
+    ${imgHtml?`<a href="${esc(g.url||'#')}" target="_blank" rel="noreferrer">${imgHtml}</a>`:""}
+    <div class="body">
+      <div class="row"><div style="min-width:0">
+        <p class="title"><a href="${esc(g.url||'#')}" target="_blank" rel="noreferrer">${esc(g.title)}</a></p>
+        <p class="muted">${g.price?esc(g.price):""}</p>
+      </div><div style="text-align:right">${rHtml}</div></div>
+      <div class="meta">${(g.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
+      <div class="actions"><button class="bk rm" data-rm="${esc(g.title)}">✕ Odebrat</button></div>
     </div>
   </div>`;
 }
@@ -776,10 +807,25 @@ function render(){
       + (items.length?items.map(gameCard).join(""):'<div class="empty">Žádná hra v tomto období a žánru.</div>');
     const gs=document.getElementById("gsort"); if(gs) gs.onchange=e=>{S.gameSort=e.target.value; render();};
   } else if(S.view==="backlog"){
-    const list = S.backlog.length
-      ? S.backlog.map(b=>backlogCard(b)).join("")
-      : '<div class="empty" style="padding:24px 16px">Backlog je prázdný.<br>Přidej knihu níže, nebo u titulů v žebříčku klikni na <b>+ Backlog</b>.</div>';
-    view.innerHTML = addPanelHtml() + list;
+    const books=backlogByCategory("book"), movies=S.backlog.filter(b=>(b._category||"book")==="movie"), games=backlogByCategory("game");
+    let html = addPanelHtml();
+    if(!S.backlog.length){
+      html += '<div class="empty" style="padding:24px 16px">Backlog je prázdný.<br>Přidej položku u titulů v žebříčku kliknutím na <b>+ Backlog</b>.</div>';
+    } else {
+      if(books.length){
+        html += `<div class="news-section">Knihy <span class="badge">${books.length}</span></div>`;
+        html += books.map(b=>backlogCard(b)).join("");
+      }
+      if(movies.length){
+        html += `<div class="news-section">Filmy a Seriály <span class="badge">${movies.length}</span></div>`;
+        html += movies.map(b=>backlogMovieCard(b)).join("");
+      }
+      if(games.length){
+        html += `<div class="news-section">Hry <span class="badge">${games.length}</span></div>`;
+        html += games.map(b=>backlogGameCard(b)).join("");
+      }
+    }
+    view.innerHTML = html;
     mountAddPanel();
   } else {
     const chips = ["Vše",...filterChips()].map(c=>`<button class="chip ${S.filter===c?'on':''}" data-filter="${esc(c)}">${esc(c)}</button>`).join("");
@@ -946,9 +992,13 @@ function mountAddPanel(){
   }
 }
 
-function addBacklog(t){ const b=S.books.find(x=>x.title===t); if(b && !inBacklog(t)){ S.backlog.push(b); saveBacklogAndSync(S.backlog); render(); } }
+function addBacklog(t){ const b=S.books.find(x=>x.title===t); if(b && !inBacklog(t)){ S.backlog.push({...b,_category:"book"}); saveBacklogAndSync(S.backlog); render(); } }
+function addMovieBacklog(t){ const m=S.movies.find(x=>x.title===t); if(m && !inBacklog(t)){ S.backlog.push({...m,_category:"movie"}); saveBacklogAndSync(S.backlog); render(); } }
+function addGameBacklog(t){ const g=S.games.find(x=>x.name===t); if(g && !inBacklog(g.name)){ S.backlog.push({title:g.name,_category:"game",rating:g.rating,reviews:g.reviews,scoreDesc:g.scoreDesc,image:g.image,url:g.url,tags:g.tags,price:g.price,released:g.released}); saveBacklogAndSync(S.backlog); render(); } }
 function removeBacklog(t){ S.backlog=S.backlog.filter(x=>x.title!==t); saveBacklogAndSync(S.backlog); render(); }
 function toggleBacklog(t){ inBacklog(t)?removeBacklog(t):addBacklog(t); }
+function toggleMovieBacklog(t){ inBacklog(t)?removeBacklog(t):addMovieBacklog(t); }
+function toggleGameBacklog(t){ inBacklog(t)?removeBacklog(t):addGameBacklog(t); }
 
 document.getElementById("sync-btn").onclick=showSyncSettings;
 document.getElementById("refresh").onclick=()=>{ S.view==="steam" ? loadGames() : S.view==="movies" ? loadMovies() : S.view==="news" ? loadNews() : S.view==="coming" ? loadComing() : load(); };
@@ -966,6 +1016,8 @@ document.getElementById("view").onclick=e=>{
   const bk=e.target.dataset.bk; if(bk){toggleBacklog(bk); return;}
   const rm=e.target.dataset.rm; if(rm){removeBacklog(rm); return;}
   const mt=e.target.dataset.mtype; if(mt){S.movieType=mt; render(); return;}
+  const mbk=e.target.dataset.mbk; if(mbk){toggleMovieBacklog(mbk); return;}
+  const gbk=e.target.dataset.gbk; if(gbk){toggleGameBacklog(gbk); return;}
   const gw=e.target.dataset.gwin; if(gw){S.gameWin=+gw; render(); return;}
   const gg=e.target.dataset.ggenre; if(gg){S.gameGenre=gg; render(); return;}
 };
