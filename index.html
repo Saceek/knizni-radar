@@ -239,9 +239,25 @@ let _syncStatus = "off"; // off | ok | err | syncing
 function getGistToken(){ return localStorage.getItem(LS_TOKEN)||""; }
 function getGistId(){ return localStorage.getItem(LS_GIST_ID)||""; }
 
+async function gistFindId(token){
+  try{
+    const r=await fetch("https://api.github.com/gists?per_page=100",{headers:{Authorization:`Bearer ${token}`}});
+    if(!r.ok) return null;
+    const gists=await r.json();
+    const found=gists.find(g=>g.files&&g.files[GIST_FILE]);
+    return found?found.id:null;
+  }catch(e){ return null; }
+}
+
 async function gistLoad(){
-  const token=getGistToken(), gistId=getGistId();
-  if(!token||!gistId) return null;
+  const token=getGistToken();
+  if(!token) return null;
+  let gistId=getGistId();
+  if(!gistId){
+    gistId=await gistFindId(token);
+    if(gistId) localStorage.setItem(LS_GIST_ID,gistId);
+    else return null;
+  }
   try{
     const r=await fetch(`https://api.github.com/gists/${gistId}`,{headers:{Authorization:`Bearer ${token}`}});
     if(!r.ok) throw new Error("HTTP "+r.status);
@@ -315,11 +331,10 @@ function showSyncSettings(){
   div.className="modal-overlay";
   div.innerHTML=`<div class="modal">
     <h2>Sync nastavení</h2>
-    <p style="font-size:13px;color:var(--sub);margin:0 0 8px">Backlog se uloží do privátního GitHub Gistu. Přístupný z jakéhokoliv prohlížeče.</p>
+    <p style="font-size:13px;color:var(--sub);margin:0 0 8px">Backlog se uloží do privátního GitHub Gistu. Stačí zadat token — Gist se najde nebo vytvoří automaticky.</p>
     <label>GitHub Personal Access Token (scope: gist)</label>
     <input id="sync-token" type="password" placeholder="ghp_xxxxxxxxxxxx" value="${esc(token)}" />
-    <label>Gist ID (vyplní se automaticky)</label>
-    <input id="sync-gistid" value="${esc(gistId)}" placeholder="automaticky při prvním uložení" />
+    <input id="sync-gistid" type="hidden" value="${esc(gistId)}" />
     <div class="mrow">
       <button class="addbtn" id="sync-save">Uložit a synchronizovat</button>
       <button class="btn" id="sync-close">Zavřít</button>
