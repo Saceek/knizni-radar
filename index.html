@@ -231,78 +231,52 @@ const DEMO = [
 ];
 
 let mem = null;
-const GIST_FILE = "sackov-radar-backlog.json";
-const LS_TOKEN = "knizniRadarGistToken";
-const LS_GIST_ID = "knizniRadarGistId";
-let _syncStatus = "off"; // off | ok | err | syncing
+const LS_TOKEN = "knizniRadarGHToken";
+const REPO_OWNER = "Saceek";
+const REPO_NAME = "knizni-radar";
+const BACKLOG_PATH = "backlog.json";
+let _syncStatus = "off";
 
-function getGistToken(){ return localStorage.getItem(LS_TOKEN)||""; }
-function getGistId(){ return localStorage.getItem(LS_GIST_ID)||""; }
+function getGHToken(){ return localStorage.getItem(LS_TOKEN)||""; }
 
-async function gistFindId(token){
+async function loadRemoteBacklog(){
   try{
-    const r=await fetch("https://api.github.com/gists?per_page=100",{headers:{Authorization:`Bearer ${token}`}});
+    const r=await fetch(BACKLOG_PATH+"?t="+Date.now(),{cache:"no-store"});
     if(!r.ok) return null;
-    const gists=await r.json();
-    const found=gists.find(g=>g.files&&g.files[GIST_FILE]);
-    return found?found.id:null;
+    const d=await r.json();
+    return Array.isArray(d)?d:null;
   }catch(e){ return null; }
 }
 
-async function gistLoad(){
-  const token=getGistToken();
-  if(!token) return null;
-  let gistId=getGistId();
-  if(!gistId){
-    gistId=await gistFindId(token);
-    if(gistId) localStorage.setItem(LS_GIST_ID,gistId);
-    else return null;
-  }
-  try{
-    const r=await fetch(`https://api.github.com/gists/${gistId}`,{headers:{Authorization:`Bearer ${token}`}});
-    if(!r.ok) throw new Error("HTTP "+r.status);
-    const d=await r.json();
-    const content=d.files?.[GIST_FILE]?.content;
-    if(!content) return null;
-    return JSON.parse(content);
-  }catch(e){ console.warn("[gist] load error:",e.message); return null; }
-}
-
-async function gistSave(data){
-  const token=getGistToken(); let gistId=getGistId();
+async function saveRemoteBacklog(data){
+  const token=getGHToken();
   if(!token) return false;
-  const body={files:{[GIST_FILE]:{content:JSON.stringify(data,null,2)}}};
   try{
-    if(!gistId){
-      const r=await fetch("https://api.github.com/gists",{method:"POST",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify({description:"Sáčkův radar – backlog",public:false,...body})});
-      if(!r.ok) throw new Error("HTTP "+r.status);
-      const d=await r.json();
-      gistId=d.id;
-      localStorage.setItem(LS_GIST_ID,gistId);
-    } else {
-      const r=await fetch(`https://api.github.com/gists/${gistId}`,{method:"PATCH",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify(body)});
-      if(!r.ok) throw new Error("HTTP "+r.status);
-    }
-    return true;
-  }catch(e){ console.warn("[gist] save error:",e.message); return false; }
+    const getR=await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${BACKLOG_PATH}`,{headers:{Authorization:`Bearer ${token}`}});
+    let sha=null;
+    if(getR.ok){ const f=await getR.json(); sha=f.sha; }
+    const body={message:"backlog: sync",content:btoa(unescape(encodeURIComponent(JSON.stringify(data,null,2)))),branch:"main"};
+    if(sha) body.sha=sha;
+    const r=await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${BACKLOG_PATH}`,{method:"PUT",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify(body)});
+    return r.ok;
+  }catch(e){ console.warn("[sync] save error:",e.message); return false; }
 }
 
 async function syncBacklog(){
-  const token=getGistToken();
-  if(!token){ _syncStatus="off"; return; }
   _syncStatus="syncing"; render();
-  const remote=await gistLoad();
-  if(remote && Array.isArray(remote)){
-    const local=loadBacklog();
+  const remote=await loadRemoteBacklog();
+  const local=loadBacklog();
+  if(remote){
     const merged=mergeBacklogs(local,remote);
-    saveBacklog(merged);
-    S.backlog=merged;
-    if(merged.length!==remote.length) await gistSave(merged);
-    _syncStatus="ok";
-  } else {
-    const ok=await gistSave(S.backlog);
+    saveBacklog(merged); S.backlog=merged;
+    if(getGHToken() && merged.length!==remote.length){
+      const ok=await saveRemoteBacklog(merged);
+      _syncStatus=ok?"ok":"err";
+    } else { _syncStatus="ok"; }
+  } else if(getGHToken()){
+    const ok=await saveRemoteBacklog(local);
     _syncStatus=ok?"ok":"err";
-  }
+  } else { _syncStatus="off"; }
   render();
 }
 
@@ -314,9 +288,9 @@ function mergeBacklogs(a,b){
 
 async function saveBacklogAndSync(a){
   saveBacklog(a);
-  if(getGistToken()){
+  if(getGHToken()){
     _syncStatus="syncing"; render();
-    const ok=await gistSave(a);
+    const ok=await saveRemoteBacklog(a);
     _syncStatus=ok?"ok":"err";
     render();
   }
@@ -325,16 +299,15 @@ async function saveBacklogAndSync(a){
 function showSyncSettings(){
   const existing=document.getElementById("sync-modal");
   if(existing){ existing.remove(); return; }
-  const token=getGistToken(), gistId=getGistId();
+  const token=getGHToken();
   const div=document.createElement("div");
   div.id="sync-modal";
   div.className="modal-overlay";
   div.innerHTML=`<div class="modal">
     <h2>Sync nastavení</h2>
-    <p style="font-size:13px;color:var(--sub);margin:0 0 8px">Backlog se uloží do privátního GitHub Gistu. Stačí zadat token — Gist se najde nebo vytvoří automaticky.</p>
-    <label>GitHub Personal Access Token (scope: gist)</label>
+    <p style="font-size:13px;color:var(--sub);margin:0 0 8px">Backlog se uloží do <b>backlog.json</b> přímo v repozitáři. Čtení funguje odkudkoliv, pro zápis zadej GitHub token.</p>
+    <label>GitHub Personal Access Token (scope: repo nebo contents:write)</label>
     <input id="sync-token" type="password" placeholder="ghp_xxxxxxxxxxxx" value="${esc(token)}" />
-    <input id="sync-gistid" type="hidden" value="${esc(gistId)}" />
     <div class="mrow">
       <button class="addbtn" id="sync-save">Uložit a synchronizovat</button>
       <button class="btn" id="sync-close">Zavřít</button>
@@ -345,17 +318,14 @@ function showSyncSettings(){
   div.querySelector("#sync-close").onclick=()=>div.remove();
   div.querySelector("#sync-save").onclick=async()=>{
     const t=document.getElementById("sync-token").value.trim();
-    const g=document.getElementById("sync-gistid").value.trim();
     if(!t){ alert("Zadej GitHub token"); return; }
     localStorage.setItem(LS_TOKEN,t);
-    if(g) localStorage.setItem(LS_GIST_ID,g);
     div.remove();
     await syncBacklog();
   };
   const disc=div.querySelector("#sync-disconnect");
   if(disc) disc.onclick=()=>{
     localStorage.removeItem(LS_TOKEN);
-    localStorage.removeItem(LS_GIST_ID);
     _syncStatus="off";
     div.remove();
     render();
@@ -1001,7 +971,7 @@ document.getElementById("view").onclick=e=>{
 };
 
 loadNews();
-if(getGistToken()) syncBacklog();
+syncBacklog();
 </script>
 </body>
 </html>
