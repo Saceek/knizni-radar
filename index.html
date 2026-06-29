@@ -124,7 +124,7 @@
   .gimg{width:184px;height:86px;border-radius:11px;object-fit:cover;flex:none;background:var(--chip);box-shadow:0 8px 20px rgba(0,0,0,.5)}
   .gprice{font-family:var(--mono);font-size:14px;font-weight:600;color:var(--emerald);margin-top:6px}
   .gprice-orig{font-family:var(--mono);font-size:12px;color:var(--sub);text-decoration:line-through;margin-top:4px}
-  .gdiscount{font-family:var(--mono);font-size:11px;font-weight:700;color:#fff;background:var(--emerald);border-radius:4px;padding:1px 5px;margin-left:4px}
+  .gdiscount{font-family:var(--mono);font-size:11px;font-weight:700;color:#0a0a0a;background:var(--emerald);border-radius:4px;padding:1px 5px;margin-left:4px}
   .mposter{width:64px;height:96px;border-radius:8px;object-fit:cover;flex:none;background:var(--chip);box-shadow:0 8px 20px rgba(0,0,0,.5)}
   .mvod{font-size:11px;padding:3px 9px;border-radius:999px;background:rgba(139,125,255,.15);color:var(--violet);border:1px solid rgba(139,125,255,.3)}
   .mvod.vod-kino{background:rgba(251,191,36,.12);color:#fbbf24;border-color:rgba(251,191,36,.3)}
@@ -795,7 +795,7 @@ function render(){
     function parseCzDate(s){if(!s)return null;const m=s.match(/(\d{1,2})\.\s*(\S+)\.\s*(\d{4})/);if(!m)return null;const mon=Object.entries(CZ_M).find(([k])=>m[2].startsWith(k));return mon?new Date(+m[3],mon[1],+m[1]):null;}
     function parseDate(s){if(!s)return null;const m=s.match(/(\d{1,2})\.(\d{1,2})\.(\d{4})/);if(m)return new Date(+m[3],+m[2]-1,+m[1]);return parseCzDate(s);}
     const tomorrow=new Date(); tomorrow.setHours(0,0,0,0); tomorrow.setDate(tomorrow.getDate()+1);
-    const futureFilter=arr=>(arr||[]).filter(item=>{const d=parseDate(item.premiereDate||item.released);return !d||d>=tomorrow;});
+    const futureFilter=(arr,max=15)=>(arr||[]).filter(item=>{const d=parseDate(item.premiereDate||item.released);return !d||d>=tomorrow;}).slice(0,max);
     const cFilms=futureFilter(c.films), cSeries=futureFilter(c.series), cGames=futureFilter(c.games), cBooks=c.books||[];
     let html = cst;
     if(cFilms.length){

@@ -328,7 +328,7 @@ async function main() {
       if (da) return -1;
       if (db) return 1;
       return 0;
-    }).slice(0, 15).map((g) => ({
+    }).slice(0, 30).map((g) => ({
       title: g.name, released: g.released, image: g.image || null,
       url: g.url, genres: g.genres || [], price: g.price || null,
     })),
