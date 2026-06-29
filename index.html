@@ -203,7 +203,6 @@ window.addEventListener('resize',snapTetris);
       <div><h1>Sáčkův radar</h1><p class="muted">knihy · hry · filmy a seriály</p></div>
     </div>
     <div style="display:flex;gap:8px">
-      <button class="btn" id="refresh">⟳ Aktualizovat</button>
       <button class="btn" id="sync-btn">☁ Sync</button>
       <button class="btn" id="theme">🌞</button>
     </div>
@@ -1075,7 +1074,6 @@ function toggleMovieBacklog(t){ inBacklog(t)?removeBacklog(t):addMovieBacklog(t)
 function toggleGameBacklog(t){ inBacklog(t)?removeBacklog(t):addGameBacklog(t); }
 
 document.getElementById("sync-btn").onclick=showSyncSettings;
-document.getElementById("refresh").onclick=()=>{ S.view==="steam" ? loadGames() : S.view==="movies" ? loadMovies() : S.view==="news" ? loadNews() : S.view==="coming" ? loadComing() : load(); };
 document.getElementById("theme").onclick=()=>{S.dark=!S.dark; render();};
 document.getElementById("nav").onclick=e=>{const v=e.target.dataset.view; if(v){S.view=v; S.expanded=null;
   if(v==="steam" && S.gamesStatus==="idle"){ loadGames(); }
