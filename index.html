@@ -315,6 +315,7 @@ async function saveBacklogAndSync(a){
     _syncStatus="syncing"; _syncError=""; render();
     const ok=await saveRemoteBacklog(a);
     _syncStatus=ok?"ok":"err";
+    if(!ok) alert("Sync chyba: "+(_syncError||"neznámá chyba"));
     render();
   }
 }
