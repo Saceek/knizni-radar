@@ -265,27 +265,28 @@ async function saveRemoteBacklog(data){
   try{
     const apiUrl=`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${BACKLOG_PATH}`;
     // Always fetch SHA first - required for updating existing files
+    // Step 1: Get SHA
     const getR=await fetch(apiUrl+"?t="+Date.now(),{cache:"no-store",headers:{Authorization:`Bearer ${token}`,Accept:"application/vnd.github+json"}});
     let sha=null;
     if(getR.ok){
       const f=await getR.json();
       sha=f.sha;
+      if(!sha){ _syncError="SHA prázdné - neočekávaná odpověď API"; return false; }
+    } else {
+      if(getR.status!==404){ _syncError=`Čtení SHA selhalo: ${getR.status}`; return false; }
     }
-    const body={message:"backlog: sync",content:(() => { const bytes = new TextEncoder().encode(JSON.stringify(data,null,2)); let s = ""; for(let i=0;i<bytes.length;i++) s+=String.fromCharCode(bytes[i]); return btoa(s); })(),branch:"main"};
+    // Step 2: Encode content
+    const jsonStr=JSON.stringify(data,null,2);
+    const bytes=new TextEncoder().encode(jsonStr);
+    let binStr=""; for(let i=0;i<bytes.length;i++) binStr+=String.fromCharCode(bytes[i]);
+    const content=btoa(binStr);
+    // Step 3: PUT
+    const body={message:"backlog: sync",content,branch:"main"};
     if(sha) body.sha=sha;
     const r=await fetch(apiUrl,{method:"PUT",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify(body)});
     if(!r.ok){
       const err=await r.json().catch(()=>({}));
-      // SHA conflict - retry with fresh SHA
-      if(r.status===409||r.status===422){
-        const retry=await fetch(apiUrl,{headers:{Authorization:`Bearer ${token}`}});
-        if(retry.ok){ const f2=await retry.json(); body.sha=f2.sha; }
-        const r2=await fetch(apiUrl,{method:"PUT",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify(body)});
-        if(!r2.ok){ console.warn("[sync] retry failed:",r2.status); return false; }
-        return true;
-      }
-      _syncError=`${r.status}: ${err.message||"unknown"}`;
-      console.warn("[sync] save failed:",_syncError);
+      _syncError=`Zápis selhal: ${r.status} - ${err.message||"neznámá chyba"}`;
       return false;
     }
     return true;
