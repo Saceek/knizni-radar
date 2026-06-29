@@ -790,24 +790,31 @@ function render(){
     else if(S.comingStatus==="empty") cst='<div class="note warn">coming.json se nepodařilo načíst – spusť build-coming.js.</div>';
 
     const c = S.coming || {};
+    // Client-side filter: hide items with release date in the past
+    const CZ_M={led:0,úno:1,bře:2,dub:3,kvě:4,čvn:5,čvc:6,srp:7,zář:8,říj:9,lis:10,pro:11};
+    function parseCzDate(s){if(!s)return null;const m=s.match(/(\d{1,2})\.\s*(\S+)\.\s*(\d{4})/);if(!m)return null;const mon=Object.entries(CZ_M).find(([k])=>m[2].startsWith(k));return mon?new Date(+m[3],mon[1],+m[1]):null;}
+    function parseDate(s){if(!s)return null;const m=s.match(/(\d{1,2})\.(\d{1,2})\.(\d{4})/);if(m)return new Date(+m[3],+m[2]-1,+m[1]);return parseCzDate(s);}
+    const tomorrow=new Date(); tomorrow.setHours(0,0,0,0); tomorrow.setDate(tomorrow.getDate()+1);
+    const futureFilter=arr=>(arr||[]).filter(item=>{const d=parseDate(item.premiereDate||item.released);return !d||d>=tomorrow;});
+    const cFilms=futureFilter(c.films), cSeries=futureFilter(c.series), cGames=futureFilter(c.games), cBooks=c.books||[];
     let html = cst;
-    if(c.films?.length){
-      html += `<div class="news-section">Očekávané filmy <span class="badge">${c.films.length}</span></div>`;
-      html += `<div class="tiles">${c.films.map(comingMovieTile).join("")}</div>`;
+    if(cFilms.length){
+      html += `<div class="news-section">Očekávané filmy <span class="badge">${cFilms.length}</span></div>`;
+      html += `<div class="tiles">${cFilms.map(comingMovieTile).join("")}</div>`;
     }
-    if(c.series?.length){
-      html += `<div class="news-section">Očekávané seriály <span class="badge">${c.series.length}</span></div>`;
-      html += `<div class="tiles">${c.series.map(comingMovieTile).join("")}</div>`;
+    if(cSeries.length){
+      html += `<div class="news-section">Očekávané seriály <span class="badge">${cSeries.length}</span></div>`;
+      html += `<div class="tiles">${cSeries.map(comingMovieTile).join("")}</div>`;
     }
-    if(c.games?.length){
-      html += `<div class="news-section">Očekávané hry <span class="badge">${c.games.length}</span></div>`;
-      html += `<div class="tiles">${c.games.map(comingGameTile).join("")}</div>`;
+    if(cGames.length){
+      html += `<div class="news-section">Očekávané hry <span class="badge">${cGames.length}</span></div>`;
+      html += `<div class="tiles">${cGames.map(comingGameTile).join("")}</div>`;
     }
-    if(c.books?.length){
-      html += `<div class="news-section">Předobjednávky knih <span class="badge">${c.books.length}</span></div>`;
-      html += `<div class="tiles">${c.books.map(comingBookTile).join("")}</div>`;
+    if(cBooks.length){
+      html += `<div class="news-section">Předobjednávky knih <span class="badge">${cBooks.length}</span></div>`;
+      html += `<div class="tiles">${cBooks.map(comingBookTile).join("")}</div>`;
     }
-    if(!c.films?.length && !c.series?.length && !c.games?.length && !c.books?.length && S.comingStatus==="live"){
+    if(!cFilms.length && !cSeries.length && !cGames.length && !cBooks.length && S.comingStatus==="live"){
       html += '<div class="news-empty">Žádné očekávané tituly.</div>';
     }
     view.innerHTML = html;
