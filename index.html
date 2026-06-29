@@ -123,6 +123,8 @@
   .empty{text-align:center;color:var(--sub);padding:54px 16px 40px;line-height:1.6}
   .gimg{width:184px;height:86px;border-radius:11px;object-fit:cover;flex:none;background:var(--chip);box-shadow:0 8px 20px rgba(0,0,0,.5)}
   .gprice{font-family:var(--mono);font-size:14px;font-weight:600;color:var(--emerald);margin-top:6px}
+  .gprice-orig{font-family:var(--mono);font-size:12px;color:var(--sub);text-decoration:line-through;margin-top:4px}
+  .gdiscount{font-family:var(--mono);font-size:11px;font-weight:700;color:#fff;background:var(--emerald);border-radius:4px;padding:1px 5px;margin-left:4px}
   .mposter{width:64px;height:96px;border-radius:8px;object-fit:cover;flex:none;background:var(--chip);box-shadow:0 8px 20px rgba(0,0,0,.5)}
   .mvod{font-size:11px;padding:3px 9px;border-radius:999px;background:rgba(139,125,255,.15);color:var(--violet);border:1px solid rgba(139,125,255,.3)}
   .mvod.vod-kino{background:rgba(251,191,36,.12);color:#fbbf24;border-color:rgba(251,191,36,.3)}
@@ -610,7 +612,8 @@ function gameCard(g){
       </div>
       <div style="text-align:right;white-space:nowrap">
         <span class="rating ${ratingClass(g.rating)}" title="${esc(g.scoreDesc||'Steam')}">${g.rating} %</span>
-        ${g.price?`<div class="gprice">${esc(g.price)}</div>`:""}
+        ${g.discount?`<div class="gprice-orig">${esc(g.priceOriginal||"")}</div>`:""}
+        ${g.price?`<div class="gprice">${esc(g.price)}${g.discount?`<span class="gdiscount">-${g.discount}%</span>`:""}</div>`:""}
       </div></div>
       <div class="meta">${(g.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
       <div class="actions"><button class="bk ${inBacklog(g.name)?'on':''}" data-gbk="${esc(g.name)}">${inBacklog(g.name)?'✓ V backlogu':'+ Backlog'}</button></div>
@@ -712,7 +715,7 @@ function backlogGameCard(g){
     <div class="body">
       <div class="row"><div style="min-width:0">
         <p class="title"><a href="${esc(g.url||'#')}" target="_blank" rel="noreferrer">${esc(g.title)}</a></p>
-        <p class="muted">${g.price?esc(g.price):""}</p>
+        ${g.discount?`<p class="muted"><span style="text-decoration:line-through">${esc(g.priceOriginal||"")}</span> → ${esc(g.price||"")} <span class="gdiscount">-${g.discount}%</span></p>`:`<p class="muted">${g.price?esc(g.price):""}</p>`}
       </div><div style="text-align:right">${rHtml}</div></div>
       <div class="meta">${(g.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
       <div class="actions"><button class="bk rm" data-rm="${esc(g.title)}">✕ Odebrat</button></div>
@@ -949,12 +952,13 @@ function resultsHtml(){
     const catClass=cat==="game"?"src":cat==="movie"?"":"";
     const img=r.image||r.poster||r.cover;
     const imgHtml=img?`<img src="${esc(img)}" style="width:100%;height:100%;object-fit:cover" />`:"";
-    const sub=r.author||r.country||r.price||"";
+    const priceTxt=r.discount?`<span style="text-decoration:line-through">${esc(r.priceOriginal||"")}</span> ${esc(r.price||"")} <span class="gdiscount">-${r.discount}%</span>`:esc(r.price||"");
+    const sub=r.author||r.country||"";
     return `<div class="rres">
       <div class="rcover" style="background:${grad(r.title)}">${imgHtml}</div>
       <div style="flex:1;min-width:0">
         <div class="title" style="font-size:14px">${esc(r.title)}</div>
-        <div class="muted"><span class="tag" style="font-size:10px;padding:1px 6px">${catLabel}</span> ${esc(sub)}</div>
+        <div class="muted"><span class="tag" style="font-size:10px;padding:1px 6px">${catLabel}</span> ${sub?esc(sub)+" ":""} ${cat==="game"?priceTxt:""}</div>
       </div>
       <button class="bk ${inBacklog(r.title)?'on':''}" data-add="${i}">${inBacklog(r.title)?'✓ V backlogu':'+ Přidat'}</button>
     </div>`;
@@ -985,9 +989,11 @@ async function runSearch(){
         (sd.items||[]).slice(0,5).forEach(item=>{
           if(results.some(r=>r.title===item.name)||online.some(o=>o.title===item.name)) return;
           let price=item.price?.final!=null?(item.price.final/100).toFixed(2)+"€":null;
-          if(price==="0.00€") price="Zdarma";
+          let priceOriginal=item.price?.initial!=null&&item.price.initial!==item.price.final?(item.price.initial/100).toFixed(2)+"€":null;
+          let discount=item.price?.initial&&item.price.final&&item.price.initial!==item.price.final?Math.round(100-item.price.final/item.price.initial*100):0;
+          if(price==="0.00€"){ price="Zdarma"; priceOriginal=null; discount=0; }
           const img=(item.tiny_image||"").replace("shared.akamai.steamstatic.com","shared.cloudflare.steamstatic.com");
-          online.push({title:item.name,_category:"game",image:img,url:`https://store.steampowered.com/app/${item.id}/`,tags:[],price,rating:item.metascore?+item.metascore:null});
+          online.push({title:item.name,_category:"game",image:img,url:`https://store.steampowered.com/app/${item.id}/`,tags:[],price,priceOriginal,discount,rating:item.metascore?+item.metascore:null});
         });
       }
     }catch(e){}

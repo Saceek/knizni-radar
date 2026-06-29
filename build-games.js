@@ -67,6 +67,8 @@ async function fetchDetails(appid) {
       header: d.header_image || null,
       genres: (d.genres || []).map((g) => g.description).filter(Boolean),
       price: d.is_free ? "Zdarma" : ((d.price_overview && d.price_overview.final_formatted) || null),
+      priceOriginal: d.price_overview?.initial_formatted || null,
+      discount: d.price_overview?.discount_percent || 0,
     };
   } catch (e) { console.warn("[details]", appid, "→", e.message); return null; }
 }
@@ -138,6 +140,8 @@ async function main() {
       released: info.released,
       tags: (det && det.genres && det.genres.length) ? det.genres : [],
       price: (det && det.price) || null,
+      priceOriginal: (det && det.priceOriginal) || null,
+      discount: (det && det.discount) || 0,
       image: (det && det.header)
         ? det.header.replace("shared.akamai.steamstatic.com", "shared.cloudflare.steamstatic.com")
         : `https://cdn.cloudflare.steamstatic.com/steam/apps/${appid}/header.jpg`,
