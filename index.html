@@ -445,10 +445,11 @@ function newsBookTile(b){
     : `<div class="tile-poster" ${coverBg}><span style="font-size:9px;font-weight:700;color:#fff;line-height:1.1">${esc(b.title)}</span></div>`;
   const rHtml = b.rating!=null ? `<span class="rating ${ratingClass(b.rating)}">${b.rating} %</span>` : "";
   const price = b.price ? `<span class="price" style="font-size:13px">${b.price} Kč</span>` : "";
+  const bk=inBacklog(b.title);
   return `<div class="tile"><div class="tile-row">${coverInner}<div>
     <p class="tile-title">${b.link?`<a href="${esc(b.link)}" target="_blank" rel="noreferrer">`:""}${esc(b.title)}${b.link?"</a>":""}</p>
     <p class="tile-sub">${esc(b.author||"")}</p>
-    <div class="tile-meta">${rHtml}${price}</div>
+    <div class="tile-meta">${rHtml}${price}<button class="bk ${bk?'on':''}" data-bk="${esc(b.title)}" style="margin-left:auto">${bk?'✓':'+'}</button></div>
   </div></div></div>`;
 }
 function newsMovieTile(m){
@@ -460,19 +461,21 @@ function newsMovieTile(m){
   const rHtml = m.rating!=null ? `<span class="rating ${ratingClass(m.rating)}">${m.rating} %</span>` : "";
   const typeClass = m.csfdType==="film"||m.type==="movie"?"film":"serial";
   const vodHtml = (m.vod||[]).map(v=>`<span class="mvod ${vodCls(v)}">${esc(v)}</span>`).join("");
+  const bk=inBacklog(m.title);
   return `<div class="tile"><div class="tile-row">${posterInner}<div>
     <p class="tile-title"><a href="${esc(m.url)}" target="_blank" rel="noreferrer">${esc(m.title)}</a></p>
     <p class="tile-sub">${esc(m.country||"")}${m.year?" · "+esc(m.year):""}</p>
-    <div class="tile-meta"><span class="mtype ${typeClass}">${typeClass==="film"?"FILM":"SERIÁL"}</span>${vodHtml}${rHtml}</div>
+    <div class="tile-meta"><span class="mtype ${typeClass}">${typeClass==="film"?"FILM":"SERIÁL"}</span>${vodHtml}${rHtml}<button class="bk ${bk?'on':''}" data-mbk="${esc(m.title)}" style="margin-left:auto">${bk?'✓':'+'}</button></div>
   </div></div></div>`;
 }
 function newsGameTile(g){
   const rHtml = g.rating ? `<span class="rating ${ratingClass(g.rating)}">${g.rating} %</span>` : "";
   const imgHtml = g.image ? `<img class="tile-img" src="${esc(g.image)}" alt="" onerror="this.style.visibility='hidden'" />` : "";
+  const bk=inBacklog(g.title);
   return `<div class="tile">${imgHtml}
     <p class="tile-title"><a href="${esc(g.url||'#')}" target="_blank" rel="noreferrer">${esc(g.title)}</a></p>
     <p class="tile-sub">${g.price?esc(g.price):""}</p>
-    <div class="tile-meta">${rHtml}${(g.tags||[]).slice(0,3).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
+    <div class="tile-meta">${rHtml}${(g.tags||[]).slice(0,3).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}<button class="bk ${bk?'on':''}" data-gbk="${esc(g.title)}" style="margin-left:auto">${bk?'✓':'+'}</button></div>
   </div>`;
 }
 
