@@ -912,12 +912,8 @@ async function hydrateCovers(){
 function addPanelHtml(){
   const m=S.addMode;
   return `<div class="addbox">
-    <div class="addtabs">
-      <button class="atab ${m==='search'?'on':''}" data-amode="search">🔍 Vyhledat</button>
-      <button class="atab ${m==='manual'?'on':''}" data-amode="manual">✏️ Ručně přidat</button>
-    </div>
     ${S.addMsg?`<div class="addmsg">${esc(S.addMsg)}</div>`:""}
-    ${m==='search'?searchPanelHtml():manualPanelHtml()}
+    ${searchPanelHtml()}
   </div>`;
 }
 function searchPanelHtml(){
@@ -1047,20 +1043,13 @@ function submitManual(){
   render();
 }
 function mountAddPanel(){
-  document.querySelectorAll('.atab').forEach(b=>b.onclick=()=>{S.addMode=b.dataset.amode; S.addMsg=""; render();});
-  if(S.addMode==='search'){
-    const inp=document.getElementById('addq');
-    if(inp){
-      inp.oninput=e=>{S.addQ=e.target.value; S.addMsg=""; runSearch();};
-      inp.onkeydown=e=>{ if(e.key==='Enter'){ e.preventDefault(); runSearch(); } };
-    }
-    const go=document.getElementById('addgo'); if(go) go.onclick=runSearch;
-    const rc=document.getElementById('addresults'); if(rc) bindAddButtons(rc);
-  } else {
-    const map={title:'mf-title',author:'mf-author',url:'mf-url',cat:'mf-cat'};
-    for(const k in map){ const el=document.getElementById(map[k]); if(el) el.oninput=el.onchange=(e=>{S.addForm[k]=e.target.value;}); }
-    const sub=document.getElementById('mf-submit'); if(sub) sub.onclick=submitManual;
+  const inp=document.getElementById('addq');
+  if(inp){
+    inp.oninput=e=>{S.addQ=e.target.value; S.addMsg=""; runSearch();};
+    inp.onkeydown=e=>{ if(e.key==='Enter'){ e.preventDefault(); runSearch(); } };
   }
+  const go=document.getElementById('addgo'); if(go) go.onclick=runSearch;
+  const rc=document.getElementById('addresults'); if(rc) bindAddButtons(rc);
 }
 
 function addBacklog(t){ const b=S.books.find(x=>x.title===t); if(b && !inBacklog(t)){ S.backlog.push({...b,_category:"book"}); saveBacklogAndSync(S.backlog); render(); } }
