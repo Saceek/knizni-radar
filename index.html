@@ -905,13 +905,13 @@ async function hydrateCovers(){
   if(_hydrateAgain) hydrateCovers();
 }
 
-/* ---- přidání do backlogu: vyhledání (Google Books) + ruční zápis ---- */
+/* ---- přidání do backlogu: univerzální vyhledávání v načtených datech + ruční ---- */
 function addPanelHtml(){
   const m=S.addMode;
   return `<div class="addbox">
     <div class="addtabs">
       <button class="atab ${m==='search'?'on':''}" data-amode="search">🔍 Vyhledat</button>
-      <button class="atab ${m==='manual'?'on':''}" data-amode="manual">✏️ Ručně</button>
+      <button class="atab ${m==='manual'?'on':''}" data-amode="manual">✏️ Ručně přidat</button>
     </div>
     ${S.addMsg?`<div class="addmsg">${esc(S.addMsg)}</div>`:""}
     ${m==='search'?searchPanelHtml():manualPanelHtml()}
@@ -919,74 +919,90 @@ function addPanelHtml(){
 }
 function searchPanelHtml(){
   return `<div class="mrow">
-      <input id="addq" placeholder="Najdi knihu (název, autor)…" value="${esc(S.addQ)}" autocomplete="off" />
+      <input id="addq" placeholder="Hledat knihu, film, seriál, hru…" value="${esc(S.addQ)}" autocomplete="off" />
       <button class="addbtn" id="addgo" style="align-self:auto">Hledat</button>
     </div>
     <div id="addresults" class="addresults">${resultsHtml()}</div>`;
-}
-function resultsHtml(){
-  if(S.addBusy) return '<div class="tiny" style="padding:8px">Hledám…</div>';
-  if(S.addErr) return `<div class="tiny" style="padding:8px;color:#f87171">Vyhledávání selhalo: ${esc(S.addErr)}<br>Nejčastěji blokace googleapis.com (adblock/rozšíření), dočasný limit Google, nebo CSP v náhledu. Zkus jiný prohlížeč/připojení, nebo použij ruční režim.</div>`;
-  if(!S.addQ.trim()) return '<div class="tiny" style="padding:8px">Napiš název a stiskni Enter nebo Hledat – obálku, autora i rok doplní Google Books.</div>';
-  if(!S.addResults.length) return '<div class="tiny" style="padding:8px">Nic nenalezeno.</div>';
-  return S.addResults.map((r,i)=>`<div class="rres">
-    <div class="rcover" style="background:${grad(r.title)}">${r.cover?`<img src="${esc(r.cover)}" referrerpolicy="no-referrer" />`:''}</div>
-    <div style="flex:1;min-width:0">
-      <div class="title" style="font-size:14px">${esc(r.title)}</div>
-      <div class="muted">${esc(r.author||'neznámý autor')}${r.year?' · '+esc(r.year):''}</div>
-    </div>
-    <button class="bk" data-add="${i}">+ Přidat</button>
-  </div>`).join("");
 }
 function manualPanelHtml(){
   const f=S.addForm;
   return `<div class="mform">
     <input id="mf-title" placeholder="Název * (povinné)" value="${esc(f.title)}" autocomplete="off" />
-    <input id="mf-author" placeholder="Autor (doporučeno – zpřesní obálku)" value="${esc(f.author)}" autocomplete="off" />
-    <input id="mf-cover" placeholder="URL obálky (nepovinné – jinak z Google Books)" value="${esc(f.cover)}" autocomplete="off" />
-    <div class="mrow">
-      <input id="mf-rating" placeholder="Hodnocení % 0–100 (nepovinné)" value="${esc(f.rating)}" inputmode="numeric" autocomplete="off" />
-      <input id="mf-link" placeholder="Odkaz na databazeknih (nepovinné)" value="${esc(f.link)}" autocomplete="off" />
-    </div>
-    <div class="mrow">
-      <input id="mf-shop" placeholder="Obchod" value="${esc(f.shop)}" autocomplete="off" />
-      <input id="mf-price" placeholder="Cena Kč" value="${esc(f.price)}" inputmode="numeric" autocomplete="off" />
-      <input id="mf-url" placeholder="Odkaz na obchod" value="${esc(f.url)}" autocomplete="off" />
-    </div>
+    <select id="mf-cat"><option value="book"${f.cat==='book'?' selected':''}>Kniha</option><option value="movie"${f.cat==='movie'?' selected':''}>Film / Seriál</option><option value="game"${f.cat==='game'?' selected':''}>Hra</option></select>
+    <input id="mf-author" placeholder="Autor / Studio (nepovinné)" value="${esc(f.author)}" autocomplete="off" />
+    <input id="mf-url" placeholder="URL odkaz (nepovinné)" value="${esc(f.url)}" autocomplete="off" />
     <button class="addbtn" id="mf-submit">Přidat do backlogu</button>
   </div>`;
 }
-const _gbCache={};
-async function gbSearch(q){
-  if(_gbCache[q]) return _gbCache[q];
-  const u=`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=8`+gbKey();
-  let r=await fetch(u+"&country=CZ");
-  if(r.status===403) r=await fetch(u);                // některé IP/region: zkus bez country
-  if(!r.ok) throw new Error("Google Books HTTP "+r.status);
-  const d=await r.json();
-  if(d.error) throw new Error(d.error.message||("kód "+(d.error.code||"?")));
-  const out=(d.items||[]).map(it=>{ const v=it.volumeInfo||{}; const im=v.imageLinks||{};
-    const cover=(im.thumbnail||im.smallThumbnail||"").replace("http://","https://").replace("&edge=curl","");
-    return {title:v.title||"", author:(v.authors||[]).join(", "), cover:cover||null, year:(v.publishedDate||"").slice(0,4)||null};
-  }).filter(x=>x.title);
-  _gbCache[q]=out; return out;
+function resultsHtml(){
+  if(S.addBusy) return '<div class="tiny" style="padding:8px">Hledám…</div>';
+  if(!S.addQ.trim()) return '<div class="tiny" style="padding:8px">Prohledá knihy, filmy, seriály i hry. Knihy hledá i online přes Google Books.</div>';
+  if(!S.addResults.length){
+    const q=encodeURIComponent(S.addQ.trim());
+    return `<div class="tiny" style="padding:8px">Nic nenalezeno v lokálních datech.<br><br>
+      <a href="https://www.csfd.cz/hledat/?q=${q}" target="_blank" rel="noreferrer" style="color:var(--cyan)">Hledat na ČSFD →</a> &nbsp;
+      <a href="https://store.steampowered.com/search/?term=${q}" target="_blank" rel="noreferrer" style="color:var(--cyan)">Hledat na Steamu →</a><br><br>
+      Nebo použij záložku „Ručně přidat".</div>`;
+  }
+  return S.addResults.map((r,i)=>{
+    const cat=r._category||"book";
+    const catLabel=cat==="game"?"HRA":cat==="movie"?"FILM":"KNIHA";
+    const catClass=cat==="game"?"src":cat==="movie"?"":"";
+    const img=r.image||r.poster||r.cover;
+    const imgHtml=img?`<img src="${esc(img)}" style="width:100%;height:100%;object-fit:cover" />`:"";
+    const sub=r.author||r.country||r.price||"";
+    return `<div class="rres">
+      <div class="rcover" style="background:${grad(r.title)}">${imgHtml}</div>
+      <div style="flex:1;min-width:0">
+        <div class="title" style="font-size:14px">${esc(r.title)}</div>
+        <div class="muted"><span class="tag" style="font-size:10px;padding:1px 6px">${catLabel}</span> ${esc(sub)}</div>
+      </div>
+      <button class="bk ${inBacklog(r.title)?'on':''}" data-add="${i}">${inBacklog(r.title)?'✓ V backlogu':'+ Přidat'}</button>
+    </div>`;
+  }).join("");
 }
-let _searchTimer=null;
-function scheduleSearch(){ clearTimeout(_searchTimer); _searchTimer=setTimeout(runSearch,350); }
 async function runSearch(){
-  clearTimeout(_searchTimer);
   const q=S.addQ.trim();
-  if(!q){ S.addResults=[]; S.addErr=""; updateResults(); return; }
-  S.addBusy=true; S.addErr=""; updateResults();
-  try{ S.addResults=await gbSearch(q); }
-  catch(e){ S.addResults=[]; S.addErr=e.message||"chyba sítě"; }
-  S.addBusy=false; updateResults();
+  if(!q){ S.addResults=[]; S.addBusy=false; updateResults(); return; }
+  const ql=q.toLowerCase();
+  const results=[];
+  // Local: books
+  (S.books||[]).forEach(b=>{ if((b.title+" "+b.author).toLowerCase().includes(ql)) results.push({...b,_category:"book"}); });
+  // Local: movies
+  (S.movies||[]).forEach(m=>{ if((m.title+" "+(m.country||"")+" "+(m.genres||[]).join(" ")).toLowerCase().includes(ql)) results.push({...m,_category:"movie"}); });
+  // Local: games
+  (S.games||[]).forEach(g=>{ if(g.name.toLowerCase().includes(ql)) results.push({title:g.name,_category:"game",image:g.image,url:g.url,tags:g.tags,price:g.price,rating:g.rating}); });
+  S.addResults=results.slice(0,12);
+  updateResults();
+  // Online: Google Books (if few local book results)
+  if(results.filter(r=>r._category==="book").length<3){
+    S.addBusy=true; updateResults();
+    try{
+      const u=`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=5&country=CZ`+gbKey();
+      const r=await fetch(u);
+      if(r.ok){
+        const d=await r.json();
+        const online=(d.items||[]).map(it=>{const v=it.volumeInfo||{};const im=v.imageLinks||{};
+          const cover=(im.thumbnail||im.smallThumbnail||"").replace("http://","https://").replace("&edge=curl","");
+          return {title:v.title||"",author:(v.authors||[]).join(", "),cover:cover||null,_category:"book",cat:["Google Books"]};
+        }).filter(x=>x.title&&!results.some(r=>r.title===x.title));
+        S.addResults=[...results.slice(0,12),...online].slice(0,15);
+      }
+    }catch(e){}
+    S.addBusy=false;
+    updateResults();
+  }
 }
 function bindAddButtons(rc){
   rc.querySelectorAll('[data-add]').forEach(btn=>btn.onclick=()=>{
     const r=S.addResults[+btn.dataset.add];
-    if(r) addCustomBook({title:r.title, author:r.author||"neznámý autor", cat:["Vlastní"],
-      rating:null, ratingSource:null, readers:0, cover:r.cover||null, link:null, prices:[], year:r.year||null, manual:true});
+    if(!r||inBacklog(r.title)) return;
+    const item={...r};
+    if(!item._category) item._category="book";
+    S.backlog.push(item);
+    saveBacklogAndSync(S.backlog);
+    S.addMsg="Přidáno ✓ – "+r.title;
+    render();
   });
 }
 function updateResults(){
@@ -996,19 +1012,17 @@ function updateResults(){
 function submitManual(){
   const f=S.addForm; const title=(f.title||"").trim();
   if(!title){ S.addMsg="Vyplň alespoň název."; render(); return; }
-  let rating=null; const rn=parseInt((f.rating||"").replace(/[^\d]/g,""),10);
-  if(Number.isFinite(rn)) rating=Math.max(0,Math.min(100,rn));
-  let prices=[]; const pn=parseInt((f.price||"").replace(/[^\d]/g,""),10);
-  if(Number.isFinite(pn)) prices=[{shop:(f.shop||"").trim()||"Obchod", price:pn, url:(f.url||"").trim()||"#"}];
-  addCustomBook({title, author:(f.author||"").trim()||"neznámý autor", cat:["Vlastní"],
-    rating, ratingSource: rating!=null?"ručně":null, readers:0,
-    cover:(f.cover||"").trim()||null, link:(f.link||"").trim()||null, prices, manual:true});
-}
-function addCustomBook(book){
-  if(inBacklog(book.title)){ S.addMsg=book.title+" už v backlogu je."; render(); return; }
-  S.backlog.push(book); saveBacklogAndSync(S.backlog);
-  S.addQ=""; S.addResults=[]; S.addMsg="Přidáno ✓ – "+book.title;
-  S.addForm={title:"",author:"",cover:"",rating:"",link:"",shop:"",price:"",url:""};
+  if(inBacklog(title)){ S.addMsg=title+" už v backlogu je."; render(); return; }
+  const cat=f.cat||"book";
+  const item={title,_category:cat};
+  if(cat==="book"){ item.author=f.author||"neznámý autor"; item.cat=["Vlastní"]; item.prices=[]; }
+  else if(cat==="movie"){ item.type="film"; item.genres=[]; item.vod=[]; }
+  else { item.tags=[]; }
+  if(f.url) item.url=f.url;
+  S.backlog.push(item);
+  saveBacklogAndSync(S.backlog);
+  S.addMsg="Přidáno ✓ – "+title;
+  S.addForm={title:"",author:"",url:"",cat:f.cat};
   render();
 }
 function mountAddPanel(){
@@ -1016,14 +1030,14 @@ function mountAddPanel(){
   if(S.addMode==='search'){
     const inp=document.getElementById('addq');
     if(inp){
-      inp.oninput=e=>{S.addQ=e.target.value; S.addMsg="";};
+      inp.oninput=e=>{S.addQ=e.target.value; S.addMsg=""; runSearch();};
       inp.onkeydown=e=>{ if(e.key==='Enter'){ e.preventDefault(); runSearch(); } };
     }
     const go=document.getElementById('addgo'); if(go) go.onclick=runSearch;
     const rc=document.getElementById('addresults'); if(rc) bindAddButtons(rc);
   } else {
-    const map={title:'mf-title',author:'mf-author',cover:'mf-cover',rating:'mf-rating',link:'mf-link',shop:'mf-shop',price:'mf-price',url:'mf-url'};
-    for(const k in map){ const el=document.getElementById(map[k]); if(el) el.oninput=(e=>{S.addForm[k]=e.target.value;}); }
+    const map={title:'mf-title',author:'mf-author',url:'mf-url',cat:'mf-cat'};
+    for(const k in map){ const el=document.getElementById(map[k]); if(el) el.oninput=el.onchange=(e=>{S.addForm[k]=e.target.value;}); }
     const sub=document.getElementById('mf-submit'); if(sub) sub.onclick=submitManual;
   }
 }
