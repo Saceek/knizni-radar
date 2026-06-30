@@ -15,6 +15,8 @@ const path = require("path");
 
 const DIR = __dirname;
 const OUT = path.join(DIR, "news.json");
+const HISTORY = path.join(DIR, "news-history.json");
+const RETAIN_DAYS = 3;
 
 function loadJson(file) {
   try { return JSON.parse(fs.readFileSync(path.join(DIR, file), "utf-8")); }
@@ -89,20 +91,45 @@ function main() {
   const newBooks = books ? diffBooks(books, prevBooks) : [];
   const newGames = games ? diffGames(games, prevGames) : [];
   const newMovies = movies ? diffMovies(movies, prevMovies) : [];
+  const todaysItems = [...newBooks, ...newMovies, ...newGames];
+
+  // Load rolling history, append today's new items with today's date, prune entries older than RETAIN_DAYS
+  const now = new Date();
+  const today = now.toISOString().slice(0, 10);
+  let history = loadJson("news-history.json") || [];
+  const seenKeys = new Set(history.map((h) => h.type + "::" + h.title));
+  todaysItems.forEach((item) => {
+    const key = item.type + "::" + item.title;
+    if (!seenKeys.has(key)) {
+      history.push({ ...item, firstSeen: today });
+      seenKeys.add(key);
+    }
+  });
+  history = history.filter((h) => {
+    const ageDays = Math.floor((now - new Date(h.firstSeen + "T00:00:00Z")) / 86400000);
+    return ageDays < RETAIN_DAYS;
+  });
+
+  const itemsWithAge = history.map((h) => {
+    const ageDays = Math.floor((now - new Date(h.firstSeen + "T00:00:00Z")) / 86400000);
+    const { firstSeen, ...rest } = h;
+    return { ...rest, firstSeen, daysLeft: RETAIN_DAYS - ageDays };
+  }).sort((a, b) => a.daysLeft - b.daysLeft);
 
   const news = {
     updatedAt: new Date().toISOString(),
-    items: [...newBooks, ...newMovies, ...newGames],
+    items: itemsWithAge,
     counts: {
-      books: newBooks.length,
-      movies: newMovies.filter((m) => m.type === "movie").length,
-      series: newMovies.filter((m) => m.type === "series").length,
-      games: newGames.length,
+      books: itemsWithAge.filter((i) => i.type === "book").length,
+      movies: itemsWithAge.filter((i) => i.type === "movie").length,
+      series: itemsWithAge.filter((i) => i.type === "series").length,
+      games: itemsWithAge.filter((i) => i.type === "game").length,
     },
   };
 
   fs.writeFileSync(OUT, JSON.stringify(news, null, 2));
-  console.log(`[news] ${newBooks.length} nových knih, ${newMovies.length} filmů/seriálů, ${newGames.length} her → news.json`);
+  fs.writeFileSync(HISTORY, JSON.stringify(history, null, 2));
+  console.log(`[news] dnes nově: ${newBooks.length} knih, ${newMovies.length} filmů/seriálů, ${newGames.length} her | celkem v okně ${RETAIN_DAYS} dnů: ${itemsWithAge.length} → news.json`);
 
   // Archive current data for next comparison
   if (books) fs.writeFileSync(path.join(DIR, "previous-books.json"), JSON.stringify(books));
