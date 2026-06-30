@@ -63,8 +63,13 @@
   .note{font-family:var(--mono);font-size:12px;border-radius:12px;padding:9px 13px;margin:14px 0;line-height:1.5;letter-spacing:.02em}
   .note.ok{background:rgba(74,222,128,.08);border:1px solid rgba(74,222,128,.3);color:var(--emerald)}
   .note.warn{background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.3);color:var(--amber)}
-  .nav{display:flex;gap:8px;margin:22px 0 10px}
-  .nav .tab{font-family:var(--disp);padding:9px 18px;border-radius:12px;font-size:14px;font-weight:600;border:1px solid var(--cb);background:var(--chip);color:var(--chipt);cursor:pointer}
+  .nav{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 10px}
+  .nav .tab{font-family:var(--disp);padding:9px 18px;border-radius:12px;font-size:14px;font-weight:600;border:1px solid var(--cb);background:var(--chip);color:var(--chipt);cursor:pointer;white-space:nowrap}
+  @media(max-width:560px){
+    .nav{gap:6px}
+    .nav .tab{padding:8px 12px;font-size:13px;flex:1 1 auto;text-align:center}
+    .row{flex-wrap:wrap;gap:10px}
+  }
   .nav .tab.on{background:linear-gradient(135deg,var(--amber),var(--rose));color:#160a12;border-color:transparent;box-shadow:0 6px 18px rgba(251,77,125,.3)}
   .chips{display:flex;flex-wrap:wrap;gap:8px;margin:11px 0}
   .chip{padding:7px 13px;border-radius:999px;font-size:13px;font-weight:500;border:1px solid var(--cb);background:var(--chip);color:var(--chipt);cursor:pointer}
