@@ -34,6 +34,10 @@ jobs:
         run: node build-coming.js
         continue-on-error: true
 
+      - name: Enrichment backlogu (hodnocení + ceny)
+        run: node build-enrich-backlog.js
+        continue-on-error: true
+
       - name: Novinky → news.json
         run: node build-news.js
 
@@ -41,6 +45,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add books.json games.json movies.json coming.json news.json news-history.json previous-books.json previous-games.json previous-movies.json
+          git add books.json games.json movies.json coming.json news.json news-history.json previous-books.json previous-games.json previous-movies.json backlog.json
           git diff --staged --quiet || git commit -m "data: refresh [skip ci]"
           git push
