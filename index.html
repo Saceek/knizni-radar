@@ -1033,38 +1033,30 @@ async function runSearch(){
       }
     }catch(e){}
   }
-  // Open Library search for books (no rate limit, CORS ok)
+  // Databazeknih.cz search (primary, Czech books, via corsproxy)
   if(searchBooks){
     try{
-      const r=await fetch(`https://openlibrary.org/search.json?q=${encodeURIComponent(q)}&lang=cze&limit=8&fields=title,author_name,cover_i,first_publish_year,key`);
+      const r=await fetch(`https://corsproxy.io/?https://www.databazeknih.cz/vyhledavani/knihy?q=${encodeURIComponent(q)}`);
       if(r.ok){
-        const d=await r.json();
-        (d.docs||[]).forEach(it=>{
-          const title=it.title||"";
-          if(!title||results.some(r=>r.title===title)||online.some(o=>o.title===title)) return;
-          const cover=it.cover_i?`https://covers.openlibrary.org/b/id/${it.cover_i}-M.jpg`:null;
-          const dbkUrl=`https://www.databazeknih.cz/vyhledavani/knihy?q=${encodeURIComponent(title)}`;
-          online.push({title,author:(it.author_name||[]).slice(0,2).join(", "),cover,year:it.first_publish_year||null,_category:"book",cat:["Open Library"],link:dbkUrl});
-        });
+        const html=await r.text();
+        // Each entry: <a href="/prehled-knihy/..."><picture>...<img src="COVER" alt="Obálka knihy AUTHOR: TITLE">
+        const bookRe=/<a href="(\/prehled-knihy\/[^"]+)">\s*<picture>[\s\S]*?<img src="([^"]+)" alt="Obálka knihy ([^"]+)"/g;
+        for(const m of html.matchAll(bookRe)){
+          const link='https://www.databazeknih.cz'+m[1];
+          const cover=m[2];
+          const altText=m[3]; // "Helena Sováková: Plukovnice lidských duší" or just "Titulek"
+          let title=altText, author=null;
+          if(altText.includes(':')){
+            const colonIdx=altText.indexOf(':');
+            author=altText.slice(0,colonIdx).trim();
+            title=altText.slice(colonIdx+1).trim();
+          }
+          if(!title||results.some(r=>r.title===title)||online.some(o=>o.title===title)) continue;
+          online.push({title,author,cover,_category:"book",link,url:link,cat:["databazeknih.cz"]});
+          if(online.filter(o=>o._category==="book").length>=8) break;
+        }
       }
     }catch(e){}
-    // Google Books as fallback if few Open Library results
-    if(online.filter(o=>o._category==="book").length<3){
-      try{
-        const u=`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=5&country=CZ`+gbKey();
-        const r=await fetch(u);
-        if(r.ok){
-          const d=await r.json();
-          (d.items||[]).forEach(it=>{const v=it.volumeInfo||{};const im=v.imageLinks||{};
-            const cover=(im.thumbnail||im.smallThumbnail||"").replace("http://","https://").replace("&edge=curl","");
-            const title=v.title||"";
-            const dbkUrl=`https://www.databazeknih.cz/vyhledavani/knihy?q=${encodeURIComponent(title)}`;
-            if(title&&!results.some(r=>r.title===title)&&!online.some(o=>o.title===title))
-              online.push({title,author:(v.authors||[]).join(", "),cover:cover||null,_category:"book",cat:["Google Books"],link:dbkUrl});
-          });
-        }
-      }catch(e){}
-    }
   }
   S.addResults=[...results.slice(0,12),...online].slice(0,15);
   S.addBusy=false;
