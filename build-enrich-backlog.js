@@ -86,23 +86,30 @@ async function fetchKosmasPrice(title) {
 // Search Dobrovský for price — matches title before accepting price
 async function fetchDobrovskýPrice(title) {
   try {
-    const url = `https://www.knihydobrovsky.cz/hledej?q=${encodeURIComponent(title)}`;
+    const url = `https://www.knihydobrovsky.cz/vyhledavani?search=${encodeURIComponent(title)}`;
     const html = await getHtml(url);
     const $ = cheerio.load(html);
     const normTitle = norm(title);
     let price = null, priceUrl = null;
-    $("li, article, [class*='product-item']").each((_, item) => {
+    $("h3.title").each((_, h3) => {
       if (price) return;
-      const itemTitle = norm($(item).find("a[href*='/kniha/']").first().text());
+      const nameSpan = $(h3).find("span.name").first();
+      const itemTitle = norm(nameSpan.attr("title") || nameSpan.text());
       const words = normTitle.split(" ").filter(w => w.length > 3);
+      if (!words.length) return;
       const matches = words.filter(w => itemTitle.includes(w)).length;
       if (matches < Math.ceil(words.length * 0.5)) return;
-      const href = $(item).find("a[href*='/kniha/']").first().attr("href") || "";
-      const prices = [...$(item).text().matchAll(/(\d[\d\s]*)\s*Kč/g)]
-        .map((x) => parseInt(x[1].replace(/\s/g,""),10)).filter((n)=>n>=50&&n<5000);
-      if (prices.length && href) {
-        price = Math.min(...prices);
-        priceUrl = href.startsWith("http") ? href : "https://www.knihydobrovsky.cz"+href;
+      const href = $(h3).find("a[href*='/kniha/']").first().attr("href") || "";
+      // price is in the sibling .content div (h3's parent contains both h3.title and div.content)
+      const container = $(h3).parent();
+      const priceText = container.find(".price-wrap .price strong").first().text().trim();
+      const priceMatch = priceText.match(/(\d[\d\s]*)\s*Kč/);
+      if (priceMatch && href) {
+        const p = parseInt(priceMatch[1].replace(/\s/g,""), 10);
+        if (p >= 50 && p < 5000) {
+          price = p;
+          priceUrl = href.startsWith("http") ? href : "https://www.knihydobrovsky.cz"+href;
+        }
       }
     });
     return price ? { shop: "Dobrovský", price, url: priceUrl } : null;
@@ -149,6 +156,7 @@ async function main() {
       const dobr = await fetchDobrovskýPrice(item.title);
       if (dobr) {
         item.prices = [...(item.prices || []), dobr];
+        changed++;
         console.log(`    cena: ${dobr.price} Kč (${dobr.shop})`);
       }
       await sleep(DELAY);
