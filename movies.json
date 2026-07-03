@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-07-02T07:40:57.485Z",
+  "updatedAt": "2026-07-03T07:28:56.057Z",
   "movies": [
     {
       "title": "Enola Holmesová 3",
       "year": "2026",
       "type": "film",
-      "rating": 52,
+      "rating": 48,
       "poster": "https://image.pmgstatic.com/cache/resized/w936/files/images/film/photos/171/420/171420248_y32myb.jpg",
       "url": "https://www.csfd.cz/film/1691342-enola-holmesova-3/prehled/",
       "genres": [
@@ -29,6 +29,38 @@
         "Thriller"
       ],
       "country": "USA",
+      "vod": [
+        "Kino"
+      ]
+    },
+    {
+      "title": "Pozvání",
+      "year": "2026",
+      "type": "film",
+      "rating": 78,
+      "poster": "https://image.pmgstatic.com/cache/resized/w936/files/images/film/photos/170/915/170915505_n13g6d.jpg",
+      "url": "https://www.csfd.cz/film/1670293-pozvani/prehled/",
+      "genres": [
+        "Komedie",
+        "Drama"
+      ],
+      "country": "USA",
+      "vod": [
+        "Kino"
+      ]
+    },
+    {
+      "title": "Odyssea",
+      "year": "2026",
+      "type": "film",
+      "rating": null,
+      "poster": "https://image.pmgstatic.com/cache/resized/w936/files/images/film/photos/171/263/171263768_sbmm77.jpg",
+      "url": "https://www.csfd.cz/film/1580037-odyssea/prehled/",
+      "genres": [
+        "Akční",
+        "Dobrodružný"
+      ],
+      "country": "USA / Velká Británie",
       "vod": [
         "Kino"
       ]
@@ -82,51 +114,35 @@
       ]
     },
     {
-      "title": "Pozvání",
-      "year": "2026",
-      "type": "film",
-      "rating": 78,
-      "poster": "https://image.pmgstatic.com/cache/resized/w936/files/images/film/photos/170/915/170915505_n13g6d.jpg",
-      "url": "https://www.csfd.cz/film/1670293-pozvani/prehled/",
-      "genres": [
-        "Komedie",
-        "Drama"
-      ],
-      "country": "USA",
-      "vod": [
-        "Kino"
-      ]
-    },
-    {
-      "title": "Ďábel nosí Pradu 2",
-      "year": "2026",
-      "type": "film",
-      "rating": 63,
-      "poster": "https://image.pmgstatic.com/cache/resized/w936/files/images/film/photos/170/973/170973524_kh3rta.jpg",
-      "url": "https://www.csfd.cz/film/1617612-dabel-nosi-pradu-2/prehled/",
-      "genres": [
-        "Komedie",
-        "Drama"
-      ],
-      "country": "USA",
-      "vod": [
-        "Kino"
-      ]
-    },
-    {
-      "title": "Rod Draka - Série 3",
+      "title": "Nejhorší sousedi",
       "year": "2026",
       "type": "seriál",
-      "rating": 90,
-      "poster": "https://image.pmgstatic.com/cache/resized/w936/files/images/film/photos/170/742/170742837_zuidix.jpg",
-      "url": "https://www.csfd.cz/film/785031-rod-draka/1552381-serie-3/prehled/",
+      "rating": 74,
+      "poster": "https://image.pmgstatic.com/cache/resized/w936/files/images/film/posters/171/390/171390750_akx830.jpg",
+      "url": "https://www.csfd.cz/film/1866588-nejhorsi-sousedi/prehled/",
       "genres": [
-        "Akční",
-        "Fantasy"
+        "Dokumentární",
+        "Krimi"
       ],
       "country": "USA",
       "vod": [
-        "HBO Max"
+        "Netflix"
+      ]
+    },
+    {
+      "title": "Živá pára",
+      "year": "2026",
+      "type": "seriál",
+      "rating": null,
+      "poster": "https://image.pmgstatic.com/cache/resized/w936/files/images/film/posters/171/292/171292627_m7u0cx.jpg",
+      "url": "https://www.csfd.cz/film/1821008-ziva-para/prehled/",
+      "genres": [
+        "Krimi",
+        "Drama"
+      ],
+      "country": "Japonsko",
+      "vod": [
+        "Netflix"
       ]
     },
     {
@@ -143,6 +159,39 @@
       "country": "USA",
       "vod": [
         "Netflix"
+      ]
+    },
+    {
+      "title": "Rod Draka - Série 3",
+      "year": "2026",
+      "type": "seriál",
+      "rating": 91,
+      "poster": "https://image.pmgstatic.com/cache/resized/w936/files/images/film/photos/170/742/170742837_zuidix.jpg",
+      "url": "https://www.csfd.cz/film/785031-rod-draka/1552381-serie-3/prehled/",
+      "genres": [
+        "Akční",
+        "Fantasy"
+      ],
+      "country": "USA",
+      "vod": [
+        "HBO Max"
+      ]
+    },
+    {
+      "title": "Cesta ven",
+      "year": "2022",
+      "type": "seriál",
+      "rating": 74,
+      "poster": "https://image.pmgstatic.com/cache/resized/h125/files/images/film/posters/171/298/171298690_jx4j8a.jpg",
+      "url": "https://www.csfd.cz/film/1111984-cesta-ven/prehled/",
+      "genres": [
+        "Drama",
+        "Horor"
+      ],
+      "country": "USA",
+      "vod": [
+        "HBO Max",
+        "Prime Video"
       ]
     },
     {
@@ -175,55 +224,6 @@
       "country": "Jižní Korea",
       "vod": [
         "Netflix"
-      ]
-    },
-    {
-      "title": "Cesta ven",
-      "year": "2022",
-      "type": "seriál",
-      "rating": 74,
-      "poster": "https://image.pmgstatic.com/cache/resized/h125/files/images/film/posters/171/298/171298690_jx4j8a.jpg",
-      "url": "https://www.csfd.cz/film/1111984-cesta-ven/prehled/",
-      "genres": [
-        "Drama",
-        "Horor"
-      ],
-      "country": "USA",
-      "vod": [
-        "HBO Max",
-        "Prime Video"
-      ]
-    },
-    {
-      "title": "Cesta ven - Série 4",
-      "year": "2026",
-      "type": "seriál",
-      "rating": 63,
-      "poster": "https://image.pmgstatic.com/cache/resized/w936/files/images/film/posters/171/298/171298690_jx4j8a.jpg",
-      "url": "https://www.csfd.cz/film/1111984-cesta-ven/1603084-serie-4/prehled/",
-      "genres": [
-        "Drama",
-        "Horor"
-      ],
-      "country": "USA",
-      "vod": [
-        "VOD"
-      ]
-    },
-    {
-      "title": "Rod Draka",
-      "year": "2022",
-      "type": "seriál",
-      "rating": 79,
-      "poster": "https://image.pmgstatic.com/cache/resized/w936/files/images/film/posters/167/117/167117404_1c04d2.jpg",
-      "url": "https://www.csfd.cz/film/785031-rod-draka/prehled/",
-      "genres": [
-        "Akční",
-        "Fantasy"
-      ],
-      "country": "USA",
-      "vod": [
-        "HBO Max"
       ]
     }
   ]
