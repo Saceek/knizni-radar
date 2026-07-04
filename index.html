@@ -687,13 +687,30 @@ function gameCard(g){
   </div>`;
 }
 
+function comicAsBook(c,i,total){
+  return {
+    title: c.title,
+    author: c.author || "neznámý autor",
+    cat: ["CREW"],
+    rating: c.rating,
+    ratingSource: c.ratingSource,
+    link: c.link,
+    cover: c.cover,
+    readers: total - i,
+    prices: c.price ? [{shop:"CREW", price:c.price, url:c.url}] : [],
+  };
+}
+function allListItems(){
+  const comicBooks = S.comicsBestsellers.map((c,i)=>comicAsBook(c,i,S.comicsBestsellers.length));
+  return [...S.books, ...comicBooks];
+}
 function filterChips(){
-  const c={}; S.books.forEach(b=>(b.cat||[]).forEach(g=>{ if(g) c[g]=(c[g]||0)+1; }));
+  const c={}; allListItems().forEach(b=>(b.cat||[]).forEach(g=>{ if(g) c[g]=(c[g]||0)+1; }));
   return Object.entries(c).sort((a,b)=>b[1]-a[1]).map(x=>x[0]);
 }
 function listFiltered(){
   const q = S.q.trim().toLowerCase();
-  let r = S.books.filter(b => (!q || (b.title+" "+b.author).toLowerCase().includes(q)) && (S.filter==="Vše" || (b.cat||[]).includes(S.filter)));
+  let r = allListItems().filter(b => (!q || (b.title+" "+b.author).toLowerCase().includes(q)) && (S.filter==="Vše" || (b.cat||[]).includes(S.filter)));
   return r.sort((a,b)=>
     S.sort==="readers" ? (b.readers||0)-(a.readers||0) :
     S.sort==="price"   ? minPrice(a)-minPrice(b) :
@@ -963,13 +980,9 @@ function render(){
           <option value="price"${S.sort==='price'?' selected':''}>Nejnižší cena</option>
         </select>
       </div>
-      ${items.length?items.map((b,i)=>card(b,i)).join(""):'<div class="empty">Žádný titul neodpovídá filtru.</div>'}
       ${S.comicsStatus==="loading"?'<div class="note warn">Načítám komiksy…</div>':""}
       ${S.comicsStatus==="demo"?'<div class="note warn">crew.json se nepodařilo načíst.</div>':""}
-      <div class="news-section">Nejprodávanější komiksy CREW <span class="badge">${S.comicsBestsellers.length}</span></div>
-      ${S.comicsBestsellers.length?`<div class="tiles">${S.comicsBestsellers.map(c=>comicTile(c)).join("")}</div>`:""}
-      <div class="news-section">Nové komiksy CREW <span class="badge">${S.comics.length}</span></div>
-      ${S.comics.length?`<div class="tiles">${S.comics.map(c=>comicTile(c)).join("")}</div>`:""}`;
+      ${items.length?items.map((b,i)=>card(b,i)).join(""):'<div class="empty">Žádný titul neodpovídá filtru.</div>'}`;
     const qi=document.getElementById("q"); if(qi){ qi.oninput=e=>{S.q=e.target.value; render(); }; }
     const so=document.getElementById("sort"); if(so) so.onchange=e=>{S.sort=e.target.value; render();};
   }
@@ -1172,7 +1185,13 @@ function mountAddPanel(){
   const rc=document.getElementById('addresults'); if(rc) bindAddButtons(rc);
 }
 
-function addBacklog(t){ const b=S.books.find(x=>x.title===t); if(b && !inBacklog(t)){ S.backlog.push({...b,_category:"book"}); saveBacklogAndSync(S.backlog); render(); } }
+function addBacklog(t){
+  if(inBacklog(t)) return;
+  const b=S.books.find(x=>x.title===t);
+  if(b){ S.backlog.push({...b,_category:"book"}); saveBacklogAndSync(S.backlog); render(); return; }
+  const c=S.comicsBestsellers.find(x=>x.title===t);
+  if(c){ S.backlog.push({...c,_category:"comic"}); saveBacklogAndSync(S.backlog); render(); }
+}
 function addMovieBacklog(t){ const m=S.movies.find(x=>x.title===t); if(m && !inBacklog(t)){ S.backlog.push({...m,_category:"movie"}); saveBacklogAndSync(S.backlog); render(); } }
 function addGameBacklog(t){ const g=S.games.find(x=>x.name===t); if(g && !inBacklog(g.name)){ S.backlog.push({title:g.name,_category:"game",rating:g.rating,reviews:g.reviews,scoreDesc:g.scoreDesc,image:g.image,url:g.url,tags:g.tags,price:g.price,released:g.released}); saveBacklogAndSync(S.backlog); render(); } }
 function addComicBacklog(t){ const c=S.comics.find(x=>x.title===t)||S.comicsBestsellers.find(x=>x.title===t); if(c && !inBacklog(t)){ S.backlog.push({...c,_category:"comic"}); saveBacklogAndSync(S.backlog); render(); } }
