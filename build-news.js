@@ -4,7 +4,8 @@
  * Spouštět PO všech ostatních build skriptech.   node build-news.js
  *
  *  - porovná books.json vs previous-books.json → nové knihy
- *  - porovná crew.json vs previous-crew.json → nové komiksy
+ *  - porovná crew.json (bestsellers) vs previous-crew.json → nové komiksy v CREW žebříčku
+ *    (stejný princip jako u knih – diffuje se přesně ten seznam, co je vidět v Knižní Bestsellery)
  *  - porovná games.json vs previous-games.json → nové hry (vydané za posledních 7 dní)
  *  - porovná movies.json vs previous-movies.json → nové filmy/seriály
  *  - výsledek zapíše do news.json
@@ -42,8 +43,11 @@ function diffBooks(current, previous) {
 }
 
 function diffComics(current, previous) {
-  const cur = (current?.comics || current || []);
-  const prev = new Set((previous?.comics || previous || []).map((c) => c.title));
+  // Diffuje "bestsellers" (Top 30 CREW podle popularity) – přesně ten seznam, který je
+  // vidět jako chip "CREW" v Knižní Bestsellery. Ne "comics" (feed novinek), aby změny
+  // v CREW sekci vždy odpovídaly tomu, co se reálně objeví/zmizí v Novinkách.
+  const cur = (current?.bestsellers || []);
+  const prev = new Set((previous?.bestsellers || []).map((c) => c.title));
   return cur.filter((c) => !prev.has(c.title)).map((c) => ({
     type: "comic",
     title: c.title,
