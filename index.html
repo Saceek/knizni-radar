@@ -392,6 +392,7 @@ let S = {dark:true, view:"news", filter:"Vše", sort:"readers", q:"", books:DEMO
   movies:MOVIES_DEMO, moviesStatus:"idle", moviesUpdatedAt:null, movieType:"Vše", movieSort:"rating", movieQ:"",
   news:null, newsStatus:"idle", newsUpdatedAt:null,
   coming:null, comingStatus:"idle", comingUpdatedAt:null,
+  comics:[], comicsStatus:"idle", comicsUpdatedAt:null,
   addCat:"Vše"};
 
 const esc = s => (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -427,6 +428,18 @@ async function load(){
     if(!Array.isArray(arr) || !arr.length) throw new Error("prázdno");
     S.books = arr; S.updatedAt = d.updatedAt || null; S.status="live";
   }catch(e){ S.books = DEMO; S.status="demo"; }
+  render();
+}
+
+async function loadComics(){
+  S.comicsStatus="loading"; render();
+  try{
+    const r = await fetch("crew.json?t=" + Date.now(), {cache:"no-store"});
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    const d = await r.json(); const arr = d.comics || d;
+    if(!Array.isArray(arr)) throw new Error("prázdno");
+    S.comics = arr; S.comicsUpdatedAt = d.updatedAt || null; S.comicsStatus="live";
+  }catch(e){ S.comics = []; S.comicsStatus="demo"; }
   render();
 }
 
@@ -512,6 +525,25 @@ function newsGameTile(g){
     <div class="tile-meta">${rHtml}${(g.tags||[]).slice(0,3).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}<button class="bk ${bk?'on':''}" data-newsgbk="${esc(g.title)}" style="margin-left:auto">${bk?'✓':'+'}</button></div>
   </div>`;
 }
+function comicTileHtml(c, attr){
+  const coverBg = c.cover ? "" : `style="background:${grad(c.title)};display:flex;align-items:end;padding:6px"`;
+  const coverInner = c.cover
+    ? `<img class="tile-poster" src="${esc(c.cover)}" alt="" onerror="this.style.visibility='hidden'" />`
+    : `<div class="tile-poster" ${coverBg}><span style="font-size:9px;font-weight:700;color:#fff;line-height:1.1">${esc(c.title)}</span></div>`;
+  const rHtml = c.rating!=null ? `<span class="rating ${ratingClass(c.rating)}">${c.rating} %</span>` : `<span class="tag">bez hodnocení</span>`;
+  const priceHtml = c.discount
+    ? `<span style="text-decoration:line-through;color:var(--sub);font-size:11px">${c.originalPrice} Kč</span> <span class="price" style="font-size:13px">${c.price} Kč</span><span class="gdiscount">-${c.discount}%</span>`
+    : (c.price ? `<span class="price" style="font-size:13px">${c.price} Kč</span>` : "");
+  const bk=inBacklog(c.title);
+  return `<div class="tile">${c.firstSeen?daysLeftBadge(c):""}<div class="tile-row">${coverInner}<div>
+    <p class="tile-title">${c.link?`<a href="${esc(c.link)}" target="_blank" rel="noreferrer">`:""}${esc(c.title)}${c.link?"</a>":""}</p>
+    <p class="tile-sub">${esc(c.author||"")}</p>
+    <div class="tile-meta">${rHtml}${priceHtml}<button class="bk ${bk?'on':''}" data-${attr}="${esc(c.title)}" style="margin-left:auto">${bk?'✓':'+'}</button></div>
+    ${c.url?`<a href="${esc(c.url)}" target="_blank" rel="noreferrer" style="font-size:11px;color:var(--cyan)">CREW obchod →</a>`:""}
+  </div></div></div>`;
+}
+function comicTile(c){ return comicTileHtml(c, "cbk"); }
+function newsComicTile(c){ return comicTileHtml(c, "newscbk"); }
 
 async function loadComing(){
   S.comingStatus="loading"; render();
@@ -789,6 +821,7 @@ function render(){
 
     const items = S.news?.items || [];
     const books = items.filter(i=>i.type==="book");
+    const comicsNew = items.filter(i=>i.type==="comic");
     const moviesNew = items.filter(i=>i.type==="movie");
     const seriesNew = items.filter(i=>i.type==="series");
     const games = items.filter(i=>i.type==="game");
@@ -801,6 +834,10 @@ function render(){
       if(books.length){
         html += `<div class="news-section">Nové knihy <span class="badge">${books.length}</span></div>`;
         html += `<div class="tiles">${books.map(newsBookTile).join("")}</div>`;
+      }
+      if(comicsNew.length){
+        html += `<div class="news-section">Nové komiksy <span class="badge">${comicsNew.length}</span></div>`;
+        html += `<div class="tiles">${comicsNew.map(newsComicTile).join("")}</div>`;
       }
       if(moviesNew.length){
         html += `<div class="news-section">Nové filmy <span class="badge">${moviesNew.length}</span></div>`;
@@ -889,7 +926,7 @@ function render(){
       + (items.length?items.map(gameCard).join(""):'<div class="empty">Žádná hra v tomto období a žánru.</div>');
     const gs=document.getElementById("gsort"); if(gs) gs.onchange=e=>{S.gameSort=e.target.value; render();};
   } else if(S.view==="backlog"){
-    const books=backlogByCategory("book"), movies=S.backlog.filter(b=>(b._category||"book")==="movie"), games=backlogByCategory("game");
+    const books=backlogByCategory("book"), movies=S.backlog.filter(b=>(b._category||"book")==="movie"), games=backlogByCategory("game"), comics=backlogByCategory("comic");
     let html = addPanelHtml();
     if(!S.backlog.length){
       html += '<div class="empty" style="padding:24px 16px">Backlog je prázdný.<br>Přidej položku u titulů v žebříčku kliknutím na <b>+ Backlog</b>.</div>';
@@ -897,6 +934,10 @@ function render(){
       if(books.length){
         html += `<div class="news-section">Knihy <span class="badge">${books.length}</span></div>`;
         html += books.map(b=>backlogCard(b)).join("");
+      }
+      if(comics.length){
+        html += `<div class="news-section">Komiksy <span class="badge">${comics.length}</span></div>`;
+        html += `<div class="tiles">${comics.map(c=>comicTile(c)).join("")}</div>`;
       }
       if(movies.length){
         html += `<div class="news-section">Filmy a Seriály <span class="badge">${movies.length}</span></div>`;
@@ -921,7 +962,11 @@ function render(){
           <option value="price"${S.sort==='price'?' selected':''}>Nejnižší cena</option>
         </select>
       </div>
-      ${items.length?items.map((b,i)=>card(b,i)).join(""):'<div class="empty">Žádný titul neodpovídá filtru.</div>'}`;
+      ${items.length?items.map((b,i)=>card(b,i)).join(""):'<div class="empty">Žádný titul neodpovídá filtru.</div>'}
+      <div class="news-section">Komiksy CREW <span class="badge">${S.comics.length}</span></div>
+      ${S.comicsStatus==="loading"?'<div class="note warn">Načítám komiksy…</div>':""}
+      ${S.comicsStatus==="demo"?'<div class="note warn">crew.json se nepodařilo načíst.</div>':""}
+      ${S.comics.length?`<div class="tiles">${S.comics.map(c=>comicTile(c)).join("")}</div>`:""}`;
     const qi=document.getElementById("q"); if(qi){ qi.oninput=e=>{S.q=e.target.value; render(); }; }
     const so=document.getElementById("sort"); if(so) so.onchange=e=>{S.sort=e.target.value; render();};
   }
@@ -1127,10 +1172,12 @@ function mountAddPanel(){
 function addBacklog(t){ const b=S.books.find(x=>x.title===t); if(b && !inBacklog(t)){ S.backlog.push({...b,_category:"book"}); saveBacklogAndSync(S.backlog); render(); } }
 function addMovieBacklog(t){ const m=S.movies.find(x=>x.title===t); if(m && !inBacklog(t)){ S.backlog.push({...m,_category:"movie"}); saveBacklogAndSync(S.backlog); render(); } }
 function addGameBacklog(t){ const g=S.games.find(x=>x.name===t); if(g && !inBacklog(g.name)){ S.backlog.push({title:g.name,_category:"game",rating:g.rating,reviews:g.reviews,scoreDesc:g.scoreDesc,image:g.image,url:g.url,tags:g.tags,price:g.price,released:g.released}); saveBacklogAndSync(S.backlog); render(); } }
+function addComicBacklog(t){ const c=S.comics.find(x=>x.title===t); if(c && !inBacklog(t)){ S.backlog.push({...c,_category:"comic"}); saveBacklogAndSync(S.backlog); render(); } }
 function removeBacklog(t){ S.backlog=S.backlog.filter(x=>x.title!==t); saveBacklogAndSync(S.backlog); render(); }
 function toggleBacklog(t){ inBacklog(t)?removeBacklog(t):addBacklog(t); }
 function toggleMovieBacklog(t){ inBacklog(t)?removeBacklog(t):addMovieBacklog(t); }
 function toggleGameBacklog(t){ inBacklog(t)?removeBacklog(t):addGameBacklog(t); }
+function toggleComicBacklog(t){ inBacklog(t)?removeBacklog(t):addComicBacklog(t); }
 
 document.getElementById("sync-btn").onclick=showSyncSettings;
 document.getElementById("theme").onclick=()=>{S.dark=!S.dark; render();};
@@ -1139,7 +1186,7 @@ document.getElementById("nav").onclick=e=>{const v=e.target.dataset.view; if(v){
   else if(v==="movies" && S.moviesStatus==="idle"){ loadMovies(); }
   else if(v==="news" && S.newsStatus==="idle"){ loadNews(); }
   else if(v==="coming" && S.comingStatus==="idle"){ loadComing(); }
-  else if(v==="list" && S.status==="idle"){ load(); }
+  else if(v==="list"){ if(S.status==="idle") load(); else render(); if(S.comicsStatus==="idle") loadComics(); }
   else { render(); } }};
 document.getElementById("view").onclick=e=>{
   const f=e.target.dataset.filter; if(f){S.filter=f; render(); return;}
@@ -1156,6 +1203,10 @@ document.getElementById("view").onclick=e=>{
   const ngbk=e.target.dataset.newsgbk; if(ngbk){ if(!inBacklog(ngbk)){
     const item=(S.news?.items||[]).find(i=>i.title===ngbk)||(S.coming?.games||[]).find(i=>i.title===ngbk);
     if(item){S.backlog.push(normalizeNewsGame(item)); saveBacklogAndSync(S.backlog); render();}} return;}
+  const cbk=e.target.dataset.cbk; if(cbk){toggleComicBacklog(cbk); return;}
+  const ncbk=e.target.dataset.newscbk; if(ncbk){ if(!inBacklog(ncbk)){
+    const item=(S.news?.items||[]).find(i=>i.title===ncbk);
+    if(item){S.backlog.push({...item,_category:"comic"}); saveBacklogAndSync(S.backlog); render();}} return;}
   const gw=e.target.dataset.gwin; if(gw){S.gameWin=+gw; render(); return;}
   const gg=e.target.dataset.ggenre; if(gg){S.gameGenre=gg; render(); return;}
 };

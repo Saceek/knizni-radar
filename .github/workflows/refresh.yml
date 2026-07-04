@@ -19,6 +19,10 @@ jobs:
         env:
           GOOGLE_BOOKS_API_KEY: ${{ secrets.GOOGLE_BOOKS_KEY }}   # nepovinné; secret klidně zůstává GOOGLE_BOOKS_KEY
 
+      - name: CREW komiksy → crew.json
+        run: node build-crew.js
+        continue-on-error: true       # když CREW/databazeknih zlobí, ať to nezhodí zbytek
+
       - name: Steam → games.json
         run: node build-games.js
         continue-on-error: true       # když Steam zlobí, ať to nezhodí aktualizaci knih
@@ -45,6 +49,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add books.json games.json movies.json coming.json news.json news-history.json previous-books.json previous-games.json previous-movies.json backlog.json
+          git add books.json crew.json games.json movies.json coming.json news.json news-history.json previous-books.json previous-crew.json previous-games.json previous-movies.json backlog.json
           git diff --staged --quiet || git commit -m "data: refresh [skip ci]"
           git push

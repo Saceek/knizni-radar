@@ -4,6 +4,7 @@
  * Spouštět PO všech ostatních build skriptech.   node build-news.js
  *
  *  - porovná books.json vs previous-books.json → nové knihy
+ *  - porovná crew.json vs previous-crew.json → nové komiksy
  *  - porovná games.json vs previous-games.json → nové hry (vydané za posledních 7 dní)
  *  - porovná movies.json vs previous-movies.json → nové filmy/seriály
  *  - výsledek zapíše do news.json
@@ -37,6 +38,25 @@ function diffBooks(current, previous) {
     price: b.prices?.length ? Math.min(...b.prices.map((p) => p.price)) : null,
     priceShop: b.prices?.length ? b.prices.sort((a, c) => a.price - c.price)[0].shop : null,
     cat: b.cat,
+  }));
+}
+
+function diffComics(current, previous) {
+  const cur = (current?.comics || current || []);
+  const prev = new Set((previous?.comics || previous || []).map((c) => c.title));
+  return cur.filter((c) => !prev.has(c.title)).map((c) => ({
+    type: "comic",
+    title: c.title,
+    author: c.author,
+    cover: c.cover,
+    rating: c.rating,
+    ratingSource: c.ratingSource,
+    link: c.link,
+    price: c.price,
+    originalPrice: c.originalPrice,
+    discount: c.discount,
+    url: c.url,
+    publisher: c.publisher,
   }));
 }
 
@@ -83,15 +103,18 @@ function main() {
 
   const books = loadJson("books.json");
   const prevBooks = loadJson("previous-books.json");
+  const comics = loadJson("crew.json");
+  const prevComics = loadJson("previous-crew.json");
   const games = loadJson("games.json");
   const prevGames = loadJson("previous-games.json");
   const movies = loadJson("movies.json");
   const prevMovies = loadJson("previous-movies.json");
 
   const newBooks = books ? diffBooks(books, prevBooks) : [];
+  const newComics = comics ? diffComics(comics, prevComics) : [];
   const newGames = games ? diffGames(games, prevGames) : [];
   const newMovies = movies ? diffMovies(movies, prevMovies) : [];
-  const todaysItems = [...newBooks, ...newMovies, ...newGames];
+  const todaysItems = [...newBooks, ...newComics, ...newMovies, ...newGames];
 
   // Load rolling history, append today's new items with today's date, prune entries older than RETAIN_DAYS
   const now = new Date();
@@ -121,6 +144,7 @@ function main() {
     items: itemsWithAge,
     counts: {
       books: itemsWithAge.filter((i) => i.type === "book").length,
+      comics: itemsWithAge.filter((i) => i.type === "comic").length,
       movies: itemsWithAge.filter((i) => i.type === "movie").length,
       series: itemsWithAge.filter((i) => i.type === "series").length,
       games: itemsWithAge.filter((i) => i.type === "game").length,
@@ -129,10 +153,11 @@ function main() {
 
   fs.writeFileSync(OUT, JSON.stringify(news, null, 2));
   fs.writeFileSync(HISTORY, JSON.stringify(history, null, 2));
-  console.log(`[news] dnes nově: ${newBooks.length} knih, ${newMovies.length} filmů/seriálů, ${newGames.length} her | celkem v okně ${RETAIN_DAYS} dnů: ${itemsWithAge.length} → news.json`);
+  console.log(`[news] dnes nově: ${newBooks.length} knih, ${newComics.length} komiksů, ${newMovies.length} filmů/seriálů, ${newGames.length} her | celkem v okně ${RETAIN_DAYS} dnů: ${itemsWithAge.length} → news.json`);
 
   // Archive current data for next comparison
   if (books) fs.writeFileSync(path.join(DIR, "previous-books.json"), JSON.stringify(books));
+  if (comics) fs.writeFileSync(path.join(DIR, "previous-crew.json"), JSON.stringify(comics));
   if (games) fs.writeFileSync(path.join(DIR, "previous-games.json"), JSON.stringify(games));
   if (movies) fs.writeFileSync(path.join(DIR, "previous-movies.json"), JSON.stringify(movies));
   console.log("[news] previous-*.json aktualizováno");
