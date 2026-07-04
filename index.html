@@ -1053,7 +1053,8 @@ function resultsHtml(){
     const links = cat==="Hry"||cat==="Vše" ? `<a href="https://store.steampowered.com/search/?term=${q}" target="_blank" rel="noreferrer" style="color:var(--cyan)">Hledat na Steamu →</a>` : "";
     const csfdLink = (cat==="Filmy & Seriály"||cat==="Vše") ? `<a href="https://www.csfd.cz/hledat/?q=${q}" target="_blank" rel="noreferrer" style="color:var(--cyan)">Hledat na ČSFD →</a>` : "";
     const dbkLink = (cat==="Knihy"||cat==="Vše") ? `<a href="https://www.databazeknih.cz/vyhledavani/knihy?q=${q}" target="_blank" rel="noreferrer" style="color:var(--cyan)">Hledat na Databazeknih →</a>` : "";
-    return `<div class="tiny" style="padding:8px">Nic nenalezeno.<br><br>${[csfdLink,dbkLink,links].filter(Boolean).join(" &nbsp; ")}</div>`;
+    const errBanner = S.addErr ? `<div class="tiny" style="color:var(--rose);margin-bottom:8px">⚠ Vyhledávání selhalo: ${esc(S.addErr)}. Zkus to prosím znovu.</div>` : "";
+    return `<div class="tiny" style="padding:8px">${errBanner}Nic nenalezeno.<br><br>${[csfdLink,dbkLink,links].filter(Boolean).join(" &nbsp; ")}</div>`;
   }
   return S.addResults.map((r,i)=>{
     const cat=r._category||"book";
@@ -1090,9 +1091,11 @@ async function runSearch(){
   if(searchMovies)(S.movies||[]).forEach(m=>{ if((m.title+" "+(m.country||"")).toLowerCase().includes(ql)) results.push({...m,_category:m.type==="seriál"?"series":"movie"}); });
   if(searchGames)(S.games||[]).forEach(g=>{ if(g.name.toLowerCase().includes(ql)) results.push({title:g.name,_category:"game",image:g.image,url:g.url,tags:g.tags,price:g.price,rating:g.rating}); });
   S.addResults=results.slice(0,12);
+  S.addErr="";
   updateResults();
   S.addBusy=true; updateResults();
   const online=[];
+  const errs=[];
   // Steam search
   if(searchGames){
     try{
@@ -1108,8 +1111,8 @@ async function runSearch(){
           const img=(item.tiny_image||"").replace("shared.akamai.steamstatic.com","shared.cloudflare.steamstatic.com");
           online.push({title:item.name,_category:"game",image:img,url:`https://store.steampowered.com/app/${item.id}/`,tags:[],price,priceOriginal,discount,rating:item.metascore?+item.metascore:null});
         });
-      }
-    }catch(e){}
+      } else { errs.push("Steam: HTTP "+sr.status); }
+    }catch(e){ errs.push("Steam vyhledávání selhalo ("+(e.message||"chyba sítě")+")"); }
   }
   // Databazeknih.cz search (primary, Czech books, via corsproxy)
   if(searchBooks){
@@ -1133,10 +1136,11 @@ async function runSearch(){
           online.push({title,author,cover,_category:"book",link,url:link,cat:["databazeknih.cz"]});
           if(online.filter(o=>o._category==="book").length>=8) break;
         }
-      }
-    }catch(e){}
+      } else { errs.push("Databazeknih: HTTP "+r.status); }
+    }catch(e){ errs.push("Databazeknih vyhledávání selhalo ("+(e.message||"chyba sítě")+")"); }
   }
   S.addResults=[...results.slice(0,12),...online].slice(0,15);
+  if(errs.length && !S.addResults.length) S.addErr=errs.join(" · ");
   S.addBusy=false;
   updateResults();
 }
