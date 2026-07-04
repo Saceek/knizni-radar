@@ -1,9 +1,11 @@
 /**
- * Sáčkův radar – komiksové novinky nakladatelství CREW
+ * Sáčkův radar – komiksy nakladatelství CREW
  * ------------------------------------------------------
  * Node 18+ (globální fetch). Závislost: cheerio.   node build-crew.js
  *
- *  - seznam + cena = z výpisu novinek (obchod.crew.cz/kategorie--3/komiks/novinky)
+ *  - novinky = obchod.crew.cz/kategorie--3/komiks/novinky (posledních 26 vydání)
+ *  - bestsellery = obchod.crew.cz/?sorting=popularity_desc (skutečně nejprodávanější,
+ *    NEslučuje se s novinkami – samostatný žebříček, stejně jako u Kosmasu/Dobrovského)
  *  - autor (scénář/kresba) = z detailu komiksu
  *  - z databazeknih.cz: procentuální HODNOCENÍ + ODKAZ na stránku komiksu
  */
@@ -17,7 +19,8 @@ const CREW_BASE = "https://www.obchod.crew.cz";
 const DBK = "https://www.databazeknih.cz";
 const UA_BROWSER = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
 const DELAY = 1000;
-const MAX_ITEMS = 26;
+const MAX_NOVINKY = 26;
+const MAX_BESTSELLERS = 30;
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -27,7 +30,7 @@ async function getHtml(url, ua = UA_BROWSER) {
   return res.text();
 }
 
-function scrapeNovinky(html) {
+function scrapeList(html) {
   const $ = cheerio.load(html);
   const items = [];
   $("article.item").each((_, el) => {
@@ -61,7 +64,7 @@ function scrapeNovinky(html) {
       url: CREW_BASE + link,
     });
   });
-  return items.slice(0, MAX_ITEMS);
+  return items;
 }
 
 // Fetch author (scénář + kresba) from detail page
@@ -137,24 +140,19 @@ async function enrichDatabazeknih(title) {
   }
 }
 
-async function main() {
-  console.log("[crew] start", new Date().toISOString());
-
-  const listHtml = await getHtml(`${CREW_BASE}/kategorie--3/komiks/novinky`);
-  const items = scrapeNovinky(listHtml);
-  console.log(`[crew] ${items.length} komiksů nalezeno`);
-
-  const comics = [];
+// Obohatí seznam položek (autor + databazeknih hodnocení/odkaz) a vrátí ve výsledném tvaru pro crew.json
+async function enrichList(items, label) {
+  const out = [];
   for (let i = 0; i < items.length; i++) {
     const it = items[i];
-    console.log(`  [${i + 1}/${items.length}] ${it.title}`);
+    console.log(`  [${label} ${i + 1}/${items.length}] ${it.title}`);
 
     const detail = await enrichFromDetail(it.url);
     await sleep(DELAY);
 
     const dbk = await enrichDatabazeknih(it.title);
 
-    comics.push({
+    out.push({
       title: it.title,
       author: detail.author || null,
       cover: it.cover,
@@ -168,9 +166,26 @@ async function main() {
       publisher: "CREW",
     });
   }
+  return out;
+}
 
-  fs.writeFileSync(OUT, JSON.stringify({ updatedAt: new Date().toISOString(), comics }, null, 2));
-  console.log(`[crew] hotovo: ${comics.length} komiksů → crew.json`);
+async function main() {
+  console.log("[crew] start", new Date().toISOString());
+
+  // Novinky – poslední vydání
+  const novinkyHtml = await getHtml(`${CREW_BASE}/kategorie--3/komiks/novinky`);
+  const novinkyItems = scrapeList(novinkyHtml).slice(0, MAX_NOVINKY);
+  console.log(`[crew] novinky: ${novinkyItems.length} komiksů nalezeno`);
+  const comics = await enrichList(novinkyItems, "novinky");
+
+  // Bestsellery – skutečně nejprodávanější (samostatný žebříček, neslučuje se s novinkami)
+  const bestsellersHtml = await getHtml(`${CREW_BASE}/?sorting=popularity_desc&sorting_direction=desc&page=1`);
+  const bestsellersItems = scrapeList(bestsellersHtml).slice(0, MAX_BESTSELLERS);
+  console.log(`[crew] bestsellery: ${bestsellersItems.length} komiksů nalezeno`);
+  const bestsellers = await enrichList(bestsellersItems, "bestseller");
+
+  fs.writeFileSync(OUT, JSON.stringify({ updatedAt: new Date().toISOString(), comics, bestsellers }, null, 2));
+  console.log(`[crew] hotovo: ${comics.length} novinek + ${bestsellers.length} bestsellerů → crew.json`);
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });
