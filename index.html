@@ -400,6 +400,23 @@ const vPrices = b => (b.prices||[]).filter(p=>p&&p.price);
 const minPrice = b => {const v=vPrices(b); return v.length?Math.min(...v.map(p=>p.price)):Infinity;};
 const inBacklog = t => S.backlog.some(b=>b.title===t);
 const backlogByCategory = cat => S.backlog.filter(b=>(b._category||"book")===cat);
+function normalizeNewsBook(item){
+  // news.json book items use singular price/priceShop; backlog cards expect a prices[] array
+  const { price, priceShop, firstSeen, daysLeft, type, ...rest } = item;
+  const prices = item.prices || (price!=null ? [{shop:priceShop||"Obchod", price, url:item.link||"#"}] : []);
+  return { ...rest, prices, _category:"book" };
+}
+function normalizeNewsGame(item){
+  // coming.json games use "genres" field; backlog card expects "tags"
+  const { firstSeen, daysLeft, genres, tags, ...rest } = item;
+  return { ...rest, tags: tags || genres || [], _category:"game" };
+}
+function normalizeNewsMovie(item){
+  // news.json movie/series items use type:"movie"/"series"; coming.json/movies.json already use type:"film"/"seriál"
+  const { firstSeen, daysLeft, type, csfdType, ...rest } = item;
+  const resolvedType = (type==="film"||type==="seriál") ? type : (csfdType || (type==="series"?"seriál":"film"));
+  return { ...rest, type: resolvedType, _category:"movie" };
+}
 
 async function load(){
   S.status="loading"; render();
@@ -1132,13 +1149,13 @@ document.getElementById("view").onclick=e=>{
   const mt=e.target.dataset.mtype; if(mt){S.movieType=mt; render(); return;}
   const mbk=e.target.dataset.mbk; if(mbk){toggleMovieBacklog(mbk); return;}
   const gbk=e.target.dataset.gbk; if(gbk){toggleGameBacklog(gbk); return;}
-  const nbk=e.target.dataset.newsbk; if(nbk){ if(!inBacklog(nbk)){ const item=(S.news?.items||[]).find(i=>i.title===nbk); if(item){S.backlog.push({...item,_category:"book"}); saveBacklogAndSync(S.backlog); render();}} return;}
+  const nbk=e.target.dataset.newsbk; if(nbk){ if(!inBacklog(nbk)){ const item=(S.news?.items||[]).find(i=>i.title===nbk); if(item){S.backlog.push(normalizeNewsBook(item)); saveBacklogAndSync(S.backlog); render();}} return;}
   const nmbk=e.target.dataset.newsmbk; if(nmbk){ if(!inBacklog(nmbk)){
     const item=(S.news?.items||[]).find(i=>i.title===nmbk)||(S.coming?.films||[]).find(i=>i.title===nmbk)||(S.coming?.series||[]).find(i=>i.title===nmbk);
-    if(item){S.backlog.push({...item,_category:"movie"}); saveBacklogAndSync(S.backlog); render();}} return;}
+    if(item){S.backlog.push(normalizeNewsMovie(item)); saveBacklogAndSync(S.backlog); render();}} return;}
   const ngbk=e.target.dataset.newsgbk; if(ngbk){ if(!inBacklog(ngbk)){
     const item=(S.news?.items||[]).find(i=>i.title===ngbk)||(S.coming?.games||[]).find(i=>i.title===ngbk);
-    if(item){S.backlog.push({...item,_category:"game"}); saveBacklogAndSync(S.backlog); render();}} return;}
+    if(item){S.backlog.push(normalizeNewsGame(item)); saveBacklogAndSync(S.backlog); render();}} return;}
   const gw=e.target.dataset.gwin; if(gw){S.gameWin=+gw; render(); return;}
   const gg=e.target.dataset.ggenre; if(gg){S.gameGenre=gg; render(); return;}
 };
