@@ -1099,7 +1099,8 @@ async function runSearch(){
   // Steam search
   if(searchGames){
     try{
-      const sr=await fetch(`https://corsproxy.io/?https://store.steampowered.com/api/storesearch/?term=${encodeURIComponent(q)}&l=czech&cc=cz`);
+      const steamTarget=`https://store.steampowered.com/api/storesearch/?term=${encodeURIComponent(q)}&l=czech&cc=cz`;
+      const sr=await fetch(`/api/proxy?url=${encodeURIComponent(steamTarget)}`);
       if(sr.ok){
         const sd=await sr.json();
         (sd.items||[]).slice(0,6).forEach(item=>{
@@ -1114,10 +1115,11 @@ async function runSearch(){
       } else { errs.push("Steam: HTTP "+sr.status); }
     }catch(e){ errs.push("Steam vyhledávání selhalo ("+(e.message||"chyba sítě")+")"); }
   }
-  // Databazeknih.cz search (primary, Czech books, via corsproxy)
+  // Databazeknih.cz search (primary, Czech books, via vlastní /api/proxy)
   if(searchBooks){
     try{
-      const r=await fetch(`https://corsproxy.io/?https://www.databazeknih.cz/vyhledavani/knihy?q=${encodeURIComponent(q)}`);
+      const dbkTarget=`https://www.databazeknih.cz/vyhledavani/knihy?q=${encodeURIComponent(q)}`;
+      const r=await fetch(`/api/proxy?url=${encodeURIComponent(dbkTarget)}`);
       if(r.ok){
         const html=await r.text();
         // Each entry: <a href="/prehled-knihy/..."><picture>...<img src="COVER" alt="Obálka knihy AUTHOR: TITLE">
