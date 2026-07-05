@@ -1,7 +1,9 @@
 name: Refresh knihovny
 on:
   schedule:
-    - cron: '0 4 * * *'     # denně 04:00 UTC (~5–6 ráno v ČR; cron je vždy v UTC)
+    - cron: '13 3 * * *'    # denně ~3:13 UTC (~4–5 ráno v ČR). Mimo celou hodinu záměrně –
+                            # GitHub cronu na "0 4 * * *" pravidelně přidával 3-4h zpoždění
+                            # (fronta plánovaných úloh je nejvytíženější přesně na hodinu)
   workflow_dispatch: {}      # přidá tlačítko "Run workflow" pro ruční spuštění
 permissions:
   contents: write            # aby mohl commitnout výsledný JSON
