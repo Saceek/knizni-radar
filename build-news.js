@@ -75,6 +75,7 @@ function diffGames(current, previous) {
     .map((g) => ({
       type: "game",
       title: g.name,
+      appid: g.appid,
       rating: g.rating,
       reviews: g.reviews,
       scoreDesc: g.scoreDesc,
