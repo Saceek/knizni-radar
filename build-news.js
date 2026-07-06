@@ -145,7 +145,7 @@ function main() {
   const newComics = comics ? diffComics(comics, prevComics) : [];
   const newGames = games ? diffGames(games, prevGames) : [];
   const newMovies = movies ? diffMovies(movies, prevMovies) : [];
-  const newGamePass = gamepass && prevGamepass ? diffGamePass(gamepass, prevGamepass, games?.games) : [];
+  const newGamePass = gamepass ? diffGamePass(gamepass, prevGamepass, games?.games) : [];
   const todaysItems = [...newBooks, ...newComics, ...newMovies, ...newGames, ...newGamePass];
 
   // Load rolling history, append today's new items with today's date, prune entries older than RETAIN_DAYS
