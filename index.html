@@ -423,6 +423,7 @@ async function loadGamePass(){
     const d = await r.json();
     S.gamePassSet = new Set((d.titles||[]).map(normalizeGameTitle));
   }catch(e){ S.gamePassSet = new Set(); }
+  render();
 }
 function hltbFor(name){ return S.hltbMap ? S.hltbMap.get(normalizeGameTitle(name)) : null; }
 async function loadHLTB(){
@@ -432,6 +433,7 @@ async function loadHLTB(){
     const d = await r.json();
     S.hltbMap = new Map((d.games||[]).map(g=>[normalizeGameTitle(g.title),g]));
   }catch(e){ S.hltbMap = new Map(); }
+  render();
 }
 function hltbHtml(name){
   const h = hltbFor(name);
