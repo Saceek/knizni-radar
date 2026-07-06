@@ -1,0 +1,8 @@
+name = "knizni-radar-refresh-dispatcher"
+main = "worker.js"
+compatibility_date = "2026-01-01"
+
+# Spouští se dvakrát denně (03:13 a 09:13 UTC), aby obešel nespolehlivé
+# interní "schedule" spouštění GitHub Actions (viz worker.js pro důvod).
+[triggers]
+crons = ["13 3 * * *", "13 9 * * *"]
