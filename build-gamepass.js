@@ -6,10 +6,11 @@
  * Používá neoficiální, ale veřejně dostupné Microsoft/Xbox API, které stojí
  * za katalogovými weby (trueachievements, xboxgamepass.com apod.):
  *   1) catalog.gamepass.com/sigls/v2  – vrátí ID produktů v daném Game Pass seznamu
- *   2) displaycatalog.mp.microsoft.com – z ID produktů dotáhne názvy her
+ *   2) displaycatalog.mp.microsoft.com – z ID produktů dotáhne názvy, obrázky, odkazy
  *
- * Výstup: gamepass.json → { updatedAt, titles: ["Elden Ring", ...] }
- * (normalizované názvy se pak porovnávají s hrami ze Steamu v ostatních build skriptech)
+ * Výstup: gamepass.json → { updatedAt, titles: [...], games: [{productId,title,image,url}] }
+ *  - "titles": normalizované porovnávání se Steam hrami (games.json, backlog…)
+ *  - "games": bohatší data pro diff v Novinkách (nově přidané tituly do Game Passu)
  */
 
 const fs = require("fs");
@@ -32,8 +33,18 @@ async function fetchListProductIds() {
   return (Array.isArray(j) ? j : []).map((x) => x.id).filter(Boolean);
 }
 
-async function fetchTitles(ids) {
-  const titles = [];
+const IMAGE_PRIORITY = ["TitledHeroArt", "SuperHeroArt", "BrandedKeyArt", "BoxArt", "Poster"];
+
+function pickImage(images) {
+  for (const purpose of IMAGE_PRIORITY) {
+    const img = (images || []).find((i) => i.ImagePurpose === purpose);
+    if (img?.Uri) return "https:" + img.Uri;
+  }
+  return null;
+}
+
+async function fetchGames(ids) {
+  const games = [];
   const BATCH = 20;
   for (let i = 0; i < ids.length; i += BATCH) {
     const batch = ids.slice(i, i + BATCH);
@@ -41,24 +52,32 @@ async function fetchTitles(ids) {
     try {
       const j = await getJson(url);
       (j.Products || []).forEach((p) => {
-        const title = p?.LocalizedProperties?.[0]?.ProductTitle;
-        if (title) titles.push(title);
+        const lp = p?.LocalizedProperties?.[0];
+        const title = lp?.ProductTitle;
+        if (!title) return;
+        games.push({
+          productId: p.ProductId,
+          title,
+          image: pickImage(lp.Images),
+          url: `https://www.xbox.com/en-us/games/store/-/${p.ProductId}`,
+        });
       });
     } catch (e) {
       console.warn("[gamepass] batch", i, "→", e.message);
     }
   }
-  return titles;
+  return games;
 }
 
 async function main() {
   console.log("[gamepass] start", new Date().toISOString());
   const ids = await fetchListProductIds();
   console.log(`[gamepass] ${ids.length} her v seznamu PC Game Pass`);
-  const titles = await fetchTitles(ids);
-  const unique = [...new Set(titles)].sort();
-  fs.writeFileSync(OUT, JSON.stringify({ updatedAt: new Date().toISOString(), titles: unique }, null, 2));
-  console.log(`[gamepass] hotovo: ${unique.length} názvů → gamepass.json`);
+  const games = await fetchGames(ids);
+  const uniqueGames = [...new Map(games.map((g) => [g.productId, g])).values()].sort((a, b) => a.title.localeCompare(b.title));
+  const titles = [...new Set(uniqueGames.map((g) => g.title))].sort();
+  fs.writeFileSync(OUT, JSON.stringify({ updatedAt: new Date().toISOString(), titles, games: uniqueGames }, null, 2));
+  console.log(`[gamepass] hotovo: ${titles.length} názvů → gamepass.json`);
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });

@@ -14,6 +14,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const { normalizeGameTitle } = require("./gamepass-match");
 
 const DIR = __dirname;
 const OUT = path.join(DIR, "news.json");
@@ -86,6 +87,29 @@ function diffGames(current, previous) {
     }));
 }
 
+// Nové přírůstky do PC Game Passu (ne nové hry na Steamu - katalog Game Passu se mění nezávisle
+// na datu vydání, hry do něj přibývají roky po releasu). Obohatíme o cenu/hodnocení/tagy ze Steamu,
+// pokud tam stejná hra (podle normalizovaného názvu) je - jinak se zobrazí jen s obrázkem z MS katalogu.
+function diffGamePass(current, previous, steamGames) {
+  const cur = current?.games || [];
+  const prevIds = new Set((previous?.games || []).map((g) => g.productId));
+  const steamByTitle = new Map((steamGames || []).map((g) => [normalizeGameTitle(g.name), g]));
+  return cur.filter((g) => !prevIds.has(g.productId)).map((g) => {
+    const steam = steamByTitle.get(normalizeGameTitle(g.title));
+    return {
+      type: "game",
+      title: g.title,
+      url: steam?.url || g.url,
+      image: steam?.image || g.image,
+      price: steam?.price ?? null,
+      rating: steam?.rating ?? null,
+      tags: steam?.tags || [],
+      released: steam?.released ?? null,
+      gamePass: true,
+    };
+  });
+}
+
 function diffMovies(current, previous) {
   const cur = (current?.movies || current || []);
   const prevUrls = new Set((previous?.movies || previous || []).map((m) => m.url));
@@ -114,12 +138,15 @@ function main() {
   const prevGames = loadJson("previous-games.json");
   const movies = loadJson("movies.json");
   const prevMovies = loadJson("previous-movies.json");
+  const gamepass = loadJson("gamepass.json");
+  const prevGamepass = loadJson("previous-gamepass.json");
 
   const newBooks = books ? diffBooks(books, prevBooks) : [];
   const newComics = comics ? diffComics(comics, prevComics) : [];
   const newGames = games ? diffGames(games, prevGames) : [];
   const newMovies = movies ? diffMovies(movies, prevMovies) : [];
-  const todaysItems = [...newBooks, ...newComics, ...newMovies, ...newGames];
+  const newGamePass = gamepass && prevGamepass ? diffGamePass(gamepass, prevGamepass, games?.games) : [];
+  const todaysItems = [...newBooks, ...newComics, ...newMovies, ...newGames, ...newGamePass];
 
   // Load rolling history, append today's new items with today's date, prune entries older than RETAIN_DAYS
   const now = new Date();
@@ -158,13 +185,14 @@ function main() {
 
   fs.writeFileSync(OUT, JSON.stringify(news, null, 2));
   fs.writeFileSync(HISTORY, JSON.stringify(history, null, 2));
-  console.log(`[news] dnes nově: ${newBooks.length} knih, ${newComics.length} komiksů, ${newMovies.length} filmů/seriálů, ${newGames.length} her | celkem v okně ${RETAIN_DAYS} dnů: ${itemsWithAge.length} → news.json`);
+  console.log(`[news] dnes nově: ${newBooks.length} knih, ${newComics.length} komiksů, ${newMovies.length} filmů/seriálů, ${newGames.length} her, ${newGamePass.length} přírůstků do Game Passu | celkem v okně ${RETAIN_DAYS} dnů: ${itemsWithAge.length} → news.json`);
 
   // Archive current data for next comparison
   if (books) fs.writeFileSync(path.join(DIR, "previous-books.json"), JSON.stringify(books));
   if (comics) fs.writeFileSync(path.join(DIR, "previous-crew.json"), JSON.stringify(comics));
   if (games) fs.writeFileSync(path.join(DIR, "previous-games.json"), JSON.stringify(games));
   if (movies) fs.writeFileSync(path.join(DIR, "previous-movies.json"), JSON.stringify(movies));
+  if (gamepass) fs.writeFileSync(path.join(DIR, "previous-gamepass.json"), JSON.stringify(gamepass));
   console.log("[news] previous-*.json aktualizováno");
 }
 
