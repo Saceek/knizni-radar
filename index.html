@@ -259,7 +259,7 @@ async function loadRemoteBacklog(){
   // With token: read from GitHub API (always fresh, no Pages cache delay)
   if(token){
     try{
-      const r=await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${BACKLOG_PATH}`,{headers:{Authorization:`Bearer ${token}`,Accept:"application/vnd.github.raw"}});
+      const r=await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${BACKLOG_PATH}?t=${Date.now()}`,{cache:"no-store",headers:{Authorization:`Bearer ${token}`,Accept:"application/vnd.github.raw"}});
       if(!r.ok) throw new Error("API "+r.status);
       const d=await r.json();
       return Array.isArray(d)?d:null;
