@@ -125,9 +125,12 @@ async function main() {
     try {
       const results = await searchGame(endpoint, auth, title);
       const match = bestMatch(title, results);
-      if (match && match.comp_plus) {
-        out.push({ title, hours: Math.round((match.comp_plus / 3600) * 10) / 10, url: `${BASE}/game/${match.game_id}` });
-        console.log(`  ✓ ${title} → ${(match.comp_plus / 3600).toFixed(1)} h`);
+      // Main + Extra (comp_plus) je preferovaný styl hraní; když ho HLTB pro danou hru nemá
+      // (moc nová/krátká hra bez dost dat), spadneme na Main Story (comp_main) místo prázdna.
+      const seconds = match?.comp_plus || match?.comp_main;
+      if (match && seconds) {
+        out.push({ title, hours: Math.round((seconds / 3600) * 10) / 10, url: `${BASE}/game/${match.game_id}` });
+        console.log(`  ✓ ${title} → ${(seconds / 3600).toFixed(1)} h${match.comp_plus ? "" : " (Main Story)"}`);
       } else {
         console.log(`  ✗ ${title} (nenalezeno)`);
       }
