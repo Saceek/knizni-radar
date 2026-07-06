@@ -132,6 +132,8 @@
   .gdiscount{font-family:var(--mono);font-size:11px;font-weight:700;color:#0a0a0a;background:var(--emerald);border-radius:4px;padding:1px 5px;margin-left:4px}
   .card.gamepass,.tile.gamepass{border-left:3px solid #107C10}
   .gp-icon{color:#107C10;font-size:13px;margin-right:4px;vertical-align:-1px}
+  .hltb-link{font-family:var(--mono);font-size:12px;color:var(--sub);text-decoration:none;white-space:nowrap}
+  .hltb-link:hover{color:var(--cyan)}
   .mposter{width:64px;height:96px;border-radius:8px;object-fit:cover;flex:none;background:var(--chip);box-shadow:0 8px 20px rgba(0,0,0,.5)}
   .mvod{font-size:11px;padding:3px 9px;border-radius:999px;background:rgba(139,125,255,.15);color:var(--violet);border:1px solid rgba(139,125,255,.3)}
   .mvod.vod-kino{background:rgba(251,191,36,.12);color:#fbbf24;border-color:rgba(251,191,36,.3)}
@@ -422,6 +424,20 @@ async function loadGamePass(){
     S.gamePassSet = new Set((d.titles||[]).map(normalizeGameTitle));
   }catch(e){ S.gamePassSet = new Set(); }
 }
+function hltbFor(name){ return S.hltbMap ? S.hltbMap.get(normalizeGameTitle(name)) : null; }
+async function loadHLTB(){
+  try{
+    const r = await fetch("hltb.json?t=" + Date.now(), {cache:"no-store"});
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    const d = await r.json();
+    S.hltbMap = new Map((d.games||[]).map(g=>[normalizeGameTitle(g.title),g]));
+  }catch(e){ S.hltbMap = new Map(); }
+}
+function hltbHtml(name){
+  const h = hltbFor(name);
+  if(!h) return "";
+  return `<a href="${esc(h.url)}" target="_blank" rel="noreferrer" class="hltb-link" style="margin-left:auto" title="Průměrná doba dohrání (Main + Extra) na HowLongToBeat">⏱ ${h.hours} h</a>`;
+}
 const minPrice = b => {const v=vPrices(b); return v.length?Math.min(...v.map(p=>p.price)):Infinity;};
 const inBacklog = t => S.backlog.some(b=>b.title===t);
 const backlogByCategory = cat => S.backlog.filter(b=>(b._category||"book")===cat);
@@ -546,7 +562,7 @@ function newsGameTile(g){
   return `<div class="tile ${g.gamePass?'gamepass':''}">${daysLeftBadge(g)}${imgHtml}
     <p class="tile-title">${g.gamePass?gpBadge(g.title):""}<a href="${esc(g.url||'#')}" target="_blank" rel="noreferrer">${esc(g.title)}</a></p>
     <p class="tile-sub">${g.price?esc(g.price):""}</p>
-    <div class="tile-meta">${rHtml}${(g.tags||[]).slice(0,3).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}<button class="bk ${bk?'on':''}" data-newsgbk="${esc(g.title)}" style="margin-left:auto">${bk?'✓':'+'}</button></div>
+    <div class="tile-meta">${rHtml}${(g.tags||[]).slice(0,3).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}${hltbHtml(g.title)}<button class="bk ${bk?'on':''}" data-newsgbk="${esc(g.title)}" style="${hltbFor(g.title)?'':'margin-left:auto'}">${bk?'✓':'+'}</button></div>
   </div>`;
 }
 function comicTileHtml(c, attr){
@@ -703,7 +719,7 @@ function gameCard(g){
         ${g.price?`<div class="gprice">${esc(g.price)}${g.discount?`<span class="gdiscount">-${g.discount}%</span>`:""}</div>`:""}
       </div></div>
       <div class="meta">${(g.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
-      <div class="actions"><button class="bk ${inBacklog(g.name)?'on':''}" data-gbk="${esc(g.name)}">${inBacklog(g.name)?'✓ V backlogu':'+ Backlog'}</button></div>
+      <div class="actions"><button class="bk ${inBacklog(g.name)?'on':''}" data-gbk="${esc(g.name)}">${inBacklog(g.name)?'✓ V backlogu':'+ Backlog'}</button>${hltbHtml(g.name)}</div>
     </div>
   </div>`;
 }
@@ -821,7 +837,7 @@ function backlogGameCard(g){
         ${g.discount?`<p class="muted"><span style="text-decoration:line-through">${esc(g.priceOriginal||"")}</span> → ${esc(g.price||"")} <span class="gdiscount">-${g.discount}%</span></p>`:`<p class="muted">${g.price?esc(g.price):""}</p>`}
       </div><div style="text-align:right">${rHtml}</div></div>
       <div class="meta">${(g.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
-      <div class="actions"><button class="bk rm" data-rm="${esc(g.title)}">✕ Odebrat</button></div>
+      <div class="actions"><button class="bk rm" data-rm="${esc(g.title)}">✕ Odebrat</button>${hltbHtml(g.title)}</div>
     </div>
   </div>`;
 }
@@ -1234,6 +1250,7 @@ document.getElementById("view").onclick=e=>{
 
 loadNews();
 loadGamePass();
+loadHLTB();
 syncBacklog();
 </script>
 </body>
