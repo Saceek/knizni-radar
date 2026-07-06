@@ -314,7 +314,7 @@ async function syncBacklog(){
   if(remote){
     // Always use remote as source of truth on load
     saveBacklog(remote); S.backlog=remote;
-    _syncStatus=getGHToken()?"ok":"ok";
+    _syncStatus=getGHToken()?"ok":"off";
   } else {
     // No remote: use local
     S.backlog=loadBacklog();
