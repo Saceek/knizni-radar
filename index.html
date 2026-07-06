@@ -130,6 +130,8 @@
   .gprice{font-family:var(--mono);font-size:14px;font-weight:600;color:var(--emerald);margin-top:6px}
   .gprice-orig{font-family:var(--mono);font-size:12px;color:var(--sub);text-decoration:line-through;margin-top:4px}
   .gdiscount{font-family:var(--mono);font-size:11px;font-weight:700;color:#0a0a0a;background:var(--emerald);border-radius:4px;padding:1px 5px;margin-left:4px}
+  .card.gamepass,.tile.gamepass{border-left:3px solid #107C10}
+  .gp-icon{color:#107C10;font-size:13px;margin-right:4px;vertical-align:-1px}
   .mposter{width:64px;height:96px;border-radius:8px;object-fit:cover;flex:none;background:var(--chip);box-shadow:0 8px 20px rgba(0,0,0,.5)}
   .mvod{font-size:11px;padding:3px 9px;border-radius:999px;background:rgba(139,125,255,.15);color:var(--violet);border:1px solid rgba(139,125,255,.3)}
   .mvod.vod-kino{background:rgba(251,191,36,.12);color:#fbbf24;border-color:rgba(251,191,36,.3)}
@@ -400,6 +402,9 @@ const ratingClass = r => r>=80?"r-high":r>=40?"r-mid":"r-low";
 // Brandová barva VOD platformy → CSS třída (sdílené všemi kartami/dlaždicemi)
 const vodClass = v => {const k=(v||"").toLowerCase().replace(/[^a-z]/g,''); return k.includes('netflix')?'vod-netflix':k.includes('disney')?'vod-disney':k.includes('prime')?'vod-prime':k.includes('sledovani')?'vod-sledovanitv':k.includes('hbo')||k==='max'?'vod-hbo':k.includes('apple')?'vod-apple':k==='kino'?'vod-kino':'';};
 const vPrices = b => (b.prices||[]).filter(p=>p&&p.price);
+// Malá gamepad ikonka pro Game Pass odznak (žádná icon-fonta na stránce, tak inline SVG)
+const GP_ICON = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px"><rect x="2" y="7" width="20" height="11" rx="4"/><line x1="7" y1="10.5" x2="7" y2="14.5"/><line x1="5" y1="12.5" x2="9" y2="12.5"/><circle cx="16" cy="10.5" r="1"/><circle cx="18.5" cy="13" r="1"/></svg>';
+const gpBadge = (title) => `<span class="gp-icon" title="Dostupné v PC Game Passu">${GP_ICON}</span>`;
 const minPrice = b => {const v=vPrices(b); return v.length?Math.min(...v.map(p=>p.price)):Infinity;};
 const inBacklog = t => S.backlog.some(b=>b.title===t);
 const backlogByCategory = cat => S.backlog.filter(b=>(b._category||"book")===cat);
@@ -521,8 +526,8 @@ function newsGameTile(g){
   const rHtml = g.rating ? `<span class="rating ${ratingClass(g.rating)}">${g.rating} %</span>` : "";
   const imgHtml = g.image ? `<img class="tile-img" loading="lazy" decoding="async" src="${esc(g.image)}" alt="" onerror="this.style.visibility='hidden'" />` : "";
   const bk=inBacklog(g.title);
-  return `<div class="tile">${daysLeftBadge(g)}${imgHtml}
-    <p class="tile-title"><a href="${esc(g.url||'#')}" target="_blank" rel="noreferrer">${esc(g.title)}</a></p>
+  return `<div class="tile ${g.gamePass?'gamepass':''}">${daysLeftBadge(g)}${imgHtml}
+    <p class="tile-title">${g.gamePass?gpBadge(g.title):""}<a href="${esc(g.url||'#')}" target="_blank" rel="noreferrer">${esc(g.title)}</a></p>
     <p class="tile-sub">${g.price?esc(g.price):""}</p>
     <div class="tile-meta">${rHtml}${(g.tags||[]).slice(0,3).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}<button class="bk ${bk?'on':''}" data-newsgbk="${esc(g.title)}" style="margin-left:auto">${bk?'✓':'+'}</button></div>
   </div>`;
@@ -668,11 +673,11 @@ function gameCard(g){
     `https://cdn.cloudflare.steamstatic.com/steam/apps/${g.appid}/header.jpg`
   ].filter(Boolean))];
   const fb=esc(JSON.stringify(cands));
-  return `<div class="card">
+  return `<div class="card ${g.gamePass?'gamepass':''}">
     <a href="${esc(g.url)}" target="_blank" rel="noreferrer"><img class="gimg" loading="lazy" decoding="async" src="${esc(cands[0]||'')}" data-fb='${fb}' data-i="0" onerror="gimgErr(this)" alt="" /></a>
     <div class="body">
       <div class="row"><div style="min-width:0">
-        <p class="title"><a href="${esc(g.url)}" target="_blank" rel="noreferrer">${esc(g.name)}</a></p>
+        <p class="title">${g.gamePass?gpBadge(g.name):""}<a href="${esc(g.url)}" target="_blank" rel="noreferrer">${esc(g.name)}</a></p>
         <p class="muted">${esc(rel)}${rev}</p>
       </div>
       <div style="text-align:right;white-space:nowrap">
@@ -791,11 +796,11 @@ function backlogMovieCard(m){
 function backlogGameCard(g){
   const imgHtml = g.image ? `<img class="gimg" loading="lazy" decoding="async" src="${esc(g.image)}" alt="" onerror="this.style.visibility='hidden'" />` : "";
   const rHtml = g.rating ? `<span class="rating ${ratingClass(g.rating)}" title="${esc(g.scoreDesc||'Steam')}">${g.rating} %</span>` : "";
-  return `<div class="card">
+  return `<div class="card ${g.gamePass?'gamepass':''}">
     ${imgHtml?`<a href="${esc(g.url||'#')}" target="_blank" rel="noreferrer">${imgHtml}</a>`:""}
     <div class="body">
       <div class="row"><div style="min-width:0">
-        <p class="title"><a href="${esc(g.url||'#')}" target="_blank" rel="noreferrer">${esc(g.title)}</a></p>
+        <p class="title">${g.gamePass?gpBadge(g.title):""}<a href="${esc(g.url||'#')}" target="_blank" rel="noreferrer">${esc(g.title)}</a></p>
         ${g.discount?`<p class="muted"><span style="text-decoration:line-through">${esc(g.priceOriginal||"")}</span> → ${esc(g.price||"")} <span class="gdiscount">-${g.discount}%</span></p>`:`<p class="muted">${g.price?esc(g.price):""}</p>`}
       </div><div style="text-align:right">${rHtml}</div></div>
       <div class="meta">${(g.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
@@ -1170,7 +1175,7 @@ function addBacklog(t){
   if(c){ S.backlog.push({...c,_category:"comic"}); saveBacklogAndSync(S.backlog); render(); }
 }
 function addMovieBacklog(t){ const m=S.movies.find(x=>x.title===t); if(m && !inBacklog(t)){ S.backlog.push({...m,_category:"movie"}); saveBacklogAndSync(S.backlog); render(); } }
-function addGameBacklog(t){ const g=S.games.find(x=>x.name===t); if(g && !inBacklog(g.name)){ S.backlog.push({title:g.name,_category:"game",rating:g.rating,reviews:g.reviews,scoreDesc:g.scoreDesc,image:g.image,url:g.url,tags:g.tags,price:g.price,released:g.released}); saveBacklogAndSync(S.backlog); render(); } }
+function addGameBacklog(t){ const g=S.games.find(x=>x.name===t); if(g && !inBacklog(g.name)){ S.backlog.push({title:g.name,_category:"game",rating:g.rating,reviews:g.reviews,scoreDesc:g.scoreDesc,image:g.image,url:g.url,tags:g.tags,price:g.price,released:g.released,gamePass:!!g.gamePass}); saveBacklogAndSync(S.backlog); render(); } }
 function addComicBacklog(t){ const c=S.comics.find(x=>x.title===t)||S.comicsBestsellers.find(x=>x.title===t); if(c && !inBacklog(t)){ S.backlog.push({...c,_category:"comic"}); saveBacklogAndSync(S.backlog); render(); } }
 function removeBacklog(t){ S.backlog=S.backlog.filter(x=>x.title!==t); saveBacklogAndSync(S.backlog); render(); }
 function toggleBacklog(t){ inBacklog(t)?removeBacklog(t):addBacklog(t); }

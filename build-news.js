@@ -82,6 +82,7 @@ function diffGames(current, previous) {
       url: g.url,
       tags: g.tags,
       released: g.released,
+      gamePass: !!g.gamePass,
     }));
 }
 

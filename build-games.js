@@ -12,6 +12,7 @@
 const cheerio = require("cheerio");
 const fs = require("fs");
 const path = require("path");
+const { loadGamePassSet, isInGamePass } = require("./gamepass-match");
 
 const OUT = path.join(__dirname, "games.json");
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
@@ -126,14 +127,17 @@ async function main() {
   }
 
   console.log(`[games] v okně viděno ${rowsSeen} her, z toho ${withReview} se souhrnem recenzí; kandidátů ${cand.size}. Dotahuji detaily…`);
+  const gamePassSet = loadGamePassSet(__dirname);
   const games = [];
   for (const [appid, info] of cand) {
     const det = await fetchDetails(appid);
     await sleep(DELAY);
     if (det && det.type && det.type !== "game") continue;   // pryč DLC / soundtrack / demo
+    const name = (det && det.name) || info.name;
     games.push({
       appid: +appid,
-      name: (det && det.name) || info.name,
+      name,
+      gamePass: isInGamePass(name, gamePassSet),
       rating: info.rating,
       reviews: info.reviews,
       scoreDesc: info.desc || null,

@@ -9,6 +9,7 @@
 const cheerio = require("cheerio");
 const fs = require("fs");
 const path = require("path");
+const { loadGamePassSet, isInGamePass } = require("./gamepass-match");
 
 const BACKLOG_FILE = path.join(__dirname, "backlog.json");
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36";
@@ -128,10 +129,18 @@ async function main() {
     (item.rating == null || !item.prices?.length)
   );
 
-  if (!toEnrich.length) { console.log("[enrich] vše obohaceno, nic k dělání"); return; }
-  console.log(`[enrich] ${toEnrich.length} knih k obohacení`);
-
   let changed = 0;
+
+  // Game Pass flag pro hry v backlogu (přepočítá se vždy, katalog se mění denně)
+  const gamePassSet = loadGamePassSet(__dirname);
+  backlog.forEach((item) => {
+    if (item._category !== "game") return;
+    const flag = isInGamePass(item.title, gamePassSet);
+    if (item.gamePass !== flag) { item.gamePass = flag; changed++; }
+  });
+
+  if (!toEnrich.length && !changed) { console.log("[enrich] vše obohaceno, nic k dělání"); return; }
+  if (toEnrich.length) console.log(`[enrich] ${toEnrich.length} knih k obohacení`);
   for (const item of toEnrich) {
     console.log(`  → ${item.title}`);
 
