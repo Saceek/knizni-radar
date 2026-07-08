@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-08T03:15:02.564Z",
+  "updatedAt": "2026-07-08T04:15:05.245Z",
   "games": [
     {
       "title": "Hot Dogs, Horseshoes & Hand Grenades",
@@ -114,6 +114,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050, Intel Core i5-6600K"
     },
     {
+      "title": "NTE: Neverness to Everness",
+      "tier": "red",
+      "gpu": "NVIDIA GeForce RTX 3060 / AMD Radeon RX 6700 / Qualcomm® Adreno X2 GPU",
+      "cpu": "Intel Core i7-12700 (12th Gen) / Snapdragon® X2 Elite",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6700 / Qualcomm® Adreno X2 GPU, Intel Core i7-12700 (12th Gen) / Snapdragon® X2 Elite"
+    },
+    {
       "title": "REWIND",
       "tier": "green",
       "gpu": "NVIDIA GTX 1060 6GB",
@@ -136,14 +144,6 @@
       "cpu": "AMD Ryzen 7 5700 / Intel core I5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT, AMD Ryzen 7 5700 / Intel core I5"
-    },
-    {
-      "title": "NTE: Neverness to Everness",
-      "tier": "red",
-      "gpu": "NVIDIA GeForce RTX 3060 / AMD Radeon RX 6700 / Qualcomm® Adreno X2 GPU",
-      "cpu": "Intel Core i7-12700 (12th Gen) / Snapdragon® X2 Elite",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6700 / Qualcomm® Adreno X2 GPU, Intel Core i7-12700 (12th Gen) / Snapdragon® X2 Elite"
     },
     {
       "title": "Crococo",
@@ -200,102 +200,6 @@
       "cpu": "Intel i5-8400 @ 2.8GHz OR AMD Ryzen 5 1600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1050 OR AMD Radeon RX 560, Intel i5-8400 @ 2.8GHz OR AMD Ryzen 5 1600"
-    },
-    {
-      "title": "Beso's Shawarma",
-      "tier": "green",
-      "gpu": "AMD Radeon Vega 7 / NVIDIA GeForce GTX 1050",
-      "cpu": "Intel Core i5 8th Gen / AMD Ryzen 3 or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: AMD Radeon Vega 7 / NVIDIA GeForce GTX 1050, Intel Core i5 8th Gen / AMD Ryzen 3 or better"
-    },
-    {
-      "title": "SPORTAL",
-      "tier": "green",
-      "gpu": "GeForce GTX 1060 or equivalent",
-      "cpu": "Intel i5 4th gen or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 1060 or equivalent, Intel i5 4th gen or equivalent"
-    },
-    {
-      "title": "Junkster",
-      "tier": "orange",
-      "gpu": "Nvidia RTX 2060 or equivalent",
-      "cpu": "Intel Core i7-10700, AMD Ryzen 7 3700X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia RTX 2060 or equivalent, Intel Core i7-10700, AMD Ryzen 7 3700X"
-    },
-    {
-      "title": "The Office Void",
-      "tier": "green",
-      "gpu": "NVIDIA GEFORCE GTX 1050 Ti (2 GB)",
-      "cpu": "Intel Core i5 8th Gen",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GEFORCE GTX 1050 Ti (2 GB), Intel Core i5 8th Gen"
-    },
-    {
-      "title": "Flawed Tactics",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1060 / AMD RX 580 (4 GB VRAM, DirectX 11)",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580 (4 GB VRAM, DirectX 11), Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
-      "title": "Chasing Whiskers",
-      "tier": "orange",
-      "gpu": "NVIDIA GeForce RTX 2070 / AMD Radeon RX 5700 XT / Intel Arc B570",
-      "cpu": "Intel Core i7-12700K / AMD Ryzen 7 5800X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 / AMD Radeon RX 5700 XT / Intel Arc B570, Intel Core i7-12700K / AMD Ryzen 7 5800X"
-    },
-    {
-      "title": "WOBBLY HEIST",
-      "tier": "red",
-      "gpu": "NVIDIA GeForce RTX 3060 Ti / RTX 4060 / AMD Radeon RX 6700 XT",
-      "cpu": "Intel Core i7-10700K / AMD Ryzen 7 3700X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 Ti / RTX 4060 / AMD Radeon RX 6700 XT, Intel Core i7-10700K / AMD Ryzen 7 3700X"
-    },
-    {
-      "title": "Runeveil",
-      "tier": "green",
-      "gpu": "Intel HD Graphics 3000 or better",
-      "cpu": "Intel® Core™ i3",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 3000 or better, Intel® Core™ i3"
-    },
-    {
-      "title": "The Queen's Gondola",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1660 Ti / RTX 2060 / AMD RX 5600 XT",
-      "cpu": "Intel Core i5-11400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1660 Ti / RTX 2060 / AMD RX 5600 XT, Intel Core i5-11400 / AMD Ryzen 5 3600"
-    },
-    {
-      "title": "Lobotomy",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1060 / AMD RX 580 (6 GB VRAM)",
-      "cpu": "Intel Core i5-4460 / AMD FX-6300",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GTX 1060 / AMD RX 580 (6 GB VRAM), Intel Core i5-4460 / AMD FX-6300"
-    },
-    {
-      "title": "Once Upon A Card",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1660 / AMD Radeon RX 6600",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 6600, Intel Core i5-10400 / AMD Ryzen 5 3600"
-    },
-    {
-      "title": "Bounce 2",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1050 Ti, AMD Radeon RX 560, or better",
-      "cpu": "Intel Core i5-11400 or AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1050 Ti, AMD Radeon RX 560, or better, Intel Core i5-11400 or AMD Ryzen 5 3600"
     },
     {
       "title": "Drink Factory Simulator - Prologue",
