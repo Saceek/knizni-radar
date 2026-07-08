@@ -1,6 +1,14 @@
 {
-  "updatedAt": "2026-07-08T14:15:29.865Z",
+  "updatedAt": "2026-07-08T15:15:25.389Z",
   "games": [
+    {
+      "title": "Granblue Fantasy: Relink",
+      "tier": "red",
+      "gpu": "NVIDIA® GeForce RTX™ 2080 8GB / AMD Radeon™ RX 6700 XT 8GB",
+      "cpu": "Intel® Core™ i7-8700 / AMD Ryzen™ 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA® GeForce RTX™ 2080 8GB / AMD Radeon™ RX 6700 XT 8GB, Intel® Core™ i7-8700 / AMD Ryzen™ 5 3600"
+    },
     {
       "title": "Hot Dogs, Horseshoes & Hand Grenades",
       "tier": "orange",
@@ -42,20 +50,20 @@
       "note": "Doporučená konfigurace: Intel HD 5000 / NVIDIA GT 710 or equivalent, 2.5 GHz Dual Core or better"
     },
     {
-      "title": "Dimhaven - The Lost Source",
-      "tier": "green",
-      "gpu": "GTX 1060 / RX 580",
-      "cpu": "Intel Core i5 2.5 GHz or AMD equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GTX 1060 / RX 580, Intel Core i5 2.5 GHz or AMD equivalent"
-    },
-    {
       "title": "NTE: Neverness to Everness",
       "tier": "red",
       "gpu": "NVIDIA GeForce RTX 3060 / AMD Radeon RX 6700 / Qualcomm® Adreno X2 GPU",
       "cpu": "Intel Core i7-12700 (12th Gen) / Snapdragon® X2 Elite",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6700 / Qualcomm® Adreno X2 GPU, Intel Core i7-12700 (12th Gen) / Snapdragon® X2 Elite"
+    },
+    {
+      "title": "Dimhaven - The Lost Source",
+      "tier": "green",
+      "gpu": "GTX 1060 / RX 580",
+      "cpu": "Intel Core i5 2.5 GHz or AMD equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GTX 1060 / RX 580, Intel Core i5 2.5 GHz or AMD equivalent"
     },
     {
       "title": "Dragon Kisser",
@@ -298,20 +306,20 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1050 Ti, AMD Radeon RX 560, or better, Intel Core i5-11400 or AMD Ryzen 5 3600"
     },
     {
-      "title": "Drink Factory Simulator - Prologue",
-      "tier": "green",
-      "gpu": "Nvidia GTX 960 4GB or higher",
-      "cpu": "Intel Core i7-6700k or AMD Ryzen 3 1200X",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Nvidia GTX 960 4GB or higher, Intel Core i7-6700k or AMD Ryzen 3 1200X"
-    },
-    {
       "title": "Double Driver",
       "tier": "green",
       "gpu": "INTEL HD GRAPHICS",
       "cpu": "Intel DUAL CORE",
       "usedMinimum": true,
       "note": "Minimální konfigurace: INTEL HD GRAPHICS, Intel DUAL CORE"
+    },
+    {
+      "title": "Drink Factory Simulator - Prologue",
+      "tier": "green",
+      "gpu": "Nvidia GTX 960 4GB or higher",
+      "cpu": "Intel Core i7-6700k or AMD Ryzen 3 1200X",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Nvidia GTX 960 4GB or higher, Intel Core i7-6700k or AMD Ryzen 3 1200X"
     },
     {
       "title": "Quack Quack Up",
