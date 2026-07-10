@@ -1101,12 +1101,17 @@ function resultsHtml(){
     return `<div class="tiny" style="padding:8px">${hints[cat]||hints.Vše}</div>`;
   }
   if(!S.addResults.length){
-    const q=encodeURIComponent(S.addQ.trim());
+    const rawQ = S.addQ.trim();
+    const q=encodeURIComponent(rawQ);
     const links = cat==="Hry"||cat==="Vše" ? `<a href="https://store.steampowered.com/search/?term=${q}" target="_blank" rel="noreferrer" style="color:var(--cyan)">Hledat na Steamu →</a>` : "";
     const csfdLink = (cat==="Filmy & Seriály"||cat==="Vše") ? `<a href="https://www.csfd.cz/hledat/?q=${q}" target="_blank" rel="noreferrer" style="color:var(--cyan)">Hledat na ČSFD →</a>` : "";
     const dbkLink = (cat==="Knihy"||cat==="Vše") ? `<a href="https://www.databazeknih.cz/vyhledavani/knihy?q=${q}" target="_blank" rel="noreferrer" style="color:var(--cyan)">Hledat na Databazeknih →</a>` : "";
     const errBanner = S.addErr ? `<div class="tiny" style="color:var(--rose);margin-bottom:8px">⚠ Vyhledávání selhalo: ${esc(S.addErr)}. Zkus to prosím znovu.</div>` : "";
-    return `<div class="tiny" style="padding:8px">${errBanner}Nic nenalezeno.<br><br>${[csfdLink,dbkLink,links].filter(Boolean).join(" &nbsp; ")}</div>`;
+    // ČSFD blokuje živé vyhledávání (anti-bot) - nabídneme přidat holý záznam, který
+    // build-enrich-backlog.js při příštím běhu doplní o rok/plakát/hodnocení z ČSFD.
+    const bareAddBtn = (cat==="Filmy & Seriály"||cat==="Vše") && rawQ && !inBacklog(rawQ)
+      ? `<div style="margin-top:10px"><button class="bk" data-addbare="${esc(rawQ)}">+ Přidat i bez nalezení</button></div>` : "";
+    return `<div class="tiny" style="padding:8px">${errBanner}Nic nenalezeno.<br><br>${[csfdLink,dbkLink,links].filter(Boolean).join(" &nbsp; ")}${bareAddBtn}</div>`;
   }
   return S.addResults.map((r,i)=>{
     const cat=r._category||"book";
@@ -1206,6 +1211,14 @@ function bindAddButtons(rc){
     S.backlog.push(item);
     saveBacklogAndSync(S.backlog);
     S.addMsg="Přidáno ✓ – "+r.title;
+    render();
+  });
+  rc.querySelectorAll('[data-addbare]').forEach(btn=>btn.onclick=()=>{
+    const title=btn.dataset.addbare;
+    if(!title||inBacklog(title)) return;
+    S.backlog.push({title, _category:"movie", url:`https://www.csfd.cz/hledat/?q=${encodeURIComponent(title)}`});
+    saveBacklogAndSync(S.backlog);
+    S.addMsg="Přidáno ✓ – "+title+" (detaily doplní příští aktualizace dat)";
     render();
   });
 }
