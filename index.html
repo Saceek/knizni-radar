@@ -155,6 +155,25 @@
   .modal label{font-size:13px;color:var(--sub);display:block;margin:10px 0 4px}
   .modal input{width:100%;font-family:var(--mono);font-size:13px}
   .modal .mrow{display:flex;gap:8px;margin-top:14px}
+  .modal textarea{width:100%;font-family:inherit;font-size:13px;resize:vertical;background:var(--input);border:1px solid var(--cb);border-radius:10px;padding:9px 12px;color:var(--text)}
+  .cat-pill{flex:1;background:var(--chip);color:var(--chipt);border:1px solid var(--cb);font-size:12px;padding:8px;border-radius:999px;cursor:pointer;font-weight:600}
+  .cat-pill.on{background:linear-gradient(135deg,var(--violet),var(--cyan));color:#0f172a;border-color:transparent}
+  .date-pill{background:var(--chip);color:var(--chipt);border:1px solid var(--cb);font-size:12px;padding:7px 12px;border-radius:999px;cursor:pointer}
+  .date-pill.on{background:rgba(139,125,255,.16);color:var(--violet);border-color:rgba(139,125,255,.4);font-weight:700}
+  .diary-suggest{background:var(--card);border:1px solid var(--cb);border-top:none;border-radius:0 0 10px 10px;margin:0 0 14px;max-height:220px;overflow-y:auto}
+  .diary-suggest-item{display:flex;align-items:center;gap:10px;padding:8px 12px;cursor:pointer}
+  .diary-suggest-item:hover,.diary-suggest-item.on{background:rgba(139,125,255,.1)}
+  .diary-suggest-thumb{width:26px;height:36px;border-radius:4px;flex:none;background-size:cover;background-position:center}
+  .diary-month{font-family:var(--disp);font-size:15px;font-weight:700;color:var(--text);margin:22px 0 12px;letter-spacing:.02em}
+  .diary-month:first-child{margin-top:6px}
+  .diary-row{display:flex;align-items:center;gap:14px;margin-bottom:14px;position:relative}
+  .diary-date{width:56px;text-align:right;font-size:11px;color:var(--sub);flex:none;font-family:var(--mono)}
+  .diary-dot{width:10px;height:10px;border-radius:50%;flex:none}
+  .diary-dot.book{background:var(--violet)} .diary-dot.game{background:var(--emerald)} .diary-dot.movie{background:var(--cyan)}
+  .diary-thumb{width:40px;height:56px;border-radius:6px;flex:none;background-size:cover;background-position:center;box-shadow:0 6px 14px rgba(0,0,0,.4)}
+  .diary-note{font-size:12px;color:var(--sub);margin-top:2px;font-style:italic}
+  .diary-rm{margin-left:auto;background:transparent;border:none;color:var(--sub);cursor:pointer;font-size:16px;padding:4px 8px}
+  .diary-rm:hover{color:var(--rose)}
   .sync-badge{font-family:var(--mono);font-size:10px;padding:2px 7px;border-radius:999px;margin-left:6px}
   .sync-badge.ok{background:rgba(74,222,128,.14);color:var(--emerald)}
   .sync-badge.off{background:rgba(251,191,36,.12);color:var(--amber)}
@@ -221,6 +240,7 @@ window.addEventListener('resize',snapTetris);
       <div><h1>Sáčkův radar</h1><p class="muted">knihy · hry · filmy a seriály</p></div>
     </div>
     <div style="display:flex;gap:8px">
+      <button class="btn" id="diary-btn">📖 Deník</button>
       <button class="btn" id="sync-btn">☁ Sync</button>
       <button class="btn" id="theme">🌞</button>
     </div>
@@ -240,6 +260,7 @@ const DATA_URL = "books.json";
 const GBOOKS_KEY = "";
 const gbKey = () => GBOOKS_KEY ? "&key="+GBOOKS_KEY : "";
 const LS_KEY = "knizniRadarBacklog";
+const LS_DIARY_KEY = "knizniRadarDiary";
 const PALETTE = ["#4f46e5,#312e81","#d97706,#78350f","#0d9488,#134e4a","#e11d48,#881337","#7c3aed,#4c1d95","#0369a1,#0c4a6e","#15803d,#14532d"];
 function grad(seed=""){ let h=0; for(const ch of seed) h=(h*31+ch.charCodeAt(0))>>>0; const p=PALETTE[h%PALETTE.length].split(","); return `linear-gradient(135deg,${p[0]},${p[1]})`; }
 
@@ -254,7 +275,9 @@ const LS_TOKEN = "knizniRadarGHToken";
 const REPO_OWNER = "Saceek";
 const REPO_NAME = "knizni-radar";
 const BACKLOG_PATH = "backlog.json";
+const DIARY_PATH = "diary.json";
 let _syncStatus = "off";
+let _diarySyncStatus = "off";
 let _syncError = "";
 
 function getGHToken(){ return localStorage.getItem(LS_TOKEN)||""; }
@@ -338,6 +361,209 @@ async function saveBacklogAndSync(a){
   }
 }
 
+function loadDiary(){ try{ return JSON.parse(localStorage.getItem(LS_DIARY_KEY))||[]; }catch(e){ return []; } }
+function saveDiary(a){ try{ localStorage.setItem(LS_DIARY_KEY, JSON.stringify(a)); }catch(e){} }
+
+async function loadRemoteDiary(){
+  const token=getGHToken();
+  if(token){
+    try{
+      const r=await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${DIARY_PATH}?t=${Date.now()}`,{cache:"no-store",headers:{Authorization:`Bearer ${token}`,Accept:"application/vnd.github.raw"}});
+      if(!r.ok) throw new Error("API "+r.status);
+      const d=await r.json();
+      return Array.isArray(d)?d:null;
+    }catch(e){ console.warn("[diary-sync] API read failed, trying Pages:",e.message); }
+  }
+  try{
+    const r=await fetch(DIARY_PATH+"?t="+Date.now(),{cache:"no-store"});
+    if(!r.ok) return null;
+    const d=await r.json();
+    return Array.isArray(d)?d:null;
+  }catch(e){ return null; }
+}
+
+async function saveRemoteDiary(data){
+  const token=getGHToken();
+  if(!token) return false;
+  try{
+    const apiUrl=`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${DIARY_PATH}`;
+    const getR=await fetch(apiUrl+"?t="+Date.now(),{cache:"no-store",headers:{Authorization:`Bearer ${token}`,Accept:"application/vnd.github+json"}});
+    let sha=null;
+    if(getR.ok){ sha=(await getR.json()).sha; }
+    else if(getR.status!==404){ return false; }
+    const jsonStr=JSON.stringify(data,null,2);
+    const bytes=new TextEncoder().encode(jsonStr);
+    let binStr=""; for(let i=0;i<bytes.length;i++) binStr+=String.fromCharCode(bytes[i]);
+    const content=btoa(binStr);
+    const body={message:"diary: sync",content,branch:"main"};
+    if(sha) body.sha=sha;
+    const r=await fetch(apiUrl,{method:"PUT",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify(body)});
+    return r.ok;
+  }catch(e){ console.warn("[diary-sync] save error:",e.message); return false; }
+}
+
+async function syncDiary(){
+  _diarySyncStatus="syncing"; render();
+  const remote=await loadRemoteDiary();
+  if(remote){ saveDiary(remote); S.diary=remote; }
+  else { S.diary=loadDiary(); }
+  _diarySyncStatus=getGHToken()?"ok":"off";
+  render();
+}
+
+async function saveDiaryAndSync(a){
+  saveDiary(a);
+  if(getGHToken()){
+    _diarySyncStatus="syncing"; render();
+    const ok=await saveRemoteDiary(a);
+    _diarySyncStatus=ok?"ok":"err";
+    render();
+  }
+}
+
+const DIARY_MONTHS = ["Leden","Únor","Březen","Duben","Květen","Červen","Červenec","Srpen","Září","Říjen","Listopad","Prosinec"];
+function diaryMonthLabel(dateStr){ const d=new Date(dateStr+"T00:00:00"); return `${DIARY_MONTHS[d.getMonth()]} ${d.getFullYear()}`; }
+
+function diaryViewHtml(){
+  const sorted = [...S.diary].sort((a,b)=> b.date.localeCompare(a.date));
+  const n = S.diary.length;
+  let html = `<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+    <div class="muted">${n} záznam${n===1?"":(n>=2&&n<=4?"y":"ů")} v deníku</div>
+    <button class="addbtn" id="diary-add-btn">+ Přidat záznam</button>
+  </div>`;
+  if(!sorted.length){
+    html += '<div class="empty" style="padding:24px 16px">Deník je zatím prázdný.<br>Přidej první záznam tlačítkem výše.</div>';
+    return html;
+  }
+  let lastMonth=null;
+  sorted.forEach(e=>{
+    const idx = S.diary.indexOf(e);
+    const m = diaryMonthLabel(e.date);
+    if(m!==lastMonth){ html += `<div class="diary-month">${esc(m)}</div>`; lastMonth=m; }
+    const d = new Date(e.date+"T00:00:00");
+    const dateShort = `${d.getDate()}. ${d.getMonth()+1}.`;
+    const thumbStyle = e.image? `background-image:url('${esc(e.image)}')` : `background:${grad(e.title)}`;
+    const sub = e._category==="book" ? esc(e.author||"kniha") : e._category==="game" ? "hra" : (e.year?`film / seriál · ${esc(e.year)}`:"film / seriál");
+    html += `<div class="diary-row">
+      <span class="diary-date">${dateShort}</span>
+      <span class="diary-dot ${e._category}"></span>
+      <div class="diary-thumb" style="${thumbStyle}"></div>
+      <div style="min-width:0;flex:1">
+        <div style="font-weight:700;font-size:13px">${e.url?`<a href="${esc(e.url)}" target="_blank" rel="noreferrer">${esc(e.title)}</a>`:esc(e.title)}</div>
+        <div class="muted" style="font-size:11px">${sub}</div>
+        ${e.note?`<div class="diary-note">${esc(e.note)}</div>`:""}
+      </div>
+      <button class="diary-rm" data-diary-rm="${idx}" title="Odebrat ze záznamu">✕</button>
+    </div>`;
+  });
+  return html;
+}
+
+function diarySearchCandidates(cat){
+  const q = S.diaryQ.trim().toLowerCase();
+  if(!q) return [];
+  const out=[];
+  const pushIf=(arr,mapFn)=>arr.forEach(x=>{ const t=mapFn(x); if(t && t.title && t.title.toLowerCase().includes(q) && out.length<8) out.push(t); });
+  if(cat==="book"){
+    pushIf(S.books,b=>({title:b.title,sub:b.author,image:b.cover,source:"knižní žebříček"}));
+    pushIf(backlogByCategory("book"),b=>({title:b.title,sub:b.author,image:b.cover,source:"z Backlogu"}));
+  } else if(cat==="game"){
+    pushIf(S.games,g=>({title:g.name,sub:"",image:g.image,source:"Steam"}));
+    pushIf(backlogByCategory("game"),g=>({title:g.title,sub:"",image:g.image,source:"z Backlogu"}));
+  } else {
+    pushIf(S.movies,m=>({title:m.title,sub:m.year,image:m.poster,source:"ČSFD"}));
+    pushIf(S.backlog.filter(b=>(b._category||"book")==="movie"),m=>({title:m.title,sub:m.year,image:m.poster,source:"z Backlogu"}));
+  }
+  const seen=new Set(); return out.filter(x=>{ if(seen.has(x.title)) return false; seen.add(x.title); return true; });
+}
+
+function diaryModalHtml(){
+  const cats=[["book","Kniha"],["game","Hra"],["movie","Film / Seriál"]];
+  const catBtns = cats.map(([c,label])=>`<button class="cat-pill ${S.diaryCat===c?'on':''}" data-diarycat="${c}">${label}</button>`).join("");
+  const candidates = diarySearchCandidates(S.diaryCat);
+  const suggestHtml = S.diaryQ.trim() ? `<div class="diary-suggest">${
+    candidates.length ? candidates.map(c=>`<div class="diary-suggest-item ${S.diarySelected&&S.diarySelected.title===c.title?'on':''}" data-diarypick="${esc(c.title)}">
+        <div class="diary-suggest-thumb" style="${c.image?`background-image:url('${esc(c.image)}')`:`background:${grad(c.title)}`}"></div>
+        <div style="min-width:0"><div style="font-size:12px;font-weight:700">${esc(c.title)}</div><div class="muted" style="font-size:10px">${c.sub?esc(c.sub)+" · ":""}${esc(c.source)}</div></div>
+      </div>`).join("")
+    : `<div class="tiny" style="padding:8px">Nic nenalezeno v načtených datech - uloží se jen podle zadaného názvu.</div>`
+  }</div>` : "";
+
+  const today = new Date().toISOString().slice(0,10);
+  const yesterday = new Date(Date.now()-86400000).toISOString().slice(0,10);
+  const dateBtns = `<button class="date-pill ${S.diaryDate===today?'on':''}" data-diarydate="${today}">Dnes</button>
+    <button class="date-pill ${S.diaryDate===yesterday?'on':''}" data-diarydate="${yesterday}">Včera</button>
+    <input type="date" id="diary-date-input" value="${esc(S.diaryDate)}" class="date-pill" style="padding:6px 10px" />`;
+
+  return `<div class="modal">
+    <h2>Nový záznam do deníku</h2>
+    <label>Co jsi zažil/a?</label>
+    <div class="mrow" style="margin-top:0">${catBtns}</div>
+    <label>Název</label>
+    <input id="diary-q" placeholder="Hledat titul…" value="${esc(S.diaryQ)}" autocomplete="off" />
+    ${suggestHtml}
+    <label>Kdy jsi to dokončil/a?</label>
+    <div class="mrow" style="margin-top:0;flex-wrap:wrap">${dateBtns}</div>
+    <label>Poznámka <span style="color:var(--sub);font-weight:400">(nepovinné)</span></label>
+    <textarea id="diary-note" rows="2" placeholder="Např. dojem, hodnocení pro sebe…">${esc(S.diaryNote)}</textarea>
+    <div class="mrow">
+      <button class="addbtn" id="diary-save">Uložit do deníku</button>
+      <button class="btn" id="diary-cancel">Zrušit</button>
+    </div>
+  </div>`;
+}
+
+function showDiaryModal(){
+  const existing=document.getElementById("diary-modal");
+  if(existing){ existing.remove(); return; }
+  S.diaryCat="book"; S.diaryQ=""; S.diarySelected=null; S.diaryDate=new Date().toISOString().slice(0,10); S.diaryNote="";
+  const div=document.createElement("div");
+  div.id="diary-modal";
+  div.className="modal-overlay";
+  div.innerHTML = diaryModalHtml();
+  document.body.appendChild(div);
+  mountDiaryModal(div);
+  div.addEventListener("click",e=>{ if(e.target===div) div.remove(); });
+}
+
+function mountDiaryModal(div){
+  div.querySelectorAll("[data-diarycat]").forEach(b=>b.onclick=()=>{ S.diaryCat=b.dataset.diarycat; S.diarySelected=null; refreshDiaryModal(div); });
+  const qi=div.querySelector("#diary-q");
+  if(qi){ qi.oninput=e=>{ S.diaryQ=e.target.value; S.diarySelected=null; refreshDiaryModal(div); }; qi.focus(); qi.setSelectionRange(qi.value.length,qi.value.length); }
+  div.querySelectorAll("[data-diarypick]").forEach(el=>el.onclick=()=>{
+    const title=el.dataset.diarypick;
+    const cand=diarySearchCandidates(S.diaryCat).find(c=>c.title===title);
+    S.diarySelected=cand||{title}; S.diaryQ=title;
+    refreshDiaryModal(div);
+  });
+  div.querySelectorAll("[data-diarydate]").forEach(b=>b.onclick=()=>{ S.diaryDate=b.dataset.diarydate; refreshDiaryModal(div); });
+  const dateInput=div.querySelector("#diary-date-input");
+  if(dateInput) dateInput.onchange=e=>{ S.diaryDate=e.target.value; refreshDiaryModal(div); };
+  const noteInput=div.querySelector("#diary-note");
+  if(noteInput) noteInput.oninput=e=>{ S.diaryNote=e.target.value; };
+  const cancel=div.querySelector("#diary-cancel"); if(cancel) cancel.onclick=()=>div.remove();
+  const save=div.querySelector("#diary-save");
+  if(save) save.onclick=()=>{
+    const title=(S.diaryQ||"").trim();
+    if(!title){ alert("Zadej název"); return; }
+    const sel=S.diarySelected;
+    const entry={
+      title: sel?.title||title,
+      _category:S.diaryCat,
+      image: sel?.image||null,
+      author: S.diaryCat==="book"?(sel?.sub||null):undefined,
+      year: S.diaryCat==="movie"?(sel?.sub||null):undefined,
+      date:S.diaryDate,
+      note:(S.diaryNote||"").trim()||null,
+    };
+    S.diary.push(entry);
+    saveDiaryAndSync(S.diary);
+    div.remove();
+    render();
+  };
+}
+function refreshDiaryModal(div){ div.innerHTML=diaryModalHtml(); mountDiaryModal(div); }
+
 function showSyncSettings(){
   const existing=document.getElementById("sync-modal");
   if(existing){ existing.remove(); return; }
@@ -400,7 +626,8 @@ let S = {dark:localStorage.getItem("knizniRadarTheme")!=="light", view:"news", f
   news:null, newsStatus:"idle", newsUpdatedAt:null,
   coming:null, comingStatus:"idle", comingUpdatedAt:null,
   comics:[], comicsBestsellers:[], comicsStatus:"idle", comicsUpdatedAt:null,
-  addCat:"Vše"};
+  addCat:"Vše",
+  diary:loadDiary(), diaryCat:"book", diaryQ:"", diaryDate:new Date().toISOString().slice(0,10), diaryNote:"", diarySelected:null};
 
 const esc = s => (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const ratingClass = r => r>=80?"r-high":r>=40?"r-mid":"r-low";
@@ -1030,6 +1257,15 @@ function render(){
     }
     view.innerHTML = html;
     mountAddPanel();
+  } else if(S.view==="diary"){
+    view.innerHTML = diaryViewHtml();
+    document.getElementById("diary-add-btn").onclick=showDiaryModal;
+    document.querySelectorAll("[data-diary-rm]").forEach(btn=>btn.onclick=()=>{
+      const idx=+btn.dataset.diaryRm;
+      S.diary.splice(idx,1);
+      saveDiaryAndSync(S.diary);
+      render();
+    });
   } else {
     const chips = ["Vše",...filterChips()].map(c=>`<button class="chip ${S.filter===c?'on':''}" data-filter="${esc(c)}">${esc(c)}</button>`).join("");
     const items = listFiltered();
@@ -1256,6 +1492,7 @@ function toggleGameBacklog(t){ inBacklog(t)?removeBacklog(t):addGameBacklog(t); 
 function toggleComicBacklog(t){ inBacklog(t)?removeBacklog(t):addComicBacklog(t); }
 
 document.getElementById("sync-btn").onclick=showSyncSettings;
+document.getElementById("diary-btn").onclick=()=>{S.view="diary"; render();};
 document.getElementById("theme").onclick=()=>{S.dark=!S.dark; localStorage.setItem("knizniRadarTheme",S.dark?"dark":"light"); render();};
 document.getElementById("nav").onclick=e=>{const v=e.target.dataset.view; if(v){S.view=v; S.expanded=null;
   if(v==="steam" && S.gamesStatus==="idle"){ loadGames(); }
@@ -1292,6 +1529,7 @@ loadGamePass();
 loadHLTB();
 loadHwCompare();
 syncBacklog();
+syncDiary();
 </script>
 </body>
 </html>
