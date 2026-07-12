@@ -578,14 +578,14 @@ function diarySearchCandidates(cat){
   const out=[];
   const pushIf=(arr,mapFn)=>arr.forEach(x=>{ const t=mapFn(x); if(t && t.title && t.title.toLowerCase().includes(q) && out.length<8) out.push(t); });
   if(cat==="book"){
-    pushIf(S.books,b=>({title:b.title,sub:b.author,image:b.cover,source:"knižní žebříček"}));
-    pushIf(backlogByCategory("book"),b=>({title:b.title,sub:b.author,image:b.cover,source:"z Backlogu"}));
+    pushIf(S.books,b=>({title:b.title,sub:b.author,image:b.cover,source:"knižní žebříček",url:b.link}));
+    pushIf(backlogByCategory("book"),b=>({title:b.title,sub:b.author,image:b.cover,source:"z Backlogu",url:b.link}));
   } else if(cat==="game"){
-    pushIf(S.games,g=>({title:g.name,sub:"",image:g.image,source:"Steam"}));
-    pushIf(backlogByCategory("game"),g=>({title:g.title,sub:"",image:g.image,source:"z Backlogu"}));
+    pushIf(S.games,g=>({title:g.name,sub:"",image:g.image,source:"Steam",url:g.url}));
+    pushIf(backlogByCategory("game"),g=>({title:g.title,sub:"",image:g.image,source:"z Backlogu",url:g.url}));
   } else {
-    pushIf(S.movies,m=>({title:m.title,sub:m.year,image:m.poster,source:"ČSFD"}));
-    pushIf(S.backlog.filter(b=>(b._category||"book")==="movie"),m=>({title:m.title,sub:m.year,image:m.poster,source:"z Backlogu"}));
+    pushIf(S.movies,m=>({title:m.title,sub:m.year,image:m.poster,source:"ČSFD",url:m.url}));
+    pushIf(S.backlog.filter(b=>(b._category||"book")==="movie"),m=>({title:m.title,sub:m.year,image:m.poster,source:"z Backlogu",url:m.url}));
   }
   const seen=new Set(); return out.filter(x=>{ if(seen.has(x.title)) return false; seen.add(x.title); return true; });
 }
@@ -664,6 +664,7 @@ function mountDiaryModal(div){
       title: sel?.title||title,
       _category:S.diaryCat,
       image: sel?.image||null,
+      url: sel?.url||null,
       author: S.diaryCat==="book"?(sel?.sub||null):undefined,
       year: S.diaryCat==="movie"?(sel?.sub||null):undefined,
       date:S.diaryDate,
