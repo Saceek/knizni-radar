@@ -8,12 +8,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#080b16; --text:#e9edfb; --sub:#8a96b8;
-    --card:rgba(255,255,255,.04); --cb:rgba(150,170,255,.13);
-    --chip:rgba(255,255,255,.05); --chipt:#c2cbe6; --chipon:#fff; --chipont:#0f172a; --input:rgba(255,255,255,.045);
-    --emerald:#4ade80; --amber:#fbbf24; --rose:#fb4d7d; --cyan:#37e3d4; --violet:#8b7dff;
-    --glow:rgba(139,125,255,.16); --glow2:rgba(55,227,212,.10); --grid:rgba(140,160,255,.05);
-    --orb1:rgba(139,125,255,.18); --orb2:rgba(55,227,212,.14);
+    --page:#050b16; --win:#4a2028; --winb:#5c2830;
+    --bg:#3a1820; --text:#fdeef0; --sub:#c98890;
+    --card:#3a1820; --cb:rgba(255,255,255,.08);
+    --chip:rgba(255,255,255,.06); --chipt:#e8b0b8; --chipon:#fff; --chipont:#4a2028; --input:rgba(0,0,0,.22);
+    --emerald:#7ee787; --amber:#ffd23e; --rose:#ff7a8a; --cyan:#37e3d4; --violet:#c9a0ff;
+    --accent:#e8503a;
+    --glow:rgba(232,80,58,.18); --glow2:rgba(255,210,62,.10); --grid:rgba(255,255,255,.04);
+    --orb1:rgba(232,80,58,.16); --orb2:rgba(255,210,62,.1);
     --disp:"Space Grotesk",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
   }
   .light{
@@ -26,16 +28,14 @@
   }
   *{box-sizing:border-box}
   body{margin:0;color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh;
-    background:var(--bg);background-attachment:fixed}
+    background:var(--page,var(--bg));background-attachment:fixed}
+  .light{--page:#eef1fa}
   @keyframes gridScroll{0%{background-position:0 0}100%{background-position:0 46px}}
   @keyframes orbPulse1{0%,100%{opacity:.13;transform:translate(-50%,-50%) scale(1)}50%{opacity:.22;transform:translate(-50%,-50%) scale(1.15)}}
   @keyframes orbPulse2{0%,100%{opacity:.10;transform:translate(-50%,-50%) scale(1.1)}50%{opacity:.18;transform:translate(-50%,-50%) scale(.9)}}
   @keyframes orbDrift1{0%{top:-5%;left:75%}25%{top:10%;left:80%}50%{top:5%;left:70%}75%{top:-2%;left:78%}100%{top:-5%;left:75%}}
   @keyframes orbDrift2{0%{top:8%;left:-2%}25%{top:2%;left:5%}50%{top:12%;left:-5%}75%{top:5%;left:2%}100%{top:8%;left:-2%}}
-  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
-    background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:46px 46px;
-    animation:gridScroll 8s linear infinite;
-    -webkit-mask:linear-gradient(#000 60%,transparent);mask:linear-gradient(#000 60%,transparent)}
+  body::before{display:none}
   body::after{content:"";position:fixed;pointer-events:none;z-index:0;
     width:500px;height:500px;border-radius:50%;
     top:-5%;left:75%;
@@ -46,31 +46,44 @@
     top:8%;left:-2%;
     background:var(--orb2,rgba(55,227,212,.14));filter:blur(70px);
     animation:orbPulse2 7s ease-in-out infinite 2s, orbDrift2 25s ease-in-out infinite}
-  @keyframes tetrisFall{0%,14%{opacity:0}16%{opacity:.10}85%{opacity:.08}100%{opacity:0}}
+  @keyframes tetrisFall{0%,14%{opacity:0}16%{opacity:.05}85%{opacity:.04}100%{opacity:0}}
   @keyframes tetrisMove{0%{top:-200px}100%{top:1150px}}
-  .tetris{position:fixed;pointer-events:none;z-index:0;top:-200px;opacity:0;animation:tetrisMove var(--dur,42s) linear infinite var(--del,0s), tetrisFall var(--dur,42s) linear infinite var(--del,0s)}
+  .tetris{display:none}
   .tetris>svg{display:block}
   .sprite{position:absolute;bottom:100%;image-rendering:pixelated}
   .sprite svg{width:46px;height:46px}
-  .wrap{max-width:980px;margin:0 auto;padding:26px 16px;position:relative;z-index:1}
+  .wrap{max-width:2200px;margin:0 auto;padding:10px;position:relative;z-index:1;min-height:100vh;box-sizing:border-box}
+  @media(min-width:900px){ .wrap{padding:clamp(8px,1vw,20px)} }
+  @media(max-width:640px){ .wrap{padding:4px} }
+  .launcher{background:var(--win);border-radius:32px;padding:22px;display:flex;gap:18px;align-items:flex-start;box-shadow:0 30px 70px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.04)}
+  .launcher-main{flex:1;min-width:0}
+  .launcher-rail{width:62px;flex:none;background:var(--winb);border-radius:24px;padding:14px 0;display:flex;flex-direction:column;align-items:center;gap:6px;position:sticky;top:20px}
+  .rail-btn{position:relative;width:42px;height:42px;border-radius:14px;border:none;background:transparent;color:var(--sub);font-size:17px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s,color .2s}
+  .rail-btn:hover{background:rgba(255,255,255,.07);color:var(--text)}
+  .rail-sep{width:28px;height:1px;background:rgba(255,255,255,.1);margin:6px 0}
   .row{display:flex;align-items:center;justify-content:space-between;gap:12px}
   h1{font-family:var(--disp);font-size:25px;margin:0;letter-spacing:-.02em;font-weight:700}
   .muted{color:var(--sub);font-size:13px;margin:3px 0 0}
-  .logo{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,var(--amber),var(--rose));display:grid;place-items:center;box-shadow:0 8px 22px rgba(251,77,125,.32),inset 0 0 0 1px rgba(255,255,255,.22)}
+  .logo{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,var(--amber),var(--accent));display:grid;place-items:center;box-shadow:0 8px 22px rgba(232,80,58,.35),inset 0 0 0 1px rgba(255,255,255,.22)}
   .logo svg{width:28px;height:28px}
   .btn{font-family:var(--disp);background:var(--chip);color:var(--chipt);border:1px solid var(--cb);border-radius:12px;padding:9px 13px;font-size:13px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
-  .btn:hover{border-color:var(--violet);color:var(--text)}
+  .btn:hover{border-color:var(--accent);color:var(--text)}
   .note{font-family:var(--mono);font-size:12px;border-radius:12px;padding:9px 13px;margin:14px 0;line-height:1.5;letter-spacing:.02em}
-  .note.ok{background:rgba(74,222,128,.08);border:1px solid rgba(74,222,128,.3);color:var(--emerald)}
-  .note.warn{background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.3);color:var(--amber)}
-  .nav{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 10px}
-  .nav .tab{font-family:var(--disp);padding:9px 18px;border-radius:12px;font-size:14px;font-weight:600;border:1px solid var(--cb);background:var(--chip);color:var(--chipt);cursor:pointer;white-space:nowrap}
-  @media(max-width:560px){
-    .nav{gap:6px}
-    .nav .tab{padding:8px 12px;font-size:13px;flex:1 1 auto;text-align:center}
+  .note.ok{background:rgba(255,255,255,.04);border:1px solid var(--cb);color:var(--sub)}
+  .note.warn{background:rgba(255,210,62,.1);border:1px solid rgba(255,210,62,.3);color:var(--amber)}
+  .nav{display:flex;flex-direction:column;gap:6px;margin:0}
+  .nav .tab{position:relative;font-family:var(--disp);width:42px;height:42px;padding:0;border-radius:14px;font-size:17px;font-weight:600;border:none;background:transparent;color:var(--sub);cursor:pointer;white-space:nowrap;display:flex;align-items:center;justify-content:center}
+  .rail-badge{position:absolute;top:-3px;right:-3px;background:var(--amber);color:#4a2028;font-family:var(--mono);font-size:9px;font-weight:800;min-width:15px;height:15px;border-radius:8px;display:flex;align-items:center;justify-content:center;padding:0 3px;box-shadow:0 0 0 2px var(--winb)}
+  .rail-dot{position:absolute;bottom:2px;right:2px;width:8px;height:8px;border-radius:50%;box-shadow:0 0 0 2px var(--winb)}
+  .rail-dot.ok{background:var(--emerald)} .rail-dot.err{background:var(--rose)} .rail-dot.syncing{background:var(--amber)}
+  @media(max-width:780px){
+    .launcher{flex-direction:column-reverse}
+    .launcher-rail{flex-direction:row;flex-wrap:wrap;width:auto;position:static;border-radius:18px;padding:8px;justify-content:center}
+    .launcher-rail .nav{flex-direction:row;flex-wrap:wrap;justify-content:center}
+    .launcher-rail .rail-sep{width:1px;height:28px;margin:0 4px}
     .row{flex-wrap:wrap;gap:10px}
   }
-  .nav .tab.on{background:linear-gradient(135deg,var(--amber),var(--rose));color:#160a12;border-color:transparent;box-shadow:0 6px 18px rgba(251,77,125,.3)}
+  .nav .tab.on{background:var(--accent);color:#fff;border-color:transparent;box-shadow:0 8px 18px rgba(232,80,58,.45)}
   .chips{display:flex;flex-wrap:wrap;gap:8px;margin:11px 0}
   .chip{padding:7px 13px;border-radius:999px;font-size:13px;font-weight:500;border:1px solid var(--cb);background:var(--chip);color:var(--chipt);cursor:pointer}
   .chip.on{background:rgba(55,227,212,.14);border-color:rgba(55,227,212,.5);color:var(--text)}
@@ -164,16 +177,27 @@
   .diary-suggest-item{display:flex;align-items:center;gap:10px;padding:8px 12px;cursor:pointer}
   .diary-suggest-item:hover,.diary-suggest-item.on{background:rgba(139,125,255,.1)}
   .diary-suggest-thumb{width:26px;height:36px;border-radius:4px;flex:none;background-size:cover;background-position:center}
-  .diary-month{font-family:var(--disp);font-size:15px;font-weight:700;color:var(--text);margin:22px 0 12px;letter-spacing:.02em}
-  .diary-month:first-child{margin-top:6px}
-  .diary-row{display:flex;align-items:center;gap:14px;margin-bottom:14px;position:relative}
-  .diary-date{width:56px;text-align:right;font-size:11px;color:var(--sub);flex:none;font-family:var(--mono)}
-  .diary-dot{width:10px;height:10px;border-radius:50%;flex:none}
-  .diary-dot.book{background:var(--violet)} .diary-dot.game{background:var(--emerald)} .diary-dot.movie{background:var(--cyan)}
-  .diary-thumb{width:40px;height:56px;border-radius:6px;flex:none;background-size:cover;background-position:center;box-shadow:0 6px 14px rgba(0,0,0,.4)}
+  .diary-layout{display:flex;gap:16px;align-items:flex-start}
+  .diary-main{flex:1;min-width:0}
+  .diary-month{font-family:var(--disp);font-size:12px;font-weight:700;color:var(--sub);margin:18px 0 6px;letter-spacing:.12em;text-transform:uppercase}
+  .diary-month:first-child{margin-top:0}
+  .diary-row{display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid var(--cb)}
+  .diary-row:last-child{border-bottom:none}
+  .diary-date{width:40px;text-align:left;font-size:10px;color:var(--sub);flex:none;font-family:var(--mono)}
+  .diary-thumb{width:30px;height:42px;border-radius:5px;flex:none;background-size:cover;background-position:center;box-shadow:0 4px 10px rgba(0,0,0,.4)}
   .diary-note{font-size:12px;color:var(--sub);margin-top:2px;font-style:italic}
-  .diary-rm{margin-left:auto;background:transparent;border:none;color:var(--sub);cursor:pointer;font-size:16px;padding:4px 8px}
+  .diary-rm{background:transparent;border:none;color:var(--sub);cursor:pointer;font-size:15px;padding:4px 6px}
   .diary-rm:hover{color:var(--rose)}
+  .diary-side{width:150px;flex:none;background:var(--winb);border-radius:16px;padding:16px;text-align:center;position:sticky;top:20px}
+  .ds-lbl{font-family:var(--mono);font-size:9px;color:var(--sub);letter-spacing:.1em;text-transform:uppercase}
+  .ds-lvl{font-family:var(--disp);font-size:22px;font-weight:800;color:var(--amber);margin:6px 0}
+  .ds-bar{height:6px;border-radius:4px;background:rgba(255,255,255,.08);overflow:hidden;margin-bottom:6px}
+  .ds-bar>div{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--accent),var(--amber))}
+  .ds-medals{display:flex;justify-content:center;gap:10px;margin-top:14px}
+  .ds-ic{font-size:16px}
+  .ds-n{font-family:var(--disp);font-size:14px;font-weight:800;margin-top:2px}
+  .ds-total{font-size:10px;color:var(--sub);margin-top:14px;padding-top:12px;border-top:1px solid var(--cb)}
+  @media(max-width:640px){ .diary-layout{flex-direction:column} .diary-side{width:100%;position:static} }
   .sync-badge{font-family:var(--mono);font-size:10px;padding:2px 7px;border-radius:999px;margin-left:6px}
   .sync-badge.ok{background:rgba(74,222,128,.14);color:var(--emerald)}
   .sync-badge.off{background:rgba(251,191,36,.12);color:var(--amber)}
@@ -198,7 +222,69 @@
   .days-left.d1{background:var(--rose);color:#fff}
   button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--violet);outline-offset:2px}
   @media(max-width:560px){ .gimg{width:120px;height:56px} .mposter{width:48px;height:72px} }
-  @media(prefers-reduced-motion:reduce){ body::before,body::after,.orb2,.tetris{animation:none} .tetris{display:none} .card,.tile{transition:none} }
+
+  /* ---- GAME HUD layer ---- */
+  @keyframes gsweep{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+  @keyframes gblip{0%,100%{opacity:.35}15%{opacity:1}}
+  @keyframes glegGlow{0%,100%{box-shadow:0 0 10px rgba(255,170,40,.4)}50%{box-shadow:0 0 24px rgba(255,170,40,.75)}}
+  @keyframes gepicGlow{0%,100%{box-shadow:0 0 8px rgba(163,90,255,.35)}50%{box-shadow:0 0 18px rgba(163,90,255,.65)}}
+  @keyframes glowPulse{0%,100%{box-shadow:0 0 0 1px rgba(126,231,135,.3),0 0 10px rgba(126,231,135,.25)}50%{box-shadow:0 0 0 1px rgba(126,231,135,.5),0 0 20px rgba(126,231,135,.55)}}
+  @keyframes gxp{from{width:0}}
+  @keyframes gfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+  @keyframes gtoast{0%{transform:translateX(120%);opacity:0}10%,90%{transform:translateX(0);opacity:1}100%{transform:translateX(120%);opacity:0}}
+  @keyframes shimmerText{0%{background-position:-200% center}100%{background-position:200% center}}
+  .shimmer{background:linear-gradient(90deg,#e8503a,#ffd23e,#7ee787,#e8503a);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmerText 6s linear infinite;font-weight:800}
+  .minimap{width:46px;height:46px;border-radius:50%;border:2px solid var(--accent);background:#2a1015;position:relative;overflow:hidden;flex:none;box-shadow:0 8px 22px rgba(232,80,58,.35)}
+  .minimap .sweepc{position:absolute;inset:0;background:conic-gradient(from 0deg,rgba(232,80,58,.7),transparent 85deg);animation:gsweep 4s linear infinite}
+  .minimap i{position:absolute;width:4px;height:4px;border-radius:50%;animation:gblip 4s infinite}
+  .xp-row{display:flex;align-items:center;gap:8px;margin-top:5px}
+  .lvl{font-family:var(--mono);font-size:10px;font-weight:700;color:var(--amber);background:rgba(255,210,62,.1);border:1px solid rgba(255,210,62,.4);padding:1px 7px;border-radius:5px;white-space:nowrap}
+  .xpbar{width:110px;height:7px;border-radius:4px;background:rgba(255,255,255,.1);overflow:hidden;flex:none}
+  .xpbar>div{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--accent),var(--amber));animation:gxp 1.2s cubic-bezier(.2,.8,.2,1) both}
+  .xptxt{font-family:var(--mono);font-size:9px;color:var(--sub);white-space:nowrap}
+  .card.r-leg,.tile.r-leg{border:2px solid #ffaa28;animation:glegGlow 2.8s ease-in-out infinite}
+  .card.r-epic,.tile.r-epic{border:2px solid rgba(163,90,255,.8);animation:gepicGlow 3.2s ease-in-out infinite}
+  .card.r-rare,.tile.r-rare{border:2px solid rgba(61,139,255,.65)}
+  .rarity{font-size:9px;font-weight:800;padding:2px 8px;border-radius:5px;letter-spacing:.06em;white-space:nowrap}
+  .rarity.leg{background:rgba(255,170,40,.15);color:#ffaa28}
+  .rarity.epic{background:rgba(163,90,255,.16);color:#c9a0ff}
+  .rarity.rare{background:rgba(61,139,255,.15);color:#6aa5ff}
+  .loot-head{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.15em;color:var(--sub);margin:16px 0 10px;text-transform:uppercase}
+  .loot-head b{color:#ffaa28}
+  .hero-banner{background:linear-gradient(115deg,var(--accent),#c73a52 55%,#7a2838);border-radius:20px;padding:22px 24px;display:flex;gap:18px;align-items:center;margin:14px 0 6px;overflow:hidden}
+  .hero-text{flex:1;min-width:0}
+  .hero-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+  .hero-rarity{background:#f8e8a0;color:#7a5510;font-size:11px;font-weight:800;padding:4px 12px;border-radius:999px}
+  .hero-pill{background:rgba(0,0,0,.28);color:#fff;font-size:10px;font-weight:700;padding:4px 10px;border-radius:999px}
+  .hero-title{font-family:var(--disp);font-size:clamp(22px,4vw,32px);font-weight:800;color:#fff;letter-spacing:-.02em;line-height:1.1}
+  .hero-sub{font-size:12px;color:#ffd9d0;margin-top:6px}
+  .hero-actions{display:flex;gap:10px;margin-top:14px;align-items:center}
+  .hero-btn{background:#caa23c;color:#3a2408;font-family:var(--disp);font-size:13px;font-weight:800;padding:9px 18px;border-radius:999px;border:none;cursor:pointer}
+  .hero-link-btn{color:#fff;font-size:12px;font-weight:700;text-decoration:none;opacity:.85}
+  .hero-link-btn:hover{opacity:1}
+  .hero-img{width:220px;max-width:38%;border-radius:14px;object-fit:cover;box-shadow:0 16px 34px rgba(0,0,0,.4);flex:none}
+  @media(max-width:640px){ .hero-banner{flex-direction:column-reverse} .hero-img{width:100%;max-width:100%;height:140px} }
+  .bento-strip{display:grid;grid-template-columns:2fr repeat(3,1fr);gap:9px;margin:12px 0 18px}
+  @media(max-width:640px){ .bento-strip{grid-template-columns:1fr 1fr} }
+  .bento-tile{background:var(--card);border:1px solid var(--cb);border-radius:16px;padding:13px 15px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+  .bento-tile .num{font-family:var(--disp);font-size:20px;font-weight:800;color:var(--text)}
+  .bento-tile .lbl{font-size:10px;color:var(--sub);text-transform:uppercase;letter-spacing:.08em;margin-top:2px}
+  .bento-hero .num{font-size:28px}
+  .card:hover{border-color:rgba(61,139,255,.5);transform:translateY(-3px) scale(1.004)}
+  .tile:hover{border-color:rgba(61,139,255,.5);transform:translateY(-3px) scale(1.01)}
+  .gamepass-glow,.hw-dot.green{animation:glowPulse 3s ease-in-out infinite}
+  .xp-pill{font-family:var(--mono);font-size:10px;font-weight:700;padding:2px 8px;border-radius:6px;background:rgba(74,222,128,.13);color:var(--emerald);white-space:nowrap}
+  .xp-pill-book,.xp-pill-comic{background:rgba(201,160,255,.15);color:#c9a0ff}
+  .xp-pill-movie{background:rgba(55,227,212,.13);color:var(--cyan)}
+  .xp-pill-game{background:rgba(126,231,135,.13);color:var(--emerald)}
+  .qicon{font-size:15px;animation:gfloat 3.4s ease-in-out infinite;display:inline-block}
+  .medals{display:flex;gap:10px;margin-bottom:16px}
+  .medal{flex:1;text-align:center;border-radius:12px;padding:10px;border:1px solid var(--cb);background:var(--card)}
+  .medal .n{font-family:var(--disp);font-size:18px;font-weight:800}
+  .medal .l{font-size:9px;color:var(--sub);text-transform:uppercase;letter-spacing:.1em}
+  .diary-timeline-glow{position:absolute;left:66px;top:2px;bottom:2px;width:2px;background:linear-gradient(180deg,rgba(61,139,255,.45),rgba(74,222,128,.45),rgba(255,210,62,.45))}
+  .ach-toast{position:fixed;top:18px;right:18px;z-index:200;background:#131828;border:1px solid rgba(74,222,128,.55);border-radius:12px;padding:11px 14px;display:flex;gap:10px;align-items:center;animation:gtoast 4.5s ease-in-out both;box-shadow:0 12px 30px rgba(0,0,0,.5);max-width:280px}
+  @media(prefers-reduced-motion:reduce){ body::before,body::after,.orb2,.tetris{animation:none} .tetris{display:none} .card,.tile{transition:none} .minimap .sweepc,.shimmer,.gamepass-glow,.hw-dot.green,.card.r-leg,.tile.r-leg,.card.r-epic,.tile.r-epic,.qicon{animation:none} }
 </style>
 </head>
 <body>
@@ -234,23 +320,28 @@ window.addEventListener('resize',snapTetris);
 </script>
 
 <div class="wrap">
-  <div class="row">
-    <div style="display:flex;align-items:center;gap:12px">
-      <span class="logo"><svg viewBox="0 0 64 64"><g fill="none" stroke="#fff"><circle cx="32" cy="32" r="20" stroke-width="2.5"/><circle cx="32" cy="32" r="11" stroke-width="2" opacity=".8"/><line x1="32" y1="11" x2="32" y2="53" stroke-width="1.4" opacity=".45"/><line x1="11" y1="32" x2="53" y2="32" stroke-width="1.4" opacity=".45"/></g><path d="M32 32 L32 12 A20 20 0 0 1 50 23 Z" fill="#fff" opacity=".3"/><line x1="32" y1="32" x2="50" y2="23" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/><circle cx="43" cy="22.5" r="3.2" fill="#fff"/></svg></span>
-      <div><h1>Sáčkův radar</h1><p class="muted">knihy · hry · filmy a seriály</p></div>
+  <div class="launcher">
+    <div class="launcher-main">
+      <div class="row" style="position:relative;z-index:1">
+        <div style="display:flex;align-items:center;gap:12px">
+          <span class="minimap"><span class="sweepc"></span><i style="left:60%;top:24%;background:#ffd23e;animation-delay:.5s"></i><i style="left:30%;top:55%;background:#7ee787;animation-delay:2s"></i><i style="left:68%;top:62%;background:#37e3d4;animation-delay:3.1s"></i><i style="left:50%;top:50%;background:#fff;margin:-2px"></i></span>
+          <div><h1>Dobrý večer, <span style="color:var(--accent)">SÁČKU</span></h1><div class="xp-row" id="hud-xp"></div></div>
+        </div>
+      </div>
+
+      <div id="status"></div>
+      <div id="view"></div>
+
+      <p class="tiny" style="text-align:center;margin-top:24px">Bestsellery Kosmas / Dobrovský · komiksy CREW · hodnocení databazeknih.cz · filmy a seriály csfd.cz · hry Steam · backlog synchronizován přes GitHub.</p>
     </div>
-    <div style="display:flex;gap:8px">
-      <button class="btn" id="diary-btn">📖 Deník</button>
-      <button class="btn" id="sync-btn">☁ Sync</button>
-      <button class="btn" id="theme">🌞</button>
+    <div class="launcher-rail">
+      <div class="nav" id="nav"></div>
+      <div class="rail-sep"></div>
+      <button class="rail-btn" id="diary-btn" title="Trofeje / Deník">🏆</button>
+      <button class="rail-btn" id="sync-btn" title="Sync">☁</button>
+      <button class="rail-btn" id="theme" title="Téma">🌞</button>
     </div>
   </div>
-
-  <div class="nav" id="nav"></div>
-  <div id="status"></div>
-  <div id="view"></div>
-
-  <p class="tiny" style="text-align:center;margin-top:24px">Bestsellery Kosmas / Dobrovský · komiksy CREW · hodnocení databazeknih.cz · filmy a seriály csfd.cz · hry Steam · backlog synchronizován přes GitHub.</p>
 </div>
 
 <script>
@@ -427,36 +518,58 @@ function diaryMonthLabel(dateStr){ const d=new Date(dateStr+"T00:00:00"); return
 function diaryViewHtml(){
   const sorted = [...S.diary].sort((a,b)=> b.date.localeCompare(a.date));
   const n = S.diary.length;
-  let html = `<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-    <div class="muted">${n} záznam${n===1?"":(n>=2&&n<=4?"y":"ů")} v deníku</div>
-    <button class="addbtn" id="diary-add-btn">+ Přidat záznam</button>
-  </div>`;
   if(!sorted.length){
-    html += '<div class="empty" style="padding:24px 16px">Deník je zatím prázdný.<br>Přidej první záznam tlačítkem výše.</div>';
-    return html;
+    return `<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+      <div class="muted">0 záznamů v deníku</div>
+      <button class="addbtn" id="diary-add-btn">+ Přidat záznam</button>
+    </div><div class="empty" style="padding:24px 16px">Deník je zatím prázdný.<br>Přidej první záznam tlačítkem výše.</div>`;
   }
+  const thisMonthLabel = diaryMonthLabel(new Date().toISOString().slice(0,10));
+  const thisMonth = sorted.filter(e=>diaryMonthLabel(e.date)===thisMonthLabel);
+  const cnt = cat => S.diary.filter(e=>e._category===cat).length;
+  const monthXP = thisMonth.reduce((s,e)=>s+entryXP(e),0);
+  const totalXp = diaryTotalXP(), lvl = Math.floor(totalXp/500)+1, curXp = totalXp%500;
+
+  let list = `<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+    <div class="loot-head" style="margin:0">🏆 Síň trofejí ${thisMonth.length?`· +${monthXP} XP tento měsíc`:""}</div>
+    <button class="addbtn" id="diary-add-btn">+ Zapsat misi</button>
+  </div>`;
   let lastMonth=null;
   sorted.forEach(e=>{
     const idx = S.diary.indexOf(e);
     const m = diaryMonthLabel(e.date);
-    if(m!==lastMonth){ html += `<div class="diary-month">${esc(m)}</div>`; lastMonth=m; }
+    if(m!==lastMonth){ list += `<div class="diary-month">${esc(m)}</div>`; lastMonth=m; }
     const d = new Date(e.date+"T00:00:00");
     const dateShort = `${d.getDate()}. ${d.getMonth()+1}.`;
     const thumbStyle = e.image? `background-image:url('${esc(e.image)}')` : `background:${grad(e.title)}`;
     const sub = e._category==="book" ? esc(e.author||"kniha") : e._category==="game" ? "hra" : (e.year?`film / seriál · ${esc(e.year)}`:"film / seriál");
-    html += `<div class="diary-row">
+    list += `<div class="diary-row">
       <span class="diary-date">${dateShort}</span>
-      <span class="diary-dot ${e._category}"></span>
       <div class="diary-thumb" style="${thumbStyle}"></div>
       <div style="min-width:0;flex:1">
         <div style="font-weight:700;font-size:13px">${e.url?`<a href="${esc(e.url)}" target="_blank" rel="noreferrer">${esc(e.title)}</a>`:esc(e.title)}</div>
         <div class="muted" style="font-size:11px">${sub}</div>
         ${e.note?`<div class="diary-note">${esc(e.note)}</div>`:""}
       </div>
+      <span class="xp-pill xp-pill-${e._category}">+${entryXP(e)} XP</span>
       <button class="diary-rm" data-diary-rm="${idx}" title="Odebrat ze záznamu">✕</button>
     </div>`;
   });
-  return html;
+
+  const side = `<div class="diary-side">
+    <div class="ds-lbl">Level progress</div>
+    <div class="ds-lvl">LVL ${lvl}</div>
+    <div class="ds-bar"><div style="width:${Math.max(3,Math.round(curXp/500*100))}%"></div></div>
+    <div class="ds-lbl">${curXp}/500 XP</div>
+    <div class="ds-medals">
+      <div><div class="ds-ic">⚔️</div><div class="ds-n" style="color:var(--emerald)">${cnt("game")}</div></div>
+      <div><div class="ds-ic">📚</div><div class="ds-n" style="color:#c9a0ff">${cnt("book")+cnt("comic")}</div></div>
+      <div><div class="ds-ic">🎬</div><div class="ds-n" style="color:var(--cyan)">${cnt("movie")}</div></div>
+    </div>
+    <div class="ds-total">${n} splněn${n===1?"á mise":(n>=2&&n<=4?"é mise":"ých misí")} celkem</div>
+  </div>`;
+
+  return `<div class="diary-layout"><div class="diary-main">${list}</div>${side}</div>`;
 }
 
 function diarySearchCandidates(cat){
@@ -560,6 +673,7 @@ function mountDiaryModal(div){
     saveDiaryAndSync(S.diary);
     div.remove();
     render();
+    achToast(entry.title, entryXP(entry));
   };
 }
 function refreshDiaryModal(div){ div.innerHTML=diaryModalHtml(); mountDiaryModal(div); }
@@ -631,12 +745,25 @@ let S = {dark:localStorage.getItem("knizniRadarTheme")!=="light", view:"news", f
 
 const esc = s => (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const ratingClass = r => r>=80?"r-high":r>=40?"r-mid":"r-low";
+// GAME HUD: rarita předmětu podle hodnocení (legendární ≥95, epický ≥85, vzácný ≥75)
+const rarity = r => r==null?null: r>=95?"leg": r>=85?"epic": r>=75?"rare": null;
+const rarityCls = r => {const k=rarity(r); return k?` r-${k}`:"";};
+const rarityPill = r => {const k=rarity(r); return k?`<span class="rarity ${k}">${k==="leg"?"★ LEGENDÁRNÍ":k==="epic"?"EPICKÝ":"VZÁCNÝ"}</span>`:"";};
+// XP za dokončené mise v Deníku; level = 500 XP
+const XP_VALUES = {game:120, book:80, movie:50, comic:40};
+const entryXP = e => XP_VALUES[e._category]||50;
+const diaryTotalXP = () => S.diary.reduce((s,e)=>s+entryXP(e),0);
+function achToast(title,xp){
+  const d=document.createElement("div"); d.className="ach-toast";
+  d.innerHTML=`<span style="font-size:20px">🏆</span><div><div style="font-family:var(--mono);font-size:9px;color:var(--emerald);font-weight:700;letter-spacing:.1em">MISE SPLNĚNA · +${xp} XP</div><div style="font-size:12px;font-weight:700">${esc(title)}</div></div>`;
+  document.body.appendChild(d); setTimeout(()=>d.remove(),4600);
+}
 // Brandová barva VOD platformy → CSS třída (sdílené všemi kartami/dlaždicemi)
 const vodClass = v => {const k=(v||"").toLowerCase().replace(/[^a-z]/g,''); return k.includes('netflix')?'vod-netflix':k.includes('disney')?'vod-disney':k.includes('prime')?'vod-prime':k.includes('sledovani')?'vod-sledovanitv':k.includes('hbo')||k==='max'?'vod-hbo':k.includes('apple')?'vod-apple':k==='kino'?'vod-kino':'';};
 const vPrices = b => (b.prices||[]).filter(p=>p&&p.price);
 // Malá gamepad ikonka pro Game Pass odznak (žádná icon-fonta na stránce, tak inline SVG)
 const GP_ICON = '<svg viewBox="0 0 16 16" width="13" height="13" fill="#107C10" style="vertical-align:-2px"><path d="M7.202 15.967a8 8 0 0 1-3.552-1.26c-.898-.585-1.101-.826-1.101-1.306 0-.965 1.062-2.656 2.879-4.583C6.459 7.723 7.897 6.44 8.052 6.475c.302.068 2.718 2.423 3.622 3.531 1.43 1.753 2.088 3.189 1.754 3.829-.254.486-1.83 1.437-2.987 1.802-.954.301-2.207.429-3.239.33m-5.866-3.57C.589 11.253.212 10.127.03 8.497c-.06-.539-.038-.846.137-1.95.218-1.377 1.002-2.97 1.945-3.95.401-.417.437-.427.926-.263.595.2 1.23.638 2.213 1.528l.574.519-.313.385C4.056 6.553 2.52 9.086 1.94 10.653c-.315.852-.442 1.707-.306 2.063.091.24.007.15-.3-.319Zm13.101.195c.074-.36-.019-1.02-.238-1.687-.473-1.443-2.055-4.128-3.508-5.953l-.457-.575.494-.454c.646-.593 1.095-.948 1.58-1.25.381-.237.927-.448 1.161-.448.145 0 .654.528 1.065 1.104a8.4 8.4 0 0 1 1.343 3.102c.153.728.166 2.286.024 3.012a9.5 9.5 0 0 1-.6 1.893c-.179.393-.624 1.156-.82 1.404-.1.128-.1.127-.043-.148ZM7.335 1.952c-.67-.34-1.704-.705-2.276-.803a4 4 0 0 0-.759-.043c-.471.024-.45 0 .306-.358A7.8 7.8 0 0 1 6.47.128c.8-.169 2.306-.17 3.094-.005.85.18 1.853.552 2.418.9l.168.103-.385-.02c-.766-.038-1.88.27-3.078.853-.361.176-.676.316-.699.312a12 12 0 0 1-.654-.319Z"/></svg>';
-const gpBadge = (title) => `<span class="gp-icon" title="Dostupné v PC Game Passu">${GP_ICON}</span>`;
+const gpBadge = (title) => `<span class="gp-icon gamepass-glow" style="border-radius:50%;display:inline-flex" title="Dostupné v PC Game Passu">${GP_ICON}</span>`;
 // Stejná normalizace jako gamepass-match.js (Node) – použito i pro živé Steam vyhledávání v backlogu
 const GP_EDITION_RE = /\b(standard|deluxe|ultimate|complete|goty|game of the year|anniversary|enhanced|definitive|premium|digital)\s+edition\b/gi;
 const GP_SUFFIX_RE = /\s*[-–]?\s*\b(windows( edition)?|game preview|pc)\b\s*$/gi;
@@ -787,7 +914,7 @@ function newsBookTile(b){
   const rHtml = b.rating!=null ? `<span class="rating ${ratingClass(b.rating)}">${b.rating} %</span>` : "";
   const price = b.price ? `<span class="price" style="font-size:13px">${b.price} Kč</span>` : "";
   const bk=inBacklog(b.title);
-  return `<div class="tile">${daysLeftBadge(b)}<div class="tile-row">${coverInner}<div>
+  return `<div class="tile${rarityCls(b.rating)}">${daysLeftBadge(b)}<div class="tile-row">${coverInner}<div>
     <p class="tile-title">${b.link?`<a href="${esc(b.link)}" target="_blank" rel="noreferrer">`:""}${esc(b.title)}${b.link?"</a>":""}</p>
     <p class="tile-sub">${esc(b.author||"")}</p>
     <div class="tile-meta">${rHtml}${price}<button class="bk ${bk?'on':''}" data-newsbk="${esc(b.title)}" style="margin-left:auto">${bk?'✓':'+'}</button></div>
@@ -802,7 +929,7 @@ function newsMovieTile(m){
   const typeClass = m.csfdType==="film"||m.type==="movie"?"film":"serial";
   const vodHtml = (m.vod||[]).map(v=>`<span class="mvod ${vodClass(v)}">${esc(v)}</span>`).join("");
   const bk=inBacklog(m.title);
-  return `<div class="tile">${daysLeftBadge(m)}<div class="tile-row">${posterInner}<div>
+  return `<div class="tile${rarityCls(m.rating)}">${daysLeftBadge(m)}<div class="tile-row">${posterInner}<div>
     <p class="tile-title"><a href="${esc(m.url)}" target="_blank" rel="noreferrer">${esc(m.title)}</a></p>
     <p class="tile-sub">${esc(m.country||"")}${m.year?" · "+esc(m.year):""}</p>
     <div class="tile-meta"><span class="mtype ${typeClass}">${typeClass==="film"?"FILM":"SERIÁL"}</span>${vodHtml}${rHtml}<button class="bk ${bk?'on':''}" data-newsmbk="${esc(m.title)}" style="margin-left:auto">${bk?'✓':'+'}</button></div>
@@ -812,7 +939,7 @@ function newsGameTile(g){
   const rHtml = g.rating ? `<span class="rating ${ratingClass(g.rating)}">${g.rating} %</span>` : "";
   const imgHtml = g.image ? `<img class="tile-img" loading="lazy" decoding="async" src="${esc(g.image)}" alt="" onerror="this.style.visibility='hidden'" />` : "";
   const bk=inBacklog(g.title);
-  return `<div class="tile ${g.gamePass?'gamepass':''}">${daysLeftBadge(g)}${imgHtml}
+  return `<div class="tile${rarityCls(g.rating)} ${g.gamePass?'gamepass':''}">${daysLeftBadge(g)}${imgHtml}
     <p class="tile-title">${g.gamePass?gpBadge(g.title):""}<a href="${esc(g.url||'#')}" target="_blank" rel="noreferrer">${esc(g.title)}</a></p>
     <p class="tile-sub">${g.price?esc(g.price):""}</p>
     <div class="tile-meta">${rHtml}${(g.tags||[]).slice(0,3).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}${hwCompareDot(g.title)}${hltbHtml(g.title)}<button class="bk ${bk?'on':''}" data-newsgbk="${esc(g.title)}" style="${hltbFor(g.title)?'':'margin-left:auto'}">${bk?'✓':'+'}</button></div>
@@ -828,7 +955,7 @@ function comicTileHtml(c, attr){
     ? `<span style="text-decoration:line-through;color:var(--sub);font-size:11px">${c.originalPrice} Kč</span> <span class="price" style="font-size:13px">${c.price} Kč</span><span class="gdiscount">-${c.discount}%</span>`
     : (c.price ? `<span class="price" style="font-size:13px">${c.price} Kč</span>` : "");
   const bk=inBacklog(c.title);
-  return `<div class="tile">${c.firstSeen?daysLeftBadge(c):""}<div class="tile-row">${coverInner}<div>
+  return `<div class="tile${rarityCls(c.rating)}">${c.firstSeen?daysLeftBadge(c):""}<div class="tile-row">${coverInner}<div>
     <p class="tile-title">${c.link?`<a href="${esc(c.link)}" target="_blank" rel="noreferrer">`:""}${esc(c.title)}${c.link?"</a>":""}</p>
     <p class="tile-sub">${esc(c.author||"")}</p>
     <div class="tile-meta">${rHtml}${priceHtml}<button class="bk ${bk?'on':''}" data-${attr}="${esc(c.title)}" style="margin-left:auto">${bk?'✓':'+'}</button></div>
@@ -924,7 +1051,7 @@ function movieCard(m,i){
   const vodHtml = (m.vod||[]).map(v=>`<span class="mvod ${vodClass(v)}">${esc(v)}</span>`).join("");
   const genreHtml = (m.genres||[]).map(g=>`<span class="tag">${esc(g)}</span>`).join("");
   const mbk=inBacklog(m.title);
-  return `<div class="card">
+  return `<div class="card${rarityCls(m.rating)}">
     <div><div class="rank">#${i+1}</div>
       <a href="${esc(m.url)}" target="_blank" rel="noreferrer">${posterHtml}</a></div>
     <div class="body">
@@ -933,7 +1060,7 @@ function movieCard(m,i){
         <p class="muted">${esc(m.country||"")}${m.year?" · "+esc(m.year):""}</p>
       </div>
       <div style="text-align:right">${rHtml}</div></div>
-      <div class="meta"><span class="mtype ${typeClass}">${esc(m.type)}</span>${vodHtml}${genreHtml}</div>
+      <div class="meta"><span class="mtype ${typeClass}">${esc(m.type)}</span>${vodHtml}${genreHtml}${rarityPill(m.rating)}</div>
       <div class="actions"><button class="bk ${mbk?'on':''}" data-mbk="${esc(m.title)}">${mbk?'✓ V backlogu':'+ Backlog'}</button></div>
     </div>
   </div>`;
@@ -947,7 +1074,7 @@ function gimgErr(el){
     else { el.style.visibility="hidden"; }
   }catch(e){ el.style.visibility="hidden"; }
 }
-function gameCard(g){
+function gameCard(g,i){
   const rel=g.released?new Date(g.released).toLocaleDateString("cs-CZ"):"";
   const rev=g.reviews?` · ${Number(g.reviews).toLocaleString("cs-CZ")} recenzí`:"";
   const img=g.image||"";
@@ -959,7 +1086,7 @@ function gameCard(g){
     `https://cdn.cloudflare.steamstatic.com/steam/apps/${g.appid}/header.jpg`
   ].filter(Boolean))];
   const fb=esc(JSON.stringify(cands));
-  return `<div class="card ${g.gamePass?'gamepass':''}">
+  return `<div class="card${rarityCls(g.rating)} ${g.gamePass?'gamepass':''}">
     <a href="${esc(g.url)}" target="_blank" rel="noreferrer"><img class="gimg" loading="lazy" decoding="async" src="${esc(cands[0]||'')}" data-fb='${fb}' data-i="0" onerror="gimgErr(this)" alt="" /></a>
     <div class="body">
       <div class="row"><div style="min-width:0">
@@ -971,7 +1098,7 @@ function gameCard(g){
         ${g.discount?`<div class="gprice-orig">${esc(g.priceOriginal||"")}</div>`:""}
         ${g.price?`<div class="gprice">${esc(g.price)}${g.discount?`<span class="gdiscount">-${g.discount}%</span>`:""}</div>`:""}
       </div></div>
-      <div class="meta">${(g.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
+      <div class="meta">${rarityPill(g.rating)}${(g.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
       <div class="actions"><button class="bk ${inBacklog(g.name)?'on':''}" data-gbk="${esc(g.name)}">${inBacklog(g.name)?'✓ V backlogu':'+ Backlog'}</button>${hltbHtml(g.name,true)}${hwCompareHtml(g.name,!hltbFor(g.name))}</div>
     </div>
   </div>`;
@@ -1031,11 +1158,11 @@ function detailHtml(b){ const vp=vPrices(b).sort((x,y)=>x.price-y.price); const 
 
 function card(b,i){
   const open = S.expanded===b.title; const bk=inBacklog(b.title);
-  return `<div class="card">
+  return `<div class="card${rarityCls(b.rating)}">
     <div><div class="rank">#${i+1}</div>${coverHtml(b)}</div>
     <div class="body">
       <div class="row"><div style="min-width:0"><p class="title">${titleHtml(b)}</p><p class="muted">${esc(b.author)}</p></div>${priceHtml(b)}</div>
-      <div class="meta">${ratingHtml(b)}</div>
+      <div class="meta">${ratingHtml(b)}${rarityPill(b.rating)}</div>
       <div class="actions">
         <button class="link" data-more="${esc(b.title)}">${open?"Méně ▲":"Detail & ceny ▼"}</button>
         <button class="bk ${bk?'on':''}" data-bk="${esc(b.title)}">${bk?'✓ V backlogu':'+ Backlog'}</button>
@@ -1046,14 +1173,14 @@ function card(b,i){
 }
 function backlogCard(b){
   const open = S.expanded===b.title;
-  return `<div class="card">
+  return `<div class="card${rarityCls(b.rating)}">
     <div>${coverHtml(b)}</div>
     <div class="body">
       <div class="row"><div style="min-width:0"><p class="title">${titleHtml(b)}</p><p class="muted">${esc(b.author)}</p></div>${priceHtml(b)}</div>
-      <div class="meta">${ratingHtml(b)}</div>
+      <div class="meta">${ratingHtml(b)}${rarityPill(b.rating)}</div>
       <div class="actions">
         <button class="link" data-more="${esc(b.title)}">${open?"Méně ▲":"Detail & ceny ▼"}</button>
-        <button class="bk rm" data-rm="${esc(b.title)}">✕ Odebrat</button>
+        <button class="bk rm" data-rm="${esc(b.title)}">✕ Odebrat</button><span class="xp-pill" title="XP za dokončení questu">+80 XP</span>
       </div>
       ${open?detailHtml(b):""}
     </div>
@@ -1067,30 +1194,30 @@ function backlogMovieCard(m){
   const typeClass = m.type==="film"?"film":"serial";
   const vodHtml = (m.vod||[]).map(v=>`<span class="mvod ${vodClass(v)}">${esc(v)}</span>`).join("");
   const genreHtml = (m.genres||[]).map(g=>`<span class="tag">${esc(g)}</span>`).join("");
-  return `<div class="card">
+  return `<div class="card${rarityCls(m.rating)}">
     <div><a href="${esc(m.url)}" target="_blank" rel="noreferrer">${posterHtml}</a></div>
     <div class="body">
       <div class="row"><div style="min-width:0">
         <p class="title"><a href="${esc(m.url)}" target="_blank" rel="noreferrer">${esc(m.title)}</a></p>
         <p class="muted">${esc(m.country||"")}${m.year?" · "+esc(m.year):""}</p>
       </div><div style="text-align:right">${rHtml}</div></div>
-      <div class="meta"><span class="mtype ${typeClass}">${esc(m.type||"film")}</span>${vodHtml}${genreHtml}</div>
-      <div class="actions"><button class="bk rm" data-rm="${esc(m.title)}">✕ Odebrat</button></div>
+      <div class="meta"><span class="mtype ${typeClass}">${esc(m.type||"film")}</span>${vodHtml}${genreHtml}${rarityPill(m.rating)}</div>
+      <div class="actions"><button class="bk rm" data-rm="${esc(m.title)}">✕ Odebrat</button><span class="xp-pill" title="XP za dokončení questu">+50 XP</span></div>
     </div>
   </div>`;
 }
 function backlogGameCard(g){
   const imgHtml = g.image ? `<img class="gimg" loading="lazy" decoding="async" src="${esc(g.image)}" alt="" onerror="this.style.visibility='hidden'" />` : "";
   const rHtml = g.rating ? `<span class="rating ${ratingClass(g.rating)}" title="${esc(g.scoreDesc||'Steam')}">${g.rating} %</span>` : "";
-  return `<div class="card ${g.gamePass?'gamepass':''}">
+  return `<div class="card${rarityCls(g.rating)} ${g.gamePass?'gamepass':''}">
     ${imgHtml?`<a href="${esc(g.url||'#')}" target="_blank" rel="noreferrer">${imgHtml}</a>`:""}
     <div class="body">
       <div class="row"><div style="min-width:0">
         <p class="title">${g.gamePass?gpBadge(g.title):""}<a href="${esc(g.url||'#')}" target="_blank" rel="noreferrer">${esc(g.title)}</a></p>
         ${g.discount?`<p class="muted"><span style="text-decoration:line-through">${esc(g.priceOriginal||"")}</span> → ${esc(g.price||"")} <span class="gdiscount">-${g.discount}%</span></p>`:`<p class="muted">${g.price?esc(g.price):""}</p>`}
       </div><div style="text-align:right">${rHtml}</div></div>
-      <div class="meta">${(g.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
-      <div class="actions"><button class="bk rm" data-rm="${esc(g.title)}">✕ Odebrat</button>${hltbHtml(g.title,true)}${hwCompareHtml(g.title,!hltbFor(g.title))}</div>
+      <div class="meta">${rarityPill(g.rating)}${(g.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
+      <div class="actions"><button class="bk rm" data-rm="${esc(g.title)}">✕ Odebrat</button><span class="xp-pill" title="XP za dokončení questu">+120 XP</span>${hltbHtml(g.title,true)}${hwCompareHtml(g.title,!hltbFor(g.title))}</div>
     </div>
   </div>`;
 }
@@ -1099,13 +1226,26 @@ function render(){
   document.body.className = S.dark ? "" : "light";
   document.getElementById("theme").textContent = S.dark ? "🌞" : "🌙";
 
+  // GAME HUD: level hráče z XP nasbíraných v Deníku (500 XP / level)
+  const hudXp=document.getElementById("hud-xp");
+  if(hudXp){
+    const xp=diaryTotalXP(), lvl=Math.floor(xp/500)+1, cur=xp%500;
+    hudXp.innerHTML=`<span class="lvl">LVL ${lvl}</span><span class="xpbar"><div style="width:${Math.max(3,Math.round(cur/500*100))}%"></div></span><span class="xptxt">${cur}/500 XP</span>`;
+  }
+
   document.getElementById("nav").innerHTML =
-    `<button class="tab ${S.view==='news'?'on':''}" data-view="news">Novinky</button>
-     <button class="tab ${S.view==='coming'?'on':''}" data-view="coming">Očekávané</button>
-     <button class="tab ${S.view==='list'?'on':''}" data-view="list">Knižní Bestsellery</button>
-     <button class="tab ${S.view==='movies'?'on':''}" data-view="movies">Filmy a Seriály</button>
-     <button class="tab ${S.view==='steam'?'on':''}" data-view="steam">Steam</button>
-     <button class="tab ${S.view==='backlog'?'on':''}" data-view="backlog">Backlog (${S.backlog.length})<span class="sync-badge ${_syncStatus==='ok'?'ok':_syncStatus==='err'?'err':'off'}">${_syncStatus==='ok'?'☁':_syncStatus==='syncing'?'…':_syncStatus==='err'?'!':'local'}</span></button>`;
+    `<button class="tab ${S.view==='news'?'on':''}" data-view="news" title="Novinky">⚡</button>
+     <button class="tab ${S.view==='coming'?'on':''}" data-view="coming" title="Očekávané">🔮</button>
+     <button class="tab ${S.view==='list'?'on':''}" data-view="list" title="Knižní Bestsellery">📚</button>
+     <button class="tab ${S.view==='movies'?'on':''}" data-view="movies" title="Filmy a Seriály">🎬</button>
+     <button class="tab ${S.view==='steam'?'on':''}" data-view="steam" title="Steam">🎮</button>
+     <button class="tab ${S.view==='backlog'?'on':''}" data-view="backlog" title="Questy (${S.backlog.length})">⚔<span class="rail-badge">${S.backlog.length}</span></button>`;
+
+  const syncBtnEl=document.getElementById("sync-btn");
+  if(syncBtnEl){
+    const dotCls=_syncStatus==='ok'?'ok':_syncStatus==='syncing'?'syncing':_syncStatus==='err'?'err':'';
+    syncBtnEl.innerHTML=`☁${dotCls?`<span class="rail-dot ${dotCls}"></span>`:""}`;
+  }
 
   if(_syncError && _syncStatus==='err'){
     document.getElementById("status").innerHTML=`<div class="note warn">Sync chyba: ${esc(_syncError)}</div>`;
@@ -1133,8 +1273,49 @@ function render(){
     const seriesNew = items.filter(i=>i.type==="series");
     const games = items.filter(i=>i.type==="game");
     const total = items.length;
+    // "Dnešní loot" = jen věci přidané dnes (badge "3"), ne celé 3denní okno retence
+    const todayItems = items.filter(i=>i.daysLeft===3);
+    const todayBooks = todayItems.filter(i=>i.type==="book"||i.type==="comic");
+    const todayGames = todayItems.filter(i=>i.type==="game");
+    const todayMovies = todayItems.filter(i=>i.type==="movie"||i.type==="series");
 
     let html = nst;
+    if(total){
+      const legCount = todayItems.filter(i=>i.rating>=95).length;
+      const epicCount = todayItems.filter(i=>i.rating>=85&&i.rating<95).length;
+      const heroPool = todayItems.length ? todayItems : items;
+      const hero = [...heroPool].filter(i=>i.rating!=null).sort((a,b)=>(b.rating||0)-(a.rating||0))[0];
+      if(hero){
+        const heroImg = hero.image||hero.poster||hero.cover;
+        const heroDataAttr = hero.type==="book"?`data-newsbk="${esc(hero.title)}"`:hero.type==="comic"?`data-newscbk="${esc(hero.title)}"`:hero.type==="game"?`data-newsgbk="${esc(hero.title)}"`:`data-newsmbk="${esc(hero.title)}"`;
+        const heroIsBk = inBacklog(hero.title);
+        const heroTypeLabel = hero.type==="book"?"KNIHA":hero.type==="comic"?"KOMIKS":hero.type==="game"?"HRA":hero.type==="series"?"SERIÁL":"FILM";
+        html += `<div class="hero-banner">
+          <div class="hero-text">
+            <div class="hero-tags">
+              <span class="hero-rarity">${rarity(hero.rating)==="leg"?"★ Legendární drop":rarity(hero.rating)==="epic"?"Epický drop":"Dnešní drop"}</span>
+              <span class="hero-pill">${heroTypeLabel}</span>
+              ${hero.gamePass?'<span class="hero-pill" style="color:#7ee787">GAME PASS ✓</span>':""}
+            </div>
+            <div class="hero-title">${esc(hero.title)}</div>
+            <div class="hero-sub">${hero.rating}% hodnocení${hero.author?" · "+esc(hero.author):""}${hero.year?" · "+esc(hero.year):""}</div>
+            <div class="hero-actions">
+              <button class="hero-btn" ${heroDataAttr}>${heroIsBk?"✓ V questech":"+ Quest"}</button>
+              ${hero.url||hero.link?`<a href="${esc(hero.url||hero.link)}" target="_blank" rel="noreferrer" class="hero-link-btn">Detail →</a>`:""}
+            </div>
+          </div>
+          ${heroImg?`<img src="${esc(heroImg)}" class="hero-img" loading="lazy" alt="" onerror="this.style.display='none'" />`:""}
+        </div>`;
+      }
+      html += `<div class="loot-head">⚡ Dnešní loot — ${todayItems.length} předmětů${legCount?` · <b>★ ${legCount}× legendární</b>`:""}${epicCount?` · <span style="color:#c9a0ff">${epicCount}× epický</span>`:""}</div>`;
+      html += `<div class="bento-strip">
+        <div class="bento-tile bento-hero"><div class="num shimmer">${todayItems.length} titulů</div><div class="lbl">nově dnes</div></div>
+        <div class="bento-tile"><div class="num">${todayBooks.length}</div><div class="lbl">knihy</div></div>
+        <div class="bento-tile"><div class="num">${todayGames.length}</div><div class="lbl">hry</div></div>
+        <div class="bento-tile"><div class="num">${todayMovies.length}</div><div class="lbl">filmy/seriály</div></div>
+      </div>
+      <div class="tiny" style="margin:-8px 0 10px;text-align:right">celkem ${total} v okně posledních 3 dnů</div>`;
+    }
     if(!total && S.newsStatus==="live"){
       html += '<div class="news-empty">Žádné novinky od poslední aktualizace.<br>Všechna data jsou aktuální.</div>';
     } else {
@@ -1238,20 +1419,27 @@ function render(){
     if(!S.backlog.length){
       html += '<div class="empty" style="padding:24px 16px">Backlog je prázdný.<br>Přidej položku u titulů v žebříčku kliknutím na <b>+ Backlog</b>.</div>';
     } else {
+      const questXP = books.length*80 + comics.length*40 + movies.length*50 + games.length*120;
+      html += `<div class="loot-head">⚔ Aktivní questy — ${S.backlog.length} · <span style="color:var(--emerald)">+${questXP} XP k zisku</span></div>`;
+      html += `<div class="bento-strip" style="grid-template-columns:repeat(3,1fr)">
+        <div class="bento-tile"><div class="num" style="color:#c9a0ff">${books.length+comics.length}</div><div class="lbl">📖 čtecí questy</div></div>
+        <div class="bento-tile"><div class="num" style="color:var(--cyan)">${movies.length}</div><div class="lbl">🎬 filmové questy</div></div>
+        <div class="bento-tile"><div class="num" style="color:var(--emerald)">${games.length}</div><div class="lbl">⚔️ herní questy</div></div>
+      </div>`;
       if(books.length){
-        html += `<div class="news-section">Knihy <span class="badge">${books.length}</span></div>`;
+        html += `<div class="news-section"><span class="qicon">📖</span> Čtecí questy <span class="badge">${books.length}</span></div>`;
         html += books.map(b=>backlogCard(b)).join("");
       }
       if(comics.length){
-        html += `<div class="news-section">Komiksy <span class="badge">${comics.length}</span></div>`;
+        html += `<div class="news-section"><span class="qicon">💥</span> Komiksové questy <span class="badge">${comics.length}</span></div>`;
         html += `<div class="tiles">${comics.map(c=>comicTile(c)).join("")}</div>`;
       }
       if(movies.length){
-        html += `<div class="news-section">Filmy a Seriály <span class="badge">${movies.length}</span></div>`;
+        html += `<div class="news-section"><span class="qicon">🎬</span> Filmové questy <span class="badge">${movies.length}</span></div>`;
         html += movies.map(b=>backlogMovieCard(b)).join("");
       }
       if(games.length){
-        html += `<div class="news-section">Hry <span class="badge">${games.length}</span></div>`;
+        html += `<div class="news-section"><span class="qicon">⚔️</span> Herní questy <span class="badge">${games.length}</span></div>`;
         html += games.map(b=>backlogGameCard(b)).join("");
       }
     }
