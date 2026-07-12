@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-12T07:13:35.663Z",
+  "updatedAt": "2026-07-12T08:13:52.973Z",
   "games": [
     {
       "title": "Palworld",
@@ -66,14 +66,6 @@
       "note": "Doporučená konfigurace: NVIDIA® GeForce RTX™ 4060 / AMD Radeon™ RX 7600, AMD Ryzen™ 7 6800H / Intel® Core™ i7-12700H"
     },
     {
-      "title": "GERONIMO",
-      "tier": "red",
-      "gpu": "NVIDIA RTX 3060",
-      "cpu": "Intel i7-4790 3.6 GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 3060, Intel i7-4790 3.6 GHz"
-    },
-    {
       "title": "Don't Sleep With The Fishes",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1660 / AMD Radeon RX 580",
@@ -138,20 +130,20 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 12GB / RTX 4060 / AMD RX 6700 XT, Intel Core i7-9700K / AMD Ryzen 5 5600"
     },
     {
-      "title": "Tales Beyond The Tomb - No Witnesses",
-      "tier": "orange",
-      "gpu": "NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT",
-      "cpu": "AMD Ryzen 7 5700 / Intel core I5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT, AMD Ryzen 7 5700 / Intel core I5"
-    },
-    {
       "title": "Forest Escape: Last Train",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1050",
       "cpu": "Intel Core i5 8400",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 1050, Intel Core i5 8400"
+    },
+    {
+      "title": "Tales Beyond The Tomb - No Witnesses",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT",
+      "cpu": "AMD Ryzen 7 5700 / Intel core I5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT, AMD Ryzen 7 5700 / Intel core I5"
     },
     {
       "title": "Double Driver",
@@ -192,6 +184,14 @@
       "cpu": "Intel Core i3",
       "usedMinimum": true,
       "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
+    },
+    {
+      "title": "Goblin Camp",
+      "tier": "red",
+      "gpu": "NVIDIA GeForce RTX 2080",
+      "cpu": "AMD Ryzen 5 5500",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2080, AMD Ryzen 5 5500"
     },
     {
       "title": "The Name I Wear",
@@ -256,78 +256,6 @@
       "cpu": "Intel Core i7-10700K / AMD Ryzen 7 3700X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 Ti / RTX 4060 / AMD Radeon RX 6700 XT, Intel Core i7-10700K / AMD Ryzen 7 3700X"
-    },
-    {
-      "title": "Runeveil",
-      "tier": "green",
-      "gpu": "Intel HD Graphics 3000 or better",
-      "cpu": "Intel® Core™ i3",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 3000 or better, Intel® Core™ i3"
-    },
-    {
-      "title": "The Queen's Gondola",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1660 Ti / RTX 2060 / AMD RX 5600 XT",
-      "cpu": "Intel Core i5-11400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1660 Ti / RTX 2060 / AMD RX 5600 XT, Intel Core i5-11400 / AMD Ryzen 5 3600"
-    },
-    {
-      "title": "NEKO-MIMI SWEET HOUSEMATES Vol. 2",
-      "tier": "green",
-      "gpu": "Nvidia GTX 1050 or AMD RX 550 and above",
-      "cpu": "Intel® Core™ i5 or higher",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Nvidia GTX 1050 or AMD RX 550 and above, Intel® Core™ i5 or higher"
-    },
-    {
-      "title": "Once Upon A Card",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1660 / AMD Radeon RX 6600",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 6600, Intel Core i5-10400 / AMD Ryzen 5 3600"
-    },
-    {
-      "title": "Quack Quack Up",
-      "tier": "green",
-      "gpu": "GeForce GTX 1050 6GB",
-      "cpu": "Intel Core i5-3470",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1050 6GB, Intel Core i5-3470"
-    },
-    {
-      "title": "The Light that Binds Us",
-      "tier": "red",
-      "gpu": "GeForce RTX 4060",
-      "cpu": "Intel® Core™ i7 13th gen",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 4060, Intel® Core™ i7 13th gen"
-    },
-    {
-      "title": "Hollow Knight: Silksong",
-      "tier": "green",
-      "gpu": "GeForce GTX 1050 (2GB), Radeon R9 380 (2GB)",
-      "cpu": "Intel Core i5-3470",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1050 (2GB), Radeon R9 380 (2GB), Intel Core i5-3470"
-    },
-    {
-      "title": "007 First Light",
-      "tier": "red",
-      "gpu": "NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT",
-      "cpu": "INTEL CORE i5 13500, AMD RYZEN 5 7600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT, INTEL CORE i5 13500, AMD RYZEN 5 7600"
-    },
-    {
-      "title": "Call of the Elder Gods",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1650 / AMD Radeon RX 580",
-      "cpu": "Intel Core i5-11600K / AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1650 / AMD Radeon RX 580, Intel Core i5-11600K / AMD Ryzen 5 5600X"
     }
   ]
 }
