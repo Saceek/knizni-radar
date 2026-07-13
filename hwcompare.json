@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-13T01:15:08.973Z",
+  "updatedAt": "2026-07-13T02:13:46.984Z",
   "games": [
     {
       "title": "Palworld",
@@ -58,20 +58,20 @@
       "note": "Minimální konfigurace: GTX 1060 / RX 580, Intel Core i5 2.5 GHz or AMD equivalent"
     },
     {
-      "title": "Dragon Kisser",
-      "tier": "orange",
-      "gpu": "NVIDIA® GeForce RTX™ 4060 / AMD Radeon™ RX 7600",
-      "cpu": "AMD Ryzen™ 7 6800H / Intel® Core™ i7-12700H",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA® GeForce RTX™ 4060 / AMD Radeon™ RX 7600, AMD Ryzen™ 7 6800H / Intel® Core™ i7-12700H"
-    },
-    {
       "title": "GERONIMO",
       "tier": "red",
       "gpu": "NVIDIA RTX 3060",
       "cpu": "Intel i7-4790 3.6 GHz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 3060, Intel i7-4790 3.6 GHz"
+    },
+    {
+      "title": "Dragon Kisser",
+      "tier": "orange",
+      "gpu": "NVIDIA® GeForce RTX™ 4060 / AMD Radeon™ RX 7600",
+      "cpu": "AMD Ryzen™ 7 6800H / Intel® Core™ i7-12700H",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA® GeForce RTX™ 4060 / AMD Radeon™ RX 7600, AMD Ryzen™ 7 6800H / Intel® Core™ i7-12700H"
     },
     {
       "title": "Don't Sleep With The Fishes",
@@ -178,6 +178,14 @@
       "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
     },
     {
+      "title": "Goblin Camp",
+      "tier": "red",
+      "gpu": "NVIDIA GeForce RTX 2080",
+      "cpu": "AMD Ryzen 5 5500",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2080, AMD Ryzen 5 5500"
+    },
+    {
       "title": "HYPERFIST",
       "tier": "orange",
       "gpu": "Nvidia RTX 2070",
@@ -192,14 +200,6 @@
       "cpu": "Intel Core i3",
       "usedMinimum": true,
       "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
-    },
-    {
-      "title": "Goblin Camp",
-      "tier": "red",
-      "gpu": "NVIDIA GeForce RTX 2080",
-      "cpu": "AMD Ryzen 5 5500",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2080, AMD Ryzen 5 5500"
     },
     {
       "title": "The Name I Wear",
@@ -248,6 +248,22 @@
       "cpu": "Intel Core i7-10700, AMD Ryzen 7 3700X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia RTX 2060 or equivalent, Intel Core i7-10700, AMD Ryzen 7 3700X"
+    },
+    {
+      "title": "Lord Of The Trough",
+      "tier": "orange",
+      "gpu": "NVIDIA GTX 1080 8 GB",
+      "cpu": "Intel Core i5-9600K or AMD Ryzen 5 3600",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GTX 1080 8 GB, Intel Core i5-9600K or AMD Ryzen 5 3600"
+    },
+    {
+      "title": "WOBBLY HEIST",
+      "tier": "red",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti / RTX 4060 / AMD Radeon RX 6700 XT",
+      "cpu": "Intel Core i7-10700K / AMD Ryzen 7 3700X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 Ti / RTX 4060 / AMD Radeon RX 6700 XT, Intel Core i7-10700K / AMD Ryzen 7 3700X"
     }
   ]
 }
