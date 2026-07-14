@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-14T01:15:16.171Z",
+  "updatedAt": "2026-07-14T02:13:49.908Z",
   "games": [
     {
       "title": "Palworld",
@@ -258,12 +258,12 @@
       "note": "Doporučená konfigurace: Nvidia RTX 2060 or equivalent, Intel Core i7-10700, AMD Ryzen 7 3700X"
     },
     {
-      "title": "絨毯を洗うゲーム",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1650",
-      "cpu": "Intel Core i7-11800H",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GTX 1650, Intel Core i7-11800H"
+      "title": "Machinefall",
+      "tier": "orange",
+      "gpu": "Dedicated graphics card, GTX 1080 8GB",
+      "cpu": "Intel(R) Core(TM) i7-8700 CPU",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Dedicated graphics card, GTX 1080 8GB, Intel(R) Core(TM) i7-8700 CPU"
     },
     {
       "title": "Lord Of The Trough",
@@ -288,14 +288,6 @@
       "cpu": "Intel® Core™ i3",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 3000 or better, Intel® Core™ i3"
-    },
-    {
-      "title": "Machinefall",
-      "tier": "orange",
-      "gpu": "Dedicated graphics card, GTX 1080 8GB",
-      "cpu": "Intel(R) Core(TM) i7-8700 CPU",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Dedicated graphics card, GTX 1080 8GB, Intel(R) Core(TM) i7-8700 CPU"
     },
     {
       "title": "The Queen's Gondola",
@@ -346,20 +338,20 @@
       "note": "Doporučená konfigurace: GeForce GTX 1050 6GB, Intel Core i5-3470"
     },
     {
-      "title": "The Light that Binds Us",
-      "tier": "red",
-      "gpu": "GeForce RTX 4060",
-      "cpu": "Intel® Core™ i7 13th gen",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 4060, Intel® Core™ i7 13th gen"
-    },
-    {
       "title": "Dark Reaper Shoots! 2",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT",
       "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "The Light that Binds Us",
+      "tier": "red",
+      "gpu": "GeForce RTX 4060",
+      "cpu": "Intel® Core™ i7 13th gen",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 4060, Intel® Core™ i7 13th gen"
     },
     {
       "title": "Hollow Knight: Silksong",
