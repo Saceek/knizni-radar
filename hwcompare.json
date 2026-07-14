@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-14T10:14:34.159Z",
+  "updatedAt": "2026-07-14T11:13:16.399Z",
   "games": [
     {
       "title": "Palworld",
@@ -48,14 +48,6 @@
       "cpu": "Intel Core i7-12700 (12th Gen) / Snapdragon® X2 Elite",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6700 / Qualcomm® Adreno X2 GPU, Intel Core i7-12700 (12th Gen) / Snapdragon® X2 Elite"
-    },
-    {
-      "title": "Master Healer Kale with useless party",
-      "tier": "green",
-      "gpu": "Intel HD 5000 / NVIDIA GT 710 or equivalent",
-      "cpu": "2.5 GHz Dual Core or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Intel HD 5000 / NVIDIA GT 710 or equivalent, 2.5 GHz Dual Core or better"
     },
     {
       "title": "Dimhaven - The Lost Source",
@@ -138,6 +130,14 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 6GB, Intel Core i7-7700"
     },
     {
+      "title": "Lumina Veil",
+      "tier": "red",
+      "gpu": "NVIDIA RTX 3060 12GB / RTX 4060 / AMD RX 6700 XT",
+      "cpu": "Intel Core i7-9700K / AMD Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 3060 12GB / RTX 4060 / AMD RX 6700 XT, Intel Core i7-9700K / AMD Ryzen 5 5600"
+    },
+    {
       "title": "Ascend to ZERO",
       "tier": "orange",
       "gpu": "Nvidia GTX 2060 / AMD Radeon RX 5600 XT",
@@ -216,6 +216,38 @@
       "cpu": "Intel I7 (13 Gen) or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia RTX 4060 or equivalent, Intel I7 (13 Gen) or equivalent"
+    },
+    {
+      "title": "Ocean Rush",
+      "tier": "green",
+      "gpu": "intel hd graphics",
+      "cpu": "intel dual core",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: intel hd graphics, intel dual core"
+    },
+    {
+      "title": "Hollow Knight: Silksong",
+      "tier": "green",
+      "gpu": "GeForce GTX 1050 (2GB), Radeon R9 380 (2GB)",
+      "cpu": "Intel Core i5-3470",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1050 (2GB), Radeon R9 380 (2GB), Intel Core i5-3470"
+    },
+    {
+      "title": "007 First Light",
+      "tier": "red",
+      "gpu": "NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT",
+      "cpu": "INTEL CORE i5 13500, AMD RYZEN 5 7600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT, INTEL CORE i5 13500, AMD RYZEN 5 7600"
+    },
+    {
+      "title": "Call of the Elder Gods",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 1650 / AMD Radeon RX 580",
+      "cpu": "Intel Core i5-11600K / AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1650 / AMD Radeon RX 580, Intel Core i5-11600K / AMD Ryzen 5 5600X"
     }
   ]
 }
