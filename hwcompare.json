@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-14T17:13:44.575Z",
+  "updatedAt": "2026-07-14T18:13:36.273Z",
   "games": [
     {
       "title": "Palworld",
@@ -210,36 +210,52 @@
       "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
     },
     {
-      "title": "絨毯を洗うゲーム",
+      "title": "Ocean Rush",
       "tier": "green",
-      "gpu": "NVIDIA GTX 1650",
-      "cpu": "Intel Core i7-11800H",
+      "gpu": "intel hd graphics",
+      "cpu": "intel dual core",
       "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GTX 1650, Intel Core i7-11800H"
+      "note": "Minimální konfigurace: intel hd graphics, intel dual core"
     },
     {
-      "title": "Hollow Knight: Silksong",
+      "title": "Beso's Shawarma",
       "tier": "green",
-      "gpu": "GeForce GTX 1050 (2GB), Radeon R9 380 (2GB)",
-      "cpu": "Intel Core i5-3470",
+      "gpu": "AMD Radeon Vega 7 / NVIDIA GeForce GTX 1050",
+      "cpu": "Intel Core i5 8th Gen / AMD Ryzen 3 or better",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1050 (2GB), Radeon R9 380 (2GB), Intel Core i5-3470"
+      "note": "Doporučená konfigurace: AMD Radeon Vega 7 / NVIDIA GeForce GTX 1050, Intel Core i5 8th Gen / AMD Ryzen 3 or better"
     },
     {
-      "title": "007 First Light",
+      "title": "The Name I Wear",
       "tier": "red",
-      "gpu": "NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT",
-      "cpu": "INTEL CORE i5 13500, AMD RYZEN 5 7600",
+      "gpu": "Nvidia RTX 4060 or equivalent",
+      "cpu": "Intel I7 (13 Gen) or equivalent",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT, INTEL CORE i5 13500, AMD RYZEN 5 7600"
+      "note": "Doporučená konfigurace: Nvidia RTX 4060 or equivalent, Intel I7 (13 Gen) or equivalent"
     },
     {
-      "title": "Call of the Elder Gods",
+      "title": "The Office Void",
       "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1650 / AMD Radeon RX 580",
-      "cpu": "Intel Core i5-11600K / AMD Ryzen 5 5600X",
+      "gpu": "NVIDIA GEFORCE GTX 1050 Ti (2 GB)",
+      "cpu": "Intel Core i5 8th Gen",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1650 / AMD Radeon RX 580, Intel Core i5-11600K / AMD Ryzen 5 5600X"
+      "note": "Doporučená konfigurace: NVIDIA GEFORCE GTX 1050 Ti (2 GB), Intel Core i5 8th Gen"
+    },
+    {
+      "title": "Flawed Tactics",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1060 / AMD RX 580 (4 GB VRAM, DirectX 11)",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580 (4 GB VRAM, DirectX 11), Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Junkster",
+      "tier": "orange",
+      "gpu": "Nvidia RTX 2060 or equivalent",
+      "cpu": "Intel Core i7-10700, AMD Ryzen 7 3700X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia RTX 2060 or equivalent, Intel Core i7-10700, AMD Ryzen 7 3700X"
     }
   ]
 }
