@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-15T22:13:56.744Z",
+  "updatedAt": "2026-07-15T23:13:57.396Z",
   "games": [
     {
       "title": "Palworld",
@@ -170,6 +170,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT, AMD Ryzen 7 5700 / Intel core I5"
     },
     {
+      "title": "Denshattack!",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1060 (6144 MB) or AMD Radeon RX 580 (8192 MB)",
+      "cpu": "Intel Core i5-9600K (6 * 3700) or AMD Ryzen 5 1600 (6 * 3200)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 (6144 MB) or AMD Radeon RX 580 (8192 MB), Intel Core i5-9600K (6 * 3700) or AMD Ryzen 5 1600 (6 * 3200)"
+    },
+    {
       "title": "Life & Shadow: Celestial Call - Prologue",
       "tier": "red",
       "gpu": "NVIDIA RTX 3060 (12 GB) / AMD RX 6700 XT or equivalent — DX11 compatible",
@@ -178,20 +186,20 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 (12 GB) / AMD RX 6700 XT or equivalent — DX11 compatible, AMD Ryzen 5 3600 / Intel Core i5-9600K or better"
     },
     {
-      "title": "Double Driver",
-      "tier": "green",
-      "gpu": "INTEL HD GRAPHICS",
-      "cpu": "Intel DUAL CORE",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: INTEL HD GRAPHICS, Intel DUAL CORE"
-    },
-    {
       "title": "背包地牢: Backpack Dungeon",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 750 Ti or equivalent",
       "cpu": "Intel i5 Quad-Core",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 750 Ti or equivalent, Intel i5 Quad-Core"
+    },
+    {
+      "title": "Double Driver",
+      "tier": "green",
+      "gpu": "INTEL HD GRAPHICS",
+      "cpu": "Intel DUAL CORE",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: INTEL HD GRAPHICS, Intel DUAL CORE"
     },
     {
       "title": "Goblin Camp",
@@ -208,14 +216,6 @@
       "cpu": "Intel Core i3",
       "usedMinimum": true,
       "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
-    },
-    {
-      "title": "Denshattack!",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1060 (6144 MB) or AMD Radeon RX 580 (8192 MB)",
-      "cpu": "Intel Core i5-9600K (6 * 3700) or AMD Ryzen 5 1600 (6 * 3200)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 (6144 MB) or AMD Radeon RX 580 (8192 MB), Intel Core i5-9600K (6 * 3700) or AMD Ryzen 5 1600 (6 * 3200)"
     },
     {
       "title": "Ocean Rush",
@@ -256,38 +256,6 @@
       "cpu": "3.5Ghz  processing power",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 960 or equivalent, 3.5Ghz  processing power"
-    },
-    {
-      "title": "Machinefall",
-      "tier": "orange",
-      "gpu": "Dedicated graphics card, GTX 1080 8GB",
-      "cpu": "Intel(R) Core(TM) i7-8700 CPU",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Dedicated graphics card, GTX 1080 8GB, Intel(R) Core(TM) i7-8700 CPU"
-    },
-    {
-      "title": "The Office Void",
-      "tier": "green",
-      "gpu": "NVIDIA GEFORCE GTX 1050 Ti (2 GB)",
-      "cpu": "Intel Core i5 8th Gen",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GEFORCE GTX 1050 Ti (2 GB), Intel Core i5 8th Gen"
-    },
-    {
-      "title": "Flawed Tactics",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1060 / AMD RX 580 (4 GB VRAM, DirectX 11)",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580 (4 GB VRAM, DirectX 11), Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
-      "title": "Junkster",
-      "tier": "orange",
-      "gpu": "Nvidia RTX 2060 or equivalent",
-      "cpu": "Intel Core i7-10700, AMD Ryzen 7 3700X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia RTX 2060 or equivalent, Intel Core i7-10700, AMD Ryzen 7 3700X"
     },
     {
       "title": "Quack Quack Up",
