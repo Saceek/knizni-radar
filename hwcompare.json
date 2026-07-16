@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-16T15:14:19.916Z",
+  "updatedAt": "2026-07-16T16:14:26.623Z",
   "games": [
     {
       "title": "Palworld",
@@ -170,6 +170,14 @@
       "note": "Doporučená konfigurace: Nvidia RTX 2070, Intel Core i7-6700"
     },
     {
+      "title": "背包地牢: Backpack Dungeon",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 750 Ti or equivalent",
+      "cpu": "Intel i5 Quad-Core",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 750 Ti or equivalent, Intel i5 Quad-Core"
+    },
+    {
       "title": "Lumina Veil",
       "tier": "red",
       "gpu": "NVIDIA RTX 3060 12GB / RTX 4060 / AMD RX 6700 XT",
@@ -178,12 +186,52 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 12GB / RTX 4060 / AMD RX 6700 XT, Intel Core i7-9700K / AMD Ryzen 5 5600"
     },
     {
-      "title": "背包地牢: Backpack Dungeon",
+      "title": "Tales Beyond The Tomb - No Witnesses",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT",
+      "cpu": "AMD Ryzen 7 5700 / Intel core I5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT, AMD Ryzen 7 5700 / Intel core I5"
+    },
+    {
+      "title": "Life & Shadow: Celestial Call - Prologue",
+      "tier": "red",
+      "gpu": "NVIDIA RTX 3060 (12 GB) / AMD RX 6700 XT or equivalent — DX11 compatible",
+      "cpu": "AMD Ryzen 5 3600 / Intel Core i5-9600K or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 3060 (12 GB) / AMD RX 6700 XT or equivalent — DX11 compatible, AMD Ryzen 5 3600 / Intel Core i5-9600K or better"
+    },
+    {
+      "title": "Double Driver",
       "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 750 Ti or equivalent",
-      "cpu": "Intel i5 Quad-Core",
+      "gpu": "INTEL HD GRAPHICS",
+      "cpu": "Intel DUAL CORE",
       "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 750 Ti or equivalent, Intel i5 Quad-Core"
+      "note": "Minimální konfigurace: INTEL HD GRAPHICS, Intel DUAL CORE"
+    },
+    {
+      "title": "Goblin Camp",
+      "tier": "red",
+      "gpu": "NVIDIA GeForce RTX 2080",
+      "cpu": "AMD Ryzen 5 5500",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2080, AMD Ryzen 5 5500"
+    },
+    {
+      "title": "十米爆爽超变",
+      "tier": "green",
+      "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
+      "cpu": "Intel Core i3",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
+    },
+    {
+      "title": "Ocean Rush",
+      "tier": "green",
+      "gpu": "intel hd graphics",
+      "cpu": "intel dual core",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: intel hd graphics, intel dual core"
     },
     {
       "title": "再战大极品+255",
@@ -194,14 +242,6 @@
       "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
     },
     {
-      "title": "Beso's Shawarma",
-      "tier": "green",
-      "gpu": "AMD Radeon Vega 7 / NVIDIA GeForce GTX 1050",
-      "cpu": "Intel Core i5 8th Gen / AMD Ryzen 3 or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: AMD Radeon Vega 7 / NVIDIA GeForce GTX 1050, Intel Core i5 8th Gen / AMD Ryzen 3 or better"
-    },
-    {
       "title": "KAZ",
       "tier": "green",
       "gpu": "NVIDIA GTX 960 or equivalent",
@@ -210,20 +250,20 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 960 or equivalent, 3.5Ghz  processing power"
     },
     {
+      "title": "Beso's Shawarma",
+      "tier": "green",
+      "gpu": "AMD Radeon Vega 7 / NVIDIA GeForce GTX 1050",
+      "cpu": "Intel Core i5 8th Gen / AMD Ryzen 3 or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: AMD Radeon Vega 7 / NVIDIA GeForce GTX 1050, Intel Core i5 8th Gen / AMD Ryzen 3 or better"
+    },
+    {
       "title": "The Name I Wear",
       "tier": "red",
       "gpu": "Nvidia RTX 4060 or equivalent",
       "cpu": "Intel I7 (13 Gen) or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia RTX 4060 or equivalent, Intel I7 (13 Gen) or equivalent"
-    },
-    {
-      "title": "Hell Maiden",
-      "tier": "green",
-      "gpu": "Nvidia GTX 1070 / AMD RX 570 (Adrenalin 22.1.2)",
-      "cpu": "4 Cores / 3.5 GHz+",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GTX 1070 / AMD RX 570 (Adrenalin 22.1.2), 4 Cores / 3.5 GHz+"
     },
     {
       "title": "Machinefall",
@@ -314,6 +354,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 6600, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
+      "title": "The NOexistenceN of Lilith",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 750 Ti / AMD Radeon RX 550 / Intel UHD 630 or higher",
+      "cpu": "Intel Core i3-8100 / AMD Ryzen 3 2200G or higher",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 750 Ti / AMD Radeon RX 550 / Intel UHD 630 or higher, Intel Core i3-8100 / AMD Ryzen 3 2200G or higher"
+    },
+    {
       "title": "NEKO-MIMI SWEET HOUSEMATES Vol. 2",
       "tier": "green",
       "gpu": "Nvidia GTX 1050 or AMD RX 550 and above",
@@ -368,6 +416,14 @@
       "cpu": "Intel® Core™ i7 13th gen",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 4060, Intel® Core™ i7 13th gen"
+    },
+    {
+      "title": "列乌尼斯的挽歌 Requiem of Reuinis",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce RTX 3050 / AMD Radeon RX 6600",
+      "cpu": "Intel Core Ultra 7",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3050 / AMD Radeon RX 6600, Intel Core Ultra 7"
     },
     {
       "title": "Step Lightly",
