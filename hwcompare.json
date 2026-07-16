@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-16T14:14:14.783Z",
+  "updatedAt": "2026-07-16T15:14:19.916Z",
   "games": [
     {
       "title": "Palworld",
@@ -24,6 +24,14 @@
       "cpu": "CPU: Intel i5-6600 or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 1080/980TI, Radeon RX Vega 4GB or better, CPU: Intel i5-6600 or better"
+    },
+    {
+      "title": "GROUND BRANCH",
+      "tier": "red",
+      "gpu": "NVIDIA GeForce RTX 4070 / AMD Radeon RX 7800 XT",
+      "cpu": "Intel Core i5-12600K / AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4070 / AMD Radeon RX 7800 XT, Intel Core i5-12600K / AMD Ryzen 5 5600X"
     },
     {
       "title": "Electoral Carnage",
@@ -122,20 +130,20 @@
       "note": "Doporučená konfigurace: GeForce GTX 1060 / Radeon RX 470, Ryzen 3 1200 / Core i5-7400"
     },
     {
-      "title": "Disc Golf Masters",
-      "tier": "green",
-      "gpu": "GeForce GTX 1050 Ti / Radeon RX 570 / 4GB RAM",
-      "cpu": "Ryzen 5 1600 / Core i5 6600k",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 1050 Ti / Radeon RX 570 / 4GB RAM, Ryzen 5 1600 / Core i5 6600k"
-    },
-    {
       "title": "Denshattack!",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1060 (6144 MB) or AMD Radeon RX 580 (8192 MB)",
       "cpu": "Intel Core i5-9600K (6 * 3700) or AMD Ryzen 5 1600 (6 * 3200)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 (6144 MB) or AMD Radeon RX 580 (8192 MB), Intel Core i5-9600K (6 * 3700) or AMD Ryzen 5 1600 (6 * 3200)"
+    },
+    {
+      "title": "Disc Golf Masters",
+      "tier": "green",
+      "gpu": "GeForce GTX 1050 Ti / Radeon RX 570 / 4GB RAM",
+      "cpu": "Ryzen 5 1600 / Core i5 6600k",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 1050 Ti / Radeon RX 570 / 4GB RAM, Ryzen 5 1600 / Core i5 6600k"
     },
     {
       "title": "REWIND",
@@ -178,62 +186,6 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 750 Ti or equivalent, Intel i5 Quad-Core"
     },
     {
-      "title": "絨毯を洗うゲーム",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1650",
-      "cpu": "Intel Core i7-11800H",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GTX 1650, Intel Core i7-11800H"
-    },
-    {
-      "title": "Tales Beyond The Tomb - No Witnesses",
-      "tier": "orange",
-      "gpu": "NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT",
-      "cpu": "AMD Ryzen 7 5700 / Intel core I5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT, AMD Ryzen 7 5700 / Intel core I5"
-    },
-    {
-      "title": "Life & Shadow: Celestial Call - Prologue",
-      "tier": "red",
-      "gpu": "NVIDIA RTX 3060 (12 GB) / AMD RX 6700 XT or equivalent — DX11 compatible",
-      "cpu": "AMD Ryzen 5 3600 / Intel Core i5-9600K or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 3060 (12 GB) / AMD RX 6700 XT or equivalent — DX11 compatible, AMD Ryzen 5 3600 / Intel Core i5-9600K or better"
-    },
-    {
-      "title": "Double Driver",
-      "tier": "green",
-      "gpu": "INTEL HD GRAPHICS",
-      "cpu": "Intel DUAL CORE",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: INTEL HD GRAPHICS, Intel DUAL CORE"
-    },
-    {
-      "title": "Goblin Camp",
-      "tier": "red",
-      "gpu": "NVIDIA GeForce RTX 2080",
-      "cpu": "AMD Ryzen 5 5500",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2080, AMD Ryzen 5 5500"
-    },
-    {
-      "title": "十米爆爽超变",
-      "tier": "green",
-      "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
-      "cpu": "Intel Core i3",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
-    },
-    {
-      "title": "Ocean Rush",
-      "tier": "green",
-      "gpu": "intel hd graphics",
-      "cpu": "intel dual core",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: intel hd graphics, intel dual core"
-    },
-    {
       "title": "再战大极品+255",
       "tier": "green",
       "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
@@ -264,6 +216,14 @@
       "cpu": "Intel I7 (13 Gen) or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia RTX 4060 or equivalent, Intel I7 (13 Gen) or equivalent"
+    },
+    {
+      "title": "Hell Maiden",
+      "tier": "green",
+      "gpu": "Nvidia GTX 1070 / AMD RX 570 (Adrenalin 22.1.2)",
+      "cpu": "4 Cores / 3.5 GHz+",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GTX 1070 / AMD RX 570 (Adrenalin 22.1.2), 4 Cores / 3.5 GHz+"
     },
     {
       "title": "Machinefall",
@@ -330,14 +290,6 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1660 Ti / RTX 2060 / AMD RX 5600 XT, Intel Core i5-11400 / AMD Ryzen 5 3600"
     },
     {
-      "title": "Hell Maiden",
-      "tier": "green",
-      "gpu": "Nvidia GTX 1070 / AMD RX 570 (Adrenalin 22.1.2)",
-      "cpu": "4 Cores / 3.5 GHz+",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GTX 1070 / AMD RX 570 (Adrenalin 22.1.2), 4 Cores / 3.5 GHz+"
-    },
-    {
       "title": "HouseWarming",
       "tier": "green",
       "gpu": "NVIDIA® GeForce® GTX 1650 4GB or better",
@@ -400,6 +352,14 @@
       "cpu": "Intel Core i5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GTX 650, Intel Core i5"
+    },
+    {
+      "title": "The Hidden Scrolls",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce RTX 2070",
+      "cpu": "Intel i5 4-Generation",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070, Intel i5 4-Generation"
     },
     {
       "title": "The Light that Binds Us",
