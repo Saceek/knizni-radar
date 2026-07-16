@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-16T16:14:26.623Z",
+  "updatedAt": "2026-07-16T17:14:29.428Z",
   "games": [
     {
       "title": "Palworld",
@@ -114,6 +114,14 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 480, Intel Core i5-8400 / AMD Ryzen 5 2600 or better"
     },
     {
+      "title": "Denshattack!",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1060 (6144 MB) or AMD Radeon RX 580 (8192 MB)",
+      "cpu": "Intel Core i5-9600K (6 * 3700) or AMD Ryzen 5 1600 (6 * 3200)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 (6144 MB) or AMD Radeon RX 580 (8192 MB), Intel Core i5-9600K (6 * 3700) or AMD Ryzen 5 1600 (6 * 3200)"
+    },
+    {
       "title": "SWAPMEAT",
       "tier": "orange",
       "gpu": "RTX 2060 / RX 5600 XT",
@@ -128,14 +136,6 @@
       "cpu": "Ryzen 3 1200 / Core i5-7400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1060 / Radeon RX 470, Ryzen 3 1200 / Core i5-7400"
-    },
-    {
-      "title": "Denshattack!",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1060 (6144 MB) or AMD Radeon RX 580 (8192 MB)",
-      "cpu": "Intel Core i5-9600K (6 * 3700) or AMD Ryzen 5 1600 (6 * 3200)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 (6144 MB) or AMD Radeon RX 580 (8192 MB), Intel Core i5-9600K (6 * 3700) or AMD Ryzen 5 1600 (6 * 3200)"
     },
     {
       "title": "Disc Golf Masters",
@@ -186,6 +186,14 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 12GB / RTX 4060 / AMD RX 6700 XT, Intel Core i7-9700K / AMD Ryzen 5 5600"
     },
     {
+      "title": "A Game About Chopping Trees",
+      "tier": "orange",
+      "gpu": "NVIDIA RTX 3060 or AMD Radeon RX 6600 XT",
+      "cpu": "Quad-core Intel or AMD, 2.5 GHz or faster",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 3060 or AMD Radeon RX 6600 XT, Quad-core Intel or AMD, 2.5 GHz or faster"
+    },
+    {
       "title": "Tales Beyond The Tomb - No Witnesses",
       "tier": "orange",
       "gpu": "NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT",
@@ -210,6 +218,14 @@
       "note": "Minimální konfigurace: INTEL HD GRAPHICS, Intel DUAL CORE"
     },
     {
+      "title": "Ocean Rush",
+      "tier": "green",
+      "gpu": "intel hd graphics",
+      "cpu": "intel dual core",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: intel hd graphics, intel dual core"
+    },
+    {
       "title": "Goblin Camp",
       "tier": "red",
       "gpu": "NVIDIA GeForce RTX 2080",
@@ -218,20 +234,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2080, AMD Ryzen 5 5500"
     },
     {
+      "title": "The NOexistenceN of Lilith",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 750 Ti / AMD Radeon RX 550 / Intel UHD 630 or higher",
+      "cpu": "Intel Core i3-8100 / AMD Ryzen 3 2200G or higher",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 750 Ti / AMD Radeon RX 550 / Intel UHD 630 or higher, Intel Core i3-8100 / AMD Ryzen 3 2200G or higher"
+    },
+    {
       "title": "十米爆爽超变",
       "tier": "green",
       "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
       "cpu": "Intel Core i3",
       "usedMinimum": true,
       "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
-    },
-    {
-      "title": "Ocean Rush",
-      "tier": "green",
-      "gpu": "intel hd graphics",
-      "cpu": "intel dual core",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: intel hd graphics, intel dual core"
     },
     {
       "title": "再战大极品+255",
@@ -306,6 +322,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GT 710 or higher, Intel Core i5 or better"
     },
     {
+      "title": "Ghost Keeper",
+      "tier": "green",
+      "gpu": "AMD Radeon RX 5500/NVIDIA GTX 1650 or better",
+      "cpu": "AMD Ryzen 5 1600/Intel Core i5 8500 or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: AMD Radeon RX 5500/NVIDIA GTX 1650 or better, AMD Ryzen 5 1600/Intel Core i5 8500 or better"
+    },
+    {
       "title": "WOBBLY HEIST",
       "tier": "red",
       "gpu": "NVIDIA GeForce RTX 3060 Ti / RTX 4060 / AMD Radeon RX 6700 XT",
@@ -320,6 +344,14 @@
       "cpu": "Intel® Core™ i3",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 3000 or better, Intel® Core™ i3"
+    },
+    {
+      "title": "The Crimson Maid",
+      "tier": "green",
+      "gpu": "nVidia GTX 1070 / AMD RX 580",
+      "cpu": "Intel Core i7 @ 3Ghz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: nVidia GTX 1070 / AMD RX 580, Intel Core i7 @ 3Ghz"
     },
     {
       "title": "The Queen's Gondola",
@@ -338,12 +370,12 @@
       "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 1650 4GB or better, Intel® Core™ i3-6100 or AMD FX™-6300 or better"
     },
     {
-      "title": "The Crimson Maid",
-      "tier": "green",
-      "gpu": "nVidia GTX 1070 / AMD RX 580",
-      "cpu": "Intel Core i7 @ 3Ghz",
+      "title": "The Hidden Scrolls",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce RTX 2070",
+      "cpu": "Intel i5 4-Generation",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: nVidia GTX 1070 / AMD RX 580, Intel Core i7 @ 3Ghz"
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070, Intel i5 4-Generation"
     },
     {
       "title": "Once Upon A Card",
@@ -352,14 +384,6 @@
       "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 6600, Intel Core i5-10400 / AMD Ryzen 5 3600"
-    },
-    {
-      "title": "The NOexistenceN of Lilith",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 750 Ti / AMD Radeon RX 550 / Intel UHD 630 or higher",
-      "cpu": "Intel Core i3-8100 / AMD Ryzen 3 2200G or higher",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 750 Ti / AMD Radeon RX 550 / Intel UHD 630 or higher, Intel Core i3-8100 / AMD Ryzen 3 2200G or higher"
     },
     {
       "title": "NEKO-MIMI SWEET HOUSEMATES Vol. 2",
@@ -376,6 +400,14 @@
       "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "列乌尼斯的挽歌 Requiem of Reuinis",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce RTX 3050 / AMD Radeon RX 6600",
+      "cpu": "Intel Core Ultra 7",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3050 / AMD Radeon RX 6600, Intel Core Ultra 7"
     },
     {
       "title": "Penguin Lifter",
@@ -402,14 +434,6 @@
       "note": "Doporučená konfigurace: Nvidia GTX 650, Intel Core i5"
     },
     {
-      "title": "The Hidden Scrolls",
-      "tier": "orange",
-      "gpu": "NVIDIA GeForce RTX 2070",
-      "cpu": "Intel i5 4-Generation",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070, Intel i5 4-Generation"
-    },
-    {
       "title": "The Light that Binds Us",
       "tier": "red",
       "gpu": "GeForce RTX 4060",
@@ -418,12 +442,12 @@
       "note": "Doporučená konfigurace: GeForce RTX 4060, Intel® Core™ i7 13th gen"
     },
     {
-      "title": "列乌尼斯的挽歌 Requiem of Reuinis",
+      "title": "Chest Buster",
       "tier": "green",
-      "gpu": "NVIDIA GeForce RTX 3050 / AMD Radeon RX 6600",
-      "cpu": "Intel Core Ultra 7",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3050 / AMD Radeon RX 6600, Intel Core Ultra 7"
+      "gpu": "Intel HD Graphics 4000",
+      "cpu": "2GHz Dual Core",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics 4000, 2GHz Dual Core"
     },
     {
       "title": "Step Lightly",
