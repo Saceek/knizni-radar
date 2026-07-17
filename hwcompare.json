@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-17T15:15:07.456Z",
+  "updatedAt": "2026-07-17T16:15:08.839Z",
   "games": [
     {
       "title": "Palworld",
@@ -226,6 +226,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT, AMD Ryzen 7 5700 / Intel core I5"
     },
     {
+      "title": "Tavern Legends",
+      "tier": "red",
+      "gpu": "DirectX 12 compatible GPU, 8GB dedicated VRAM (GeForce RTX 3060 / Radeon RX 6700)",
+      "cpu": "Intel Core i7 @ 4GHz or Ryzen 5 @ 4GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: DirectX 12 compatible GPU, 8GB dedicated VRAM (GeForce RTX 3060 / Radeon RX 6700), Intel Core i7 @ 4GHz or Ryzen 5 @ 4GHz"
+    },
+    {
       "title": "Life & Shadow: Celestial Call - Prologue",
       "tier": "red",
       "gpu": "NVIDIA RTX 3060 (12 GB) / AMD RX 6700 XT or equivalent — DX11 compatible",
@@ -234,20 +242,20 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 (12 GB) / AMD RX 6700 XT or equivalent — DX11 compatible, AMD Ryzen 5 3600 / Intel Core i5-9600K or better"
     },
     {
-      "title": "Ocean Rush",
-      "tier": "green",
-      "gpu": "intel hd graphics",
-      "cpu": "intel dual core",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: intel hd graphics, intel dual core"
-    },
-    {
       "title": "Welcome to the Game III",
       "tier": "green",
       "gpu": "NVIDIA GTX 1660Ti (6GB) | AMD Radeon RX 5600 XT (6 GB)",
       "cpu": "Core i7-6700 or Ryzen 5 1600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1660Ti (6GB) | AMD Radeon RX 5600 XT (6 GB), Core i7-6700 or Ryzen 5 1600"
+    },
+    {
+      "title": "Ocean Rush",
+      "tier": "green",
+      "gpu": "intel hd graphics",
+      "cpu": "intel dual core",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: intel hd graphics, intel dual core"
     },
     {
       "title": "Double Driver",
@@ -450,6 +458,14 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1660 Ti / RTX 2060 / AMD RX 5600 XT, Intel Core i5-11400 / AMD Ryzen 5 3600"
     },
     {
+      "title": "Once Upon A Card",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1660 / AMD Radeon RX 6600",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 6600, Intel Core i5-10400 / AMD Ryzen 5 3600"
+    },
+    {
       "title": "NEKO-MIMI SWEET HOUSEMATES Vol. 2",
       "tier": "green",
       "gpu": "Nvidia GTX 1050 or AMD RX 550 and above",
@@ -466,12 +482,12 @@
       "note": "Doporučená konfigurace: GEFORCE RTX 2060, 4 core 2,5 GHz+;"
     },
     {
-      "title": "Once Upon A Card",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1660 / AMD Radeon RX 6600",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "title": "Step Lightly",
+      "tier": "red",
+      "gpu": "RTX 3060 Ti or equivalent",
+      "cpu": null,
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 6600, Intel Core i5-10400 / AMD Ryzen 5 3600"
+      "note": "Doporučená konfigurace: RTX 3060 Ti or equivalent"
     },
     {
       "title": "Quantum Void",
@@ -482,28 +498,20 @@
       "note": "Doporučená konfigurace: Nvidia GTX 650, Intel Core i5"
     },
     {
-      "title": "Quack Quack Up",
-      "tier": "green",
-      "gpu": "GeForce GTX 1050 6GB",
-      "cpu": "Intel Core i5-3470",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1050 6GB, Intel Core i5-3470"
-    },
-    {
-      "title": "Step Lightly",
-      "tier": "red",
-      "gpu": "RTX 3060 Ti or equivalent",
-      "cpu": null,
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 3060 Ti or equivalent"
-    },
-    {
       "title": "Pimbolas",
       "tier": "green",
       "gpu": "NVIDIA Geforce GTX 1060 3GB",
       "cpu": "Ryzen 5 1500X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA Geforce GTX 1060 3GB, Ryzen 5 1500X"
+    },
+    {
+      "title": "Quack Quack Up",
+      "tier": "green",
+      "gpu": "GeForce GTX 1050 6GB",
+      "cpu": "Intel Core i5-3470",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1050 6GB, Intel Core i5-3470"
     },
     {
       "title": "The Light that Binds Us",
