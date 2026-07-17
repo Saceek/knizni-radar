@@ -325,7 +325,7 @@ window.addEventListener('resize',snapTetris);
       <div class="row" style="position:relative;z-index:1">
         <div style="display:flex;align-items:center;gap:12px">
           <span class="minimap"><span class="sweepc"></span><i style="left:60%;top:24%;background:#ffd23e;animation-delay:.5s"></i><i style="left:30%;top:55%;background:#7ee787;animation-delay:2s"></i><i style="left:68%;top:62%;background:#37e3d4;animation-delay:3.1s"></i><i style="left:50%;top:50%;background:#fff;margin:-2px"></i></span>
-          <div><h1>Dobrý večer, <span style="color:var(--accent)">SÁČKU</span></h1><div class="xp-row" id="hud-xp"></div></div>
+          <div><h1 id="hud-greeting"></h1><div class="xp-row" id="hud-xp"></div></div>
         </div>
       </div>
 
@@ -747,6 +747,7 @@ let S = {dark:localStorage.getItem("knizniRadarTheme")!=="light", view:"news", f
 const esc = s => (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const ratingClass = r => r>=80?"r-high":r>=40?"r-mid":"r-low";
 // GAME HUD: rarita předmětu podle hodnocení (legendární ≥95, epický ≥85, vzácný ≥75)
+const greeting = () => { const h=new Date().getHours(); return h<5?"Dobrou noc":h<12?"Dobré ráno":h<18?"Dobré odpoledne":"Dobrý večer"; };
 const rarity = r => r==null?null: r>=95?"leg": r>=85?"epic": r>=75?"rare": null;
 const rarityCls = r => {const k=rarity(r); return k?` r-${k}`:"";};
 const rarityPill = r => {const k=rarity(r); return k?`<span class="rarity ${k}">${k==="leg"?"★ LEGENDÁRNÍ":k==="epic"?"EPICKÝ":"VZÁCNÝ"}</span>`:"";};
@@ -1226,6 +1227,9 @@ function backlogGameCard(g){
 function render(){
   document.body.className = S.dark ? "" : "light";
   document.getElementById("theme").textContent = S.dark ? "🌞" : "🌙";
+
+  const hudGreeting=document.getElementById("hud-greeting");
+  if(hudGreeting) hudGreeting.innerHTML=`${greeting()}, <span style="color:var(--accent)">SÁČKU</span>`;
 
   // GAME HUD: level hráče z XP nasbíraných v Deníku (500 XP / level)
   const hudXp=document.getElementById("hud-xp");
