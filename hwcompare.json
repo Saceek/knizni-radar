@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-17T21:15:45.578Z",
+  "updatedAt": "2026-07-17T22:15:25.418Z",
   "games": [
     {
       "title": "Palworld",
@@ -98,6 +98,14 @@
       "note": "Doporučená konfigurace: Nvidia GTX 1070 / AMD RX 570 (Adrenalin 22.1.2), 4 Cores / 3.5 GHz+"
     },
     {
+      "title": "Funnel Runners",
+      "tier": "red",
+      "gpu": "Nvidia GeForce RTX 3070 Ti / Nvidia GeForce RTX 4070 / AMD Radeon RX 6800 XT",
+      "cpu": "Intel Core i7-11700 / AMD Ryzen 7 5800X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce RTX 3070 Ti / Nvidia GeForce RTX 4070 / AMD Radeon RX 6800 XT, Intel Core i7-11700 / AMD Ryzen 7 5800X"
+    },
+    {
       "title": "The NOexistenceN of Lilith",
       "tier": "green",
       "gpu": "NVIDIA GTX 750 Ti / AMD Radeon RX 550 / Intel UHD 630 or higher",
@@ -122,14 +130,6 @@
       "note": "Minimální konfigurace: Intel HD Graphics, Intel Core i5-6200U"
     },
     {
-      "title": "Funnel Runners",
-      "tier": "red",
-      "gpu": "Nvidia GeForce RTX 3070 Ti / Nvidia GeForce RTX 4070 / AMD Radeon RX 6800 XT",
-      "cpu": "Intel Core i7-11700 / AMD Ryzen 7 5800X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce RTX 3070 Ti / Nvidia GeForce RTX 4070 / AMD Radeon RX 6800 XT, Intel Core i7-11700 / AMD Ryzen 7 5800X"
-    },
-    {
       "title": "Ascend to ZERO",
       "tier": "orange",
       "gpu": "Nvidia GTX 2060 / AMD Radeon RX 5600 XT",
@@ -146,20 +146,20 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 480, Intel Core i5-8400 / AMD Ryzen 5 2600 or better"
     },
     {
-      "title": "Deer & Boy",
-      "tier": "green",
-      "gpu": "GeForce GTX 1060 / Radeon RX 470",
-      "cpu": "Ryzen 3 1200 / Core i5-7400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1060 / Radeon RX 470, Ryzen 3 1200 / Core i5-7400"
-    },
-    {
       "title": "背包地牢: Backpack Dungeon",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 750 Ti or equivalent",
       "cpu": "Intel i5 Quad-Core",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 750 Ti or equivalent, Intel i5 Quad-Core"
+    },
+    {
+      "title": "Deer & Boy",
+      "tier": "green",
+      "gpu": "GeForce GTX 1060 / Radeon RX 470",
+      "cpu": "Ryzen 3 1200 / Core i5-7400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1060 / Radeon RX 470, Ryzen 3 1200 / Core i5-7400"
     },
     {
       "title": "Disc Golf Masters",
@@ -210,20 +210,20 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 2070 or AMD equivalent, i5-12400 or Ryzen 5 5600X"
     },
     {
-      "title": "Lumina Veil",
-      "tier": "red",
-      "gpu": "NVIDIA RTX 3060 12GB / RTX 4060 / AMD RX 6700 XT",
-      "cpu": "Intel Core i7-9700K / AMD Ryzen 5 5600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 3060 12GB / RTX 4060 / AMD RX 6700 XT, Intel Core i7-9700K / AMD Ryzen 5 5600"
-    },
-    {
       "title": "The Mermaid Mask",
       "tier": "green",
       "gpu": "Intel HD Graphics",
       "cpu": "Intel Core i3 or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics, Intel Core i3 or equivalent"
+    },
+    {
+      "title": "Lumina Veil",
+      "tier": "red",
+      "gpu": "NVIDIA RTX 3060 12GB / RTX 4060 / AMD RX 6700 XT",
+      "cpu": "Intel Core i7-9700K / AMD Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 3060 12GB / RTX 4060 / AMD RX 6700 XT, Intel Core i7-9700K / AMD Ryzen 5 5600"
     },
     {
       "title": "Welcome to the Game III",
@@ -418,6 +418,14 @@
       "note": "Minimální konfigurace: Intel HD Graphics 3000 or better, Intel® Core™ i3"
     },
     {
+      "title": "D-topia",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1060, 3GB",
+      "cpu": "Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, 3GB, Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz"
+    },
+    {
       "title": "The Queen's Gondola",
       "tier": "green",
       "gpu": "NVIDIA GTX 1660 Ti / RTX 2060 / AMD RX 5600 XT",
@@ -440,14 +448,6 @@
       "cpu": "Intel Core i7-6700k or AMD Ryzen 3 1200X",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Nvidia GTX 960 4GB or higher, Intel Core i7-6700k or AMD Ryzen 3 1200X"
-    },
-    {
-      "title": "D-topia",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1060, 3GB",
-      "cpu": "Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, 3GB, Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz"
     },
     {
       "title": "Pimbolas",
