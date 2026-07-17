@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-17T07:14:42.289Z",
+  "updatedAt": "2026-07-17T08:15:07.950Z",
   "games": [
     {
       "title": "Palworld",
@@ -170,20 +170,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 ||| AMD Radeon RX 5600 XT ||| Intel Arc A750, Intel Core i5-..... or AMD Ryzen . .... processor"
     },
     {
-      "title": "A Game About Chopping Trees",
-      "tier": "orange",
-      "gpu": "NVIDIA RTX 3060 or AMD Radeon RX 6600 XT",
-      "cpu": "Quad-core Intel or AMD, 2.5 GHz or faster",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 3060 or AMD Radeon RX 6600 XT, Quad-core Intel or AMD, 2.5 GHz or faster"
-    },
-    {
       "title": "REWIND",
       "tier": "green",
       "gpu": "NVIDIA GTX 1060 6GB",
       "cpu": "Intel Core i7-7700",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 6GB, Intel Core i7-7700"
+    },
+    {
+      "title": "A Game About Chopping Trees",
+      "tier": "orange",
+      "gpu": "NVIDIA RTX 3060 or AMD Radeon RX 6600 XT",
+      "cpu": "Quad-core Intel or AMD, 2.5 GHz or faster",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 3060 or AMD Radeon RX 6600 XT, Quad-core Intel or AMD, 2.5 GHz or faster"
     },
     {
       "title": "背包地牢: Backpack Dungeon",
@@ -314,6 +314,22 @@
       "note": "Doporučená konfigurace: Dedicated graphics card, GTX 1080 8GB, Intel(R) Core(TM) i7-8700 CPU"
     },
     {
+      "title": "The Mermaid Mask",
+      "tier": "green",
+      "gpu": "Intel HD Graphics",
+      "cpu": "Intel Core i3 or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics, Intel Core i3 or equivalent"
+    },
+    {
+      "title": "列乌尼斯的挽歌 Requiem of Reuinis",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce RTX 3050 / AMD Radeon RX 6600",
+      "cpu": "Intel Core Ultra 7",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3050 / AMD Radeon RX 6600, Intel Core Ultra 7"
+    },
+    {
       "title": "黎明探险队 / CTD",
       "tier": "green",
       "gpu": "Nvidia GeForce GTX 1050 Ti or higher",
@@ -336,22 +352,6 @@
       "cpu": "Intel Core i5 8th Gen",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GEFORCE GTX 1050 Ti (2 GB), Intel Core i5 8th Gen"
-    },
-    {
-      "title": "The Mermaid Mask",
-      "tier": "green",
-      "gpu": "Intel HD Graphics",
-      "cpu": "Intel Core i3 or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics, Intel Core i3 or equivalent"
-    },
-    {
-      "title": "列乌尼斯的挽歌 Requiem of Reuinis",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce RTX 3050 / AMD Radeon RX 6600",
-      "cpu": "Intel Core Ultra 7",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3050 / AMD Radeon RX 6600, Intel Core Ultra 7"
     },
     {
       "title": "Ghost Keeper",
@@ -386,6 +386,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 Ti / RTX 4060 / AMD Radeon RX 6700 XT, Intel Core i7-10700K / AMD Ryzen 7 3700X"
     },
     {
+      "title": "Chest Buster",
+      "tier": "green",
+      "gpu": "Intel HD Graphics 4000",
+      "cpu": "2GHz Dual Core",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics 4000, 2GHz Dual Core"
+    },
+    {
       "title": "The Crimson Maid",
       "tier": "green",
       "gpu": "nVidia GTX 1070 / AMD RX 580",
@@ -402,12 +410,20 @@
       "note": "Minimální konfigurace: Intel HD Graphics 3000 or better, Intel® Core™ i3"
     },
     {
-      "title": "Chest Buster",
+      "title": "HouseWarming",
       "tier": "green",
-      "gpu": "Intel HD Graphics 4000",
-      "cpu": "2GHz Dual Core",
+      "gpu": "NVIDIA® GeForce® GTX 1650 4GB or better",
+      "cpu": "Intel® Core™ i3-6100 or AMD FX™-6300 or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 1650 4GB or better, Intel® Core™ i3-6100 or AMD FX™-6300 or better"
+    },
+    {
+      "title": "Drink Factory Simulator - Prologue",
+      "tier": "green",
+      "gpu": "Nvidia GTX 960 4GB or higher",
+      "cpu": "Intel Core i7-6700k or AMD Ryzen 3 1200X",
       "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 4000, 2GHz Dual Core"
+      "note": "Minimální konfigurace: Nvidia GTX 960 4GB or higher, Intel Core i7-6700k or AMD Ryzen 3 1200X"
     },
     {
       "title": "The Queen's Gondola",
@@ -416,14 +432,6 @@
       "cpu": "Intel Core i5-11400 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1660 Ti / RTX 2060 / AMD RX 5600 XT, Intel Core i5-11400 / AMD Ryzen 5 3600"
-    },
-    {
-      "title": "HouseWarming",
-      "tier": "green",
-      "gpu": "NVIDIA® GeForce® GTX 1650 4GB or better",
-      "cpu": "Intel® Core™ i3-6100 or AMD FX™-6300 or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 1650 4GB or better, Intel® Core™ i3-6100 or AMD FX™-6300 or better"
     },
     {
       "title": "MeowCraft",
