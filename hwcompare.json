@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-17T10:14:35.421Z",
+  "updatedAt": "2026-07-17T11:14:36.418Z",
   "games": [
     {
       "title": "Palworld",
@@ -82,6 +82,14 @@
       "note": "Doporučená konfigurace: NVIDIA® GeForce RTX™ 4060 / AMD Radeon™ RX 7600, AMD Ryzen™ 7 6800H / Intel® Core™ i7-12700H"
     },
     {
+      "title": "Denshattack!",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1060 (6144 MB) or AMD Radeon RX 580 (8192 MB)",
+      "cpu": "Intel Core i5-9600K (6 * 3700) or AMD Ryzen 5 1600 (6 * 3200)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 (6144 MB) or AMD Radeon RX 580 (8192 MB), Intel Core i5-9600K (6 * 3700) or AMD Ryzen 5 1600 (6 * 3200)"
+    },
+    {
       "title": "Don't Sleep With The Fishes",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1660 / AMD Radeon RX 580",
@@ -96,14 +104,6 @@
       "cpu": "Intel Core i5-6200U",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics, Intel Core i5-6200U"
-    },
-    {
-      "title": "Denshattack!",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1060 (6144 MB) or AMD Radeon RX 580 (8192 MB)",
-      "cpu": "Intel Core i5-9600K (6 * 3700) or AMD Ryzen 5 1600 (6 * 3200)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 (6144 MB) or AMD Radeon RX 580 (8192 MB), Intel Core i5-9600K (6 * 3700) or AMD Ryzen 5 1600 (6 * 3200)"
     },
     {
       "title": "Ascend to ZERO",
@@ -165,9 +165,9 @@
       "title": "Cat Chess",
       "tier": "orange",
       "gpu": "NVIDIA GeForce RTX 2060 ||| AMD Radeon RX 5600 XT ||| Intel Arc A750",
-      "cpu": "Intel Core i5-..... or AMD Ryzen . .... processor",
+      "cpu": null,
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 ||| AMD Radeon RX 5600 XT ||| Intel Arc A750, Intel Core i5-..... or AMD Ryzen . .... processor"
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 ||| AMD Radeon RX 5600 XT ||| Intel Arc A750"
     },
     {
       "title": "A Game About Chopping Trees",
@@ -202,20 +202,20 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 12GB / RTX 4060 / AMD RX 6700 XT, Intel Core i7-9700K / AMD Ryzen 5 5600"
     },
     {
-      "title": "Tales Beyond The Tomb - No Witnesses",
-      "tier": "orange",
-      "gpu": "NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT",
-      "cpu": "AMD Ryzen 7 5700 / Intel core I5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT, AMD Ryzen 7 5700 / Intel core I5"
-    },
-    {
       "title": "Ore Factory Squad ⛏️",
       "tier": "orange",
       "gpu": "NVIDIA RTX 2070 or AMD equivalent",
       "cpu": "i5-12400 or Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 2070 or AMD equivalent, i5-12400 or Ryzen 5 5600X"
+    },
+    {
+      "title": "Tales Beyond The Tomb - No Witnesses",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT",
+      "cpu": "AMD Ryzen 7 5700 / Intel core I5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT, AMD Ryzen 7 5700 / Intel core I5"
     },
     {
       "title": "Life & Shadow: Celestial Call - Prologue",
@@ -298,20 +298,20 @@
       "note": "Doporučená konfigurace: Nvidia RTX 4060 or equivalent, Intel I7 (13 Gen) or equivalent"
     },
     {
-      "title": "Machinefall",
-      "tier": "orange",
-      "gpu": "Dedicated graphics card, GTX 1080 8GB",
-      "cpu": "Intel(R) Core(TM) i7-8700 CPU",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Dedicated graphics card, GTX 1080 8GB, Intel(R) Core(TM) i7-8700 CPU"
-    },
-    {
       "title": "The Mermaid Mask",
       "tier": "green",
       "gpu": "Intel HD Graphics",
       "cpu": "Intel Core i3 or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics, Intel Core i3 or equivalent"
+    },
+    {
+      "title": "Machinefall",
+      "tier": "orange",
+      "gpu": "Dedicated graphics card, GTX 1080 8GB",
+      "cpu": "Intel(R) Core(TM) i7-8700 CPU",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Dedicated graphics card, GTX 1080 8GB, Intel(R) Core(TM) i7-8700 CPU"
     },
     {
       "title": "列乌尼斯的挽歌 Requiem of Reuinis",
@@ -408,6 +408,14 @@
       "cpu": "Intel® Core™ i3-6100 or AMD FX™-6300 or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 1650 4GB or better, Intel® Core™ i3-6100 or AMD FX™-6300 or better"
+    },
+    {
+      "title": "MeowCraft",
+      "tier": "red",
+      "gpu": "RTX 2080",
+      "cpu": "i7 7700k",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 2080, i7 7700k"
     },
     {
       "title": "Drink Factory Simulator - Prologue",
