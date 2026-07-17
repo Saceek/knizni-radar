@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-17T14:16:07.763Z",
+  "updatedAt": "2026-07-17T15:15:07.456Z",
   "games": [
     {
       "title": "Palworld",
@@ -122,20 +122,20 @@
       "note": "Doporučená konfigurace: Nvidia GTX 1070 / AMD RX 570 (Adrenalin 22.1.2), 4 Cores / 3.5 GHz+"
     },
     {
-      "title": "Funnel Runners",
-      "tier": "red",
-      "gpu": "Nvidia GeForce RTX 3070 Ti / Nvidia GeForce RTX 4070 / AMD Radeon RX 6800 XT",
-      "cpu": "Intel Core i7-11700 / AMD Ryzen 7 5800X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce RTX 3070 Ti / Nvidia GeForce RTX 4070 / AMD Radeon RX 6800 XT, Intel Core i7-11700 / AMD Ryzen 7 5800X"
-    },
-    {
       "title": "The NOexistenceN of Lilith",
       "tier": "green",
       "gpu": "NVIDIA GTX 750 Ti / AMD Radeon RX 550 / Intel UHD 630 or higher",
       "cpu": "Intel Core i3-8100 / AMD Ryzen 3 2200G or higher",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 750 Ti / AMD Radeon RX 550 / Intel UHD 630 or higher, Intel Core i3-8100 / AMD Ryzen 3 2200G or higher"
+    },
+    {
+      "title": "Funnel Runners",
+      "tier": "red",
+      "gpu": "Nvidia GeForce RTX 3070 Ti / Nvidia GeForce RTX 4070 / AMD Radeon RX 6800 XT",
+      "cpu": "Intel Core i7-11700 / AMD Ryzen 7 5800X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce RTX 3070 Ti / Nvidia GeForce RTX 4070 / AMD Radeon RX 6800 XT, Intel Core i7-11700 / AMD Ryzen 7 5800X"
     },
     {
       "title": "Plant Nursery Simulator",
@@ -242,14 +242,6 @@
       "note": "Minimální konfigurace: intel hd graphics, intel dual core"
     },
     {
-      "title": "Double Driver",
-      "tier": "green",
-      "gpu": "INTEL HD GRAPHICS",
-      "cpu": "Intel DUAL CORE",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: INTEL HD GRAPHICS, Intel DUAL CORE"
-    },
-    {
       "title": "Welcome to the Game III",
       "tier": "green",
       "gpu": "NVIDIA GTX 1660Ti (6GB) | AMD Radeon RX 5600 XT (6 GB)",
@@ -258,12 +250,28 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1660Ti (6GB) | AMD Radeon RX 5600 XT (6 GB), Core i7-6700 or Ryzen 5 1600"
     },
     {
+      "title": "Double Driver",
+      "tier": "green",
+      "gpu": "INTEL HD GRAPHICS",
+      "cpu": "Intel DUAL CORE",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: INTEL HD GRAPHICS, Intel DUAL CORE"
+    },
+    {
       "title": "Goblin Camp",
       "tier": "red",
       "gpu": "NVIDIA GeForce RTX 2080",
       "cpu": "AMD Ryzen 5 5500",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2080, AMD Ryzen 5 5500"
+    },
+    {
+      "title": "The Mermaid Mask",
+      "tier": "green",
+      "gpu": "Intel HD Graphics",
+      "cpu": "Intel Core i3 or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics, Intel Core i3 or equivalent"
     },
     {
       "title": "十米爆爽超变",
@@ -280,14 +288,6 @@
       "cpu": "Intel Core i3",
       "usedMinimum": true,
       "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
-    },
-    {
-      "title": "The Mermaid Mask",
-      "tier": "green",
-      "gpu": "Intel HD Graphics",
-      "cpu": "Intel Core i3 or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics, Intel Core i3 or equivalent"
     },
     {
       "title": "KAZ",
@@ -362,14 +362,6 @@
       "note": "Doporučená konfigurace: AMD Radeon RX 5500/NVIDIA GTX 1650 or better, AMD Ryzen 5 1600/Intel Core i5 8500 or better"
     },
     {
-      "title": "The Hidden Scrolls",
-      "tier": "orange",
-      "gpu": "NVIDIA GeForce RTX 2070",
-      "cpu": "Intel i5 4-Generation",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070, Intel i5 4-Generation"
-    },
-    {
       "title": "Chest Buster",
       "tier": "green",
       "gpu": "Intel HD Graphics 4000",
@@ -384,6 +376,14 @@
       "cpu": "Intel Core i5 or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GT 710 or higher, Intel Core i5 or better"
+    },
+    {
+      "title": "The Hidden Scrolls",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce RTX 2070",
+      "cpu": "Intel i5 4-Generation",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070, Intel i5 4-Generation"
     },
     {
       "title": "WOBBLY HEIST",
@@ -434,20 +434,20 @@
       "note": "Minimální konfigurace: Nvidia GTX 960 4GB or higher, Intel Core i7-6700k or AMD Ryzen 3 1200X"
     },
     {
-      "title": "The Queen's Gondola",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1660 Ti / RTX 2060 / AMD RX 5600 XT",
-      "cpu": "Intel Core i5-11400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1660 Ti / RTX 2060 / AMD RX 5600 XT, Intel Core i5-11400 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "D-topia",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1060, 3GB",
       "cpu": "Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, 3GB, Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz"
+    },
+    {
+      "title": "The Queen's Gondola",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1660 Ti / RTX 2060 / AMD RX 5600 XT",
+      "cpu": "Intel Core i5-11400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1660 Ti / RTX 2060 / AMD RX 5600 XT, Intel Core i5-11400 / AMD Ryzen 5 3600"
     },
     {
       "title": "NEKO-MIMI SWEET HOUSEMATES Vol. 2",
