@@ -19,7 +19,9 @@ const { normalizeGameTitle } = require("./gamepass-match");
 const DIR = __dirname;
 const OUT = path.join(DIR, "news.json");
 const HISTORY = path.join(DIR, "news-history.json");
+const SEEN = path.join(DIR, "news-seen.json");
 const RETAIN_DAYS = 3;
+const SEEN_RETAIN_DAYS = 365; // jak dlouho si pamatujeme "tohle už bylo v Novinkách", než to smí být "nové" znovu
 
 function loadJson(file) {
   try { return JSON.parse(fs.readFileSync(path.join(DIR, file), "utf-8")); }
@@ -142,16 +144,37 @@ function main() {
   const gamepass = loadJson("gamepass.json");
   const prevGamepass = loadJson("previous-gamepass.json");
 
-  const newBooks = books ? diffBooks(books, prevBooks) : [];
-  const newComics = comics ? diffComics(comics, prevComics) : [];
-  const newGames = games ? diffGames(games, prevGames) : [];
-  const newMovies = movies ? diffMovies(movies, prevMovies) : [];
-  const newGamePass = gamepass ? diffGamePass(gamepass, prevGamepass, games?.games) : [];
-  const todaysItems = [...newBooks, ...newComics, ...newMovies, ...newGames, ...newGamePass];
+  const newBooksRaw = books ? diffBooks(books, prevBooks) : [];
+  const newComicsRaw = comics ? diffComics(comics, prevComics) : [];
+  const newGamesRaw = games ? diffGames(games, prevGames) : [];
+  const newMoviesRaw = movies ? diffMovies(movies, prevMovies) : [];
+  const newGamePassRaw = gamepass ? diffGamePass(gamepass, prevGamepass, games?.games) : [];
+  const todaysItemsRaw = [...newBooksRaw, ...newComicsRaw, ...newMoviesRaw, ...newGamesRaw, ...newGamePassRaw];
 
-  // Load rolling history, append today's new items with today's date, prune entries older than RETAIN_DAYS
+  // Trvalá paměť "tohle už jsme jednou v Novinkách ukázali" - odděleně od 3denní rolling
+  // historie, protože jinak titul, co na den vypadne z žebříčku/seznamu a pak se vrátí
+  // (posun v pořadí na Kosmasu, CREW, ČSFD...), vypadá pro diff proti-včerejšku jako
+  // úplná novinka znovu, i když ji uživatel před pár dny už viděl.
   const now = new Date();
   const today = now.toISOString().slice(0, 10);
+  let seen = loadJson("news-seen.json");
+  if (!seen) {
+    // První běh po zavedení téhle paměti - naseedujeme z aktuální rolling historie,
+    // ať se to, co je právě teď vidět, nezačne hned zítra tvářit jako "nové" znovu.
+    const existingHistory = loadJson("news-history.json") || [];
+    seen = existingHistory.map((h) => ({ key: h.type + "::" + h.title, firstSeen: h.firstSeen }));
+    console.log(`[news] news-seen.json neexistuje, seeduji z ${seen.length} položek aktuální historie`);
+  }
+  const seenKeySet = new Set(seen.map((s) => s.key));
+  const todaysItems = todaysItemsRaw.filter((item) => !seenKeySet.has(item.type + "::" + item.title));
+  const newBooks = newBooksRaw.filter((i) => todaysItems.includes(i));
+  const newComics = newComicsRaw.filter((i) => todaysItems.includes(i));
+  const newGames = newGamesRaw.filter((i) => todaysItems.includes(i));
+  const newMovies = newMoviesRaw.filter((i) => todaysItems.includes(i));
+  const newGamePass = newGamePassRaw.filter((i) => todaysItems.includes(i));
+  const skipped = todaysItemsRaw.length - todaysItems.length;
+
+  // Load rolling history, append today's genuinely-new items, prune entries older than RETAIN_DAYS
   let history = loadJson("news-history.json") || [];
   const seenKeys = new Set(history.map((h) => h.type + "::" + h.title));
   todaysItems.forEach((item) => {
@@ -160,10 +183,16 @@ function main() {
       history.push({ ...item, firstSeen: today });
       seenKeys.add(key);
     }
+    if (!seenKeySet.has(key)) { seen.push({ key, firstSeen: today }); seenKeySet.add(key); }
   });
   history = history.filter((h) => {
     const ageDays = Math.floor((now - new Date(h.firstSeen + "T00:00:00Z")) / 86400000);
     return ageDays < RETAIN_DAYS;
+  });
+  // Vlastní paměť prunujeme jen mnohem pomaleji (roky ne dny), ať soubor neroste do nekonečna
+  seen = seen.filter((s) => {
+    const ageDays = Math.floor((now - new Date(s.firstSeen + "T00:00:00Z")) / 86400000);
+    return ageDays < SEEN_RETAIN_DAYS;
   });
 
   const itemsWithAge = history.map((h) => {
@@ -186,7 +215,8 @@ function main() {
 
   fs.writeFileSync(OUT, JSON.stringify(news, null, 2));
   fs.writeFileSync(HISTORY, JSON.stringify(history, null, 2));
-  console.log(`[news] dnes nově: ${newBooks.length} knih, ${newComics.length} komiksů, ${newMovies.length} filmů/seriálů, ${newGames.length} her, ${newGamePass.length} přírůstků do Game Passu | celkem v okně ${RETAIN_DAYS} dnů: ${itemsWithAge.length} → news.json`);
+  fs.writeFileSync(SEEN, JSON.stringify(seen, null, 2));
+  console.log(`[news] dnes nově: ${newBooks.length} knih, ${newComics.length} komiksů, ${newMovies.length} filmů/seriálů, ${newGames.length} her, ${newGamePass.length} přírůstků do Game Passu (${skipped} přeskočeno - už dřív viděno) | celkem v okně ${RETAIN_DAYS} dnů: ${itemsWithAge.length} → news.json`);
 
   // Archive current data for next comparison
   if (books) fs.writeFileSync(path.join(DIR, "previous-books.json"), JSON.stringify(books));
