@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-18T01:16:05.241Z",
+  "updatedAt": "2026-07-18T02:15:13.920Z",
   "games": [
     {
       "title": "Palworld",
@@ -122,20 +122,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 580, Intel Core i5-6500 / AMD Ryzen 5 2600"
     },
     {
-      "title": "Mesmalie",
-      "tier": "green",
-      "gpu": "Intel HD Graphics",
-      "cpu": "Intel Core i5-6200U",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics, Intel Core i5-6200U"
-    },
-    {
       "title": "Ascend to ZERO",
       "tier": "orange",
       "gpu": "Nvidia GTX 2060 / AMD Radeon RX 5600 XT",
       "cpu": "Intel® Core™ i7-8700 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GTX 2060 / AMD Radeon RX 5600 XT, Intel® Core™ i7-8700 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Mesmalie",
+      "tier": "green",
+      "gpu": "Intel HD Graphics",
+      "cpu": "Intel Core i5-6200U",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics, Intel Core i5-6200U"
     },
     {
       "title": "Plant Nursery Simulator",
@@ -186,20 +186,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 ||| AMD Radeon RX 5600 XT ||| Intel Arc A750"
     },
     {
-      "title": "REWIND",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1060 6GB",
-      "cpu": "Intel Core i7-7700",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1060 6GB, Intel Core i7-7700"
-    },
-    {
       "title": "Ore Factory Squad ⛏️",
       "tier": "orange",
       "gpu": "NVIDIA RTX 2070 or AMD equivalent",
       "cpu": "i5-12400 or Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 2070 or AMD equivalent, i5-12400 or Ryzen 5 5600X"
+    },
+    {
+      "title": "REWIND",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1060 6GB",
+      "cpu": "Intel Core i7-7700",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1060 6GB, Intel Core i7-7700"
     },
     {
       "title": "HYPERFIST",
@@ -410,6 +410,14 @@
       "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 1650 4GB or better, Intel® Core™ i3-6100 or AMD FX™-6300 or better"
     },
     {
+      "title": "D-topia",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1060, 3GB",
+      "cpu": "Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, 3GB, Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz"
+    },
+    {
       "title": "Runeveil",
       "tier": "green",
       "gpu": "Intel HD Graphics 3000 or better",
@@ -418,12 +426,12 @@
       "note": "Minimální konfigurace: Intel HD Graphics 3000 or better, Intel® Core™ i3"
     },
     {
-      "title": "D-topia",
+      "title": "Pimbolas",
       "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1060, 3GB",
-      "cpu": "Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz",
+      "gpu": "NVIDIA Geforce GTX 1060 3GB",
+      "cpu": "Ryzen 5 1500X",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, 3GB, Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz"
+      "note": "Doporučená konfigurace: NVIDIA Geforce GTX 1060 3GB, Ryzen 5 1500X"
     },
     {
       "title": "The Queen's Gondola",
@@ -440,14 +448,6 @@
       "cpu": "Intel Core i7-6700k or AMD Ryzen 3 1200X",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Nvidia GTX 960 4GB or higher, Intel Core i7-6700k or AMD Ryzen 3 1200X"
-    },
-    {
-      "title": "Pimbolas",
-      "tier": "green",
-      "gpu": "NVIDIA Geforce GTX 1060 3GB",
-      "cpu": "Ryzen 5 1500X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA Geforce GTX 1060 3GB, Ryzen 5 1500X"
     },
     {
       "title": "Once Upon A Card",
@@ -498,14 +498,6 @@
       "note": "Doporučená konfigurace: GeForce GTX 1050 6GB, Intel Core i5-3470"
     },
     {
-      "title": "The Light that Binds Us",
-      "tier": "red",
-      "gpu": "GeForce RTX 4060",
-      "cpu": "Intel® Core™ i7 13th gen",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 4060, Intel® Core™ i7 13th gen"
-    },
-    {
       "title": "Forgive Me My Love",
       "tier": "green",
       "gpu": "GeForce GTX 1060",
@@ -514,12 +506,28 @@
       "note": "Minimální konfigurace: GeForce GTX 1060, Intel Pentium G6400"
     },
     {
+      "title": "The Light that Binds Us",
+      "tier": "red",
+      "gpu": "GeForce RTX 4060",
+      "cpu": "Intel® Core™ i7 13th gen",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 4060, Intel® Core™ i7 13th gen"
+    },
+    {
       "title": "Remagotchi",
       "tier": "green",
       "gpu": "Intel UHD Graphics 600 or equivalent",
       "cpu": "Dual Core 2.4 GHz or higher",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Intel UHD Graphics 600 or equivalent, Dual Core 2.4 GHz or higher"
+    },
+    {
+      "title": "Fogpiercer",
+      "tier": "green",
+      "gpu": "NVIDIA® GeForce® GTX 1060 (6 GB) / AMD® Radeon™ RX 5500 XT (8 GB)",
+      "cpu": "Intel® Core™ i5-7700K (quad-core) / AMD® Ryzen™ 5 1500X (quad-core)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 1060 (6 GB) / AMD® Radeon™ RX 5500 XT (8 GB), Intel® Core™ i5-7700K (quad-core) / AMD® Ryzen™ 5 1500X (quad-core)"
     },
     {
       "title": "Hollow Knight: Silksong",
