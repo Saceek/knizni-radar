@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-18T09:15:47.697Z",
+  "updatedAt": "2026-07-18T10:14:49.160Z",
   "games": [
     {
       "title": "Palworld",
@@ -82,6 +82,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 (6144 MB) or AMD Radeon RX 580 (8192 MB), Intel Core i5-9600K (6 * 3700) or AMD Ryzen 5 1600 (6 * 3200)"
     },
     {
+      "title": "Funnel Runners",
+      "tier": "red",
+      "gpu": "Nvidia GeForce RTX 3070 Ti / Nvidia GeForce RTX 4070 / AMD Radeon RX 6800 XT",
+      "cpu": "Intel Core i7-11700 / AMD Ryzen 7 5800X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce RTX 3070 Ti / Nvidia GeForce RTX 4070 / AMD Radeon RX 6800 XT, Intel Core i7-11700 / AMD Ryzen 7 5800X"
+    },
+    {
       "title": "Hell Maiden",
       "tier": "green",
       "gpu": "Nvidia GTX 1070 / AMD RX 570 (Adrenalin 22.1.2)",
@@ -96,14 +104,6 @@
       "cpu": "AMD Ryzen™ 7 6800H / Intel® Core™ i7-12700H",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA® GeForce RTX™ 4060 / AMD Radeon™ RX 7600, AMD Ryzen™ 7 6800H / Intel® Core™ i7-12700H"
-    },
-    {
-      "title": "Funnel Runners",
-      "tier": "red",
-      "gpu": "Nvidia GeForce RTX 3070 Ti / Nvidia GeForce RTX 4070 / AMD Radeon RX 6800 XT",
-      "cpu": "Intel Core i7-11700 / AMD Ryzen 7 5800X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce RTX 3070 Ti / Nvidia GeForce RTX 4070 / AMD Radeon RX 6800 XT, Intel Core i7-11700 / AMD Ryzen 7 5800X"
     },
     {
       "title": "The NOexistenceN of Lilith",
@@ -330,6 +330,14 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4000, 2GHz Dual Core"
     },
     {
+      "title": "Fogpiercer",
+      "tier": "green",
+      "gpu": "NVIDIA® GeForce® GTX 1060 (6 GB) / AMD® Radeon™ RX 5500 XT (8 GB)",
+      "cpu": "Intel® Core™ i5-7700K (quad-core) / AMD® Ryzen™ 5 1500X (quad-core)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 1060 (6 GB) / AMD® Radeon™ RX 5500 XT (8 GB), Intel® Core™ i5-7700K (quad-core) / AMD® Ryzen™ 5 1500X (quad-core)"
+    },
+    {
       "title": "黎明探险队 / CTD",
       "tier": "green",
       "gpu": "Nvidia GeForce GTX 1050 Ti or higher",
@@ -352,14 +360,6 @@
       "cpu": "Intel Core i5 8th Gen",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GEFORCE GTX 1050 Ti (2 GB), Intel Core i5 8th Gen"
-    },
-    {
-      "title": "Fogpiercer",
-      "tier": "green",
-      "gpu": "NVIDIA® GeForce® GTX 1060 (6 GB) / AMD® Radeon™ RX 5500 XT (8 GB)",
-      "cpu": "Intel® Core™ i5-7700K (quad-core) / AMD® Ryzen™ 5 1500X (quad-core)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 1060 (6 GB) / AMD® Radeon™ RX 5500 XT (8 GB), Intel® Core™ i5-7700K (quad-core) / AMD® Ryzen™ 5 1500X (quad-core)"
     },
     {
       "title": "Ghost Keeper",
@@ -466,20 +466,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 6600, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
-      "title": "NEKO-MIMI SWEET HOUSEMATES Vol. 2",
-      "tier": "green",
-      "gpu": "Nvidia GTX 1050 or AMD RX 550 and above",
-      "cpu": "Intel® Core™ i5 or higher",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Nvidia GTX 1050 or AMD RX 550 and above, Intel® Core™ i5 or higher"
-    },
-    {
       "title": "Step Lightly",
       "tier": "red",
       "gpu": "RTX 3060 Ti or equivalent",
       "cpu": null,
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 3060 Ti or equivalent"
+    },
+    {
+      "title": "NEKO-MIMI SWEET HOUSEMATES Vol. 2",
+      "tier": "green",
+      "gpu": "Nvidia GTX 1050 or AMD RX 550 and above",
+      "cpu": "Intel® Core™ i5 or higher",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Nvidia GTX 1050 or AMD RX 550 and above, Intel® Core™ i5 or higher"
     },
     {
       "title": "Quantum Void",
