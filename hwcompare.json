@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-18T02:15:13.920Z",
+  "updatedAt": "2026-07-18T03:14:59.398Z",
   "games": [
     {
       "title": "Palworld",
@@ -74,20 +74,20 @@
       "note": "Minimální konfigurace: GTX 1060 / RX 580, Intel Core i5 2.5 GHz or AMD equivalent"
     },
     {
-      "title": "Dragon Kisser",
-      "tier": "orange",
-      "gpu": "NVIDIA® GeForce RTX™ 4060 / AMD Radeon™ RX 7600",
-      "cpu": "AMD Ryzen™ 7 6800H / Intel® Core™ i7-12700H",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA® GeForce RTX™ 4060 / AMD Radeon™ RX 7600, AMD Ryzen™ 7 6800H / Intel® Core™ i7-12700H"
-    },
-    {
       "title": "Denshattack!",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1060 (6144 MB) or AMD Radeon RX 580 (8192 MB)",
       "cpu": "Intel Core i5-9600K (6 * 3700) or AMD Ryzen 5 1600 (6 * 3200)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 (6144 MB) or AMD Radeon RX 580 (8192 MB), Intel Core i5-9600K (6 * 3700) or AMD Ryzen 5 1600 (6 * 3200)"
+    },
+    {
+      "title": "Dragon Kisser",
+      "tier": "orange",
+      "gpu": "NVIDIA® GeForce RTX™ 4060 / AMD Radeon™ RX 7600",
+      "cpu": "AMD Ryzen™ 7 6800H / Intel® Core™ i7-12700H",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA® GeForce RTX™ 4060 / AMD Radeon™ RX 7600, AMD Ryzen™ 7 6800H / Intel® Core™ i7-12700H"
     },
     {
       "title": "Funnel Runners",
@@ -114,6 +114,14 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 750 Ti / AMD Radeon RX 550 / Intel UHD 630 or higher, Intel Core i3-8100 / AMD Ryzen 3 2200G or higher"
     },
     {
+      "title": "Mesmalie",
+      "tier": "green",
+      "gpu": "Intel HD Graphics",
+      "cpu": "Intel Core i5-6200U",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics, Intel Core i5-6200U"
+    },
+    {
       "title": "Don't Sleep With The Fishes",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1660 / AMD Radeon RX 580",
@@ -128,14 +136,6 @@
       "cpu": "Intel® Core™ i7-8700 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GTX 2060 / AMD Radeon RX 5600 XT, Intel® Core™ i7-8700 / AMD Ryzen 5 3600"
-    },
-    {
-      "title": "Mesmalie",
-      "tier": "green",
-      "gpu": "Intel HD Graphics",
-      "cpu": "Intel Core i5-6200U",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics, Intel Core i5-6200U"
     },
     {
       "title": "Plant Nursery Simulator",
@@ -410,6 +410,14 @@
       "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 1650 4GB or better, Intel® Core™ i3-6100 or AMD FX™-6300 or better"
     },
     {
+      "title": "Pimbolas",
+      "tier": "green",
+      "gpu": "NVIDIA Geforce GTX 1060 3GB",
+      "cpu": "Ryzen 5 1500X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA Geforce GTX 1060 3GB, Ryzen 5 1500X"
+    },
+    {
       "title": "D-topia",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1060, 3GB",
@@ -424,14 +432,6 @@
       "cpu": "Intel® Core™ i3",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 3000 or better, Intel® Core™ i3"
-    },
-    {
-      "title": "Pimbolas",
-      "tier": "green",
-      "gpu": "NVIDIA Geforce GTX 1060 3GB",
-      "cpu": "Ryzen 5 1500X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA Geforce GTX 1060 3GB, Ryzen 5 1500X"
     },
     {
       "title": "The Queen's Gondola",
@@ -490,6 +490,14 @@
       "note": "Doporučená konfigurace: Nvidia GTX 650, Intel Core i5"
     },
     {
+      "title": "Fogpiercer",
+      "tier": "green",
+      "gpu": "NVIDIA® GeForce® GTX 1060 (6 GB) / AMD® Radeon™ RX 5500 XT (8 GB)",
+      "cpu": "Intel® Core™ i5-7700K (quad-core) / AMD® Ryzen™ 5 1500X (quad-core)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 1060 (6 GB) / AMD® Radeon™ RX 5500 XT (8 GB), Intel® Core™ i5-7700K (quad-core) / AMD® Ryzen™ 5 1500X (quad-core)"
+    },
+    {
       "title": "Quack Quack Up",
       "tier": "green",
       "gpu": "GeForce GTX 1050 6GB",
@@ -520,14 +528,6 @@
       "cpu": "Dual Core 2.4 GHz or higher",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Intel UHD Graphics 600 or equivalent, Dual Core 2.4 GHz or higher"
-    },
-    {
-      "title": "Fogpiercer",
-      "tier": "green",
-      "gpu": "NVIDIA® GeForce® GTX 1060 (6 GB) / AMD® Radeon™ RX 5500 XT (8 GB)",
-      "cpu": "Intel® Core™ i5-7700K (quad-core) / AMD® Ryzen™ 5 1500X (quad-core)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 1060 (6 GB) / AMD® Radeon™ RX 5500 XT (8 GB), Intel® Core™ i5-7700K (quad-core) / AMD® Ryzen™ 5 1500X (quad-core)"
     },
     {
       "title": "Hollow Knight: Silksong",
