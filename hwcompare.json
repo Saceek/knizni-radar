@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-19T10:14:53.345Z",
+  "updatedAt": "2026-07-19T11:15:23.736Z",
   "games": [
     {
       "title": "Palworld",
@@ -194,14 +194,6 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 6GB, Intel Core i7-7700"
     },
     {
-      "title": "絨毯を洗うゲーム",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1650",
-      "cpu": "Intel Core i7-11800H",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GTX 1650, Intel Core i7-11800H"
-    },
-    {
       "title": "HYPERFIST",
       "tier": "orange",
       "gpu": "Nvidia RTX 2070",
@@ -226,20 +218,20 @@
       "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 1060 (6 GB) / AMD® Radeon™ RX 5500 XT (8 GB), Intel® Core™ i5-7700K (quad-core) / AMD® Ryzen™ 5 1500X (quad-core)"
     },
     {
-      "title": "列乌尼斯的挽歌 Requiem of Reuinis",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce RTX 3050 / AMD Radeon RX 6600",
-      "cpu": "Intel Core Ultra 7",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3050 / AMD Radeon RX 6600, Intel Core Ultra 7"
-    },
-    {
       "title": "Tavern Legends",
       "tier": "red",
       "gpu": "DirectX 12 compatible GPU, 8GB dedicated VRAM (GeForce RTX 3060 / Radeon RX 6700)",
       "cpu": "Intel Core i7 @ 4GHz or Ryzen 5 @ 4GHz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: DirectX 12 compatible GPU, 8GB dedicated VRAM (GeForce RTX 3060 / Radeon RX 6700), Intel Core i7 @ 4GHz or Ryzen 5 @ 4GHz"
+    },
+    {
+      "title": "列乌尼斯的挽歌 Requiem of Reuinis",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce RTX 3050 / AMD Radeon RX 6600",
+      "cpu": "Intel Core Ultra 7",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3050 / AMD Radeon RX 6600, Intel Core Ultra 7"
     },
     {
       "title": "Life & Shadow: Celestial Call - Prologue",
@@ -330,6 +322,14 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1050 Ti or higher, Inter Core i5 - 12400F or higher"
     },
     {
+      "title": "D-topia",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1060, 3GB",
+      "cpu": "Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, 3GB, Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz"
+    },
+    {
       "title": "Flawed Tactics",
       "tier": "green",
       "gpu": "NVIDIA GTX 1060 / AMD RX 580 (4 GB VRAM, DirectX 11)",
@@ -352,14 +352,6 @@
       "cpu": "Ryzen 5 1500X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA Geforce GTX 1060 3GB, Ryzen 5 1500X"
-    },
-    {
-      "title": "D-topia",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1060, 3GB",
-      "cpu": "Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, 3GB, Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz"
     },
     {
       "title": "挂机猫猫传",
@@ -386,6 +378,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 Ti / RTX 4060 / AMD Radeon RX 6700 XT, Intel Core i7-10700K / AMD Ryzen 7 3700X"
     },
     {
+      "title": "Penguin Lifter",
+      "tier": "orange",
+      "gpu": "GEFORCE RTX 2060",
+      "cpu": "4 core 2,5 GHz+;",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GEFORCE RTX 2060, 4 core 2,5 GHz+;"
+    },
+    {
       "title": "HouseWarming",
       "tier": "green",
       "gpu": "NVIDIA® GeForce® GTX 1650 4GB or better",
@@ -400,14 +400,6 @@
       "cpu": "Intel® Core™ i3",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 3000 or better, Intel® Core™ i3"
-    },
-    {
-      "title": "Penguin Lifter",
-      "tier": "orange",
-      "gpu": "GEFORCE RTX 2060",
-      "cpu": "4 core 2,5 GHz+;",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GEFORCE RTX 2060, 4 core 2,5 GHz+;"
     },
     {
       "title": "The Queen's Gondola",
@@ -426,20 +418,20 @@
       "note": "Minimální konfigurace: Nvidia GTX 960 4GB or higher, Intel Core i7-6700k or AMD Ryzen 3 1200X"
     },
     {
-      "title": "Step Lightly",
-      "tier": "red",
-      "gpu": "RTX 3060 Ti or equivalent",
-      "cpu": null,
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 3060 Ti or equivalent"
-    },
-    {
       "title": "Quantum Void",
       "tier": "green",
       "gpu": "Nvidia GTX 650",
       "cpu": "Intel Core i5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GTX 650, Intel Core i5"
+    },
+    {
+      "title": "Step Lightly",
+      "tier": "red",
+      "gpu": "RTX 3060 Ti or equivalent",
+      "cpu": null,
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 3060 Ti or equivalent"
     },
     {
       "title": "NEKO-MIMI SWEET HOUSEMATES Vol. 2",
