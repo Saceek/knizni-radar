@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-21T21:15:25.363Z",
+  "updatedAt": "2026-07-21T23:16:01.723Z",
   "games": [
     {
       "title": "Palworld",
@@ -82,20 +82,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 (6144 MB) or AMD Radeon RX 580 (8192 MB), Intel Core i5-9600K (6 * 3700) or AMD Ryzen 5 1600 (6 * 3200)"
     },
     {
-      "title": "The NOexistenceN of Lilith",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 750 Ti / AMD Radeon RX 550 / Intel UHD 630 or higher",
-      "cpu": "Intel Core i3-8100 / AMD Ryzen 3 2200G or higher",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 750 Ti / AMD Radeon RX 550 / Intel UHD 630 or higher, Intel Core i3-8100 / AMD Ryzen 3 2200G or higher"
-    },
-    {
       "title": "The Mermaid Mask",
       "tier": "green",
       "gpu": "Intel HD Graphics",
       "cpu": "Intel Core i3 or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics, Intel Core i3 or equivalent"
+    },
+    {
+      "title": "The NOexistenceN of Lilith",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 750 Ti / AMD Radeon RX 550 / Intel UHD 630 or higher",
+      "cpu": "Intel Core i3-8100 / AMD Ryzen 3 2200G or higher",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 750 Ti / AMD Radeon RX 550 / Intel UHD 630 or higher, Intel Core i3-8100 / AMD Ryzen 3 2200G or higher"
     },
     {
       "title": "Hell Maiden",
@@ -194,14 +194,6 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 6GB, Intel Core i7-7700"
     },
     {
-      "title": "Fogpiercer",
-      "tier": "green",
-      "gpu": "NVIDIA® GeForce® GTX 1060 (6 GB) / AMD® Radeon™ RX 5500 XT (8 GB)",
-      "cpu": "Intel® Core™ i5-7700K (quad-core) / AMD® Ryzen™ 5 1500X (quad-core)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 1060 (6 GB) / AMD® Radeon™ RX 5500 XT (8 GB), Intel® Core™ i5-7700K (quad-core) / AMD® Ryzen™ 5 1500X (quad-core)"
-    },
-    {
       "title": "HYPERFIST",
       "tier": "orange",
       "gpu": "Nvidia RTX 2070",
@@ -290,6 +282,14 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4000, 2GHz Dual Core"
     },
     {
+      "title": "Photomaly",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1660 / AMD RX 580",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1660 / AMD RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
       "title": "再战大极品+255",
       "tier": "green",
       "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
@@ -322,14 +322,6 @@
       "note": "Doporučená konfigurace: AMD Radeon Vega 7 / NVIDIA GeForce GTX 1050, Intel Core i5 8th Gen / AMD Ryzen 3 or better"
     },
     {
-      "title": "Photomaly",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1660 / AMD RX 580",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1660 / AMD RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
       "title": "The Crimson Maid",
       "tier": "green",
       "gpu": "nVidia GTX 1070 / AMD RX 580",
@@ -354,20 +346,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560, Intel Core i5 / AMD Ryzen 5"
     },
     {
+      "title": "G-Rebels",
+      "tier": "red",
+      "gpu": "Nvidia RTX 4080 or AMD RX 7900 XT with at least 12 GB VRAM",
+      "cpu": "Intel Core i7-14700K or AMD Ryzen 9 7900X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia RTX 4080 or AMD RX 7900 XT with at least 12 GB VRAM, Intel Core i7-14700K or AMD Ryzen 9 7900X"
+    },
+    {
       "title": "挂机猫猫传",
       "tier": "green",
       "gpu": "NVIDIA GeForce GT 710 or higher",
       "cpu": "Intel Core i5 or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GT 710 or higher, Intel Core i5 or better"
-    },
-    {
-      "title": "黎明探险队 / CTD",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1050 Ti or higher",
-      "cpu": "Inter Core i5 - 12400F or higher",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1050 Ti or higher, Inter Core i5 - 12400F or higher"
     },
     {
       "title": "Flawed Tactics",
@@ -378,12 +370,12 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580 (4 GB VRAM, DirectX 11), Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
-      "title": "G-Rebels",
-      "tier": "red",
-      "gpu": "Nvidia RTX 4080 or AMD RX 7900 XT with at least 12 GB VRAM",
-      "cpu": "Intel Core i7-14700K or AMD Ryzen 9 7900X",
+      "title": "黎明探险队 / CTD",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 1050 Ti or higher",
+      "cpu": "Inter Core i5 - 12400F or higher",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia RTX 4080 or AMD RX 7900 XT with at least 12 GB VRAM, Intel Core i7-14700K or AMD Ryzen 9 7900X"
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1050 Ti or higher, Inter Core i5 - 12400F or higher"
     },
     {
       "title": "The Office Void",
@@ -402,6 +394,14 @@
       "note": "Doporučená konfigurace: GEFORCE RTX 2060, 4 core 2,5 GHz+;"
     },
     {
+      "title": "MOLDRISE",
+      "tier": "green",
+      "gpu": "NVidia GTX 950 or similar",
+      "cpu": "2.6 GHz Dual Core or similar",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVidia GTX 950 or similar, 2.6 GHz Dual Core or similar"
+    },
+    {
       "title": "Heave Ho 2",
       "tier": "orange",
       "gpu": "GeForce GTX 1080 / Radeon RX Vega 56 / Arc A580",
@@ -410,20 +410,28 @@
       "note": "Doporučená konfigurace: GeForce GTX 1080 / Radeon RX Vega 56 / Arc A580, Intel Core i7-6950X / AMD Ryzen 7 2700"
     },
     {
+      "title": "Drone Sector",
+      "tier": "red",
+      "gpu": "8 GB VRAM, AMD Radeon RX 6700 / Nvidia GeForce RTX 3060",
+      "cpu": "AMD Ryzen 5 5600X / Intel Core i5-12600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 8 GB VRAM, AMD Radeon RX 6700 / Nvidia GeForce RTX 3060, AMD Ryzen 5 5600X / Intel Core i5-12600"
+    },
+    {
+      "title": "Mad Merchant",
+      "tier": "red",
+      "gpu": "NVIDIA GeForce RTX 3060 12 GB / AMD Radeon RX 6700 XT",
+      "cpu": "Intel Core i5-12400F / AMD Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB / AMD Radeon RX 6700 XT, Intel Core i5-12400F / AMD Ryzen 5 5600"
+    },
+    {
       "title": "Step Lightly",
       "tier": "red",
       "gpu": "RTX 3060 Ti or equivalent",
       "cpu": null,
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 3060 Ti or equivalent"
-    },
-    {
-      "title": "MOLDRISE",
-      "tier": "green",
-      "gpu": "NVidia GTX 950 or similar",
-      "cpu": "2.6 GHz Dual Core or similar",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVidia GTX 950 or similar, 2.6 GHz Dual Core or similar"
     },
     {
       "title": "WOBBLY HEIST",
@@ -442,12 +450,12 @@
       "note": "Minimální konfigurace: Intel HD Graphics 3000 or better, Intel® Core™ i3"
     },
     {
-      "title": "Mad Merchant",
-      "tier": "red",
-      "gpu": "NVIDIA GeForce RTX 3060 12 GB / AMD Radeon RX 6700 XT",
-      "cpu": "Intel Core i5-12400F / AMD Ryzen 5 5600",
+      "title": "The Queen's Gondola",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1660 Ti / RTX 2060 / AMD RX 5600 XT",
+      "cpu": "Intel Core i5-11400 / AMD Ryzen 5 3600",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB / AMD Radeon RX 6700 XT, Intel Core i5-12400F / AMD Ryzen 5 5600"
+      "note": "Doporučená konfigurace: NVIDIA GTX 1660 Ti / RTX 2060 / AMD RX 5600 XT, Intel Core i5-11400 / AMD Ryzen 5 3600"
     },
     {
       "title": "Quantum Void",
@@ -458,28 +466,12 @@
       "note": "Doporučená konfigurace: Nvidia GTX 650, Intel Core i5"
     },
     {
-      "title": "The Queen's Gondola",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1660 Ti / RTX 2060 / AMD RX 5600 XT",
-      "cpu": "Intel Core i5-11400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1660 Ti / RTX 2060 / AMD RX 5600 XT, Intel Core i5-11400 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "Drink Factory Simulator - Prologue",
       "tier": "green",
       "gpu": "Nvidia GTX 960 4GB or higher",
       "cpu": "Intel Core i7-6700k or AMD Ryzen 3 1200X",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Nvidia GTX 960 4GB or higher, Intel Core i7-6700k or AMD Ryzen 3 1200X"
-    },
-    {
-      "title": "Drone Sector",
-      "tier": "red",
-      "gpu": "8 GB VRAM, AMD Radeon RX 6700 / Nvidia GeForce RTX 3060",
-      "cpu": "AMD Ryzen 5 5600X / Intel Core i5-12600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: 8 GB VRAM, AMD Radeon RX 6700 / Nvidia GeForce RTX 3060, AMD Ryzen 5 5600X / Intel Core i5-12600"
     },
     {
       "title": "4D Intuition",
@@ -506,6 +498,14 @@
       "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
     },
     {
+      "title": "Letalis",
+      "tier": "green",
+      "gpu": "GeForce GTX 650 or Radeon HD 5770",
+      "cpu": "Intel Core i5-750 or AMD Phenom II x4 945",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 650 or Radeon HD 5770, Intel Core i5-750 or AMD Phenom II x4 945"
+    },
+    {
       "title": "Idyll Isle",
       "tier": "green",
       "gpu": "Intel HD Graphics 630 / AMD Radeon RX 550 / NVIDIA GeForce GTX 750 or better",
@@ -514,12 +514,12 @@
       "note": "Doporučená konfigurace: Intel HD Graphics 630 / AMD Radeon RX 550 / NVIDIA GeForce GTX 750 or better, Intel Core i5-4460 / AMD Ryzen 3 1200 or better"
     },
     {
-      "title": "Letalis",
+      "title": "DIVE or DIE - Children of Rain",
       "tier": "green",
-      "gpu": "GeForce GTX 650 or Radeon HD 5770",
-      "cpu": "Intel Core i5-750 or AMD Phenom II x4 945",
+      "gpu": "GTX 1050 / RX VEGA-56",
+      "cpu": "Intel Core i5 4690 @ 3.5 GHz | AMD Ryzen 5 1600x @ 3.6 GHz",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 650 or Radeon HD 5770, Intel Core i5-750 or AMD Phenom II x4 945"
+      "note": "Doporučená konfigurace: GTX 1050 / RX VEGA-56, Intel Core i5 4690 @ 3.5 GHz | AMD Ryzen 5 1600x @ 3.6 GHz"
     },
     {
       "title": "diffiCULT",
