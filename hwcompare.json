@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-22T15:15:55.961Z",
+  "updatedAt": "2026-07-22T16:16:06.152Z",
   "games": [
     {
       "title": "Palworld",
@@ -226,6 +226,14 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 (12 GB) / AMD RX 6700 XT or equivalent — DX11 compatible, AMD Ryzen 5 3600 / Intel Core i5-9600K or better"
     },
     {
+      "title": "Reap and Rush",
+      "tier": "green",
+      "gpu": "GeForce GTX 1050 (2048 VRAM); Radeon R9 380 (2048 VRAM)",
+      "cpu": "Intel Core i5-3470",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1050 (2048 VRAM); Radeon R9 380 (2048 VRAM), Intel Core i5-3470"
+    },
+    {
       "title": "Ocean Rush",
       "tier": "green",
       "gpu": "intel hd graphics",
@@ -234,12 +242,28 @@
       "note": "Minimální konfigurace: intel hd graphics, intel dual core"
     },
     {
+      "title": "DIVE or DIE - Children of Rain",
+      "tier": "green",
+      "gpu": "GTX 1050 / RX VEGA-56",
+      "cpu": "Intel Core i5 4690 @ 3.5 GHz | AMD Ryzen 5 1600x @ 3.6 GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1050 / RX VEGA-56, Intel Core i5 4690 @ 3.5 GHz | AMD Ryzen 5 1600x @ 3.6 GHz"
+    },
+    {
       "title": "KAZ",
       "tier": "green",
       "gpu": "NVIDIA GTX 960 or equivalent",
       "cpu": "3.5Ghz  processing power",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 960 or equivalent, 3.5Ghz  processing power"
+    },
+    {
+      "title": "The Hust Banhmi | Bánh Mì Bách Khoa",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1060 / AMD Radeon RX 580",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 / AMD Radeon RX 580, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "Double Driver",
@@ -258,36 +282,12 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4000, 2GHz Dual Core"
     },
     {
-      "title": "The Hust Banhmi | Bánh Mì Bách Khoa",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1060 / AMD Radeon RX 580",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 / AMD Radeon RX 580, Intel Core i5-10400 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "十米爆爽超变",
       "tier": "green",
       "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
       "cpu": "Intel Core i3",
       "usedMinimum": true,
       "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
-    },
-    {
-      "title": "Reap and Rush",
-      "tier": "green",
-      "gpu": "GeForce GTX 1050 (2048 VRAM); Radeon R9 380 (2048 VRAM)",
-      "cpu": "Intel Core i5-3470",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1050 (2048 VRAM); Radeon R9 380 (2048 VRAM), Intel Core i5-3470"
-    },
-    {
-      "title": "DIVE or DIE - Children of Rain",
-      "tier": "green",
-      "gpu": "GTX 1050 / RX VEGA-56",
-      "cpu": "Intel Core i5 4690 @ 3.5 GHz | AMD Ryzen 5 1600x @ 3.6 GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1050 / RX VEGA-56, Intel Core i5 4690 @ 3.5 GHz | AMD Ryzen 5 1600x @ 3.6 GHz"
     },
     {
       "title": "再战大极品+255",
@@ -370,6 +370,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GT 710 or higher, Intel Core i5 or better"
     },
     {
+      "title": "Mad Merchant",
+      "tier": "red",
+      "gpu": "NVIDIA GeForce RTX 3060 12 GB / AMD Radeon RX 6700 XT",
+      "cpu": "Intel Core i5-12400F / AMD Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB / AMD Radeon RX 6700 XT, Intel Core i5-12400F / AMD Ryzen 5 5600"
+    },
+    {
       "title": "黎明探险队 / CTD",
       "tier": "green",
       "gpu": "Nvidia GeForce GTX 1050 Ti or higher",
@@ -400,14 +408,6 @@
       "cpu": "4 core 2,5 GHz+;",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GEFORCE RTX 2060, 4 core 2,5 GHz+;"
-    },
-    {
-      "title": "Mad Merchant",
-      "tier": "red",
-      "gpu": "NVIDIA GeForce RTX 3060 12 GB / AMD Radeon RX 6700 XT",
-      "cpu": "Intel Core i5-12400F / AMD Ryzen 5 5600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB / AMD Radeon RX 6700 XT, Intel Core i5-12400F / AMD Ryzen 5 5600"
     },
     {
       "title": "Heave Ho 2",
@@ -514,20 +514,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650, Intel® Core™ i5 @ 3.20 GHz"
     },
     {
-      "title": "Quack Quack Up",
-      "tier": "green",
-      "gpu": "GeForce GTX 1050 6GB",
-      "cpu": "Intel Core i5-3470",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1050 6GB, Intel Core i5-3470"
-    },
-    {
       "title": "The Light that Binds Us",
       "tier": "red",
       "gpu": "GeForce RTX 4060",
       "cpu": "Intel® Core™ i7 13th gen",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 4060, Intel® Core™ i7 13th gen"
+    },
+    {
+      "title": "Quack Quack Up",
+      "tier": "green",
+      "gpu": "GeForce GTX 1050 6GB",
+      "cpu": "Intel Core i5-3470",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1050 6GB, Intel Core i5-3470"
     },
     {
       "title": "The Lure",
@@ -560,6 +560,14 @@
       "cpu": null,
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel Iris Xe"
+    },
+    {
+      "title": "Farm Factory Simulator",
+      "tier": "green",
+      "gpu": "GeForce GTX 1060 6GB",
+      "cpu": "AMD Ryzen 5 3600 / Intel Core i7 7700K",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1060 6GB, AMD Ryzen 5 3600 / Intel Core i7 7700K"
     },
     {
       "title": "Hollow Knight: Silksong",
