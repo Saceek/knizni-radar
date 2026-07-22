@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-22T12:15:04.295Z",
+  "updatedAt": "2026-07-22T13:15:50.899Z",
   "games": [
     {
       "title": "Palworld",
@@ -266,20 +266,20 @@
       "note": "Minimální konfigurace: INTEL HD GRAPHICS, Intel DUAL CORE"
     },
     {
-      "title": "Chest Buster",
-      "tier": "green",
-      "gpu": "Intel HD Graphics 4000",
-      "cpu": "2GHz Dual Core",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 4000, 2GHz Dual Core"
-    },
-    {
       "title": "Pet the Cat",
       "tier": "orange",
       "gpu": "GTX 1080",
       "cpu": "Intel i5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 1080, Intel i5"
+    },
+    {
+      "title": "Chest Buster",
+      "tier": "green",
+      "gpu": "Intel HD Graphics 4000",
+      "cpu": "2GHz Dual Core",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics 4000, 2GHz Dual Core"
     },
     {
       "title": "十米爆爽超变",
@@ -322,6 +322,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, 3GB, Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz"
     },
     {
+      "title": "Drone Sector",
+      "tier": "red",
+      "gpu": "8 GB VRAM, AMD Radeon RX 6700 / Nvidia GeForce RTX 3060",
+      "cpu": "AMD Ryzen 5 5600X / Intel Core i5-12600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 8 GB VRAM, AMD Radeon RX 6700 / Nvidia GeForce RTX 3060, AMD Ryzen 5 5600X / Intel Core i5-12600"
+    },
+    {
       "title": "Beso's Shawarma",
       "tier": "green",
       "gpu": "AMD Radeon Vega 7 / NVIDIA GeForce GTX 1050",
@@ -330,12 +338,12 @@
       "note": "Doporučená konfigurace: AMD Radeon Vega 7 / NVIDIA GeForce GTX 1050, Intel Core i5 8th Gen / AMD Ryzen 3 or better"
     },
     {
-      "title": "Drone Sector",
-      "tier": "red",
-      "gpu": "8 GB VRAM, AMD Radeon RX 6700 / Nvidia GeForce RTX 3060",
-      "cpu": "AMD Ryzen 5 5600X / Intel Core i5-12600",
+      "title": "Reap and Rush",
+      "tier": "green",
+      "gpu": "GeForce GTX 1050 (2048 VRAM); Radeon R9 380 (2048 VRAM)",
+      "cpu": "Intel Core i5-3470",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: 8 GB VRAM, AMD Radeon RX 6700 / Nvidia GeForce RTX 3060, AMD Ryzen 5 5600X / Intel Core i5-12600"
+      "note": "Doporučená konfigurace: GeForce GTX 1050 (2048 VRAM); Radeon R9 380 (2048 VRAM), Intel Core i5-3470"
     },
     {
       "title": "G-Rebels",
@@ -360,14 +368,6 @@
       "cpu": "Intel Core i7 @ 3Ghz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: nVidia GTX 1070 / AMD RX 580, Intel Core i7 @ 3Ghz"
-    },
-    {
-      "title": "Reap and Rush",
-      "tier": "green",
-      "gpu": "GeForce GTX 1050 (2048 VRAM); Radeon R9 380 (2048 VRAM)",
-      "cpu": "Intel Core i5-3470",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1050 (2048 VRAM); Radeon R9 380 (2048 VRAM), Intel Core i5-3470"
     },
     {
       "title": "FLASH AND DIE",
@@ -458,20 +458,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 Ti / RTX 4060 / AMD Radeon RX 6700 XT, Intel Core i7-10700K / AMD Ryzen 7 3700X"
     },
     {
-      "title": "Runeveil",
-      "tier": "green",
-      "gpu": "Intel HD Graphics 3000 or better",
-      "cpu": "Intel® Core™ i3",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 3000 or better, Intel® Core™ i3"
-    },
-    {
       "title": "Quantum Void",
       "tier": "green",
       "gpu": "Nvidia GTX 650",
       "cpu": "Intel Core i5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GTX 650, Intel Core i5"
+    },
+    {
+      "title": "Runeveil",
+      "tier": "green",
+      "gpu": "Intel HD Graphics 3000 or better",
+      "cpu": "Intel® Core™ i3",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics 3000 or better, Intel® Core™ i3"
     },
     {
       "title": "The Queen's Gondola",
