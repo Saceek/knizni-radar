@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-23T02:15:02.246Z",
+  "updatedAt": "2026-07-23T03:14:44.404Z",
   "games": [
     {
       "title": "Palworld",
@@ -130,20 +130,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 580, Intel Core i5-6500 / AMD Ryzen 5 2600"
     },
     {
-      "title": "背包地牢: Backpack Dungeon",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 750 Ti or equivalent",
-      "cpu": "Intel i5 Quad-Core",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 750 Ti or equivalent, Intel i5 Quad-Core"
-    },
-    {
       "title": "Shift At Midnight",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1660 Ti (6GB) or Equivalent",
       "cpu": "Intel Core i5-10400 / AMD Ryzen 7 5800X or Equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Ti (6GB) or Equivalent, Intel Core i5-10400 / AMD Ryzen 7 5800X or Equivalent"
+    },
+    {
+      "title": "背包地牢: Backpack Dungeon",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 750 Ti or equivalent",
+      "cpu": "Intel i5 Quad-Core",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 750 Ti or equivalent, Intel i5 Quad-Core"
     },
     {
       "title": "Cat Chess",
@@ -250,6 +250,14 @@
       "note": "Minimální konfigurace: intel hd graphics, intel dual core"
     },
     {
+      "title": "Drone Sector",
+      "tier": "red",
+      "gpu": "8 GB VRAM, AMD Radeon RX 6700 / Nvidia GeForce RTX 3060",
+      "cpu": "AMD Ryzen 5 5600X / Intel Core i5-12600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 8 GB VRAM, AMD Radeon RX 6700 / Nvidia GeForce RTX 3060, AMD Ryzen 5 5600X / Intel Core i5-12600"
+    },
+    {
       "title": "Chest Buster",
       "tier": "green",
       "gpu": "Intel HD Graphics 4000",
@@ -272,14 +280,6 @@
       "cpu": "Intel DUAL CORE",
       "usedMinimum": true,
       "note": "Minimální konfigurace: INTEL HD GRAPHICS, Intel DUAL CORE"
-    },
-    {
-      "title": "Drone Sector",
-      "tier": "red",
-      "gpu": "8 GB VRAM, AMD Radeon RX 6700 / Nvidia GeForce RTX 3060",
-      "cpu": "AMD Ryzen 5 5600X / Intel Core i5-12600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: 8 GB VRAM, AMD Radeon RX 6700 / Nvidia GeForce RTX 3060, AMD Ryzen 5 5600X / Intel Core i5-12600"
     },
     {
       "title": "十米爆爽超变",
@@ -338,20 +338,20 @@
       "note": "Doporučená konfigurace: nVidia GTX 1070 / AMD RX 580, Intel Core i7 @ 3Ghz"
     },
     {
-      "title": "FLASH AND DIE",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1050 / AMD Radeon RX 560",
-      "cpu": "Intel Core i5 / AMD Ryzen 5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560, Intel Core i5 / AMD Ryzen 5"
-    },
-    {
       "title": "Pimbolas",
       "tier": "green",
       "gpu": "NVIDIA Geforce GTX 1060 3GB",
       "cpu": "Ryzen 5 1500X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA Geforce GTX 1060 3GB, Ryzen 5 1500X"
+    },
+    {
+      "title": "FLASH AND DIE",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1050 / AMD Radeon RX 560",
+      "cpu": "Intel Core i5 / AMD Ryzen 5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560, Intel Core i5 / AMD Ryzen 5"
     },
     {
       "title": "挂机猫猫传",
