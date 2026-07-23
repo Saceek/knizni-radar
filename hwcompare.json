@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-23T21:15:55.035Z",
+  "updatedAt": "2026-07-23T22:16:01.677Z",
   "games": [
     {
       "title": "Palworld",
@@ -170,20 +170,20 @@
       "note": "Minimální konfigurace: NVIDIA GTX 1650, Intel Core i7-11800H"
     },
     {
-      "title": "HYPERFIST",
-      "tier": "orange",
-      "gpu": "Nvidia RTX 2070",
-      "cpu": "Intel Core i7-6700",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia RTX 2070, Intel Core i7-6700"
-    },
-    {
       "title": "Pass the Fear",
       "tier": "red",
       "gpu": "NVIDIA RTX 3060",
       "cpu": "Intel I5-14400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 3060, Intel I5-14400"
+    },
+    {
+      "title": "HYPERFIST",
+      "tier": "orange",
+      "gpu": "Nvidia RTX 2070",
+      "cpu": "Intel Core i7-6700",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia RTX 2070, Intel Core i7-6700"
     },
     {
       "title": "REWIND",
@@ -224,6 +224,14 @@
       "cpu": "I5 or better / Ryzen 5 or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GTX 1070 or better / AMD RX480 or better, I5 or better / Ryzen 5 or better"
+    },
+    {
+      "title": "Dinoblade",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1050 4GB / AMD Radeon RX 560",
+      "cpu": "Intel Core i5-7500  / AMD Ryzen 5 1600",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 1050 4GB / AMD Radeon RX 560, Intel Core i5-7500  / AMD Ryzen 5 1600"
     },
     {
       "title": "Tavern Legends",
@@ -306,12 +314,12 @@
       "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
     },
     {
-      "title": "Dinoblade",
+      "title": "Staffer Retro : A Supernatural Mystery Quest",
       "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1050 4GB / AMD Radeon RX 560",
-      "cpu": "Intel Core i5-7500  / AMD Ryzen 5 1600",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 1050 4GB / AMD Radeon RX 560, Intel Core i5-7500  / AMD Ryzen 5 1600"
+      "gpu": "Better than GTX 1050",
+      "cpu": "better than Intel i5 8400 or AMD ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Better than GTX 1050, better than Intel i5 8400 or AMD ryzen 5 2600"
     },
     {
       "title": "G-Rebels",
@@ -322,28 +330,20 @@
       "note": "Doporučená konfigurace: Nvidia RTX 4080 or AMD RX 7900 XT with at least 12 GB VRAM, Intel Core i7-14700K or AMD Ryzen 9 7900X"
     },
     {
-      "title": "再战大极品+255",
-      "tier": "green",
-      "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
-      "cpu": "Intel Core i3",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
-    },
-    {
-      "title": "Staffer Retro : A Supernatural Mystery Quest",
-      "tier": "green",
-      "gpu": "Better than GTX 1050",
-      "cpu": "better than Intel i5 8400 or AMD ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Better than GTX 1050, better than Intel i5 8400 or AMD ryzen 5 2600"
-    },
-    {
       "title": "Birds of War",
       "tier": "green",
       "gpu": "NVIDIA GTX 1050 Ti / GTX 1650 / AMD Radeon RX 570 (4 GB VRAM)",
       "cpu": "Intel i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1050 Ti / GTX 1650 / AMD Radeon RX 570 (4 GB VRAM), Intel i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "再战大极品+255",
+      "tier": "green",
+      "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
+      "cpu": "Intel Core i3",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
     },
     {
       "title": "D-topia",
@@ -426,20 +426,20 @@
       "note": "Doporučená konfigurace: NVIDIA GEFORCE GTX 1050 Ti (2 GB), Intel Core i5 8th Gen"
     },
     {
-      "title": "Heave Ho 2",
-      "tier": "orange",
-      "gpu": "GeForce GTX 1080 / Radeon RX Vega 56 / Arc A580",
-      "cpu": "Intel Core i7-6950X / AMD Ryzen 7 2700",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1080 / Radeon RX Vega 56 / Arc A580, Intel Core i7-6950X / AMD Ryzen 7 2700"
-    },
-    {
       "title": "Step Lightly",
       "tier": "red",
       "gpu": "RTX 3060 Ti or equivalent",
       "cpu": null,
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 3060 Ti or equivalent"
+    },
+    {
+      "title": "Heave Ho 2",
+      "tier": "orange",
+      "gpu": "GeForce GTX 1080 / Radeon RX Vega 56 / Arc A580",
+      "cpu": "Intel Core i7-6950X / AMD Ryzen 7 2700",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1080 / Radeon RX Vega 56 / Arc A580, Intel Core i7-6950X / AMD Ryzen 7 2700"
     },
     {
       "title": "Memory of Memorie : A Chill Story",
