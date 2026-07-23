@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-23T15:16:06.067Z",
+  "updatedAt": "2026-07-23T16:16:52.648Z",
   "games": [
     {
       "title": "Palworld",
@@ -250,6 +250,14 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 (12 GB) / AMD RX 6700 XT or equivalent — DX11 compatible, AMD Ryzen 5 3600 / Intel Core i5-9600K or better"
     },
     {
+      "title": "Chest Buster",
+      "tier": "green",
+      "gpu": "Intel HD Graphics 4000",
+      "cpu": "2GHz Dual Core",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics 4000, 2GHz Dual Core"
+    },
+    {
       "title": "Ocean Rush",
       "tier": "green",
       "gpu": "intel hd graphics",
@@ -264,14 +272,6 @@
       "cpu": "3.5Ghz  processing power",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 960 or equivalent, 3.5Ghz  processing power"
-    },
-    {
-      "title": "Chest Buster",
-      "tier": "green",
-      "gpu": "Intel HD Graphics 4000",
-      "cpu": "2GHz Dual Core",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 4000, 2GHz Dual Core"
     },
     {
       "title": "Double Driver",
@@ -338,6 +338,14 @@
       "note": "Doporučená konfigurace: nVidia GTX 1070 / AMD RX 580, Intel Core i7 @ 3Ghz"
     },
     {
+      "title": "Birds of War",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1050 Ti / GTX 1650 / AMD Radeon RX 570 (4 GB VRAM)",
+      "cpu": "Intel i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1050 Ti / GTX 1650 / AMD Radeon RX 570 (4 GB VRAM), Intel i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
       "title": "Pimbolas",
       "tier": "green",
       "gpu": "NVIDIA Geforce GTX 1060 3GB",
@@ -352,14 +360,6 @@
       "cpu": "Intel Core i5 / AMD Ryzen 5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560, Intel Core i5 / AMD Ryzen 5"
-    },
-    {
-      "title": "Birds of War",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1050 Ti / GTX 1650 / AMD Radeon RX 570 (4 GB VRAM)",
-      "cpu": "Intel i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1050 Ti / GTX 1650 / AMD Radeon RX 570 (4 GB VRAM), Intel i5-8400 / AMD Ryzen 5 2600"
     },
     {
       "title": "挂机猫猫传",
@@ -402,20 +402,20 @@
       "note": "Doporučená konfigurace: NVIDIA GEFORCE GTX 1050 Ti (2 GB), Intel Core i5 8th Gen"
     },
     {
-      "title": "Step Lightly",
-      "tier": "red",
-      "gpu": "RTX 3060 Ti or equivalent",
-      "cpu": null,
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 3060 Ti or equivalent"
-    },
-    {
       "title": "Heave Ho 2",
       "tier": "orange",
       "gpu": "GeForce GTX 1080 / Radeon RX Vega 56 / Arc A580",
       "cpu": "Intel Core i7-6950X / AMD Ryzen 7 2700",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1080 / Radeon RX Vega 56 / Arc A580, Intel Core i7-6950X / AMD Ryzen 7 2700"
+    },
+    {
+      "title": "Step Lightly",
+      "tier": "red",
+      "gpu": "RTX 3060 Ti or equivalent",
+      "cpu": null,
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 3060 Ti or equivalent"
     },
     {
       "title": "WOBBLY HEIST",
@@ -450,6 +450,14 @@
       "note": "Doporučená konfigurace: GeForce GTX 650 or Radeon HD 5770, Intel Core i5-750 or AMD Phenom II x4 945"
     },
     {
+      "title": "Memory of Memorie : A Chill Story",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700",
+      "cpu": "Intel Core i7-9700 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700, Intel Core i7-9700 / AMD Ryzen 5 3600"
+    },
+    {
       "title": "4D Intuition",
       "tier": "orange",
       "gpu": "NVidia GeForce GTX 1080",
@@ -482,12 +490,28 @@
       "note": "Doporučená konfigurace: Nvidia GTX 1060, Intel i5-7500"
     },
     {
-      "title": "Memory of Memorie : A Chill Story",
-      "tier": "orange",
-      "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700",
-      "cpu": "Intel Core i7-9700 / AMD Ryzen 5 3600",
+      "title": "Farm Factory Simulator",
+      "tier": "green",
+      "gpu": "GeForce GTX 1060 6GB",
+      "cpu": "AMD Ryzen 5 3600 / Intel Core i7 7700K",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700, Intel Core i7-9700 / AMD Ryzen 5 3600"
+      "note": "Doporučená konfigurace: GeForce GTX 1060 6GB, AMD Ryzen 5 3600 / Intel Core i7 7700K"
+    },
+    {
+      "title": "玄中记",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 750 Ti / AMD Radeon HD 7850",
+      "cpu": "Intel Core i3-4160 / AMD FX-6300",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 Ti / AMD Radeon HD 7850, Intel Core i3-4160 / AMD FX-6300"
+    },
+    {
+      "title": "Vespera",
+      "tier": "green",
+      "gpu": "Intel HD Graphics 4000 / GeForce GT 630 / Radeon R7 250 or equivalent",
+      "cpu": "Intel Core i3-2100 / AMD FX-4300 or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics 4000 / GeForce GT 630 / Radeon R7 250 or equivalent, Intel Core i3-2100 / AMD FX-4300 or equivalent"
     },
     {
       "title": "Warp to Sector One",
@@ -498,20 +522,20 @@
       "note": "Minimální konfigurace: Intel Iris Xe"
     },
     {
-      "title": "Farm Factory Simulator",
-      "tier": "green",
-      "gpu": "GeForce GTX 1060 6GB",
-      "cpu": "AMD Ryzen 5 3600 / Intel Core i7 7700K",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1060 6GB, AMD Ryzen 5 3600 / Intel Core i7 7700K"
-    },
-    {
       "title": "The Lure",
       "tier": "orange",
       "gpu": "RTX 2060 or lower on low settings",
       "cpu": null,
       "usedMinimum": true,
       "note": "Minimální konfigurace: RTX 2060 or lower on low settings"
+    },
+    {
+      "title": "天临混元",
+      "tier": "green",
+      "gpu": "Radeon™ RX 580(8GB VRAM) / NVIDIA® GeForce® GTX 1060  (6 GB VRAM)",
+      "cpu": "AMD Ryzen™ 3 1200 / Intel® Core™ i5-6400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Radeon™ RX 580(8GB VRAM) / NVIDIA® GeForce® GTX 1060  (6 GB VRAM), AMD Ryzen™ 3 1200 / Intel® Core™ i5-6400"
     },
     {
       "title": "The Lost Mixtape",
