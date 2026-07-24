@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-24T08:16:07.963Z",
+  "updatedAt": "2026-07-24T09:16:21.413Z",
   "games": [
     {
       "title": "Palworld",
@@ -170,14 +170,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 ||| AMD Radeon RX 5600 XT ||| Intel Arc A750"
     },
     {
-      "title": "Pass the Fear",
-      "tier": "red",
-      "gpu": "NVIDIA RTX 3060",
-      "cpu": "Intel I5-14400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 3060, Intel I5-14400"
-    },
-    {
       "title": "絨毯を洗うゲーム",
       "tier": "green",
       "gpu": "NVIDIA GTX 1650",
@@ -306,20 +298,20 @@
       "note": "Minimální konfigurace: intel hd graphics, intel dual core"
     },
     {
-      "title": "Double Driver",
-      "tier": "green",
-      "gpu": "INTEL HD GRAPHICS",
-      "cpu": "Intel DUAL CORE",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: INTEL HD GRAPHICS, Intel DUAL CORE"
-    },
-    {
       "title": "Birds of War",
       "tier": "green",
       "gpu": "NVIDIA GTX 1050 Ti / GTX 1650 / AMD Radeon RX 570 (4 GB VRAM)",
       "cpu": "Intel i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1050 Ti / GTX 1650 / AMD Radeon RX 570 (4 GB VRAM), Intel i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Double Driver",
+      "tier": "green",
+      "gpu": "INTEL HD GRAPHICS",
+      "cpu": "Intel DUAL CORE",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: INTEL HD GRAPHICS, Intel DUAL CORE"
     },
     {
       "title": "十米爆爽超变",
@@ -410,6 +402,14 @@
       "note": "Doporučená konfigurace: Radeon™ RX 580(8GB VRAM) / NVIDIA® GeForce® GTX 1060  (6 GB VRAM), AMD Ryzen™ 3 1200 / Intel® Core™ i5-6400"
     },
     {
+      "title": "Memory of Memorie : A Chill Story",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700",
+      "cpu": "Intel Core i7-9700 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700, Intel Core i7-9700 / AMD Ryzen 5 3600"
+    },
+    {
       "title": "黎明探险队 / CTD",
       "tier": "green",
       "gpu": "Nvidia GeForce GTX 1050 Ti or higher",
@@ -424,14 +424,6 @@
       "cpu": null,
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 3060 Ti or equivalent"
-    },
-    {
-      "title": "Memory of Memorie : A Chill Story",
-      "tier": "orange",
-      "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700",
-      "cpu": "Intel Core i7-9700 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700, Intel Core i7-9700 / AMD Ryzen 5 3600"
     },
     {
       "title": "The Office Void",
@@ -482,6 +474,14 @@
       "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
     },
     {
+      "title": "Wonderia",
+      "tier": "green",
+      "gpu": "GeForce GTX 1050 Ti / Radeon R9 280X",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 7 2700X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1050 Ti / Radeon R9 280X, Intel Core i5-8400 / AMD Ryzen 7 2700X"
+    },
+    {
       "title": "Letalis",
       "tier": "green",
       "gpu": "GeForce GTX 650 or Radeon HD 5770",
@@ -522,14 +522,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 Ti / AMD Radeon HD 7850, Intel Core i3-4160 / AMD FX-6300"
     },
     {
-      "title": "Wonderia",
-      "tier": "green",
-      "gpu": "GeForce GTX 1050 Ti / Radeon R9 280X",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 7 2700X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1050 Ti / Radeon R9 280X, Intel Core i5-8400 / AMD Ryzen 7 2700X"
-    },
-    {
       "title": "70年代風ロボットアニメ ゲッP-X",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1650",
@@ -554,6 +546,14 @@
       "note": "Doporučená konfigurace: GeForce GTX 1060 6GB, AMD Ryzen 5 3600 / Intel Core i7 7700K"
     },
     {
+      "title": "Aerolicious",
+      "tier": "orange",
+      "gpu": "NVIDIA RTX 2070 Super / AMD Radeon RX 5700",
+      "cpu": "Intel Core i7-9700K / AMD Ryzen 7 3700X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 2070 Super / AMD Radeon RX 5700, Intel Core i7-9700K / AMD Ryzen 7 3700X"
+    },
+    {
       "title": "挖个蛋 Delvegg",
       "tier": "green",
       "gpu": "Nvidia GeForce GTX 650 / AMD equivalent or better",
@@ -568,14 +568,6 @@
       "cpu": null,
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel Iris Xe"
-    },
-    {
-      "title": "Aerolicious",
-      "tier": "orange",
-      "gpu": "NVIDIA RTX 2070 Super / AMD Radeon RX 5700",
-      "cpu": "Intel Core i7-9700K / AMD Ryzen 7 3700X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 2070 Super / AMD Radeon RX 5700, Intel Core i7-9700K / AMD Ryzen 7 3700X"
     },
     {
       "title": "The Lure",
