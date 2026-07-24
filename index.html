@@ -676,6 +676,7 @@ function mountDiaryModal(div){
     };
     S.diary.push(entry);
     saveDiaryAndSync(S.diary);
+    if(inBacklog(entry.title)){ S.backlog=S.backlog.filter(x=>x.title!==entry.title); saveBacklogAndSync(S.backlog); }
     div.remove();
     render();
     achToast(entry.title, entryXP(entry));
