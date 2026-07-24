@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-24T20:16:30.905Z",
+  "updatedAt": "2026-07-24T21:16:15.000Z",
   "games": [
     {
       "title": "Palworld",
@@ -130,20 +130,20 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 or AMD Radeon RX 6600 XT, Quad-core Intel or AMD, 2.5 GHz or faster"
     },
     {
-      "title": "Mesmalie",
-      "tier": "green",
-      "gpu": "Intel HD Graphics",
-      "cpu": "Intel Core i5-6200U",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics, Intel Core i5-6200U"
-    },
-    {
       "title": "Dinoblade",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1050 4GB / AMD Radeon RX 560",
       "cpu": "Intel Core i5-7500  / AMD Ryzen 5 1600",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 1050 4GB / AMD Radeon RX 560, Intel Core i5-7500  / AMD Ryzen 5 1600"
+    },
+    {
+      "title": "Mesmalie",
+      "tier": "green",
+      "gpu": "Intel HD Graphics",
+      "cpu": "Intel Core i5-6200U",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics, Intel Core i5-6200U"
     },
     {
       "title": "Pass the Fear",
@@ -170,20 +170,20 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1660 / AMD RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
-      "title": "背包地牢: Backpack Dungeon",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 750 Ti or equivalent",
-      "cpu": "Intel i5 Quad-Core",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 750 Ti or equivalent, Intel i5 Quad-Core"
-    },
-    {
       "title": "Boba Cafe Simulator",
       "tier": "red",
       "gpu": "GeForce RTX 3060",
       "cpu": "Intel i7 12700K",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 3060, Intel i7 12700K"
+    },
+    {
+      "title": "背包地牢: Backpack Dungeon",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 750 Ti or equivalent",
+      "cpu": "Intel i5 Quad-Core",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 750 Ti or equivalent, Intel i5 Quad-Core"
     },
     {
       "title": "Cat Chess",
@@ -426,6 +426,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GT 710 or higher, Intel Core i5 or better"
     },
     {
+      "title": "Mall Together",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1060 | AMD Radeon R9-290X",
+      "cpu": "Intel Core i5-11400F | AMD Ryzen 5 5600x",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 | AMD Radeon R9-290X, Intel Core i5-11400F | AMD Ryzen 5 5600x"
+    },
+    {
       "title": "玄中记",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 750 Ti / AMD Radeon HD 7850",
@@ -458,12 +466,12 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1050 Ti or higher, Inter Core i5 - 12400F or higher"
     },
     {
-      "title": "Mall Together",
+      "title": "Wonderia",
       "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1060 | AMD Radeon R9-290X",
-      "cpu": "Intel Core i5-11400F | AMD Ryzen 5 5600x",
+      "gpu": "GeForce GTX 1050 Ti / Radeon R9 280X",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 7 2700X",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 | AMD Radeon R9-290X, Intel Core i5-11400F | AMD Ryzen 5 5600x"
+      "note": "Doporučená konfigurace: GeForce GTX 1050 Ti / Radeon R9 280X, Intel Core i5-8400 / AMD Ryzen 7 2700X"
     },
     {
       "title": "Penguin Lifter",
@@ -480,14 +488,6 @@
       "cpu": "Intel Core i7-6950X / AMD Ryzen 7 2700",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1080 / Radeon RX Vega 56 / Arc A580, Intel Core i7-6950X / AMD Ryzen 7 2700"
-    },
-    {
-      "title": "Wonderia",
-      "tier": "green",
-      "gpu": "GeForce GTX 1050 Ti / Radeon R9 280X",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 7 2700X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1050 Ti / Radeon R9 280X, Intel Core i5-8400 / AMD Ryzen 7 2700X"
     },
     {
       "title": "The Office Void",
@@ -578,6 +578,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650, Intel® Core™ i5 @ 3.20 GHz"
     },
     {
+      "title": "Aerolicious",
+      "tier": "orange",
+      "gpu": "NVIDIA RTX 2070 Super / AMD Radeon RX 5700",
+      "cpu": "Intel Core i7-9700K / AMD Ryzen 7 3700X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 2070 Super / AMD Radeon RX 5700, Intel Core i7-9700K / AMD Ryzen 7 3700X"
+    },
+    {
       "title": "挖个蛋 Delvegg",
       "tier": "green",
       "gpu": "Nvidia GeForce GTX 650 / AMD equivalent or better",
@@ -592,14 +600,6 @@
       "cpu": "Intel i5-7500",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GTX 1060, Intel i5-7500"
-    },
-    {
-      "title": "Aerolicious",
-      "tier": "orange",
-      "gpu": "NVIDIA RTX 2070 Super / AMD Radeon RX 5700",
-      "cpu": "Intel Core i7-9700K / AMD Ryzen 7 3700X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 2070 Super / AMD Radeon RX 5700, Intel Core i7-9700K / AMD Ryzen 7 3700X"
     },
     {
       "title": "The Lure",
@@ -680,6 +680,14 @@
       "cpu": "Intel Core i5-11600K / AMD Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1650 / AMD Radeon RX 580, Intel Core i5-11600K / AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "REPLACED",
+      "tier": "green",
+      "gpu": "GeForce GTX 1060 (6GB) or equivalent",
+      "cpu": "Intel® Core™ i5-8400 Processor",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
     }
   ]
 }
