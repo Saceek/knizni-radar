@@ -199,7 +199,7 @@ function main() {
     const ageDays = Math.floor((now - new Date(h.firstSeen + "T00:00:00Z")) / 86400000);
     const { firstSeen, ...rest } = h;
     return { ...rest, firstSeen, daysLeft: RETAIN_DAYS - ageDays };
-  }).sort((a, b) => a.daysLeft - b.daysLeft);
+  }).sort((a, b) => b.daysLeft - a.daysLeft); // nejnovější (daysLeft=3) první, brzy mizící (daysLeft=1) naposled
 
   const news = {
     updatedAt: new Date().toISOString(),
