@@ -183,6 +183,19 @@ async function enrichMovieFromCSFD(page, title) {
   };
 }
 
+// Počet stran z Google Books (pro widget "Právě dělám" - přednastavený cíl progresu u knih)
+async function fetchGoogleBooksPages(title, author) {
+  try {
+    const params = new URLSearchParams({ q: `intitle:${title}${author ? ` inauthor:${author}` : ""}`, maxResults: "3", langRestrict: "cs" });
+    if (process.env.GOOGLE_BOOKS_API_KEY) params.set("key", process.env.GOOGLE_BOOKS_API_KEY);
+    const res = await fetch(`https://www.googleapis.com/books/v1/volumes?${params.toString()}`);
+    if (!res.ok) return null;
+    const j = await res.json();
+    const hit = (j.items || []).find((it) => it.volumeInfo && it.volumeInfo.pageCount);
+    return hit ? hit.volumeInfo.pageCount : null;
+  } catch (e) { return null; }
+}
+
 // appid z Steam URL (backlog položky z Očekávaných/starších verzí appky appid pole nemají)
 function appidFromUrl(url) {
   const m = (url || "").match(/store\.steampowered\.com\/app\/(\d+)/);
@@ -232,6 +245,17 @@ async function main() {
       item.demoAppid = demoAppid;
       changed++;
       if (demoAppid) console.log(`    ${item.title}: demo appid ${demoAppid}`);
+      await sleep(DELAY);
+    }
+  }
+
+  // Počet stran u knih bez tohoto údaje - přednastaví cíl v widgetu "Právě dělám"
+  const toEnrichPages = backlog.filter((item) => (item._category === "book" || !item._category) && !item.pages);
+  if (toEnrichPages.length) {
+    console.log(`[enrich] ${toEnrichPages.length} knih k obohacení o počet stran`);
+    for (const item of toEnrichPages) {
+      const pages = await fetchGoogleBooksPages(item.title, item.author);
+      if (pages) { item.pages = pages; changed++; console.log(`    ${item.title}: ${pages} str.`); }
       await sleep(DELAY);
     }
   }

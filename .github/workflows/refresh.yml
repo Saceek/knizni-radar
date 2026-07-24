@@ -55,6 +55,8 @@ jobs:
       - name: Enrichment backlogu (hodnocení + ceny)
         run: node build-enrich-backlog.js
         continue-on-error: true
+        env:
+          GOOGLE_BOOKS_API_KEY: ${{ secrets.GOOGLE_BOOKS_KEY }}
 
       - name: Novinky → news.json
         run: node build-news.js

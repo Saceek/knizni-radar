@@ -274,6 +274,29 @@
   .bento-tile .num{font-family:var(--disp);font-size:20px;font-weight:800;color:var(--text)}
   .bento-tile .lbl{font-size:10px;color:var(--sub);text-transform:uppercase;letter-spacing:.08em;margin-top:2px}
   .bento-hero .num{font-size:28px}
+  .prog-widget{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:0 0 18px}
+  @media(max-width:640px){ .prog-widget{grid-template-columns:1fr} }
+  .prog-slot{background:var(--card);border:1px solid var(--cb);border-radius:16px;padding:11px 13px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+  .prog-slot-head{display:flex;align-items:center;justify-content:space-between;gap:6px;font-size:12px;font-weight:700;color:var(--text)}
+  .prog-slot-head span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+  .prog-slot-empty{cursor:pointer;border-style:dashed;opacity:.7}
+  .prog-slot-empty:hover{opacity:1;border-color:var(--accent)}
+  .prog-empty-txt{font-size:11px;color:var(--sub);margin-top:8px}
+  .prog-x{background:none;border:0;color:var(--sub);font-size:12px;cursor:pointer;padding:0 2px}
+  .prog-search{width:100%;margin-top:8px;background:var(--input);border:1px solid var(--cb);border-radius:8px;padding:6px 8px;font-size:12px;color:var(--text)}
+  .prog-cands{max-height:140px;overflow-y:auto;margin-top:6px}
+  .prog-cand{font-size:12px;padding:6px 4px;border-radius:6px;cursor:pointer;color:var(--text)}
+  .prog-cand:hover{background:var(--input)}
+  .prog-fields{display:flex;align-items:center;gap:6px;margin-top:8px}
+  .prog-fields input{width:64px;background:var(--input);border:1px solid var(--cb);border-radius:8px;padding:6px 8px;font-size:12px;color:var(--text)}
+  .prog-start{width:100%;margin-top:10px;background:var(--accent);color:#3a2408;border:0;border-radius:8px;padding:7px;font-size:12px;font-weight:700;cursor:pointer}
+  .prog-bar{height:5px;background:rgba(255,255,255,.08);border-radius:3px;margin-top:8px;overflow:hidden}
+  .prog-bar-fill{height:100%;border-radius:3px}
+  .prog-row{display:flex;align-items:center;justify-content:space-between;margin-top:6px}
+  .prog-icons{display:flex;gap:4px}
+  .prog-steppers{display:flex;gap:4px}
+  .prog-ic{background:var(--input);border:1px solid var(--cb);color:var(--text);width:20px;height:20px;border-radius:6px;font-size:11px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center}
+  .prog-ic.prog-plus{background:var(--accent);color:#3a2408;border-color:var(--accent)}
   .card:hover{border-color:rgba(61,139,255,.5);transform:translateY(-3px) scale(1.004)}
   .tile:hover{border-color:rgba(61,139,255,.5);transform:translateY(-3px) scale(1.01)}
   .gamepass-glow,.hw-dot.green{animation:glowPulse 3s ease-in-out infinite}
@@ -516,8 +539,194 @@ async function saveDiaryAndSync(a){
   }
 }
 
+const LS_PROGRESS_KEY = "knizniRadarProgress";
+const PROGRESS_PATH = "progress.json";
+let _progressSyncStatus = "off";
+function loadProgress(){ try{ return JSON.parse(localStorage.getItem(LS_PROGRESS_KEY))||{}; }catch(e){ return {}; } }
+function saveProgress(a){ try{ localStorage.setItem(LS_PROGRESS_KEY, JSON.stringify(a)); }catch(e){} }
+
+async function loadRemoteProgress(){
+  const token=getGHToken();
+  if(token){
+    try{
+      const r=await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${PROGRESS_PATH}?t=${Date.now()}`,{cache:"no-store",headers:{Authorization:`Bearer ${token}`,Accept:"application/vnd.github.raw"}});
+      if(!r.ok) throw new Error("API "+r.status);
+      const d=await r.json();
+      return (d && typeof d==="object")?d:null;
+    }catch(e){ console.warn("[progress-sync] API read failed, trying Pages:",e.message); }
+  }
+  try{
+    const r=await fetch(PROGRESS_PATH+"?t="+Date.now(),{cache:"no-store"});
+    if(!r.ok) return null;
+    const d=await r.json();
+    return (d && typeof d==="object")?d:null;
+  }catch(e){ return null; }
+}
+
+async function saveRemoteProgress(data){
+  const token=getGHToken();
+  if(!token) return false;
+  try{
+    const apiUrl=`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${PROGRESS_PATH}`;
+    const getR=await fetch(apiUrl+"?t="+Date.now(),{cache:"no-store",headers:{Authorization:`Bearer ${token}`,Accept:"application/vnd.github+json"}});
+    let sha=null;
+    if(getR.ok){ sha=(await getR.json()).sha; }
+    else if(getR.status!==404){ return false; }
+    const jsonStr=JSON.stringify(data,null,2);
+    const bytes=new TextEncoder().encode(jsonStr);
+    let binStr=""; for(let i=0;i<bytes.length;i++) binStr+=String.fromCharCode(bytes[i]);
+    const content=btoa(binStr);
+    const body={message:"progress: sync",content,branch:"main"};
+    if(sha) body.sha=sha;
+    const r=await fetch(apiUrl,{method:"PUT",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify(body)});
+    return r.ok;
+  }catch(e){ console.warn("[progress-sync] save error:",e.message); return false; }
+}
+
+async function syncProgress(){
+  _progressSyncStatus="syncing"; render();
+  const remote=await loadRemoteProgress();
+  if(remote){ saveProgress(remote); S.progress=remote; }
+  else { S.progress=loadProgress(); }
+  _progressSyncStatus=getGHToken()?"ok":"off";
+  render();
+}
+
+async function saveProgressAndSync(a){
+  saveProgress(a);
+  if(getGHToken()){
+    _progressSyncStatus="syncing"; render();
+    const ok=await saveRemoteProgress(a);
+    _progressSyncStatus=ok?"ok":"err";
+    render();
+  }
+}
+
 const DIARY_MONTHS = ["Leden","Únor","Březen","Duben","Květen","Červen","Červenec","Srpen","Září","Říjen","Listopad","Prosinec"];
 function diaryMonthLabel(dateStr){ const d=new Date(dateStr+"T00:00:00"); return `${DIARY_MONTHS[d.getMonth()]} ${d.getFullYear()}`; }
+
+// "Právě dělám" widget - jeden aktivní quest na kategorii (kniha/hra/film), drží fokus
+const PROG_CFG = {
+  book: {icon:"📖", label:"Kniha", unit:"str.", step:10, color:"var(--violet)"},
+  game: {icon:"🎮", label:"Hra", unit:"h", step:1, color:"var(--amber)"},
+  movie:{icon:"🎬", label:"Film / Seriál", unit:"%", step:5, color:"var(--cyan)"},
+};
+function progressCandidates(cat){
+  const src = cat==="movie" ? S.backlog.filter(b=>(b._category||"book")==="movie") : backlogByCategory(cat);
+  return src.map(b=>({
+    title:b.title,
+    image: cat==="book"?b.cover:(cat==="movie"?b.poster:b.image),
+    url: cat==="book"?b.link:b.url,
+    sub: cat==="book"?b.author:(cat==="movie"?b.year:""),
+    suggestedTotal: cat==="book" ? (b.pages||null) : (cat==="game" ? (hltbFor(b.title)?.hours ? Math.round(hltbFor(b.title).hours) : null) : null),
+  }));
+}
+function progressSlotHtml(cat){
+  const cfg = PROG_CFG[cat];
+  const item = S.progress[cat];
+
+  if(S.progSearching===cat){
+    const q=(S.progQ||"").trim().toLowerCase();
+    const cands = progressCandidates(cat).filter(c=>!q||c.title.toLowerCase().includes(q));
+    return `<div class="prog-slot prog-slot-search">
+      <div class="prog-slot-head"><span>${cfg.icon} ${cfg.label}</span><button class="prog-x" data-progcancel="${cat}">✕</button></div>
+      <input class="prog-search" id="prog-q" placeholder="Hledat v backlogu…" value="${esc(S.progQ)}" />
+      <div class="prog-cands">${cands.length?cands.map(c=>`<div class="prog-cand" data-progpick="${esc(c.title)}">${esc(c.title)}</div>`).join(""):'<div class="tiny" style="padding:6px 0">Nic v backlogu této kategorie.</div>'}</div>
+    </div>`;
+  }
+
+  if(S.progSetting===cat){
+    const d = S.progDraft || {current:0, total: cat==="movie"?100:0};
+    return `<div class="prog-slot prog-slot-setting">
+      <div class="prog-slot-head"><span>${cfg.icon} ${esc(d.title||"")}</span><button class="prog-x" data-progcancel="${cat}">✕</button></div>
+      <div class="prog-fields">
+        <input type="number" min="0" id="prog-cur" placeholder="aktuálně" value="${d.current}" />
+        ${cat!=="movie"?`<span class="tiny">/</span><input type="number" min="0" id="prog-tot" placeholder="celkem" value="${d.total||""}" />`:""}
+        <span class="tiny">${cfg.unit}</span>
+      </div>
+      <button class="prog-start" data-progstart="${cat}">▶ Začít</button>
+    </div>`;
+  }
+
+  if(!item){
+    return `<div class="prog-slot prog-slot-empty" data-progopen="${cat}">
+      <div class="prog-slot-head"><span>${cfg.icon} ${cfg.label}</span></div>
+      <div class="prog-empty-txt">+ vybrat rozečtené</div>
+    </div>`;
+  }
+
+  const pct = item.total ? Math.min(100, Math.round(item.current/item.total*100)) : 0;
+  return `<div class="prog-slot prog-slot-filled" style="border-color:${cfg.color}">
+    <div class="prog-slot-head"><span title="${esc(item.title)}">${cfg.icon} ${esc(item.title)}</span>
+      <span class="prog-icons"><button class="prog-ic" data-progedit="${cat}" title="Upravit">✎</button><button class="prog-ic" data-progremove="${cat}" title="Zrušit sledování">✕</button></span></div>
+    <div class="prog-bar"><div class="prog-bar-fill" style="width:${pct}%;background:${cfg.color}"></div></div>
+    <div class="prog-row"><span class="tiny">${item.current}/${item.total} ${cfg.unit}</span>
+      <span class="prog-steppers"><button class="prog-ic" data-progdelta="${cat}:-1">−</button><button class="prog-ic prog-plus" data-progdelta="${cat}:1">+</button></span></div>
+  </div>`;
+}
+function progressWidgetHtml(){
+  return `<div class="prog-widget">${["book","game","movie"].map(progressSlotHtml).join("")}</div>`;
+}
+function progressFinish(cat){
+  const item = S.progress[cat];
+  S.progress[cat]=null;
+  saveProgressAndSync(S.progress);
+  render();
+  if(item){
+    showDiaryModal({title:item.title, image:item.image||null, url:item.url||null, sub:item.sub||null, cat});
+  }
+}
+function mountProgressWidget(){
+  document.querySelectorAll("[data-progopen]").forEach(el=>el.onclick=()=>{ S.progSearching=el.dataset.progopen; S.progQ=""; render(); });
+  document.querySelectorAll("[data-progcancel]").forEach(el=>el.onclick=()=>{ S.progSearching=null; S.progSetting=null; S.progDraft=null; render(); });
+  const qi=document.getElementById("prog-q");
+  if(qi){ qi.oninput=e=>{ S.progQ=e.target.value; render(); }; qi.focus(); const v=qi.value; qi.value=""; qi.value=v; }
+  document.querySelectorAll("[data-progpick]").forEach(el=>el.onclick=()=>{
+    const cat=S.progSearching;
+    const c=progressCandidates(cat).find(x=>x.title===el.dataset.progpick);
+    if(!c) return;
+    S.progSearching=null;
+    S.progSetting=cat;
+    const defaultTotal = cat==="movie" ? 100 : (c.suggestedTotal || 0);
+    S.progDraft={title:c.title, image:c.image, url:c.url, sub:c.sub, current:0, total:defaultTotal};
+    render();
+  });
+  document.querySelectorAll("[data-progedit]").forEach(el=>el.onclick=()=>{
+    const cat=el.dataset.progedit;
+    const item=S.progress[cat];
+    if(!item) return;
+    S.progSetting=cat;
+    S.progDraft={...item};
+    render();
+  });
+  const startBtn=document.querySelector("[data-progstart]");
+  if(startBtn) startBtn.onclick=()=>{
+    const cat=startBtn.dataset.progstart;
+    const curEl=document.getElementById("prog-cur"), totEl=document.getElementById("prog-tot");
+    const current=Math.max(0, parseInt(curEl?.value,10)||0);
+    const total=cat==="movie"?100:Math.max(1, parseInt(totEl?.value,10)||1);
+    const d=S.progDraft||{};
+    S.progress[cat]={title:d.title, image:d.image||null, url:d.url||null, sub:d.sub||null, current:Math.min(current,total), total};
+    S.progSetting=null; S.progDraft=null;
+    saveProgressAndSync(S.progress);
+    render();
+  };
+  document.querySelectorAll("[data-progremove]").forEach(el=>el.onclick=()=>{
+    S.progress[el.dataset.progremove]=null;
+    saveProgressAndSync(S.progress);
+    render();
+  });
+  document.querySelectorAll("[data-progdelta]").forEach(el=>el.onclick=()=>{
+    const [cat,stepStr]=el.dataset.progdelta.split(":");
+    const cfg=PROG_CFG[cat]; const item=S.progress[cat];
+    if(!item) return;
+    const dir=+stepStr;
+    item.current = Math.max(0, Math.min(item.total, item.current + dir*cfg.step));
+    if(item.current>=item.total){ progressFinish(cat); return; }
+    saveProgressAndSync(S.progress);
+    render();
+  });
+}
 
 function diaryViewHtml(){
   const sorted = [...S.diary].sort((a,b)=> b.date.localeCompare(a.date));
@@ -630,10 +839,10 @@ function diaryModalHtml(){
   </div>`;
 }
 
-function showDiaryModal(){
+function showDiaryModal(prefill){
   const existing=document.getElementById("diary-modal");
   if(existing){ existing.remove(); return; }
-  S.diaryCat="book"; S.diaryQ=""; S.diarySelected=null; S.diaryDate=new Date().toISOString().slice(0,10); S.diaryNote="";
+  S.diaryCat=prefill?.cat||"book"; S.diaryQ=prefill?.title||""; S.diarySelected=prefill?prefill:null; S.diaryDate=new Date().toISOString().slice(0,10); S.diaryNote="";
   const div=document.createElement("div");
   div.id="diary-modal";
   div.className="modal-overlay";
@@ -710,6 +919,8 @@ function showSyncSettings(){
     localStorage.setItem(LS_TOKEN,t);
     div.remove();
     await syncBacklog();
+    await syncDiary();
+    await syncProgress();
   };
   const disc=div.querySelector("#sync-disconnect");
   if(disc) disc.onclick=()=>{
@@ -747,7 +958,8 @@ let S = {dark:localStorage.getItem("knizniRadarTheme")!=="light", view:"news", f
   coming:null, comingStatus:"idle", comingUpdatedAt:null,
   comics:[], comicsBestsellers:[], comicsStatus:"idle", comicsUpdatedAt:null,
   addCat:"Vše",
-  diary:loadDiary(), diaryCat:"book", diaryQ:"", diaryDate:new Date().toISOString().slice(0,10), diaryNote:"", diarySelected:null};
+  diary:loadDiary(), diaryCat:"book", diaryQ:"", diaryDate:new Date().toISOString().slice(0,10), diaryNote:"", diarySelected:null,
+  progress:loadProgress(), progSearching:null, progQ:"", progSetting:null, progDraft:null};
 
 const esc = s => (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const ratingClass = r => r>=80?"r-high":r>=40?"r-mid":"r-low";
@@ -1428,7 +1640,8 @@ function render(){
     const gs=document.getElementById("gsort"); if(gs) gs.onchange=e=>{S.gameSort=e.target.value; render();};
   } else if(S.view==="backlog"){
     const books=backlogByCategory("book"), movies=S.backlog.filter(b=>(b._category||"book")==="movie"), games=backlogByCategory("game"), comics=backlogByCategory("comic");
-    let html = addPanelHtml();
+    let html = `<div class="news-section"><span class="qicon">⚡</span> Právě dělám</div>` + progressWidgetHtml();
+    html += addPanelHtml();
     if(!S.backlog.length){
       html += '<div class="empty" style="padding:24px 16px">Backlog je prázdný.<br>Přidej položku u titulů v žebříčku kliknutím na <b>+ Backlog</b>.</div>';
     } else {
@@ -1458,6 +1671,7 @@ function render(){
     }
     view.innerHTML = html;
     mountAddPanel();
+    mountProgressWidget();
   } else if(S.view==="diary"){
     view.innerHTML = diaryViewHtml();
     document.getElementById("diary-add-btn").onclick=showDiaryModal;
@@ -1731,6 +1945,7 @@ loadHLTB();
 loadHwCompare();
 syncBacklog();
 syncDiary();
+syncProgress();
 </script>
 </body>
 </html>
