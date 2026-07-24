@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-24T13:16:40.434Z",
+  "updatedAt": "2026-07-24T14:16:21.697Z",
   "games": [
     {
       "title": "Palworld",
@@ -162,14 +162,6 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 750 Ti or equivalent, Intel i5 Quad-Core"
     },
     {
-      "title": "Pass the Fear",
-      "tier": "red",
-      "gpu": "NVIDIA RTX 3060",
-      "cpu": "Intel I5-14400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 3060, Intel I5-14400"
-    },
-    {
       "title": "Cat Chess",
       "tier": "orange",
       "gpu": "NVIDIA GeForce RTX 2060 ||| AMD Radeon RX 5600 XT ||| Intel Arc A750",
@@ -226,20 +218,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3050 / AMD Radeon RX 6600, Intel Core Ultra 7"
     },
     {
-      "title": "Jeffrey Eggstein",
-      "tier": "green",
-      "gpu": "Nvidia GTX 1070 or better / AMD RX480 or better",
-      "cpu": "I5 or better / Ryzen 5 or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GTX 1070 or better / AMD RX480 or better, I5 or better / Ryzen 5 or better"
-    },
-    {
       "title": "Boba Cafe Simulator",
       "tier": "red",
       "gpu": "GeForce RTX 3060",
       "cpu": "Intel i7 12700K",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 3060, Intel i7 12700K"
+    },
+    {
+      "title": "Jeffrey Eggstein",
+      "tier": "green",
+      "gpu": "Nvidia GTX 1070 or better / AMD RX480 or better",
+      "cpu": "I5 or better / Ryzen 5 or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GTX 1070 or better / AMD RX480 or better, I5 or better / Ryzen 5 or better"
     },
     {
       "title": "Drone Sector",
@@ -442,14 +434,6 @@
       "note": "Doporučená konfigurace: RTX 3060 Ti or equivalent"
     },
     {
-      "title": "The Office Void",
-      "tier": "green",
-      "gpu": "NVIDIA GEFORCE GTX 1050 Ti (2 GB)",
-      "cpu": "Intel Core i5 8th Gen",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GEFORCE GTX 1050 Ti (2 GB), Intel Core i5 8th Gen"
-    },
-    {
       "title": "Penguin Lifter",
       "tier": "orange",
       "gpu": "GEFORCE RTX 2060",
@@ -458,12 +442,28 @@
       "note": "Doporučená konfigurace: GEFORCE RTX 2060, 4 core 2,5 GHz+;"
     },
     {
+      "title": "The Office Void",
+      "tier": "green",
+      "gpu": "NVIDIA GEFORCE GTX 1050 Ti (2 GB)",
+      "cpu": "Intel Core i5 8th Gen",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GEFORCE GTX 1050 Ti (2 GB), Intel Core i5 8th Gen"
+    },
+    {
       "title": "Heave Ho 2",
       "tier": "orange",
       "gpu": "GeForce GTX 1080 / Radeon RX Vega 56 / Arc A580",
       "cpu": "Intel Core i7-6950X / AMD Ryzen 7 2700",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1080 / Radeon RX Vega 56 / Arc A580, Intel Core i7-6950X / AMD Ryzen 7 2700"
+    },
+    {
+      "title": "玄中记",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 750 Ti / AMD Radeon HD 7850",
+      "cpu": "Intel Core i3-4160 / AMD FX-6300",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 Ti / AMD Radeon HD 7850, Intel Core i3-4160 / AMD FX-6300"
     },
     {
       "title": "HouseWarming",
@@ -482,12 +482,12 @@
       "note": "Doporučená konfigurace: Nvidia GTX 650, Intel Core i5"
     },
     {
-      "title": "玄中记",
+      "title": "Wonderia",
       "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 750 Ti / AMD Radeon HD 7850",
-      "cpu": "Intel Core i3-4160 / AMD FX-6300",
+      "gpu": "GeForce GTX 1050 Ti / Radeon R9 280X",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 7 2700X",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 Ti / AMD Radeon HD 7850, Intel Core i3-4160 / AMD FX-6300"
+      "note": "Doporučená konfigurace: GeForce GTX 1050 Ti / Radeon R9 280X, Intel Core i5-8400 / AMD Ryzen 7 2700X"
     },
     {
       "title": "Vespera",
@@ -496,14 +496,6 @@
       "cpu": "Intel Core i3-2100 / AMD FX-4300 or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 4000 / GeForce GT 630 / Radeon R7 250 or equivalent, Intel Core i3-2100 / AMD FX-4300 or equivalent"
-    },
-    {
-      "title": "Wonderia",
-      "tier": "green",
-      "gpu": "GeForce GTX 1050 Ti / Radeon R9 280X",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 7 2700X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1050 Ti / Radeon R9 280X, Intel Core i5-8400 / AMD Ryzen 7 2700X"
     },
     {
       "title": "战法道传奇",
@@ -578,20 +570,20 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 650 / AMD equivalent or better, Intel Core i5 or better"
     },
     {
-      "title": "Warp to Sector One",
-      "tier": "green",
-      "gpu": "Intel Iris Xe",
-      "cpu": null,
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel Iris Xe"
-    },
-    {
       "title": "The Lure",
       "tier": "orange",
       "gpu": "RTX 2060 or lower on low settings",
       "cpu": null,
       "usedMinimum": true,
       "note": "Minimální konfigurace: RTX 2060 or lower on low settings"
+    },
+    {
+      "title": "Warp to Sector One",
+      "tier": "green",
+      "gpu": "Intel Iris Xe",
+      "cpu": null,
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel Iris Xe"
     },
     {
       "title": "This Game is Simple",
