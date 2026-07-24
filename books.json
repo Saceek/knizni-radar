@@ -1,15 +1,16 @@
 {
-  "updatedAt": "2026-07-24T00:05:11.835Z",
+  "updatedAt": "2026-07-24T01:04:51.866Z",
   "books": [
     {
       "title": "Pomalost",
       "author": "Milan Kundera",
       "cat": [
-        "Kosmas"
+        "Kosmas",
+        "Dobrovský"
       ],
       "rating": 75,
       "ratingSource": "databazeknih.cz",
-      "readers": 32,
+      "readers": 31,
       "series": null,
       "lang": null,
       "year": null,
@@ -20,6 +21,11 @@
       "coverSource": "shop",
       "link": "https://www.databazeknih.cz/prehled-knihy/pomalost-600980",
       "prices": [
+        {
+          "shop": "Dobrovský",
+          "price": 295,
+          "url": "https://www.knihydobrovsky.cz/kniha/pomalost-803544911"
+        },
         {
           "shop": "Kosmas",
           "price": 297,
@@ -35,7 +41,7 @@
       ],
       "rating": null,
       "ratingSource": null,
-      "readers": 31,
+      "readers": 30,
       "series": null,
       "lang": null,
       "year": null,
@@ -61,7 +67,7 @@
       ],
       "rating": 86,
       "ratingSource": "databazeknih.cz",
-      "readers": 30,
+      "readers": 29,
       "series": null,
       "lang": null,
       "year": null,
@@ -87,7 +93,7 @@
       ],
       "rating": 89,
       "ratingSource": "databazeknih.cz",
-      "readers": 29,
+      "readers": 28,
       "series": null,
       "lang": null,
       "year": null,
@@ -113,7 +119,7 @@
       ],
       "rating": 98,
       "ratingSource": "databazeknih.cz",
-      "readers": 28,
+      "readers": 27,
       "series": null,
       "lang": null,
       "year": null,
@@ -139,7 +145,7 @@
       ],
       "rating": 85,
       "ratingSource": "databazeknih.cz",
-      "readers": 27,
+      "readers": 26,
       "series": null,
       "lang": null,
       "year": null,
@@ -165,7 +171,7 @@
       ],
       "rating": 87,
       "ratingSource": "databazeknih.cz",
-      "readers": 26,
+      "readers": 25,
       "series": null,
       "lang": null,
       "year": null,
@@ -191,7 +197,7 @@
       ],
       "rating": 87,
       "ratingSource": "databazeknih.cz",
-      "readers": 25,
+      "readers": 24,
       "series": null,
       "lang": null,
       "year": null,
@@ -217,7 +223,7 @@
       ],
       "rating": 100,
       "ratingSource": "databazeknih.cz",
-      "readers": 24,
+      "readers": 23,
       "series": null,
       "lang": null,
       "year": null,
@@ -243,7 +249,7 @@
       ],
       "rating": 83,
       "ratingSource": "databazeknih.cz",
-      "readers": 23,
+      "readers": 22,
       "series": null,
       "lang": null,
       "year": null,
@@ -269,7 +275,7 @@
       ],
       "rating": 100,
       "ratingSource": "databazeknih.cz",
-      "readers": 22,
+      "readers": 21,
       "series": null,
       "lang": null,
       "year": null,
@@ -295,7 +301,7 @@
       ],
       "rating": 79,
       "ratingSource": "databazeknih.cz",
-      "readers": 21,
+      "readers": 20,
       "series": null,
       "lang": null,
       "year": null,
@@ -314,6 +320,58 @@
       ]
     },
     {
+      "title": "Satanova aféra",
+      "author": "H. D. Carlton",
+      "cat": [
+        "Dobrovský"
+      ],
+      "rating": null,
+      "ratingSource": null,
+      "readers": 19,
+      "series": null,
+      "lang": null,
+      "year": null,
+      "pages": null,
+      "publisher": null,
+      "desc": null,
+      "cover": "https://www.knihydobrovsky.cz/thumbs/og-image/mod_eshop/produkty/803541394/1-satanova-afera.jpg",
+      "coverSource": "shop",
+      "link": "https://www.databazeknih.cz/prehled-knihy/satanova-afera-598782",
+      "prices": [
+        {
+          "shop": "Dobrovský",
+          "price": 299,
+          "url": "https://www.knihydobrovsky.cz/kniha/satanova-afera-803541394"
+        }
+      ]
+    },
+    {
+      "title": "O tom Benešovi",
+      "author": "Pavel Kosatík",
+      "cat": [
+        "Kosmas"
+      ],
+      "rating": null,
+      "ratingSource": null,
+      "readers": 18,
+      "series": null,
+      "lang": null,
+      "year": null,
+      "pages": null,
+      "publisher": null,
+      "desc": null,
+      "cover": "https://obalky.kosmas.cz/ArticleCovers/556/453_bg.jpg",
+      "coverSource": "shop",
+      "link": "https://www.databazeknih.cz/",
+      "prices": [
+        {
+          "shop": "Kosmas",
+          "price": 539,
+          "url": "https://www.kosmas.cz/knihy/556453/o-tom-benesovi/"
+        }
+      ]
+    },
+    {
       "title": "Vona",
       "author": "Petra Klabouchová",
       "cat": [
@@ -322,7 +380,7 @@
       ],
       "rating": 90,
       "ratingSource": "databazeknih.cz",
-      "readers": 20,
+      "readers": 17,
       "series": null,
       "lang": null,
       "year": null,
@@ -346,110 +404,6 @@
       ]
     },
     {
-      "title": "O tom Benešovi",
-      "author": "Pavel Kosatík",
-      "cat": [
-        "Kosmas"
-      ],
-      "rating": null,
-      "ratingSource": null,
-      "readers": 19,
-      "series": null,
-      "lang": null,
-      "year": null,
-      "pages": null,
-      "publisher": null,
-      "desc": null,
-      "cover": "https://obalky.kosmas.cz/ArticleCovers/556/453_bg.jpg",
-      "coverSource": "shop",
-      "link": "https://www.databazeknih.cz/",
-      "prices": [
-        {
-          "shop": "Kosmas",
-          "price": 539,
-          "url": "https://www.kosmas.cz/knihy/556453/o-tom-benesovi/"
-        }
-      ]
-    },
-    {
-      "title": "Satanova aféra",
-      "author": "H. D. Carlton",
-      "cat": [
-        "Dobrovský"
-      ],
-      "rating": null,
-      "ratingSource": null,
-      "readers": 18,
-      "series": null,
-      "lang": null,
-      "year": null,
-      "pages": null,
-      "publisher": null,
-      "desc": null,
-      "cover": "https://www.knihydobrovsky.cz/thumbs/og-image/mod_eshop/produkty/803541394/1-satanova-afera.jpg",
-      "coverSource": "shop",
-      "link": "https://www.databazeknih.cz/prehled-knihy/satanova-afera-598782",
-      "prices": [
-        {
-          "shop": "Dobrovský",
-          "price": 299,
-          "url": "https://www.knihydobrovsky.cz/kniha/satanova-afera-803541394"
-        }
-      ]
-    },
-    {
-      "title": "Zlá krev",
-      "author": "Angela Marsonsová",
-      "cat": [
-        "Dobrovský"
-      ],
-      "rating": 74,
-      "ratingSource": "databazeknih.cz",
-      "readers": 17,
-      "series": null,
-      "lang": null,
-      "year": null,
-      "pages": null,
-      "publisher": null,
-      "desc": null,
-      "cover": "https://www.knihydobrovsky.cz/thumbs/og-image/mod_eshop/produkty/z/zla-krev-20260401153655-9788028416676.jpg",
-      "coverSource": "shop",
-      "link": "https://www.databazeknih.cz/prehled-knihy/alexandra-cooperova-zla-krev-4438",
-      "prices": [
-        {
-          "shop": "Dobrovský",
-          "price": 447,
-          "url": "https://www.knihydobrovsky.cz/kniha/zla-krev-803235646"
-        }
-      ]
-    },
-    {
-      "title": "Jsem tu novej",
-      "author": "Matt Field",
-      "cat": [
-        "Kosmas"
-      ],
-      "rating": 79,
-      "ratingSource": "databazeknih.cz",
-      "readers": 16,
-      "series": null,
-      "lang": null,
-      "year": null,
-      "pages": null,
-      "publisher": null,
-      "desc": null,
-      "cover": "https://obalky.kosmas.cz/ArticleCovers/553/841_bg.jpg",
-      "coverSource": "shop",
-      "link": "https://www.databazeknih.cz/prehled-knihy/jsem-tu-novej-594447",
-      "prices": [
-        {
-          "shop": "Kosmas",
-          "price": 449,
-          "url": "https://www.kosmas.cz/knihy/553841/jsem-tu-novej/"
-        }
-      ]
-    },
-    {
       "title": "Caught Up: V pasti",
       "author": "Navessa Allen",
       "cat": [
@@ -457,7 +411,7 @@
       ],
       "rating": null,
       "ratingSource": null,
-      "readers": 15,
+      "readers": 16,
       "series": null,
       "lang": null,
       "year": null,
@@ -476,6 +430,58 @@
       ]
     },
     {
+      "title": "Jsem tu novej",
+      "author": "Matt Field",
+      "cat": [
+        "Kosmas"
+      ],
+      "rating": 79,
+      "ratingSource": "databazeknih.cz",
+      "readers": 15,
+      "series": null,
+      "lang": null,
+      "year": null,
+      "pages": null,
+      "publisher": null,
+      "desc": null,
+      "cover": "https://obalky.kosmas.cz/ArticleCovers/553/841_bg.jpg",
+      "coverSource": "shop",
+      "link": "https://www.databazeknih.cz/prehled-knihy/jsem-tu-novej-594447",
+      "prices": [
+        {
+          "shop": "Kosmas",
+          "price": 449,
+          "url": "https://www.kosmas.cz/knihy/553841/jsem-tu-novej/"
+        }
+      ]
+    },
+    {
+      "title": "Zlá krev",
+      "author": "Angela Marsonsová",
+      "cat": [
+        "Dobrovský"
+      ],
+      "rating": 74,
+      "ratingSource": "databazeknih.cz",
+      "readers": 14,
+      "series": null,
+      "lang": null,
+      "year": null,
+      "pages": null,
+      "publisher": null,
+      "desc": null,
+      "cover": "https://www.knihydobrovsky.cz/thumbs/og-image/mod_eshop/produkty/z/zla-krev-20260401153655-9788028416676.jpg",
+      "coverSource": "shop",
+      "link": "https://www.databazeknih.cz/prehled-knihy/alexandra-cooperova-zla-krev-4438",
+      "prices": [
+        {
+          "shop": "Dobrovský",
+          "price": 447,
+          "url": "https://www.knihydobrovsky.cz/kniha/zla-krev-803235646"
+        }
+      ]
+    },
+    {
       "title": "Zlatá krev",
       "author": "Callie Hart",
       "cat": [
@@ -483,7 +489,7 @@
       ],
       "rating": null,
       "ratingSource": null,
-      "readers": 14,
+      "readers": 13,
       "series": null,
       "lang": null,
       "year": null,
@@ -509,7 +515,7 @@
       ],
       "rating": null,
       "ratingSource": null,
-      "readers": 13,
+      "readers": 12,
       "series": null,
       "lang": null,
       "year": null,
@@ -535,7 +541,7 @@
       ],
       "rating": 98,
       "ratingSource": "databazeknih.cz",
-      "readers": 12,
+      "readers": 11,
       "series": null,
       "lang": null,
       "year": null,
@@ -561,7 +567,7 @@
       ],
       "rating": 83,
       "ratingSource": "databazeknih.cz",
-      "readers": 11,
+      "readers": 10,
       "series": null,
       "lang": null,
       "year": null,
@@ -587,7 +593,7 @@
       ],
       "rating": 71,
       "ratingSource": "databazeknih.cz",
-      "readers": 10,
+      "readers": 9,
       "series": null,
       "lang": null,
       "year": null,
@@ -613,7 +619,7 @@
       ],
       "rating": 96,
       "ratingSource": "databazeknih.cz",
-      "readers": 9,
+      "readers": 8,
       "series": null,
       "lang": null,
       "year": null,
@@ -632,58 +638,6 @@
       ]
     },
     {
-      "title": "Srdceboly",
-      "author": "Simona Monyová",
-      "cat": [
-        "Dobrovský"
-      ],
-      "rating": 77,
-      "ratingSource": "databazeknih.cz",
-      "readers": 8,
-      "series": null,
-      "lang": null,
-      "year": null,
-      "pages": null,
-      "publisher": null,
-      "desc": null,
-      "cover": "https://www.knihydobrovsky.cz/thumbs/og-image/mod_eshop/produkty/803547108/srdceboly-1.jpg",
-      "coverSource": "shop",
-      "link": "https://www.databazeknih.cz/prehled-knihy/srdceboly-79247",
-      "prices": [
-        {
-          "shop": "Dobrovský",
-          "price": 169,
-          "url": "https://www.knihydobrovsky.cz/kniha/srdceboly-803547108"
-        }
-      ]
-    },
-    {
-      "title": "Velké dějiny zemí Koruny české XIX., 1968",
-      "author": "Jiří Hoppe",
-      "cat": [
-        "Kosmas"
-      ],
-      "rating": null,
-      "ratingSource": null,
-      "readers": 7,
-      "series": null,
-      "lang": null,
-      "year": null,
-      "pages": null,
-      "publisher": null,
-      "desc": null,
-      "cover": "https://obalky.kosmas.cz/ArticleCovers/564/102_bg.jpg",
-      "coverSource": "shop",
-      "link": "https://www.databazeknih.cz/prehled-knihy/velke-dejiny-zemi-koruny-ceske-velke-dejiny-zemi-koruny-ceske-svazek-xix-1968-592075",
-      "prices": [
-        {
-          "shop": "Kosmas",
-          "price": 801,
-          "url": "https://www.kosmas.cz/knihy/564102/velke-dejiny-zemi-koruny-ceske-xix.-1968/"
-        }
-      ]
-    },
-    {
       "title": "Sirény",
       "author": "Emilia Hart",
       "cat": [
@@ -691,7 +645,7 @@
       ],
       "rating": 58,
       "ratingSource": "databazeknih.cz",
-      "readers": 6,
+      "readers": 7,
       "series": null,
       "lang": null,
       "year": null,
@@ -706,6 +660,32 @@
           "shop": "Dobrovský",
           "price": 319,
           "url": "https://www.knihydobrovsky.cz/kniha/sireny-803533507"
+        }
+      ]
+    },
+    {
+      "title": "Velké dějiny zemí Koruny české XIX., 1968",
+      "author": "Jiří Hoppe",
+      "cat": [
+        "Kosmas"
+      ],
+      "rating": null,
+      "ratingSource": null,
+      "readers": 6,
+      "series": null,
+      "lang": null,
+      "year": null,
+      "pages": null,
+      "publisher": null,
+      "desc": null,
+      "cover": "https://obalky.kosmas.cz/ArticleCovers/564/102_bg.jpg",
+      "coverSource": "shop",
+      "link": "https://www.databazeknih.cz/prehled-knihy/velke-dejiny-zemi-koruny-ceske-velke-dejiny-zemi-koruny-ceske-svazek-xix-1968-592075",
+      "prices": [
+        {
+          "shop": "Kosmas",
+          "price": 801,
+          "url": "https://www.kosmas.cz/knihy/564102/velke-dejiny-zemi-koruny-ceske-xix.-1968/"
         }
       ]
     },
@@ -736,6 +716,32 @@
       ]
     },
     {
+      "title": "Srdceboly",
+      "author": "Simona Monyová",
+      "cat": [
+        "Dobrovský"
+      ],
+      "rating": 77,
+      "ratingSource": "databazeknih.cz",
+      "readers": 4,
+      "series": null,
+      "lang": null,
+      "year": null,
+      "pages": null,
+      "publisher": null,
+      "desc": null,
+      "cover": "https://www.knihydobrovsky.cz/thumbs/og-image/mod_eshop/produkty/803547108/srdceboly-1.jpg",
+      "coverSource": "shop",
+      "link": "https://www.databazeknih.cz/prehled-knihy/srdceboly-79247",
+      "prices": [
+        {
+          "shop": "Dobrovský",
+          "price": 169,
+          "url": "https://www.knihydobrovsky.cz/kniha/srdceboly-803547108"
+        }
+      ]
+    },
+    {
       "title": "Sníh",
       "author": "Neal Stephenson",
       "cat": [
@@ -743,7 +749,7 @@
       ],
       "rating": 81,
       "ratingSource": "databazeknih.cz",
-      "readers": 4,
+      "readers": 3,
       "series": null,
       "lang": null,
       "year": null,
@@ -769,7 +775,7 @@
       ],
       "rating": 82,
       "ratingSource": "databazeknih.cz",
-      "readers": 3,
+      "readers": 2,
       "series": null,
       "lang": null,
       "year": null,
@@ -795,7 +801,7 @@
       ],
       "rating": 82,
       "ratingSource": "databazeknih.cz",
-      "readers": 2,
+      "readers": 1,
       "series": null,
       "lang": null,
       "year": null,
@@ -810,32 +816,6 @@
           "shop": "Kosmas",
           "price": 71,
           "url": "https://www.kosmas.cz/knihy/258860/ladislav-klima-cesky-roman/"
-        }
-      ]
-    },
-    {
-      "title": "Hunting Adeline: Hon na Adeline",
-      "author": "H. D. Carlton",
-      "cat": [
-        "Dobrovský"
-      ],
-      "rating": 74,
-      "ratingSource": "databazeknih.cz",
-      "readers": 1,
-      "series": null,
-      "lang": null,
-      "year": null,
-      "pages": null,
-      "publisher": null,
-      "desc": null,
-      "cover": "https://www.knihydobrovsky.cz/thumbs/og-image/mod_eshop/produkty/802985674/hunting-adeline-obalka.jpg",
-      "coverSource": "shop",
-      "link": "https://www.databazeknih.cz/prehled-knihy/hunting-adeline-hon-na-adeline-564548",
-      "prices": [
-        {
-          "shop": "Dobrovský",
-          "price": 399,
-          "url": "https://www.knihydobrovsky.cz/kniha/hunting-adeline-hon-na-adeline-802985674"
         }
       ]
     }
