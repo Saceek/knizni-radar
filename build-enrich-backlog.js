@@ -183,6 +183,22 @@ async function enrichMovieFromCSFD(page, title) {
   };
 }
 
+// appid z Steam URL (backlog položky z Očekávaných/starších verzí appky appid pole nemají)
+function appidFromUrl(url) {
+  const m = (url || "").match(/store\.steampowered\.com\/app\/(\d+)/);
+  return m ? m[1] : null;
+}
+
+async function fetchDemoAppid(appid) {
+  try {
+    const text = await getHtml(`https://store.steampowered.com/api/appdetails?appids=${appid}&filters=demos&l=czech&cc=cz`);
+    const j = JSON.parse(text);
+    const node = j && j[appid];
+    if (!node || !node.success || !node.data) return null;
+    return (node.data.demos && node.data.demos[0] && node.data.demos[0].appid) || null;
+  } catch (e) { return null; }
+}
+
 async function main() {
   console.log("[enrich] start", new Date().toISOString());
   const backlog = loadBacklog();
@@ -204,6 +220,21 @@ async function main() {
     const flag = isInGamePass(item.title, gamePassSet);
     if (item.gamePass !== flag) { item.gamePass = flag; changed++; }
   });
+
+  // Demo dostupnost pro hry v backlogu, které ji ještě nemají dotaženou (appid dřív chybělo
+  // v položce, nebo přišly z Očekávaných, kde build-coming.js demo data vůbec nefetchuje)
+  const toEnrichDemo = backlog.filter((item) => item._category === "game" && item.demoAppid === undefined && appidFromUrl(item.url));
+  if (toEnrichDemo.length) {
+    console.log(`[enrich] ${toEnrichDemo.length} her k obohacení o demo dostupnost`);
+    for (const item of toEnrichDemo) {
+      const appid = appidFromUrl(item.url);
+      const demoAppid = await fetchDemoAppid(appid);
+      item.demoAppid = demoAppid;
+      changed++;
+      if (demoAppid) console.log(`    ${item.title}: demo appid ${demoAppid}`);
+      await sleep(DELAY);
+    }
+  }
 
   const toEnrichMovies = backlog.filter((item) => item._category === "movie" && item.rating == null);
 
