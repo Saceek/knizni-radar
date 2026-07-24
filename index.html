@@ -1640,13 +1640,13 @@ function render(){
     const gs=document.getElementById("gsort"); if(gs) gs.onchange=e=>{S.gameSort=e.target.value; render();};
   } else if(S.view==="backlog"){
     const books=backlogByCategory("book"), movies=S.backlog.filter(b=>(b._category||"book")==="movie"), games=backlogByCategory("game"), comics=backlogByCategory("comic");
-    let html = `<div class="news-section"><span class="qicon">⚡</span> Právě dělám</div>` + progressWidgetHtml();
+    let html = `<div class="news-section"><span class="qicon">⚡</span> Aktivní questy</div>` + progressWidgetHtml();
     html += addPanelHtml();
     if(!S.backlog.length){
       html += '<div class="empty" style="padding:24px 16px">Backlog je prázdný.<br>Přidej položku u titulů v žebříčku kliknutím na <b>+ Backlog</b>.</div>';
     } else {
       const questXP = books.length*80 + comics.length*40 + movies.length*50 + games.length*120;
-      html += `<div class="loot-head">⚔ Aktivní questy — ${S.backlog.length} · <span style="color:var(--emerald)">+${questXP} XP k zisku</span></div>`;
+      html += `<div class="loot-head">⚔ Budoucí questy — ${S.backlog.length} · <span style="color:var(--emerald)">+${questXP} XP k zisku</span></div>`;
       html += `<div class="bento-strip" style="grid-template-columns:repeat(3,1fr)">
         <div class="bento-tile"><div class="num" style="color:#c9a0ff">${books.length+comics.length}</div><div class="lbl">📖 čtecí questy</div></div>
         <div class="bento-tile"><div class="num" style="color:var(--cyan)">${movies.length}</div><div class="lbl">🎬 filmové questy</div></div>
