@@ -87,6 +87,7 @@ function diffGames(current, previous) {
       tags: g.tags,
       released: g.released,
       gamePass: !!g.gamePass,
+      demoAppid: g.demoAppid || null,
     }));
 }
 

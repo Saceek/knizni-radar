@@ -140,6 +140,10 @@
   a{color:inherit}
   .empty{text-align:center;color:var(--sub);padding:54px 16px 40px;line-height:1.6}
   .gimg{width:184px;height:86px;border-radius:11px;object-fit:cover;flex:none;background:var(--chip);box-shadow:0 8px 20px rgba(0,0,0,.5)}
+  .gimg-wrap{position:relative;flex:none;overflow:hidden;border-radius:11px}
+  .gimg-wrap .gimg{border-radius:0;display:block}
+  .gimg-wrap .tile-img{border-radius:0;display:block}
+  .demo-ribbon{position:absolute;top:9px;left:-32px;transform:rotate(-45deg);background:var(--emerald);color:#0a2712;font-family:var(--mono);font-size:9px;font-weight:900;padding:3px 34px;letter-spacing:.08em;pointer-events:none}
   .gprice{font-family:var(--mono);font-size:14px;font-weight:600;color:var(--emerald);margin-top:6px}
   .gprice-orig{font-family:var(--mono);font-size:12px;color:var(--sub);text-decoration:line-through;margin-top:4px}
   .gdiscount{font-family:var(--mono);font-size:11px;font-weight:700;color:#0a0a0a;background:var(--emerald);border-radius:4px;padding:1px 5px;margin-left:4px}
@@ -748,6 +752,9 @@ const esc = s => (s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;
 const ratingClass = r => r>=80?"r-high":r>=40?"r-mid":"r-low";
 // GAME HUD: rarita předmětu podle hodnocení (legendární ≥95, epický ≥85, vzácný ≥75)
 const greeting = () => { const h=new Date().getHours(); return h<5?"Dobrou noc":h<12?"Dobré ráno":h<18?"Dobré odpoledne":"Dobrý večer"; };
+// Steam odkazy otevřít rovnou v desktop appce (steam:// protokol), ne na webu
+const steamDeepLink = (url) => { const m=(url||"").match(/store\.steampowered\.com\/app\/(\d+)/); return m ? `steam://store/${m[1]}` : url; };
+const demoRibbon = (g) => g.demoAppid ? `<span class="demo-ribbon">DEMO</span>` : "";
 const rarity = r => r==null?null: r>=95?"leg": r>=85?"epic": r>=75?"rare": null;
 const rarityCls = r => {const k=rarity(r); return k?` r-${k}`:"";};
 const rarityPill = r => {const k=rarity(r); return k?`<span class="rarity ${k}">${k==="leg"?"★ LEGENDÁRNÍ":k==="epic"?"EPICKÝ":"VZÁCNÝ"}</span>`:"";};
@@ -939,10 +946,10 @@ function newsMovieTile(m){
 }
 function newsGameTile(g){
   const rHtml = g.rating ? `<span class="rating ${ratingClass(g.rating)}">${g.rating} %</span>` : "";
-  const imgHtml = g.image ? `<img class="tile-img" loading="lazy" decoding="async" src="${esc(g.image)}" alt="" onerror="this.style.visibility='hidden'" />` : "";
+  const imgHtml = g.image ? `<a href="${esc(steamDeepLink(g.url))}" class="gimg-wrap" style="display:block"><img class="tile-img" loading="lazy" decoding="async" src="${esc(g.image)}" alt="" onerror="this.style.visibility='hidden'" />${demoRibbon(g)}</a>` : "";
   const bk=inBacklog(g.title);
   return `<div class="tile${rarityCls(g.rating)} ${g.gamePass?'gamepass':''}">${daysLeftBadge(g)}${imgHtml}
-    <p class="tile-title">${g.gamePass?gpBadge(g.title):""}<a href="${esc(g.url||'#')}" target="_blank" rel="noreferrer">${esc(g.title)}</a></p>
+    <p class="tile-title">${g.gamePass?gpBadge(g.title):""}<a href="${esc(steamDeepLink(g.url))}">${esc(g.title)}</a></p>
     <p class="tile-sub">${g.price?esc(g.price):""}</p>
     <div class="tile-meta">${rHtml}${(g.tags||[]).slice(0,3).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}${hwCompareDot(g.title)}${hltbHtml(g.title)}<button class="bk ${bk?'on':''}" data-newsgbk="${esc(g.title)}" style="${hltbFor(g.title)?'':'margin-left:auto'}">${bk?'✓':'+'}</button></div>
   </div>`;
@@ -995,7 +1002,7 @@ function comingGameTile(g){
   const imgHtml = g.image ? `<img class="tile-img" loading="lazy" decoding="async" src="${esc(g.image)}" alt="" onerror="this.style.visibility='hidden'" />` : "";
   const bk=inBacklog(g.title);
   return `<div class="tile">${imgHtml}
-    <p class="tile-title"><a href="${esc(g.url||'#')}" target="_blank" rel="noreferrer">${esc(g.title)}</a></p>
+    <p class="tile-title"><a href="${esc(steamDeepLink(g.url))}">${esc(g.title)}</a></p>
     <p class="tile-sub">${esc(g.released||"")}${g.price?" · "+esc(g.price):""}</p>
     <div class="tile-meta">${(g.genres||[]).slice(0,3).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}<button class="bk ${bk?'on':''}" data-newsgbk="${esc(g.title)}" style="margin-left:auto">${bk?'✓':'+'}</button></div>
   </div>`;
@@ -1089,10 +1096,10 @@ function gameCard(g,i){
   ].filter(Boolean))];
   const fb=esc(JSON.stringify(cands));
   return `<div class="card${rarityCls(g.rating)} ${g.gamePass?'gamepass':''}">
-    <a href="${esc(g.url)}" target="_blank" rel="noreferrer"><img class="gimg" loading="lazy" decoding="async" src="${esc(cands[0]||'')}" data-fb='${fb}' data-i="0" onerror="gimgErr(this)" alt="" /></a>
+    <a href="${esc(steamDeepLink(g.url))}" class="gimg-wrap"><img class="gimg" loading="lazy" decoding="async" src="${esc(cands[0]||'')}" data-fb='${fb}' data-i="0" onerror="gimgErr(this)" alt="" />${demoRibbon(g)}</a>
     <div class="body">
       <div class="row"><div style="min-width:0">
-        <p class="title">${g.gamePass?gpBadge(g.name):""}<a href="${esc(g.url)}" target="_blank" rel="noreferrer">${esc(g.name)}</a></p>
+        <p class="title">${g.gamePass?gpBadge(g.name):""}<a href="${esc(steamDeepLink(g.url))}">${esc(g.name)}</a></p>
         <p class="muted">${esc(rel)}${rev}</p>
       </div>
       <div style="text-align:right;white-space:nowrap">
@@ -1212,10 +1219,10 @@ function backlogGameCard(g){
   const imgHtml = g.image ? `<img class="gimg" loading="lazy" decoding="async" src="${esc(g.image)}" alt="" onerror="this.style.visibility='hidden'" />` : "";
   const rHtml = g.rating ? `<span class="rating ${ratingClass(g.rating)}" title="${esc(g.scoreDesc||'Steam')}">${g.rating} %</span>` : "";
   return `<div class="card${rarityCls(g.rating)} ${g.gamePass?'gamepass':''}">
-    ${imgHtml?`<a href="${esc(g.url||'#')}" target="_blank" rel="noreferrer">${imgHtml}</a>`:""}
+    ${imgHtml?`<a href="${esc(steamDeepLink(g.url))}" class="gimg-wrap">${imgHtml}${demoRibbon(g)}</a>`:""}
     <div class="body">
       <div class="row"><div style="min-width:0">
-        <p class="title">${g.gamePass?gpBadge(g.title):""}<a href="${esc(g.url||'#')}" target="_blank" rel="noreferrer">${esc(g.title)}</a></p>
+        <p class="title">${g.gamePass?gpBadge(g.title):""}<a href="${esc(steamDeepLink(g.url))}">${esc(g.title)}</a></p>
         ${g.discount?`<p class="muted"><span style="text-decoration:line-through">${esc(g.priceOriginal||"")}</span> → ${esc(g.price||"")} <span class="gdiscount">-${g.discount}%</span></p>`:`<p class="muted">${g.price?esc(g.price):""}</p>`}
       </div><div style="text-align:right">${rHtml}</div></div>
       <div class="meta">${rarityPill(g.rating)}${(g.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
@@ -1676,7 +1683,7 @@ function addBacklog(t){
   if(c){ S.backlog.push({...c,_category:"comic"}); saveBacklogAndSync(S.backlog); render(); }
 }
 function addMovieBacklog(t){ const m=S.movies.find(x=>x.title===t); if(m && !inBacklog(t)){ S.backlog.push({...m,_category:"movie"}); saveBacklogAndSync(S.backlog); render(); } }
-function addGameBacklog(t){ const g=S.games.find(x=>x.name===t); if(g && !inBacklog(g.name)){ S.backlog.push({title:g.name,_category:"game",appid:g.appid,rating:g.rating,reviews:g.reviews,scoreDesc:g.scoreDesc,image:g.image,url:g.url,tags:g.tags,price:g.price,released:g.released,gamePass:!!g.gamePass}); saveBacklogAndSync(S.backlog); render(); } }
+function addGameBacklog(t){ const g=S.games.find(x=>x.name===t); if(g && !inBacklog(g.name)){ S.backlog.push({title:g.name,_category:"game",appid:g.appid,rating:g.rating,reviews:g.reviews,scoreDesc:g.scoreDesc,image:g.image,url:g.url,tags:g.tags,price:g.price,released:g.released,gamePass:!!g.gamePass,demoAppid:g.demoAppid||null}); saveBacklogAndSync(S.backlog); render(); } }
 function addComicBacklog(t){ const c=S.comics.find(x=>x.title===t)||S.comicsBestsellers.find(x=>x.title===t); if(c && !inBacklog(t)){ S.backlog.push({...c,_category:"comic"}); saveBacklogAndSync(S.backlog); render(); } }
 function removeBacklog(t){ S.backlog=S.backlog.filter(x=>x.title!==t); saveBacklogAndSync(S.backlog); render(); }
 function toggleBacklog(t){ inBacklog(t)?removeBacklog(t):addBacklog(t); }

@@ -57,7 +57,7 @@ async function searchPage(start) {
 // appdetails: typ, jméno, obrázek, žánry (česky), cena v Kč
 async function fetchDetails(appid) {
   try {
-    const text = await getText(`https://store.steampowered.com/api/appdetails?appids=${appid}&filters=basic,genres,price_overview&l=czech&cc=cz`);
+    const text = await getText(`https://store.steampowered.com/api/appdetails?appids=${appid}&filters=basic,genres,price_overview,demos&l=czech&cc=cz`);
     const j = JSON.parse(text);
     const node = j && j[appid];
     if (!node || !node.success || !node.data) return null;
@@ -70,6 +70,7 @@ async function fetchDetails(appid) {
       price: d.is_free ? "Zdarma" : ((d.price_overview && d.price_overview.final_formatted) || null),
       priceOriginal: d.price_overview?.initial_formatted || null,
       discount: d.price_overview?.discount_percent || 0,
+      demoAppid: (d.demos && d.demos[0] && d.demos[0].appid) || null,
     };
   } catch (e) { console.warn("[details]", appid, "→", e.message); return null; }
 }
@@ -150,6 +151,7 @@ async function main() {
         ? det.header.replace("shared.akamai.steamstatic.com", "shared.cloudflare.steamstatic.com")
         : `https://cdn.cloudflare.steamstatic.com/steam/apps/${appid}/header.jpg`,
       url: `https://store.steampowered.com/app/${appid}/`,
+      demoAppid: (det && det.demoAppid) || null,
     });
   }
 
