@@ -607,9 +607,9 @@ function diaryMonthLabel(dateStr){ const d=new Date(dateStr+"T00:00:00"); return
 
 // "Právě dělám" widget - jeden aktivní quest na kategorii (kniha/hra/film), drží fokus
 const PROG_CFG = {
-  book: {icon:"📖", label:"Kniha", unit:"str.", step:10, color:"var(--violet)"},
-  game: {icon:"🎮", label:"Hra", unit:"h", step:1, color:"var(--amber)"},
-  movie:{icon:"🎬", label:"Film / Seriál", unit:"%", step:5, color:"var(--cyan)"},
+  book: {icon:"📖", label:"Kniha", unit:"str.", step:10, color:"var(--violet)", emptyTxt:"+ vybrat rozečtené"},
+  game: {icon:"🎮", label:"Hra", unit:"h", step:1, color:"var(--amber)", emptyTxt:"+ vybrat rozehrané"},
+  movie:{icon:"🎬", label:"Film / Seriál", unit:"%", step:5, color:"var(--cyan)", emptyTxt:"+ vybrat rozkoukané"},
 };
 function progressCandidates(cat){
   const src = cat==="movie" ? S.backlog.filter(b=>(b._category||"book")==="movie") : backlogByCategory(cat);
@@ -651,7 +651,7 @@ function progressSlotHtml(cat){
   if(!item){
     return `<div class="prog-slot prog-slot-empty" data-progopen="${cat}">
       <div class="prog-slot-head"><span>${cfg.icon} ${cfg.label}</span></div>
-      <div class="prog-empty-txt">+ vybrat rozečtené</div>
+      <div class="prog-empty-txt">${cfg.emptyTxt}</div>
     </div>`;
   }
 
