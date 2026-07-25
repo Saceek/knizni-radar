@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-25T06:04:40.181Z",
+  "updatedAt": "2026-07-25T07:15:59.453Z",
   "games": [
     {
       "title": "Palworld",
@@ -50,20 +50,20 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4000 (GT2), Intel Core i5-3210"
     },
     {
-      "title": "Supermarket Chaos",
-      "tier": "orange",
-      "gpu": "NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT",
-      "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "Shift At Midnight",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1660 Ti (6GB) or Equivalent",
       "cpu": "Intel Core i5-10400 / AMD Ryzen 7 5800X or Equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Ti (6GB) or Equivalent, Intel Core i5-10400 / AMD Ryzen 7 5800X or Equivalent"
+    },
+    {
+      "title": "Supermarket Chaos",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT",
+      "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
     },
     {
       "title": "NTE: Neverness to Everness",
@@ -202,14 +202,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 ||| AMD Radeon RX 5600 XT ||| Intel Arc A750"
     },
     {
-      "title": "Reap and Rush",
-      "tier": "green",
-      "gpu": "GeForce GTX 1050 (2048 VRAM); Radeon R9 380 (2048 VRAM)",
-      "cpu": "Intel Core i5-3470",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1050 (2048 VRAM); Radeon R9 380 (2048 VRAM), Intel Core i5-3470"
-    },
-    {
       "title": "絨毯を洗うゲーム",
       "tier": "green",
       "gpu": "NVIDIA GTX 1650",
@@ -258,6 +250,14 @@
       "note": "Doporučená konfigurace: Nvidia GTX 1070 or better / AMD RX480 or better, I5 or better / Ryzen 5 or better"
     },
     {
+      "title": "Codename CURE II",
+      "tier": "red",
+      "gpu": "GeForce RTX 3070, Radeon RX 6800XT",
+      "cpu": "AMD Ryzen 5600X, Intel Core-i5 10600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3070, Radeon RX 6800XT, AMD Ryzen 5600X, Intel Core-i5 10600"
+    },
+    {
       "title": "Drone Sector",
       "tier": "red",
       "gpu": "8 GB VRAM, AMD Radeon RX 6700 / Nvidia GeForce RTX 3060",
@@ -272,14 +272,6 @@
       "cpu": "2.6 GHz Dual Core or similar",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVidia GTX 950 or similar, 2.6 GHz Dual Core or similar"
-    },
-    {
-      "title": "Codename CURE II",
-      "tier": "red",
-      "gpu": "GeForce RTX 3070, Radeon RX 6800XT",
-      "cpu": "AMD Ryzen 5600X, Intel Core-i5 10600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3070, Radeon RX 6800XT, AMD Ryzen 5600X, Intel Core-i5 10600"
     },
     {
       "title": "Tavern Legends",
@@ -450,14 +442,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GT 710 or higher, Intel Core i5 or better"
     },
     {
-      "title": "Flawed Tactics",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1060 / AMD RX 580 (4 GB VRAM, DirectX 11)",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580 (4 GB VRAM, DirectX 11), Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
       "title": "Vespera",
       "tier": "green",
       "gpu": "Intel HD Graphics 4000 / GeForce GT 630 / Radeon R7 250 or equivalent",
@@ -466,20 +450,28 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4000 / GeForce GT 630 / Radeon R7 250 or equivalent, Intel Core i3-2100 / AMD FX-4300 or equivalent"
     },
     {
-      "title": "Step Lightly",
-      "tier": "red",
-      "gpu": "RTX 3060 Ti or equivalent",
-      "cpu": null,
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 3060 Ti or equivalent"
-    },
-    {
       "title": "Heave Ho 2",
       "tier": "orange",
       "gpu": "GeForce GTX 1080 / Radeon RX Vega 56 / Arc A580",
       "cpu": "Intel Core i7-6950X / AMD Ryzen 7 2700",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1080 / Radeon RX Vega 56 / Arc A580, Intel Core i7-6950X / AMD Ryzen 7 2700"
+    },
+    {
+      "title": "Flawed Tactics",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1060 / AMD RX 580 (4 GB VRAM, DirectX 11)",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580 (4 GB VRAM, DirectX 11), Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Step Lightly",
+      "tier": "red",
+      "gpu": "RTX 3060 Ti or equivalent",
+      "cpu": null,
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 3060 Ti or equivalent"
     },
     {
       "title": "黎明探险队 / CTD",
@@ -538,20 +530,20 @@
       "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
     },
     {
-      "title": "Letalis",
-      "tier": "green",
-      "gpu": "GeForce GTX 650 or Radeon HD 5770",
-      "cpu": "Intel Core i5-750 or AMD Phenom II x4 945",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 650 or Radeon HD 5770, Intel Core i5-750 or AMD Phenom II x4 945"
-    },
-    {
       "title": "4D Intuition",
       "tier": "orange",
       "gpu": "NVidia GeForce GTX 1080",
       "cpu": null,
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVidia GeForce GTX 1080"
+    },
+    {
+      "title": "Letalis",
+      "tier": "green",
+      "gpu": "GeForce GTX 650 or Radeon HD 5770",
+      "cpu": "Intel Core i5-750 or AMD Phenom II x4 945",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 650 or Radeon HD 5770, Intel Core i5-750 or AMD Phenom II x4 945"
     },
     {
       "title": "Farm Factory Simulator",
@@ -602,6 +594,22 @@
       "note": "Doporučená konfigurace: Nvidia GTX 1060, Intel i5-7500"
     },
     {
+      "title": "Dodo Duckie",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce RTX 2060 (6 GB) / AMD Radeon RX 5600 XT",
+      "cpu": "Intel Core i5-12400F / AMD Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 (6 GB) / AMD Radeon RX 5600 XT, Intel Core i5-12400F / AMD Ryzen 5 5600"
+    },
+    {
+      "title": "The Alley",
+      "tier": "red",
+      "gpu": "NVIDIA GeForce RTX 3060",
+      "cpu": null,
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060"
+    },
+    {
       "title": "Fading Echo",
       "tier": "green",
       "gpu": "NVIDIA GeForce RTX 3050 / AMD Equivalent",
@@ -624,22 +632,6 @@
       "cpu": null,
       "usedMinimum": true,
       "note": "Minimální konfigurace: RTX 2060 or lower on low settings"
-    },
-    {
-      "title": "Dodo Duckie",
-      "tier": "orange",
-      "gpu": "NVIDIA GeForce RTX 2060 (6 GB) / AMD Radeon RX 5600 XT",
-      "cpu": "Intel Core i5-12400F / AMD Ryzen 5 5600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 (6 GB) / AMD Radeon RX 5600 XT, Intel Core i5-12400F / AMD Ryzen 5 5600"
-    },
-    {
-      "title": "The Alley",
-      "tier": "red",
-      "gpu": "NVIDIA GeForce RTX 3060",
-      "cpu": null,
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060"
     },
     {
       "title": "This Game is Simple",
