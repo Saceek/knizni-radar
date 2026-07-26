@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-26T17:16:21.331Z",
+  "updatedAt": "2026-07-26T18:17:22.461Z",
   "games": [
     {
       "title": "Palworld",
@@ -274,6 +274,14 @@
       "note": "Doporučená konfigurace: DirectX 12 compatible GPU, 8GB dedicated VRAM (GeForce RTX 3060 / Radeon RX 6700), Intel Core i7 @ 4GHz or Ryzen 5 @ 4GHz"
     },
     {
+      "title": "G-Rebels",
+      "tier": "red",
+      "gpu": "Nvidia RTX 4080 or AMD RX 7900 XT with at least 12 GB VRAM",
+      "cpu": "Intel Core i7-14700K or AMD Ryzen 9 7900X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia RTX 4080 or AMD RX 7900 XT with at least 12 GB VRAM, Intel Core i7-14700K or AMD Ryzen 9 7900X"
+    },
+    {
       "title": "Chest Buster",
       "tier": "green",
       "gpu": "Intel HD Graphics 4000",
@@ -354,6 +362,14 @@
       "note": "Doporučená konfigurace: GeForce GTX 1050 Ti / Radeon R9 280X, Intel Core i5-8400 / AMD Ryzen 7 2700X"
     },
     {
+      "title": "erdetspill",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1060 / AMD RX 580",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
       "title": "Abyss Kitchen",
       "tier": "green",
       "gpu": "Intel HD Graphics 4000 or equivalent",
@@ -386,20 +402,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3070 Ti / AMD Radeon HD 7850, Intel Core i5-4590 / AMD Radeon RX 6800"
     },
     {
-      "title": "Beso's Shawarma",
-      "tier": "green",
-      "gpu": "AMD Radeon Vega 7 / NVIDIA GeForce GTX 1050",
-      "cpu": "Intel Core i5 8th Gen / AMD Ryzen 3 or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: AMD Radeon Vega 7 / NVIDIA GeForce GTX 1050, Intel Core i5 8th Gen / AMD Ryzen 3 or better"
-    },
-    {
       "title": "Vespera",
       "tier": "green",
       "gpu": "Intel HD Graphics 4000 / GeForce GT 630 / Radeon R7 250 or equivalent",
       "cpu": "Intel Core i3-2100 / AMD FX-4300 or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 4000 / GeForce GT 630 / Radeon R7 250 or equivalent, Intel Core i3-2100 / AMD FX-4300 or equivalent"
+    },
+    {
+      "title": "Beso's Shawarma",
+      "tier": "green",
+      "gpu": "AMD Radeon Vega 7 / NVIDIA GeForce GTX 1050",
+      "cpu": "Intel Core i5 8th Gen / AMD Ryzen 3 or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: AMD Radeon Vega 7 / NVIDIA GeForce GTX 1050, Intel Core i5 8th Gen / AMD Ryzen 3 or better"
     },
     {
       "title": "The Crimson Maid",
@@ -498,20 +514,20 @@
       "note": "Doporučená konfigurace: Dedicated GPU or Intel Iris / Intel UHD Graphics, Intel Core i5 2.5 GHz or equivalent"
     },
     {
-      "title": "The Office Void",
-      "tier": "green",
-      "gpu": "NVIDIA GEFORCE GTX 1050 Ti (2 GB)",
-      "cpu": "Intel Core i5 8th Gen",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GEFORCE GTX 1050 Ti (2 GB), Intel Core i5 8th Gen"
-    },
-    {
       "title": "Infinitevania",
       "tier": "green",
       "gpu": "GeForce GTX 650 or Radeon HD 5770",
       "cpu": "Intel Core i5-3470 or AMD Ryzen 3 1200",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 650 or Radeon HD 5770, Intel Core i5-3470 or AMD Ryzen 3 1200"
+    },
+    {
+      "title": "The Office Void",
+      "tier": "green",
+      "gpu": "NVIDIA GEFORCE GTX 1050 Ti (2 GB)",
+      "cpu": "Intel Core i5 8th Gen",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GEFORCE GTX 1050 Ti (2 GB), Intel Core i5 8th Gen"
     },
     {
       "title": "Quantum Void",
@@ -538,20 +554,20 @@
       "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 1650 4GB or better, Intel® Core™ i3-6100 or AMD FX™-6300 or better"
     },
     {
-      "title": "战法道传奇",
-      "tier": "green",
-      "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
-      "cpu": "Intel Core i3",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
-    },
-    {
       "title": "4D Intuition",
       "tier": "orange",
       "gpu": "NVidia GeForce GTX 1080",
       "cpu": null,
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVidia GeForce GTX 1080"
+    },
+    {
+      "title": "战法道传奇",
+      "tier": "green",
+      "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
+      "cpu": "Intel Core i3",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
     },
     {
       "title": "Farm Factory Simulator",
@@ -688,30 +704,6 @@
       "cpu": "Intel Core i5-3470",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1050 (2GB), Radeon R9 380 (2GB), Intel Core i5-3470"
-    },
-    {
-      "title": "007 First Light",
-      "tier": "red",
-      "gpu": "NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT",
-      "cpu": "INTEL CORE i5 13500, AMD RYZEN 5 7600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT, INTEL CORE i5 13500, AMD RYZEN 5 7600"
-    },
-    {
-      "title": "Call of the Elder Gods",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1650 / AMD Radeon RX 580",
-      "cpu": "Intel Core i5-11600K / AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1650 / AMD Radeon RX 580, Intel Core i5-11600K / AMD Ryzen 5 5600X"
-    },
-    {
-      "title": "REPLACED",
-      "tier": "green",
-      "gpu": "GeForce GTX 1060 (6GB) or equivalent",
-      "cpu": "Intel® Core™ i5-8400 Processor",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
     }
   ]
 }
