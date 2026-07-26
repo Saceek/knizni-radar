@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-26T03:16:40.034Z",
+  "updatedAt": "2026-07-26T04:16:22.809Z",
   "games": [
     {
       "title": "Palworld",
@@ -386,20 +386,20 @@
       "note": "Doporučená konfigurace: GeForce GTX 1050 Ti / Radeon R9 280X, Intel Core i5-8400 / AMD Ryzen 7 2700X"
     },
     {
-      "title": "The Crimson Maid",
-      "tier": "green",
-      "gpu": "nVidia GTX 1070 / AMD RX 580",
-      "cpu": "Intel Core i7 @ 3Ghz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: nVidia GTX 1070 / AMD RX 580, Intel Core i7 @ 3Ghz"
-    },
-    {
       "title": "FLASH AND DIE",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1050 / AMD Radeon RX 560",
       "cpu": "Intel Core i5 / AMD Ryzen 5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560, Intel Core i5 / AMD Ryzen 5"
+    },
+    {
+      "title": "The Crimson Maid",
+      "tier": "green",
+      "gpu": "nVidia GTX 1070 / AMD RX 580",
+      "cpu": "Intel Core i7 @ 3Ghz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: nVidia GTX 1070 / AMD RX 580, Intel Core i7 @ 3Ghz"
     },
     {
       "title": "Abyss Kitchen",
@@ -450,6 +450,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GT 710 or higher, Intel Core i5 or better"
     },
     {
+      "title": "宗门最后的长老",
+      "tier": "red",
+      "gpu": "NVIDIA GeForce RTX 3070 Ti / AMD Radeon HD 7850",
+      "cpu": "Intel Core i5-4590 / AMD Radeon RX 6800",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3070 Ti / AMD Radeon HD 7850, Intel Core i5-4590 / AMD Radeon RX 6800"
+    },
+    {
       "title": "Heave Ho 2",
       "tier": "orange",
       "gpu": "GeForce GTX 1080 / Radeon RX Vega 56 / Arc A580",
@@ -472,14 +480,6 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580 (4 GB VRAM, DirectX 11), Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
-      "title": "宗门最后的长老",
-      "tier": "red",
-      "gpu": "NVIDIA GeForce RTX 3070 Ti / AMD Radeon HD 7850",
-      "cpu": "Intel Core i5-4590 / AMD Radeon RX 6800",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3070 Ti / AMD Radeon HD 7850, Intel Core i5-4590 / AMD Radeon RX 6800"
     },
     {
       "title": "黎明探险队 / CTD",
@@ -594,6 +594,14 @@
       "note": "Doporučená konfigurace: Intel HD Graphics 630 / AMD Radeon RX 550 / NVIDIA GeForce GTX 750 or better, Intel Core i5-4460 / AMD Ryzen 3 1200 or better"
     },
     {
+      "title": "Infinitevania",
+      "tier": "green",
+      "gpu": "GeForce GTX 650 or Radeon HD 5770",
+      "cpu": "Intel Core i5-3470 or AMD Ryzen 3 1200",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 650 or Radeon HD 5770, Intel Core i5-3470 or AMD Ryzen 3 1200"
+    },
+    {
       "title": "挖个蛋 Delvegg",
       "tier": "green",
       "gpu": "Nvidia GeForce GTX 650 / AMD equivalent or better",
@@ -618,14 +626,6 @@
       "note": "Minimální konfigurace: RTX 2060 or lower on low settings"
     },
     {
-      "title": "Infinitevania",
-      "tier": "green",
-      "gpu": "GeForce GTX 650 or Radeon HD 5770",
-      "cpu": "Intel Core i5-3470 or AMD Ryzen 3 1200",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 650 or Radeon HD 5770, Intel Core i5-3470 or AMD Ryzen 3 1200"
-    },
-    {
       "title": "Fading Echo",
       "tier": "green",
       "gpu": "NVIDIA GeForce RTX 3050 / AMD Equivalent",
@@ -642,20 +642,20 @@
       "note": "Minimální konfigurace: Intel Iris Xe"
     },
     {
-      "title": "Wiseman: No More Breakups",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 or better",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 or better, Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
       "title": "This Game is Simple",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 960 / AMD Radeon R9 280 equivalent",
       "cpu": "Intel Core i5-4590/AMD FX-8350 equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD Radeon R9 280 equivalent, Intel Core i5-4590/AMD FX-8350 equivalent"
+    },
+    {
+      "title": "Wiseman: No More Breakups",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 or better",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 or better, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
       "title": "The Lost Mixtape",
