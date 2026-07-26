@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-26T20:16:58.507Z",
+  "updatedAt": "2026-07-26T21:17:27.329Z",
   "games": [
     {
       "title": "Palworld",
@@ -250,6 +250,14 @@
       "note": "Doporučená konfigurace: Nvidia GTX 1070 or better / AMD RX480 or better, I5 or better / Ryzen 5 or better"
     },
     {
+      "title": "erdetspill",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1060 / AMD RX 580",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
       "title": "Birds of War",
       "tier": "green",
       "gpu": "NVIDIA GTX 1050 Ti / GTX 1650 / AMD Radeon RX 570 (4 GB VRAM)",
@@ -272,14 +280,6 @@
       "cpu": "Intel Core i7 @ 4GHz or Ryzen 5 @ 4GHz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: DirectX 12 compatible GPU, 8GB dedicated VRAM (GeForce RTX 3060 / Radeon RX 6700), Intel Core i7 @ 4GHz or Ryzen 5 @ 4GHz"
-    },
-    {
-      "title": "G-Rebels",
-      "tier": "red",
-      "gpu": "Nvidia RTX 4080 or AMD RX 7900 XT with at least 12 GB VRAM",
-      "cpu": "Intel Core i7-14700K or AMD Ryzen 9 7900X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia RTX 4080 or AMD RX 7900 XT with at least 12 GB VRAM, Intel Core i7-14700K or AMD Ryzen 9 7900X"
     },
     {
       "title": "Chest Buster",
@@ -368,14 +368,6 @@
       "cpu": "Intel Core2 Duo or higher",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 4000 or equivalent, Intel Core2 Duo or higher"
-    },
-    {
-      "title": "erdetspill",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1060 / AMD RX 580",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
       "title": "再战大极品+255",
@@ -490,14 +482,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GT 710 or higher, Intel Core i5 or better"
     },
     {
-      "title": "Flawed Tactics",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1060 / AMD RX 580 (4 GB VRAM, DirectX 11)",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580 (4 GB VRAM, DirectX 11), Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
       "title": "Tormentum II",
       "tier": "green",
       "gpu": "Dedicated GPU or Intel Iris / Intel UHD Graphics",
@@ -506,12 +490,12 @@
       "note": "Doporučená konfigurace: Dedicated GPU or Intel Iris / Intel UHD Graphics, Intel Core i5 2.5 GHz or equivalent"
     },
     {
-      "title": "黎明探险队 / CTD",
+      "title": "Flawed Tactics",
       "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1050 Ti or higher",
-      "cpu": "Inter Core i5 - 12400F or higher",
+      "gpu": "NVIDIA GTX 1060 / AMD RX 580 (4 GB VRAM, DirectX 11)",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1050 Ti or higher, Inter Core i5 - 12400F or higher"
+      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580 (4 GB VRAM, DirectX 11), Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
       "title": "Infinitevania",
@@ -520,6 +504,14 @@
       "cpu": "Intel Core i5-3470 or AMD Ryzen 3 1200",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 650 or Radeon HD 5770, Intel Core i5-3470 or AMD Ryzen 3 1200"
+    },
+    {
+      "title": "黎明探险队 / CTD",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 1050 Ti or higher",
+      "cpu": "Inter Core i5 - 12400F or higher",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1050 Ti or higher, Inter Core i5 - 12400F or higher"
     },
     {
       "title": "The Office Void",
@@ -696,6 +688,14 @@
       "cpu": "Ryzen 3 1200 / Core i5-7400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1060 / Radeon RX 470, Ryzen 3 1200 / Core i5-7400"
+    },
+    {
+      "title": "Hollow Knight: Silksong",
+      "tier": "green",
+      "gpu": "GeForce GTX 1050 (2GB), Radeon R9 380 (2GB)",
+      "cpu": "Intel Core i5-3470",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1050 (2GB), Radeon R9 380 (2GB), Intel Core i5-3470"
     }
   ]
 }
