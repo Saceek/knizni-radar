@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-27T05:16:10.962Z",
+  "updatedAt": "2026-07-27T06:16:55.156Z",
   "games": [
     {
       "title": "Palworld",
@@ -474,6 +474,14 @@
       "note": "Doporučená konfigurace: GEFORCE RTX 2060, 4 core 2,5 GHz+;"
     },
     {
+      "title": "Tormentum II",
+      "tier": "green",
+      "gpu": "Dedicated GPU or Intel Iris / Intel UHD Graphics",
+      "cpu": "Intel Core i5 2.5 GHz or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Dedicated GPU or Intel Iris / Intel UHD Graphics, Intel Core i5 2.5 GHz or equivalent"
+    },
+    {
       "title": "玄中记",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 750 Ti / AMD Radeon HD 7850",
@@ -496,14 +504,6 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580 (4 GB VRAM, DirectX 11), Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
-      "title": "Tormentum II",
-      "tier": "green",
-      "gpu": "Dedicated GPU or Intel Iris / Intel UHD Graphics",
-      "cpu": "Intel Core i5 2.5 GHz or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Dedicated GPU or Intel Iris / Intel UHD Graphics, Intel Core i5 2.5 GHz or equivalent"
     },
     {
       "title": "黎明探险队 / CTD",
@@ -554,20 +554,20 @@
       "note": "Doporučená konfigurace: NVidia GeForce GTX 1080"
     },
     {
-      "title": "战法道传奇",
-      "tier": "green",
-      "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
-      "cpu": "Intel Core i3",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
-    },
-    {
       "title": "Idyll Isle",
       "tier": "green",
       "gpu": "Intel HD Graphics 630 / AMD Radeon RX 550 / NVIDIA GeForce GTX 750 or better",
       "cpu": "Intel Core i5-4460 / AMD Ryzen 3 1200 or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Intel HD Graphics 630 / AMD Radeon RX 550 / NVIDIA GeForce GTX 750 or better, Intel Core i5-4460 / AMD Ryzen 3 1200 or better"
+    },
+    {
+      "title": "战法道传奇",
+      "tier": "green",
+      "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
+      "cpu": "Intel Core i3",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
     },
     {
       "title": "Letalis",
@@ -584,6 +584,14 @@
       "cpu": "Intel Core i7-9700K / AMD Ryzen 7 3700X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 2070 Super / AMD Radeon RX 5700, Intel Core i7-9700K / AMD Ryzen 7 3700X"
+    },
+    {
+      "title": "挖个蛋 Delvegg",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 650 / AMD equivalent or better",
+      "cpu": "Intel Core i5 or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 650 / AMD equivalent or better, Intel Core i5 or better"
     },
     {
       "title": "Fading Echo",
@@ -608,14 +616,6 @@
       "cpu": null,
       "usedMinimum": true,
       "note": "Minimální konfigurace: RTX 2060 or lower on low settings"
-    },
-    {
-      "title": "挖个蛋 Delvegg",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 650 / AMD equivalent or better",
-      "cpu": "Intel Core i5 or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 650 / AMD equivalent or better, Intel Core i5 or better"
     },
     {
       "title": "70年代風ロボットアニメ ゲッP-X",
@@ -712,22 +712,6 @@
       "cpu": "INTEL CORE i5 13500, AMD RYZEN 5 7600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT, INTEL CORE i5 13500, AMD RYZEN 5 7600"
-    },
-    {
-      "title": "Call of the Elder Gods",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1650 / AMD Radeon RX 580",
-      "cpu": "Intel Core i5-11600K / AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1650 / AMD Radeon RX 580, Intel Core i5-11600K / AMD Ryzen 5 5600X"
-    },
-    {
-      "title": "REPLACED",
-      "tier": "green",
-      "gpu": "GeForce GTX 1060 (6GB) or equivalent",
-      "cpu": "Intel® Core™ i5-8400 Processor",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
     }
   ]
 }
