@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-27T12:16:14.400Z",
+  "updatedAt": "2026-07-27T13:17:04.626Z",
   "games": [
     {
       "title": "Palworld",
@@ -74,20 +74,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 (6144 MB) or AMD Radeon RX 580 (8192 MB), Intel Core i5-9600K (6 * 3700) or AMD Ryzen 5 1600 (6 * 3200)"
     },
     {
-      "title": "The Mermaid Mask",
-      "tier": "green",
-      "gpu": "Intel HD Graphics",
-      "cpu": "Intel Core i3 or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics, Intel Core i3 or equivalent"
-    },
-    {
       "title": "Shift At Midnight",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1660 Ti (6GB) or Equivalent",
       "cpu": "Intel Core i5-10400 / AMD Ryzen 7 5800X or Equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Ti (6GB) or Equivalent, Intel Core i5-10400 / AMD Ryzen 7 5800X or Equivalent"
+    },
+    {
+      "title": "The Mermaid Mask",
+      "tier": "green",
+      "gpu": "Intel HD Graphics",
+      "cpu": "Intel Core i3 or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics, Intel Core i3 or equivalent"
     },
     {
       "title": "Master Healer Kale with useless party",
@@ -210,20 +210,20 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
-      "title": "HYPERFIST",
-      "tier": "orange",
-      "gpu": "Nvidia RTX 2070",
-      "cpu": "Intel Core i7-6700",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia RTX 2070, Intel Core i7-6700"
-    },
-    {
       "title": "REWIND",
       "tier": "green",
       "gpu": "NVIDIA GTX 1060 6GB",
       "cpu": "Intel Core i7-7700",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 6GB, Intel Core i7-7700"
+    },
+    {
+      "title": "HYPERFIST",
+      "tier": "orange",
+      "gpu": "Nvidia RTX 2070",
+      "cpu": "Intel Core i7-6700",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia RTX 2070, Intel Core i7-6700"
     },
     {
       "title": "列乌尼斯的挽歌 Requiem of Reuinis",
@@ -346,6 +346,14 @@
       "note": "Doporučená konfigurace: Radeon™ RX 580(8GB VRAM) / NVIDIA® GeForce® GTX 1060  (6 GB VRAM), AMD Ryzen™ 3 1200 / Intel® Core™ i5-6400"
     },
     {
+      "title": "Wonderia",
+      "tier": "green",
+      "gpu": "GeForce GTX 1050 Ti / Radeon R9 280X",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 7 2700X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1050 Ti / Radeon R9 280X, Intel Core i5-8400 / AMD Ryzen 7 2700X"
+    },
+    {
       "title": "Memory of Memorie : A Chill Story",
       "tier": "orange",
       "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700",
@@ -368,14 +376,6 @@
       "cpu": "Intel Core i3",
       "usedMinimum": true,
       "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
-    },
-    {
-      "title": "Wonderia",
-      "tier": "green",
-      "gpu": "GeForce GTX 1050 Ti / Radeon R9 280X",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 7 2700X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1050 Ti / Radeon R9 280X, Intel Core i5-8400 / AMD Ryzen 7 2700X"
     },
     {
       "title": "Vespera",
@@ -466,20 +466,20 @@
       "note": "Doporučená konfigurace: GeForce GTX 1080 / Radeon RX Vega 56 / Arc A580, Intel Core i7-6950X / AMD Ryzen 7 2700"
     },
     {
-      "title": "Penguin Lifter",
-      "tier": "orange",
-      "gpu": "GEFORCE RTX 2060",
-      "cpu": "4 core 2,5 GHz+;",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GEFORCE RTX 2060, 4 core 2,5 GHz+;"
-    },
-    {
       "title": "Tormentum II",
       "tier": "green",
       "gpu": "Dedicated GPU or Intel Iris / Intel UHD Graphics",
       "cpu": "Intel Core i5 2.5 GHz or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Dedicated GPU or Intel Iris / Intel UHD Graphics, Intel Core i5 2.5 GHz or equivalent"
+    },
+    {
+      "title": "Penguin Lifter",
+      "tier": "orange",
+      "gpu": "GEFORCE RTX 2060",
+      "cpu": "4 core 2,5 GHz+;",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GEFORCE RTX 2060, 4 core 2,5 GHz+;"
     },
     {
       "title": "Step Lightly",
@@ -704,38 +704,6 @@
       "cpu": "Ryzen 3 1200 / Core i5-7400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1060 / Radeon RX 470, Ryzen 3 1200 / Core i5-7400"
-    },
-    {
-      "title": "Hollow Knight: Silksong",
-      "tier": "green",
-      "gpu": "GeForce GTX 1050 (2GB), Radeon R9 380 (2GB)",
-      "cpu": "Intel Core i5-3470",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1050 (2GB), Radeon R9 380 (2GB), Intel Core i5-3470"
-    },
-    {
-      "title": "007 First Light",
-      "tier": "red",
-      "gpu": "NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT",
-      "cpu": "INTEL CORE i5 13500, AMD RYZEN 5 7600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT, INTEL CORE i5 13500, AMD RYZEN 5 7600"
-    },
-    {
-      "title": "Call of the Elder Gods",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1650 / AMD Radeon RX 580",
-      "cpu": "Intel Core i5-11600K / AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1650 / AMD Radeon RX 580, Intel Core i5-11600K / AMD Ryzen 5 5600X"
-    },
-    {
-      "title": "REPLACED",
-      "tier": "green",
-      "gpu": "GeForce GTX 1060 (6GB) or equivalent",
-      "cpu": "Intel® Core™ i5-8400 Processor",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
     }
   ]
 }
