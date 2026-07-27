@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-26T23:17:05.953Z",
+  "updatedAt": "2026-07-27T00:16:53.204Z",
   "games": [
     {
       "title": "Palworld",
@@ -442,6 +442,14 @@
       "note": "Doporučená konfigurace: NVIDIA Geforce GTX 1060 3GB, Ryzen 5 1500X"
     },
     {
+      "title": "Infinitevania",
+      "tier": "green",
+      "gpu": "GeForce GTX 650 or Radeon HD 5770",
+      "cpu": "Intel Core i5-3470 or AMD Ryzen 3 1200",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 650 or Radeon HD 5770, Intel Core i5-3470 or AMD Ryzen 3 1200"
+    },
+    {
       "title": "Step Lightly",
       "tier": "red",
       "gpu": "RTX 3060 Ti or equivalent",
@@ -480,14 +488,6 @@
       "cpu": "Intel Core i5 or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GT 710 or higher, Intel Core i5 or better"
-    },
-    {
-      "title": "Infinitevania",
-      "tier": "green",
-      "gpu": "GeForce GTX 650 or Radeon HD 5770",
-      "cpu": "Intel Core i5-3470 or AMD Ryzen 3 1200",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 650 or Radeon HD 5770, Intel Core i5-3470 or AMD Ryzen 3 1200"
     },
     {
       "title": "Flawed Tactics",
@@ -586,6 +586,14 @@
       "note": "Doporučená konfigurace: Intel HD Graphics 630 / AMD Radeon RX 550 / NVIDIA GeForce GTX 750 or better, Intel Core i5-4460 / AMD Ryzen 3 1200 or better"
     },
     {
+      "title": "diffiCULT",
+      "tier": "green",
+      "gpu": "Nvidia GTX 1060",
+      "cpu": "Intel i5-7500",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GTX 1060, Intel i5-7500"
+    },
+    {
       "title": "挖个蛋 Delvegg",
       "tier": "green",
       "gpu": "Nvidia GeForce GTX 650 / AMD equivalent or better",
@@ -602,12 +610,12 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650, Intel® Core™ i5 @ 3.20 GHz"
     },
     {
-      "title": "diffiCULT",
+      "title": "Fading Echo",
       "tier": "green",
-      "gpu": "Nvidia GTX 1060",
-      "cpu": "Intel i5-7500",
+      "gpu": "NVIDIA GeForce RTX 3050 / AMD Equivalent",
+      "cpu": "AMD Ryzen 5 5600X / Intel Equivalent",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GTX 1060, Intel i5-7500"
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3050 / AMD Equivalent, AMD Ryzen 5 5600X / Intel Equivalent"
     },
     {
       "title": "The Lure",
@@ -616,14 +624,6 @@
       "cpu": null,
       "usedMinimum": true,
       "note": "Minimální konfigurace: RTX 2060 or lower on low settings"
-    },
-    {
-      "title": "Fading Echo",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce RTX 3050 / AMD Equivalent",
-      "cpu": "AMD Ryzen 5 5600X / Intel Equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3050 / AMD Equivalent, AMD Ryzen 5 5600X / Intel Equivalent"
     },
     {
       "title": "Warp to Sector One",
@@ -704,6 +704,22 @@
       "cpu": "INTEL CORE i5 13500, AMD RYZEN 5 7600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT, INTEL CORE i5 13500, AMD RYZEN 5 7600"
+    },
+    {
+      "title": "Call of the Elder Gods",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 1650 / AMD Radeon RX 580",
+      "cpu": "Intel Core i5-11600K / AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1650 / AMD Radeon RX 580, Intel Core i5-11600K / AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "REPLACED",
+      "tier": "green",
+      "gpu": "GeForce GTX 1060 (6GB) or equivalent",
+      "cpu": "Intel® Core™ i5-8400 Processor",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
     }
   ]
 }
