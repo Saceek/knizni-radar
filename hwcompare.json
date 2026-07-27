@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-27T00:16:53.204Z",
+  "updatedAt": "2026-07-27T01:17:29.098Z",
   "games": [
     {
       "title": "Palworld",
@@ -538,14 +538,6 @@
       "note": "Doporučená konfigurace: Nvidia GTX 650, Intel Core i5"
     },
     {
-      "title": "4D Intuition",
-      "tier": "orange",
-      "gpu": "NVidia GeForce GTX 1080",
-      "cpu": null,
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVidia GeForce GTX 1080"
-    },
-    {
       "title": "Farm Factory Simulator",
       "tier": "green",
       "gpu": "GeForce GTX 1060 6GB",
@@ -554,12 +546,28 @@
       "note": "Doporučená konfigurace: GeForce GTX 1060 6GB, AMD Ryzen 5 3600 / Intel Core i7 7700K"
     },
     {
+      "title": "4D Intuition",
+      "tier": "orange",
+      "gpu": "NVidia GeForce GTX 1080",
+      "cpu": null,
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVidia GeForce GTX 1080"
+    },
+    {
       "title": "战法道传奇",
       "tier": "green",
       "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
       "cpu": "Intel Core i3",
       "usedMinimum": true,
       "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
+    },
+    {
+      "title": "Idyll Isle",
+      "tier": "green",
+      "gpu": "Intel HD Graphics 630 / AMD Radeon RX 550 / NVIDIA GeForce GTX 750 or better",
+      "cpu": "Intel Core i5-4460 / AMD Ryzen 3 1200 or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Intel HD Graphics 630 / AMD Radeon RX 550 / NVIDIA GeForce GTX 750 or better, Intel Core i5-4460 / AMD Ryzen 3 1200 or better"
     },
     {
       "title": "Letalis",
@@ -576,14 +584,6 @@
       "cpu": "Intel Core i7-9700K / AMD Ryzen 7 3700X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 2070 Super / AMD Radeon RX 5700, Intel Core i7-9700K / AMD Ryzen 7 3700X"
-    },
-    {
-      "title": "Idyll Isle",
-      "tier": "green",
-      "gpu": "Intel HD Graphics 630 / AMD Radeon RX 550 / NVIDIA GeForce GTX 750 or better",
-      "cpu": "Intel Core i5-4460 / AMD Ryzen 3 1200 or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Intel HD Graphics 630 / AMD Radeon RX 550 / NVIDIA GeForce GTX 750 or better, Intel Core i5-4460 / AMD Ryzen 3 1200 or better"
     },
     {
       "title": "diffiCULT",
@@ -626,20 +626,20 @@
       "note": "Minimální konfigurace: RTX 2060 or lower on low settings"
     },
     {
-      "title": "Warp to Sector One",
-      "tier": "green",
-      "gpu": "Intel Iris Xe",
-      "cpu": null,
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel Iris Xe"
-    },
-    {
       "title": "Catio Simulator",
       "tier": "green",
       "gpu": "Radeon RX 560 / GeForce GTX 1050",
       "cpu": "Intel Core i3-10100 / AMD Ryzen 3 3100",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Radeon RX 560 / GeForce GTX 1050, Intel Core i3-10100 / AMD Ryzen 3 3100"
+    },
+    {
+      "title": "Warp to Sector One",
+      "tier": "green",
+      "gpu": "Intel Iris Xe",
+      "cpu": null,
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel Iris Xe"
     },
     {
       "title": "LIFTED",
@@ -664,6 +664,14 @@
       "cpu": "Intel® Core™ i5-4670K / AMD® Ryzen™ 5 2400G",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia® GeForce™ GTX 1650 (4GB) / AMD® Radeon™ R9 390X (8GB), Intel® Core™ i5-4670K / AMD® Ryzen™ 5 2400G"
+    },
+    {
+      "title": "SSTWL - Sector Breach",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1050",
+      "cpu": "Intel Core i5-6600K",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050, Intel Core i5-6600K"
     },
     {
       "title": "Wiseman: No More Breakups",
