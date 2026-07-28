@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-27T23:16:43.620Z",
+  "updatedAt": "2026-07-28T00:16:54.664Z",
   "games": [
     {
       "title": "Palworld",
@@ -298,6 +298,14 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4000, 2GHz Dual Core"
     },
     {
+      "title": "Dewdrop Dynasty",
+      "tier": "green",
+      "gpu": "Intel HD Graphics 4000",
+      "cpu": "2 Ghz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics 4000, 2 Ghz"
+    },
+    {
       "title": "Life & Shadow: Celestial Call - Prologue",
       "tier": "red",
       "gpu": "NVIDIA RTX 3060 (12 GB) / AMD RX 6700 XT or equivalent — DX11 compatible",
@@ -314,20 +322,20 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 960 or equivalent, 3.5Ghz  processing power"
     },
     {
-      "title": "Wonderia",
-      "tier": "green",
-      "gpu": "GeForce GTX 1050 Ti / Radeon R9 280X",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 7 2700X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1050 Ti / Radeon R9 280X, Intel Core i5-8400 / AMD Ryzen 7 2700X"
-    },
-    {
       "title": "Memory of Memorie : A Chill Story",
       "tier": "orange",
       "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700",
       "cpu": "Intel Core i7-9700 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700, Intel Core i7-9700 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Wonderia",
+      "tier": "green",
+      "gpu": "GeForce GTX 1050 Ti / Radeon R9 280X",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 7 2700X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1050 Ti / Radeon R9 280X, Intel Core i5-8400 / AMD Ryzen 7 2700X"
     },
     {
       "title": "Ocean Rush",
@@ -514,14 +522,6 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1050 Ti or higher, Inter Core i5 - 12400F or higher"
     },
     {
-      "title": "The Office Void",
-      "tier": "green",
-      "gpu": "NVIDIA GEFORCE GTX 1050 Ti (2 GB)",
-      "cpu": "Intel Core i5 8th Gen",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GEFORCE GTX 1050 Ti (2 GB), Intel Core i5 8th Gen"
-    },
-    {
       "title": "Dodo Duckie",
       "tier": "orange",
       "gpu": "NVIDIA GeForce RTX 2060 (6 GB) / AMD Radeon RX 5600 XT",
@@ -626,20 +626,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650, Intel® Core™ i5 @ 3.20 GHz"
     },
     {
-      "title": "Catio Simulator",
-      "tier": "green",
-      "gpu": "Radeon RX 560 / GeForce GTX 1050",
-      "cpu": "Intel Core i3-10100 / AMD Ryzen 3 3100",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Radeon RX 560 / GeForce GTX 1050, Intel Core i3-10100 / AMD Ryzen 3 3100"
-    },
-    {
       "title": "SSTWL - Sector Breach",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1050",
       "cpu": "Intel Core i5-6600K",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050, Intel Core i5-6600K"
+    },
+    {
+      "title": "Catio Simulator",
+      "tier": "green",
+      "gpu": "Radeon RX 560 / GeForce GTX 1050",
+      "cpu": "Intel Core i3-10100 / AMD Ryzen 3 3100",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Radeon RX 560 / GeForce GTX 1050, Intel Core i3-10100 / AMD Ryzen 3 3100"
     },
     {
       "title": "LIFTED",
@@ -666,14 +666,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 or better, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
-      "title": "This Game is Simple",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 960 / AMD Radeon R9 280 equivalent",
-      "cpu": "Intel Core i5-4590/AMD FX-8350 equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD Radeon R9 280 equivalent, Intel Core i5-4590/AMD FX-8350 equivalent"
-    },
-    {
       "title": "Cheat Death",
       "tier": "green",
       "gpu": "Nvidia® GeForce™ GTX 1650 (4GB) / AMD® Radeon™ R9 390X (8GB)",
@@ -696,6 +688,14 @@
       "cpu": "Intel i7-10700",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660, Intel i7-10700"
+    },
+    {
+      "title": "Minsgon Simulator: Prologue",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1050 / AMD RX 470",
+      "cpu": "i5 3550 / AMD RYZEN 5 2500X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1050 / AMD RX 470, i5 3550 / AMD RYZEN 5 2500X"
     }
   ]
 }
