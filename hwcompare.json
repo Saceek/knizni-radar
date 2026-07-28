@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-28T05:16:24.096Z",
+  "updatedAt": "2026-07-28T06:16:08.081Z",
   "games": [
     {
       "title": "Palworld",
@@ -58,20 +58,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
     },
     {
-      "title": "NTE: Neverness to Everness",
-      "tier": "red",
-      "gpu": "NVIDIA GeForce RTX 3060 / AMD Radeon RX 6700 / Qualcomm® Adreno X2 GPU",
-      "cpu": "Intel Core i7-12700 (12th Gen) / Snapdragon® X2 Elite",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6700 / Qualcomm® Adreno X2 GPU, Intel Core i7-12700 (12th Gen) / Snapdragon® X2 Elite"
-    },
-    {
       "title": "Shift At Midnight",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1660 Ti (6GB) or Equivalent",
       "cpu": "Intel Core i5-10400 / AMD Ryzen 7 5800X or Equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Ti (6GB) or Equivalent, Intel Core i5-10400 / AMD Ryzen 7 5800X or Equivalent"
+    },
+    {
+      "title": "NTE: Neverness to Everness",
+      "tier": "red",
+      "gpu": "NVIDIA GeForce RTX 3060 / AMD Radeon RX 6700 / Qualcomm® Adreno X2 GPU",
+      "cpu": "Intel Core i7-12700 (12th Gen) / Snapdragon® X2 Elite",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6700 / Qualcomm® Adreno X2 GPU, Intel Core i7-12700 (12th Gen) / Snapdragon® X2 Elite"
     },
     {
       "title": "Denshattack!",
@@ -210,20 +210,20 @@
       "note": "Minimální konfigurace: NVIDIA GTX 1650, Intel Core i7-11800H"
     },
     {
-      "title": "REWIND",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1060 6GB",
-      "cpu": "Intel Core i7-7700",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1060 6GB, Intel Core i7-7700"
-    },
-    {
       "title": "HYPERFIST",
       "tier": "orange",
       "gpu": "Nvidia RTX 2070",
       "cpu": "Intel Core i7-6700",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia RTX 2070, Intel Core i7-6700"
+    },
+    {
+      "title": "REWIND",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1060 6GB",
+      "cpu": "Intel Core i7-7700",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1060 6GB, Intel Core i7-7700"
     },
     {
       "title": "列乌尼斯的挽歌 Requiem of Reuinis",
@@ -322,14 +322,6 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 960 or equivalent, 3.5Ghz  processing power"
     },
     {
-      "title": "Memory of Memorie : A Chill Story",
-      "tier": "orange",
-      "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700",
-      "cpu": "Intel Core i7-9700 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700, Intel Core i7-9700 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "Wonderia",
       "tier": "green",
       "gpu": "GeForce GTX 1050 Ti / Radeon R9 280X",
@@ -338,12 +330,12 @@
       "note": "Doporučená konfigurace: GeForce GTX 1050 Ti / Radeon R9 280X, Intel Core i5-8400 / AMD Ryzen 7 2700X"
     },
     {
-      "title": "Ocean Rush",
-      "tier": "green",
-      "gpu": "intel hd graphics",
-      "cpu": "intel dual core",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: intel hd graphics, intel dual core"
+      "title": "Memory of Memorie : A Chill Story",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700",
+      "cpu": "Intel Core i7-9700 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700, Intel Core i7-9700 / AMD Ryzen 5 3600"
     },
     {
       "title": "Abyss Kitchen",
@@ -354,12 +346,12 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4000 or equivalent, Intel Core2 Duo or higher"
     },
     {
-      "title": "Double Driver",
+      "title": "Ocean Rush",
       "tier": "green",
-      "gpu": "INTEL HD GRAPHICS",
-      "cpu": "Intel DUAL CORE",
+      "gpu": "intel hd graphics",
+      "cpu": "intel dual core",
       "usedMinimum": true,
-      "note": "Minimální konfigurace: INTEL HD GRAPHICS, Intel DUAL CORE"
+      "note": "Minimální konfigurace: intel hd graphics, intel dual core"
     },
     {
       "title": "Vespera",
@@ -368,6 +360,14 @@
       "cpu": "Intel Core i3-2100 / AMD FX-4300 or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 4000 / GeForce GT 630 / Radeon R7 250 or equivalent, Intel Core i3-2100 / AMD FX-4300 or equivalent"
+    },
+    {
+      "title": "Double Driver",
+      "tier": "green",
+      "gpu": "INTEL HD GRAPHICS",
+      "cpu": "Intel DUAL CORE",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: INTEL HD GRAPHICS, Intel DUAL CORE"
     },
     {
       "title": "十米爆爽超变",
@@ -472,14 +472,6 @@
       "cpu": "4 core 2,5 GHz+;",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GEFORCE RTX 2060, 4 core 2,5 GHz+;"
-    },
-    {
-      "title": "Road Diner Simulator: Prologue",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1070 or better 6GB VRAM",
-      "cpu": "Intel Core i5 (recent generation)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 or better 6GB VRAM, Intel Core i5 (recent generation)"
     },
     {
       "title": "Heave Ho 2",
@@ -618,14 +610,6 @@
       "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
     },
     {
-      "title": "Broken Reality 2000",
-      "tier": "green",
-      "gpu": "Video card must be 128 MB or more and with support for Pixel Shader 2.0b (ATI Radeon X800 or higher / NVIDIA GeForce 7600 or higher / Intel HD Graphics 2000 or higher).",
-      "cpu": "3.0 GHz P4, Dual Core 2.0 (or higher)",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Video card must be 128 MB or more and with support for Pixel Shader 2.0b (ATI Radeon X800 or higher / NVIDIA GeForce 7600 or higher / Intel HD Graphics 2000 or higher)., 3.0 GHz P4, Dual Core 2.0 (or higher)"
-    },
-    {
       "title": "diffiCULT",
       "tier": "green",
       "gpu": "Nvidia GTX 1060",
@@ -656,6 +640,14 @@
       "cpu": "Intel Core i3-10100 / AMD Ryzen 3 3100",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Radeon RX 560 / GeForce GTX 1050, Intel Core i3-10100 / AMD Ryzen 3 3100"
+    },
+    {
+      "title": "Broken Reality 2000",
+      "tier": "green",
+      "gpu": "Video card must be 128 MB or more and with support for Pixel Shader 2.0b (ATI Radeon X800 or higher / NVIDIA GeForce 7600 or higher / Intel HD Graphics 2000 or higher).",
+      "cpu": "3.0 GHz P4, Dual Core 2.0 (or higher)",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Video card must be 128 MB or more and with support for Pixel Shader 2.0b (ATI Radeon X800 or higher / NVIDIA GeForce 7600 or higher / Intel HD Graphics 2000 or higher)., 3.0 GHz P4, Dual Core 2.0 (or higher)"
     },
     {
       "title": "LIFTED",
@@ -690,20 +682,20 @@
       "note": "Doporučená konfigurace: Nvidia® GeForce™ GTX 1650 (4GB) / AMD® Radeon™ R9 390X (8GB), Intel® Core™ i5-4670K / AMD® Ryzen™ 5 2400G"
     },
     {
-      "title": "FixForce",
-      "tier": "red",
-      "gpu": "NVIDIA RTX 3080 10GB, AMD Radeon RX6800XT 16GB",
-      "cpu": "AMD Ryzen 3600 or Intel Core i7 7700k",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 3080 10GB, AMD Radeon RX6800XT 16GB, AMD Ryzen 3600 or Intel Core i7 7700k"
-    },
-    {
       "title": "The Lost Mixtape",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1660",
       "cpu": "Intel i7-10700",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660, Intel i7-10700"
+    },
+    {
+      "title": "FixForce",
+      "tier": "red",
+      "gpu": "NVIDIA RTX 3080 10GB, AMD Radeon RX6800XT 16GB",
+      "cpu": "AMD Ryzen 3600 or Intel Core i7 7700k",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 3080 10GB, AMD Radeon RX6800XT 16GB, AMD Ryzen 3600 or Intel Core i7 7700k"
     },
     {
       "title": "Minsgon Simulator: Prologue",
