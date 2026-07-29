@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-29T04:17:12.555Z",
+  "updatedAt": "2026-07-29T05:17:32.151Z",
   "games": [
     {
       "title": "Palworld",
@@ -274,20 +274,20 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4000, 2GHz Dual Core"
     },
     {
-      "title": "Tavern Legends",
-      "tier": "red",
-      "gpu": "DirectX 12 compatible GPU, 8GB dedicated VRAM (GeForce RTX 3060 / Radeon RX 6700)",
-      "cpu": "Intel Core i7 @ 4GHz or Ryzen 5 @ 4GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: DirectX 12 compatible GPU, 8GB dedicated VRAM (GeForce RTX 3060 / Radeon RX 6700), Intel Core i7 @ 4GHz or Ryzen 5 @ 4GHz"
-    },
-    {
       "title": "Dewdrop Dynasty",
       "tier": "green",
       "gpu": "Intel HD Graphics 4000",
       "cpu": "2 Ghz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 4000, 2 Ghz"
+    },
+    {
+      "title": "Tavern Legends",
+      "tier": "red",
+      "gpu": "DirectX 12 compatible GPU, 8GB dedicated VRAM (GeForce RTX 3060 / Radeon RX 6700)",
+      "cpu": "Intel Core i7 @ 4GHz or Ryzen 5 @ 4GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: DirectX 12 compatible GPU, 8GB dedicated VRAM (GeForce RTX 3060 / Radeon RX 6700), Intel Core i7 @ 4GHz or Ryzen 5 @ 4GHz"
     },
     {
       "title": "Wonderia",
@@ -514,6 +514,14 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580 (4 GB VRAM, DirectX 11), Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
+      "title": "Shards of Order",
+      "tier": "green",
+      "gpu": "GTX 1060",
+      "cpu": "Quad-core 3.0 GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1060, Quad-core 3.0 GHz"
+    },
+    {
       "title": "Dodo Duckie",
       "tier": "orange",
       "gpu": "NVIDIA GeForce RTX 2060 (6 GB) / AMD Radeon RX 5600 XT",
@@ -538,20 +546,20 @@
       "note": "Doporučená konfigurace: Nvidia GTX 650, Intel Core i5"
     },
     {
-      "title": "Shards of Order",
-      "tier": "green",
-      "gpu": "GTX 1060",
-      "cpu": "Quad-core 3.0 GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1060, Quad-core 3.0 GHz"
-    },
-    {
       "title": "Fading Echo",
       "tier": "green",
       "gpu": "NVIDIA GeForce RTX 3050 / AMD Equivalent",
       "cpu": "AMD Ryzen 5 5600X / Intel Equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3050 / AMD Equivalent, AMD Ryzen 5 5600X / Intel Equivalent"
+    },
+    {
+      "title": "挖个蛋 Delvegg",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 650 / AMD equivalent or better",
+      "cpu": "Intel Core i5 or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 650 / AMD equivalent or better, Intel Core i5 or better"
     },
     {
       "title": "Farm Factory Simulator",
@@ -570,14 +578,6 @@
       "note": "Doporučená konfigurace: NVidia GeForce GTX 1080"
     },
     {
-      "title": "挖个蛋 Delvegg",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 650 / AMD equivalent or better",
-      "cpu": "Intel Core i5 or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 650 / AMD equivalent or better, Intel Core i5 or better"
-    },
-    {
       "title": "The Lure",
       "tier": "orange",
       "gpu": "RTX 2060 or lower on low settings",
@@ -594,20 +594,20 @@
       "note": "Doporučená konfigurace: Intel HD Graphics 630 / AMD Radeon RX 550 / NVIDIA GeForce GTX 750 or better, Intel Core i5-4460 / AMD Ryzen 3 1200 or better"
     },
     {
-      "title": "Aerolicious",
-      "tier": "orange",
-      "gpu": "NVIDIA RTX 2070 Super / AMD Radeon RX 5700",
-      "cpu": "Intel Core i7-9700K / AMD Ryzen 7 3700X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 2070 Super / AMD Radeon RX 5700, Intel Core i7-9700K / AMD Ryzen 7 3700X"
-    },
-    {
       "title": "Letalis",
       "tier": "green",
       "gpu": "GeForce GTX 650 or Radeon HD 5770",
       "cpu": "Intel Core i5-750 or AMD Phenom II x4 945",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 650 or Radeon HD 5770, Intel Core i5-750 or AMD Phenom II x4 945"
+    },
+    {
+      "title": "Aerolicious",
+      "tier": "orange",
+      "gpu": "NVIDIA RTX 2070 Super / AMD Radeon RX 5700",
+      "cpu": "Intel Core i7-9700K / AMD Ryzen 7 3700X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 2070 Super / AMD Radeon RX 5700, Intel Core i7-9700K / AMD Ryzen 7 3700X"
     },
     {
       "title": "战法道传奇",
