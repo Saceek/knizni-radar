@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-29T13:16:59.752Z",
+  "updatedAt": "2026-07-29T14:17:00.467Z",
   "games": [
     {
       "title": "Palworld",
@@ -386,14 +386,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3070 Ti / AMD Radeon HD 7850, Intel Core i5-4590 / AMD Radeon RX 6800"
     },
     {
-      "title": "再战大极品+255",
-      "tier": "green",
-      "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
-      "cpu": "Intel Core i3",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
-    },
-    {
       "title": "Broken Reality 2000",
       "tier": "green",
       "gpu": "Video card must be 128 MB or more and with support for Pixel Shader 2.0b (ATI Radeon X800 or higher / NVIDIA GeForce 7600 or higher / Intel HD Graphics 2000 or higher).",
@@ -408,6 +400,14 @@
       "cpu": null,
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060"
+    },
+    {
+      "title": "再战大极品+255",
+      "tier": "green",
+      "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
+      "cpu": "Intel Core i3",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
     },
     {
       "title": "Tormentum II",
@@ -688,6 +688,30 @@
       "cpu": "Intel i7-10700",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660, Intel i7-10700"
+    },
+    {
+      "title": "FixForce",
+      "tier": "red",
+      "gpu": "NVIDIA RTX 3080 10GB, AMD Radeon RX6800XT 16GB",
+      "cpu": "AMD Ryzen 3600 or Intel Core i7 7700k",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 3080 10GB, AMD Radeon RX6800XT 16GB, AMD Ryzen 3600 or Intel Core i7 7700k"
+    },
+    {
+      "title": "Deer & Boy",
+      "tier": "green",
+      "gpu": "GeForce GTX 1060 / Radeon RX 470",
+      "cpu": "Ryzen 3 1200 / Core i5-7400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1060 / Radeon RX 470, Ryzen 3 1200 / Core i5-7400"
+    },
+    {
+      "title": "Hollow Knight: Silksong",
+      "tier": "green",
+      "gpu": "GeForce GTX 1050 (2GB), Radeon R9 380 (2GB)",
+      "cpu": "Intel Core i5-3470",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1050 (2GB), Radeon R9 380 (2GB), Intel Core i5-3470"
     }
   ]
 }
