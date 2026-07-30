@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-30T10:16:53.572Z",
+  "updatedAt": "2026-07-30T11:17:14.191Z",
   "games": [
     {
       "title": "Palworld",
@@ -354,14 +354,6 @@
       "note": "Minimální konfigurace: intel hd graphics, intel dual core"
     },
     {
-      "title": "Double Driver",
-      "tier": "green",
-      "gpu": "INTEL HD GRAPHICS",
-      "cpu": "Intel DUAL CORE",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: INTEL HD GRAPHICS, Intel DUAL CORE"
-    },
-    {
       "title": "Broken Reality 2000",
       "tier": "green",
       "gpu": "Video card must be 128 MB or more and with support for Pixel Shader 2.0b (ATI Radeon X800 or higher / NVIDIA GeForce 7600 or higher / Intel HD Graphics 2000 or higher).",
@@ -370,12 +362,28 @@
       "note": "Minimální konfigurace: Video card must be 128 MB or more and with support for Pixel Shader 2.0b (ATI Radeon X800 or higher / NVIDIA GeForce 7600 or higher / Intel HD Graphics 2000 or higher)., 3.0 GHz P4, Dual Core 2.0 (or higher)"
     },
     {
+      "title": "Double Driver",
+      "tier": "green",
+      "gpu": "INTEL HD GRAPHICS",
+      "cpu": "Intel DUAL CORE",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: INTEL HD GRAPHICS, Intel DUAL CORE"
+    },
+    {
       "title": "十米爆爽超变",
       "tier": "green",
       "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
       "cpu": "Intel Core i3",
       "usedMinimum": true,
       "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
+    },
+    {
+      "title": "Suncraft",
+      "tier": "green",
+      "gpu": "Intel HD 620 / UHD 600 series, or NVIDIA GeForce GT 730 / AMD R7 240",
+      "cpu": "Intel Core i3-2100 / AMD FX-4350 or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD 620 / UHD 600 series, or NVIDIA GeForce GT 730 / AMD R7 240, Intel Core i3-2100 / AMD FX-4350 or equivalent"
     },
     {
       "title": "D-topia",
@@ -394,28 +402,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060"
     },
     {
-      "title": "宗门最后的长老",
-      "tier": "red",
-      "gpu": "NVIDIA GeForce RTX 3070 Ti / AMD Radeon HD 7850",
-      "cpu": "Intel Core i5-4590 / AMD Radeon RX 6800",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3070 Ti / AMD Radeon HD 7850, Intel Core i5-4590 / AMD Radeon RX 6800"
-    },
-    {
-      "title": "Suncraft",
-      "tier": "green",
-      "gpu": "Intel HD 620 / UHD 600 series, or NVIDIA GeForce GT 730 / AMD R7 240",
-      "cpu": "Intel Core i3-2100 / AMD FX-4350 or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD 620 / UHD 600 series, or NVIDIA GeForce GT 730 / AMD R7 240, Intel Core i3-2100 / AMD FX-4350 or equivalent"
-    },
-    {
       "title": "Tormentum II",
       "tier": "green",
       "gpu": "Dedicated GPU or Intel Iris / Intel UHD Graphics",
       "cpu": "Intel Core i5 2.5 GHz or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Dedicated GPU or Intel Iris / Intel UHD Graphics, Intel Core i5 2.5 GHz or equivalent"
+    },
+    {
+      "title": "宗门最后的长老",
+      "tier": "red",
+      "gpu": "NVIDIA GeForce RTX 3070 Ti / AMD Radeon HD 7850",
+      "cpu": "Intel Core i5-4590 / AMD Radeon RX 6800",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3070 Ti / AMD Radeon HD 7850, Intel Core i5-4590 / AMD Radeon RX 6800"
     },
     {
       "title": "再战大极品+255",
@@ -522,20 +522,20 @@
       "note": "Doporučená konfigurace: Nvidia GTX 650, Intel Core i5"
     },
     {
-      "title": "黎明探险队 / CTD",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1050 Ti or higher",
-      "cpu": "Inter Core i5 - 12400F or higher",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1050 Ti or higher, Inter Core i5 - 12400F or higher"
-    },
-    {
       "title": "Truck-kun is Supporting Me from Another World?!",
       "tier": "green",
       "gpu": "Intel HD Graphics 2000",
       "cpu": "@ 2GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 2000, @ 2GHz"
+    },
+    {
+      "title": "黎明探险队 / CTD",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 1050 Ti or higher",
+      "cpu": "Inter Core i5 - 12400F or higher",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1050 Ti or higher, Inter Core i5 - 12400F or higher"
     },
     {
       "title": "Fading Echo",
@@ -650,20 +650,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650, Intel® Core™ i5 @ 3.20 GHz"
     },
     {
-      "title": "Catio Simulator",
-      "tier": "green",
-      "gpu": "Radeon RX 560 / GeForce GTX 1050",
-      "cpu": "Intel Core i3-10100 / AMD Ryzen 3 3100",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Radeon RX 560 / GeForce GTX 1050, Intel Core i3-10100 / AMD Ryzen 3 3100"
-    },
-    {
       "title": "Wiseman: No More Breakups",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 or better",
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 or better, Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Catio Simulator",
+      "tier": "green",
+      "gpu": "Radeon RX 560 / GeForce GTX 1050",
+      "cpu": "Intel Core i3-10100 / AMD Ryzen 3 3100",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Radeon RX 560 / GeForce GTX 1050, Intel Core i3-10100 / AMD Ryzen 3 3100"
     },
     {
       "title": "Warp to Sector One",
