@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-31T09:17:31.758Z",
+  "updatedAt": "2026-07-31T10:17:37.413Z",
   "games": [
     {
       "title": "Palworld",
@@ -18,7 +18,7 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 (12 GB VRAM), AMD RX 6700 XT (12 GB VRAM), Intel Core i5-12500, AMD Ryzen 5 5600"
     },
     {
-      "title": "Granblue Fantasy: Relink - Endless Ragnarok (Standard Edition)",
+      "title": "Granblue Fantasy: Relink",
       "tier": "red",
       "gpu": "NVIDIA® GeForce RTX™ 2080 8GB / AMD Radeon™ RX 6700 XT 8GB",
       "cpu": "Intel® Core™ i7-8700 / AMD Ryzen™ 5 3600",
@@ -402,20 +402,20 @@
       "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
     },
     {
-      "title": "D-topia",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1060, 3GB",
-      "cpu": "Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, 3GB, Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz"
-    },
-    {
       "title": "Tormentum II",
       "tier": "green",
       "gpu": "Dedicated GPU or Intel Iris / Intel UHD Graphics",
       "cpu": "Intel Core i5 2.5 GHz or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Dedicated GPU or Intel Iris / Intel UHD Graphics, Intel Core i5 2.5 GHz or equivalent"
+    },
+    {
+      "title": "D-topia",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1060, 3GB",
+      "cpu": "Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, 3GB, Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz"
     },
     {
       "title": "宗门最后的长老",
@@ -426,14 +426,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3070 Ti / AMD Radeon HD 7850, Intel Core i5-4590 / AMD Radeon RX 6800"
     },
     {
-      "title": "FLASH AND DIE",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1050 / AMD Radeon RX 560",
-      "cpu": "Intel Core i5 / AMD Ryzen 5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560, Intel Core i5 / AMD Ryzen 5"
-    },
-    {
       "title": "Below, Rusted Gods",
       "tier": "orange",
       "gpu": "NVIDIA GeForce RTX 3060 12 GB or AMD Radeon RX 6600 XT 8 GB",
@@ -442,12 +434,12 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB or AMD Radeon RX 6600 XT 8 GB, Intel Core i7-9700 or AMD Ryzen 7 3700X"
     },
     {
-      "title": "The Crimson Maid",
+      "title": "FLASH AND DIE",
       "tier": "green",
-      "gpu": "nVidia GTX 1070 / AMD RX 580",
-      "cpu": "Intel Core i7 @ 3Ghz",
+      "gpu": "NVIDIA GeForce GTX 1050 / AMD Radeon RX 560",
+      "cpu": "Intel Core i5 / AMD Ryzen 5",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: nVidia GTX 1070 / AMD RX 580, Intel Core i7 @ 3Ghz"
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560, Intel Core i5 / AMD Ryzen 5"
     },
     {
       "title": "水滸歷險Online：重生",
@@ -456,6 +448,14 @@
       "cpu": "Intel Core i7 / AMD Ryzen 3 (3000 series)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1650 (4GB) or RTX 3050 (6GB/8GB), Intel Core i7 / AMD Ryzen 3 (3000 series)"
+    },
+    {
+      "title": "The Crimson Maid",
+      "tier": "green",
+      "gpu": "nVidia GTX 1070 / AMD RX 580",
+      "cpu": "Intel Core i7 @ 3Ghz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: nVidia GTX 1070 / AMD RX 580, Intel Core i7 @ 3Ghz"
     },
     {
       "title": "Truck-kun is Supporting Me from Another World?!",
@@ -546,20 +546,20 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1050 Ti or higher, Inter Core i5 - 12400F or higher"
     },
     {
-      "title": "挖个蛋 Delvegg",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 650 / AMD equivalent or better",
-      "cpu": "Intel Core i5 or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 650 / AMD equivalent or better, Intel Core i5 or better"
-    },
-    {
       "title": "Fading Echo",
       "tier": "green",
       "gpu": "NVIDIA GeForce RTX 3050 / AMD Equivalent",
       "cpu": "AMD Ryzen 5 5600X / Intel Equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3050 / AMD Equivalent, AMD Ryzen 5 5600X / Intel Equivalent"
+    },
+    {
+      "title": "挖个蛋 Delvegg",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 650 / AMD equivalent or better",
+      "cpu": "Intel Core i5 or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 650 / AMD equivalent or better, Intel Core i5 or better"
     },
     {
       "title": "The Lure",
@@ -634,6 +634,14 @@
       "note": "Doporučená konfigurace: RTX 2070, i5-9600K"
     },
     {
+      "title": "Kusan: City of Wolves",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 970, 4 GB or AMD Radeon RX 590, 8 GB",
+      "cpu": "Intel Core i5-8400 or AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 970, 4 GB or AMD Radeon RX 590, 8 GB, Intel Core i5-8400 or AMD Ryzen 5 2600"
+    },
+    {
       "title": "diffiCULT",
       "tier": "green",
       "gpu": "Nvidia GTX 1060",
@@ -666,12 +674,12 @@
       "note": "Doporučená konfigurace: Radeon RX 560 / GeForce GTX 1050, Intel Core i3-10100 / AMD Ryzen 3 3100"
     },
     {
-      "title": "Kusan: City of Wolves",
+      "title": "Zoominoes",
       "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 970, 4 GB or AMD Radeon RX 590, 8 GB",
-      "cpu": "Intel Core i5-8400 or AMD Ryzen 5 2600",
+      "gpu": "NVIDIA GTX 750 Ti / AMD equivalent or better",
+      "cpu": "Intel Core i5 or AMD equivalent (quad-core)",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 970, 4 GB or AMD Radeon RX 590, 8 GB, Intel Core i5-8400 or AMD Ryzen 5 2600"
+      "note": "Doporučená konfigurace: NVIDIA GTX 750 Ti / AMD equivalent or better, Intel Core i5 or AMD equivalent (quad-core)"
     }
   ]
 }
