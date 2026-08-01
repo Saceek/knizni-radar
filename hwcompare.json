@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-01T12:16:43.836Z",
+  "updatedAt": "2026-08-01T13:16:32.116Z",
   "games": [
     {
       "title": "Palworld",
@@ -18,7 +18,7 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 (12 GB VRAM), AMD RX 6700 XT (12 GB VRAM), Intel Core i5-12500, AMD Ryzen 5 5600"
     },
     {
-      "title": "Granblue Fantasy: Relink - Endless Ragnarok (Standard Edition)",
+      "title": "Granblue Fantasy: Relink",
       "tier": "red",
       "gpu": "NVIDIA® GeForce RTX™ 2080 8GB / AMD Radeon™ RX 6700 XT 8GB",
       "cpu": "Intel® Core™ i7-8700 / AMD Ryzen™ 5 3600",
@@ -322,14 +322,6 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4000 / GeForce GT 630 / Radeon R7 250 or equivalent, Intel Core i3-2100 / AMD FX-4300 or equivalent"
     },
     {
-      "title": "Memory of Memorie : A Chill Story",
-      "tier": "orange",
-      "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700",
-      "cpu": "Intel Core i7-9700 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700, Intel Core i7-9700 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "Abyss Kitchen",
       "tier": "green",
       "gpu": "Intel HD Graphics 4000 or equivalent",
@@ -338,12 +330,12 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4000 or equivalent, Intel Core2 Duo or higher"
     },
     {
-      "title": "Life & Shadow: Celestial Call - Prologue",
-      "tier": "red",
-      "gpu": "NVIDIA RTX 3060 (12 GB) / AMD RX 6700 XT or equivalent — DX11 compatible",
-      "cpu": "AMD Ryzen 5 3600 / Intel Core i5-9600K or better",
+      "title": "Memory of Memorie : A Chill Story",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700",
+      "cpu": "Intel Core i7-9700 / AMD Ryzen 5 3600",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 3060 (12 GB) / AMD RX 6700 XT or equivalent — DX11 compatible, AMD Ryzen 5 3600 / Intel Core i5-9600K or better"
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700, Intel Core i7-9700 / AMD Ryzen 5 3600"
     },
     {
       "title": "水滸歷險Online：重生",
@@ -352,6 +344,14 @@
       "cpu": "Intel Core i7 / AMD Ryzen 3 (3000 series)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1650 (4GB) or RTX 3050 (6GB/8GB), Intel Core i7 / AMD Ryzen 3 (3000 series)"
+    },
+    {
+      "title": "Life & Shadow: Celestial Call - Prologue",
+      "tier": "red",
+      "gpu": "NVIDIA RTX 3060 (12 GB) / AMD RX 6700 XT or equivalent — DX11 compatible",
+      "cpu": "AMD Ryzen 5 3600 / Intel Core i5-9600K or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 3060 (12 GB) / AMD RX 6700 XT or equivalent — DX11 compatible, AMD Ryzen 5 3600 / Intel Core i5-9600K or better"
     },
     {
       "title": "Infinitevania",
@@ -394,20 +394,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060"
     },
     {
-      "title": "Ocean Rush",
-      "tier": "green",
-      "gpu": "intel hd graphics",
-      "cpu": "intel dual core",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: intel hd graphics, intel dual core"
-    },
-    {
       "title": "Truck-kun is Supporting Me from Another World?!",
       "tier": "green",
       "gpu": "Intel HD Graphics 2000",
       "cpu": "@ 2GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 2000, @ 2GHz"
+    },
+    {
+      "title": "Ocean Rush",
+      "tier": "green",
+      "gpu": "intel hd graphics",
+      "cpu": "intel dual core",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: intel hd graphics, intel dual core"
     },
     {
       "title": "Double Driver",
@@ -514,14 +514,6 @@
       "note": "Doporučená konfigurace: RTX 3060 Ti or equivalent"
     },
     {
-      "title": "Dodo Duckie",
-      "tier": "orange",
-      "gpu": "NVIDIA GeForce RTX 2060 (6 GB) / AMD Radeon RX 5600 XT",
-      "cpu": "Intel Core i5-12400F / AMD Ryzen 5 5600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 (6 GB) / AMD Radeon RX 5600 XT, Intel Core i5-12400F / AMD Ryzen 5 5600"
-    },
-    {
       "title": "月之冕",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1660 (6GB), AMD Radeon RX 590",
@@ -530,7 +522,15 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 (6GB), AMD Radeon RX 590, Intel Core i5-8400, AMD Ryzen 5 2600"
     },
     {
-      "title": "Idle Kitty",
+      "title": "Dodo Duckie",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce RTX 2060 (6 GB) / AMD Radeon RX 5600 XT",
+      "cpu": "Intel Core i5-12400F / AMD Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 (6 GB) / AMD Radeon RX 5600 XT, Intel Core i5-12400F / AMD Ryzen 5 5600"
+    },
+    {
+      "title": "挂机猫猫传",
       "tier": "green",
       "gpu": "NVIDIA GeForce GT 710 or higher",
       "cpu": "Intel Core i5 or better",
