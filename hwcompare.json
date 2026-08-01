@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-01T09:15:57.040Z",
+  "updatedAt": "2026-08-01T10:16:04.231Z",
   "games": [
     {
       "title": "Palworld",
@@ -18,7 +18,7 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 (12 GB VRAM), AMD RX 6700 XT (12 GB VRAM), Intel Core i5-12500, AMD Ryzen 5 5600"
     },
     {
-      "title": "Granblue Fantasy: Relink",
+      "title": "Granblue Fantasy: Relink - Endless Ragnarok (Standard Edition)",
       "tier": "red",
       "gpu": "NVIDIA® GeForce RTX™ 2080 8GB / AMD Radeon™ RX 6700 XT 8GB",
       "cpu": "Intel® Core™ i7-8700 / AMD Ryzen™ 5 3600",
@@ -218,6 +218,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3050 / AMD Radeon RX 6600, Intel Core Ultra 7"
     },
     {
+      "title": "Corsair Cove",
+      "tier": "orange",
+      "gpu": "NVIDIA® GeForce® RTX 2070 (8 GB) / AMD® Radeon™ RX 6600 XT (8 GB)",
+      "cpu": "Intel® Core™ i5-9600K (hexa-core) / AMD® Ryzen™ 5 3600 (hexa-core)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA® GeForce® RTX 2070 (8 GB) / AMD® Radeon™ RX 6600 XT (8 GB), Intel® Core™ i5-9600K (hexa-core) / AMD® Ryzen™ 5 3600 (hexa-core)"
+    },
+    {
       "title": "MOLDRISE",
       "tier": "green",
       "gpu": "NVidia GTX 950 or similar",
@@ -232,14 +240,6 @@
       "cpu": "AMD Ryzen 5 5600X / Intel Core i5-12600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: 8 GB VRAM, AMD Radeon RX 6700 / Nvidia GeForce RTX 3060, AMD Ryzen 5 5600X / Intel Core i5-12600"
-    },
-    {
-      "title": "Corsair Cove",
-      "tier": "orange",
-      "gpu": "NVIDIA® GeForce® RTX 2070 (8 GB) / AMD® Radeon™ RX 6600 XT (8 GB)",
-      "cpu": "Intel® Core™ i5-9600K (hexa-core) / AMD® Ryzen™ 5 3600 (hexa-core)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA® GeForce® RTX 2070 (8 GB) / AMD® Radeon™ RX 6600 XT (8 GB), Intel® Core™ i5-9600K (hexa-core) / AMD® Ryzen™ 5 3600 (hexa-core)"
     },
     {
       "title": "Mall Together",
@@ -386,20 +386,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 / Intel Arc A380, Intel Core i5 3470 / AMD FX-6300"
     },
     {
-      "title": "The Alley",
-      "tier": "red",
-      "gpu": "NVIDIA GeForce RTX 3060",
-      "cpu": null,
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060"
-    },
-    {
       "title": "Tormentum II",
       "tier": "green",
       "gpu": "Dedicated GPU or Intel Iris / Intel UHD Graphics",
       "cpu": "Intel Core i5 2.5 GHz or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Dedicated GPU or Intel Iris / Intel UHD Graphics, Intel Core i5 2.5 GHz or equivalent"
+    },
+    {
+      "title": "The Alley",
+      "tier": "red",
+      "gpu": "NVIDIA GeForce RTX 3060",
+      "cpu": null,
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060"
     },
     {
       "title": "Ocean Rush",
@@ -586,6 +586,14 @@
       "note": "Minimální konfigurace: RTX 2060 or lower on low settings"
     },
     {
+      "title": "Dear Magical Girls",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 970 or AMD Radeon RX 570",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 970 or AMD Radeon RX 570, Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
       "title": "Fading Echo",
       "tier": "green",
       "gpu": "NVIDIA GeForce RTX 3050 / AMD Equivalent",
@@ -594,12 +602,12 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3050 / AMD Equivalent, AMD Ryzen 5 5600X / Intel Equivalent"
     },
     {
-      "title": "Dear Magical Girls",
+      "title": "月之冕",
       "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 970 or AMD Radeon RX 570",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "gpu": "NVIDIA GeForce GTX 1660 (6GB), AMD Radeon RX 590",
+      "cpu": "Intel Core i5-8400, AMD Ryzen 5 2600",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 970 or AMD Radeon RX 570, Intel Core i5-8400 / AMD Ryzen 5 2600"
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 (6GB), AMD Radeon RX 590, Intel Core i5-8400, AMD Ryzen 5 2600"
     },
     {
       "title": "4D Intuition",
@@ -616,14 +624,6 @@
       "cpu": "Intel Core i5-4460 / AMD Ryzen 3 1200 or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Intel HD Graphics 630 / AMD Radeon RX 550 / NVIDIA GeForce GTX 750 or better, Intel Core i5-4460 / AMD Ryzen 3 1200 or better"
-    },
-    {
-      "title": "月之冕",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1660 (6GB), AMD Radeon RX 590",
-      "cpu": "Intel Core i5-8400, AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 (6GB), AMD Radeon RX 590, Intel Core i5-8400, AMD Ryzen 5 2600"
     },
     {
       "title": "Letalis",
@@ -696,134 +696,6 @@
       "cpu": "Intel i5-7500",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GTX 1060, Intel i5-7500"
-    },
-    {
-      "title": "Catio Simulator",
-      "tier": "green",
-      "gpu": "Radeon RX 560 / GeForce GTX 1050",
-      "cpu": "Intel Core i3-10100 / AMD Ryzen 3 3100",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Radeon RX 560 / GeForce GTX 1050, Intel Core i3-10100 / AMD Ryzen 3 3100"
-    },
-    {
-      "title": "Warp to Sector One",
-      "tier": "green",
-      "gpu": "Intel Iris Xe",
-      "cpu": null,
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel Iris Xe"
-    },
-    {
-      "title": "Deadly Trick",
-      "tier": "green",
-      "gpu": "GTX 1060 3GB",
-      "cpu": "Intel i5 - 6500",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1060 3GB, Intel i5 - 6500"
-    },
-    {
-      "title": "Cheat Death",
-      "tier": "green",
-      "gpu": "Nvidia® GeForce™ GTX 1650 (4GB) / AMD® Radeon™ R9 390X (8GB)",
-      "cpu": "Intel® Core™ i5-4670K / AMD® Ryzen™ 5 2400G",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia® GeForce™ GTX 1650 (4GB) / AMD® Radeon™ R9 390X (8GB), Intel® Core™ i5-4670K / AMD® Ryzen™ 5 2400G"
-    },
-    {
-      "title": "Minsgon Simulator: Prologue",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1050 / AMD RX 470",
-      "cpu": "i5 3550 / AMD RYZEN 5 2500X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1050 / AMD RX 470, i5 3550 / AMD RYZEN 5 2500X"
-    },
-    {
-      "title": "Sunny Side Up",
-      "tier": "orange",
-      "gpu": "NVIDIA GeForce GTX 3060 or AMD Radeon RX 5700-XT",
-      "cpu": "Intel i5 11600 or Ryzen 5 5600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 3060 or AMD Radeon RX 5700-XT, Intel i5 11600 or Ryzen 5 5600"
-    },
-    {
-      "title": "The Lost Mixtape",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1660",
-      "cpu": "Intel i7-10700",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660, Intel i7-10700"
-    },
-    {
-      "title": "Halu - The Fish",
-      "tier": "orange",
-      "gpu": "RTX 2060 / RTX 3060 / RX 6600 XT",
-      "cpu": "Intel i7-8700K / Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 2060 / RTX 3060 / RX 6600 XT, Intel i7-8700K / Ryzen 5 3600"
-    },
-    {
-      "title": "A Game About Penguins: First Catch",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1660 or AMD RX 580",
-      "cpu": "Intel i5 or AMD Ryzen 5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1660 or AMD RX 580, Intel i5 or AMD Ryzen 5"
-    },
-    {
-      "title": "FixForce",
-      "tier": "red",
-      "gpu": "NVIDIA RTX 3080 10GB, AMD Radeon RX6800XT 16GB",
-      "cpu": "AMD Ryzen 3600 or Intel Core i7 7700k",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 3080 10GB, AMD Radeon RX6800XT 16GB, AMD Ryzen 3600 or Intel Core i7 7700k"
-    },
-    {
-      "title": "Model Kit Shop Simulator",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1660 Ti or AMD Radeon RX 5600 XT (6 GB VRAM)",
-      "cpu": "Intel Core i5-8400 or AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Ti or AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-8400 or AMD Ryzen 5 2600"
-    },
-    {
-      "title": "Deer & Boy",
-      "tier": "green",
-      "gpu": "GeForce GTX 1060 / Radeon RX 470",
-      "cpu": "Ryzen 3 1200 / Core i5-7400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1060 / Radeon RX 470, Ryzen 3 1200 / Core i5-7400"
-    },
-    {
-      "title": "Hollow Knight: Silksong",
-      "tier": "green",
-      "gpu": "GeForce GTX 1050 (2GB), Radeon R9 380 (2GB)",
-      "cpu": "Intel Core i5-3470",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1050 (2GB), Radeon R9 380 (2GB), Intel Core i5-3470"
-    },
-    {
-      "title": "007 First Light",
-      "tier": "red",
-      "gpu": "NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT",
-      "cpu": "INTEL CORE i5 13500, AMD RYZEN 5 7600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT, INTEL CORE i5 13500, AMD RYZEN 5 7600"
-    },
-    {
-      "title": "Call of the Elder Gods",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1650 / AMD Radeon RX 580",
-      "cpu": "Intel Core i5-11600K / AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1650 / AMD Radeon RX 580, Intel Core i5-11600K / AMD Ryzen 5 5600X"
-    },
-    {
-      "title": "REPLACED",
-      "tier": "green",
-      "gpu": "GeForce GTX 1060 (6GB) or equivalent",
-      "cpu": "Intel® Core™ i5-8400 Processor",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
     }
   ]
 }
