@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-01T22:16:49.198Z",
+  "updatedAt": "2026-08-01T23:16:26.436Z",
   "games": [
     {
       "title": "Palworld",
@@ -18,7 +18,7 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 (12 GB VRAM), AMD RX 6700 XT (12 GB VRAM), Intel Core i5-12500, AMD Ryzen 5 5600"
     },
     {
-      "title": "Granblue Fantasy: Relink - Endless Ragnarok (Standard Edition)",
+      "title": "Granblue Fantasy: Relink",
       "tier": "red",
       "gpu": "NVIDIA® GeForce RTX™ 2080 8GB / AMD Radeon™ RX 6700 XT 8GB",
       "cpu": "Intel® Core™ i7-8700 / AMD Ryzen™ 5 3600",
@@ -202,7 +202,7 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 ||| AMD Radeon RX 5600 XT ||| Intel Arc A750"
     },
     {
-      "title": "Carpet Cleaning Simulator",
+      "title": "絨毯を洗うゲーム",
       "tier": "green",
       "gpu": "NVIDIA GTX 1650",
       "cpu": "Intel Core i7-11800H",
@@ -370,12 +370,12 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 / Intel Arc A380, Intel Core i5 3470 / AMD FX-6300"
     },
     {
-      "title": "Truck-kun is Supporting Me from Another World?!",
-      "tier": "green",
-      "gpu": "Intel HD Graphics 2000",
-      "cpu": "@ 2GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 2000, @ 2GHz"
+      "title": "Below, Rusted Gods",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce RTX 3060 12 GB or AMD Radeon RX 6600 XT 8 GB",
+      "cpu": "Intel Core i7-9700 or AMD Ryzen 7 3700X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB or AMD Radeon RX 6600 XT 8 GB, Intel Core i7-9700 or AMD Ryzen 7 3700X"
     },
     {
       "title": "The Alley",
@@ -392,14 +392,6 @@
       "cpu": "Intel Core i5 2.5 GHz or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Dedicated GPU or Intel Iris / Intel UHD Graphics, Intel Core i5 2.5 GHz or equivalent"
-    },
-    {
-      "title": "Below, Rusted Gods",
-      "tier": "orange",
-      "gpu": "NVIDIA GeForce RTX 3060 12 GB or AMD Radeon RX 6600 XT 8 GB",
-      "cpu": "Intel Core i7-9700 or AMD Ryzen 7 3700X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB or AMD Radeon RX 6600 XT 8 GB, Intel Core i7-9700 or AMD Ryzen 7 3700X"
     },
     {
       "title": "Ocean Rush",
@@ -458,20 +450,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560, Intel Core i5 / AMD Ryzen 5"
     },
     {
-      "title": "The Crimson Maid",
-      "tier": "green",
-      "gpu": "nVidia GTX 1070 / AMD RX 580",
-      "cpu": "Intel Core i7 @ 3Ghz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: nVidia GTX 1070 / AMD RX 580, Intel Core i7 @ 3Ghz"
-    },
-    {
       "title": "Zoominoes",
       "tier": "green",
       "gpu": "NVIDIA GTX 750 Ti / AMD equivalent or better",
       "cpu": "Intel Core i5 or AMD equivalent (quad-core)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 750 Ti / AMD equivalent or better, Intel Core i5 or AMD equivalent (quad-core)"
+    },
+    {
+      "title": "The Crimson Maid",
+      "tier": "green",
+      "gpu": "nVidia GTX 1070 / AMD RX 580",
+      "cpu": "Intel Core i7 @ 3Ghz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: nVidia GTX 1070 / AMD RX 580, Intel Core i7 @ 3Ghz"
     },
     {
       "title": "月之冕",
@@ -538,7 +530,7 @@
       "note": "Doporučená konfigurace: GeForce GTX 1060 6GB, AMD Ryzen 5 3600 / Intel Core i7 7700K"
     },
     {
-      "title": "Idle Kitty",
+      "title": "挂机猫猫传",
       "tier": "green",
       "gpu": "NVIDIA GeForce GT 710 or higher",
       "cpu": "Intel Core i5 or better",
@@ -680,6 +672,30 @@
       "cpu": "Intel i5-7500",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GTX 1060, Intel i5-7500"
+    },
+    {
+      "title": "Wiseman: No More Breakups",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 or better",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 or better, Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Catio Simulator",
+      "tier": "green",
+      "gpu": "Radeon RX 560 / GeForce GTX 1050",
+      "cpu": "Intel Core i3-10100 / AMD Ryzen 3 3100",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Radeon RX 560 / GeForce GTX 1050, Intel Core i3-10100 / AMD Ryzen 3 3100"
+    },
+    {
+      "title": "70年代風ロボットアニメ ゲッP-X",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1650",
+      "cpu": "Intel® Core™ i5 @ 3.20 GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650, Intel® Core™ i5 @ 3.20 GHz"
     }
   ]
 }
