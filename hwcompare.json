@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-01T03:16:20.973Z",
+  "updatedAt": "2026-08-01T04:16:02.093Z",
   "games": [
     {
       "title": "Palworld",
@@ -18,7 +18,7 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 (12 GB VRAM), AMD RX 6700 XT (12 GB VRAM), Intel Core i5-12500, AMD Ryzen 5 5600"
     },
     {
-      "title": "Granblue Fantasy: Relink - Endless Ragnarok (Standard Edition)",
+      "title": "Granblue Fantasy: Relink",
       "tier": "red",
       "gpu": "NVIDIA® GeForce RTX™ 2080 8GB / AMD Radeon™ RX 6700 XT 8GB",
       "cpu": "Intel® Core™ i7-8700 / AMD Ryzen™ 5 3600",
@@ -370,6 +370,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 / Intel Arc A380, Intel Core i5 3470 / AMD FX-6300"
     },
     {
+      "title": "水滸歷險Online：重生",
+      "tier": "green",
+      "gpu": "GeForce GTX 1650 (4GB) or RTX 3050 (6GB/8GB)",
+      "cpu": "Intel Core i7 / AMD Ryzen 3 (3000 series)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1650 (4GB) or RTX 3050 (6GB/8GB), Intel Core i7 / AMD Ryzen 3 (3000 series)"
+    },
+    {
       "title": "Ocean Rush",
       "tier": "green",
       "gpu": "intel hd graphics",
@@ -402,14 +410,6 @@
       "note": "Minimální konfigurace: INTEL HD GRAPHICS, Intel DUAL CORE"
     },
     {
-      "title": "水滸歷險Online：重生",
-      "tier": "green",
-      "gpu": "GeForce GTX 1650 (4GB) or RTX 3050 (6GB/8GB)",
-      "cpu": "Intel Core i7 / AMD Ryzen 3 (3000 series)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1650 (4GB) or RTX 3050 (6GB/8GB), Intel Core i7 / AMD Ryzen 3 (3000 series)"
-    },
-    {
       "title": "十米爆爽超变",
       "tier": "green",
       "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
@@ -418,20 +418,20 @@
       "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
     },
     {
-      "title": "D-topia",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1060, 3GB",
-      "cpu": "Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, 3GB, Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz"
-    },
-    {
       "title": "Below, Rusted Gods",
       "tier": "orange",
       "gpu": "NVIDIA GeForce RTX 3060 12 GB or AMD Radeon RX 6600 XT 8 GB",
       "cpu": "Intel Core i7-9700 or AMD Ryzen 7 3700X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB or AMD Radeon RX 6600 XT 8 GB, Intel Core i7-9700 or AMD Ryzen 7 3700X"
+    },
+    {
+      "title": "D-topia",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1060, 3GB",
+      "cpu": "Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, 3GB, Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz"
     },
     {
       "title": "宗门最后的长老",
@@ -498,20 +498,20 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 750 Ti / AMD equivalent or better, Intel Core i5 or AMD equivalent (quad-core)"
     },
     {
-      "title": "Dodo Duckie",
-      "tier": "orange",
-      "gpu": "NVIDIA GeForce RTX 2060 (6 GB) / AMD Radeon RX 5600 XT",
-      "cpu": "Intel Core i5-12400F / AMD Ryzen 5 5600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 (6 GB) / AMD Radeon RX 5600 XT, Intel Core i5-12400F / AMD Ryzen 5 5600"
-    },
-    {
       "title": "Kusan: City of Wolves",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 970, 4 GB or AMD Radeon RX 590, 8 GB",
       "cpu": "Intel Core i5-8400 or AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 970, 4 GB or AMD Radeon RX 590, 8 GB, Intel Core i5-8400 or AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Dodo Duckie",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce RTX 2060 (6 GB) / AMD Radeon RX 5600 XT",
+      "cpu": "Intel Core i5-12400F / AMD Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 (6 GB) / AMD Radeon RX 5600 XT, Intel Core i5-12400F / AMD Ryzen 5 5600"
     },
     {
       "title": "挂机猫猫传",
@@ -562,20 +562,20 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 650 / AMD equivalent or better, Intel Core i5 or better"
     },
     {
-      "title": "Fading Echo",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce RTX 3050 / AMD Equivalent",
-      "cpu": "AMD Ryzen 5 5600X / Intel Equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3050 / AMD Equivalent, AMD Ryzen 5 5600X / Intel Equivalent"
-    },
-    {
       "title": "The Lure",
       "tier": "orange",
       "gpu": "RTX 2060 or lower on low settings",
       "cpu": null,
       "usedMinimum": true,
       "note": "Minimální konfigurace: RTX 2060 or lower on low settings"
+    },
+    {
+      "title": "Fading Echo",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce RTX 3050 / AMD Equivalent",
+      "cpu": "AMD Ryzen 5 5600X / Intel Equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3050 / AMD Equivalent, AMD Ryzen 5 5600X / Intel Equivalent"
     },
     {
       "title": "4D Intuition",
@@ -664,6 +664,14 @@
       "cpu": "Intel i5-7500",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GTX 1060, Intel i5-7500"
+    },
+    {
+      "title": "Dear Magical Girls",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 970 or AMD Radeon RX 570",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 970 or AMD Radeon RX 570, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
       "title": "70年代風ロボットアニメ ゲッP-X",
