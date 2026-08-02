@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-02T16:18:05.789Z",
+  "updatedAt": "2026-08-02T17:18:23.305Z",
   "games": [
     {
       "title": "Palworld",
@@ -18,7 +18,7 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 (12 GB VRAM), AMD RX 6700 XT (12 GB VRAM), Intel Core i5-12500, AMD Ryzen 5 5600"
     },
     {
-      "title": "Granblue Fantasy: Relink",
+      "title": "Granblue Fantasy: Relink - Endless Ragnarok (Standard Edition)",
       "tier": "red",
       "gpu": "NVIDIA® GeForce RTX™ 2080 8GB / AMD Radeon™ RX 6700 XT 8GB",
       "cpu": "Intel® Core™ i7-8700 / AMD Ryzen™ 5 3600",
@@ -130,6 +130,14 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1660 / AMD RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
+      "title": "Corsair Cove",
+      "tier": "orange",
+      "gpu": "NVIDIA® GeForce® RTX 2070 (8 GB) / AMD® Radeon™ RX 6600 XT (8 GB)",
+      "cpu": "Intel® Core™ i5-9600K (hexa-core) / AMD® Ryzen™ 5 3600 (hexa-core)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA® GeForce® RTX 2070 (8 GB) / AMD® Radeon™ RX 6600 XT (8 GB), Intel® Core™ i5-9600K (hexa-core) / AMD® Ryzen™ 5 3600 (hexa-core)"
+    },
+    {
       "title": "DIVE or DIE - Children of Rain",
       "tier": "green",
       "gpu": "GTX 1050 / RX VEGA-56",
@@ -144,14 +152,6 @@
       "cpu": "Quad-core Intel or AMD, 2.5 GHz or faster",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 or AMD Radeon RX 6600 XT, Quad-core Intel or AMD, 2.5 GHz or faster"
-    },
-    {
-      "title": "Corsair Cove",
-      "tier": "orange",
-      "gpu": "NVIDIA® GeForce® RTX 2070 (8 GB) / AMD® Radeon™ RX 6600 XT (8 GB)",
-      "cpu": "Intel® Core™ i5-9600K (hexa-core) / AMD® Ryzen™ 5 3600 (hexa-core)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA® GeForce® RTX 2070 (8 GB) / AMD® Radeon™ RX 6600 XT (8 GB), Intel® Core™ i5-9600K (hexa-core) / AMD® Ryzen™ 5 3600 (hexa-core)"
     },
     {
       "title": "Mesmalie",
@@ -194,7 +194,7 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 ||| AMD Radeon RX 5600 XT ||| Intel Arc A750"
     },
     {
-      "title": "絨毯を洗うゲーム",
+      "title": "Carpet Cleaning Simulator",
       "tier": "green",
       "gpu": "NVIDIA GTX 1650",
       "cpu": "Intel Core i7-11800H",
@@ -354,20 +354,20 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 (12 GB) / AMD RX 6700 XT or equivalent — DX11 compatible, AMD Ryzen 5 3600 / Intel Core i5-9600K or better"
     },
     {
-      "title": "KAZ",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 960 or equivalent",
-      "cpu": "3.5Ghz  processing power",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 960 or equivalent, 3.5Ghz  processing power"
-    },
-    {
       "title": "Bowling Alley Simulator",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 / Intel Arc A380",
       "cpu": "Intel Core i5 3470 / AMD FX-6300",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 / Intel Arc A380, Intel Core i5 3470 / AMD FX-6300"
+    },
+    {
+      "title": "KAZ",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 960 or equivalent",
+      "cpu": "3.5Ghz  processing power",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 960 or equivalent, 3.5Ghz  processing power"
     },
     {
       "title": "Tormentum II",
@@ -386,20 +386,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060"
     },
     {
-      "title": "Ocean Rush",
-      "tier": "green",
-      "gpu": "intel hd graphics",
-      "cpu": "intel dual core",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: intel hd graphics, intel dual core"
-    },
-    {
       "title": "Kusan: City of Wolves",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 970, 4 GB or AMD Radeon RX 590, 8 GB",
       "cpu": "Intel Core i5-8400 or AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 970, 4 GB or AMD Radeon RX 590, 8 GB, Intel Core i5-8400 or AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Ocean Rush",
+      "tier": "green",
+      "gpu": "intel hd graphics",
+      "cpu": "intel dual core",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: intel hd graphics, intel dual core"
     },
     {
       "title": "Double Driver",
@@ -506,20 +506,20 @@
       "note": "Doporučená konfigurace: GEFORCE RTX 2060, 4 core 2,5 GHz+;"
     },
     {
-      "title": "Dodo Duckie",
-      "tier": "orange",
-      "gpu": "NVIDIA GeForce RTX 2060 (6 GB) / AMD Radeon RX 5600 XT",
-      "cpu": "Intel Core i5-12400F / AMD Ryzen 5 5600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 (6 GB) / AMD Radeon RX 5600 XT, Intel Core i5-12400F / AMD Ryzen 5 5600"
-    },
-    {
       "title": "Pot's On!",
       "tier": "green",
       "gpu": "GeForce GTX 1050Ti",
       "cpu": "i5-4690",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce GTX 1050Ti, i5-4690"
+    },
+    {
+      "title": "Dodo Duckie",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce RTX 2060 (6 GB) / AMD Radeon RX 5600 XT",
+      "cpu": "Intel Core i5-12400F / AMD Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 (6 GB) / AMD Radeon RX 5600 XT, Intel Core i5-12400F / AMD Ryzen 5 5600"
     },
     {
       "title": "Farm Factory Simulator",
@@ -538,7 +538,7 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 Ti / AMD Radeon HD 7850, Intel Core i3-4160 / AMD FX-6300"
     },
     {
-      "title": "挂机猫猫传",
+      "title": "Idle Kitty",
       "tier": "green",
       "gpu": "NVIDIA GeForce GT 710 or higher",
       "cpu": "Intel Core i5 or better",
