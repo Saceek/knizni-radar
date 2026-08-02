@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-01T23:16:26.436Z",
+  "updatedAt": "2026-08-02T00:16:56.144Z",
   "games": [
     {
       "title": "Palworld",
@@ -18,7 +18,7 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 (12 GB VRAM), AMD RX 6700 XT (12 GB VRAM), Intel Core i5-12500, AMD Ryzen 5 5600"
     },
     {
-      "title": "Granblue Fantasy: Relink",
+      "title": "Granblue Fantasy: Relink - Endless Ragnarok (Standard Edition)",
       "tier": "red",
       "gpu": "NVIDIA® GeForce RTX™ 2080 8GB / AMD Radeon™ RX 6700 XT 8GB",
       "cpu": "Intel® Core™ i7-8700 / AMD Ryzen™ 5 3600",
@@ -202,7 +202,7 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 ||| AMD Radeon RX 5600 XT ||| Intel Arc A750"
     },
     {
-      "title": "絨毯を洗うゲーム",
+      "title": "Carpet Cleaning Simulator",
       "tier": "green",
       "gpu": "NVIDIA GTX 1650",
       "cpu": "Intel Core i7-11800H",
@@ -378,20 +378,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB or AMD Radeon RX 6600 XT 8 GB, Intel Core i7-9700 or AMD Ryzen 7 3700X"
     },
     {
-      "title": "The Alley",
-      "tier": "red",
-      "gpu": "NVIDIA GeForce RTX 3060",
-      "cpu": null,
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060"
-    },
-    {
       "title": "Tormentum II",
       "tier": "green",
       "gpu": "Dedicated GPU or Intel Iris / Intel UHD Graphics",
       "cpu": "Intel Core i5 2.5 GHz or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Dedicated GPU or Intel Iris / Intel UHD Graphics, Intel Core i5 2.5 GHz or equivalent"
+    },
+    {
+      "title": "The Alley",
+      "tier": "red",
+      "gpu": "NVIDIA GeForce RTX 3060",
+      "cpu": null,
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060"
     },
     {
       "title": "Ocean Rush",
@@ -474,20 +474,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 (6GB), AMD Radeon RX 590, Intel Core i5-8400, AMD Ryzen 5 2600"
     },
     {
-      "title": "Pimbolas",
-      "tier": "green",
-      "gpu": "NVIDIA Geforce GTX 1060 3GB",
-      "cpu": "Ryzen 5 1500X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA Geforce GTX 1060 3GB, Ryzen 5 1500X"
-    },
-    {
       "title": "Dear Magical Girls",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 970 or AMD Radeon RX 570",
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 970 or AMD Radeon RX 570, Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Pimbolas",
+      "tier": "green",
+      "gpu": "NVIDIA Geforce GTX 1060 3GB",
+      "cpu": "Ryzen 5 1500X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA Geforce GTX 1060 3GB, Ryzen 5 1500X"
     },
     {
       "title": "Heave Ho 2",
@@ -530,7 +530,7 @@
       "note": "Doporučená konfigurace: GeForce GTX 1060 6GB, AMD Ryzen 5 3600 / Intel Core i7 7700K"
     },
     {
-      "title": "挂机猫猫传",
+      "title": "Idle Kitty",
       "tier": "green",
       "gpu": "NVIDIA GeForce GT 710 or higher",
       "cpu": "Intel Core i5 or better",
@@ -586,6 +586,14 @@
       "note": "Minimální konfigurace: RTX 2060 or lower on low settings"
     },
     {
+      "title": "Pot's On!",
+      "tier": "green",
+      "gpu": "GeForce GTX 1050Ti",
+      "cpu": "i5-4690",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 1050Ti, i5-4690"
+    },
+    {
       "title": "4D Intuition",
       "tier": "orange",
       "gpu": "NVidia GeForce GTX 1080",
@@ -624,14 +632,6 @@
       "cpu": "Intel Core i7-9700K / AMD Ryzen 7 3700X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 2070 Super / AMD Radeon RX 5700, Intel Core i7-9700K / AMD Ryzen 7 3700X"
-    },
-    {
-      "title": "Pot's On!",
-      "tier": "green",
-      "gpu": "GeForce GTX 1050Ti",
-      "cpu": "i5-4690",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 1050Ti, i5-4690"
     },
     {
       "title": "SSTWL - Sector Breach",
@@ -680,22 +680,6 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 or better, Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
-      "title": "Catio Simulator",
-      "tier": "green",
-      "gpu": "Radeon RX 560 / GeForce GTX 1050",
-      "cpu": "Intel Core i3-10100 / AMD Ryzen 3 3100",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Radeon RX 560 / GeForce GTX 1050, Intel Core i3-10100 / AMD Ryzen 3 3100"
-    },
-    {
-      "title": "70年代風ロボットアニメ ゲッP-X",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1650",
-      "cpu": "Intel® Core™ i5 @ 3.20 GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650, Intel® Core™ i5 @ 3.20 GHz"
     }
   ]
 }
