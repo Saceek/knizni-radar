@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-03T16:18:55.909Z",
+  "updatedAt": "2026-08-03T17:18:56.222Z",
   "games": [
     {
       "title": "Palworld",
@@ -298,14 +298,6 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4000, 2GHz Dual Core"
     },
     {
-      "title": "Tavern Legends",
-      "tier": "red",
-      "gpu": "DirectX 12 compatible GPU, 8GB dedicated VRAM (GeForce RTX 3060 / Radeon RX 6700)",
-      "cpu": "Intel Core i7 @ 4GHz or Ryzen 5 @ 4GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: DirectX 12 compatible GPU, 8GB dedicated VRAM (GeForce RTX 3060 / Radeon RX 6700), Intel Core i7 @ 4GHz or Ryzen 5 @ 4GHz"
-    },
-    {
       "title": "Below, Rusted Gods",
       "tier": "orange",
       "gpu": "NVIDIA GeForce RTX 3060 12 GB or AMD Radeon RX 6600 XT 8 GB",
@@ -314,12 +306,12 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB or AMD Radeon RX 6600 XT 8 GB, Intel Core i7-9700 or AMD Ryzen 7 3700X"
     },
     {
-      "title": "Village in the Shade",
-      "tier": "green",
-      "gpu": "GeForce GTX 1650",
-      "cpu": "Intel Core i5-12500",
+      "title": "Tavern Legends",
+      "tier": "red",
+      "gpu": "DirectX 12 compatible GPU, 8GB dedicated VRAM (GeForce RTX 3060 / Radeon RX 6700)",
+      "cpu": "Intel Core i7 @ 4GHz or Ryzen 5 @ 4GHz",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1650, Intel Core i5-12500"
+      "note": "Doporučená konfigurace: DirectX 12 compatible GPU, 8GB dedicated VRAM (GeForce RTX 3060 / Radeon RX 6700), Intel Core i7 @ 4GHz or Ryzen 5 @ 4GHz"
     },
     {
       "title": "Memory of Memorie : A Chill Story",
@@ -328,6 +320,14 @@
       "cpu": "Intel Core i7-9700 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700, Intel Core i7-9700 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Village in the Shade",
+      "tier": "green",
+      "gpu": "GeForce GTX 1650",
+      "cpu": "Intel Core i5-12500",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1650, Intel Core i5-12500"
     },
     {
       "title": "Abyss Kitchen",
@@ -482,20 +482,20 @@
       "note": "Doporučená konfigurace: GeForce GTX 1080 / Radeon RX Vega 56 / Arc A580, Intel Core i7-6950X / AMD Ryzen 7 2700"
     },
     {
-      "title": "Step Lightly",
-      "tier": "red",
-      "gpu": "RTX 3060 Ti or equivalent",
-      "cpu": null,
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 3060 Ti or equivalent"
-    },
-    {
       "title": "Penguin Lifter",
       "tier": "orange",
       "gpu": "GEFORCE RTX 2060",
       "cpu": "4 core 2,5 GHz+;",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GEFORCE RTX 2060, 4 core 2,5 GHz+;"
+    },
+    {
+      "title": "Step Lightly",
+      "tier": "red",
+      "gpu": "RTX 3060 Ti or equivalent",
+      "cpu": null,
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 3060 Ti or equivalent"
     },
     {
       "title": "Dodo Duckie",
@@ -522,6 +522,14 @@
       "note": "Doporučená konfigurace: GeForce GTX 1060 6GB, AMD Ryzen 5 3600 / Intel Core i7 7700K"
     },
     {
+      "title": "Fading Echo",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce RTX 3050 / AMD Equivalent",
+      "cpu": "AMD Ryzen 5 5600X / Intel Equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3050 / AMD Equivalent, AMD Ryzen 5 5600X / Intel Equivalent"
+    },
+    {
       "title": "玄中记",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 750 Ti / AMD Radeon HD 7850",
@@ -538,14 +546,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GT 710 or higher, Intel Core i5 or better"
     },
     {
-      "title": "Fading Echo",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce RTX 3050 / AMD Equivalent",
-      "cpu": "AMD Ryzen 5 5600X / Intel Equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3050 / AMD Equivalent, AMD Ryzen 5 5600X / Intel Equivalent"
-    },
-    {
       "title": "Quantum Void",
       "tier": "green",
       "gpu": "Nvidia GTX 650",
@@ -554,20 +554,20 @@
       "note": "Doporučená konfigurace: Nvidia GTX 650, Intel Core i5"
     },
     {
-      "title": "The Lure",
-      "tier": "orange",
-      "gpu": "RTX 2060 or lower on low settings",
-      "cpu": null,
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: RTX 2060 or lower on low settings"
-    },
-    {
       "title": "挖个蛋 Delvegg",
       "tier": "green",
       "gpu": "Nvidia GeForce GTX 650 / AMD equivalent or better",
       "cpu": "Intel Core i5 or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 650 / AMD equivalent or better, Intel Core i5 or better"
+    },
+    {
+      "title": "The Lure",
+      "tier": "orange",
+      "gpu": "RTX 2060 or lower on low settings",
+      "cpu": null,
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: RTX 2060 or lower on low settings"
     },
     {
       "title": "黎明探险队 / CTD",
