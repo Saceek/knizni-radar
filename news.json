@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-05T21:23:50.088Z",
+  "updatedAt": "2026-08-05T22:21:00.925Z",
   "items": [
     {
       "type": "book",
@@ -393,6 +393,43 @@
       "released": "2026-08-05T00:00:00.000Z",
       "gamePass": false,
       "demoAppid": null,
+      "firstSeen": "2026-08-05",
+      "daysLeft": 3
+    },
+    {
+      "type": "movie",
+      "title": "6 gramů",
+      "year": "2026",
+      "rating": 70,
+      "poster": "https://image.pmgstatic.com/cache/resized/w936/files/images/film/photos/171/204/171204436_xb58e7.jpg",
+      "url": "https://www.csfd.cz/film/1833387-6-gramu/prehled/",
+      "genres": [
+        "Komedie"
+      ],
+      "country": "Česko",
+      "vod": [
+        "Kino"
+      ],
+      "csfdType": "film",
+      "firstSeen": "2026-08-05",
+      "daysLeft": 3
+    },
+    {
+      "type": "series",
+      "title": "Ted Lasso",
+      "year": "2020",
+      "rating": 87,
+      "poster": "https://image.pmgstatic.com/cache/resized/w936/files/images/film/photos/164/527/164527170_22451f.jpg",
+      "url": "https://www.csfd.cz/film/867768-ted-lasso/prehled/",
+      "genres": [
+        "Komedie",
+        "Drama"
+      ],
+      "country": "USA",
+      "vod": [
+        "Apple TV+"
+      ],
+      "csfdType": "seriál",
       "firstSeen": "2026-08-05",
       "daysLeft": 3
     },
@@ -1208,8 +1245,8 @@
   "counts": {
     "books": 19,
     "comics": 4,
-    "movies": 6,
-    "series": 3,
+    "movies": 7,
+    "series": 4,
     "games": 32
   }
 }
