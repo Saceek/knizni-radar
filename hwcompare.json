@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-05T04:19:10.098Z",
+  "updatedAt": "2026-08-05T05:18:33.283Z",
   "games": [
     {
       "title": "Palworld",
@@ -18,7 +18,7 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 (12 GB VRAM), AMD RX 6700 XT (12 GB VRAM), Intel Core i5-12500, AMD Ryzen 5 5600"
     },
     {
-      "title": "Granblue Fantasy: Relink - Endless Ragnarok (Standard Edition)",
+      "title": "Granblue Fantasy: Relink",
       "tier": "red",
       "gpu": "NVIDIA® GeForce RTX™ 2080 8GB / AMD Radeon™ RX 6700 XT 8GB",
       "cpu": "Intel® Core™ i7-8700 / AMD Ryzen™ 5 3600",
@@ -82,6 +82,14 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 750 Ti / AMD Radeon RX 550 / Intel UHD 630 or higher, Intel Core i3-8100 / AMD Ryzen 3 2200G or higher"
     },
     {
+      "title": "Big Walk",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1070, 8 GB or Radeon RX 5600 XT, 8 GB or Intel Arc A750, 8GB",
+      "cpu": "Intel Core i5-10600K or Ryzen 7 3700X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1070, 8 GB or Radeon RX 5600 XT, 8 GB or Intel Arc A750, 8GB, Intel Core i5-10600K or Ryzen 7 3700X"
+    },
+    {
       "title": "Bookshop Simulator",
       "tier": "green",
       "gpu": "GTX 1070 / Vega 56",
@@ -96,14 +104,6 @@
       "cpu": "Intel® Core™ i5-9600K (hexa-core) / AMD® Ryzen™ 5 3600 (hexa-core)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA® GeForce® RTX 2070 (8 GB) / AMD® Radeon™ RX 6600 XT (8 GB), Intel® Core™ i5-9600K (hexa-core) / AMD® Ryzen™ 5 3600 (hexa-core)"
-    },
-    {
-      "title": "Big Walk",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1070, 8 GB or Radeon RX 5600 XT, 8 GB or Intel Arc A750, 8GB",
-      "cpu": "Intel Core i5-10600K or Ryzen 7 3700X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1070, 8 GB or Radeon RX 5600 XT, 8 GB or Intel Arc A750, 8GB, Intel Core i5-10600K or Ryzen 7 3700X"
     },
     {
       "title": "Ore Factory Squad ⛏️",
@@ -186,7 +186,7 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 ||| AMD Radeon RX 5600 XT ||| Intel Arc A750"
     },
     {
-      "title": "Carpet Cleaning Simulator",
+      "title": "絨毯を洗うゲーム",
       "tier": "green",
       "gpu": "NVIDIA GTX 1650",
       "cpu": "Intel Core i7-11800H",
@@ -338,20 +338,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 970, 4 GB or AMD Radeon RX 590, 8 GB, Intel Core i5-8400 or AMD Ryzen 5 2600"
     },
     {
-      "title": "Abyss Kitchen",
-      "tier": "green",
-      "gpu": "Intel HD Graphics 4000 or equivalent",
-      "cpu": "Intel Core2 Duo or higher",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 4000 or equivalent, Intel Core2 Duo or higher"
-    },
-    {
       "title": "Memory of Memorie : A Chill Story",
       "tier": "orange",
       "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700",
       "cpu": "Intel Core i7-9700 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700, Intel Core i7-9700 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Abyss Kitchen",
+      "tier": "green",
+      "gpu": "Intel HD Graphics 4000 or equivalent",
+      "cpu": "Intel Core2 Duo or higher",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics 4000 or equivalent, Intel Core2 Duo or higher"
     },
     {
       "title": "Tavern Legends",
@@ -570,7 +570,7 @@
       "note": "Minimální konfigurace: RTX 2060 or lower on low settings"
     },
     {
-      "title": "Idle Kitty",
+      "title": "挂机猫猫传",
       "tier": "green",
       "gpu": "NVIDIA GeForce GT 710 or higher",
       "cpu": "Intel Core i5 or better",
@@ -602,7 +602,7 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050, Intel Core i5-6600K"
     },
     {
-      "title": "Chasing the Dawn / CTD",
+      "title": "黎明探险队 / CTD",
       "tier": "green",
       "gpu": "Nvidia GeForce GTX 1050 Ti or higher",
       "cpu": "Inter Core i5 - 12400F or higher",
@@ -659,6 +659,110 @@
     },
     {
       "title": "南派盗墓传奇",
+      "tier": "green",
+      "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
+      "cpu": "Intel Core i3",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
+    },
+    {
+      "title": "diffiCULT",
+      "tier": "green",
+      "gpu": "Nvidia GTX 1060",
+      "cpu": "Intel i5-7500",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GTX 1060, Intel i5-7500"
+    },
+    {
+      "title": "Catio Simulator",
+      "tier": "green",
+      "gpu": "Radeon RX 560 / GeForce GTX 1050",
+      "cpu": "Intel Core i3-10100 / AMD Ryzen 3 3100",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Radeon RX 560 / GeForce GTX 1050, Intel Core i3-10100 / AMD Ryzen 3 3100"
+    },
+    {
+      "title": "战法道传奇",
+      "tier": "green",
+      "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
+      "cpu": "Intel Core i3",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
+    },
+    {
+      "title": "Welcome to the Sharehouse! ~ domestic life with three cute girls~",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GT 730",
+      "cpu": null,
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GT 730"
+    },
+    {
+      "title": "Joy Malignant",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1650",
+      "cpu": "Intel Core i7 @ 2.60GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650, Intel Core i7 @ 2.60GHz"
+    },
+    {
+      "title": "70年代風ロボットアニメ ゲッP-X",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1650",
+      "cpu": "Intel® Core™ i5 @ 3.20 GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650, Intel® Core™ i5 @ 3.20 GHz"
+    },
+    {
+      "title": "Wiseman: No More Breakups",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 or better",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 or better, Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "GET OUT! – A Very Bad Dreams Story",
+      "tier": "red",
+      "gpu": "RTX 2080 / AMD Radeon RX 6700",
+      "cpu": "i7 / Ryzen 7",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 2080 / AMD Radeon RX 6700, i7 / Ryzen 7"
+    },
+    {
+      "title": "Gospodar's Tales",
+      "tier": "green",
+      "gpu": "AMD Radeon RX 5700 ／ NVIDIA GeForce GTX 1070",
+      "cpu": "AMD Ryzen 5 3600 ／ Intel Core i7 8700",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: AMD Radeon RX 5700 ／ NVIDIA GeForce GTX 1070, AMD Ryzen 5 3600 ／ Intel Core i7 8700"
+    },
+    {
+      "title": "Model Kit Shop Simulator",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1660 Ti or AMD Radeon RX 5600 XT (6 GB VRAM)",
+      "cpu": "Intel Core i5-8400 or AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Ti or AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-8400 or AMD Ryzen 5 2600"
+    },
+    {
+      "title": "深渊兽潮",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1060 or higher",
+      "cpu": "Intel Core i5-9400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1060 or higher, Intel Core i5-9400"
+    },
+    {
+      "title": "Warp to Sector One",
+      "tier": "green",
+      "gpu": "Intel Iris Xe",
+      "cpu": null,
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel Iris Xe"
+    },
+    {
+      "title": "猎国沉默专属",
       "tier": "green",
       "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
       "cpu": "Intel Core i3",
