@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-05T09:24:17.361Z",
+  "updatedAt": "2026-08-05T10:20:40.571Z",
   "items": [
     {
       "type": "book",
@@ -150,6 +150,47 @@
       "cat": [
         "Kosmas"
       ],
+      "firstSeen": "2026-08-05",
+      "daysLeft": 3
+    },
+    {
+      "type": "movie",
+      "title": "Smrtelné zlo: V plamenech",
+      "year": "2026",
+      "rating": 70,
+      "poster": "https://image.pmgstatic.com/cache/resized/w936/files/images/film/photos/171/298/171298348_7qtjfg.jpg",
+      "url": "https://www.csfd.cz/film/1485991-smrtelne-zlo-v-plamenech/prehled/",
+      "genres": [
+        "Horor",
+        "Thriller"
+      ],
+      "country": "USA / Kanada",
+      "vod": [
+        "Kino"
+      ],
+      "csfdType": "film",
+      "firstSeen": "2026-08-05",
+      "daysLeft": 3
+    },
+    {
+      "type": "game",
+      "title": "Jelly Bubble",
+      "appid": 3659090,
+      "rating": 100,
+      "reviews": 50,
+      "scoreDesc": "Very Positive",
+      "price": "7,17€",
+      "image": "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/3659090/12ba6d4f3bfa7ef680359d17b84ba0976401fad7/header.jpg?t=1785894953",
+      "url": "https://store.steampowered.com/app/3659090/",
+      "tags": [
+        "Akční",
+        "Nenáročné",
+        "Nezávislé",
+        "RPG"
+      ],
+      "released": "2026-08-04T00:00:00.000Z",
+      "gamePass": false,
+      "demoAppid": null,
       "firstSeen": "2026-08-05",
       "daysLeft": 3
     },
@@ -965,8 +1006,8 @@
   "counts": {
     "books": 19,
     "comics": 4,
-    "movies": 4,
+    "movies": 5,
     "series": 1,
-    "games": 24
+    "games": 25
   }
 }
