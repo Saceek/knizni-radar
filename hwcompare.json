@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-07T10:19:25.602Z",
+  "updatedAt": "2026-08-07T11:18:59.571Z",
   "games": [
     {
       "title": "Scrap Mechanic",
@@ -162,7 +162,7 @@
       "note": "Minimální konfigurace: GTX 750ti, 2-core / 4-thread CPU"
     },
     {
-      "title": "Backpack Dungeon",
+      "title": "背包地牢: Backpack Dungeon",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 750 Ti or equivalent",
       "cpu": "Intel i5 Quad-Core",
@@ -178,7 +178,7 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 ||| AMD Radeon RX 5600 XT ||| Intel Arc A750"
     },
     {
-      "title": "Carpet Cleaning Simulator",
+      "title": "絨毯を洗うゲーム",
       "tier": "green",
       "gpu": "NVIDIA GTX 1650",
       "cpu": "Intel Core i7-11800H",
@@ -218,7 +218,7 @@
       "note": "Doporučená konfigurace: Nvidia RTX 2070, Intel Core i7-6700"
     },
     {
-      "title": "Requiem of Reuinis",
+      "title": "列乌尼斯的挽歌 Requiem of Reuinis",
       "tier": "green",
       "gpu": "NVIDIA GeForce RTX 3050 / AMD Radeon RX 6600",
       "cpu": "Intel Core Ultra 7",
@@ -322,20 +322,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 / AMD Radeon RX 580, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
-      "title": "Kusan: City of Wolves",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 970, 4 GB or AMD Radeon RX 590, 8 GB",
-      "cpu": "Intel Core i5-8400 or AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 970, 4 GB or AMD Radeon RX 590, 8 GB, Intel Core i5-8400 or AMD Ryzen 5 2600"
-    },
-    {
       "title": "Approximately Up",
       "tier": "red",
       "gpu": "GeForce RTX 3060 or Radeon RX 6700",
       "cpu": "3.5GHz 6-Core or similar",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 3060 or Radeon RX 6700, 3.5GHz 6-Core or similar"
+    },
+    {
+      "title": "Kusan: City of Wolves",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 970, 4 GB or AMD Radeon RX 590, 8 GB",
+      "cpu": "Intel Core i5-8400 or AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 970, 4 GB or AMD Radeon RX 590, 8 GB, Intel Core i5-8400 or AMD Ryzen 5 2600"
     },
     {
       "title": "Zoominoes",
@@ -354,6 +354,14 @@
       "note": "Doporučená konfigurace: GeForce GTX 650 or Radeon HD 5770, Intel Core i5-3470 or AMD Ryzen 3 1200"
     },
     {
+      "title": "Sovereign Tower",
+      "tier": "green",
+      "gpu": "GTX 1060, 6GB VRAM",
+      "cpu": "Intel Core i5-9600K",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1060, 6GB VRAM, Intel Core i5-9600K"
+    },
+    {
       "title": "Abyss Kitchen",
       "tier": "green",
       "gpu": "Intel HD Graphics 4000 or equivalent",
@@ -368,14 +376,6 @@
       "cpu": "Intel Core i7-9700 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700, Intel Core i7-9700 / AMD Ryzen 5 3600"
-    },
-    {
-      "title": "Sovereign Tower",
-      "tier": "green",
-      "gpu": "GTX 1060, 6GB VRAM",
-      "cpu": "Intel Core i5-9600K",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1060, 6GB VRAM, Intel Core i5-9600K"
     },
     {
       "title": "Chest Buster",
@@ -610,14 +610,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 Ti / AMD Radeon HD 7850, Intel Core i3-4160 / AMD FX-6300"
     },
     {
-      "title": "Idle Kitty",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GT 710 or higher",
-      "cpu": "Intel Core i5 or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GT 710 or higher, Intel Core i5 or better"
-    },
-    {
       "title": "ON&OFF",
       "tier": "green",
       "gpu": "GeForce GTX 1060",
@@ -634,12 +626,28 @@
       "note": "Doporučená konfigurace: AMD Radeon RX 5700 ／ NVIDIA GeForce GTX 1070, AMD Ryzen 5 3600 ／ Intel Core i7 8700"
     },
     {
+      "title": "Idle Kitty",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GT 710 or higher",
+      "cpu": "Intel Core i5 or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GT 710 or higher, Intel Core i5 or better"
+    },
+    {
       "title": "Elektronická dřevěná ryba",
       "tier": "green",
       "gpu": "Intel HD Graphics 4400",
       "cpu": "i5",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 4400, i5"
+    },
+    {
+      "title": "The Skin Stapler",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 1070 or higher",
+      "cpu": "Intel(R) Core(TM) i5-9600K CPU @ 3.70GHz or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 or higher, Intel(R) Core(TM) i5-9600K CPU @ 3.70GHz or equivalent"
     },
     {
       "title": "Aerolicious",
@@ -658,7 +666,7 @@
       "note": "Doporučená konfigurace: Intel HD Graphics 630 / AMD Radeon RX 550 / NVIDIA GeForce GTX 750 or better, Intel Core i5-4460 / AMD Ryzen 3 1200 or better"
     },
     {
-      "title": "Chasing the Dawn / CTD",
+      "title": "黎明探险队 / CTD",
       "tier": "green",
       "gpu": "Nvidia GeForce GTX 1050 Ti or higher",
       "cpu": "Inter Core i5 - 12400F or higher",
@@ -698,14 +706,6 @@
       "note": "Doporučená konfigurace: NVidia GeForce GTX 1080"
     },
     {
-      "title": "The Skin Stapler",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1070 or higher",
-      "cpu": "Intel(R) Core(TM) i5-9600K CPU @ 3.70GHz or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 or higher, Intel(R) Core(TM) i5-9600K CPU @ 3.70GHz or equivalent"
-    },
-    {
       "title": "猎国沉默专属",
       "tier": "green",
       "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
@@ -728,14 +728,6 @@
       "cpu": "Intel Core i7 @ 2.60GHz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650, Intel Core i7 @ 2.60GHz"
-    },
-    {
-      "title": "Get Out ! A \"Very Bad Dreams\" Story",
-      "tier": "red",
-      "gpu": "RTX 2080 / AMD Radeon RX 6700",
-      "cpu": "i7 / Ryzen 7",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 2080 / AMD Radeon RX 6700, i7 / Ryzen 7"
     }
   ]
 }
