@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-07T01:19:27.381Z",
+  "updatedAt": "2026-08-07T02:20:24.018Z",
   "games": [
     {
       "title": "Scrap Mechanic",
@@ -194,6 +194,14 @@
       "note": "Minimální konfigurace: Intel HD 620 / UHD 600 series, or NVIDIA GeForce GT 730 / AMD R7 240, Intel Core i3-2100 / AMD FX-4350 or equivalent"
     },
     {
+      "title": "ReStory: Chill Electronics Repairs",
+      "tier": "green",
+      "gpu": "GTX 750ti",
+      "cpu": "2-core / 4-thread CPU",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GTX 750ti, 2-core / 4-thread CPU"
+    },
+    {
       "title": "MOLDRISE",
       "tier": "green",
       "gpu": "NVidia GTX 950 or similar",
@@ -210,7 +218,7 @@
       "note": "Doporučená konfigurace: Nvidia RTX 2070, Intel Core i7-6700"
     },
     {
-      "title": "列乌尼斯的挽歌 Requiem of Reuinis",
+      "title": "Requiem of Reuinis",
       "tier": "green",
       "gpu": "NVIDIA GeForce RTX 3050 / AMD Radeon RX 6600",
       "cpu": "Intel Core Ultra 7",
@@ -240,14 +248,6 @@
       "cpu": "AMD Ryzen 5 5600X / Intel Core i5-12600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: 8 GB VRAM, AMD Radeon RX 6700 / Nvidia GeForce RTX 3060, AMD Ryzen 5 5600X / Intel Core i5-12600"
-    },
-    {
-      "title": "ReStory: Chill Electronics Repairs",
-      "tier": "green",
-      "gpu": "GTX 750ti",
-      "cpu": "2-core / 4-thread CPU",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GTX 750ti, 2-core / 4-thread CPU"
     },
     {
       "title": "Birds of War",
@@ -394,6 +394,14 @@
       "note": "Doporučená konfigurace: DirectX 12 compatible GPU, 8GB dedicated VRAM (GeForce RTX 3060 / Radeon RX 6700), Intel Core i7 @ 4GHz or Ryzen 5 @ 4GHz"
     },
     {
+      "title": "Approximately Up",
+      "tier": "red",
+      "gpu": "GeForce RTX 3060 or Radeon RX 6700",
+      "cpu": "3.5GHz 6-Core or similar",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3060 or Radeon RX 6700, 3.5GHz 6-Core or similar"
+    },
+    {
       "title": "KAZ",
       "tier": "green",
       "gpu": "NVIDIA GTX 960 or equivalent",
@@ -434,12 +442,12 @@
       "note": "Doporučená konfigurace: GTX 1060 or above, Mid-Range Quadcore Processer"
     },
     {
-      "title": "Approximately Up",
-      "tier": "red",
-      "gpu": "GeForce RTX 3060 or Radeon RX 6700",
-      "cpu": "3.5GHz 6-Core or similar",
+      "title": "Lost & Found: A This Bed We Made Story",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1660",
+      "cpu": "Ryzen 5 3600",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 or Radeon RX 6700, 3.5GHz 6-Core or similar"
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660, Ryzen 5 3600"
     },
     {
       "title": "D-topia",
@@ -456,22 +464,6 @@
       "cpu": "intel dual core",
       "usedMinimum": true,
       "note": "Minimální konfigurace: intel hd graphics, intel dual core"
-    },
-    {
-      "title": "Lost & Found: A This Bed We Made Story",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1660",
-      "cpu": "Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660, Ryzen 5 3600"
-    },
-    {
-      "title": "Akatori",
-      "tier": "green",
-      "gpu": "GeForce GTX 1050 (2GB) or Radeon R9 380 (2GB)",
-      "cpu": "Intel Core i5-3470",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1050 (2GB) or Radeon R9 380 (2GB), Intel Core i5-3470"
     },
     {
       "title": "宗门最后的长老",
@@ -496,6 +488,14 @@
       "cpu": "Intel Core i5 / AMD Ryzen 5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560, Intel Core i5 / AMD Ryzen 5"
+    },
+    {
+      "title": "Sovereign Tower",
+      "tier": "green",
+      "gpu": "GTX 1060, 6GB VRAM",
+      "cpu": "Intel Core i5-9600K",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1060, 6GB VRAM, Intel Core i5-9600K"
     },
     {
       "title": "Penguin Lifter",
@@ -530,12 +530,12 @@
       "note": "Doporučená konfigurace: GeForce GTX 1080 / Radeon RX Vega 56 / Arc A580, Intel Core i7-6950X / AMD Ryzen 7 2700"
     },
     {
-      "title": "Sovereign Tower",
+      "title": "Is the Vat Utopia or Dystopia? 这里没有地雷妹！",
       "tier": "green",
-      "gpu": "GTX 1060, 6GB VRAM",
-      "cpu": "Intel Core i5-9600K",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1060, 6GB VRAM, Intel Core i5-9600K"
+      "gpu": "Intel HD Graphics 2000",
+      "cpu": "1 GHz 双核（如 Intel Core 2 Duo 或同级）",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics 2000, 1 GHz 双核（如 Intel Core 2 Duo 或同级）"
     },
     {
       "title": "Deadly Trick",
@@ -544,14 +544,6 @@
       "cpu": "Intel i5 - 6500",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 1060 3GB, Intel i5 - 6500"
-    },
-    {
-      "title": "Is the Vat Utopia or Dystopia? 这里没有地雷妹！",
-      "tier": "green",
-      "gpu": "Intel HD Graphics 2000",
-      "cpu": "1 GHz 双核（如 Intel Core 2 Duo 或同级）",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 2000, 1 GHz 双核（如 Intel Core 2 Duo 或同级）"
     },
     {
       "title": "Dodo Duckie",
@@ -594,6 +586,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 / AMD Radeon RX 580 or equivalent (4 GB VRAM), Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent"
     },
     {
+      "title": "The Lure",
+      "tier": "orange",
+      "gpu": "RTX 2060 or lower on low settings",
+      "cpu": null,
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: RTX 2060 or lower on low settings"
+    },
+    {
       "title": "SSTWL - Sector Breach",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1050",
@@ -616,14 +616,6 @@
       "cpu": "Intel Core i3-4160 / AMD FX-6300",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 Ti / AMD Radeon HD 7850, Intel Core i3-4160 / AMD FX-6300"
-    },
-    {
-      "title": "The Lure",
-      "tier": "orange",
-      "gpu": "RTX 2060 or lower on low settings",
-      "cpu": null,
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: RTX 2060 or lower on low settings"
     },
     {
       "title": "Quantum Void",
@@ -674,20 +666,20 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1050 Ti or higher, Inter Core i5 - 12400F or higher"
     },
     {
-      "title": "Aerolicious",
-      "tier": "orange",
-      "gpu": "NVIDIA RTX 2070 Super / AMD Radeon RX 5700",
-      "cpu": "Intel Core i7-9700K / AMD Ryzen 7 3700X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 2070 Super / AMD Radeon RX 5700, Intel Core i7-9700K / AMD Ryzen 7 3700X"
-    },
-    {
       "title": "LIFTED",
       "tier": "orange",
       "gpu": "RTX 2070",
       "cpu": "i5-9600K",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 2070, i5-9600K"
+    },
+    {
+      "title": "Aerolicious",
+      "tier": "orange",
+      "gpu": "NVIDIA RTX 2070 Super / AMD Radeon RX 5700",
+      "cpu": "Intel Core i7-9700K / AMD Ryzen 7 3700X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 2070 Super / AMD Radeon RX 5700, Intel Core i7-9700K / AMD Ryzen 7 3700X"
     },
     {
       "title": "Welcome to the Sharehouse! ~ domestic life with three cute girls~",
@@ -728,30 +720,6 @@
       "cpu": "Intel Core i3",
       "usedMinimum": true,
       "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
-    },
-    {
-      "title": "南派盗墓传奇",
-      "tier": "green",
-      "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
-      "cpu": "Intel Core i3",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
-    },
-    {
-      "title": "深渊兽潮",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1060 or higher",
-      "cpu": "Intel Core i5-9400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1060 or higher, Intel Core i5-9400"
-    },
-    {
-      "title": "Get Out ! A \"Very Bad Dreams\" Story",
-      "tier": "red",
-      "gpu": "RTX 2080 / AMD Radeon RX 6700",
-      "cpu": "i7 / Ryzen 7",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 2080 / AMD Radeon RX 6700, i7 / Ryzen 7"
     }
   ]
 }
