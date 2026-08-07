@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-07T17:19:47.489Z",
+  "updatedAt": "2026-08-07T18:19:51.930Z",
   "games": [
     {
       "title": "Scrap Mechanic",
@@ -258,6 +258,14 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 750ti or equivalent, Intel i7"
     },
     {
+      "title": "Sovereign Tower",
+      "tier": "green",
+      "gpu": "GTX 1060, 6GB VRAM",
+      "cpu": "Intel Core i5-9600K",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1060, 6GB VRAM, Intel Core i5-9600K"
+    },
+    {
       "title": "Pih 2",
       "tier": "green",
       "gpu": "Intel® Iris® Xe Graphics",
@@ -272,14 +280,6 @@
       "cpu": "I5 or better / Ryzen 5 or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GTX 1070 or better / AMD RX480 or better, I5 or better / Ryzen 5 or better"
-    },
-    {
-      "title": "Sovereign Tower",
-      "tier": "green",
-      "gpu": "GTX 1060, 6GB VRAM",
-      "cpu": "Intel Core i5-9600K",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1060, 6GB VRAM, Intel Core i5-9600K"
     },
     {
       "title": "Vespera",
@@ -418,14 +418,6 @@
       "note": "Minimální konfigurace: GeForce GTX 1050Ti, i5-4690"
     },
     {
-      "title": "KAZ",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 960 or equivalent",
-      "cpu": "3.5Ghz  processing power",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 960 or equivalent, 3.5Ghz  processing power"
-    },
-    {
       "title": "Lost & Found: A This Bed We Made Story",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1660",
@@ -434,20 +426,28 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660, Ryzen 5 3600"
     },
     {
-      "title": "Tormentum II",
-      "tier": "green",
-      "gpu": "Dedicated GPU or Intel Iris / Intel UHD Graphics",
-      "cpu": "Intel Core i5 2.5 GHz or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Dedicated GPU or Intel Iris / Intel UHD Graphics, Intel Core i5 2.5 GHz or equivalent"
-    },
-    {
       "title": "The Alley",
       "tier": "red",
       "gpu": "NVIDIA GeForce RTX 3060",
       "cpu": null,
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060"
+    },
+    {
+      "title": "KAZ",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 960 or equivalent",
+      "cpu": "3.5Ghz  processing power",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 960 or equivalent, 3.5Ghz  processing power"
+    },
+    {
+      "title": "Tormentum II",
+      "tier": "green",
+      "gpu": "Dedicated GPU or Intel Iris / Intel UHD Graphics",
+      "cpu": "Intel Core i5 2.5 GHz or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Dedicated GPU or Intel Iris / Intel UHD Graphics, Intel Core i5 2.5 GHz or equivalent"
     },
     {
       "title": "Is the Vat Utopia or Dystopia? 这里没有地雷妹！",
@@ -546,20 +546,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 (6 GB) / AMD Radeon RX 5600 XT, Intel Core i5-12400F / AMD Ryzen 5 5600"
     },
     {
-      "title": "Farm Factory Simulator",
-      "tier": "green",
-      "gpu": "GeForce GTX 1060 6GB",
-      "cpu": "AMD Ryzen 5 3600 / Intel Core i7 7700K",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1060 6GB, AMD Ryzen 5 3600 / Intel Core i7 7700K"
-    },
-    {
       "title": "Dverghold",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1060 / AMD Radeon RX 580 or equivalent (4 GB VRAM)",
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 / AMD Radeon RX 580 or equivalent (4 GB VRAM), Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent"
+    },
+    {
+      "title": "Farm Factory Simulator",
+      "tier": "green",
+      "gpu": "GeForce GTX 1060 6GB",
+      "cpu": "AMD Ryzen 5 3600 / Intel Core i7 7700K",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1060 6GB, AMD Ryzen 5 3600 / Intel Core i7 7700K"
     },
     {
       "title": "Fading Echo",
@@ -674,6 +674,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GT 730"
     },
     {
+      "title": "我不是魔王",
+      "tier": "green",
+      "gpu": "GeForce GTX 1050 (2048 VRAM); Radeon R9 380 (2048 VRAM)",
+      "cpu": "Intel Core i5-3470",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1050 (2048 VRAM); Radeon R9 380 (2048 VRAM), Intel Core i5-3470"
+    },
+    {
       "title": "Letalis",
       "tier": "green",
       "gpu": "GeForce GTX 650 or Radeon HD 5770",
@@ -690,14 +698,6 @@
       "note": "Doporučená konfigurace: NVidia GeForce GTX 1080"
     },
     {
-      "title": "我不是魔王",
-      "tier": "green",
-      "gpu": "GeForce GTX 1050 (2048 VRAM); Radeon R9 380 (2048 VRAM)",
-      "cpu": "Intel Core i5-3470",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1050 (2048 VRAM); Radeon R9 380 (2048 VRAM), Intel Core i5-3470"
-    },
-    {
       "title": "猎国沉默专属",
       "tier": "green",
       "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
@@ -706,20 +706,20 @@
       "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
     },
     {
+      "title": "深渊兽潮",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1060 or higher",
+      "cpu": "Intel Core i5-9400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1060 or higher, Intel Core i5-9400"
+    },
+    {
       "title": "Joy Malignant",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1650",
       "cpu": "Intel Core i7 @ 2.60GHz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650, Intel Core i7 @ 2.60GHz"
-    },
-    {
-      "title": "Get Out ! A \"Very Bad Dreams\" Story",
-      "tier": "red",
-      "gpu": "RTX 2080 / AMD Radeon RX 6700",
-      "cpu": "i7 / Ryzen 7",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 2080 / AMD Radeon RX 6700, i7 / Ryzen 7"
     }
   ]
 }
