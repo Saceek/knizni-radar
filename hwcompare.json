@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-07T08:19:32.602Z",
+  "updatedAt": "2026-08-07T09:19:41.959Z",
   "games": [
     {
       "title": "Scrap Mechanic",
@@ -42,20 +42,20 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4000 (GT2), Intel Core i5-3210"
     },
     {
-      "title": "Corsair Cove",
-      "tier": "orange",
-      "gpu": "NVIDIA® GeForce® RTX 2070 (8 GB) / AMD® Radeon™ RX 6600 XT (8 GB)",
-      "cpu": "Intel® Core™ i5-9600K (hexa-core) / AMD® Ryzen™ 5 3600 (hexa-core)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA® GeForce® RTX 2070 (8 GB) / AMD® Radeon™ RX 6600 XT (8 GB), Intel® Core™ i5-9600K (hexa-core) / AMD® Ryzen™ 5 3600 (hexa-core)"
-    },
-    {
       "title": "IRON NEST: Heavy Turret Simulator",
       "tier": "green",
       "gpu": "NVIDIA GTX 1060 6GB / AMD RX 580 8GB",
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 6GB / AMD RX 580 8GB, Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Corsair Cove",
+      "tier": "orange",
+      "gpu": "NVIDIA® GeForce® RTX 2070 (8 GB) / AMD® Radeon™ RX 6600 XT (8 GB)",
+      "cpu": "Intel® Core™ i5-9600K (hexa-core) / AMD® Ryzen™ 5 3600 (hexa-core)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA® GeForce® RTX 2070 (8 GB) / AMD® Radeon™ RX 6600 XT (8 GB), Intel® Core™ i5-9600K (hexa-core) / AMD® Ryzen™ 5 3600 (hexa-core)"
     },
     {
       "title": "The Mermaid Mask",
@@ -482,6 +482,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3070 Ti / AMD Radeon HD 7850, Intel Core i5-4590 / AMD Radeon RX 6800"
     },
     {
+      "title": "Is the Vat Utopia or Dystopia? 这里没有地雷妹！",
+      "tier": "green",
+      "gpu": "Intel HD Graphics 2000",
+      "cpu": "1 GHz 双核（如 Intel Core 2 Duo 或同级）",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics 2000, 1 GHz 双核（如 Intel Core 2 Duo 或同级）"
+    },
+    {
       "title": "FLASH AND DIE",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1050 / AMD Radeon RX 560",
@@ -496,14 +504,6 @@
       "cpu": "Intel Core i7 @ 3Ghz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: nVidia GTX 1070 / AMD RX 580, Intel Core i7 @ 3Ghz"
-    },
-    {
-      "title": "Is the Vat Utopia or Dystopia? 这里没有地雷妹！",
-      "tier": "green",
-      "gpu": "Intel HD Graphics 2000",
-      "cpu": "1 GHz 双核（如 Intel Core 2 Duo 或同级）",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 2000, 1 GHz 双核（如 Intel Core 2 Duo 或同级）"
     },
     {
       "title": "Kill The Shadow",
@@ -706,14 +706,6 @@
       "note": "Doporučená konfigurace: NVidia GeForce GTX 1080"
     },
     {
-      "title": "猎国沉默专属",
-      "tier": "green",
-      "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
-      "cpu": "Intel Core i3",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
-    },
-    {
       "title": "The Skin Stapler",
       "tier": "green",
       "gpu": "Nvidia GeForce GTX 1070 or higher",
@@ -722,12 +714,28 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 or higher, Intel(R) Core(TM) i5-9600K CPU @ 3.70GHz or equivalent"
     },
     {
+      "title": "猎国沉默专属",
+      "tier": "green",
+      "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
+      "cpu": "Intel Core i3",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
+    },
+    {
       "title": "深渊兽潮",
       "tier": "green",
       "gpu": "NVIDIA GTX 1060 or higher",
       "cpu": "Intel Core i5-9400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 or higher, Intel Core i5-9400"
+    },
+    {
+      "title": "Joy Malignant",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1650",
+      "cpu": "Intel Core i7 @ 2.60GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650, Intel Core i7 @ 2.60GHz"
     }
   ]
 }
