@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-08T18:19:56.125Z",
+  "updatedAt": "2026-08-08T19:20:26.190Z",
   "games": [
     {
       "title": "Scrap Mechanic",
@@ -58,6 +58,14 @@
       "note": "Doporučená konfigurace: NVIDIA® GeForce® RTX 2070 (8 GB) / AMD® Radeon™ RX 6600 XT (8 GB), Intel® Core™ i5-9600K (hexa-core) / AMD® Ryzen™ 5 3600 (hexa-core)"
     },
     {
+      "title": "ReStory: Chill Electronics Repairs",
+      "tier": "green",
+      "gpu": "GTX 750ti",
+      "cpu": "2-core / 4-thread CPU",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GTX 750ti, 2-core / 4-thread CPU"
+    },
+    {
       "title": "The Mermaid Mask",
       "tier": "green",
       "gpu": "Intel HD Graphics",
@@ -72,14 +80,6 @@
       "cpu": "Intel Core i5-9600K (6 * 3700) or AMD Ryzen 5 1600 (6 * 3200)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 (6144 MB) or AMD Radeon RX 580 (8192 MB), Intel Core i5-9600K (6 * 3700) or AMD Ryzen 5 1600 (6 * 3200)"
-    },
-    {
-      "title": "ReStory: Chill Electronics Repairs",
-      "tier": "green",
-      "gpu": "GTX 750ti",
-      "cpu": "2-core / 4-thread CPU",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GTX 750ti, 2-core / 4-thread CPU"
     },
     {
       "title": "The NOexistenceN of Lilith",
@@ -370,20 +370,20 @@
       "note": "Doporučená konfigurace: GTX 1060 or above, Mid-Range Quadcore Processer"
     },
     {
-      "title": "Infinitevania",
-      "tier": "green",
-      "gpu": "GeForce GTX 650 or Radeon HD 5770",
-      "cpu": "Intel Core i5-3470 or AMD Ryzen 3 1200",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 650 or Radeon HD 5770, Intel Core i5-3470 or AMD Ryzen 3 1200"
-    },
-    {
       "title": "Lost & Found: A This Bed We Made Story",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1660",
       "cpu": "Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660, Ryzen 5 3600"
+    },
+    {
+      "title": "Infinitevania",
+      "tier": "green",
+      "gpu": "GeForce GTX 650 or Radeon HD 5770",
+      "cpu": "Intel Core i5-3470 or AMD Ryzen 3 1200",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 650 or Radeon HD 5770, Intel Core i5-3470 or AMD Ryzen 3 1200"
     },
     {
       "title": "Abyss Kitchen",
@@ -418,6 +418,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 / Intel Arc A380, Intel Core i5 3470 / AMD FX-6300"
     },
     {
+      "title": "Kill The Shadow",
+      "tier": "red",
+      "gpu": "NVIDIA GeForce RTX 3060 / AMD RX 6600 XT",
+      "cpu": "Intel Core i5-12600K / AMD Ryzen 5 7600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD RX 6600 XT, Intel Core i5-12600K / AMD Ryzen 5 7600X"
+    },
+    {
       "title": "Pot's On!",
       "tier": "green",
       "gpu": "GeForce GTX 1050Ti",
@@ -440,14 +448,6 @@
       "cpu": "Intel Core i7 @ 4GHz or Ryzen 5 @ 4GHz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: DirectX 12 compatible GPU, 8GB dedicated VRAM (GeForce RTX 3060 / Radeon RX 6700), Intel Core i7 @ 4GHz or Ryzen 5 @ 4GHz"
-    },
-    {
-      "title": "Kill The Shadow",
-      "tier": "red",
-      "gpu": "NVIDIA GeForce RTX 3060 / AMD RX 6600 XT",
-      "cpu": "Intel Core i5-12600K / AMD Ryzen 5 7600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD RX 6600 XT, Intel Core i5-12600K / AMD Ryzen 5 7600X"
     },
     {
       "title": "The Alley",
@@ -610,20 +610,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3050 / AMD Equivalent, AMD Ryzen 5 5600X / Intel Equivalent"
     },
     {
-      "title": "ON&OFF",
-      "tier": "green",
-      "gpu": "GeForce GTX 1060",
-      "cpu": "Intel Core i5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1060, Intel Core i5"
-    },
-    {
       "title": "The Lure",
       "tier": "orange",
       "gpu": "RTX 2060 or lower on low settings",
       "cpu": null,
       "usedMinimum": true,
       "note": "Minimální konfigurace: RTX 2060 or lower on low settings"
+    },
+    {
+      "title": "ON&OFF",
+      "tier": "green",
+      "gpu": "GeForce GTX 1060",
+      "cpu": "Intel Core i5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1060, Intel Core i5"
     },
     {
       "title": "ゆるゆる生配信する推しは100万回死ぬ｜My Fav Chill Streamer Dies a Million Times",
@@ -656,6 +656,22 @@
       "cpu": "Intel Core i3-4160 / AMD FX-6300",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 Ti / AMD Radeon HD 7850, Intel Core i3-4160 / AMD FX-6300"
+    },
+    {
+      "title": "Montabi",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 960 / Radeon R9 380",
+      "cpu": "Intel Core i5-3570K / AMD Ryzen 3 1200",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 960 / Radeon R9 380, Intel Core i5-3570K / AMD Ryzen 3 1200"
+    },
+    {
+      "title": "Get Out ! A \"Very Bad Dreams\" Story",
+      "tier": "red",
+      "gpu": "RTX 2080 / AMD Radeon RX 6700",
+      "cpu": "i7 / Ryzen 7",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 2080 / AMD Radeon RX 6700, i7 / Ryzen 7"
     },
     {
       "title": "LIFTED",
@@ -698,28 +714,12 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1050 Ti or higher, Inter Core i5 - 12400F or higher"
     },
     {
-      "title": "Get Out ! A \"Very Bad Dreams\" Story",
-      "tier": "red",
-      "gpu": "RTX 2080 / AMD Radeon RX 6700",
-      "cpu": "i7 / Ryzen 7",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 2080 / AMD Radeon RX 6700, i7 / Ryzen 7"
-    },
-    {
       "title": "深渊兽潮",
       "tier": "green",
       "gpu": "NVIDIA GTX 1060 or higher",
       "cpu": "Intel Core i5-9400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 or higher, Intel Core i5-9400"
-    },
-    {
-      "title": "Letalis",
-      "tier": "green",
-      "gpu": "GeForce GTX 650 or Radeon HD 5770",
-      "cpu": "Intel Core i5-750 or AMD Phenom II x4 945",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 650 or Radeon HD 5770, Intel Core i5-750 or AMD Phenom II x4 945"
     },
     {
       "title": "Joy Malignant",
@@ -730,12 +730,12 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650, Intel Core i7 @ 2.60GHz"
     },
     {
-      "title": "4D Intuition",
-      "tier": "orange",
-      "gpu": "NVidia GeForce GTX 1080",
-      "cpu": null,
+      "title": "Letalis",
+      "tier": "green",
+      "gpu": "GeForce GTX 650 or Radeon HD 5770",
+      "cpu": "Intel Core i5-750 or AMD Phenom II x4 945",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVidia GeForce GTX 1080"
+      "note": "Doporučená konfigurace: GeForce GTX 650 or Radeon HD 5770, Intel Core i5-750 or AMD Phenom II x4 945"
     }
   ]
 }
