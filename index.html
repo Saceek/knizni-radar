@@ -274,8 +274,8 @@
   .bento-tile .num{font-family:var(--disp);font-size:20px;font-weight:800;color:var(--text)}
   .bento-tile .lbl{font-size:10px;color:var(--sub);text-transform:uppercase;letter-spacing:.08em;margin-top:2px}
   .bento-hero .num{font-size:28px}
-  .prog-widget{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:0 0 18px}
-  @media(max-width:640px){ .prog-widget{grid-template-columns:1fr} }
+  .prog-widget{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:9px;margin:0 0 18px}
+  @media(max-width:640px){ .prog-widget{grid-template-columns:1fr 1fr} }
   .prog-slot{background:var(--card);border:1px solid var(--cb);border-radius:16px;padding:11px 13px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
   .prog-slot-head{display:flex;align-items:center;justify-content:space-between;gap:6px;font-size:12px;font-weight:700;color:var(--text)}
   .prog-slot-head span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
@@ -286,6 +286,7 @@
   .prog-search{width:100%;margin-top:8px;background:var(--input);border:1px solid var(--cb);border-radius:8px;padding:6px 8px;font-size:12px;color:var(--text)}
   .prog-cands{max-height:140px;overflow-y:auto;margin-top:6px}
   .prog-cand{font-size:12px;padding:6px 4px;border-radius:6px;cursor:pointer;color:var(--text)}
+  .prog-cand-manual{color:var(--accent);font-weight:700}
   .prog-cand:hover{background:var(--input)}
   .prog-fields{display:flex;align-items:center;gap:6px;margin-top:8px}
   .prog-fields input{width:64px;background:var(--input);border:1px solid var(--cb);border-radius:8px;padding:6px 8px;font-size:12px;color:var(--text)}
@@ -542,7 +543,13 @@ async function saveDiaryAndSync(a){
 const LS_PROGRESS_KEY = "knizniRadarProgress";
 const PROGRESS_PATH = "progress.json";
 let _progressSyncStatus = "off";
-function loadProgress(){ try{ return JSON.parse(localStorage.getItem(LS_PROGRESS_KEY))||{}; }catch(e){ return {}; } }
+// Migrace ze staršího jednoho "game" slotu (před rozdělením na platformy) na game_pc -
+// starý slot byl vždy ze Steam backlogu, tedy PC.
+function migrateProgress(p){
+  if(p && p.game && !p.game_pc){ p.game_pc=p.game; delete p.game; }
+  return p||{};
+}
+function loadProgress(){ try{ return migrateProgress(JSON.parse(localStorage.getItem(LS_PROGRESS_KEY))||{}); }catch(e){ return {}; } }
 function saveProgress(a){ try{ localStorage.setItem(LS_PROGRESS_KEY, JSON.stringify(a)); }catch(e){} }
 
 async function loadRemoteProgress(){
@@ -585,8 +592,8 @@ async function saveRemoteProgress(data){
 
 async function syncProgress(){
   _progressSyncStatus="syncing"; render();
-  const remote=await loadRemoteProgress();
-  if(remote){ saveProgress(remote); S.progress=remote; }
+  const remote=migrateProgress(await loadRemoteProgress());
+  if(Object.keys(remote).length){ saveProgress(remote); S.progress=remote; }
   else { S.progress=loadProgress(); }
   _progressSyncStatus=getGHToken()?"ok":"off";
   render();
@@ -605,20 +612,25 @@ async function saveProgressAndSync(a){
 const DIARY_MONTHS = ["Leden","Únor","Březen","Duben","Květen","Červen","Červenec","Srpen","Září","Říjen","Listopad","Prosinec"];
 function diaryMonthLabel(dateStr){ const d=new Date(dateStr+"T00:00:00"); return `${DIARY_MONTHS[d.getMonth()]} ${d.getFullYear()}`; }
 
-// "Právě dělám" widget - jeden aktivní quest na kategorii (kniha/hra/film), drží fokus
+// "Aktivní questy" widget - jeden aktivní quest na kategorii (kniha/film/hra dle platformy), drží fokus
 const PROG_CFG = {
-  book: {icon:"📖", label:"Kniha", unit:"str.", step:10, color:"var(--violet)", emptyTxt:"+ vybrat rozečtené"},
-  game: {icon:"🎮", label:"Hra", unit:"h", step:1, color:"var(--amber)", emptyTxt:"+ vybrat rozehrané"},
-  movie:{icon:"🎬", label:"Film / Seriál", unit:"%", step:5, color:"var(--cyan)", emptyTxt:"+ vybrat rozkoukané"},
+  book: {icon:"📖", label:"Kniha", unit:"str.", step:10, color:"var(--violet)", emptyTxt:"+ vybrat rozečtené", source:"book"},
+  movie:{icon:"🎬", label:"Film / Seriál", unit:"%", step:5, color:"var(--cyan)", emptyTxt:"+ vybrat rozkoukané", source:"movie"},
+  game_pc: {icon:"🖥️", label:"Hra (PC)", unit:"h", step:1, color:"var(--amber)", emptyTxt:"+ vybrat rozehrané", source:"game"},
+  game_ps5:{icon:"🎮", label:"Hra (PS5)", unit:"h", step:1, color:"var(--rose)", emptyTxt:"+ přidat ručně", source:null},
+  game_nsw2:{icon:"🕹️", label:"Hra (Switch 2)", unit:"h", step:1, color:"var(--emerald)", emptyTxt:"+ přidat ručně", source:null},
 };
 function progressCandidates(cat){
-  const src = cat==="movie" ? S.backlog.filter(b=>(b._category||"book")==="movie") : backlogByCategory(cat);
+  const cfg = PROG_CFG[cat];
+  if(!cfg.source) return [];
+  const baseCat = cfg.source;
+  const src = baseCat==="movie" ? S.backlog.filter(b=>(b._category||"book")==="movie") : backlogByCategory(baseCat);
   return src.map(b=>({
     title:b.title,
-    image: cat==="book"?b.cover:(cat==="movie"?b.poster:b.image),
-    url: cat==="book"?b.link:b.url,
-    sub: cat==="book"?b.author:(cat==="movie"?b.year:""),
-    suggestedTotal: cat==="book" ? (b.pages||null) : (cat==="game" ? (hltbFor(b.title)?.hours ? Math.round(hltbFor(b.title).hours) : null) : null),
+    image: baseCat==="book"?b.cover:(baseCat==="movie"?b.poster:b.image),
+    url: baseCat==="book"?b.link:b.url,
+    sub: baseCat==="book"?b.author:(baseCat==="movie"?b.year:""),
+    suggestedTotal: baseCat==="book" ? (b.pages||null) : (baseCat==="game" ? (hltbFor(b.title)?.hours ? Math.round(hltbFor(b.title).hours) : null) : null),
   }));
 }
 function progressSlotHtml(cat){
@@ -628,10 +640,13 @@ function progressSlotHtml(cat){
   if(S.progSearching===cat){
     const q=(S.progQ||"").trim().toLowerCase();
     const cands = progressCandidates(cat).filter(c=>!q||c.title.toLowerCase().includes(q));
+    const qTrim = (S.progQ||"").trim();
+    const manualRow = qTrim ? `<div class="prog-cand prog-cand-manual" data-progpickmanual="${esc(qTrim)}">+ Přidat "${esc(qTrim)}" ručně</div>` : "";
+    const emptyHint = (!cands.length && !qTrim) ? `<div class="tiny" style="padding:6px 0">${cfg.source?"Nic v backlogu této kategorie.":"Zadej název hry."}</div>` : "";
     return `<div class="prog-slot prog-slot-search">
       <div class="prog-slot-head"><span>${cfg.icon} ${cfg.label}</span><button class="prog-x" data-progcancel="${cat}">✕</button></div>
-      <input class="prog-search" id="prog-q" placeholder="Hledat v backlogu…" value="${esc(S.progQ)}" />
-      <div class="prog-cands">${cands.length?cands.map(c=>`<div class="prog-cand" data-progpick="${esc(c.title)}">${esc(c.title)}</div>`).join(""):'<div class="tiny" style="padding:6px 0">Nic v backlogu této kategorie.</div>'}</div>
+      <input class="prog-search" id="prog-q" placeholder="${cfg.source?"Hledat v backlogu…":"Název hry…"}" value="${esc(S.progQ)}" />
+      <div class="prog-cands">${cands.map(c=>`<div class="prog-cand" data-progpick="${esc(c.title)}">${esc(c.title)}</div>`).join("")}${manualRow}${emptyHint}</div>
     </div>`;
   }
 
@@ -665,7 +680,7 @@ function progressSlotHtml(cat){
   </div>`;
 }
 function progressWidgetHtml(){
-  return `<div class="prog-widget">${["book","game","movie"].map(progressSlotHtml).join("")}</div>`;
+  return `<div class="prog-widget">${["book","movie","game_pc","game_ps5","game_nsw2"].map(progressSlotHtml).join("")}</div>`;
 }
 function progressFinish(cat){
   const item = S.progress[cat];
@@ -673,7 +688,8 @@ function progressFinish(cat){
   saveProgressAndSync(S.progress);
   render();
   if(item){
-    showDiaryModal({title:item.title, image:item.image||null, url:item.url||null, sub:item.sub||null, cat});
+    const diaryCat = cat.startsWith("game") ? "game" : cat;
+    showDiaryModal({title:item.title, image:item.image||null, url:item.url||null, sub:item.sub||null, cat:diaryCat});
   }
 }
 function mountProgressWidget(){
@@ -689,6 +705,16 @@ function mountProgressWidget(){
     S.progSetting=cat;
     const defaultTotal = cat==="movie" ? 100 : (c.suggestedTotal || 0);
     S.progDraft={title:c.title, image:c.image, url:c.url, sub:c.sub, current:0, total:defaultTotal};
+    render();
+  });
+  document.querySelectorAll("[data-progpickmanual]").forEach(el=>el.onclick=()=>{
+    const cat=S.progSearching;
+    const title=el.dataset.progpickmanual;
+    S.progSearching=null;
+    S.progSetting=cat;
+    const hltb=hltbFor(title);
+    const defaultTotal = cat==="movie" ? 100 : (hltb?.hours ? Math.round(hltb.hours) : 0);
+    S.progDraft={title, image:null, url:null, sub:null, current:0, total:defaultTotal};
     render();
   });
   document.querySelectorAll("[data-progedit]").forEach(el=>el.onclick=()=>{
