@@ -114,6 +114,10 @@
   .bk{font-family:var(--disp);border:1px solid var(--cb);background:var(--chip);color:var(--chipt);border-radius:999px;padding:5px 13px;font-size:12px;font-weight:600;cursor:pointer}
   .bk.on{background:rgba(74,222,128,.15);color:var(--emerald);border-color:transparent}
   .bk.rm{color:var(--rose);border-color:rgba(251,77,125,.35)}
+  .bk.quest{color:var(--amber);border-color:rgba(255,210,62,.35)}
+  .quest-plat{display:inline-flex;gap:4px}
+  .quest-plat-btn{width:26px;height:26px;border-radius:8px;border:1px solid var(--cb);background:var(--chip);color:var(--chipt);font-size:12px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;padding:0}
+  .quest-plat-btn:hover{border-color:var(--amber);background:rgba(255,210,62,.12)}
   .detail{border-top:1px solid var(--cb);margin-top:12px;padding-top:12px}
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:8px}
   .shop{border:1px solid var(--cb);border-radius:10px;padding:8px;text-align:center;text-decoration:none;color:var(--text);background:var(--chip)}
@@ -691,6 +695,27 @@ function progressFinish(cat){
     const diaryCat = cat.startsWith("game") ? "game" : cat;
     showDiaryModal({title:item.title, image:item.image||null, url:item.url||null, sub:item.sub||null, cat:diaryCat});
   }
+}
+// Přímý start questu z karty v Backlogu - obchází ruční hledání, položka se dohledá podle názvu
+function startQuestFromBacklog(cat, title){
+  const b = S.backlog.find(x=>x.title===title);
+  if(!b) return;
+  const baseCat = PROG_CFG[cat].source || "game";
+  const item = baseCat==="book"
+    ? {title:b.title, image:b.cover||null, url:b.link||null, sub:b.author||null, suggestedTotal:b.pages||null}
+    : baseCat==="movie"
+    ? {title:b.title, image:b.poster||null, url:b.url||null, sub:b.year||null, suggestedTotal:null}
+    : {title:b.title, image:b.image||null, url:b.url||null, sub:null, suggestedTotal: hltbFor(b.title)?.hours ? Math.round(hltbFor(b.title).hours) : null};
+  if(S.progress[cat]){
+    const ok = confirm(`Přepnout ${PROG_CFG[cat].label} z "${S.progress[cat].title}" na "${item.title}"?\nRozečtené "${S.progress[cat].title}" zůstane v backlogu s uloženým progresem.`);
+    if(!ok) return;
+  }
+  S.progSearching=null;
+  S.progSetting=cat;
+  const defaultTotal = cat==="movie" ? 100 : (item.suggestedTotal || 0);
+  S.progDraft={title:item.title, image:item.image, url:item.url, sub:item.sub, current:0, total:defaultTotal};
+  render();
+  window.scrollTo({top:0, behavior:"smooth"});
 }
 function mountProgressWidget(){
   document.querySelectorAll("[data-progopen]").forEach(el=>el.onclick=()=>{ S.progSearching=el.dataset.progopen; S.progQ=""; render(); });
@@ -1429,7 +1454,9 @@ function backlogCard(b){
       <div class="meta">${ratingHtml(b)}${rarityPill(b.rating)}</div>
       <div class="actions">
         <button class="link" data-more="${esc(b.title)}">${open?"Méně ▲":"Detail & ceny ▼"}</button>
-        <button class="bk rm" data-rm="${esc(b.title)}">✕ Odebrat</button><span class="xp-pill" title="XP za dokončení questu">+80 XP</span>
+        <button class="bk rm" data-rm="${esc(b.title)}">✕ Odebrat</button>
+        <button class="bk quest" data-qscat="book" data-qstitle="${esc(b.title)}">▶ Začít</button>
+        <span class="xp-pill" title="XP za dokončení questu">+80 XP</span>
       </div>
       ${open?detailHtml(b):""}
     </div>
@@ -1451,7 +1478,9 @@ function backlogMovieCard(m){
         <p class="muted">${esc(m.country||"")}${m.year?" · "+esc(m.year):""}</p>
       </div><div style="text-align:right">${rHtml}</div></div>
       <div class="meta"><span class="mtype ${typeClass}">${esc(m.type||"film")}</span>${vodHtml}${genreHtml}${rarityPill(m.rating)}</div>
-      <div class="actions"><button class="bk rm" data-rm="${esc(m.title)}">✕ Odebrat</button><span class="xp-pill" title="XP za dokončení questu">+50 XP</span></div>
+      <div class="actions"><button class="bk rm" data-rm="${esc(m.title)}">✕ Odebrat</button>
+        <button class="bk quest" data-qscat="movie" data-qstitle="${esc(m.title)}">▶ Začít</button>
+        <span class="xp-pill" title="XP za dokončení questu">+50 XP</span></div>
     </div>
   </div>`;
 }
@@ -1466,7 +1495,9 @@ function backlogGameCard(g){
         ${g.discount?`<p class="muted"><span style="text-decoration:line-through">${esc(g.priceOriginal||"")}</span> → ${esc(g.price||"")} <span class="gdiscount">-${g.discount}%</span></p>`:`<p class="muted">${g.price?esc(g.price):""}</p>`}
       </div><div style="text-align:right">${rHtml}</div></div>
       <div class="meta">${rarityPill(g.rating)}${(g.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
-      <div class="actions"><button class="bk rm" data-rm="${esc(g.title)}">✕ Odebrat</button><span class="xp-pill" title="XP za dokončení questu">+120 XP</span>${hltbHtml(g.title,true)}${hwCompareHtml(g.title,!hltbFor(g.title))}</div>
+      <div class="actions"><button class="bk rm" data-rm="${esc(g.title)}">✕ Odebrat</button>
+        <span class="quest-plat"><button class="quest-plat-btn" data-qscat="game_pc" data-qstitle="${esc(g.title)}" title="Začít na PC">🖥️</button><button class="quest-plat-btn" data-qscat="game_ps5" data-qstitle="${esc(g.title)}" title="Začít na PS5">🎮</button><button class="quest-plat-btn" data-qscat="game_nsw2" data-qstitle="${esc(g.title)}" title="Začít na Switch 2">🕹️</button></span>
+        <span class="xp-pill" title="XP za dokončení questu">+120 XP</span>${hltbHtml(g.title,true)}${hwCompareHtml(g.title,!hltbFor(g.title))}</div>
     </div>
   </div>`;
 }
@@ -1964,6 +1995,8 @@ document.getElementById("view").onclick=e=>{
     if(item){S.backlog.push({...item,_category:"comic"}); saveBacklogAndSync(S.backlog); render();}} return;}
   const gw=e.target.dataset.gwin; if(gw){S.gameWin=+gw; render(); return;}
   const gg=e.target.dataset.ggenre; if(gg){S.gameGenre=gg; render(); return;}
+  const qscat=e.target.closest("[data-qscat]")?.dataset.qscat;
+  if(qscat){ startQuestFromBacklog(qscat, e.target.closest("[data-qscat]").dataset.qstitle); return; }
 };
 
 loadNews();
