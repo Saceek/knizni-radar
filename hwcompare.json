@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-08T02:19:55.219Z",
+  "updatedAt": "2026-08-08T03:19:55.804Z",
   "games": [
     {
       "title": "Scrap Mechanic",
@@ -202,6 +202,14 @@
       "note": "Minimální konfigurace: Intel HD 620 / UHD 600 series, or NVIDIA GeForce GT 730 / AMD R7 240, Intel Core i3-2100 / AMD FX-4350 or equivalent"
     },
     {
+      "title": "Sovereign Tower",
+      "tier": "green",
+      "gpu": "GTX 1060, 6GB VRAM",
+      "cpu": "Intel Core i5-9600K",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1060, 6GB VRAM, Intel Core i5-9600K"
+    },
+    {
       "title": "MOLDRISE",
       "tier": "green",
       "gpu": "NVidia GTX 950 or similar",
@@ -210,7 +218,7 @@
       "note": "Doporučená konfigurace: NVidia GTX 950 or similar, 2.6 GHz Dual Core or similar"
     },
     {
-      "title": "列乌尼斯的挽歌 Requiem of Reuinis",
+      "title": "Requiem of Reuinis",
       "tier": "green",
       "gpu": "NVIDIA GeForce RTX 3050 / AMD Radeon RX 6600",
       "cpu": "Intel Core Ultra 7",
@@ -224,14 +232,6 @@
       "cpu": "Intel i5 Quad-Core, 3 GHz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 1080 Ti / RX Vega 64, Intel i5 Quad-Core, 3 GHz"
-    },
-    {
-      "title": "Sovereign Tower",
-      "tier": "green",
-      "gpu": "GTX 1060, 6GB VRAM",
-      "cpu": "Intel Core i5-9600K",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1060, 6GB VRAM, Intel Core i5-9600K"
     },
     {
       "title": "Mall Together",
@@ -402,6 +402,14 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4000, 2GHz Dual Core"
     },
     {
+      "title": "GRAIN ROT",
+      "tier": "orange",
+      "gpu": "NVIDIA RTX 2060 / AMD Radeon RX 5700",
+      "cpu": "Intel Core i5-10600 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10600 / AMD Ryzen 5 3600"
+    },
+    {
       "title": "Lost & Found: A This Bed We Made Story",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1660",
@@ -432,14 +440,6 @@
       "cpu": "1 GHz 双核（如 Intel Core 2 Duo 或同级）",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 2000, 1 GHz 双核（如 Intel Core 2 Duo 或同级）"
-    },
-    {
-      "title": "GRAIN ROT",
-      "tier": "orange",
-      "gpu": "NVIDIA RTX 2060 / AMD Radeon RX 5700",
-      "cpu": "Intel Core i5-10600 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10600 / AMD Ryzen 5 3600"
     },
     {
       "title": "The Alley",
@@ -506,6 +506,14 @@
       "note": "Doporučená konfigurace: nVidia GTX 1070 / AMD RX 580, Intel Core i7 @ 3Ghz"
     },
     {
+      "title": "The Skin Stapler",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 1070 or higher",
+      "cpu": "Intel(R) Core(TM) i5-9600K CPU @ 3.70GHz or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 or higher, Intel(R) Core(TM) i5-9600K CPU @ 3.70GHz or equivalent"
+    },
+    {
       "title": "Penguin Lifter",
       "tier": "orange",
       "gpu": "GEFORCE RTX 2060",
@@ -528,14 +536,6 @@
       "cpu": "Ryzen 5 1500X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA Geforce GTX 1060 3GB, Ryzen 5 1500X"
-    },
-    {
-      "title": "The Skin Stapler",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1070 or higher",
-      "cpu": "Intel(R) Core(TM) i5-9600K CPU @ 3.70GHz or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 or higher, Intel(R) Core(TM) i5-9600K CPU @ 3.70GHz or equivalent"
     },
     {
       "title": "Heave Ho 2",
@@ -602,20 +602,20 @@
       "note": "Minimální konfigurace: RTX 2060 or lower on low settings"
     },
     {
-      "title": "Elektronická dřevěná ryba",
-      "tier": "green",
-      "gpu": "Intel HD Graphics 4400",
-      "cpu": "i5",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 4400, i5"
-    },
-    {
       "title": "ON&OFF",
       "tier": "green",
       "gpu": "GeForce GTX 1060",
       "cpu": "Intel Core i5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1060, Intel Core i5"
+    },
+    {
+      "title": "Elektronická dřevěná ryba",
+      "tier": "green",
+      "gpu": "Intel HD Graphics 4400",
+      "cpu": "i5",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics 4400, i5"
     },
     {
       "title": "SSTWL - Sector Breach",
@@ -650,6 +650,14 @@
       "note": "Doporučená konfigurace: GeForce GTX 1050 (2048 VRAM); Radeon R9 380 (2048 VRAM), Intel Core i5-3470"
     },
     {
+      "title": "LIFTED",
+      "tier": "orange",
+      "gpu": "RTX 2070",
+      "cpu": "i5-9600K",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 2070, i5-9600K"
+    },
+    {
       "title": "Aerolicious",
       "tier": "orange",
       "gpu": "NVIDIA RTX 2070 Super / AMD Radeon RX 5700",
@@ -672,14 +680,6 @@
       "cpu": "Inter Core i5 - 12400F or higher",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1050 Ti or higher, Inter Core i5 - 12400F or higher"
-    },
-    {
-      "title": "LIFTED",
-      "tier": "orange",
-      "gpu": "RTX 2070",
-      "cpu": "i5-9600K",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 2070, i5-9600K"
     },
     {
       "title": "Welcome to the Sharehouse! ~ domestic life with three cute girls~",
@@ -720,6 +720,30 @@
       "cpu": "Intel Core i5-9400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 or higher, Intel Core i5-9400"
+    },
+    {
+      "title": "猎国沉默专属",
+      "tier": "green",
+      "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
+      "cpu": "Intel Core i3",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
+    },
+    {
+      "title": "Joy Malignant",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1650",
+      "cpu": "Intel Core i7 @ 2.60GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650, Intel Core i7 @ 2.60GHz"
+    },
+    {
+      "title": "南派盗墓传奇",
+      "tier": "green",
+      "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
+      "cpu": "Intel Core i3",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
     }
   ]
 }
