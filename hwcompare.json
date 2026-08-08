@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-08T08:19:51.949Z",
+  "updatedAt": "2026-08-08T09:19:58.043Z",
   "games": [
     {
       "title": "Scrap Mechanic",
@@ -186,20 +186,20 @@
       "note": "Minimální konfigurace: NVIDIA GTX 1650, Intel Core i7-11800H"
     },
     {
-      "title": "Shards of Order",
-      "tier": "green",
-      "gpu": "GTX 1060",
-      "cpu": "Quad-core 3.0 GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1060, Quad-core 3.0 GHz"
-    },
-    {
       "title": "Sovereign Tower",
       "tier": "green",
       "gpu": "GTX 1060, 6GB VRAM",
       "cpu": "Intel Core i5-9600K",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 1060, 6GB VRAM, Intel Core i5-9600K"
+    },
+    {
+      "title": "Shards of Order",
+      "tier": "green",
+      "gpu": "GTX 1060",
+      "cpu": "Quad-core 3.0 GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1060, Quad-core 3.0 GHz"
     },
     {
       "title": "Suncraft",
@@ -322,20 +322,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB or AMD Radeon RX 6600 XT 8 GB, Intel Core i7-9700 or AMD Ryzen 7 3700X"
     },
     {
-      "title": "Zoominoes",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 750 Ti / AMD equivalent or better",
-      "cpu": "Intel Core i5 or AMD equivalent (quad-core)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 750 Ti / AMD equivalent or better, Intel Core i5 or AMD equivalent (quad-core)"
-    },
-    {
       "title": "GRAIN ROT",
       "tier": "orange",
       "gpu": "NVIDIA RTX 2060 / AMD Radeon RX 5700",
       "cpu": "Intel Core i5-10600 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10600 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Zoominoes",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 750 Ti / AMD equivalent or better",
+      "cpu": "Intel Core i5 or AMD equivalent (quad-core)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 750 Ti / AMD equivalent or better, Intel Core i5 or AMD equivalent (quad-core)"
     },
     {
       "title": "Kusan: City of Wolves",
@@ -394,20 +394,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700, Intel Core i7-9700 / AMD Ryzen 5 3600"
     },
     {
-      "title": "Bowling Alley Simulator",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 / Intel Arc A380",
-      "cpu": "Intel Core i5 3470 / AMD FX-6300",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 / Intel Arc A380, Intel Core i5 3470 / AMD FX-6300"
-    },
-    {
       "title": "Is the Vat Utopia or Dystopia? 这里没有地雷妹！",
       "tier": "green",
       "gpu": "Intel HD Graphics 2000",
       "cpu": "1 GHz 双核（如 Intel Core 2 Duo 或同级）",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 2000, 1 GHz 双核（如 Intel Core 2 Duo 或同级）"
+    },
+    {
+      "title": "Bowling Alley Simulator",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 / Intel Arc A380",
+      "cpu": "Intel Core i5 3470 / AMD FX-6300",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 / Intel Arc A380, Intel Core i5 3470 / AMD FX-6300"
     },
     {
       "title": "Chest Buster",
@@ -506,6 +506,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560, Intel Core i5 / AMD Ryzen 5"
     },
     {
+      "title": "Chop Chop Inc.",
+      "tier": "red",
+      "gpu": "GeForce RTX 3080 Ti or Radeon RX 6800 XT",
+      "cpu": "Core i5-11600K or Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3080 Ti or Radeon RX 6800 XT, Core i5-11600K or Ryzen 5 5600X"
+    },
+    {
       "title": "The Crimson Maid",
       "tier": "green",
       "gpu": "nVidia GTX 1070 / AMD RX 580",
@@ -520,14 +528,6 @@
       "cpu": "Intel i5 - 6500",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 1060 3GB, Intel i5 - 6500"
-    },
-    {
-      "title": "Chop Chop Inc.",
-      "tier": "red",
-      "gpu": "GeForce RTX 3080 Ti or Radeon RX 6800 XT",
-      "cpu": "Core i5-11600K or Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3080 Ti or Radeon RX 6800 XT, Core i5-11600K or Ryzen 5 5600X"
     },
     {
       "title": "Penguin Lifter",
@@ -578,6 +578,14 @@
       "note": "Doporučená konfigurace: GeForce GTX 1060 6GB, AMD Ryzen 5 3600 / Intel Core i7 7700K"
     },
     {
+      "title": "Elektronická dřevěná ryba",
+      "tier": "green",
+      "gpu": "Intel HD Graphics 4400",
+      "cpu": "i5",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics 4400, i5"
+    },
+    {
       "title": "Fading Echo",
       "tier": "green",
       "gpu": "NVIDIA GeForce RTX 3050 / AMD Equivalent",
@@ -586,12 +594,12 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3050 / AMD Equivalent, AMD Ryzen 5 5600X / Intel Equivalent"
     },
     {
-      "title": "Elektronická dřevěná ryba",
+      "title": "ON&OFF",
       "tier": "green",
-      "gpu": "Intel HD Graphics 4400",
-      "cpu": "i5",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 4400, i5"
+      "gpu": "GeForce GTX 1060",
+      "cpu": "Intel Core i5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1060, Intel Core i5"
     },
     {
       "title": "Gospodar's Tales",
@@ -608,14 +616,6 @@
       "cpu": null,
       "usedMinimum": true,
       "note": "Minimální konfigurace: RTX 2060 or lower on low settings"
-    },
-    {
-      "title": "ON&OFF",
-      "tier": "green",
-      "gpu": "GeForce GTX 1060",
-      "cpu": "Intel Core i5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1060, Intel Core i5"
     },
     {
       "title": "SSTWL - Sector Breach",
@@ -674,6 +674,14 @@
       "note": "Doporučená konfigurace: Intel HD Graphics 630 / AMD Radeon RX 550 / NVIDIA GeForce GTX 750 or better, Intel Core i5-4460 / AMD Ryzen 3 1200 or better"
     },
     {
+      "title": "ゆるゆる生配信する推しは100万回死ぬ｜My Fav Chill Streamer Dies a Million Times",
+      "tier": "red",
+      "gpu": "GeForce RTX 3060",
+      "cpu": "Core i5 14400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3060, Core i5 14400"
+    },
+    {
       "title": "Chasing the Dawn / CTD",
       "tier": "green",
       "gpu": "Nvidia GeForce GTX 1050 Ti or higher",
@@ -714,12 +722,12 @@
       "note": "Doporučená konfigurace: NVidia GeForce GTX 1080"
     },
     {
-      "title": "ゆるゆる生配信する推しは100万回死ぬ｜My Fav Chill Streamer Dies a Million Times",
-      "tier": "red",
-      "gpu": "GeForce RTX 3060",
-      "cpu": "Core i5 14400",
+      "title": "深渊兽潮",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1060 or higher",
+      "cpu": "Intel Core i5-9400",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060, Core i5 14400"
+      "note": "Doporučená konfigurace: NVIDIA GTX 1060 or higher, Intel Core i5-9400"
     }
   ]
 }
