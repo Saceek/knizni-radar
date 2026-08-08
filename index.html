@@ -966,7 +966,8 @@ const ratingClass = r => r>=80?"r-high":r>=40?"r-mid":"r-low";
 // GAME HUD: rarita předmětu podle hodnocení (legendární ≥95, epický ≥85, vzácný ≥75)
 const greeting = () => { const h=new Date().getHours(); return h<5?"Dobrou noc":h<12?"Dobré ráno":h<18?"Dobré odpoledne":"Dobrý večer"; };
 // Steam odkazy otevřít rovnou v desktop appce (steam:// protokol), ne na webu
-const steamDeepLink = (url) => { const m=(url||"").match(/store\.steampowered\.com\/app\/(\d+)/); return m ? `steam://store/${m[1]}` : url; };
+const IS_DESKTOP = !/Android|iPhone|iPad|iPod|Mobile|Tablet/i.test(navigator.userAgent);
+const steamDeepLink = (url) => { if(!IS_DESKTOP) return url; const m=(url||"").match(/store\.steampowered\.com\/app\/(\d+)/); return m ? `steam://store/${m[1]}` : url; };
 const demoRibbon = (g) => g.demoAppid ? `<span class="demo-ribbon">DEMO</span>` : "";
 const rarity = r => r==null?null: r>=95?"leg": r>=85?"epic": r>=75?"rare": null;
 const rarityCls = r => {const k=rarity(r); return k?` r-${k}`:"";};
