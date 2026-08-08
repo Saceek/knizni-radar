@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-08T19:20:26.190Z",
+  "updatedAt": "2026-08-08T20:19:29.432Z",
   "games": [
     {
       "title": "Scrap Mechanic",
@@ -162,7 +162,7 @@
       "note": "Doporučená konfigurace: Better than GTX 1050, better than Intel i5 8400 or AMD ryzen 5 2600"
     },
     {
-      "title": "Backpack Dungeon",
+      "title": "背包地牢: Backpack Dungeon",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 750 Ti or equivalent",
       "cpu": "Intel i5 Quad-Core",
@@ -186,7 +186,7 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 ||| AMD Radeon RX 5600 XT ||| Intel Arc A750"
     },
     {
-      "title": "Carpet Cleaning Simulator",
+      "title": "絨毯を洗うゲーム",
       "tier": "green",
       "gpu": "NVIDIA GTX 1650",
       "cpu": "Intel Core i7-11800H",
@@ -226,7 +226,7 @@
       "note": "Doporučená konfigurace: GTX 1080 Ti / RX Vega 64, Intel i5 Quad-Core, 3 GHz"
     },
     {
-      "title": "Requiem of Reuinis",
+      "title": "列乌尼斯的挽歌 Requiem of Reuinis",
       "tier": "green",
       "gpu": "NVIDIA GeForce RTX 3050 / AMD Radeon RX 6600",
       "cpu": "Intel Core Ultra 7",
@@ -250,6 +250,14 @@
       "note": "Doporučená konfigurace: GeForce RTX 3060 or Radeon RX 6700, 3.5GHz 6-Core or similar"
     },
     {
+      "title": "GRAIN ROT",
+      "tier": "orange",
+      "gpu": "NVIDIA RTX 2060 / AMD Radeon RX 5700",
+      "cpu": "Intel Core i5-10600 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10600 / AMD Ryzen 5 3600"
+    },
+    {
       "title": "Drone Sector",
       "tier": "red",
       "gpu": "8 GB VRAM, AMD Radeon RX 6700 / Nvidia GeForce RTX 3060",
@@ -264,14 +272,6 @@
       "cpu": "Intel i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1050 Ti / GTX 1650 / AMD Radeon RX 570 (4 GB VRAM), Intel i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
-      "title": "GRAIN ROT",
-      "tier": "orange",
-      "gpu": "NVIDIA RTX 2060 / AMD Radeon RX 5700",
-      "cpu": "Intel Core i5-10600 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10600 / AMD Ryzen 5 3600"
     },
     {
       "title": "Osta",
@@ -418,14 +418,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 / Intel Arc A380, Intel Core i5 3470 / AMD FX-6300"
     },
     {
-      "title": "Kill The Shadow",
-      "tier": "red",
-      "gpu": "NVIDIA GeForce RTX 3060 / AMD RX 6600 XT",
-      "cpu": "Intel Core i5-12600K / AMD Ryzen 5 7600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD RX 6600 XT, Intel Core i5-12600K / AMD Ryzen 5 7600X"
-    },
-    {
       "title": "Pot's On!",
       "tier": "green",
       "gpu": "GeForce GTX 1050Ti",
@@ -440,6 +432,14 @@
       "cpu": "2GHz Dual Core",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 4000, 2GHz Dual Core"
+    },
+    {
+      "title": "Kill The Shadow",
+      "tier": "red",
+      "gpu": "NVIDIA GeForce RTX 3060 / AMD RX 6600 XT",
+      "cpu": "Intel Core i5-12600K / AMD Ryzen 5 7600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD RX 6600 XT, Intel Core i5-12600K / AMD Ryzen 5 7600X"
     },
     {
       "title": "Tavern Legends",
@@ -610,20 +610,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3050 / AMD Equivalent, AMD Ryzen 5 5600X / Intel Equivalent"
     },
     {
-      "title": "The Lure",
-      "tier": "orange",
-      "gpu": "RTX 2060 or lower on low settings",
-      "cpu": null,
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: RTX 2060 or lower on low settings"
-    },
-    {
       "title": "ON&OFF",
       "tier": "green",
       "gpu": "GeForce GTX 1060",
       "cpu": "Intel Core i5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1060, Intel Core i5"
+    },
+    {
+      "title": "The Lure",
+      "tier": "orange",
+      "gpu": "RTX 2060 or lower on low settings",
+      "cpu": null,
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: RTX 2060 or lower on low settings"
     },
     {
       "title": "ゆるゆる生配信する推しは100万回死ぬ｜My Fav Chill Streamer Dies a Million Times",
@@ -706,7 +706,7 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GT 730"
     },
     {
-      "title": "Chasing the Dawn / CTD",
+      "title": "黎明探险队 / CTD",
       "tier": "green",
       "gpu": "Nvidia GeForce GTX 1050 Ti or higher",
       "cpu": "Inter Core i5 - 12400F or higher",
