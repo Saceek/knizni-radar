@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-08T21:20:01.669Z",
+  "updatedAt": "2026-08-08T22:19:43.535Z",
   "games": [
     {
       "title": "Scrap Mechanic",
@@ -184,14 +184,6 @@
       "cpu": null,
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 ||| AMD Radeon RX 5600 XT ||| Intel Arc A750"
-    },
-    {
-      "title": "Carpet Cleaning Simulator",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1650",
-      "cpu": "Intel Core i7-11800H",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GTX 1650, Intel Core i7-11800H"
     },
     {
       "title": "Shards of Order",
@@ -706,6 +698,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GT 730"
     },
     {
+      "title": "Joy Malignant",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1650",
+      "cpu": "Intel Core i7 @ 2.60GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650, Intel Core i7 @ 2.60GHz"
+    },
+    {
       "title": "Chasing the Dawn / CTD",
       "tier": "green",
       "gpu": "Nvidia GeForce GTX 1050 Ti or higher",
@@ -722,20 +722,180 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 or higher, Intel Core i5-9400"
     },
     {
-      "title": "Joy Malignant",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1650",
-      "cpu": "Intel Core i7 @ 2.60GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650, Intel Core i7 @ 2.60GHz"
-    },
-    {
       "title": "Unicycle Together",
       "tier": "orange",
       "gpu": "NVIDIA GTX 1080 OR higher",
       "cpu": "Intel i5 750 @ 2.67Ghz or higher",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1080 OR higher, Intel i5 750 @ 2.67Ghz or higher"
+    },
+    {
+      "title": "Letalis",
+      "tier": "green",
+      "gpu": "GeForce GTX 650 or Radeon HD 5770",
+      "cpu": "Intel Core i5-750 or AMD Phenom II x4 945",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 650 or Radeon HD 5770, Intel Core i5-750 or AMD Phenom II x4 945"
+    },
+    {
+      "title": "4D Intuition",
+      "tier": "orange",
+      "gpu": "NVidia GeForce GTX 1080",
+      "cpu": null,
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVidia GeForce GTX 1080"
+    },
+    {
+      "title": "Spiritstead",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1650 / AMD Radeon RX 580 / Intel Iris Xe or equivalent",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 / AMD Radeon RX 580 / Intel Iris Xe or equivalent, Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent"
+    },
+    {
+      "title": "猎国沉默专属",
+      "tier": "green",
+      "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
+      "cpu": "Intel Core i3",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
+    },
+    {
+      "title": "Together in Forgotten Lands",
+      "tier": "red",
+      "gpu": "Nvidia RTX 3060",
+      "cpu": "Intel Core i5-7500",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia RTX 3060, Intel Core i5-7500"
+    },
+    {
+      "title": "南派盗墓传奇",
+      "tier": "green",
+      "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
+      "cpu": "Intel Core i3",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
+    },
+    {
+      "title": "Model Kit Shop Simulator",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1660 Ti or AMD Radeon RX 5600 XT (6 GB VRAM)",
+      "cpu": "Intel Core i5-8400 or AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Ti or AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-8400 or AMD Ryzen 5 2600"
+    },
+    {
+      "title": "diffiCULT",
+      "tier": "green",
+      "gpu": "Nvidia GTX 1060",
+      "cpu": "Intel i5-7500",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GTX 1060, Intel i5-7500"
+    },
+    {
+      "title": "战法道传奇",
+      "tier": "green",
+      "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
+      "cpu": "Intel Core i3",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
+    },
+    {
+      "title": "Wiseman: No More Breakups",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 or better",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 or better, Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Catio Simulator",
+      "tier": "green",
+      "gpu": "Radeon RX 560 / GeForce GTX 1050",
+      "cpu": "Intel Core i3-10100 / AMD Ryzen 3 3100",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Radeon RX 560 / GeForce GTX 1050, Intel Core i3-10100 / AMD Ryzen 3 3100"
+    },
+    {
+      "title": "70s-style Robot Anime Geppy-X",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1650",
+      "cpu": "Intel® Core™ i5 @ 3.20 GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650, Intel® Core™ i5 @ 3.20 GHz"
+    },
+    {
+      "title": "Deadliest Pigeon",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1650 or Better",
+      "cpu": "Intel Core i5-9400F or Better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 or Better, Intel Core i5-9400F or Better"
+    },
+    {
+      "title": "Warp to Sector One",
+      "tier": "green",
+      "gpu": "Intel Iris Xe",
+      "cpu": null,
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel Iris Xe"
+    },
+    {
+      "title": "Fairtravel Battle CCG",
+      "tier": "green",
+      "gpu": "NVIDIA Geforce GTX 1050, AMD RX 540",
+      "cpu": "Intel Core i5 2.4GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA Geforce GTX 1050, AMD RX 540, Intel Core i5 2.4GHz"
+    },
+    {
+      "title": "Halu - The Fish",
+      "tier": "orange",
+      "gpu": "RTX 2060 / RTX 3060 / RX 6600 XT",
+      "cpu": "Intel i7-8700K / Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 2060 / RTX 3060 / RX 6600 XT, Intel i7-8700K / Ryzen 5 3600"
+    },
+    {
+      "title": "A Game About Penguins: First Catch",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1660 or AMD RX 580",
+      "cpu": "Intel i5 or AMD Ryzen 5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1660 or AMD RX 580, Intel i5 or AMD Ryzen 5"
+    },
+    {
+      "title": "Minsgon Simulator: Prologue",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1050 / AMD RX 470",
+      "cpu": "i5 3550 / AMD RYZEN 5 2500X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1050 / AMD RX 470, i5 3550 / AMD RYZEN 5 2500X"
+    },
+    {
+      "title": "Super Shout Showdown",
+      "tier": "orange",
+      "gpu": "NVIDIA RTX 2060 / RX 6600 or better",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600 or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 2060 / RX 6600 or better, Intel Core i5-10400 / AMD Ryzen 5 3600 or better"
+    },
+    {
+      "title": "Sunny Side Up",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce GTX 3060 or AMD Radeon RX 5700-XT",
+      "cpu": "Intel i5 11600 or Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 3060 or AMD Radeon RX 5700-XT, Intel i5 11600 or Ryzen 5 5600"
+    },
+    {
+      "title": "Uchi No Heya!",
+      "tier": "green",
+      "gpu": "any modern GPU with WebGL2 — Intel Iris Xe, AMD Radeon, NVIDIA GeForce 1050+, or comparable",
+      "cpu": "Intel Core i5 (8th gen+) / AMD Ryzen 3 / equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: any modern GPU with WebGL2 — Intel Iris Xe, AMD Radeon, NVIDIA GeForce 1050+, or comparable, Intel Core i5 (8th gen+) / AMD Ryzen 3 / equivalent"
     }
   ]
 }
