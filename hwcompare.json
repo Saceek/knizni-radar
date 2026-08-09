@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-09T20:20:38.793Z",
+  "updatedAt": "2026-08-09T21:20:17.355Z",
   "games": [
     {
       "title": "Scrap Mechanic",
@@ -154,14 +154,6 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
-      "title": "Staffer Retro : A Supernatural Mystery Quest",
-      "tier": "green",
-      "gpu": "Better than GTX 1050",
-      "cpu": "better than Intel i5 8400 or AMD ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Better than GTX 1050, better than Intel i5 8400 or AMD ryzen 5 2600"
-    },
-    {
       "title": "Sovereign Tower",
       "tier": "green",
       "gpu": "GTX 1060, 6GB VRAM",
@@ -170,7 +162,15 @@
       "note": "Doporučená konfigurace: GTX 1060, 6GB VRAM, Intel Core i5-9600K"
     },
     {
-      "title": "Backpack Dungeon",
+      "title": "Staffer Retro : A Supernatural Mystery Quest",
+      "tier": "green",
+      "gpu": "Better than GTX 1050",
+      "cpu": "better than Intel i5 8400 or AMD ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Better than GTX 1050, better than Intel i5 8400 or AMD ryzen 5 2600"
+    },
+    {
+      "title": "背包地牢: Backpack Dungeon",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 750 Ti or equivalent",
       "cpu": "Intel i5 Quad-Core",
@@ -242,7 +242,7 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 | AMD Radeon R9-290X, Intel Core i5-11400F | AMD Ryzen 5 5600x"
     },
     {
-      "title": "Requiem of Reuinis",
+      "title": "列乌尼斯的挽歌 Requiem of Reuinis",
       "tier": "green",
       "gpu": "NVIDIA GeForce RTX 3050 / AMD Radeon RX 6600",
       "cpu": "Intel Core Ultra 7",
@@ -306,6 +306,14 @@
       "note": "Doporučená konfigurace: GeForce GTX 1650, Intel Core i5-12500"
     },
     {
+      "title": "Cleaning Up The Puzzle Gallery",
+      "tier": "green",
+      "gpu": "GTX 1060 or above",
+      "cpu": "Mid-Range Quadcore Processer",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1060 or above, Mid-Range Quadcore Processer"
+    },
+    {
       "title": "Vespera",
       "tier": "green",
       "gpu": "Intel HD Graphics 4000 / GeForce GT 630 / Radeon R7 250 or equivalent",
@@ -322,12 +330,12 @@
       "note": "Doporučená konfigurace: Nvidia GTX 1070 or better / AMD RX480 or better, I5 or better / Ryzen 5 or better"
     },
     {
-      "title": "Cleaning Up The Puzzle Gallery",
+      "title": "Zoominoes",
       "tier": "green",
-      "gpu": "GTX 1060 or above",
-      "cpu": "Mid-Range Quadcore Processer",
+      "gpu": "NVIDIA GTX 750 Ti / AMD equivalent or better",
+      "cpu": "Intel Core i5 or AMD equivalent (quad-core)",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1060 or above, Mid-Range Quadcore Processer"
+      "note": "Doporučená konfigurace: NVIDIA GTX 750 Ti / AMD equivalent or better, Intel Core i5 or AMD equivalent (quad-core)"
     },
     {
       "title": "Road Diner Simulator: Prologue",
@@ -336,14 +344,6 @@
       "cpu": "Intel Core i5 (recent generation)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 or better 6GB VRAM, Intel Core i5 (recent generation)"
-    },
-    {
-      "title": "Zoominoes",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 750 Ti / AMD equivalent or better",
-      "cpu": "Intel Core i5 or AMD equivalent (quad-core)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 750 Ti / AMD equivalent or better, Intel Core i5 or AMD equivalent (quad-core)"
     },
     {
       "title": "Lost & Found: A This Bed We Made Story",
@@ -642,6 +642,22 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1080 OR higher, Intel i5 750 @ 2.67Ghz or higher"
     },
     {
+      "title": "Spiritstead",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1650 / AMD Radeon RX 580 / Intel Iris Xe or equivalent",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 / AMD Radeon RX 580 / Intel Iris Xe or equivalent, Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent"
+    },
+    {
+      "title": "Get Out ! A \"Very Bad Dreams\" Story",
+      "tier": "red",
+      "gpu": "RTX 2080 / AMD Radeon RX 6700",
+      "cpu": "i7 / Ryzen 7",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 2080 / AMD Radeon RX 6700, i7 / Ryzen 7"
+    },
+    {
       "title": "SSTWL - Sector Breach",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1050",
@@ -664,22 +680,6 @@
       "cpu": "Intel Core i3-4160 / AMD FX-6300",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 Ti / AMD Radeon HD 7850, Intel Core i3-4160 / AMD FX-6300"
-    },
-    {
-      "title": "Get Out ! A \"Very Bad Dreams\" Story",
-      "tier": "red",
-      "gpu": "RTX 2080 / AMD Radeon RX 6700",
-      "cpu": "i7 / Ryzen 7",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 2080 / AMD Radeon RX 6700, i7 / Ryzen 7"
-    },
-    {
-      "title": "Spiritstead",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1650 / AMD Radeon RX 580 / Intel Iris Xe or equivalent",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 / AMD Radeon RX 580 / Intel Iris Xe or equivalent, Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent"
     },
     {
       "title": "Welcome to the Sharehouse! ~ domestic life with three cute girls~",
@@ -714,6 +714,14 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 2070 Super / AMD Radeon RX 5700, Intel Core i7-9700K / AMD Ryzen 7 3700X"
     },
     {
+      "title": "深渊兽潮",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1060 or higher",
+      "cpu": "Intel Core i5-9400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1060 or higher, Intel Core i5-9400"
+    },
+    {
       "title": "Idyll Isle",
       "tier": "green",
       "gpu": "Intel HD Graphics 630 / AMD Radeon RX 550 / NVIDIA GeForce GTX 750 or better",
@@ -730,12 +738,100 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1050 Ti or higher, Inter Core i5 - 12400F or higher"
     },
     {
-      "title": "深渊兽潮",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1060 or higher",
-      "cpu": "Intel Core i5-9400",
+      "title": "4D Intuition",
+      "tier": "orange",
+      "gpu": "NVidia GeForce GTX 1080",
+      "cpu": null,
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1060 or higher, Intel Core i5-9400"
+      "note": "Doporučená konfigurace: NVidia GeForce GTX 1080"
+    },
+    {
+      "title": "Letalis",
+      "tier": "green",
+      "gpu": "GeForce GTX 650 or Radeon HD 5770",
+      "cpu": "Intel Core i5-750 or AMD Phenom II x4 945",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 650 or Radeon HD 5770, Intel Core i5-750 or AMD Phenom II x4 945"
+    },
+    {
+      "title": "猎国沉默专属",
+      "tier": "green",
+      "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
+      "cpu": "Intel Core i3",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
+    },
+    {
+      "title": "南派盗墓传奇",
+      "tier": "green",
+      "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
+      "cpu": "Intel Core i3",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
+    },
+    {
+      "title": "Model Kit Shop Simulator",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1660 Ti or AMD Radeon RX 5600 XT (6 GB VRAM)",
+      "cpu": "Intel Core i5-8400 or AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Ti or AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-8400 or AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Deadliest Pigeon",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1650 or Better",
+      "cpu": "Intel Core i5-9400F or Better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 or Better, Intel Core i5-9400F or Better"
+    },
+    {
+      "title": "diffiCULT",
+      "tier": "green",
+      "gpu": "Nvidia GTX 1060",
+      "cpu": "Intel i5-7500",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GTX 1060, Intel i5-7500"
+    },
+    {
+      "title": "Catio Simulator",
+      "tier": "green",
+      "gpu": "Radeon RX 560 / GeForce GTX 1050",
+      "cpu": "Intel Core i3-10100 / AMD Ryzen 3 3100",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Radeon RX 560 / GeForce GTX 1050, Intel Core i3-10100 / AMD Ryzen 3 3100"
+    },
+    {
+      "title": "Wiseman: No More Breakups",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 or better",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 or better, Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "70年代風ロボットアニメ ゲッP-X",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1650",
+      "cpu": "Intel® Core™ i5 @ 3.20 GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650, Intel® Core™ i5 @ 3.20 GHz"
+    },
+    {
+      "title": "Super Shout Showdown",
+      "tier": "orange",
+      "gpu": "NVIDIA RTX 2060 / RX 6600 or better",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600 or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 2060 / RX 6600 or better, Intel Core i5-10400 / AMD Ryzen 5 3600 or better"
+    },
+    {
+      "title": "Warp to Sector One",
+      "tier": "green",
+      "gpu": "Intel Iris Xe",
+      "cpu": null,
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel Iris Xe"
     }
   ]
 }
