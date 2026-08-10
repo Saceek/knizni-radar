@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-10T11:19:52.949Z",
+  "updatedAt": "2026-08-10T12:19:33.653Z",
   "games": [
     {
       "title": "Scrap Mechanic",
@@ -178,7 +178,7 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10600 / AMD Ryzen 5 3600"
     },
     {
-      "title": "背包地牢: Backpack Dungeon",
+      "title": "Backpack Dungeon",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 750 Ti or equivalent",
       "cpu": "Intel i5 Quad-Core",
@@ -242,12 +242,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 | AMD Radeon R9-290X, Intel Core i5-11400F | AMD Ryzen 5 5600x"
     },
     {
-      "title": "列乌尼斯的挽歌 Requiem of Reuinis",
+      "title": "Requiem of Reuinis",
       "tier": "green",
       "gpu": "NVIDIA GeForce RTX 3050 / AMD Radeon RX 6600",
       "cpu": "Intel Core Ultra 7",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3050 / AMD Radeon RX 6600, Intel Core Ultra 7"
+    },
+    {
+      "title": "Chop Chop Inc.",
+      "tier": "red",
+      "gpu": "GeForce RTX 3080 Ti or Radeon RX 6800 XT",
+      "cpu": "Core i5-11600K or Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3080 Ti or Radeon RX 6800 XT, Core i5-11600K or Ryzen 5 5600X"
     },
     {
       "title": "Birds of War",
@@ -264,14 +272,6 @@
       "cpu": "AMD Ryzen 5 5600X / Intel Core i5-12600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: 8 GB VRAM, AMD Radeon RX 6700 / Nvidia GeForce RTX 3060, AMD Ryzen 5 5600X / Intel Core i5-12600"
-    },
-    {
-      "title": "Chop Chop Inc.",
-      "tier": "red",
-      "gpu": "GeForce RTX 3080 Ti or Radeon RX 6800 XT",
-      "cpu": "Core i5-11600K or Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3080 Ti or Radeon RX 6800 XT, Core i5-11600K or Ryzen 5 5600X"
     },
     {
       "title": "Is the Vat Utopia or Dystopia? 这里没有地雷妹！",
@@ -538,6 +538,14 @@
       "note": "Doporučená konfigurace: AMD Radeon RX 5700 ／ NVIDIA GeForce GTX 1070, AMD Ryzen 5 3600 ／ Intel Core i7 8700"
     },
     {
+      "title": "Elektronická dřevěná ryba",
+      "tier": "green",
+      "gpu": "Intel HD Graphics 4400",
+      "cpu": "i5",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics 4400, i5"
+    },
+    {
       "title": "Pimbolas",
       "tier": "green",
       "gpu": "NVIDIA Geforce GTX 1060 3GB",
@@ -552,14 +560,6 @@
       "cpu": "Intel Core i7-6950X / AMD Ryzen 7 2700",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1080 / Radeon RX Vega 56 / Arc A580, Intel Core i7-6950X / AMD Ryzen 7 2700"
-    },
-    {
-      "title": "Elektronická dřevěná ryba",
-      "tier": "green",
-      "gpu": "Intel HD Graphics 4400",
-      "cpu": "i5",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 4400, i5"
     },
     {
       "title": "Together in Forgotten Lands",
@@ -736,6 +736,46 @@
       "cpu": "Inter Core i5 - 12400F or higher",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1050 Ti or higher, Inter Core i5 - 12400F or higher"
+    },
+    {
+      "title": "Letalis",
+      "tier": "green",
+      "gpu": "GeForce GTX 650 or Radeon HD 5770",
+      "cpu": "Intel Core i5-750 or AMD Phenom II x4 945",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 650 or Radeon HD 5770, Intel Core i5-750 or AMD Phenom II x4 945"
+    },
+    {
+      "title": "4D Intuition",
+      "tier": "orange",
+      "gpu": "NVidia GeForce GTX 1080",
+      "cpu": null,
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVidia GeForce GTX 1080"
+    },
+    {
+      "title": "猎国沉默专属",
+      "tier": "green",
+      "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
+      "cpu": "Intel Core i3",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
+    },
+    {
+      "title": "Model Kit Shop Simulator",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1660 Ti or AMD Radeon RX 5600 XT (6 GB VRAM)",
+      "cpu": "Intel Core i5-8400 or AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Ti or AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-8400 or AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Deadliest Pigeon",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1650 or Better",
+      "cpu": "Intel Core i5-9400F or Better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 or Better, Intel Core i5-9400F or Better"
     }
   ]
 }
