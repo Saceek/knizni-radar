@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-12T13:18:44.611Z",
+  "updatedAt": "2026-08-12T14:19:05.010Z",
   "games": [
     {
       "title": "Scrap Mechanic",
@@ -144,14 +144,6 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
-      "title": "A Game About Chopping Trees",
-      "tier": "orange",
-      "gpu": "NVIDIA RTX 3060 or AMD Radeon RX 6600 XT",
-      "cpu": "Quad-core Intel or AMD, 2.5 GHz or faster",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 3060 or AMD Radeon RX 6600 XT, Quad-core Intel or AMD, 2.5 GHz or faster"
     },
     {
       "title": "GRAIN ROT",
@@ -466,6 +458,14 @@
       "note": "Doporučená konfigurace: GeForce GTX 1050 (2048 VRAM); Radeon R9 380 (2048 VRAM), Intel Core i5-3470"
     },
     {
+      "title": "TUNG",
+      "tier": "orange",
+      "gpu": "GTX 1080",
+      "cpu": "Intel Core i5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1080, Intel Core i5"
+    },
+    {
       "title": "Deadly Trick",
       "tier": "green",
       "gpu": "GTX 1060 3GB",
@@ -568,14 +568,6 @@
       "cpu": "Core i5 14400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 3060, Core i5 14400"
-    },
-    {
-      "title": "TUNG",
-      "tier": "orange",
-      "gpu": "GTX 1080",
-      "cpu": "Intel Core i5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1080, Intel Core i5"
     },
     {
       "title": "Dverghold",
@@ -744,142 +736,6 @@
       "cpu": "Intel Core i3",
       "usedMinimum": true,
       "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
-    },
-    {
-      "title": "[HERROR] Gas Station Case",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1060 6GB or AMD Radeon RX 580 8GB",
-      "cpu": "Intel Core i5-4670 | AMD Ryzen5 1600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1060 6GB or AMD Radeon RX 580 8GB, Intel Core i5-4670 | AMD Ryzen5 1600"
-    },
-    {
-      "title": "南派盗墓传奇",
-      "tier": "green",
-      "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
-      "cpu": "Intel Core i3",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
-    },
-    {
-      "title": "Catio Simulator",
-      "tier": "green",
-      "gpu": "Radeon RX 560 / GeForce GTX 1050",
-      "cpu": "Intel Core i3-10100 / AMD Ryzen 3 3100",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Radeon RX 560 / GeForce GTX 1050, Intel Core i3-10100 / AMD Ryzen 3 3100"
-    },
-    {
-      "title": "Wiseman: No More Breakups",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 or better",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 or better, Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
-      "title": "70s-style Robot Anime Geppy-X",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1650",
-      "cpu": "Intel® Core™ i5 @ 3.20 GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650, Intel® Core™ i5 @ 3.20 GHz"
-    },
-    {
-      "title": "Hell Deck",
-      "tier": "green",
-      "gpu": "GTX 1050",
-      "cpu": "Core i5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1050, Core i5"
-    },
-    {
-      "title": "Cheat Death",
-      "tier": "green",
-      "gpu": "Nvidia® GeForce™ GTX 1650 (4GB) / AMD® Radeon™ R9 390X (8GB)",
-      "cpu": "Intel® Core™ i5-4670K / AMD® Ryzen™ 5 2400G",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia® GeForce™ GTX 1650 (4GB) / AMD® Radeon™ R9 390X (8GB), Intel® Core™ i5-4670K / AMD® Ryzen™ 5 2400G"
-    },
-    {
-      "title": "群侠传：幸存者",
-      "tier": "green",
-      "gpu": "GeForce GTX 1050 / Radeon RX 560 / Intel Iris Xe，2 GB 显存",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1050 / Radeon RX 560 / Intel Iris Xe，2 GB 显存, Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
-      "title": "Pight",
-      "tier": "green",
-      "gpu": "Intel HD Graphics",
-      "cpu": "Intel Celeron",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics, Intel Celeron"
-    },
-    {
-      "title": "Fairtravel Battle CCG",
-      "tier": "green",
-      "gpu": "NVIDIA Geforce GTX 1050, AMD RX 540",
-      "cpu": "Intel Core i5 2.4GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA Geforce GTX 1050, AMD RX 540, Intel Core i5 2.4GHz"
-    },
-    {
-      "title": "A Game About Penguins: First Catch",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1660 or AMD RX 580",
-      "cpu": "Intel i5 or AMD Ryzen 5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1660 or AMD RX 580, Intel i5 or AMD Ryzen 5"
-    },
-    {
-      "title": "Hell o’ Halo",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB",
-      "cpu": "Intel® Core™ i7-4770K / AMD Ryzen 5 1500X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB, Intel® Core™ i7-4770K / AMD Ryzen 5 1500X"
-    },
-    {
-      "title": "Uchi No Heya!",
-      "tier": "green",
-      "gpu": "any modern GPU with WebGL2 — Intel Iris Xe, AMD Radeon, NVIDIA GeForce 1050+, or comparable",
-      "cpu": "Intel Core i5 (8th gen+) / AMD Ryzen 3 / equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: any modern GPU with WebGL2 — Intel Iris Xe, AMD Radeon, NVIDIA GeForce 1050+, or comparable, Intel Core i5 (8th gen+) / AMD Ryzen 3 / equivalent"
-    },
-    {
-      "title": "Only Good Babysitters Go To Heaven",
-      "tier": "green",
-      "gpu": "Nvidia GTX 750 TI 2 GB",
-      "cpu": "Intel core i5",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Nvidia GTX 750 TI 2 GB, Intel core i5"
-    },
-    {
-      "title": "Sunny Side Up",
-      "tier": "orange",
-      "gpu": "NVIDIA GeForce GTX 3060 or AMD Radeon RX 5700-XT",
-      "cpu": "Intel i5 11600 or Ryzen 5 5600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 3060 or AMD Radeon RX 5700-XT, Intel i5 11600 or Ryzen 5 5600"
-    },
-    {
-      "title": "FixForce",
-      "tier": "red",
-      "gpu": "NVIDIA RTX 3080 10GB, AMD Radeon RX6800XT 16GB",
-      "cpu": "AMD Ryzen 3600 or Intel Core i7 7700k",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 3080 10GB, AMD Radeon RX6800XT 16GB, AMD Ryzen 3600 or Intel Core i7 7700k"
-    },
-    {
-      "title": "Powerplay",
-      "tier": "orange",
-      "gpu": "RTX 2060 or similar",
-      "cpu": "2.8 Ghz Dual Core or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 2060 or similar, 2.8 Ghz Dual Core or better"
     }
   ]
 }
