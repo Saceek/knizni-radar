@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-12T04:18:57.113Z",
+  "updatedAt": "2026-08-12T05:15:14.167Z",
   "games": [
     {
       "title": "Scrap Mechanic",
@@ -242,7 +242,7 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 | AMD Radeon R9-290X, Intel Core i5-11400F | AMD Ryzen 5 5600x"
     },
     {
-      "title": "Requiem of Reuinis",
+      "title": "列乌尼斯的挽歌 Requiem of Reuinis",
       "tier": "green",
       "gpu": "NVIDIA GeForce RTX 3050 / AMD Radeon RX 6600",
       "cpu": "Intel Core Ultra 7",
@@ -258,20 +258,20 @@
       "note": "Doporučená konfigurace: GTX 1060 or above, Mid-Range Quadcore Processer"
     },
     {
-      "title": "Birds of War",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1050 Ti / GTX 1650 / AMD Radeon RX 570 (4 GB VRAM)",
-      "cpu": "Intel i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1050 Ti / GTX 1650 / AMD Radeon RX 570 (4 GB VRAM), Intel i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
       "title": "Drone Sector",
       "tier": "red",
       "gpu": "8 GB VRAM, AMD Radeon RX 6700 / Nvidia GeForce RTX 3060",
       "cpu": "AMD Ryzen 5 5600X / Intel Core i5-12600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: 8 GB VRAM, AMD Radeon RX 6700 / Nvidia GeForce RTX 3060, AMD Ryzen 5 5600X / Intel Core i5-12600"
+    },
+    {
+      "title": "Birds of War",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1050 Ti / GTX 1650 / AMD Radeon RX 570 (4 GB VRAM)",
+      "cpu": "Intel i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1050 Ti / GTX 1650 / AMD Radeon RX 570 (4 GB VRAM), Intel i5-8400 / AMD Ryzen 5 2600"
     },
     {
       "title": "Pih 2",
@@ -498,6 +498,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 960 / Radeon R9 380, Intel Core i5-3570K / AMD Ryzen 3 1200"
     },
     {
+      "title": "Spiritstead",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1650 / AMD Radeon RX 580 / Intel Iris Xe or equivalent",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 / AMD Radeon RX 580 / Intel Iris Xe or equivalent, Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent"
+    },
+    {
       "title": "Elektronická dřevěná ryba",
       "tier": "green",
       "gpu": "Intel HD Graphics 4400",
@@ -512,14 +520,6 @@
       "cpu": "Ryzen 5 1500X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA Geforce GTX 1060 3GB, Ryzen 5 1500X"
-    },
-    {
-      "title": "Spiritstead",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1650 / AMD Radeon RX 580 / Intel Iris Xe or equivalent",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 / AMD Radeon RX 580 / Intel Iris Xe or equivalent, Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent"
     },
     {
       "title": "Heave Ho 2",
@@ -562,20 +562,20 @@
       "note": "Doporučená konfigurace: GeForce RTX 3060, Core i5 14400"
     },
     {
-      "title": "Dodo Duckie",
-      "tier": "orange",
-      "gpu": "NVIDIA GeForce RTX 2060 (6 GB) / AMD Radeon RX 5600 XT",
-      "cpu": "Intel Core i5-12400F / AMD Ryzen 5 5600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 (6 GB) / AMD Radeon RX 5600 XT, Intel Core i5-12400F / AMD Ryzen 5 5600"
-    },
-    {
       "title": "Get Out ! A \"Very Bad Dreams\" Story",
       "tier": "red",
       "gpu": "RTX 2080 / AMD Radeon RX 6700",
       "cpu": "i7 / Ryzen 7",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 2080 / AMD Radeon RX 6700, i7 / Ryzen 7"
+    },
+    {
+      "title": "Dodo Duckie",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce RTX 2060 (6 GB) / AMD Radeon RX 5600 XT",
+      "cpu": "Intel Core i5-12400F / AMD Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 (6 GB) / AMD Radeon RX 5600 XT, Intel Core i5-12400F / AMD Ryzen 5 5600"
     },
     {
       "title": "ON&OFF",
@@ -754,7 +754,7 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 or better, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
-      "title": "70s-style Robot Anime Geppy-X",
+      "title": "70年代風ロボットアニメ ゲッP-X",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1650",
       "cpu": "Intel® Core™ i5 @ 3.20 GHz",
@@ -792,46 +792,6 @@
       "cpu": "Intel Core i5 2.4GHz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA Geforce GTX 1050, AMD RX 540, Intel Core i5 2.4GHz"
-    },
-    {
-      "title": "A Game About Penguins: First Catch",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1660 or AMD RX 580",
-      "cpu": "Intel i5 or AMD Ryzen 5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1660 or AMD RX 580, Intel i5 or AMD Ryzen 5"
-    },
-    {
-      "title": "Minsgon Simulator: Prologue",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1050 / AMD RX 470",
-      "cpu": "i5 3550 / AMD RYZEN 5 2500X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1050 / AMD RX 470, i5 3550 / AMD RYZEN 5 2500X"
-    },
-    {
-      "title": "[HERROR] Gas Station Case",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1060 6GB or AMD Radeon RX 580 8GB",
-      "cpu": "Intel Core i5-4670 | AMD Ryzen5 1600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1060 6GB or AMD Radeon RX 580 8GB, Intel Core i5-4670 | AMD Ryzen5 1600"
-    },
-    {
-      "title": "Hell o’ Halo",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB",
-      "cpu": "Intel® Core™ i7-4770K / AMD Ryzen 5 1500X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB, Intel® Core™ i7-4770K / AMD Ryzen 5 1500X"
-    },
-    {
-      "title": "Uchi No Heya!",
-      "tier": "green",
-      "gpu": "any modern GPU with WebGL2 — Intel Iris Xe, AMD Radeon, NVIDIA GeForce 1050+, or comparable",
-      "cpu": "Intel Core i5 (8th gen+) / AMD Ryzen 3 / equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: any modern GPU with WebGL2 — Intel Iris Xe, AMD Radeon, NVIDIA GeForce 1050+, or comparable, Intel Core i5 (8th gen+) / AMD Ryzen 3 / equivalent"
     },
     {
       "title": "Sunny Side Up",
