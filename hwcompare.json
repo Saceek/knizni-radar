@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-13T08:18:28.187Z",
+  "updatedAt": "2026-08-13T09:18:06.905Z",
   "games": [
     {
       "title": "Scrap Mechanic",
@@ -314,12 +314,12 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 750ti or equivalent, Intel i7"
     },
     {
-      "title": "Lost & Found: A This Bed We Made Story",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1660",
-      "cpu": "Ryzen 5 3600",
+      "title": "Kill The Shadow",
+      "tier": "red",
+      "gpu": "NVIDIA GeForce RTX 3060 / AMD RX 6600 XT",
+      "cpu": "Intel Core i5-12600K / AMD Ryzen 5 7600X",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660, Ryzen 5 3600"
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD RX 6600 XT, Intel Core i5-12600K / AMD Ryzen 5 7600X"
     },
     {
       "title": "The Skin Stapler",
@@ -330,12 +330,12 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 or higher, Intel(R) Core(TM) i5-9600K CPU @ 3.70GHz or equivalent"
     },
     {
-      "title": "Kill The Shadow",
-      "tier": "red",
-      "gpu": "NVIDIA GeForce RTX 3060 / AMD RX 6600 XT",
-      "cpu": "Intel Core i5-12600K / AMD Ryzen 5 7600X",
+      "title": "Lost & Found: A This Bed We Made Story",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1660",
+      "cpu": "Ryzen 5 3600",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD RX 6600 XT, Intel Core i5-12600K / AMD Ryzen 5 7600X"
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660, Ryzen 5 3600"
     },
     {
       "title": "Jeffrey Eggstein",
@@ -546,6 +546,14 @@
       "note": "Doporučená konfigurace: GeForce GTX 1080 / Radeon RX Vega 56 / Arc A580, Intel Core i7-6950X / AMD Ryzen 7 2700"
     },
     {
+      "title": "群侠传：幸存者",
+      "tier": "green",
+      "gpu": "GeForce GTX 1050 / Radeon RX 560 / Intel Iris Xe，2 GB 显存",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1050 / Radeon RX 560 / Intel Iris Xe，2 GB 显存, Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
       "title": "ゆるゆる生配信する推しは100万回死ぬ｜My Fav Chill Streamer Dies a Million Times",
       "tier": "red",
       "gpu": "GeForce RTX 3060",
@@ -568,14 +576,6 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 / AMD Radeon RX 580 or equivalent (4 GB VRAM), Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent"
-    },
-    {
-      "title": "群侠传：幸存者",
-      "tier": "green",
-      "gpu": "GeForce GTX 1050 / Radeon RX 560 / Intel Iris Xe，2 GB 显存",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1050 / Radeon RX 560 / Intel Iris Xe，2 GB 显存, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
       "title": "Get Out ! A \"Very Bad Dreams\" Story",
@@ -642,7 +642,7 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 or higher, Intel Core i5-9400"
     },
     {
-      "title": "Delvegg",
+      "title": "挖个蛋 Delvegg",
       "tier": "green",
       "gpu": "Nvidia GeForce GTX 650 / AMD equivalent or better",
       "cpu": "Intel Core i5 or better",
@@ -832,6 +832,54 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 1600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560, Intel Core i5-8400 / AMD Ryzen 5 1600"
+    },
+    {
+      "title": "Powerplay",
+      "tier": "orange",
+      "gpu": "RTX 2060 or similar",
+      "cpu": "2.8 Ghz Dual Core or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 2060 or similar, 2.8 Ghz Dual Core or better"
+    },
+    {
+      "title": "Viking Vending",
+      "tier": "green",
+      "gpu": "Intel® HD Graphics 3000",
+      "cpu": "Intel Core i5-3470",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel® HD Graphics 3000, Intel Core i5-3470"
+    },
+    {
+      "title": "Bird Game 3: Birdtopia",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 950",
+      "cpu": "2.5Ghz or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 950, 2.5Ghz or better"
+    },
+    {
+      "title": "Cat Chaos",
+      "tier": "orange",
+      "gpu": "GeForce GTX 1080 or Radeon RX 6600",
+      "cpu": "3.0 GHz Quad Core",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1080 or Radeon RX 6600, 3.0 GHz Quad Core"
+    },
+    {
+      "title": "Retail Rivals",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1060 (6 GB) or AMD RX 570 (4 GB)",
+      "cpu": "Intel i5-6600k (4 core 3.5 GHz) or AMD Ryzen 5 2400 G (4 core 3.6 GHz)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1060 (6 GB) or AMD RX 570 (4 GB), Intel i5-6600k (4 core 3.5 GHz) or AMD Ryzen 5 2400 G (4 core 3.6 GHz)"
+    },
+    {
+      "title": "Grand Cru: The Wine Maker",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 Disk",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600 (3.0 GHz Quad Core) Memory: 8192 MB RAM Graphics: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 Disk",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 Disk, Intel Core i5-8400 / AMD Ryzen 5 2600 (3.0 GHz Quad Core) Memory: 8192 MB RAM Graphics: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 Disk"
     }
   ]
 }
