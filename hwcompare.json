@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-13T15:18:40.585Z",
+  "updatedAt": "2026-08-13T16:17:43.204Z",
   "games": [
     {
       "title": "Scrap Mechanic",
@@ -266,20 +266,20 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1050 Ti / GTX 1650 / AMD Radeon RX 570 (4 GB VRAM), Intel i5-8400 / AMD Ryzen 5 2600"
     },
     {
-      "title": "Pih 2",
-      "tier": "green",
-      "gpu": "Intel® Iris® Xe Graphics",
-      "cpu": "intel core i5",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel® Iris® Xe Graphics, intel core i5"
-    },
-    {
       "title": "Village in the Shade",
       "tier": "green",
       "gpu": "GeForce GTX 1650",
       "cpu": "Intel Core i5-12500",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1650, Intel Core i5-12500"
+    },
+    {
+      "title": "Pih 2",
+      "tier": "green",
+      "gpu": "Intel® Iris® Xe Graphics",
+      "cpu": "intel core i5",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel® Iris® Xe Graphics, intel core i5"
     },
     {
       "title": "Osta",
@@ -466,14 +466,6 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 6GB or AMD Radeon RX 580 8GB, Intel Core i5-4670 | AMD Ryzen5 1600"
     },
     {
-      "title": "Gospodar's Tales",
-      "tier": "green",
-      "gpu": "AMD Radeon RX 5700 ／ NVIDIA GeForce GTX 1070",
-      "cpu": "AMD Ryzen 5 3600 ／ Intel Core i7 8700",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: AMD Radeon RX 5700 ／ NVIDIA GeForce GTX 1070, AMD Ryzen 5 3600 ／ Intel Core i7 8700"
-    },
-    {
       "title": "Spiritstead",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1650 / AMD Radeon RX 580 / Intel Iris Xe or equivalent",
@@ -482,20 +474,28 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 / AMD Radeon RX 580 / Intel Iris Xe or equivalent, Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent"
     },
     {
-      "title": "Montabi",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 960 / Radeon R9 380",
-      "cpu": "Intel Core i5-3570K / AMD Ryzen 3 1200",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 960 / Radeon R9 380, Intel Core i5-3570K / AMD Ryzen 3 1200"
-    },
-    {
       "title": "Hariti",
       "tier": "green",
       "gpu": "GeForce GTX  1060",
       "cpu": "Intel CPU Core i5",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce GTX  1060, Intel CPU Core i5"
+    },
+    {
+      "title": "Gospodar's Tales",
+      "tier": "green",
+      "gpu": "AMD Radeon RX 5700 ／ NVIDIA GeForce GTX 1070",
+      "cpu": "AMD Ryzen 5 3600 ／ Intel Core i7 8700",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: AMD Radeon RX 5700 ／ NVIDIA GeForce GTX 1070, AMD Ryzen 5 3600 ／ Intel Core i7 8700"
+    },
+    {
+      "title": "Montabi",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 960 / Radeon R9 380",
+      "cpu": "Intel Core i5-3570K / AMD Ryzen 3 1200",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 960 / Radeon R9 380, Intel Core i5-3570K / AMD Ryzen 3 1200"
     },
     {
       "title": "Together in Forgotten Lands",
@@ -530,20 +530,20 @@
       "note": "Doporučená konfigurace: GeForce RTX 3060, Core i5 14400"
     },
     {
-      "title": "Dverghold",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1060 / AMD Radeon RX 580 or equivalent (4 GB VRAM)",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 / AMD Radeon RX 580 or equivalent (4 GB VRAM), Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent"
-    },
-    {
       "title": "Get Out ! A \"Very Bad Dreams\" Story",
       "tier": "red",
       "gpu": "RTX 2080 / AMD Radeon RX 6700",
       "cpu": "i7 / Ryzen 7",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 2080 / AMD Radeon RX 6700, i7 / Ryzen 7"
+    },
+    {
+      "title": "Dverghold",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1060 / AMD Radeon RX 580 or equivalent (4 GB VRAM)",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 / AMD Radeon RX 580 or equivalent (4 GB VRAM), Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent"
     },
     {
       "title": "Dodo Duckie",
@@ -610,7 +610,7 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GT 730"
     },
     {
-      "title": "Delvegg",
+      "title": "挖个蛋 Delvegg",
       "tier": "green",
       "gpu": "Nvidia GeForce GTX 650 / AMD equivalent or better",
       "cpu": "Intel Core i5 or better",
@@ -736,6 +736,14 @@
       "cpu": "Intel Core i5 2.4GHz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA Geforce GTX 1050, AMD RX 540, Intel Core i5 2.4GHz"
+    },
+    {
+      "title": "A Game About Penguins: First Catch",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1660 or AMD RX 580",
+      "cpu": "Intel i5 or AMD Ryzen 5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1660 or AMD RX 580, Intel i5 or AMD Ryzen 5"
     }
   ]
 }
