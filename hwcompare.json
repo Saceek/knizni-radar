@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-14T04:18:11.130Z",
+  "updatedAt": "2026-08-14T05:17:07.001Z",
   "games": [
     {
       "title": "Scrap Mechanic",
@@ -482,6 +482,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3070 Ti / AMD Radeon HD 7850, Intel Core i5-4590 / AMD Radeon RX 6800"
     },
     {
+      "title": "Unicycle Together",
+      "tier": "orange",
+      "gpu": "NVIDIA GTX 1080 OR higher",
+      "cpu": "Intel i5 750 @ 2.67Ghz or higher",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1080 OR higher, Intel i5 750 @ 2.67Ghz or higher"
+    },
+    {
       "title": "Spiritstead",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1650 / AMD Radeon RX 580 / Intel Iris Xe or equivalent",
@@ -496,14 +504,6 @@
       "cpu": "AMD Ryzen 5 3600 ／ Intel Core i7 8700",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: AMD Radeon RX 5700 ／ NVIDIA GeForce GTX 1070, AMD Ryzen 5 3600 ／ Intel Core i7 8700"
-    },
-    {
-      "title": "Unicycle Together",
-      "tier": "orange",
-      "gpu": "NVIDIA GTX 1080 OR higher",
-      "cpu": "Intel i5 750 @ 2.67Ghz or higher",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1080 OR higher, Intel i5 750 @ 2.67Ghz or higher"
     },
     {
       "title": "Montabi",
@@ -674,20 +674,20 @@
       "note": "Doporučená konfigurace: GeForce GTX 1060 6GB, AMD Ryzen 5 3600 / Intel Core i7 7700K"
     },
     {
-      "title": "猎国沉默专属",
-      "tier": "green",
-      "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
-      "cpu": "Intel Core i3",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
-    },
-    {
       "title": "Dream House Cleaning",
       "tier": "green",
       "gpu": "GTX 1660 / RX 590",
       "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 1660 / RX 590, Intel Core i5-10400 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "猎国沉默专属",
+      "tier": "green",
+      "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
+      "cpu": "Intel Core i3",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
     },
     {
       "title": "南派盗墓传奇",
@@ -722,6 +722,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 or better, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
+      "title": "Hell o’ Halo",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB",
+      "cpu": "Intel® Core™ i7-4770K / AMD Ryzen 5 1500X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB, Intel® Core™ i7-4770K / AMD Ryzen 5 1500X"
+    },
+    {
       "title": "Ledgerbound",
       "tier": "green",
       "gpu": "NVIDIA GTX 1660 / AMD RX 590 (6GB VRAM)",
@@ -744,14 +752,6 @@
       "cpu": "Intel Core i5 2.4GHz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA Geforce GTX 1050, AMD RX 540, Intel Core i5 2.4GHz"
-    },
-    {
-      "title": "Hell o’ Halo",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB",
-      "cpu": "Intel® Core™ i7-4770K / AMD Ryzen 5 1500X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB, Intel® Core™ i7-4770K / AMD Ryzen 5 1500X"
     },
     {
       "title": "A Game About Penguins: First Catch",
@@ -778,20 +778,20 @@
       "note": "Minimální konfigurace: Nvidia GTX 750 TI 2 GB, Intel core i5"
     },
     {
-      "title": "Hocus Focus",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1050 / AMD Radeon RX 560",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 1600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560, Intel Core i5-8400 / AMD Ryzen 5 1600"
-    },
-    {
       "title": "Sunny Side Up",
       "tier": "orange",
       "gpu": "NVIDIA GeForce GTX 3060 or AMD Radeon RX 5700-XT",
       "cpu": "Intel i5 11600 or Ryzen 5 5600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 3060 or AMD Radeon RX 5700-XT, Intel i5 11600 or Ryzen 5 5600"
+    },
+    {
+      "title": "Hocus Focus",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1050 / AMD Radeon RX 560",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 1600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560, Intel Core i5-8400 / AMD Ryzen 5 1600"
     },
     {
       "title": "Viking Vending",
