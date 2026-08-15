@@ -1617,12 +1617,15 @@ function render(){
     else if(S.newsStatus==="live") nst='<div class="note ok">✓ Novinky'+(S.newsUpdatedAt?" · aktualizováno "+new Date(S.newsUpdatedAt).toLocaleString("cs-CZ"):"")+'</div>';
     else if(S.newsStatus==="empty") nst='<div class="note warn">news.json se nepodařilo načíst – spusť build-news.js pro vygenerování.</div>';
 
+    // Primárně dle stáří (badge 3 → 2 → 1, jak přišlo z news.json), uvnitř stejného
+    // stáří pak dle rarity - Legendární → Epický → Vzácný → Common.
+    const byAgeThenRarity=(a,b)=> b.daysLeft-a.daysLeft || rarityRank(b.rating)-rarityRank(a.rating);
     const items = S.news?.items || [];
-    const books = items.filter(i=>i.type==="book");
-    const comicsNew = items.filter(i=>i.type==="comic");
-    const moviesNew = items.filter(i=>i.type==="movie");
-    const seriesNew = items.filter(i=>i.type==="series");
-    const games = items.filter(i=>i.type==="game");
+    const books = items.filter(i=>i.type==="book").sort(byAgeThenRarity);
+    const comicsNew = items.filter(i=>i.type==="comic").sort(byAgeThenRarity);
+    const moviesNew = items.filter(i=>i.type==="movie").sort(byAgeThenRarity);
+    const seriesNew = items.filter(i=>i.type==="series").sort(byAgeThenRarity);
+    const games = items.filter(i=>i.type==="game").sort(byAgeThenRarity);
     const total = items.length;
     // "Dnešní loot" = jen věci přidané dnes (badge "3"), ne celé 3denní okno retence
     const todayItems = items.filter(i=>i.daysLeft===3);
