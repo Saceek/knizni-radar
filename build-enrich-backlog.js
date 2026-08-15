@@ -6,6 +6,8 @@
  *  - filmy/seriály přidané "naslepo" (ČSFD blokuje živé vyhledávání v appce, viz index.html
  *    "+ Přidat i bez nalezení"): rok, plakát, hodnocení, typ (film/seriál) z ČSFD přes Playwright
  *    (obyčejný fetch ČSFD blokuje - stejný BotStopper důvod jako u build-movies.js)
+ *  - knihy: dostupnost e-knihy k půjčení přes Palmknihy v Městské knihovně Rokycany
+ *    (katalog.rokyknih.cz, taky přes Playwright - stejná Anubis JS výzva jako u ČSFD)
  * Spouštět jako poslední krok v build pipeline.   node build-enrich-backlog.js
  */
 
@@ -212,6 +214,32 @@ async function fetchDemoAppid(appid) {
   } catch (e) { return null; }
 }
 
+// Dostupnost e-knihy k půjčení přes Palmknihy v katalogu Městské knihovny Rokycany
+// (katalog.rokyknih.cz - VuFind, chráněný Anubis JS výzvou jako ČSFD, proto Playwright).
+const PALMKNIHY_WAIT = 6000;
+async function fetchPalmknihyMatch(page, title, author) {
+  const url = `https://katalog.rokyknih.cz/Search/Results?lookfor=${encodeURIComponent(title)}&type=Title&filter%5B%5D=format%3A%22eBook%22&filter%5B%5D=building%3A%22palmknihy%22`;
+  await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
+  await page.waitForTimeout(PALMKNIHY_WAIT);
+  const html = await page.content();
+  const $ = cheerio.load(html);
+  const wanted = normalizeTitle(`${title} ${author || ""}`).split(" ").filter((w) => w.length > 2);
+  if (!wanted.length) return null;
+  let best = null, bestScore = 0;
+  $(".result").each((_, el) => {
+    const id = $(el).find(".hiddenId").first().attr("value");
+    if (!id || !id.startsWith("PALMKNIHY.")) return;
+    const linkText = $(el).find(`a[href="/Record/${id}"]`).first().text().trim();
+    if (!linkText) return;
+    const norm = normalizeTitle(linkText);
+    const matches = wanted.filter((w) => norm.includes(w)).length;
+    const score = matches / wanted.length;
+    if (score > bestScore) { bestScore = score; best = id; }
+  });
+  if (!best || bestScore < 0.6) return null;
+  return { url: `https://katalog.rokyknih.cz/Record/${best}` };
+}
+
 async function main() {
   console.log("[enrich] start", new Date().toISOString());
   const backlog = loadBacklog();
@@ -261,8 +289,9 @@ async function main() {
   }
 
   const toEnrichMovies = backlog.filter((item) => item._category === "movie" && item.rating == null);
+  const toEnrichPalmknihy = backlog.filter((item) => (item._category === "book" || !item._category) && item.palmknihy === undefined);
 
-  if (!toEnrich.length && !toEnrichMovies.length && !changed) { console.log("[enrich] vše obohaceno, nic k dělání"); return; }
+  if (!toEnrich.length && !toEnrichMovies.length && !toEnrichPalmknihy.length && !changed) { console.log("[enrich] vše obohaceno, nic k dělání"); return; }
   if (toEnrich.length) console.log(`[enrich] ${toEnrich.length} knih k obohacení`);
   for (const item of toEnrich) {
     console.log(`  → ${item.title}`);
@@ -295,33 +324,52 @@ async function main() {
     }
   }
 
-  // Filmy/seriály přidané "naslepo" z Backlog vyhledávání (bez rating = ještě neobohaceno)
-  if (toEnrichMovies.length) {
-    console.log(`[enrich] ${toEnrichMovies.length} filmů/seriálů k obohacení z ČSFD`);
+  // Filmy/seriály přidané "naslepo" z Backlog vyhledávání (bez rating = ještě neobohaceno) +
+  // dostupnost e-knih přes Palmknihy - obojí potřebuje Playwright (Anubis JS výzva), sdílí browser
+  if (toEnrichMovies.length || toEnrichPalmknihy.length) {
     const { chromium } = require("playwright");
     const browser = await chromium.launch();
     const page = await browser.newPage({ userAgent: UA });
-    for (const item of toEnrichMovies) {
-      console.log(`  → ${item.title}`);
-      try {
-        const info = await enrichMovieFromCSFD(page, item.title);
-        if (info) {
-          if (info.poster) item.poster = info.poster;
-          if (info.rating != null) item.rating = info.rating;
-          if (info.year) item.year = info.year;
-          if (info.country) item.country = info.country;
-          if (info.genres?.length) item.genres = info.genres;
-          if (info.type) item.type = info.type;
-          if (info.url) item.url = info.url;
-          changed++;
-          console.log(`    ✓ ${info.type}, ${info.rating}%, ${info.year}`);
-        } else {
-          console.log("    ✗ na ČSFD nenalezeno");
+
+    if (toEnrichMovies.length) {
+      console.log(`[enrich] ${toEnrichMovies.length} filmů/seriálů k obohacení z ČSFD`);
+      for (const item of toEnrichMovies) {
+        console.log(`  → ${item.title}`);
+        try {
+          const info = await enrichMovieFromCSFD(page, item.title);
+          if (info) {
+            if (info.poster) item.poster = info.poster;
+            if (info.rating != null) item.rating = info.rating;
+            if (info.year) item.year = info.year;
+            if (info.country) item.country = info.country;
+            if (info.genres?.length) item.genres = info.genres;
+            if (info.type) item.type = info.type;
+            if (info.url) item.url = info.url;
+            changed++;
+            console.log(`    ✓ ${info.type}, ${info.rating}%, ${info.year}`);
+          } else {
+            console.log("    ✗ na ČSFD nenalezeno");
+          }
+        } catch (e) {
+          console.warn("    ! chyba:", e.message);
         }
-      } catch (e) {
-        console.warn("    ! chyba:", e.message);
       }
     }
+
+    if (toEnrichPalmknihy.length) {
+      console.log(`[enrich] ${toEnrichPalmknihy.length} knih k ověření dostupnosti v knihovně (Palmknihy)`);
+      for (const item of toEnrichPalmknihy) {
+        try {
+          const match = await fetchPalmknihyMatch(page, item.title, item.author);
+          item.palmknihy = match;
+          changed++;
+          console.log(`  → ${item.title}: ${match ? "✓ k dispozici" : "✗ nenalezeno"}`);
+        } catch (e) {
+          console.warn(`  → ${item.title}: chyba - ${e.message}`);
+        }
+      }
+    }
+
     await browser.close();
   }
 

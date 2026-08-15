@@ -148,6 +148,8 @@
   .gimg-wrap .gimg{border-radius:0;display:block}
   .gimg-wrap .tile-img{border-radius:0;display:block}
   .demo-ribbon{position:absolute;top:9px;left:-32px;transform:rotate(-45deg);background:var(--emerald);color:#0a2712;font-family:var(--mono);font-size:9px;font-weight:900;padding:3px 34px;letter-spacing:.08em;pointer-events:none}
+  .lib-pill{display:inline-flex;align-items:center;gap:3px;font-size:10px;font-weight:700;padding:2px 8px;border-radius:999px;background:rgba(55,227,212,.15);color:var(--cyan);text-decoration:none;white-space:nowrap}
+  .lib-pill:hover{background:rgba(55,227,212,.28)}
   .gprice{font-family:var(--mono);font-size:14px;font-weight:600;color:var(--emerald);margin-top:6px}
   .gprice-orig{font-family:var(--mono);font-size:12px;color:var(--sub);text-decoration:line-through;margin-top:4px}
   .gdiscount{font-family:var(--mono);font-size:11px;font-weight:700;color:#0a0a0a;background:var(--emerald);border-radius:4px;padding:1px 5px;margin-left:4px}
@@ -1057,6 +1059,8 @@ const IS_IPADOS = /Macintosh/i.test(navigator.userAgent) && navigator.maxTouchPo
 const IS_DESKTOP = !IS_IPADOS && !/Android|iPhone|iPad|iPod|Mobile|Tablet/i.test(navigator.userAgent);
 const steamDeepLink = (url) => { if(!IS_DESKTOP) return url; const m=(url||"").match(/store\.steampowered\.com\/app\/(\d+)/); return m ? `steam://store/${m[1]}` : url; };
 const demoRibbon = (g) => g.demoAppid ? `<span class="demo-ribbon">DEMO</span>` : "";
+// K dispozici jako e-kniha přes Palmknihy v Městské knihovně Rokycany
+const libraryPill = b => b.palmknihy ? `<a href="${esc(b.palmknihy.url)}" target="_blank" rel="noreferrer" class="lib-pill" title="K zapůjčení jako e-kniha - Městská knihovna Rokycany (Palmknihy)">📚 Knihovna</a>` : "";
 const rarity = r => r==null?null: r>=95?"leg": r>=85?"epic": r>=75?"rare": null;
 const rarityCls = r => {const k=rarity(r); return k?` r-${k}`:"";};
 const rarityPill = r => {const k=rarity(r); return k?`<span class="rarity ${k}">${k==="leg"?"★ LEGENDÁRNÍ":k==="epic"?"EPICKÝ":"VZÁCNÝ"}</span>`:"";};
@@ -1478,7 +1482,7 @@ function card(b,i){
     <div><div class="rank">#${i+1}</div>${coverHtml(b)}</div>
     <div class="body">
       <div class="row"><div style="min-width:0"><p class="title">${titleHtml(b)}</p><p class="muted">${esc(b.author)}</p></div>${priceHtml(b)}</div>
-      <div class="meta">${ratingHtml(b)}${rarityPill(b.rating)}</div>
+      <div class="meta">${ratingHtml(b)}${rarityPill(b.rating)}${libraryPill(b)}</div>
       <div class="actions">
         <button class="link" data-more="${esc(b.title)}">${open?"Méně ▲":"Detail & ceny ▼"}</button>
         <button class="bk ${bk?'on':''}" data-bk="${esc(b.title)}">${bk?'✓ V backlogu':'+ Backlog'}</button>
@@ -1493,7 +1497,7 @@ function backlogCard(b){
     <div>${coverHtml(b)}</div>
     <div class="body">
       <div class="row"><div style="min-width:0"><p class="title">${titleHtml(b)}</p><p class="muted">${esc(b.author)}</p></div>${priceHtml(b)}</div>
-      <div class="meta">${ratingHtml(b)}${rarityPill(b.rating)}</div>
+      <div class="meta">${ratingHtml(b)}${rarityPill(b.rating)}${libraryPill(b)}</div>
       <div class="actions">
         <button class="link" data-more="${esc(b.title)}">${open?"Méně ▲":"Detail & ceny ▼"}</button>
         <button class="bk rm" data-rm="${esc(b.title)}">✕ Odebrat</button>
