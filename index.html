@@ -402,6 +402,7 @@ const DIARY_PATH = "diary.json";
 let _syncStatus = "off";
 let _diarySyncStatus = "off";
 let _syncError = "";
+let _diarySyncError = "";
 
 function getGHToken(){ return localStorage.getItem(LS_TOKEN)||""; }
 
@@ -513,7 +514,7 @@ async function saveRemoteDiary(data){
     const getR=await fetch(apiUrl+"?t="+Date.now(),{cache:"no-store",headers:{Authorization:`Bearer ${token}`,Accept:"application/vnd.github+json"}});
     let sha=null;
     if(getR.ok){ sha=(await getR.json()).sha; }
-    else if(getR.status!==404){ return false; }
+    else if(getR.status!==404){ _diarySyncError=`Čtení SHA selhalo: ${getR.status}`; return false; }
     const jsonStr=JSON.stringify(data,null,2);
     const bytes=new TextEncoder().encode(jsonStr);
     let binStr=""; for(let i=0;i<bytes.length;i++) binStr+=String.fromCharCode(bytes[i]);
@@ -521,8 +522,13 @@ async function saveRemoteDiary(data){
     const body={message:"diary: sync",content,branch:"main"};
     if(sha) body.sha=sha;
     const r=await fetch(apiUrl,{method:"PUT",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify(body)});
-    return r.ok;
-  }catch(e){ console.warn("[diary-sync] save error:",e.message); return false; }
+    if(!r.ok){
+      const err=await r.json().catch(()=>({}));
+      _diarySyncError=`Zápis selhal: ${r.status} - ${err.message||"neznámá chyba"}`;
+      return false;
+    }
+    return true;
+  }catch(e){ _diarySyncError=e.message; console.warn("[diary-sync] save error:",e.message); return false; }
 }
 
 async function syncDiary(){
@@ -547,6 +553,7 @@ async function saveDiaryAndSync(a){
 const LS_PROGRESS_KEY = "knizniRadarProgress";
 const PROGRESS_PATH = "progress.json";
 let _progressSyncStatus = "off";
+let _progressSyncError = "";
 // Migrace ze staršího jednoho "game" slotu (před rozdělením na platformy) na game_pc -
 // starý slot byl vždy ze Steam backlogu, tedy PC.
 function migrateProgress(p){
@@ -582,7 +589,7 @@ async function saveRemoteProgress(data){
     const getR=await fetch(apiUrl+"?t="+Date.now(),{cache:"no-store",headers:{Authorization:`Bearer ${token}`,Accept:"application/vnd.github+json"}});
     let sha=null;
     if(getR.ok){ sha=(await getR.json()).sha; }
-    else if(getR.status!==404){ return false; }
+    else if(getR.status!==404){ _progressSyncError=`Čtení SHA selhalo: ${getR.status}`; return false; }
     const jsonStr=JSON.stringify(data,null,2);
     const bytes=new TextEncoder().encode(jsonStr);
     let binStr=""; for(let i=0;i<bytes.length;i++) binStr+=String.fromCharCode(bytes[i]);
@@ -590,8 +597,13 @@ async function saveRemoteProgress(data){
     const body={message:"progress: sync",content,branch:"main"};
     if(sha) body.sha=sha;
     const r=await fetch(apiUrl,{method:"PUT",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify(body)});
-    return r.ok;
-  }catch(e){ console.warn("[progress-sync] save error:",e.message); return false; }
+    if(!r.ok){
+      const err=await r.json().catch(()=>({}));
+      _progressSyncError=`Zápis selhal: ${r.status} - ${err.message||"neznámá chyba"}`;
+      return false;
+    }
+    return true;
+  }catch(e){ _progressSyncError=e.message; console.warn("[progress-sync] save error:",e.message); return false; }
 }
 
 async function syncProgress(){
@@ -1527,15 +1539,14 @@ function render(){
      <button class="tab ${S.view==='steam'?'on':''}" data-view="steam" title="Steam">🎮</button>
      <button class="tab ${S.view==='backlog'?'on':''}" data-view="backlog" title="Questy (${S.backlog.length})">⚔<span class="rail-badge">${S.backlog.length}</span></button>`;
 
+  const allSyncStatuses=[_syncStatus,_diarySyncStatus,_progressSyncStatus];
   const syncBtnEl=document.getElementById("sync-btn");
   if(syncBtnEl){
-    const dotCls=_syncStatus==='ok'?'ok':_syncStatus==='syncing'?'syncing':_syncStatus==='err'?'err':'';
+    const dotCls=allSyncStatuses.includes('syncing')?'syncing':allSyncStatuses.includes('err')?'err':allSyncStatuses.includes('ok')?'ok':'';
     syncBtnEl.innerHTML=`☁${dotCls?`<span class="rail-dot ${dotCls}"></span>`:""}`;
   }
 
-  if(_syncError && _syncStatus==='err'){
-    document.getElementById("status").innerHTML=`<div class="note warn">Sync chyba: ${esc(_syncError)}</div>`;
-  }
+  const syncErrMsg = _syncStatus==='err' ? _syncError : _diarySyncStatus==='err' ? _diarySyncError : _progressSyncStatus==='err' ? _progressSyncError : "";
 
   let st="";
   if(S.view==="list"){
@@ -1543,6 +1554,7 @@ function render(){
     else if(S.status==="live") st='<div class="note ok">✓ Živá data'+(S.updatedAt?" · aktualizováno "+new Date(S.updatedAt).toLocaleString("cs-CZ"):"")+'</div>';
     else if(S.status==="demo") st='<div class="note warn">Soubor se nepodařilo načíst – ukázková data.</div>';
   }
+  if(syncErrMsg) st += `<div class="note warn">Sync chyba: ${esc(syncErrMsg)}</div>`;
   document.getElementById("status").innerHTML = st;
 
   const view = document.getElementById("view");
