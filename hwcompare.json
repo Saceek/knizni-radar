@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-15T08:17:46.421Z",
+  "updatedAt": "2026-08-15T09:17:46.888Z",
   "games": [
     {
       "title": "Scrap Mechanic",
@@ -96,14 +96,6 @@
       "cpu": "Intel i7 12700K",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 3060, Intel i7 12700K"
-    },
-    {
-      "title": "GRAIN ROT",
-      "tier": "orange",
-      "gpu": "NVIDIA RTX 2060 / AMD Radeon RX 5700",
-      "cpu": "Intel Core i5-10600 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10600 / AMD Ryzen 5 3600"
     },
     {
       "title": "DIVE or DIE - Children of Rain",
@@ -370,14 +362,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 970, 4 GB or AMD Radeon RX 590, 8 GB, Intel Core i5-8400 or AMD Ryzen 5 2600"
     },
     {
-      "title": "Below, Rusted Gods",
-      "tier": "orange",
-      "gpu": "NVIDIA GeForce RTX 3060 12 GB or AMD Radeon RX 6600 XT 8 GB",
-      "cpu": "Intel Core i7-9700 or AMD Ryzen 7 3700X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB or AMD Radeon RX 6600 XT 8 GB, Intel Core i7-9700 or AMD Ryzen 7 3700X"
-    },
-    {
       "title": "群侠传：幸存者",
       "tier": "green",
       "gpu": "GeForce GTX 1050 / Radeon RX 560 / Intel Iris Xe，2 GB 显存",
@@ -386,12 +370,12 @@
       "note": "Doporučená konfigurace: GeForce GTX 1050 / Radeon RX 560 / Intel Iris Xe，2 GB 显存, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
-      "title": "Dear Magical Girls",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 970 or AMD Radeon RX 570",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "title": "Below, Rusted Gods",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce RTX 3060 12 GB or AMD Radeon RX 6600 XT 8 GB",
+      "cpu": "Intel Core i7-9700 or AMD Ryzen 7 3700X",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 970 or AMD Radeon RX 570, Intel Core i5-8400 / AMD Ryzen 5 2600"
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB or AMD Radeon RX 6600 XT 8 GB, Intel Core i7-9700 or AMD Ryzen 7 3700X"
     },
     {
       "title": "Pot's On!",
@@ -400,6 +384,14 @@
       "cpu": "i5-4690",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce GTX 1050Ti, i5-4690"
+    },
+    {
+      "title": "Dear Magical Girls",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 970 or AMD Radeon RX 570",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 970 or AMD Radeon RX 570, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
       "title": "Infinitevania",
@@ -578,6 +570,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 / AMD Radeon RX 580 or equivalent (4 GB VRAM), Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent"
     },
     {
+      "title": "No Results Found",
+      "tier": "green",
+      "gpu": "Intel UHD Graphics 620",
+      "cpu": "Intel Core i3-6100",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel UHD Graphics 620, Intel Core i3-6100"
+    },
+    {
       "title": "Landscaper Simulator",
       "tier": "green",
       "gpu": "NVIDIA GTX 1060 / AMD RX 480",
@@ -618,14 +618,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060, AMD Ryzen 7 3700X"
     },
     {
-      "title": "Fading Echo",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce RTX 3050 / AMD Equivalent",
-      "cpu": "AMD Ryzen 5 5600X / Intel Equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3050 / AMD Equivalent, AMD Ryzen 5 5600X / Intel Equivalent"
-    },
-    {
       "title": "深渊兽潮",
       "tier": "green",
       "gpu": "NVIDIA GTX 1060 or higher",
@@ -634,12 +626,12 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 or higher, Intel Core i5-9400"
     },
     {
-      "title": "No Results Found",
+      "title": "Fading Echo",
       "tier": "green",
-      "gpu": "Intel UHD Graphics 620",
-      "cpu": "Intel Core i3-6100",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel UHD Graphics 620, Intel Core i3-6100"
+      "gpu": "NVIDIA GeForce RTX 3050 / AMD Equivalent",
+      "cpu": "AMD Ryzen 5 5600X / Intel Equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3050 / AMD Equivalent, AMD Ryzen 5 5600X / Intel Equivalent"
     },
     {
       "title": "Dream House Cleaning",
@@ -666,12 +658,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050, Intel Core i5-6600K"
     },
     {
-      "title": "Delvegg",
+      "title": "挖个蛋 Delvegg",
       "tier": "green",
       "gpu": "Nvidia GeForce GTX 650 / AMD equivalent or better",
       "cpu": "Intel Core i5 or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 650 / AMD equivalent or better, Intel Core i5 or better"
+    },
+    {
+      "title": "Sister Other Paranoia",
+      "tier": "orange",
+      "gpu": "GeForce RTX 2060",
+      "cpu": "AMD Ryzen 7 2700 (8 cores / 16 threads)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 2060, AMD Ryzen 7 2700 (8 cores / 16 threads)"
     },
     {
       "title": "LIFTED",
@@ -770,14 +770,6 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB, Intel® Core™ i7-4770K / AMD Ryzen 5 1500X"
     },
     {
-      "title": "Sister Other Paranoia",
-      "tier": "orange",
-      "gpu": "GeForce RTX 2060",
-      "cpu": "AMD Ryzen 7 2700 (8 cores / 16 threads)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 2060, AMD Ryzen 7 2700 (8 cores / 16 threads)"
-    },
-    {
       "title": "Fairtravel Battle CCG",
       "tier": "green",
       "gpu": "NVIDIA Geforce GTX 1050, AMD RX 540",
@@ -808,14 +800,6 @@
       "cpu": "Intel i5 or AMD Ryzen 5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1660 or AMD RX 580, Intel i5 or AMD Ryzen 5"
-    },
-    {
-      "title": "Uchi No Heya!",
-      "tier": "green",
-      "gpu": "any modern GPU with WebGL2 — Intel Iris Xe, AMD Radeon, NVIDIA GeForce 1050+, or comparable",
-      "cpu": "Intel Core i5 (8th gen+) / AMD Ryzen 3 / equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: any modern GPU with WebGL2 — Intel Iris Xe, AMD Radeon, NVIDIA GeForce 1050+, or comparable, Intel Core i5 (8th gen+) / AMD Ryzen 3 / equivalent"
     }
   ]
 }
