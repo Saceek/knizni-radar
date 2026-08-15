@@ -1499,6 +1499,30 @@ function backlogCard(b){
     </div>
   </div>`;
 }
+function backlogComicCard(c){
+  const rHtml = c.rating!=null ? `<span class="rating ${ratingClass(c.rating)}">${c.rating} %</span>` : '<span class="tag">bez hodnocení</span>';
+  const priceTxt = c.discount
+    ? `<span style="text-decoration:line-through">${esc(c.originalPrice||"")} Kč</span> → ${esc(c.price||"")} Kč <span class="gdiscount">-${c.discount}%</span>`
+    : (c.price ? `${esc(c.price)} Kč` : "");
+  const link = c.link||c.url||"#";
+  const imgHtml = c.cover ? `<img class="gimg" loading="lazy" decoding="async" src="${esc(c.cover)}" alt="" onerror="this.style.visibility='hidden'" />` : "";
+  return `<div class="card${rarityCls(c.rating)}">
+    ${imgHtml?`<a href="${esc(link)}" target="_blank" rel="noreferrer" class="gimg-wrap">${imgHtml}</a>`:""}
+    <div class="body">
+      <div class="row"><div style="min-width:0">
+        <p class="title"><a href="${esc(link)}" target="_blank" rel="noreferrer">${esc(c.title)}</a></p>
+        <p class="muted">${esc(c.author||"")}</p>
+      </div><div style="text-align:right">${rHtml}</div></div>
+      <div class="meta">${rarityPill(c.rating)}${priceTxt?`<span class="tag">${priceTxt}</span>`:""}</div>
+      <div class="actions">
+        <button class="bk rm" data-rm="${esc(c.title)}">✕ Odebrat</button>
+        <button class="bk quest" data-qscat="comic" data-qstitle="${esc(c.title)}">▶ Začít</button>
+        <button class="bk" data-setcatval="book" data-setcattitle="${esc(c.title)}" title="Přeřadit do knih">📖 Kniha?</button>
+        <span class="xp-pill" title="XP za dokončení questu">+40 XP</span>
+      </div>
+    </div>
+  </div>`;
+}
 function backlogMovieCard(m){
   const posterHtml = m.poster
     ? `<img class="mposter" loading="lazy" decoding="async" src="${esc(m.poster)}" alt="" onerror="this.style.visibility='hidden'" />`
@@ -1753,7 +1777,7 @@ function render(){
       }
       if(comics.length){
         html += `<div class="news-section"><span class="qicon">💥</span> Komiksové questy <span class="badge">${comics.length}</span></div>`;
-        html += `<div class="tiles">${comics.map(c=>comicTile(c)).join("")}</div>`;
+        html += comics.map(c=>backlogComicCard(c)).join("");
       }
       if(movies.length){
         html += `<div class="news-section"><span class="qicon">🎬</span> Filmové questy <span class="badge">${movies.length}</span></div>`;
