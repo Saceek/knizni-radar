@@ -1264,10 +1264,11 @@ function comicTileHtml(c, attr){
     : (c.price ? `<span class="price" style="font-size:13px">${c.price} Kč</span>` : "");
   const bk=inBacklog(c.title);
   const questBtn = attr==="cbk" ? `<button class="bk quest" data-qscat="comic" data-qstitle="${esc(c.title)}">▶ Začít</button>` : "";
+  const recatBtn = attr==="cbk" ? `<button class="bk" data-setcatval="book" data-setcattitle="${esc(c.title)}" title="Přeřadit do knih">📖 Kniha?</button>` : "";
   return `<div class="tile${rarityCls(c.rating)}">${c.firstSeen?daysLeftBadge(c):""}<div class="tile-row">${coverInner}<div>
     <p class="tile-title">${c.link?`<a href="${esc(c.link)}" target="_blank" rel="noreferrer">`:""}${esc(c.title)}${c.link?"</a>":""}</p>
     <p class="tile-sub">${esc(c.author||"")}</p>
-    <div class="tile-meta">${rHtml}${priceHtml}${questBtn}<button class="bk ${bk?'on':''}" data-${attr}="${esc(c.title)}" style="margin-left:auto">${bk?'✓':'+'}</button></div>
+    <div class="tile-meta">${rHtml}${priceHtml}${questBtn}${recatBtn}<button class="bk ${bk?'on':''}" data-${attr}="${esc(c.title)}" style="margin-left:auto">${bk?'✓':'+'}</button></div>
     ${c.url?`<a href="${esc(c.url)}" target="_blank" rel="noreferrer" style="font-size:11px;color:var(--cyan)">CREW obchod →</a>`:""}
   </div></div></div>`;
 }
@@ -1491,6 +1492,7 @@ function backlogCard(b){
         <button class="link" data-more="${esc(b.title)}">${open?"Méně ▲":"Detail & ceny ▼"}</button>
         <button class="bk rm" data-rm="${esc(b.title)}">✕ Odebrat</button>
         <button class="bk quest" data-qscat="book" data-qstitle="${esc(b.title)}">▶ Začít</button>
+        <button class="bk" data-setcatval="comic" data-setcattitle="${esc(b.title)}" title="Přeřadit do komiksů">💥 Komiks?</button>
         <span class="xp-pill" title="XP za dokončení questu">+80 XP</span>
       </div>
       ${open?detailHtml(b):""}
@@ -2018,6 +2020,15 @@ function addMovieBacklog(t){ const m=S.movies.find(x=>x.title===t); if(m && !inB
 function addGameBacklog(t){ const g=S.games.find(x=>x.name===t); if(g && !inBacklog(g.name)){ S.backlog.push({title:g.name,_category:"game",appid:g.appid,rating:g.rating,reviews:g.reviews,scoreDesc:g.scoreDesc,image:g.image,url:g.url,tags:g.tags,price:g.price,released:g.released,gamePass:!!g.gamePass,demoAppid:g.demoAppid||null}); saveBacklogAndSync(S.backlog); render(); } }
 function addComicBacklog(t){ const c=S.comics.find(x=>x.title===t)||S.comicsBestsellers.find(x=>x.title===t); if(c && !inBacklog(t)){ S.backlog.push({...c,_category:"comic"}); saveBacklogAndSync(S.backlog); render(); } }
 function removeBacklog(t){ S.backlog=S.backlog.filter(x=>x.title!==t); saveBacklogAndSync(S.backlog); render(); }
+// Kniha/komiks se rozlišuje jen podle zdroje přidání (obecné hledání vs. CREW žebříček), ne
+// podle obsahu - appka to nepozná sama, proto jde kategorii ručně přeřadit.
+function setBacklogCategory(title, cat){
+  const b=S.backlog.find(x=>x.title===title);
+  if(!b) return;
+  b._category=cat;
+  saveBacklogAndSync(S.backlog);
+  render();
+}
 function toggleBacklog(t){ inBacklog(t)?removeBacklog(t):addBacklog(t); }
 function toggleMovieBacklog(t){ inBacklog(t)?removeBacklog(t):addMovieBacklog(t); }
 function toggleGameBacklog(t){ inBacklog(t)?removeBacklog(t):addGameBacklog(t); }
@@ -2056,6 +2067,8 @@ document.getElementById("view").onclick=e=>{
   const gg=e.target.dataset.ggenre; if(gg){S.gameGenre=gg; render(); return;}
   const qscat=e.target.closest("[data-qscat]")?.dataset.qscat;
   if(qscat){ startQuestFromBacklog(qscat, e.target.closest("[data-qscat]").dataset.qstitle); return; }
+  const setcatEl=e.target.closest("[data-setcatval]");
+  if(setcatEl){ setBacklogCategory(setcatEl.dataset.setcattitle, setcatEl.dataset.setcatval); return; }
 };
 
 loadNews();
