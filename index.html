@@ -791,6 +791,16 @@ function mountProgressWidget(){
   });
 }
 
+// Dohledá chybějící obálku/odkaz starších záznamů (např. přidaných naslepo, když backlog
+// ještě nebyl na daném zařízení nasynchronizovaný) podle názvu v aktuálně načtených datech.
+function diaryFallback(e){
+  const b = S.backlog.find(x=>x.title===e.title);
+  if(b) return {image: b.cover||b.poster||b.image||null, url: b.link||b.url||null};
+  if(e._category==="book"){ const x=(S.books||[]).find(v=>v.title===e.title); if(x) return {image:x.cover||null, url:x.link||null}; }
+  if(e._category==="movie"){ const x=(S.movies||[]).find(v=>v.title===e.title); if(x) return {image:x.poster||null, url:x.url||null}; }
+  if(e._category==="game"){ const x=(S.games||[]).find(v=>v.name===e.title); if(x) return {image:x.image||null, url:x.url||null}; }
+  return {image:null, url:null};
+}
 function diaryViewHtml(){
   const sorted = [...S.diary].sort((a,b)=> b.date.localeCompare(a.date));
   const n = S.diary.length;
@@ -817,13 +827,16 @@ function diaryViewHtml(){
     if(m!==lastMonth){ list += `<div class="diary-month">${esc(m)}</div>`; lastMonth=m; }
     const d = new Date(e.date+"T00:00:00");
     const dateShort = `${d.getDate()}. ${d.getMonth()+1}.`;
-    const thumbStyle = e.image? `background-image:url('${esc(e.image)}')` : `background:${grad(e.title)}`;
+    const fb = diaryFallback(e);
+    const img = e.image || fb.image;
+    const url = e.url || fb.url;
+    const thumbStyle = img? `background-image:url('${esc(img)}')` : `background:${grad(e.title)}`;
     const sub = e._category==="book" ? esc(e.author||"kniha") : e._category==="game" ? "hra" : (e.year?`film / seriál · ${esc(e.year)}`:"film / seriál");
     list += `<div class="diary-row">
       <span class="diary-date">${dateShort}</span>
       <div class="diary-thumb" style="${thumbStyle}"></div>
       <div style="min-width:0;flex:1">
-        <div style="font-weight:700;font-size:13px">${e.url?`<a href="${esc(e.url)}" target="_blank" rel="noreferrer">${esc(e.title)}</a>`:esc(e.title)}</div>
+        <div style="font-weight:700;font-size:13px">${url?`<a href="${esc(url)}" target="_blank" rel="noreferrer">${esc(e.title)}</a>`:esc(e.title)}</div>
         <div class="muted" style="font-size:11px">${sub}</div>
         ${e.note?`<div class="diary-note">${esc(e.note)}</div>`:""}
       </div>
