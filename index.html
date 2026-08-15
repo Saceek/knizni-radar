@@ -631,6 +631,7 @@ function diaryMonthLabel(dateStr){ const d=new Date(dateStr+"T00:00:00"); return
 // "Aktivní questy" widget - jeden aktivní quest na kategorii (kniha/film/hra dle platformy), drží fokus
 const PROG_CFG = {
   book: {icon:"📖", label:"Kniha", unit:"str.", step:10, color:"var(--violet)", emptyTxt:"+ vybrat rozečtené", source:"book"},
+  comic:{icon:"💥", label:"Komiks", unit:"str.", step:10, color:"var(--accent)", emptyTxt:"+ vybrat rozečtený", source:"comic"},
   movie:{icon:"🎬", label:"Film / Seriál", unit:"%", step:5, color:"var(--cyan)", emptyTxt:"+ vybrat rozkoukané", source:"movie"},
   game_pc: {icon:"🖥️", label:"Hra (PC)", unit:"h", step:1, color:"var(--amber)", emptyTxt:"+ vybrat rozehrané", source:"game"},
   game_ps5:{icon:"🎮", label:"Hra (PS5)", unit:"h", step:1, color:"var(--rose)", emptyTxt:"+ přidat ručně", source:null},
@@ -643,9 +644,9 @@ function progressCandidates(cat){
   const src = baseCat==="movie" ? S.backlog.filter(b=>(b._category||"book")==="movie") : backlogByCategory(baseCat);
   return src.map(b=>({
     title:b.title,
-    image: baseCat==="book"?b.cover:(baseCat==="movie"?b.poster:b.image),
-    url: baseCat==="book"?b.link:b.url,
-    sub: baseCat==="book"?b.author:(baseCat==="movie"?b.year:""),
+    image: (baseCat==="book"||baseCat==="comic")?b.cover:(baseCat==="movie"?b.poster:b.image),
+    url: (baseCat==="book"||baseCat==="comic")?b.link:b.url,
+    sub: (baseCat==="book"||baseCat==="comic")?b.author:(baseCat==="movie"?b.year:""),
     suggestedTotal: baseCat==="book" ? (b.pages||null) : (baseCat==="game" ? (hltbFor(b.title)?.hours ? Math.round(hltbFor(b.title).hours) : null) : null),
   }));
 }
@@ -696,7 +697,7 @@ function progressSlotHtml(cat){
   </div>`;
 }
 function progressWidgetHtml(){
-  return `<div class="prog-widget">${["book","movie","game_pc","game_ps5","game_nsw2"].map(progressSlotHtml).join("")}</div>`;
+  return `<div class="prog-widget">${["book","comic","movie","game_pc","game_ps5","game_nsw2"].map(progressSlotHtml).join("")}</div>`;
 }
 function progressFinish(cat){
   const item = S.progress[cat];
@@ -713,7 +714,7 @@ function startQuestFromBacklog(cat, title){
   const b = S.backlog.find(x=>x.title===title);
   if(!b) return;
   const baseCat = PROG_CFG[cat].source || "game";
-  const item = baseCat==="book"
+  const item = (baseCat==="book"||baseCat==="comic")
     ? {title:b.title, image:b.cover||null, url:b.link||null, sub:b.author||null, suggestedTotal:b.pages||null}
     : baseCat==="movie"
     ? {title:b.title, image:b.poster||null, url:b.url||null, sub:b.year||null, suggestedTotal:null}
@@ -797,6 +798,7 @@ function diaryFallback(e){
   const b = S.backlog.find(x=>x.title===e.title);
   if(b) return {image: b.cover||b.poster||b.image||null, url: b.link||b.url||null};
   if(e._category==="book"){ const x=(S.books||[]).find(v=>v.title===e.title); if(x) return {image:x.cover||null, url:x.link||null}; }
+  if(e._category==="comic"){ const x=(S.comicsBestsellers||[]).find(v=>v.title===e.title)||(S.comics||[]).find(v=>v.title===e.title); if(x) return {image:x.cover||null, url:x.link||null}; }
   if(e._category==="movie"){ const x=(S.movies||[]).find(v=>v.title===e.title); if(x) return {image:x.poster||null, url:x.url||null}; }
   if(e._category==="game"){ const x=(S.games||[]).find(v=>v.name===e.title); if(x) return {image:x.image||null, url:x.url||null}; }
   return {image:null, url:null};
@@ -831,7 +833,7 @@ function diaryViewHtml(){
     const img = e.image || fb.image;
     const url = e.url || fb.url;
     const thumbStyle = img? `background-image:url('${esc(img)}')` : `background:${grad(e.title)}`;
-    const sub = e._category==="book" ? esc(e.author||"kniha") : e._category==="game" ? "hra" : (e.year?`film / seriál · ${esc(e.year)}`:"film / seriál");
+    const sub = e._category==="book" ? esc(e.author||"kniha") : e._category==="comic" ? esc(e.author||"komiks") : e._category==="game" ? "hra" : (e.year?`film / seriál · ${esc(e.year)}`:"film / seriál");
     list += `<div class="diary-row">
       <span class="diary-date">${dateShort}</span>
       <div class="diary-thumb" style="${thumbStyle}"></div>
@@ -872,6 +874,10 @@ function diarySearchCandidates(cat){
   } else if(cat==="game"){
     pushIf(S.games,g=>({title:g.name,sub:"",image:g.image,source:"Steam",url:g.url}));
     pushIf(backlogByCategory("game"),g=>({title:g.title,sub:"",image:g.image,source:"z Backlogu",url:g.url}));
+  } else if(cat==="comic"){
+    pushIf(S.comicsBestsellers,c=>({title:c.title,sub:c.author,image:c.cover,source:"CREW",url:c.link}));
+    pushIf(S.comics,c=>({title:c.title,sub:c.author,image:c.cover,source:"CREW",url:c.link}));
+    pushIf(backlogByCategory("comic"),c=>({title:c.title,sub:c.author,image:c.cover,source:"z Backlogu",url:c.link}));
   } else {
     pushIf(S.movies,m=>({title:m.title,sub:m.year,image:m.poster,source:"ČSFD",url:m.url}));
     pushIf(S.backlog.filter(b=>(b._category||"book")==="movie"),m=>({title:m.title,sub:m.year,image:m.poster,source:"z Backlogu",url:m.url}));
@@ -880,7 +886,7 @@ function diarySearchCandidates(cat){
 }
 
 function diaryModalHtml(){
-  const cats=[["book","Kniha"],["game","Hra"],["movie","Film / Seriál"]];
+  const cats=[["book","Kniha"],["comic","Komiks"],["game","Hra"],["movie","Film / Seriál"]];
   const catBtns = cats.map(([c,label])=>`<button class="cat-pill ${S.diaryCat===c?'on':''}" data-diarycat="${c}">${label}</button>`).join("");
   const candidates = diarySearchCandidates(S.diaryCat);
   const suggestHtml = S.diaryQ.trim() ? `<div class="diary-suggest">${
@@ -954,7 +960,7 @@ function mountDiaryModal(div){
       _category:S.diaryCat,
       image: sel?.image||null,
       url: sel?.url||null,
-      author: S.diaryCat==="book"?(sel?.sub||null):undefined,
+      author: (S.diaryCat==="book"||S.diaryCat==="comic")?(sel?.sub||null):undefined,
       year: S.diaryCat==="movie"?(sel?.sub||null):undefined,
       date:S.diaryDate,
       note:(S.diaryNote||"").trim()||null,
@@ -1257,10 +1263,11 @@ function comicTileHtml(c, attr){
     ? `<span style="text-decoration:line-through;color:var(--sub);font-size:11px">${c.originalPrice} Kč</span> <span class="price" style="font-size:13px">${c.price} Kč</span><span class="gdiscount">-${c.discount}%</span>`
     : (c.price ? `<span class="price" style="font-size:13px">${c.price} Kč</span>` : "");
   const bk=inBacklog(c.title);
+  const questBtn = attr==="cbk" ? `<button class="bk quest" data-qscat="comic" data-qstitle="${esc(c.title)}">▶ Začít</button>` : "";
   return `<div class="tile${rarityCls(c.rating)}">${c.firstSeen?daysLeftBadge(c):""}<div class="tile-row">${coverInner}<div>
     <p class="tile-title">${c.link?`<a href="${esc(c.link)}" target="_blank" rel="noreferrer">`:""}${esc(c.title)}${c.link?"</a>":""}</p>
     <p class="tile-sub">${esc(c.author||"")}</p>
-    <div class="tile-meta">${rHtml}${priceHtml}<button class="bk ${bk?'on':''}" data-${attr}="${esc(c.title)}" style="margin-left:auto">${bk?'✓':'+'}</button></div>
+    <div class="tile-meta">${rHtml}${priceHtml}${questBtn}<button class="bk ${bk?'on':''}" data-${attr}="${esc(c.title)}" style="margin-left:auto">${bk?'✓':'+'}</button></div>
     ${c.url?`<a href="${esc(c.url)}" target="_blank" rel="noreferrer" style="font-size:11px;color:var(--cyan)">CREW obchod →</a>`:""}
   </div></div></div>`;
 }
