@@ -1057,6 +1057,9 @@ const demoRibbon = (g) => g.demoAppid ? `<span class="demo-ribbon">DEMO</span>` 
 const rarity = r => r==null?null: r>=95?"leg": r>=85?"epic": r>=75?"rare": null;
 const rarityCls = r => {const k=rarity(r); return k?` r-${k}`:"";};
 const rarityPill = r => {const k=rarity(r); return k?`<span class="rarity ${k}">${k==="leg"?"★ LEGENDÁRNÍ":k==="epic"?"EPICKÝ":"VZÁCNÝ"}</span>`:"";};
+// Řazení napříč celým webem: Legendární → Epický → Vzácný → Common vždy jako primární
+// kritérium, zvolený sort (hodnocení/cena/popularita...) rozhoduje jen uvnitř skupiny.
+const rarityRank = r => {const k=rarity(r); return k==="leg"?4:k==="epic"?3:k==="rare"?2:1;};
 // XP za dokončené mise v Deníku; level = 500 XP
 const XP_VALUES = {game:120, book:80, movie:50, comic:40};
 const entryXP = e => XP_VALUES[e._category]||50;
@@ -1501,13 +1504,16 @@ function backlogCard(b){
 }
 function backlogComicCard(c){
   const rHtml = c.rating!=null ? `<span class="rating ${ratingClass(c.rating)}">${c.rating} %</span>` : '<span class="tag">bez hodnocení</span>';
+  const vp = vPrices(c);
   const priceTxt = c.discount
     ? `<span style="text-decoration:line-through">${esc(c.originalPrice||"")} Kč</span> → ${esc(c.price||"")} Kč <span class="gdiscount">-${c.discount}%</span>`
-    : (c.price ? `${esc(c.price)} Kč` : "");
+    : c.price ? `${esc(c.price)} Kč`
+    : vp.length ? `od ${Math.min(...vp.map(p=>p.price))} Kč (${esc(vp.find(p=>p.price===Math.min(...vp.map(x=>x.price))).shop)})`
+    : "";
   const link = c.link||c.url||"#";
-  const imgHtml = c.cover ? `<img class="gimg" loading="lazy" decoding="async" src="${esc(c.cover)}" alt="" onerror="this.style.visibility='hidden'" />` : "";
+  const imgHtml = c.cover ? `<img class="mposter" loading="lazy" decoding="async" src="${esc(c.cover)}" alt="" onerror="this.style.visibility='hidden'" />` : "";
   return `<div class="card${rarityCls(c.rating)}">
-    ${imgHtml?`<a href="${esc(link)}" target="_blank" rel="noreferrer" class="gimg-wrap">${imgHtml}</a>`:""}
+    ${imgHtml?`<a href="${esc(link)}" target="_blank" rel="noreferrer">${imgHtml}</a>`:""}
     <div class="body">
       <div class="row"><div style="min-width:0">
         <p class="title"><a href="${esc(link)}" target="_blank" rel="noreferrer">${esc(c.title)}</a></p>

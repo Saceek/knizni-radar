@@ -219,7 +219,7 @@ async function main() {
 
   // Find books needing enrichment: from databazeknih.cz without rating or price
   const toEnrich = backlog.filter((item) =>
-    (item._category === "book" || !item._category) &&
+    (item._category === "book" || item._category === "comic" || !item._category) &&
     (item.cat || []).includes("databazeknih.cz") &&
     (item.rating == null || !item.prices?.length)
   );
