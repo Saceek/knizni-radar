@@ -151,6 +151,7 @@
   .lib-pill{display:inline-flex;align-items:center;gap:3px;font-size:10px;font-weight:700;padding:2px 8px;border-radius:999px;background:rgba(255,122,61,.18);color:var(--coral);text-decoration:none;white-space:nowrap}
   .lib-pill:hover{background:rgba(255,122,61,.3)}
   .lib-ribbon{position:absolute;top:9px;left:-32px;transform:rotate(-45deg);background:var(--coral);color:#3a1200;font-family:var(--mono);font-size:9px;font-weight:900;padding:3px 34px;letter-spacing:.08em;pointer-events:none;z-index:1}
+  .pages-tag{position:absolute;bottom:8px;right:12px;color:var(--text);font-size:9px;opacity:.85;display:flex;align-items:center;gap:3px}
   .gprice{font-family:var(--mono);font-size:14px;font-weight:600;color:var(--emerald);margin-top:6px}
   .gprice-orig{font-family:var(--mono);font-size:12px;color:var(--sub);text-decoration:line-through;margin-top:4px}
   .gdiscount{font-family:var(--mono);font-size:11px;font-weight:700;color:#0a0a0a;background:var(--emerald);border-radius:4px;padding:1px 5px;margin-left:4px}
@@ -1064,6 +1065,7 @@ const steamDeepLink = (url) => { if(!IS_DESKTOP) return url; const m=(url||"").m
 const demoRibbon = (g) => g.demoAppid ? `<span class="demo-ribbon">DEMO</span>` : "";
 // K dispozici jako e-kniha přes Palmknihy v Městské knihovně Rokycany
 const libraryPill = b => b.palmknihy ? `<a href="${esc(b.palmknihy.url)}" target="_blank" rel="noreferrer" class="lib-pill" title="K zapůjčení jako e-kniha - Městská knihovna Rokycany (Palmknihy)">📚 Knihovna</a>` : "";
+const pagesTag = b => b.pages ? `<span class="pages-tag">📖 ${b.pages} str.</span>` : "";
 const libraryRibbon = b => b.palmknihy ? `<span class="lib-ribbon">PŮJČIT</span>` : "";
 const rarity = r => r==null?null: r>=95?"leg": r>=85?"epic": r>=75?"rare": null;
 const rarityCls = r => {const k=rarity(r); return k?` r-${k}`:"";};
@@ -1487,7 +1489,7 @@ function card(b,i){
     <div><div class="rank">#${i+1}</div>${coverHtml(b)}</div>
     <div class="body">
       <div class="row"><div style="min-width:0"><p class="title">${titleHtml(b)}</p><p class="muted">${esc(b.author)}</p></div>${priceHtml(b)}</div>
-      <div class="meta">${ratingHtml(b)}${rarityPill(b.rating)}${libraryPill(b)}</div>
+      <div class="meta">${ratingHtml(b)}${rarityPill(b.rating)}${libraryPill(b)}</div>${pagesTag(b)}
       <div class="actions">
         <button class="link" data-more="${esc(b.title)}">${open?"Méně ▲":"Detail & ceny ▼"}</button>
         <button class="bk ${bk?'on':''}" data-bk="${esc(b.title)}">${bk?'✓ V backlogu':'+ Backlog'}</button>
@@ -1502,7 +1504,7 @@ function backlogCard(b){
     <div>${coverHtml(b)}</div>
     <div class="body">
       <div class="row"><div style="min-width:0"><p class="title">${titleHtml(b)}</p><p class="muted">${esc(b.author)}</p></div>${priceHtml(b)}</div>
-      <div class="meta">${ratingHtml(b)}${rarityPill(b.rating)}${libraryPill(b)}</div>
+      <div class="meta">${ratingHtml(b)}${rarityPill(b.rating)}${libraryPill(b)}</div>${pagesTag(b)}
       <div class="actions">
         <button class="link" data-more="${esc(b.title)}">${open?"Méně ▲":"Detail & ceny ▼"}</button>
         <button class="bk rm" data-rm="${esc(b.title)}">✕ Odebrat</button>
