@@ -280,7 +280,8 @@
   .bento-hero .num{font-size:28px}
   .prog-widget{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:9px;margin:0 0 18px}
   @media(max-width:640px){ .prog-widget{grid-template-columns:1fr 1fr} }
-  .prog-slot{background:var(--card);border:1px solid var(--cb);border-radius:16px;padding:11px 13px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+  .prog-slot{min-width:0;background:var(--card);border:1px solid var(--cb);border-radius:16px;padding:11px 13px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+  .prog-slot-setting,.prog-slot-search{grid-column:span 2}
   .prog-slot-head{display:flex;align-items:center;justify-content:space-between;gap:6px;font-size:12px;font-weight:700;color:var(--text)}
   .prog-slot-head span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
   .prog-slot-empty{cursor:pointer;border-style:dashed;opacity:.7}
