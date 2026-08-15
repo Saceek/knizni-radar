@@ -1901,9 +1901,14 @@ function resultsHtml(){
     const errBanner = S.addErr ? `<div class="tiny" style="color:var(--rose);margin-bottom:8px">⚠ Vyhledávání selhalo: ${esc(S.addErr)}. Zkus to prosím znovu.</div>` : "";
     // ČSFD blokuje živé vyhledávání (anti-bot) - nabídneme přidat holý záznam, který
     // build-enrich-backlog.js při příštím běhu doplní o rok/plakát/hodnocení z ČSFD.
-    const bareAddBtn = (cat==="Filmy & Seriály"||cat==="Vše") && rawQ && !inBacklog(rawQ)
+    // Vložení přímého odkazu na film/seriál je spolehlivější (obchází i riziko, že by si
+    // enrichment vybral podle názvu jiný, podobně pojmenovaný titul).
+    const csfdUrlMatch = rawQ.match(/^https?:\/\/(www\.)?csfd\.cz\/film\/[^\s]+/i);
+    const csfdLinkAddBtn = csfdUrlMatch && (cat==="Filmy & Seriály"||cat==="Vše")
+      ? `<div style="margin-top:10px"><button class="bk" data-addcsfdlink="${esc(csfdUrlMatch[0])}">+ Přidat podle odkazu</button></div>` : "";
+    const bareAddBtn = !csfdUrlMatch && (cat==="Filmy & Seriály"||cat==="Vše") && rawQ && !inBacklog(rawQ)
       ? `<div style="margin-top:10px"><button class="bk" data-addbare="${esc(rawQ)}">+ Přidat i bez nalezení</button></div>` : "";
-    return `<div class="tiny" style="padding:8px">${errBanner}Nic nenalezeno.<br><br>${[csfdLink,dbkLink,links].filter(Boolean).join(" &nbsp; ")}${bareAddBtn}</div>`;
+    return `<div class="tiny" style="padding:8px">${errBanner}Nic nenalezeno.<br><br>${[csfdLink,dbkLink,links].filter(Boolean).join(" &nbsp; ")}${csfdLinkAddBtn}${bareAddBtn}</div>`;
   }
   return S.addResults.map((r,i)=>{
     const cat=r._category||"book";
@@ -2035,6 +2040,18 @@ function bindAddButtons(rc){
     S.backlog.push({title, _category:"movie", url:`https://www.csfd.cz/hledat/?q=${encodeURIComponent(title)}`});
     saveBacklogAndSync(S.backlog);
     S.addMsg="Přidáno ✓ – "+title+" (detaily doplní příští aktualizace dat)";
+    render();
+  });
+  rc.querySelectorAll('[data-addcsfdlink]').forEach(btn=>btn.onclick=()=>{
+    const url=btn.dataset.addcsfdlink;
+    if(!url || S.backlog.some(x=>x.url===url)) return;
+    // Zatím jen odhad názvu ze slugu odkazu - přesný název/rok/plakát/hodnocení doplní
+    // enrichment, který díky přímému odkazu najde přesně tenhle titul, ne odhad podle názvu.
+    const slug=(url.match(/\/film\/\d+-([^/]+)/)||[])[1]||"";
+    const guess=slug.replace(/-/g," ").replace(/\b\w/g,c=>c.toUpperCase())||"Film z ČSFD";
+    S.backlog.push({title:guess, _category:"movie", url});
+    saveBacklogAndSync(S.backlog);
+    S.addMsg="Přidáno ✓ – "+guess+" (přesný název a detaily doplní příští aktualizace dat)";
     render();
   });
 }

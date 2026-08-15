@@ -141,6 +141,35 @@ function bestCsfdMatch(items, title) {
   return bestScore >= 0.5 ? best : null;
 }
 
+async function scrapeCsfdDetail(page, url, fallbackTitle) {
+  await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
+  await page.waitForTimeout(CSFD_WAIT);
+  const detailHtml = await page.content();
+  const $d = cheerio.load(detailHtml);
+
+  const poster = $d("meta[property='og:image']").attr("content") || null;
+  const titleFromPage = $d("h1").first().text().trim() || fallbackTitle;
+  const originText = $d(".origin").text().replace(/\s+/g, " ").trim();
+  const country = (originText.split(/\d{4}/)[0] || "").replace(/[,·]/g, "").trim() || null;
+  // Rok(y): "(2008–2013)" = seriál, jednoduchý rok "1994" = film
+  const isSeries = /\(\d{4}\s*[–-]\s*\d{0,4}\)/.test(originText);
+  const yearMatch = originText.match(/\b(19|20)\d{2}\b/);
+  const ratingText = $d(".film-rating-average").first().text().trim();
+  const ratingMatch = ratingText.match(/(\d{1,3})\s*%/);
+  const genres = $d(".genres").text().split(/\s{2,}|,|\//).map((g) => g.replace(/\s+/g, " ").trim()).filter(Boolean);
+
+  return {
+    title: titleFromPage,
+    url,
+    poster,
+    country,
+    year: yearMatch ? yearMatch[0] : null,
+    rating: ratingMatch ? parseInt(ratingMatch[1], 10) : null,
+    genres,
+    type: isSeries ? "seriál" : "film",
+  };
+}
+
 async function enrichMovieFromCSFD(page, title) {
   const searchUrl = `https://www.csfd.cz/hledat/?q=${encodeURIComponent(title)}`;
   await page.goto(searchUrl, { waitUntil: "domcontentloaded", timeout: 30000 });
@@ -156,33 +185,13 @@ async function enrichMovieFromCSFD(page, title) {
   });
   const match = bestCsfdMatch(items, title);
   if (!match) return null;
+  return scrapeCsfdDetail(page, "https://www.csfd.cz" + match.href, match.title);
+}
 
-  const url = "https://www.csfd.cz" + match.href;
-  await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
-  await page.waitForTimeout(CSFD_WAIT);
-  const detailHtml = await page.content();
-  const $d = cheerio.load(detailHtml);
-
-  const poster = $d("meta[property='og:image']").attr("content") || null;
-  const originText = $d(".origin").text().replace(/\s+/g, " ").trim();
-  const country = (originText.split(/\d{4}/)[0] || "").replace(/[,·]/g, "").trim() || null;
-  // Rok(y): "(2008–2013)" = seriál, jednoduchý rok "1994" = film
-  const isSeries = /\(\d{4}\s*[–-]\s*\d{0,4}\)/.test(originText);
-  const yearMatch = originText.match(/\b(19|20)\d{2}\b/);
-  const ratingText = $d(".film-rating-average").first().text().trim();
-  const ratingMatch = ratingText.match(/(\d{1,3})\s*%/);
-  const genres = $d(".genres").text().split(/\s{2,}|,|\//).map((g) => g.replace(/\s+/g, " ").trim()).filter(Boolean);
-
-  return {
-    title: match.title,
-    url,
-    poster,
-    country,
-    year: yearMatch ? yearMatch[0] : null,
-    rating: ratingMatch ? parseInt(ratingMatch[1], 10) : null,
-    genres,
-    type: isSeries ? "seriál" : "film",
-  };
+// Titul přidaný přímo přes odkaz na ČSFD (viz "+ Přidat podle odkazu" v appce) - obchází
+// hledání+matching úplně, jde se rovnou na detail stránky, spolehlivější než odhad podle názvu.
+async function enrichMovieFromCSFDUrl(page, url, fallbackTitle) {
+  return scrapeCsfdDetail(page, url, fallbackTitle);
 }
 
 // Počet stran z Google Books (pro widget "Právě dělám" - přednastavený cíl progresu u knih)
@@ -336,8 +345,14 @@ async function main() {
       for (const item of toEnrichMovies) {
         console.log(`  → ${item.title}`);
         try {
-          const info = await enrichMovieFromCSFD(page, item.title);
+          // Přidané přes "+ Přidat podle odkazu" mají už rovnou skutečnou /film/ stránku -
+          // jde se přímo na ni, žádné hledání+matching podle názvu (spolehlivější).
+          const isDirectUrl = item.url && /\/film\/[^/]+\/(?!hledat)/.test(item.url) && !item.url.includes("/hledat/");
+          const info = isDirectUrl
+            ? await enrichMovieFromCSFDUrl(page, item.url, item.title)
+            : await enrichMovieFromCSFD(page, item.title);
           if (info) {
+            if (info.title) item.title = info.title;
             if (info.poster) item.poster = info.poster;
             if (info.rating != null) item.rating = info.rating;
             if (info.year) item.year = info.year;
@@ -346,7 +361,7 @@ async function main() {
             if (info.type) item.type = info.type;
             if (info.url) item.url = info.url;
             changed++;
-            console.log(`    ✓ ${info.type}, ${info.rating}%, ${info.year}`);
+            console.log(`    ✓ ${info.title}, ${info.type}, ${info.rating}%, ${info.year}`);
           } else {
             console.log("    ✗ na ČSFD nenalezeno");
           }
