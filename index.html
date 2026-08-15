@@ -1878,7 +1878,7 @@ function addPanelHtml(){
 }
 function searchPanelHtml(){
   const cat=S.addCat||"Vše";
-  const ph=cat==="Hry"?"Název hry na Steamu…":cat==="Knihy"?"Název, autor nebo odkaz na databazeknih.cz…":cat==="Filmy & Seriály"?"Název filmu nebo seriálu…":"Název knihy, filmu, hry…";
+  const ph=cat==="Hry"?"Název hry na Steamu…":cat==="Knihy"?"Název, autor nebo odkaz na databazeknih.cz…":cat==="Filmy & Seriály"?"Název, nebo odkaz na film/seriál na ČSFD…":"Název knihy, filmu, hry…";
   return `<div class="mrow">
       <input id="addq" placeholder="${esc(ph)}" value="${esc(S.addQ)}" autocomplete="off" />
       <button class="addbtn" id="addgo" style="align-self:auto">Hledat</button>
@@ -1889,7 +1889,7 @@ function resultsHtml(){
   if(S.addBusy) return '<div class="tiny" style="padding:8px">Hledám…</div>';
   const cat=S.addCat||"Vše";
   if(!S.addQ.trim()){
-    const hints={Hry:"Vyhledá real-time na Steamu.",Knihy:"Vyhledá real-time na databazeknih.cz (i podle autora), nebo vlož přímo odkaz na knihu.",Vše:"Prohledá Steam, databazeknih.cz a načtené filmy/seriály.","Filmy & Seriály":"Prohledá načtené ČSFD tituly. Proklik vede na ČSFD."};
+    const hints={Hry:"Vyhledá real-time na Steamu.",Knihy:"Vyhledá real-time na databazeknih.cz (i podle autora), nebo vlož přímo odkaz na knihu.",Vše:"Prohledá Steam, databazeknih.cz a načtené filmy/seriály.","Filmy & Seriály":"Prohledá načtené ČSFD tituly, nebo vlož přímo odkaz na film/seriál na ČSFD."};
     return `<div class="tiny" style="padding:8px">${hints[cat]||hints.Vše}</div>`;
   }
   if(!S.addResults.length){
