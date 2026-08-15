@@ -8,6 +8,8 @@
  *    (obyčejný fetch ČSFD blokuje - stejný BotStopper důvod jako u build-movies.js)
  *  - knihy: dostupnost e-knihy k půjčení přes Palmknihy v Městské knihovně Rokycany
  *    (katalog.rokyknih.cz, taky přes Playwright - stejná Anubis JS výzva jako u ČSFD)
+ *  - knihy: počet stran primárně z databazeknih.cz (Playwright - donačítá se JS až po
+ *    rozkliknutí "Více info", v prostém HTML není), Google Books jako záložní zdroj
  * Spouštět jako poslední krok v build pipeline.   node build-enrich-backlog.js
  */
 
@@ -223,6 +225,24 @@ async function fetchDemoAppid(appid) {
   } catch (e) { return null; }
 }
 
+// Počet stran přímo z databazeknih.cz - je to na stránce, ale dotahuje se JS teprve po
+// rozkliknutí odkazu "Více info" (v prostém fetch/cheerio HTML vůbec není), proto Playwright.
+async function fetchPagesFromDatabazeknih(page, link) {
+  try {
+    // networkidle je na této stránce nespolehlivé (reklamy pořád něco pollují a nikdy
+    // "neztichnou") - domcontentloaded + pevné čekání, stejně jako u ostatních scraperů zde.
+    await page.goto(link, { waitUntil: "domcontentloaded", timeout: 30000 });
+    await page.waitForTimeout(2500);
+    try { await page.getByText("Souhlasím", { exact: true }).click({ timeout: 3000 }); await page.waitForTimeout(600); } catch (e) { /* cookie lišta nemusí být */ }
+    await page.getByText("Více info", { exact: false }).first().click({ timeout: 5000 });
+    await page.waitForTimeout(800);
+    const html = await page.content();
+    const $ = cheerio.load(html);
+    const pages = parseInt($('[itemprop="numberOfPages"]').first().text().trim(), 10);
+    return Number.isFinite(pages) ? pages : null;
+  } catch (e) { return null; }
+}
+
 // Dostupnost e-knihy k půjčení přes Palmknihy v katalogu Městské knihovny Rokycany
 // (katalog.rokyknih.cz - VuFind, chráněný Anubis JS výzvou jako ČSFD, proto Playwright).
 const PALMKNIHY_WAIT = 6000;
@@ -286,21 +306,15 @@ async function main() {
     }
   }
 
-  // Počet stran u knih bez tohoto údaje - přednastaví cíl v widgetu "Právě dělám"
+  // Počet stran u knih bez tohoto údaje - přednastaví cíl v widgetu "Aktivní questy".
+  // Primárně z databazeknih.cz (Playwright, viz níže), Google Books jen jako záložní zdroj
+  // pro tituly, co na databazeknih stránky neuvádí.
   const toEnrichPages = backlog.filter((item) => (item._category === "book" || !item._category) && !item.pages);
-  if (toEnrichPages.length) {
-    console.log(`[enrich] ${toEnrichPages.length} knih k obohacení o počet stran`);
-    for (const item of toEnrichPages) {
-      const pages = await fetchGoogleBooksPages(item.title, item.author);
-      if (pages) { item.pages = pages; changed++; console.log(`    ${item.title}: ${pages} str.`); }
-      await sleep(DELAY);
-    }
-  }
 
   const toEnrichMovies = backlog.filter((item) => item._category === "movie" && item.rating == null);
   const toEnrichPalmknihy = backlog.filter((item) => (item._category === "book" || !item._category) && item.palmknihy === undefined);
 
-  if (!toEnrich.length && !toEnrichMovies.length && !toEnrichPalmknihy.length && !changed) { console.log("[enrich] vše obohaceno, nic k dělání"); return; }
+  if (!toEnrich.length && !toEnrichMovies.length && !toEnrichPalmknihy.length && !toEnrichPages.length && !changed) { console.log("[enrich] vše obohaceno, nic k dělání"); return; }
   if (toEnrich.length) console.log(`[enrich] ${toEnrich.length} knih k obohacení`);
   for (const item of toEnrich) {
     console.log(`  → ${item.title}`);
@@ -334,8 +348,9 @@ async function main() {
   }
 
   // Filmy/seriály přidané "naslepo" z Backlog vyhledávání (bez rating = ještě neobohaceno) +
-  // dostupnost e-knih přes Palmknihy - obojí potřebuje Playwright (Anubis JS výzva), sdílí browser
-  if (toEnrichMovies.length || toEnrichPalmknihy.length) {
+  // dostupnost e-knih přes Palmknihy + počet stran u knih - všechno potřebuje Playwright
+  // (Anubis JS výzva u ČSFD/katalogu, JS donačítání u databazeknih), sdílí browser
+  if (toEnrichMovies.length || toEnrichPalmknihy.length || toEnrichPages.length) {
     const { chromium } = require("playwright");
     const browser = await chromium.launch();
     const page = await browser.newPage({ userAgent: UA });
@@ -382,6 +397,18 @@ async function main() {
         } catch (e) {
           console.warn(`  → ${item.title}: chyba - ${e.message}`);
         }
+      }
+    }
+
+    if (toEnrichPages.length) {
+      console.log(`[enrich] ${toEnrichPages.length} knih k obohacení o počet stran`);
+      for (const item of toEnrichPages) {
+        let pages = item.link && item.link.includes("databazeknih") ? await fetchPagesFromDatabazeknih(page, item.link) : null;
+        let source = "databazeknih.cz";
+        if (!pages) { pages = await fetchGoogleBooksPages(item.title, item.author); source = "Google Books"; }
+        if (pages) { item.pages = pages; changed++; console.log(`  → ${item.title}: ${pages} str. (${source})`); }
+        else console.log(`  → ${item.title}: ✗ nenalezeno`);
+        await sleep(DELAY);
       }
     }
 
