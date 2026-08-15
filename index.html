@@ -1798,7 +1798,7 @@ function addPanelHtml(){
 }
 function searchPanelHtml(){
   const cat=S.addCat||"Vše";
-  const ph=cat==="Hry"?"Název hry na Steamu…":cat==="Knihy"?"Název knihy nebo autor…":cat==="Filmy & Seriály"?"Název filmu nebo seriálu…":"Název knihy, filmu, hry…";
+  const ph=cat==="Hry"?"Název hry na Steamu…":cat==="Knihy"?"Název, autor nebo odkaz na databazeknih.cz…":cat==="Filmy & Seriály"?"Název filmu nebo seriálu…":"Název knihy, filmu, hry…";
   return `<div class="mrow">
       <input id="addq" placeholder="${esc(ph)}" value="${esc(S.addQ)}" autocomplete="off" />
       <button class="addbtn" id="addgo" style="align-self:auto">Hledat</button>
@@ -1809,7 +1809,7 @@ function resultsHtml(){
   if(S.addBusy) return '<div class="tiny" style="padding:8px">Hledám…</div>';
   const cat=S.addCat||"Vše";
   if(!S.addQ.trim()){
-    const hints={Hry:"Vyhledá real-time na Steamu.",Knihy:"Vyhledá real-time na databazeknih.cz.","Filmy & Seriály":"Prohledá načtené ČSFD tituly. Proklik vede na ČSFD.",Vše:"Prohledá Steam, databazeknih.cz a načtené filmy/seriály."};
+    const hints={Hry:"Vyhledá real-time na Steamu.",Knihy:"Vyhledá real-time na databazeknih.cz (i podle autora), nebo vlož přímo odkaz na knihu.",Vše:"Prohledá Steam, databazeknih.cz a načtené filmy/seriály.","Filmy & Seriály":"Prohledá načtené ČSFD tituly. Proklik vede na ČSFD."};
     return `<div class="tiny" style="padding:8px">${hints[cat]||hints.Vše}</div>`;
   }
   if(!S.addResults.length){
@@ -1845,10 +1845,34 @@ function resultsHtml(){
     </div>`;
   }).join("");
 }
+// Vložení přímého odkazu na databazeknih.cz - obchází vyhledávání (které umí tiše
+// zahodit knihu, když sdílí název s jinou - viz dedup výše) a natáhne detail rovnou.
+async function fetchDbkByUrl(link){
+  const target = `https://www.databazeknih.cz${new URL(link).pathname}`;
+  const r = await fetch(`/api/proxy?url=${encodeURIComponent(target)}`);
+  if(!r.ok) throw new Error("HTTP "+r.status);
+  const html = await r.text();
+  const h1 = html.match(/<h1[^>]*>([^<]+)<\/h1>/);
+  const title = h1 ? h1[1].trim() : null;
+  if(!title) throw new Error("Knihu se nepodařilo rozpoznat");
+  const og = html.match(/property="og:image"\s+content="([^"]+)"/);
+  const authorM = html.match(/href="\/autori\/[^"]+"[^>]*>([^<]+)</);
+  const pagesM = html.match(/(\d{2,4})\s*str\.?\b/i);
+  return { title, author: authorM?authorM[1].trim():null, cover: og?og[1]:null, link: target, pages: pagesM?+pagesM[1]:null };
+}
 async function runSearch(){
   const q=S.addQ.trim();
   const cat=S.addCat||"Vše";
   if(!q){ S.addResults=[]; S.addBusy=false; updateResults(); return; }
+  if(/^https?:\/\/(www\.)?databazeknih\.cz\/(prehled-knihy|knihy)\//i.test(q)){
+    S.addResults=[]; S.addErr=""; S.addBusy=true; updateResults();
+    try{
+      const b = await fetchDbkByUrl(q);
+      S.addResults=[{title:b.title, author:b.author, cover:b.cover, link:b.link, url:b.link, pages:b.pages, cat:["databazeknih.cz"], _category:"book"}];
+    }catch(e){ S.addErr="Nepodařilo se načíst odkaz ("+(e.message||"chyba")+")"; }
+    S.addBusy=false; updateResults();
+    return;
+  }
   const ql=q.toLowerCase();
   const results=[];
   const searchBooks = cat==="Vše"||cat==="Knihy";
@@ -1902,7 +1926,7 @@ async function runSearch(){
             author=altText.slice(0,colonIdx).trim();
             title=altText.slice(colonIdx+1).trim();
           }
-          if(!title||results.some(r=>r.title===title)||online.some(o=>o.title===title)) continue;
+          if(!title||online.some(o=>o.link===link)) continue;
           online.push({title,author,cover,_category:"book",link,url:link,cat:["databazeknih.cz"]});
           if(online.filter(o=>o._category==="book").length>=8) break;
         }
