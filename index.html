@@ -1033,7 +1033,9 @@ const MOVIES_DEMO = [
   {title:"Rod Draka - Série 3",year:"2026",type:"seriál",rating:null,poster:null,url:"https://www.csfd.cz/film/765432",genres:["Akční","Fantasy"],country:"USA",vod:["Max"]},
 ];
 
-let S = {dark:localStorage.getItem("knizniRadarTheme")!=="light", view:"news", filter:"Vše", sort:"readers", q:"", books:DEMO, status:"idle", updatedAt:null, expanded:null, backlog:loadBacklog(),
+const VALID_VIEWS = new Set(["news","coming","list","movies","steam","backlog","diary"]);
+const savedView = localStorage.getItem("knizniRadarView");
+let S = {dark:localStorage.getItem("knizniRadarTheme")!=="light", view:VALID_VIEWS.has(savedView)?savedView:"news", filter:"Vše", sort:"readers", q:"", books:DEMO, status:"idle", updatedAt:null, expanded:null, backlog:loadBacklog(),
   addQ:"", addResults:[], addBusy:false, addMsg:"", addErr:"",
   games:GAMES_DEMO, gamesStatus:"idle", gamesUpdatedAt:null, gameWin:14, gameGenre:"Vše", gameSort:"reviews",
   movies:MOVIES_DEMO, moviesStatus:"idle", moviesUpdatedAt:null, movieType:"Vše", movieSort:"rating", movieQ:"",
@@ -2070,9 +2072,9 @@ function toggleGameBacklog(t){ inBacklog(t)?removeBacklog(t):addGameBacklog(t); 
 function toggleComicBacklog(t){ inBacklog(t)?removeBacklog(t):addComicBacklog(t); }
 
 document.getElementById("sync-btn").onclick=showSyncSettings;
-document.getElementById("diary-btn").onclick=()=>{S.view="diary"; render();};
+document.getElementById("diary-btn").onclick=()=>{S.view="diary"; localStorage.setItem("knizniRadarView","diary"); render();};
 document.getElementById("theme").onclick=()=>{S.dark=!S.dark; localStorage.setItem("knizniRadarTheme",S.dark?"dark":"light"); render();};
-document.getElementById("nav").onclick=e=>{const v=e.target.dataset.view; if(v){S.view=v; S.expanded=null;
+document.getElementById("nav").onclick=e=>{const v=e.target.dataset.view; if(v){S.view=v; S.expanded=null; localStorage.setItem("knizniRadarView",v);
   if(v==="steam" && S.gamesStatus==="idle"){ loadGames(); }
   else if(v==="movies" && S.moviesStatus==="idle"){ loadMovies(); }
   else if(v==="news" && S.newsStatus==="idle"){ loadNews(); }
@@ -2113,6 +2115,11 @@ loadHwCompare();
 syncBacklog();
 syncDiary();
 syncProgress();
+// Obnova poslední otevřené stránky po refreshi - dotáhnout i její data, ne jen Novinky
+if(S.view==="steam") loadGames();
+else if(S.view==="movies") loadMovies();
+else if(S.view==="coming") loadComing();
+else if(S.view==="list"){ load(); loadComics(); }
 </script>
 </body>
 </html>
