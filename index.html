@@ -150,6 +150,7 @@
   .demo-ribbon{position:absolute;top:9px;left:-32px;transform:rotate(-45deg);background:var(--emerald);color:#0a2712;font-family:var(--mono);font-size:9px;font-weight:900;padding:3px 34px;letter-spacing:.08em;pointer-events:none}
   .lib-pill{display:inline-flex;align-items:center;gap:3px;font-size:10px;font-weight:700;padding:2px 8px;border-radius:999px;background:rgba(55,227,212,.15);color:var(--cyan);text-decoration:none;white-space:nowrap}
   .lib-pill:hover{background:rgba(55,227,212,.28)}
+  .lib-badge{position:absolute;top:4px;right:4px;width:16px;height:16px;border-radius:50%;background:rgba(8,18,18,.85);border:1.5px solid var(--cyan);display:flex;align-items:center;justify-content:center;font-size:8px;line-height:1;box-shadow:0 0 6px rgba(55,227,212,.55);z-index:1}
   .gprice{font-family:var(--mono);font-size:14px;font-weight:600;color:var(--emerald);margin-top:6px}
   .gprice-orig{font-family:var(--mono);font-size:12px;color:var(--sub);text-decoration:line-through;margin-top:4px}
   .gdiscount{font-family:var(--mono);font-size:11px;font-weight:700;color:#0a0a0a;background:var(--emerald);border-radius:4px;padding:1px 5px;margin-left:4px}
@@ -1061,6 +1062,7 @@ const steamDeepLink = (url) => { if(!IS_DESKTOP) return url; const m=(url||"").m
 const demoRibbon = (g) => g.demoAppid ? `<span class="demo-ribbon">DEMO</span>` : "";
 // K dispozici jako e-kniha přes Palmknihy v Městské knihovně Rokycany
 const libraryPill = b => b.palmknihy ? `<a href="${esc(b.palmknihy.url)}" target="_blank" rel="noreferrer" class="lib-pill" title="K zapůjčení jako e-kniha - Městská knihovna Rokycany (Palmknihy)">📚 Knihovna</a>` : "";
+const libraryBadge = b => b.palmknihy ? `<span class="lib-badge" title="K zapůjčení jako e-kniha - Palmknihy">📚</span>` : "";
 const rarity = r => r==null?null: r>=95?"leg": r>=85?"epic": r>=75?"rare": null;
 const rarityCls = r => {const k=rarity(r); return k?` r-${k}`:"";};
 const rarityPill = r => {const k=rarity(r); return k?`<span class="rarity ${k}">${k==="leg"?"★ LEGENDÁRNÍ":k==="epic"?"EPICKÝ":"VZÁCNÝ"}</span>`:"";};
@@ -1456,7 +1458,7 @@ function listFiltered(){
 
 function coverHtml(b){
   const inner = `<div class="cover" data-pending data-cover="${esc(b.cover||'')}" data-q="${esc((b.title||'')+' '+(b.author||''))}" data-title="${esc(b.title||'')}" style="background:${grad((b.cat||[])[0]||b.title)}">
-      <span class="cv-cat">${esc((b.cat||[])[0]||'')}</span><span class="cv-title">${esc(b.title)}</span></div>`;
+      <span class="cv-cat">${esc((b.cat||[])[0]||'')}</span><span class="cv-title">${esc(b.title)}</span>${libraryBadge(b)}</div>`;
   return b.link ? `<a href="${esc(b.link)}" target="_blank" rel="noreferrer" title="Otevřít na databazeknih.cz">${inner}</a>` : inner;
 }
 function titleHtml(b){
