@@ -1197,10 +1197,10 @@ function steamFiltered(){
     const inWin=d && (now-d)<=win && d<=now+864e5;
     const inGenre=S.gameGenre==="Vše" || (g.tags||[]).includes(S.gameGenre);
     return inWin && inGenre;
-  }).sort((a,b)=>
+  }).sort((a,b)=> rarityRank(b.rating)-rarityRank(a.rating) || (
     S.gameSort==="released" ? (Date.parse(b.released)||0)-(Date.parse(a.released)||0) :
     S.gameSort==="rating"   ? (b.rating||0)-(a.rating||0) :
-                              (b.reviews||0)-(a.reviews||0));
+                              (b.reviews||0)-(a.reviews||0)));
 }
 async function loadNews(){
   S.newsStatus="loading"; render();
@@ -1348,9 +1348,9 @@ function moviesFiltered(){
     const inType=S.movieType==="Vše" || m.type===S.movieType;
     const inQ=!q || (m.title||"").toLowerCase().includes(q) || (m.genres||[]).join(" ").toLowerCase().includes(q);
     return inType && inQ;
-  }).sort((a,b)=>
+  }).sort((a,b)=> rarityRank(b.rating)-rarityRank(a.rating) || (
     S.movieSort==="rating" ? (b.rating||0)-(a.rating||0) :
-    S.movieSort==="year"   ? ((b.year||"")<(a.year||"")?-1:1) : 0);
+    S.movieSort==="year"   ? ((b.year||"")<(a.year||"")?-1:1) : 0));
 }
 function movieCard(m,i){
   const posterBg = m.poster ? "" : `background:${grad(m.title)}`;
@@ -1441,10 +1441,10 @@ function filterChips(){
 function listFiltered(){
   const q = S.q.trim().toLowerCase();
   let r = allListItems().filter(b => (!q || (b.title+" "+b.author).toLowerCase().includes(q)) && (S.filter==="Vše" || (b.cat||[]).includes(S.filter)));
-  return r.sort((a,b)=>
+  return r.sort((a,b)=> rarityRank(b.rating)-rarityRank(a.rating) || (
     S.sort==="readers" ? (b.readers||0)-(a.readers||0) :
     S.sort==="price"   ? minPrice(a)-minPrice(b) :
-                         (b.rating??-1)-(a.rating??-1));
+                         (b.rating??-1)-(a.rating??-1)));
 }
 
 function coverHtml(b){
@@ -1764,7 +1764,8 @@ function render(){
       + (items.length?items.map(gameCard).join(""):'<div class="empty">Žádná hra v tomto období a žánru.</div>');
     const gs=document.getElementById("gsort"); if(gs) gs.onchange=e=>{S.gameSort=e.target.value; render();};
   } else if(S.view==="backlog"){
-    const books=backlogByCategory("book"), movies=S.backlog.filter(b=>(b._category||"book")==="movie"), games=backlogByCategory("game"), comics=backlogByCategory("comic");
+    const byRarity=(a,b)=>rarityRank(b.rating)-rarityRank(a.rating) || (b.rating??-1)-(a.rating??-1);
+    const books=backlogByCategory("book").sort(byRarity), movies=S.backlog.filter(b=>(b._category||"book")==="movie").sort(byRarity), games=backlogByCategory("game").sort(byRarity), comics=backlogByCategory("comic").sort(byRarity);
     let html = `<div class="news-section"><span class="qicon">⚡</span> Aktivní questy</div>` + progressWidgetHtml();
     html += addPanelHtml();
     if(!S.backlog.length){
