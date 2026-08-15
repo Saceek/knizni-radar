@@ -1074,7 +1074,7 @@ const rarityPill = r => {const k=rarity(r); return k?`<span class="rarity ${k}">
 // kritérium, zvolený sort (hodnocení/cena/popularita...) rozhoduje jen uvnitř skupiny.
 const rarityRank = r => {const k=rarity(r); return k==="leg"?4:k==="epic"?3:k==="rare"?2:1;};
 // XP za dokončené mise v Deníku; level = 500 XP
-const XP_VALUES = {game:120, book:80, movie:50, comic:40};
+const XP_VALUES = {game:120, book:80, movie:50, comic:60};
 const entryXP = e => XP_VALUES[e._category]||50;
 const diaryTotalXP = () => S.diary.reduce((s,e)=>s+entryXP(e),0);
 function achToast(title,xp){
@@ -1538,7 +1538,7 @@ function backlogComicCard(c){
         <button class="bk rm" data-rm="${esc(c.title)}">✕ Odebrat</button>
         <button class="bk quest" data-qscat="comic" data-qstitle="${esc(c.title)}">▶ Začít</button>
         <button class="bk" data-setcatval="book" data-setcattitle="${esc(c.title)}" title="Přeřadit do knih">📖 Kniha?</button>
-        <span class="xp-pill" title="XP za dokončení questu">+40 XP</span>
+        <span class="xp-pill" title="XP za dokončení questu">+60 XP</span>
       </div>
     </div>
   </div>`;
