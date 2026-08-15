@@ -227,7 +227,7 @@ async function fetchDemoAppid(appid) {
 
 // Počet stran přímo z databazeknih.cz - je to na stránce, ale dotahuje se JS teprve po
 // rozkliknutí odkazu "Více info" (v prostém fetch/cheerio HTML vůbec není), proto Playwright.
-async function fetchPagesFromDatabazeknih(page, link) {
+async function fetchPagesFromDatabazeknih(page, link, expectedTitle) {
   try {
     // networkidle je na této stránce nespolehlivé (reklamy pořád něco pollují a nikdy
     // "neztichnou") - domcontentloaded + pevné čekání, stejně jako u ostatních scraperů zde.
@@ -238,6 +238,18 @@ async function fetchPagesFromDatabazeknih(page, link) {
     await page.waitForTimeout(800);
     const html = await page.content();
     const $ = cheerio.load(html);
+    // Pojistka proti stavu, kdy klik/čtení proběhne dřív, než stránka doopravdy dokončí
+    // přechod - bez tohoto ověření hrozí, že se tiše převezme číslo z PŘEDCHOZÍ knihy ve frontě.
+    const h1 = $("h1").first().text().trim();
+    if (expectedTitle) {
+      const wanted = normalizeTitle(expectedTitle).split(" ").filter((w) => w.length > 2);
+      const got = normalizeTitle(h1);
+      const matches = wanted.filter((w) => got.includes(w)).length;
+      if (!wanted.length || matches / wanted.length < 0.6) {
+        console.warn(`    ! nesedí název stránky ("${h1}" vs "${expectedTitle}") - přeskočeno`);
+        return null;
+      }
+    }
     const pages = parseInt($('[itemprop="numberOfPages"]').first().text().trim(), 10);
     return Number.isFinite(pages) ? pages : null;
   } catch (e) { return null; }
@@ -309,7 +321,7 @@ async function main() {
   // Počet stran u knih bez tohoto údaje - přednastaví cíl v widgetu "Aktivní questy".
   // Primárně z databazeknih.cz (Playwright, viz níže), Google Books jen jako záložní zdroj
   // pro tituly, co na databazeknih stránky neuvádí.
-  const toEnrichPages = backlog.filter((item) => (item._category === "book" || !item._category) && !item.pages);
+  const toEnrichPages = backlog.filter((item) => (item._category === "book" || !item._category) && (!item.pages || item.pagesSource !== "databazeknih.cz"));
 
   const toEnrichMovies = backlog.filter((item) => item._category === "movie" && item.rating == null);
   const toEnrichPalmknihy = backlog.filter((item) => (item._category === "book" || !item._category) && item.palmknihy === undefined);
@@ -403,10 +415,10 @@ async function main() {
     if (toEnrichPages.length) {
       console.log(`[enrich] ${toEnrichPages.length} knih k obohacení o počet stran`);
       for (const item of toEnrichPages) {
-        let pages = item.link && item.link.includes("databazeknih") ? await fetchPagesFromDatabazeknih(page, item.link) : null;
+        let pages = item.link && item.link.includes("databazeknih") ? await fetchPagesFromDatabazeknih(page, item.link, item.title) : null;
         let source = "databazeknih.cz";
         if (!pages) { pages = await fetchGoogleBooksPages(item.title, item.author); source = "Google Books"; }
-        if (pages) { item.pages = pages; changed++; console.log(`  → ${item.title}: ${pages} str. (${source})`); }
+        if (pages) { item.pages = pages; item.pagesSource = source; changed++; console.log(`  → ${item.title}: ${pages} str. (${source})`); }
         else console.log(`  → ${item.title}: ✗ nenalezeno`);
         await sleep(DELAY);
       }
