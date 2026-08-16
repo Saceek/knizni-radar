@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-16T10:17:37.881Z",
+  "updatedAt": "2026-08-16T11:17:38.055Z",
   "games": [
     {
       "title": "Scrap Mechanic",
@@ -394,6 +394,14 @@
       "note": "Minimální konfigurace: GeForce GTX 1050Ti, i5-4690"
     },
     {
+      "title": "No Results Found",
+      "tier": "green",
+      "gpu": "Intel UHD Graphics 620",
+      "cpu": "Intel Core i3-6100",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel UHD Graphics 620, Intel Core i3-6100"
+    },
+    {
       "title": "Dear Magical Girls",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 970 or AMD Radeon RX 570",
@@ -408,14 +416,6 @@
       "cpu": "Intel Core i5-3470 or AMD Ryzen 3 1200",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 650 or Radeon HD 5770, Intel Core i5-3470 or AMD Ryzen 3 1200"
-    },
-    {
-      "title": "No Results Found",
-      "tier": "green",
-      "gpu": "Intel UHD Graphics 620",
-      "cpu": "Intel Core i3-6100",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel UHD Graphics 620, Intel Core i3-6100"
     },
     {
       "title": "Memory of Memorie : A Chill Story",
@@ -690,6 +690,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 Ti / AMD Radeon HD 7850, Intel Core i3-4160 / AMD FX-6300"
     },
     {
+      "title": "Flowers and Deities",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 1660 Ti/AMD RX 5600-XT/Intel Arc A750",
+      "cpu": "Intel® Core™ i7-9700K or AMD® Ryzen™ 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1660 Ti/AMD RX 5600-XT/Intel Arc A750, Intel® Core™ i7-9700K or AMD® Ryzen™ 5 5600X"
+    },
+    {
       "title": "Hell Deck",
       "tier": "green",
       "gpu": "GTX 1050",
@@ -768,6 +776,38 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 or better, Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "A Game About Penguins: First Catch",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1660 or AMD RX 580",
+      "cpu": "Intel i5 or AMD Ryzen 5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1660 or AMD RX 580, Intel i5 or AMD Ryzen 5"
+    },
+    {
+      "title": "Witchblood",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce RTX 2070",
+      "cpu": "AMD Ryzen 5 / Intel Core i5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070, AMD Ryzen 5 / Intel Core i5"
+    },
+    {
+      "title": "Blue Sign",
+      "tier": "green",
+      "gpu": "Intel UHD Graphics 620 / NVIDIA GT 1030",
+      "cpu": "Intel Core i3-6100",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel UHD Graphics 620 / NVIDIA GT 1030, Intel Core i3-6100"
+    },
+    {
+      "title": "Powerplay",
+      "tier": "orange",
+      "gpu": "RTX 2060 or similar",
+      "cpu": "2.8 Ghz Dual Core or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 2060 or similar, 2.8 Ghz Dual Core or better"
     }
   ]
 }
