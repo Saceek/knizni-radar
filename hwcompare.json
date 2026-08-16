@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-16T21:18:54.795Z",
+  "updatedAt": "2026-08-16T22:18:54.318Z",
   "games": [
     {
       "title": "Scrap Mechanic",
@@ -282,20 +282,20 @@
       "note": "Doporučená konfigurace: GeForce GTX 1050 / Radeon RX 560 / Intel Iris Xe，2 GB 显存, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
-      "title": "Astrobuilder",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 960",
-      "cpu": "i5-7400K",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GTX 960, i5-7400K"
-    },
-    {
       "title": "Stonewards",
       "tier": "orange",
       "gpu": "RTX 2060 or RX 7600xt or equivalent",
       "cpu": "Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent"
+    },
+    {
+      "title": "Astrobuilder",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 960",
+      "cpu": "i5-7400K",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GTX 960, i5-7400K"
     },
     {
       "title": "Sort Them Ducks",
@@ -370,20 +370,20 @@
       "note": "Minimální konfigurace: Intel UHD Graphics 620, Intel Core i3-6100"
     },
     {
-      "title": "Road Diner Simulator: Prologue",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1070 or better 6GB VRAM",
-      "cpu": "Intel Core i5 (recent generation)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 or better 6GB VRAM, Intel Core i5 (recent generation)"
-    },
-    {
       "title": "Kusan: City of Wolves",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 970, 4 GB or AMD Radeon RX 590, 8 GB",
       "cpu": "Intel Core i5-8400 or AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 970, 4 GB or AMD Radeon RX 590, 8 GB, Intel Core i5-8400 or AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Road Diner Simulator: Prologue",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 1070 or better 6GB VRAM",
+      "cpu": "Intel Core i5 (recent generation)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 or better 6GB VRAM, Intel Core i5 (recent generation)"
     },
     {
       "title": "Below, Rusted Gods",
@@ -450,7 +450,7 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4000 or equivalent, Intel Core2 Duo or higher"
     },
     {
-      "title": "Celestial Descends",
+      "title": "天临混元",
       "tier": "green",
       "gpu": "Radeon™ RX 580(8GB VRAM) / NVIDIA® GeForce® GTX 1060  (6 GB VRAM)",
       "cpu": "AMD Ryzen™ 3 1200 / Intel® Core™ i5-6400",
@@ -562,6 +562,14 @@
       "note": "Doporučená konfigurace: Nvidia RTX 3060, Intel Core i5-7500"
     },
     {
+      "title": "Flock of the Seraphim",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce RTX 2060",
+      "cpu": "AMD Ryzen 7 3700X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060, AMD Ryzen 7 3700X"
+    },
+    {
       "title": "Get Out ! A \"Very Bad Dreams\" Story",
       "tier": "red",
       "gpu": "RTX 2080 / AMD Radeon RX 6700",
@@ -576,14 +584,6 @@
       "cpu": "Core i5 14400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 3060, Core i5 14400"
-    },
-    {
-      "title": "Flock of the Seraphim",
-      "tier": "orange",
-      "gpu": "NVIDIA GeForce RTX 2060",
-      "cpu": "AMD Ryzen 7 3700X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060, AMD Ryzen 7 3700X"
     },
     {
       "title": "Dverghold",
@@ -784,6 +784,14 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 or better, Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Blue Sign",
+      "tier": "green",
+      "gpu": "Intel UHD Graphics 620 / NVIDIA GT 1030",
+      "cpu": "Intel Core i3-6100",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel UHD Graphics 620 / NVIDIA GT 1030, Intel Core i3-6100"
     }
   ]
 }
