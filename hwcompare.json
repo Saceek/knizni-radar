@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-17T13:18:16.449Z",
+  "updatedAt": "2026-08-17T14:18:37.336Z",
   "games": [
     {
       "title": "Scrap Mechanic",
@@ -66,20 +66,20 @@
       "note": "Doporučená konfigurace: GTX 1060, 6GB VRAM, Intel Core i5-9600K"
     },
     {
-      "title": "Dinoblade",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1050 4GB / AMD Radeon RX 560",
-      "cpu": "Intel Core i5-7500  / AMD Ryzen 5 1600",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 1050 4GB / AMD Radeon RX 560, Intel Core i5-7500  / AMD Ryzen 5 1600"
-    },
-    {
       "title": "Sandustry",
       "tier": "green",
       "gpu": "NVIDIA® GeForce® GTX 960 (4 GB) / AMD Radeon RX 570 (4 GB)",
       "cpu": "Intel® Core™ i5-9600K (hexa-core) / AMD® Ryzen™ 5 1600 (hexa-core)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 960 (4 GB) / AMD Radeon RX 570 (4 GB), Intel® Core™ i5-9600K (hexa-core) / AMD® Ryzen™ 5 1600 (hexa-core)"
+    },
+    {
+      "title": "Dinoblade",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1050 4GB / AMD Radeon RX 560",
+      "cpu": "Intel Core i5-7500  / AMD Ryzen 5 1600",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 1050 4GB / AMD Radeon RX 560, Intel Core i5-7500  / AMD Ryzen 5 1600"
     },
     {
       "title": "GRAIN ROT",
@@ -506,6 +506,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 / AMD Radeon RX 580 / Intel Iris Xe or equivalent, Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent"
     },
     {
+      "title": "Landscaper Simulator",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1060 / AMD RX 480",
+      "cpu": null,
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 480"
+    },
+    {
       "title": "Montabi",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 960 / Radeon R9 380",
@@ -522,12 +530,12 @@
       "note": "Doporučená konfigurace: AMD Radeon RX 5700 ／ NVIDIA GeForce GTX 1070, AMD Ryzen 5 3600 ／ Intel Core i7 8700"
     },
     {
-      "title": "Landscaper Simulator",
+      "title": "Flowers and Deities",
       "tier": "green",
-      "gpu": "NVIDIA GTX 1060 / AMD RX 480",
-      "cpu": null,
+      "gpu": "Nvidia GeForce GTX 1660 Ti/AMD RX 5600-XT/Intel Arc A750",
+      "cpu": "Intel® Core™ i7-9700K or AMD® Ryzen™ 5 5600X",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 480"
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1660 Ti/AMD RX 5600-XT/Intel Arc A750, Intel® Core™ i7-9700K or AMD® Ryzen™ 5 5600X"
     },
     {
       "title": "THE CANON OF BALLS",
@@ -544,14 +552,6 @@
       "cpu": "AMD Ryzen 7 3700X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060, AMD Ryzen 7 3700X"
-    },
-    {
-      "title": "Flowers and Deities",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1660 Ti/AMD RX 5600-XT/Intel Arc A750",
-      "cpu": "Intel® Core™ i7-9700K or AMD® Ryzen™ 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1660 Ti/AMD RX 5600-XT/Intel Arc A750, Intel® Core™ i7-9700K or AMD® Ryzen™ 5 5600X"
     },
     {
       "title": "宗门最后的长老",
@@ -626,20 +626,20 @@
       "note": "Doporučená konfigurace: GeForce GTX 1060, Intel Core i5"
     },
     {
-      "title": "Dream House Cleaning",
-      "tier": "green",
-      "gpu": "GTX 1660 / RX 590",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1660 / RX 590, Intel Core i5-10400 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "Super Shout Showdown",
       "tier": "orange",
       "gpu": "NVIDIA RTX 2060 / RX 6600 or better",
       "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600 or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 2060 / RX 6600 or better, Intel Core i5-10400 / AMD Ryzen 5 3600 or better"
+    },
+    {
+      "title": "Dream House Cleaning",
+      "tier": "green",
+      "gpu": "GTX 1660 / RX 590",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1660 / RX 590, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "Dodo Duckie",
