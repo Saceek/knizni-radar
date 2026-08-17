@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-17T09:18:00.279Z",
+  "updatedAt": "2026-08-17T10:18:29.922Z",
   "games": [
     {
       "title": "Scrap Mechanic",
@@ -266,20 +266,20 @@
       "note": "Doporučená konfigurace: Nvidia RTX 3060 or AMD Radeon RX 5700, i7-9700 @ 3.6 GHz or Ryzen 5 3600 @ 3.6 GHz"
     },
     {
-      "title": "Zoominoes",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 750 Ti / AMD equivalent or better",
-      "cpu": "Intel Core i5 or AMD equivalent (quad-core)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 750 Ti / AMD equivalent or better, Intel Core i5 or AMD equivalent (quad-core)"
-    },
-    {
       "title": "Village in the Shade",
       "tier": "green",
       "gpu": "GeForce GTX 1650",
       "cpu": "Intel Core i5-12500",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1650, Intel Core i5-12500"
+    },
+    {
+      "title": "Zoominoes",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 750 Ti / AMD equivalent or better",
+      "cpu": "Intel Core i5 or AMD equivalent (quad-core)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 750 Ti / AMD equivalent or better, Intel Core i5 or AMD equivalent (quad-core)"
     },
     {
       "title": "Stonewards",
@@ -298,6 +298,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 | AMD Radeon R9-290X, Intel Core i5-11400F | AMD Ryzen 5 5600x"
     },
     {
+      "title": "No Results Found",
+      "tier": "green",
+      "gpu": "Intel UHD Graphics 620",
+      "cpu": "Intel Core i3-6100",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel UHD Graphics 620, Intel Core i3-6100"
+    },
+    {
       "title": "Astrobuilder",
       "tier": "green",
       "gpu": "NVIDIA GTX 960",
@@ -314,12 +322,12 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 or higher, Intel(R) Core(TM) i5-9600K CPU @ 3.70GHz or equivalent"
     },
     {
-      "title": "No Results Found",
+      "title": "Figure Shop Simulator",
       "tier": "green",
-      "gpu": "Intel UHD Graphics 620",
-      "cpu": "Intel Core i3-6100",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel UHD Graphics 620, Intel Core i3-6100"
+      "gpu": "NVIDIA GTX 1060 / AMD RX 480",
+      "cpu": "i5 7600K / Ryzen 5 2600x",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 480, i5 7600K / Ryzen 5 2600x"
     },
     {
       "title": "Kill The Shadow",
@@ -450,7 +458,7 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4000 or equivalent, Intel Core2 Duo or higher"
     },
     {
-      "title": "Celestial Descends",
+      "title": "天临混元",
       "tier": "green",
       "gpu": "Radeon™ RX 580(8GB VRAM) / NVIDIA® GeForce® GTX 1060  (6 GB VRAM)",
       "cpu": "AMD Ryzen™ 3 1200 / Intel® Core™ i5-6400",
@@ -546,20 +554,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060, AMD Ryzen 7 3700X"
     },
     {
-      "title": "宗门最后的长老",
-      "tier": "red",
-      "gpu": "NVIDIA GeForce RTX 3070 Ti / AMD Radeon HD 7850",
-      "cpu": "Intel Core i5-4590 / AMD Radeon RX 6800",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3070 Ti / AMD Radeon HD 7850, Intel Core i5-4590 / AMD Radeon RX 6800"
-    },
-    {
       "title": "Landscaper Simulator",
       "tier": "green",
       "gpu": "NVIDIA GTX 1060 / AMD RX 480",
       "cpu": null,
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 480"
+    },
+    {
+      "title": "宗门最后的长老",
+      "tier": "red",
+      "gpu": "NVIDIA GeForce RTX 3070 Ti / AMD Radeon HD 7850",
+      "cpu": "Intel Core i5-4590 / AMD Radeon RX 6800",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3070 Ti / AMD Radeon HD 7850, Intel Core i5-4590 / AMD Radeon RX 6800"
     },
     {
       "title": "Flowers and Deities",
@@ -634,12 +642,12 @@
       "note": "Doporučená konfigurace: GeForce GTX 1060, Intel Core i5"
     },
     {
-      "title": "Dream House Cleaning",
-      "tier": "green",
-      "gpu": "GTX 1660 / RX 590",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "title": "Super Shout Showdown",
+      "tier": "orange",
+      "gpu": "NVIDIA RTX 2060 / RX 6600 or better",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600 or better",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1660 / RX 590, Intel Core i5-10400 / AMD Ryzen 5 3600"
+      "note": "Doporučená konfigurace: NVIDIA RTX 2060 / RX 6600 or better, Intel Core i5-10400 / AMD Ryzen 5 3600 or better"
     },
     {
       "title": "Dodo Duckie",
@@ -648,6 +656,14 @@
       "cpu": "Intel Core i5-12400F / AMD Ryzen 5 5600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 (6 GB) / AMD Radeon RX 5600 XT, Intel Core i5-12400F / AMD Ryzen 5 5600"
+    },
+    {
+      "title": "Dream House Cleaning",
+      "tier": "green",
+      "gpu": "GTX 1660 / RX 590",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1660 / RX 590, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "Fading Echo",
@@ -776,14 +792,6 @@
       "cpu": "Intel Core i5 2.4GHz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA Geforce GTX 1050, AMD RX 540, Intel Core i5 2.4GHz"
-    },
-    {
-      "title": "Blue Sign",
-      "tier": "green",
-      "gpu": "Intel UHD Graphics 620 / NVIDIA GT 1030",
-      "cpu": "Intel Core i3-6100",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel UHD Graphics 620 / NVIDIA GT 1030, Intel Core i3-6100"
     }
   ]
 }
