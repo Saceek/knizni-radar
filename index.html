@@ -536,12 +536,38 @@ async function saveRemoteDiary(data){
   }catch(e){ _diarySyncError=e.message; console.warn("[diary-sync] save error:",e.message); return false; }
 }
 
+// Klíč pro sloučení záznamů beze společného ID - dost jedinečný na to, aby dva různé
+// zápisy nesplynuly, ale pořád stabilní napříč zařízeními pro stejný reálný záznam.
+const diaryEntryKey = e => `${e.title}||${e.date}||${e._category}||${e.note||""}`;
+function mergeDiaryEntries(remote, local){
+  const seen = new Set(remote.map(diaryEntryKey));
+  const merged = [...remote];
+  local.forEach(e=>{ const k=diaryEntryKey(e); if(!seen.has(k)){ merged.push(e); seen.add(k); } });
+  return merged;
+}
 async function syncDiary(){
   _diarySyncStatus="syncing"; render();
   const remote=await loadRemoteDiary();
-  if(remote){ saveDiary(remote); S.diary=remote; }
-  else { S.diary=loadDiary(); }
-  _diarySyncStatus=getGHToken()?"ok":"off";
+  const local=loadDiary();
+  if(remote){
+    // Sloučit, ne přepsat - jinak zápis, co se z libovolného důvodu neodeslal (např. iPad
+    // Safari uspí kartu při přepnutí appky dřív, než request doběhne), zmizí beze stopy hned
+    // při dalším načtení stránky, protože by ho přepsala starší vzdálená verze.
+    const merged = mergeDiaryEntries(remote, local);
+    saveDiary(merged);
+    S.diary = merged;
+    if(merged.length !== remote.length && getGHToken()){
+      // Lokálně bylo něco navíc, co na vzdáleném chybělo - rovnou to dosynchronizovat zpět.
+      const ok = await saveRemoteDiary(merged);
+      _diarySyncStatus = ok ? "ok" : "err";
+      if(!ok) _diarySyncError = "Automatické dosynchronizování staršího záznamu selhalo, zkusí se znovu příště.";
+    } else {
+      _diarySyncStatus = getGHToken()?"ok":"off";
+    }
+  } else {
+    S.diary = local;
+    _diarySyncStatus = getGHToken()?"ok":"off";
+  }
   render();
 }
 
