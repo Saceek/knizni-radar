@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-18T06:18:17.682Z",
+  "updatedAt": "2026-08-18T07:17:23.935Z",
   "games": [
     {
       "title": "Scrap Mechanic",
@@ -194,20 +194,20 @@
       "note": "Doporučená konfigurace: GTX 1060, Quad-core 3.0 GHz"
     },
     {
-      "title": "Suncraft",
-      "tier": "green",
-      "gpu": "Intel HD 620 / UHD 600 series, or NVIDIA GeForce GT 730 / AMD R7 240",
-      "cpu": "Intel Core i3-2100 / AMD FX-4350 or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD 620 / UHD 600 series, or NVIDIA GeForce GT 730 / AMD R7 240, Intel Core i3-2100 / AMD FX-4350 or equivalent"
-    },
-    {
       "title": "Sort Them Ducks",
       "tier": "orange",
       "gpu": "NVIDIA GeForce GTX 1080 / AMD",
       "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD, Intel Core i7-8700 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Suncraft",
+      "tier": "green",
+      "gpu": "Intel HD 620 / UHD 600 series, or NVIDIA GeForce GT 730 / AMD R7 240",
+      "cpu": "Intel Core i3-2100 / AMD FX-4350 or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD 620 / UHD 600 series, or NVIDIA GeForce GT 730 / AMD R7 240, Intel Core i3-2100 / AMD FX-4350 or equivalent"
     },
     {
       "title": "星之旅 Lunarium",
@@ -410,7 +410,7 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4000 or equivalent, Intel Core2 Duo or higher"
     },
     {
-      "title": "天临混元",
+      "title": "Celestial Descends",
       "tier": "green",
       "gpu": "Radeon™ RX 580(8GB VRAM) / NVIDIA® GeForce® GTX 1060  (6 GB VRAM)",
       "cpu": "AMD Ryzen™ 3 1200 / Intel® Core™ i5-6400",
@@ -770,14 +770,6 @@
       "note": "Minimální konfigurace: NVIDIA GForce GTX 1050, i7"
     },
     {
-      "title": "Dino Party",
-      "tier": "green",
-      "gpu": "GTX 1060",
-      "cpu": "i7",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1060, i7"
-    },
-    {
       "title": "The Pale Mimic",
       "tier": "red",
       "gpu": "NVIDIA RTX 3060 Ti / AMD Radeon RX 6700 XT",
@@ -786,12 +778,28 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 Ti / AMD Radeon RX 6700 XT, Intel® Core™ i5 or AMD Ryzen™ 5"
     },
     {
+      "title": "Dino Party",
+      "tier": "green",
+      "gpu": "GTX 1060",
+      "cpu": "i7",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1060, i7"
+    },
+    {
       "title": "A Game About Penguins: First Catch",
       "tier": "green",
       "gpu": "NVIDIA GTX 1660 or AMD RX 580",
       "cpu": "Intel i5 or AMD Ryzen 5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1660 or AMD RX 580, Intel i5 or AMD Ryzen 5"
+    },
+    {
+      "title": "Only Good Babysitters Go To Heaven",
+      "tier": "green",
+      "gpu": "Nvidia GTX 750 TI 2 GB",
+      "cpu": "Intel core i5",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Nvidia GTX 750 TI 2 GB, Intel core i5"
     }
   ]
 }
