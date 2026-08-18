@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-18T03:19:29.903Z",
+  "updatedAt": "2026-08-18T04:10:45.644Z",
   "games": [
     {
       "title": "Scrap Mechanic",
@@ -418,7 +418,7 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4000 or equivalent, Intel Core2 Duo or higher"
     },
     {
-      "title": "Celestial Descends",
+      "title": "天临混元",
       "tier": "green",
       "gpu": "Radeon™ RX 580(8GB VRAM) / NVIDIA® GeForce® GTX 1060  (6 GB VRAM)",
       "cpu": "AMD Ryzen™ 3 1200 / Intel® Core™ i5-6400",
@@ -578,12 +578,12 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4400, i5"
     },
     {
-      "title": "Deadliest Pigeon",
+      "title": "Tukoni: Strážci lesa",
       "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1650 or Better",
-      "cpu": "Intel Core i5-9400F or Better",
+      "gpu": "NVIDIA GeForce GTX 750 Ti / AMD Radeon R7 260X / Intel UHD 630 — 2 GB VRAM",
+      "cpu": "Intel Core i5‑9600K / AMD Ryzen 5 3600 (requires AVX2 instruction set support)",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 or Better, Intel Core i5-9400F or Better"
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 Ti / AMD Radeon R7 260X / Intel UHD 630 — 2 GB VRAM, Intel Core i5‑9600K / AMD Ryzen 5 3600 (requires AVX2 instruction set support)"
     },
     {
       "title": "ON&OFF",
@@ -592,6 +592,14 @@
       "cpu": "Intel Core i5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1060, Intel Core i5"
+    },
+    {
+      "title": "Deadliest Pigeon",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1650 or Better",
+      "cpu": "Intel Core i5-9400F or Better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 or Better, Intel Core i5-9400F or Better"
     },
     {
       "title": "深渊兽潮",
@@ -616,14 +624,6 @@
       "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 1660 / RX 590, Intel Core i5-10400 / AMD Ryzen 5 3600"
-    },
-    {
-      "title": "Tukoni: Strážci lesa",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 750 Ti / AMD Radeon R7 260X / Intel UHD 630 — 2 GB VRAM",
-      "cpu": "Intel Core i5‑9600K / AMD Ryzen 5 3600 (requires AVX2 instruction set support)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 Ti / AMD Radeon R7 260X / Intel UHD 630 — 2 GB VRAM, Intel Core i5‑9600K / AMD Ryzen 5 3600 (requires AVX2 instruction set support)"
     },
     {
       "title": "Dodo Duckie",
@@ -714,6 +714,14 @@
       "note": "Minimální konfigurace: Intel HD Graphics, Intel Celeron"
     },
     {
+      "title": "Blue Sign",
+      "tier": "green",
+      "gpu": "Intel UHD Graphics 620 / NVIDIA GT 1030",
+      "cpu": "Intel Core i3-6100",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel UHD Graphics 620 / NVIDIA GT 1030, Intel Core i3-6100"
+    },
+    {
       "title": "南派盗墓传奇",
       "tier": "green",
       "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
@@ -728,14 +736,6 @@
       "cpu": "Intel® Core™ i7-4770K / AMD Ryzen 5 1500X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB, Intel® Core™ i7-4770K / AMD Ryzen 5 1500X"
-    },
-    {
-      "title": "Blue Sign",
-      "tier": "green",
-      "gpu": "Intel UHD Graphics 620 / NVIDIA GT 1030",
-      "cpu": "Intel Core i3-6100",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel UHD Graphics 620 / NVIDIA GT 1030, Intel Core i3-6100"
     },
     {
       "title": "Catio Simulator",
@@ -792,6 +792,14 @@
       "cpu": "Intel i5 or AMD Ryzen 5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1660 or AMD RX 580, Intel i5 or AMD Ryzen 5"
+    },
+    {
+      "title": "Only Good Babysitters Go To Heaven",
+      "tier": "green",
+      "gpu": "Nvidia GTX 750 TI 2 GB",
+      "cpu": "Intel core i5",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Nvidia GTX 750 TI 2 GB, Intel core i5"
     }
   ]
 }
