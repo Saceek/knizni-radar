@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-18T08:17:58.551Z",
+  "updatedAt": "2026-08-18T09:18:05.084Z",
   "games": [
     {
       "title": "Scrap Mechanic",
@@ -234,20 +234,20 @@
       "note": "Doporučená konfigurace: GeForce GTX 1050 / Radeon RX 560 / Intel Iris Xe，2 GB 显存, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
-      "title": "Zoominoes",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 750 Ti / AMD equivalent or better",
-      "cpu": "Intel Core i5 or AMD equivalent (quad-core)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 750 Ti / AMD equivalent or better, Intel Core i5 or AMD equivalent (quad-core)"
-    },
-    {
       "title": "Stonewards",
       "tier": "orange",
       "gpu": "RTX 2060 or RX 7600xt or equivalent",
       "cpu": "Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent"
+    },
+    {
+      "title": "Zoominoes",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 750 Ti / AMD equivalent or better",
+      "cpu": "Intel Core i5 or AMD equivalent (quad-core)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 750 Ti / AMD equivalent or better, Intel Core i5 or AMD equivalent (quad-core)"
     },
     {
       "title": "Village in the Shade",
@@ -426,6 +426,14 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 6GB or AMD Radeon RX 580 8GB, Intel Core i5-4670 | AMD Ryzen5 1600"
     },
     {
+      "title": "The Sinking City 2",
+      "tier": "red",
+      "gpu": "NVIDIA GeForce RTX 4070 Ti | AMD RX7900XT, 12GB VRAM",
+      "cpu": "Core i5-14600K | AMD Ryzen 5 7600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4070 Ti | AMD RX7900XT, 12GB VRAM, Core i5-14600K | AMD Ryzen 5 7600X"
+    },
+    {
       "title": "Tormentum II",
       "tier": "green",
       "gpu": "Dedicated GPU or Intel Iris / Intel UHD Graphics",
@@ -490,20 +498,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 / AMD Radeon RX 580 / Intel Iris Xe or equivalent, Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent"
     },
     {
-      "title": "Landscaper Simulator",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1060 / AMD RX 480",
-      "cpu": null,
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 480"
-    },
-    {
       "title": "Flock of the Seraphim",
       "tier": "orange",
       "gpu": "NVIDIA GeForce RTX 2060",
       "cpu": "AMD Ryzen 7 3700X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060, AMD Ryzen 7 3700X"
+    },
+    {
+      "title": "Landscaper Simulator",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1060 / AMD RX 480",
+      "cpu": null,
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 480"
     },
     {
       "title": "Montabi",
@@ -554,6 +562,14 @@
       "note": "Doporučená konfigurace: Nvidia RTX 3060, Intel Core i5-7500"
     },
     {
+      "title": "Tukoni: Strážci lesa",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 750 Ti / AMD Radeon R7 260X / Intel UHD 630 — 2 GB VRAM",
+      "cpu": "Intel Core i5‑9600K / AMD Ryzen 5 3600 (requires AVX2 instruction set support)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 Ti / AMD Radeon R7 260X / Intel UHD 630 — 2 GB VRAM, Intel Core i5‑9600K / AMD Ryzen 5 3600 (requires AVX2 instruction set support)"
+    },
+    {
       "title": "Dverghold",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1060 / AMD Radeon RX 580 or equivalent (4 GB VRAM)",
@@ -568,14 +584,6 @@
       "cpu": "i5",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 4400, i5"
-    },
-    {
-      "title": "Tukoni: Strážci lesa",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 750 Ti / AMD Radeon R7 260X / Intel UHD 630 — 2 GB VRAM",
-      "cpu": "Intel Core i5‑9600K / AMD Ryzen 5 3600 (requires AVX2 instruction set support)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 Ti / AMD Radeon R7 260X / Intel UHD 630 — 2 GB VRAM, Intel Core i5‑9600K / AMD Ryzen 5 3600 (requires AVX2 instruction set support)"
     },
     {
       "title": "ON&OFF",
@@ -746,6 +754,14 @@
       "note": "Doporučená konfigurace: Radeon RX 560 / GeForce GTX 1050, Intel Core i3-10100 / AMD Ryzen 3 3100"
     },
     {
+      "title": "The Pale Mimic",
+      "tier": "red",
+      "gpu": "NVIDIA RTX 3060 Ti / AMD Radeon RX 6700 XT",
+      "cpu": "Intel® Core™ i5 or AMD Ryzen™ 5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 3060 Ti / AMD Radeon RX 6700 XT, Intel® Core™ i5 or AMD Ryzen™ 5"
+    },
+    {
       "title": "Fairtravel Battle CCG",
       "tier": "green",
       "gpu": "NVIDIA Geforce GTX 1050, AMD RX 540",
@@ -770,14 +786,6 @@
       "note": "Minimální konfigurace: NVIDIA GForce GTX 1050, i7"
     },
     {
-      "title": "The Pale Mimic",
-      "tier": "red",
-      "gpu": "NVIDIA RTX 3060 Ti / AMD Radeon RX 6700 XT",
-      "cpu": "Intel® Core™ i5 or AMD Ryzen™ 5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 3060 Ti / AMD Radeon RX 6700 XT, Intel® Core™ i5 or AMD Ryzen™ 5"
-    },
-    {
       "title": "Dino Party",
       "tier": "green",
       "gpu": "GTX 1060",
@@ -792,14 +800,6 @@
       "cpu": "Intel i5 or AMD Ryzen 5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1660 or AMD RX 580, Intel i5 or AMD Ryzen 5"
-    },
-    {
-      "title": "Only Good Babysitters Go To Heaven",
-      "tier": "green",
-      "gpu": "Nvidia GTX 750 TI 2 GB",
-      "cpu": "Intel core i5",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Nvidia GTX 750 TI 2 GB, Intel core i5"
     }
   ]
 }
