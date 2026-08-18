@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-18T04:10:45.644Z",
+  "updatedAt": "2026-08-18T05:18:25.971Z",
   "games": [
     {
       "title": "Scrap Mechanic",
@@ -234,20 +234,20 @@
       "note": "Doporučená konfigurace: GeForce GTX 1050 / Radeon RX 560 / Intel Iris Xe，2 GB 显存, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
-      "title": "Stonewards",
-      "tier": "orange",
-      "gpu": "RTX 2060 or RX 7600xt or equivalent",
-      "cpu": "Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent"
-    },
-    {
       "title": "Zoominoes",
       "tier": "green",
       "gpu": "NVIDIA GTX 750 Ti / AMD equivalent or better",
       "cpu": "Intel Core i5 or AMD equivalent (quad-core)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 750 Ti / AMD equivalent or better, Intel Core i5 or AMD equivalent (quad-core)"
+    },
+    {
+      "title": "Stonewards",
+      "tier": "orange",
+      "gpu": "RTX 2060 or RX 7600xt or equivalent",
+      "cpu": "Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent"
     },
     {
       "title": "Village in the Shade",
@@ -338,6 +338,14 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 750ti or equivalent, Intel i7"
     },
     {
+      "title": "Ledgerbound",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1660 / AMD RX 590 (6GB VRAM)",
+      "cpu": "Intel Core i5-9400 / AMD Ryzen 5 3600 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1660 / AMD RX 590 (6GB VRAM), Intel Core i5-9400 / AMD Ryzen 5 3600 or equivalent"
+    },
+    {
       "title": "Kusan: City of Wolves",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 970, 4 GB or AMD Radeon RX 590, 8 GB",
@@ -352,14 +360,6 @@
       "cpu": "Intel Core i5 (recent generation)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 or better 6GB VRAM, Intel Core i5 (recent generation)"
-    },
-    {
-      "title": "Ledgerbound",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1660 / AMD RX 590 (6GB VRAM)",
-      "cpu": "Intel Core i5-9400 / AMD Ryzen 5 3600 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1660 / AMD RX 590 (6GB VRAM), Intel Core i5-9400 / AMD Ryzen 5 3600 or equivalent"
     },
     {
       "title": "Below, Rusted Gods",
@@ -418,7 +418,7 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4000 or equivalent, Intel Core2 Duo or higher"
     },
     {
-      "title": "天临混元",
+      "title": "Celestial Descends",
       "tier": "green",
       "gpu": "Radeon™ RX 580(8GB VRAM) / NVIDIA® GeForce® GTX 1060  (6 GB VRAM)",
       "cpu": "AMD Ryzen™ 3 1200 / Intel® Core™ i5-6400",
@@ -482,20 +482,20 @@
       "note": "Doporučená konfigurace: GTX 1060 3GB, Intel i5 - 6500"
     },
     {
-      "title": "Spiritstead",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1650 / AMD Radeon RX 580 / Intel Iris Xe or equivalent",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 / AMD Radeon RX 580 / Intel Iris Xe or equivalent, Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent"
-    },
-    {
       "title": "THE CANON OF BALLS",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1060 (6 GB VRAM) or AMD Radeon RX 590 (8 GB VRAM)",
       "cpu": "Intel Core i7-10700K or AMD Ryzen 7 5700X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 (6 GB VRAM) or AMD Radeon RX 590 (8 GB VRAM), Intel Core i7-10700K or AMD Ryzen 7 5700X"
+    },
+    {
+      "title": "Spiritstead",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1650 / AMD Radeon RX 580 / Intel Iris Xe or equivalent",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 / AMD Radeon RX 580 / Intel Iris Xe or equivalent, Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent"
     },
     {
       "title": "Landscaper Simulator",
@@ -786,20 +786,20 @@
       "note": "Doporučená konfigurace: GTX 1060, i7"
     },
     {
+      "title": "The Pale Mimic",
+      "tier": "red",
+      "gpu": "NVIDIA RTX 3060 Ti / AMD Radeon RX 6700 XT",
+      "cpu": "Intel® Core™ i5 or AMD Ryzen™ 5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 3060 Ti / AMD Radeon RX 6700 XT, Intel® Core™ i5 or AMD Ryzen™ 5"
+    },
+    {
       "title": "A Game About Penguins: First Catch",
       "tier": "green",
       "gpu": "NVIDIA GTX 1660 or AMD RX 580",
       "cpu": "Intel i5 or AMD Ryzen 5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1660 or AMD RX 580, Intel i5 or AMD Ryzen 5"
-    },
-    {
-      "title": "Only Good Babysitters Go To Heaven",
-      "tier": "green",
-      "gpu": "Nvidia GTX 750 TI 2 GB",
-      "cpu": "Intel core i5",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Nvidia GTX 750 TI 2 GB, Intel core i5"
     }
   ]
 }
