@@ -2032,7 +2032,16 @@ function toggleGameBacklog(t){ inBacklog(t)?removeBacklog(t):addGameBacklog(t); 
 function toggleComicBacklog(t){ inBacklog(t)?removeBacklog(t):addComicBacklog(t); }
 
 document.getElementById("sync-btn").onclick=showSyncSettings;
-document.getElementById("diary-btn").onclick=()=>{S.view="diary"; localStorage.setItem("knizniRadarView","diary"); render();};
+document.getElementById("diary-btn").onclick=()=>{
+  S.view="diary"; localStorage.setItem("knizniRadarView","diary"); render();
+  // Deník dohledává chybějící obálky u starších záznamů v knihách/filmech/hrách (viz
+  // diaryFallback) - ty se ale jinak natahují líně jen při návštěvě dané záložky, takže
+  // bez tohohle by obálka naskočila, až by uživatel tu záložku sám navštívil.
+  if(S.status==="idle") load();
+  if(S.comicsStatus==="idle") loadComics();
+  if(S.moviesStatus==="idle") loadMovies();
+  if(S.gamesStatus==="idle") loadGames();
+};
 document.getElementById("theme").onclick=()=>{S.dark=!S.dark; localStorage.setItem("knizniRadarTheme",S.dark?"dark":"light"); render();};
 document.getElementById("nav").onclick=e=>{const v=e.target.dataset.view; if(v){S.view=v; S.expanded=null; localStorage.setItem("knizniRadarView",v);
   if(v==="steam" && S.gamesStatus==="idle"){ loadGames(); }
@@ -2080,6 +2089,7 @@ if(S.view==="steam") loadGames();
 else if(S.view==="movies") loadMovies();
 else if(S.view==="coming") loadComing();
 else if(S.view==="list"){ load(); loadComics(); }
+else if(S.view==="diary"){ load(); loadComics(); loadMovies(); loadGames(); }
 </script>
 </body>
 </html>
