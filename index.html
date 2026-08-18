@@ -399,9 +399,6 @@ const DEMO = [
 ];
 
 let mem = null;
-const LS_TOKEN = "knizniRadarGHToken";
-const REPO_OWNER = "Saceek";
-const REPO_NAME = "knizni-radar";
 const BACKLOG_PATH = "backlog.json";
 const DIARY_PATH = "diary.json";
 let _syncStatus = "off";
@@ -409,20 +406,20 @@ let _diarySyncStatus = "off";
 let _syncError = "";
 let _diarySyncError = "";
 
-function getGHToken(){ return localStorage.getItem(LS_TOKEN)||""; }
+// Zápis jde přes vlastní server-side proxy (/api/sync) - token pro GitHub API zůstává jen
+// jako Cloudflare Pages secret na serveru, appka žádný token nezná ani se na něj neptá.
+async function syncPut(file, data){
+  try{
+    const r=await fetch("/api/sync",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({file,data})});
+    if(!r.ok){
+      const err=await r.json().catch(()=>({}));
+      return {ok:false, error: err.error || `HTTP ${r.status}`};
+    }
+    return {ok:true};
+  }catch(e){ return {ok:false, error:e.message}; }
+}
 
 async function loadRemoteBacklog(){
-  const token=getGHToken();
-  // With token: read from GitHub API (always fresh, no Pages cache delay)
-  if(token){
-    try{
-      const r=await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${BACKLOG_PATH}?t=${Date.now()}`,{cache:"no-store",headers:{Authorization:`Bearer ${token}`,Accept:"application/vnd.github.raw"}});
-      if(!r.ok) throw new Error("API "+r.status);
-      const d=await r.json();
-      return Array.isArray(d)?d:null;
-    }catch(e){ console.warn("[sync] API read failed, trying Pages:",e.message); }
-  }
-  // Fallback: read from GitHub Pages
   try{
     const r=await fetch(BACKLOG_PATH+"?t="+Date.now(),{cache:"no-store"});
     if(!r.ok) return null;
@@ -432,37 +429,9 @@ async function loadRemoteBacklog(){
 }
 
 async function saveRemoteBacklog(data){
-  const token=getGHToken();
-  if(!token) return false;
-  try{
-    const apiUrl=`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${BACKLOG_PATH}`;
-    // Always fetch SHA first - required for updating existing files
-    // Step 1: Get SHA
-    const getR=await fetch(apiUrl+"?t="+Date.now(),{cache:"no-store",headers:{Authorization:`Bearer ${token}`,Accept:"application/vnd.github+json"}});
-    let sha=null;
-    if(getR.ok){
-      const f=await getR.json();
-      sha=f.sha;
-      if(!sha){ _syncError="SHA prázdné - neočekávaná odpověď API"; return false; }
-    } else {
-      if(getR.status!==404){ _syncError=`Čtení SHA selhalo: ${getR.status}`; return false; }
-    }
-    // Step 2: Encode content
-    const jsonStr=JSON.stringify(data,null,2);
-    const bytes=new TextEncoder().encode(jsonStr);
-    let binStr=""; for(let i=0;i<bytes.length;i++) binStr+=String.fromCharCode(bytes[i]);
-    const content=btoa(binStr);
-    // Step 3: PUT
-    const body={message:"backlog: sync",content,branch:"main"};
-    if(sha) body.sha=sha;
-    const r=await fetch(apiUrl,{method:"PUT",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify(body)});
-    if(!r.ok){
-      const err=await r.json().catch(()=>({}));
-      _syncError=`Zápis selhal: ${r.status} - ${err.message||"neznámá chyba"}`;
-      return false;
-    }
-    return true;
-  }catch(e){ _syncError=e.message; console.warn("[sync] save error:",e.message); return false; }
+  const res=await syncPut(BACKLOG_PATH, data);
+  if(!res.ok) _syncError=res.error;
+  return res.ok;
 }
 
 async function syncBacklog(){
@@ -471,38 +440,27 @@ async function syncBacklog(){
   if(remote){
     // Always use remote as source of truth on load
     saveBacklog(remote); S.backlog=remote;
-    _syncStatus=getGHToken()?"ok":"off";
+    _syncStatus="ok";
   } else {
     // No remote: use local
     S.backlog=loadBacklog();
-    _syncStatus=getGHToken()?"ok":"off";
+    _syncStatus="ok";
   }
   render();
 }
 
 async function saveBacklogAndSync(a){
   saveBacklog(a);
-  if(getGHToken()){
-    _syncStatus="syncing"; _syncError=""; render();
-    const ok=await saveRemoteBacklog(a);
-    _syncStatus=ok?"ok":"err";
-    render();
-  }
+  _syncStatus="syncing"; _syncError=""; render();
+  const ok=await saveRemoteBacklog(a);
+  _syncStatus=ok?"ok":"err";
+  render();
 }
 
 function loadDiary(){ try{ return JSON.parse(localStorage.getItem(LS_DIARY_KEY))||[]; }catch(e){ return []; } }
 function saveDiary(a){ try{ localStorage.setItem(LS_DIARY_KEY, JSON.stringify(a)); }catch(e){} }
 
 async function loadRemoteDiary(){
-  const token=getGHToken();
-  if(token){
-    try{
-      const r=await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${DIARY_PATH}?t=${Date.now()}`,{cache:"no-store",headers:{Authorization:`Bearer ${token}`,Accept:"application/vnd.github.raw"}});
-      if(!r.ok) throw new Error("API "+r.status);
-      const d=await r.json();
-      return Array.isArray(d)?d:null;
-    }catch(e){ console.warn("[diary-sync] API read failed, trying Pages:",e.message); }
-  }
   try{
     const r=await fetch(DIARY_PATH+"?t="+Date.now(),{cache:"no-store"});
     if(!r.ok) return null;
@@ -512,28 +470,9 @@ async function loadRemoteDiary(){
 }
 
 async function saveRemoteDiary(data){
-  const token=getGHToken();
-  if(!token) return false;
-  try{
-    const apiUrl=`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${DIARY_PATH}`;
-    const getR=await fetch(apiUrl+"?t="+Date.now(),{cache:"no-store",headers:{Authorization:`Bearer ${token}`,Accept:"application/vnd.github+json"}});
-    let sha=null;
-    if(getR.ok){ sha=(await getR.json()).sha; }
-    else if(getR.status!==404){ _diarySyncError=`Čtení SHA selhalo: ${getR.status}`; return false; }
-    const jsonStr=JSON.stringify(data,null,2);
-    const bytes=new TextEncoder().encode(jsonStr);
-    let binStr=""; for(let i=0;i<bytes.length;i++) binStr+=String.fromCharCode(bytes[i]);
-    const content=btoa(binStr);
-    const body={message:"diary: sync",content,branch:"main"};
-    if(sha) body.sha=sha;
-    const r=await fetch(apiUrl,{method:"PUT",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify(body)});
-    if(!r.ok){
-      const err=await r.json().catch(()=>({}));
-      _diarySyncError=`Zápis selhal: ${r.status} - ${err.message||"neznámá chyba"}`;
-      return false;
-    }
-    return true;
-  }catch(e){ _diarySyncError=e.message; console.warn("[diary-sync] save error:",e.message); return false; }
+  const res=await syncPut(DIARY_PATH, data);
+  if(!res.ok) _diarySyncError=res.error;
+  return res.ok;
 }
 
 // Klíč pro sloučení záznamů beze společného ID - dost jedinečný na to, aby dva různé
@@ -556,29 +495,27 @@ async function syncDiary(){
     const merged = mergeDiaryEntries(remote, local);
     saveDiary(merged);
     S.diary = merged;
-    if(merged.length !== remote.length && getGHToken()){
+    if(merged.length !== remote.length){
       // Lokálně bylo něco navíc, co na vzdáleném chybělo - rovnou to dosynchronizovat zpět.
       const ok = await saveRemoteDiary(merged);
       _diarySyncStatus = ok ? "ok" : "err";
       if(!ok) _diarySyncError = "Automatické dosynchronizování staršího záznamu selhalo, zkusí se znovu příště.";
     } else {
-      _diarySyncStatus = getGHToken()?"ok":"off";
+      _diarySyncStatus = "ok";
     }
   } else {
     S.diary = local;
-    _diarySyncStatus = getGHToken()?"ok":"off";
+    _diarySyncStatus = "ok";
   }
   render();
 }
 
 async function saveDiaryAndSync(a){
   saveDiary(a);
-  if(getGHToken()){
-    _diarySyncStatus="syncing"; render();
-    const ok=await saveRemoteDiary(a);
-    _diarySyncStatus=ok?"ok":"err";
-    render();
-  }
+  _diarySyncStatus="syncing"; render();
+  const ok=await saveRemoteDiary(a);
+  _diarySyncStatus=ok?"ok":"err";
+  render();
 }
 
 const LS_PROGRESS_KEY = "knizniRadarProgress";
@@ -596,15 +533,6 @@ function loadProgress(){ try{ return migrateProgress(JSON.parse(localStorage.get
 function saveProgress(a){ try{ localStorage.setItem(LS_PROGRESS_KEY, JSON.stringify(a)); }catch(e){} }
 
 async function loadRemoteProgress(){
-  const token=getGHToken();
-  if(token){
-    try{
-      const r=await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${PROGRESS_PATH}?t=${Date.now()}`,{cache:"no-store",headers:{Authorization:`Bearer ${token}`,Accept:"application/vnd.github.raw"}});
-      if(!r.ok) throw new Error("API "+r.status);
-      const d=await r.json();
-      return (d && typeof d==="object")?d:null;
-    }catch(e){ console.warn("[progress-sync] API read failed, trying Pages:",e.message); }
-  }
   try{
     const r=await fetch(PROGRESS_PATH+"?t="+Date.now(),{cache:"no-store"});
     if(!r.ok) return null;
@@ -614,28 +542,9 @@ async function loadRemoteProgress(){
 }
 
 async function saveRemoteProgress(data){
-  const token=getGHToken();
-  if(!token) return false;
-  try{
-    const apiUrl=`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${PROGRESS_PATH}`;
-    const getR=await fetch(apiUrl+"?t="+Date.now(),{cache:"no-store",headers:{Authorization:`Bearer ${token}`,Accept:"application/vnd.github+json"}});
-    let sha=null;
-    if(getR.ok){ sha=(await getR.json()).sha; }
-    else if(getR.status!==404){ _progressSyncError=`Čtení SHA selhalo: ${getR.status}`; return false; }
-    const jsonStr=JSON.stringify(data,null,2);
-    const bytes=new TextEncoder().encode(jsonStr);
-    let binStr=""; for(let i=0;i<bytes.length;i++) binStr+=String.fromCharCode(bytes[i]);
-    const content=btoa(binStr);
-    const body={message:"progress: sync",content,branch:"main"};
-    if(sha) body.sha=sha;
-    const r=await fetch(apiUrl,{method:"PUT",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify(body)});
-    if(!r.ok){
-      const err=await r.json().catch(()=>({}));
-      _progressSyncError=`Zápis selhal: ${r.status} - ${err.message||"neznámá chyba"}`;
-      return false;
-    }
-    return true;
-  }catch(e){ _progressSyncError=e.message; console.warn("[progress-sync] save error:",e.message); return false; }
+  const res=await syncPut(PROGRESS_PATH, data);
+  if(!res.ok) _progressSyncError=res.error;
+  return res.ok;
 }
 
 async function syncProgress(){
@@ -643,18 +552,16 @@ async function syncProgress(){
   const remote=migrateProgress(await loadRemoteProgress());
   if(Object.keys(remote).length){ saveProgress(remote); S.progress=remote; }
   else { S.progress=loadProgress(); }
-  _progressSyncStatus=getGHToken()?"ok":"off";
+  _progressSyncStatus="ok";
   render();
 }
 
 async function saveProgressAndSync(a){
   saveProgress(a);
-  if(getGHToken()){
-    _progressSyncStatus="syncing"; render();
-    const ok=await saveRemoteProgress(a);
-    _progressSyncStatus=ok?"ok":"err";
-    render();
-  }
+  _progressSyncStatus="syncing"; render();
+  const ok=await saveRemoteProgress(a);
+  _progressSyncStatus=ok?"ok":"err";
+  render();
 }
 
 const DIARY_MONTHS = ["Leden","Únor","Březen","Duben","Květen","Červen","Červenec","Srpen","Září","Říjen","Listopad","Prosinec"];
@@ -1008,41 +915,40 @@ function mountDiaryModal(div){
 }
 function refreshDiaryModal(div){ div.innerHTML=diaryModalHtml(); mountDiaryModal(div); }
 
+function syncStatusRow(label, status, err){
+  const dotCls = status==="ok"?"ok":status==="syncing"?"syncing":status==="err"?"err":"";
+  const label2 = status==="ok"?"synchronizováno":status==="syncing"?"synchronizuji…":status==="err"?"chyba":"—";
+  return `<div style="display:flex;align-items:center;gap:8px;padding:6px 0">
+    <span class="rail-dot ${dotCls}" style="position:static;box-shadow:none"></span>
+    <span style="flex:1">${label}</span>
+    <span class="tiny">${label2}</span>
+  </div>${status==="err"&&err?`<div class="tiny" style="color:var(--rose);margin:-4px 0 4px">${esc(err)}</div>`:""}`;
+}
 function showSyncSettings(){
   const existing=document.getElementById("sync-modal");
   if(existing){ existing.remove(); return; }
-  const token=getGHToken();
   const div=document.createElement("div");
   div.id="sync-modal";
   div.className="modal-overlay";
   div.innerHTML=`<div class="modal">
-    <h2>Sync nastavení</h2>
-    <p style="font-size:13px;color:var(--sub);margin:0 0 8px">Backlog se uloží do <b>backlog.json</b> přímo v repozitáři. Čtení funguje odkudkoliv, pro zápis zadej GitHub token.</p>
-    <label>GitHub Personal Access Token (scope: repo nebo contents:write)</label>
-    <input id="sync-token" type="password" placeholder="ghp_xxxxxxxxxxxx" value="${esc(token)}" />
-    <div class="mrow">
-      <button class="addbtn" id="sync-save">Uložit a synchronizovat</button>
+    <h2>Sync</h2>
+    <p style="font-size:13px;color:var(--sub);margin:0 0 8px">Backlog, deník a aktivní questy se ukládají přímo do repozitáře - funguje automaticky na všech zařízeních, žádný token není potřeba zadávat v appce.</p>
+    ${syncStatusRow("Backlog", _syncStatus, _syncError)}
+    ${syncStatusRow("Deník", _diarySyncStatus, _diarySyncError)}
+    ${syncStatusRow("Aktivní questy", _progressSyncStatus, _progressSyncError)}
+    <div class="mrow" style="margin-top:10px">
+      <button class="addbtn" id="sync-retry">Zkusit znovu</button>
       <button class="btn" id="sync-close">Zavřít</button>
-      ${token?'<button class="btn" id="sync-disconnect" style="color:var(--rose)">Odpojit</button>':""}
     </div>
   </div>`;
   document.body.appendChild(div);
   div.querySelector("#sync-close").onclick=()=>div.remove();
-  div.querySelector("#sync-save").onclick=async()=>{
-    const t=document.getElementById("sync-token").value.trim();
-    if(!t){ alert("Zadej GitHub token"); return; }
-    localStorage.setItem(LS_TOKEN,t);
-    div.remove();
+  div.querySelector("#sync-retry").onclick=async()=>{
     await syncBacklog();
     await syncDiary();
     await syncProgress();
-  };
-  const disc=div.querySelector("#sync-disconnect");
-  if(disc) disc.onclick=()=>{
-    localStorage.removeItem(LS_TOKEN);
-    _syncStatus="off";
     div.remove();
-    render();
+    showSyncSettings();
   };
   div.addEventListener("click",e=>{ if(e.target===div) div.remove(); });
 }
