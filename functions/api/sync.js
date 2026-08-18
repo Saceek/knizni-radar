@@ -40,45 +40,56 @@ export async function onRequestPost(context) {
     return new Response(JSON.stringify({ error: "Soubor není povolen" }), { status: 403, headers: { "Content-Type": "application/json" } });
   }
 
-  try {
-    const apiUrl = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${file}`;
-    const ghHeaders = { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json", "User-Agent": "knizni-radar-sync" };
+  const apiUrl = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${file}`;
+  const ghHeaders = { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json", "User-Agent": "knizni-radar-sync" };
 
-    const getR = await fetch(`${apiUrl}?t=${Date.now()}`, { headers: ghHeaders });
-    let sha = null;
-    if (getR.ok) {
-      sha = (await getR.json()).sha;
-    } else if (getR.status !== 404) {
-      return new Response(JSON.stringify({ error: `Čtení SHA selhalo: ${getR.status}` }), { status: 502, headers: { "Content-Type": "application/json" } });
-    }
+  const jsonStr = JSON.stringify(data, null, 2);
+  const bytes = new TextEncoder().encode(jsonStr);
+  let binStr = "";
+  for (let i = 0; i < bytes.length; i++) binStr += String.fromCharCode(bytes[i]);
+  const content = btoa(binStr);
 
-    const jsonStr = JSON.stringify(data, null, 2);
-    const bytes = new TextEncoder().encode(jsonStr);
-    let binStr = "";
-    for (let i = 0; i < bytes.length; i++) binStr += String.fromCharCode(bytes[i]);
-    const content = btoa(binStr);
+  // Optimistic-concurrency race (409 "sha ... but expected ...") je tu čekaná věc - dvě
+  // zařízení nebo souběžný GitHub Actions refresh můžou sáhnout na soubor skoro současně.
+  // Pár pokusů s čerstvým SHA místo toho, aby to appka hlásila jako chybu uživateli.
+  const MAX_ATTEMPTS = 4;
+  let lastErr = "neznámá chyba";
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    try {
+      const getR = await fetch(`${apiUrl}?t=${Date.now()}`, { headers: ghHeaders });
+      let sha = null;
+      if (getR.ok) {
+        sha = (await getR.json()).sha;
+      } else if (getR.status !== 404) {
+        lastErr = `Čtení SHA selhalo: ${getR.status}`;
+        continue;
+      }
 
-    const putBody = { message: `${file}: sync`, content, branch: "main" };
-    if (sha) putBody.sha = sha;
+      const putBody = { message: `${file}: sync`, content, branch: "main" };
+      if (sha) putBody.sha = sha;
 
-    const putR = await fetch(apiUrl, {
-      method: "PUT",
-      headers: { ...ghHeaders, "Content-Type": "application/json" },
-      body: JSON.stringify(putBody),
-    });
-    if (!putR.ok) {
-      const err = await putR.json().catch(() => ({}));
-      return new Response(JSON.stringify({ error: `Zápis selhal: ${putR.status} - ${err.message || "neznámá chyba"}` }), {
-        status: 502,
-        headers: { "Content-Type": "application/json" },
+      const putR = await fetch(apiUrl, {
+        method: "PUT",
+        headers: { ...ghHeaders, "Content-Type": "application/json" },
+        body: JSON.stringify(putBody),
       });
+      if (putR.ok) {
+        return new Response(JSON.stringify({ ok: true, attempts: attempt }), {
+          status: 200,
+          headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*", "Cache-Control": "no-store" },
+        });
+      }
+      const err = await putR.json().catch(() => ({}));
+      lastErr = `${putR.status} - ${err.message || "neznámá chyba"}`;
+      if (putR.status !== 409) break; // jiná chyba než konflikt SHA - retry nepomůže
+      await new Promise((r) => setTimeout(r, 300 * attempt)); // krátká prodleva před dalším pokusem
+    } catch (e) {
+      lastErr = e.message;
     }
-
-    return new Response(JSON.stringify({ ok: true }), {
-      status: 200,
-      headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*", "Cache-Control": "no-store" },
-    });
-  } catch (e) {
-    return new Response(JSON.stringify({ error: "Chyba: " + e.message }), { status: 500, headers: { "Content-Type": "application/json" } });
   }
+
+  return new Response(JSON.stringify({ error: `Zápis selhal: ${lastErr}` }), {
+    status: 502,
+    headers: { "Content-Type": "application/json" },
+  });
 }
