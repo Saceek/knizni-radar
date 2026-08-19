@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T03:17:51.289Z",
+  "updatedAt": "2026-08-19T04:11:43.461Z",
   "games": [
     {
       "title": "Scrap Mechanic",
@@ -378,6 +378,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 970 or AMD Radeon RX 570, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
+      "title": "Twisted Tower",
+      "tier": "green",
+      "gpu": "GTX 1660 / Vega FE",
+      "cpu": "i5-8400 / R5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1660 / Vega FE, i5-8400 / R5 2600"
+    },
+    {
       "title": "Hariti",
       "tier": "green",
       "gpu": "GeForce GTX  1060",
@@ -392,14 +400,6 @@
       "cpu": "Intel Core i5-3470 or AMD Ryzen 3 1200",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 650 or Radeon HD 5770, Intel Core i5-3470 or AMD Ryzen 3 1200"
-    },
-    {
-      "title": "Twisted Tower",
-      "tier": "green",
-      "gpu": "GTX 1660 / Vega FE",
-      "cpu": "i5-8400 / R5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1660 / Vega FE, i5-8400 / R5 2600"
     },
     {
       "title": "Memory of Memorie : A Chill Story",
@@ -506,20 +506,20 @@
       "note": "Doporučená konfigurace: GTX 1060 3GB, Intel i5 - 6500"
     },
     {
-      "title": "Flock of the Seraphim",
-      "tier": "orange",
-      "gpu": "NVIDIA GeForce RTX 2060",
-      "cpu": "AMD Ryzen 7 3700X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060, AMD Ryzen 7 3700X"
-    },
-    {
       "title": "Landscaper Simulator",
       "tier": "green",
       "gpu": "NVIDIA GTX 1060 / AMD RX 480",
       "cpu": null,
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 480"
+    },
+    {
+      "title": "Flock of the Seraphim",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce RTX 2060",
+      "cpu": "AMD Ryzen 7 3700X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060, AMD Ryzen 7 3700X"
     },
     {
       "title": "Montabi",
@@ -570,6 +570,14 @@
       "note": "Doporučená konfigurace: Nvidia RTX 3060, Intel Core i5-7500"
     },
     {
+      "title": "The Pale Mimic",
+      "tier": "red",
+      "gpu": "NVIDIA RTX 3060 Ti / AMD Radeon RX 6700 XT",
+      "cpu": "Intel® Core™ i5 or AMD Ryzen™ 5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 3060 Ti / AMD Radeon RX 6700 XT, Intel® Core™ i5 or AMD Ryzen™ 5"
+    },
+    {
       "title": "Dverghold",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1060 / AMD Radeon RX 580 or equivalent (4 GB VRAM)",
@@ -584,14 +592,6 @@
       "cpu": "i5",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 4400, i5"
-    },
-    {
-      "title": "The Pale Mimic",
-      "tier": "red",
-      "gpu": "NVIDIA RTX 3060 Ti / AMD Radeon RX 6700 XT",
-      "cpu": "Intel® Core™ i5 or AMD Ryzen™ 5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 3060 Ti / AMD Radeon RX 6700 XT, Intel® Core™ i5 or AMD Ryzen™ 5"
     },
     {
       "title": "ON&OFF",
@@ -786,20 +786,28 @@
       "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
     },
     {
-      "title": "Medieval Horse Dealer Simulator",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1070 6GB VRAM",
-      "cpu": "Intel Core i5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 6GB VRAM, Intel Core i5"
-    },
-    {
       "title": "Hocus Focus",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1050 / AMD Radeon RX 560",
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 1600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560, Intel Core i5-8400 / AMD Ryzen 5 1600"
+    },
+    {
+      "title": "Big Bad Pharma",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 (2GB VRAM)",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 (2GB VRAM), Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Medieval Horse Dealer Simulator",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 1070 6GB VRAM",
+      "cpu": "Intel Core i5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 6GB VRAM, Intel Core i5"
     },
     {
       "title": "Italian Pizza Simulator",
@@ -858,6 +866,14 @@
       "note": "Doporučená konfigurace: Graphics: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560, Processor: Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
+      "title": "Nimbit Frontier",
+      "tier": "orange",
+      "gpu": "NVIDIA RTX 2060 8GB",
+      "cpu": "Ryzen 5 3600 / Intel Core i5-10600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 2060 8GB, Ryzen 5 3600 / Intel Core i5-10600"
+    },
+    {
       "title": "Bird Game 3: Birdtopia",
       "tier": "green",
       "gpu": "Nvidia GeForce GTX 950",
@@ -880,14 +896,6 @@
       "cpu": "Intel Core i5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1070 3GB / AMD Radeon RX 580, Intel Core i5"
-    },
-    {
-      "title": "Nimbit Frontier",
-      "tier": "orange",
-      "gpu": "NVIDIA RTX 2060 8GB",
-      "cpu": "Ryzen 5 3600 / Intel Core i5-10600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 2060 8GB, Ryzen 5 3600 / Intel Core i5-10600"
     },
     {
       "title": "Steel Judgment",
