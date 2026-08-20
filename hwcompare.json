@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T04:11:31.788Z",
+  "updatedAt": "2026-08-20T05:19:49.319Z",
   "games": [
     {
       "title": "Scrap Mechanic",
@@ -114,20 +114,20 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
-      "title": "Evil School",
-      "tier": "green",
-      "gpu": "Intel UHD Graphics / GeForce GTX 960 / Radeon R9 285",
-      "cpu": "Core i5 / AMD equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Intel UHD Graphics / GeForce GTX 960 / Radeon R9 285, Core i5 / AMD equivalent"
-    },
-    {
       "title": "Chop Chop Inc.",
       "tier": "red",
       "gpu": "GeForce RTX 3080 Ti or Radeon RX 6800 XT",
       "cpu": "Core i5-11600K or Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 3080 Ti or Radeon RX 6800 XT, Core i5-11600K or Ryzen 5 5600X"
+    },
+    {
+      "title": "Evil School",
+      "tier": "green",
+      "gpu": "Intel UHD Graphics / GeForce GTX 960 / Radeon R9 285",
+      "cpu": "Core i5 / AMD equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Intel UHD Graphics / GeForce GTX 960 / Radeon R9 285, Core i5 / AMD equivalent"
     },
     {
       "title": "No Results Found",
@@ -362,20 +362,20 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 or better 6GB VRAM, Intel Core i5 (recent generation)"
     },
     {
-      "title": "Dear Magical Girls",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 970 or AMD Radeon RX 570",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 970 or AMD Radeon RX 570, Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
       "title": "Tukoni: Strážci lesa",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 750 Ti / AMD Radeon R7 260X / Intel UHD 630 — 2 GB VRAM",
       "cpu": "Intel Core i5‑9600K / AMD Ryzen 5 3600 (requires AVX2 instruction set support)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 Ti / AMD Radeon R7 260X / Intel UHD 630 — 2 GB VRAM, Intel Core i5‑9600K / AMD Ryzen 5 3600 (requires AVX2 instruction set support)"
+    },
+    {
+      "title": "Dear Magical Girls",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 970 or AMD Radeon RX 570",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 970 or AMD Radeon RX 570, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
       "title": "Hariti",
@@ -410,6 +410,14 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4000 or equivalent, Intel Core2 Duo or higher"
     },
     {
+      "title": "Hearth and Hamlet",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 750 Ti (2 GB VRAM) / AMD Radeon R7 260X (2 GB VRAM)",
+      "cpu": "Intel Core i5-2400 @ 3.1 GHz or AMD equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 Ti (2 GB VRAM) / AMD Radeon R7 260X (2 GB VRAM), Intel Core i5-2400 @ 3.1 GHz or AMD equivalent"
+    },
+    {
       "title": "Flowers and Deities",
       "tier": "green",
       "gpu": "Nvidia GeForce GTX 1660 Ti/AMD RX 5600-XT/Intel Arc A750",
@@ -432,14 +440,6 @@
       "cpu": "Intel Core i5-3470",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1050 (2048 VRAM); Radeon R9 380 (2048 VRAM), Intel Core i5-3470"
-    },
-    {
-      "title": "Hearth and Hamlet",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 750 Ti (2 GB VRAM) / AMD Radeon R7 260X (2 GB VRAM)",
-      "cpu": "Intel Core i5-2400 @ 3.1 GHz or AMD equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 Ti (2 GB VRAM) / AMD Radeon R7 260X (2 GB VRAM), Intel Core i5-2400 @ 3.1 GHz or AMD equivalent"
     },
     {
       "title": "THE CANON OF BALLS",
@@ -570,6 +570,14 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4400, i5"
     },
     {
+      "title": "Project P.I.T.T.",
+      "tier": "green",
+      "gpu": "GTX 1060 / RX 580",
+      "cpu": "Intel i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1060 / RX 580, Intel i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
       "title": "ON&OFF",
       "tier": "green",
       "gpu": "GeForce GTX 1060",
@@ -592,14 +600,6 @@
       "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600 or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 2060 / RX 6600 or better, Intel Core i5-10400 / AMD Ryzen 5 3600 or better"
-    },
-    {
-      "title": "Project P.I.T.T.",
-      "tier": "green",
-      "gpu": "GTX 1060 / RX 580",
-      "cpu": "Intel i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1060 / RX 580, Intel i5-8400 / AMD Ryzen 5 2600"
     },
     {
       "title": "深渊兽潮",
@@ -658,20 +658,20 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 6GB VRAM, Intel Core i5"
     },
     {
-      "title": "Model Kit Shop Simulator",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1660 Ti or AMD Radeon RX 5600 XT (6 GB VRAM)",
-      "cpu": "Intel Core i5-8400 or AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Ti or AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-8400 or AMD Ryzen 5 2600"
-    },
-    {
       "title": "梦之岛仲夏夜",
       "tier": "green",
       "gpu": "NVIDIA GTX 1660",
       "cpu": "Intel Core i5-9600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1660, Intel Core i5-9600"
+    },
+    {
+      "title": "Model Kit Shop Simulator",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1660 Ti or AMD Radeon RX 5600 XT (6 GB VRAM)",
+      "cpu": "Intel Core i5-8400 or AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Ti or AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-8400 or AMD Ryzen 5 2600"
     },
     {
       "title": "Future Knight",
