@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-21T13:18:26.518Z",
+  "updatedAt": "2026-08-21T14:18:33.116Z",
   "games": [
     {
       "title": "Big Walk",
@@ -410,6 +410,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 (6 GB VRAM) or AMD Radeon RX 590 (8 GB VRAM), Intel Core i7-10700K or AMD Ryzen 7 5700X"
     },
     {
+      "title": "Flock of the Seraphim",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce RTX 2060",
+      "cpu": "AMD Ryzen 7 3700X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060, AMD Ryzen 7 3700X"
+    },
+    {
       "title": "Spiritstead",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1650 / AMD Radeon RX 580 / Intel Iris Xe or equivalent",
@@ -424,14 +432,6 @@
       "cpu": null,
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 480"
-    },
-    {
-      "title": "Flock of the Seraphim",
-      "tier": "orange",
-      "gpu": "NVIDIA GeForce RTX 2060",
-      "cpu": "AMD Ryzen 7 3700X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060, AMD Ryzen 7 3700X"
     },
     {
       "title": "Deadly Trick",
@@ -506,6 +506,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 / AMD Radeon RX 580 or equivalent (4 GB VRAM), Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent"
     },
     {
+      "title": "Vacation Cafe Simulator",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 5600 XT",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
+    },
+    {
       "title": "Elektronická dřevěná ryba",
       "tier": "green",
       "gpu": "Intel HD Graphics 4400",
@@ -546,14 +554,6 @@
       "note": "Doporučená konfigurace: GTX 1660 / RX 590, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
-      "title": "深渊兽潮",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1060 or higher",
-      "cpu": "Intel Core i5-9400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1060 or higher, Intel Core i5-9400"
-    },
-    {
       "title": "Medieval Horse Dealer Simulator",
       "tier": "green",
       "gpu": "Nvidia GeForce GTX 1070 6GB VRAM",
@@ -562,12 +562,20 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 6GB VRAM, Intel Core i5"
     },
     {
-      "title": "Vacation Cafe Simulator",
-      "tier": "orange",
-      "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 5600 XT",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "title": "深渊兽潮",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1060 or higher",
+      "cpu": "Intel Core i5-9400",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
+      "note": "Doporučená konfigurace: NVIDIA GTX 1060 or higher, Intel Core i5-9400"
+    },
+    {
+      "title": "The World Well: Blood of Caro",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 750 2GB",
+      "cpu": "Intel Core i5 2500",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 750 2GB, Intel Core i5 2500"
     },
     {
       "title": "Welcome to the Sharehouse! ~ domestic life with three cute girls~",
@@ -584,14 +592,6 @@
       "cpu": "Intel Core i3-6100",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel UHD Graphics 620 / NVIDIA GT 1030, Intel Core i3-6100"
-    },
-    {
-      "title": "The World Well: Blood of Caro",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 750 2GB",
-      "cpu": "Intel Core i5 2500",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 750 2GB, Intel Core i5 2500"
     },
     {
       "title": "Witchblood",
@@ -760,6 +760,14 @@
       "cpu": "i5+",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Intel®  HD Graphics 5500, i5+"
+    },
+    {
+      "title": "The Stalked 3",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1650",
+      "cpu": "Intel Core i5-6500",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 1650, Intel Core i5-6500"
     }
   ]
 }
