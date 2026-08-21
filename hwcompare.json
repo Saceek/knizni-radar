@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-21T16:18:39.982Z",
+  "updatedAt": "2026-08-21T17:18:54.268Z",
   "games": [
     {
       "title": "Big Walk",
@@ -434,6 +434,14 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 480"
     },
     {
+      "title": "Vacation Cafe Simulator",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 5600 XT",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
+    },
+    {
       "title": "Deadly Trick",
       "tier": "green",
       "gpu": "GTX 1060 3GB",
@@ -472,14 +480,6 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 6GB / AMD Radeon RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
-      "title": "Vacation Cafe Simulator",
-      "tier": "orange",
-      "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 5600 XT",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "Hell Deck",
@@ -538,20 +538,20 @@
       "note": "Doporučená konfigurace: GeForce GTX 1060, Intel Core i5"
     },
     {
-      "title": "Super Shout Showdown",
-      "tier": "orange",
-      "gpu": "NVIDIA RTX 2060 / RX 6600 or better",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600 or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 2060 / RX 6600 or better, Intel Core i5-10400 / AMD Ryzen 5 3600 or better"
-    },
-    {
       "title": "Medieval Horse Dealer Simulator",
       "tier": "green",
       "gpu": "Nvidia GeForce GTX 1070 6GB VRAM",
       "cpu": "Intel Core i5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 6GB VRAM, Intel Core i5"
+    },
+    {
+      "title": "Super Shout Showdown",
+      "tier": "orange",
+      "gpu": "NVIDIA RTX 2060 / RX 6600 or better",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600 or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 2060 / RX 6600 or better, Intel Core i5-10400 / AMD Ryzen 5 3600 or better"
     },
     {
       "title": "Dream House Cleaning",
@@ -618,6 +618,14 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1660, Intel Core i5-9600"
     },
     {
+      "title": "Sensory Overload",
+      "tier": "green",
+      "gpu": "Dedicated GPU with 4 GB VRAM and Vulkan 1.0 support (e.g. NVIDIA GTX 1060 / AMD RX 580)",
+      "cpu": "Quad-core 3.0 GHz (e.g. Intel Core i5-8400 / AMD Ryzen 5 2600)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Dedicated GPU with 4 GB VRAM and Vulkan 1.0 support (e.g. NVIDIA GTX 1060 / AMD RX 580), Quad-core 3.0 GHz (e.g. Intel Core i5-8400 / AMD Ryzen 5 2600)"
+    },
+    {
       "title": "Future Knight",
       "tier": "green",
       "gpu": "Nvidia GTX 1070 | Radeon RX Vega 56",
@@ -648,14 +656,6 @@
       "cpu": "AMD Ryzen 5 3600 / Intel Core i7 7700K",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1060 6GB, AMD Ryzen 5 3600 / Intel Core i7 7700K"
-    },
-    {
-      "title": "Sensory Overload",
-      "tier": "green",
-      "gpu": "Dedicated GPU with 4 GB VRAM and Vulkan 1.0 support (e.g. NVIDIA GTX 1060 / AMD RX 580)",
-      "cpu": "Quad-core 3.0 GHz (e.g. Intel Core i5-8400 / AMD Ryzen 5 2600)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Dedicated GPU with 4 GB VRAM and Vulkan 1.0 support (e.g. NVIDIA GTX 1060 / AMD RX 580), Quad-core 3.0 GHz (e.g. Intel Core i5-8400 / AMD Ryzen 5 2600)"
     },
     {
       "title": "猎国沉默专属",
@@ -698,6 +698,14 @@
       "note": "Doporučená konfigurace: NVIDIA Geforce GTX 1050, AMD RX 540, Intel Core i5 2.4GHz"
     },
     {
+      "title": "Desktop Detective",
+      "tier": "green",
+      "gpu": "AMD Radeon™ R7 260X (2GB VRAM) / NVIDIA® GeForce® GTX 750(2GB VRAM)",
+      "cpu": "AMD FX-4350 / Intel® Core™ i3-3210",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: AMD Radeon™ R7 260X (2GB VRAM) / NVIDIA® GeForce® GTX 750(2GB VRAM), AMD FX-4350 / Intel® Core™ i3-3210"
+    },
+    {
       "title": "Dino Party",
       "tier": "green",
       "gpu": "GTX 1060",
@@ -712,14 +720,6 @@
       "cpu": "Intel Core i3",
       "usedMinimum": true,
       "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
-    },
-    {
-      "title": "Desktop Detective",
-      "tier": "green",
-      "gpu": "AMD Radeon™ R7 260X (2GB VRAM) / NVIDIA® GeForce® GTX 750(2GB VRAM)",
-      "cpu": "AMD FX-4350 / Intel® Core™ i3-3210",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: AMD Radeon™ R7 260X (2GB VRAM) / NVIDIA® GeForce® GTX 750(2GB VRAM), AMD FX-4350 / Intel® Core™ i3-3210"
     },
     {
       "title": "Incident Archives - Flight 882",
@@ -768,6 +768,14 @@
       "cpu": "Intel Core i5-8600 / Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 1660 Ti, Intel Core i5-8600 / Ryzen 5 3600"
+    },
+    {
+      "title": "The Stalked 3",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1650",
+      "cpu": "Intel Core i5-6500",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 1650, Intel Core i5-6500"
     }
   ]
 }
