@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-21T04:13:48.012Z",
+  "updatedAt": "2026-08-21T05:18:38.366Z",
   "games": [
     {
       "title": "Big Walk",
@@ -218,7 +218,7 @@
       "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent"
     },
     {
-      "title": "星之旅 Lunarium",
+      "title": "Lunarium",
       "tier": "orange",
       "gpu": "GTX 1080 Ti / RX Vega 64",
       "cpu": "Intel i5 Quad-Core, 3 GHz",
@@ -274,20 +274,20 @@
       "note": "Minimální konfigurace: NVIDIA GTX 960, i5-7400K"
     },
     {
-      "title": "Pih 2",
-      "tier": "green",
-      "gpu": "Intel® Iris® Xe Graphics",
-      "cpu": "intel core i5",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel® Iris® Xe Graphics, intel core i5"
-    },
-    {
       "title": "Lost & Found: A This Bed We Made Story",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1660",
       "cpu": "Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660, Ryzen 5 3600"
+    },
+    {
+      "title": "Pih 2",
+      "tier": "green",
+      "gpu": "Intel® Iris® Xe Graphics",
+      "cpu": "intel core i5",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel® Iris® Xe Graphics, intel core i5"
     },
     {
       "title": "Osta",
@@ -506,20 +506,20 @@
       "note": "Doporučená konfigurace: Nvidia RTX 3060, Intel Core i5-7500"
     },
     {
-      "title": "Dverghold",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1060 / AMD Radeon RX 580 or equivalent (4 GB VRAM)",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 / AMD Radeon RX 580 or equivalent (4 GB VRAM), Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent"
-    },
-    {
       "title": "Pizza House Simulator🍕",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1060 6GB / AMD Radeon RX 580",
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 6GB / AMD Radeon RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Dverghold",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1060 / AMD Radeon RX 580 or equivalent (4 GB VRAM)",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 / AMD Radeon RX 580 or equivalent (4 GB VRAM), Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent"
     },
     {
       "title": "Elektronická dřevěná ryba",
@@ -706,6 +706,14 @@
       "note": "Doporučená konfigurace: GTX 1060, i7"
     },
     {
+      "title": "Sensory Overload",
+      "tier": "green",
+      "gpu": "Dedicated GPU with 4 GB VRAM and Vulkan 1.0 support (e.g. NVIDIA GTX 1060 / AMD RX 580)",
+      "cpu": "Quad-core 3.0 GHz (e.g. Intel Core i5-8400 / AMD Ryzen 5 2600)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Dedicated GPU with 4 GB VRAM and Vulkan 1.0 support (e.g. NVIDIA GTX 1060 / AMD RX 580), Quad-core 3.0 GHz (e.g. Intel Core i5-8400 / AMD Ryzen 5 2600)"
+    },
+    {
       "title": "浩游超超超变",
       "tier": "green",
       "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
@@ -746,44 +754,12 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560, Intel Core i5-8400 / AMD Ryzen 5 1600"
     },
     {
-      "title": "Sensory Overload",
-      "tier": "green",
-      "gpu": "Dedicated GPU with 4 GB VRAM and Vulkan 1.0 support (e.g. NVIDIA GTX 1060 / AMD RX 580)",
-      "cpu": "Quad-core 3.0 GHz (e.g. Intel Core i5-8400 / AMD Ryzen 5 2600)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Dedicated GPU with 4 GB VRAM and Vulkan 1.0 support (e.g. NVIDIA GTX 1060 / AMD RX 580), Quad-core 3.0 GHz (e.g. Intel Core i5-8400 / AMD Ryzen 5 2600)"
-    },
-    {
       "title": "Italian Pizza Simulator",
       "tier": "green",
       "gpu": "GTX 1660 Ti",
       "cpu": "Intel Core i5-8600 / Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 1660 Ti, Intel Core i5-8600 / Ryzen 5 3600"
-    },
-    {
-      "title": "Desktop Detective",
-      "tier": "green",
-      "gpu": "AMD Radeon™ R7 260X (2GB VRAM) / NVIDIA® GeForce® GTX 750(2GB VRAM)",
-      "cpu": "AMD FX-4350 / Intel® Core™ i3-3210",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: AMD Radeon™ R7 260X (2GB VRAM) / NVIDIA® GeForce® GTX 750(2GB VRAM), AMD FX-4350 / Intel® Core™ i3-3210"
-    },
-    {
-      "title": "Steel Judgment",
-      "tier": "green",
-      "gpu": "GTX 1660",
-      "cpu": "AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1660, AMD Ryzen 5 3600"
-    },
-    {
-      "title": "nudge",
-      "tier": "green",
-      "gpu": "Intel HD Graphics 4000 or better",
-      "cpu": null,
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Intel HD Graphics 4000 or better"
     }
   ]
 }
