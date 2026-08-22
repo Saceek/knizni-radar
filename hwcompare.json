@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T20:18:49.634Z",
+  "updatedAt": "2026-08-22T21:18:40.136Z",
   "games": [
     {
       "title": "Big Walk",
@@ -186,6 +186,14 @@
       "note": "Minimální konfigurace: Intel HD 620 / UHD 600 series, or NVIDIA GeForce GT 730 / AMD R7 240, Intel Core i3-2100 / AMD FX-4350 or equivalent"
     },
     {
+      "title": "VHOLUME",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1060 or AMD Radeon RX 580",
+      "cpu": "Intel Core i7-7700 or AMD Ryzen 7 1700",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 or AMD Radeon RX 580, Intel Core i7-7700 or AMD Ryzen 7 1700"
+    },
+    {
       "title": "Cleaning Up The Puzzle Gallery",
       "tier": "green",
       "gpu": "GTX 1060 or above",
@@ -200,14 +208,6 @@
       "cpu": "Intel i5 Quad-Core, 3 GHz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 1080 Ti / RX Vega 64, Intel i5 Quad-Core, 3 GHz"
-    },
-    {
-      "title": "VHOLUME",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1060 or AMD Radeon RX 580",
-      "cpu": "Intel Core i7-7700 or AMD Ryzen 7 1700",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 or AMD Radeon RX 580, Intel Core i7-7700 or AMD Ryzen 7 1700"
     },
     {
       "title": "Zoominoes",
@@ -370,20 +370,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 (Pascal), AMD Radeon RX 460 (GCN 4.0), Intel Core i5-6600K, AMD Ryzen 5 1600, Snapdragon X Elite"
     },
     {
-      "title": "Flowers and Deities",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1660 Ti/AMD RX 5600-XT/Intel Arc A750",
-      "cpu": "Intel® Core™ i7-9700K or AMD® Ryzen™ 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1660 Ti/AMD RX 5600-XT/Intel Arc A750, Intel® Core™ i7-9700K or AMD® Ryzen™ 5 5600X"
-    },
-    {
       "title": "The Pale Mimic",
       "tier": "red",
       "gpu": "NVIDIA RTX 3060 Ti / AMD Radeon RX 6700 XT",
       "cpu": "Intel® Core™ i5 or AMD Ryzen™ 5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 Ti / AMD Radeon RX 6700 XT, Intel® Core™ i5 or AMD Ryzen™ 5"
+    },
+    {
+      "title": "Flowers and Deities",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 1660 Ti/AMD RX 5600-XT/Intel Arc A750",
+      "cpu": "Intel® Core™ i7-9700K or AMD® Ryzen™ 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1660 Ti/AMD RX 5600-XT/Intel Arc A750, Intel® Core™ i7-9700K or AMD® Ryzen™ 5 5600X"
     },
     {
       "title": "Sherlock Holmes: Night Stalker",
@@ -866,22 +866,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 or AMD Radeon RX 5600 XT, Intel Core i5-10400F or AMD Ryzen 5 3600"
     },
     {
-      "title": "RHYTHMKILL",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1050 | AMD Radeon R9 270X",
-      "cpu": "Intel Core i5-4440 | AMD Ryzen 3 1200",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1050 | AMD Radeon R9 270X, Intel Core i5-4440 | AMD Ryzen 3 1200"
-    },
-    {
-      "title": "Voracity",
-      "tier": "green",
-      "gpu": "Dedicated GPU (NVIDIA GTX 750 / AMD R7 260 or better)",
-      "cpu": "Intel Core i5 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Dedicated GPU (NVIDIA GTX 750 / AMD R7 260 or better), Intel Core i5 or equivalent"
-    },
-    {
       "title": "Swarmdustry",
       "tier": "green",
       "gpu": "GTX 1070",
@@ -896,6 +880,22 @@
       "cpu": "2.0 GHz Dual-Core Processor or faster (Intel Pentium 4 / AMD Athlon equivalent)",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Direct3D 11 compatible graphics card with Feature Level 11_0 support (NVIDIA GeForce GTX 400 series / AMD Radeon HD 5000 series or equivalent; integrated Intel HD Graphics from Sandy Bridge era onward) Network: Broadband Internet connection (for Steam features), 2.0 GHz Dual-Core Processor or faster (Intel Pentium 4 / AMD Athlon equivalent)"
+    },
+    {
+      "title": "RHYTHMKILL",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 1050 | AMD Radeon R9 270X",
+      "cpu": "Intel Core i5-4440 | AMD Ryzen 3 1200",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1050 | AMD Radeon R9 270X, Intel Core i5-4440 | AMD Ryzen 3 1200"
+    },
+    {
+      "title": "Voracity",
+      "tier": "green",
+      "gpu": "Dedicated GPU (NVIDIA GTX 750 / AMD R7 260 or better)",
+      "cpu": "Intel Core i5 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Dedicated GPU (NVIDIA GTX 750 / AMD R7 260 or better), Intel Core i5 or equivalent"
     },
     {
       "title": "DIVE or DIE - Children of Rain",
