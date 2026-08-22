@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T05:18:14.519Z",
+  "updatedAt": "2026-08-22T06:18:54.344Z",
   "games": [
     {
       "title": "Big Walk",
@@ -178,20 +178,20 @@
       "note": "Doporučená konfigurace: GTX 1060, Quad-core 3.0 GHz"
     },
     {
-      "title": "Suncraft",
-      "tier": "green",
-      "gpu": "Intel HD 620 / UHD 600 series, or NVIDIA GeForce GT 730 / AMD R7 240",
-      "cpu": "Intel Core i3-2100 / AMD FX-4350 or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD 620 / UHD 600 series, or NVIDIA GeForce GT 730 / AMD R7 240, Intel Core i3-2100 / AMD FX-4350 or equivalent"
-    },
-    {
       "title": "Stonewards",
       "tier": "orange",
       "gpu": "RTX 2060 or RX 7600xt or equivalent",
       "cpu": "Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent"
+    },
+    {
+      "title": "Suncraft",
+      "tier": "green",
+      "gpu": "Intel HD 620 / UHD 600 series, or NVIDIA GeForce GT 730 / AMD R7 240",
+      "cpu": "Intel Core i3-2100 / AMD FX-4350 or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD 620 / UHD 600 series, or NVIDIA GeForce GT 730 / AMD R7 240, Intel Core i3-2100 / AMD FX-4350 or equivalent"
     },
     {
       "title": "Cleaning Up The Puzzle Gallery",
@@ -482,6 +482,14 @@
       "note": "Doporučená konfigurace: GeForce RTX 3060, Core i5 14400"
     },
     {
+      "title": "Sherlock Holmes: Night Stalker",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce RTX 3060/AMD Radeon RX 5700XT",
+      "cpu": "Intel Core i7-10700k/AMD Ryzen 7 5700X3D",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060/AMD Radeon RX 5700XT, Intel Core i7-10700k/AMD Ryzen 7 5700X3D"
+    },
+    {
       "title": "Together in Forgotten Lands",
       "tier": "red",
       "gpu": "Nvidia RTX 3060",
@@ -520,14 +528,6 @@
       "cpu": "i5",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 4400, i5"
-    },
-    {
-      "title": "Sherlock Holmes: Night Stalker",
-      "tier": "orange",
-      "gpu": "NVIDIA GeForce RTX 3060/AMD Radeon RX 5700XT",
-      "cpu": "Intel Core i7-10700k/AMD Ryzen 7 5700X3D",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060/AMD Radeon RX 5700XT, Intel Core i7-10700k/AMD Ryzen 7 5700X3D"
     },
     {
       "title": "ON&OFF",
@@ -610,20 +610,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650, Intel Core i7 @ 2.60GHz"
     },
     {
-      "title": "梦之岛仲夏夜",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1660",
-      "cpu": "Intel Core i5-9600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1660, Intel Core i5-9600"
-    },
-    {
       "title": "Puppergeist",
       "tier": "green",
       "gpu": "Intel® HD Graphics or better",
       "cpu": "Intel Core 2 Duo @ 2.00 GHz or equivalent or higher",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel® HD Graphics or better, Intel Core 2 Duo @ 2.00 GHz or equivalent or higher"
+    },
+    {
+      "title": "梦之岛仲夏夜",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1660",
+      "cpu": "Intel Core i5-9600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1660, Intel Core i5-9600"
     },
     {
       "title": "Future Knight",
@@ -674,20 +674,20 @@
       "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
     },
     {
-      "title": "Hell o’ Halo",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB",
-      "cpu": "Intel® Core™ i7-4770K / AMD Ryzen 5 1500X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB, Intel® Core™ i7-4770K / AMD Ryzen 5 1500X"
-    },
-    {
       "title": "Deep Blue Sushi",
       "tier": "green",
       "gpu": "NVIDIA GTX 1060 6GB / AMD RX 580",
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 6GB / AMD RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Hell o’ Halo",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB",
+      "cpu": "Intel® Core™ i7-4770K / AMD Ryzen 5 1500X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB, Intel® Core™ i7-4770K / AMD Ryzen 5 1500X"
     },
     {
       "title": "南派盗墓传奇",
