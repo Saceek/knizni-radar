@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-21T23:18:18.364Z",
+  "updatedAt": "2026-08-22T00:18:06.059Z",
   "games": [
     {
       "title": "Big Walk",
@@ -202,7 +202,7 @@
       "note": "Doporučená konfigurace: GTX 1060 or above, Mid-Range Quadcore Processer"
     },
     {
-      "title": "Lunarium",
+      "title": "星之旅 Lunarium",
       "tier": "orange",
       "gpu": "GTX 1080 Ti / RX Vega 64",
       "cpu": "Intel i5 Quad-Core, 3 GHz",
@@ -250,20 +250,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD RX 6600 XT, Intel Core i5-12600K / AMD Ryzen 5 7600X"
     },
     {
-      "title": "Astrobuilder",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 960",
-      "cpu": "i5-7400K",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GTX 960, i5-7400K"
-    },
-    {
       "title": "Lost & Found: A This Bed We Made Story",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1660",
       "cpu": "Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660, Ryzen 5 3600"
+    },
+    {
+      "title": "Astrobuilder",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 960",
+      "cpu": "i5-7400K",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GTX 960, i5-7400K"
     },
     {
       "title": "Pih 2",
@@ -410,6 +410,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 (6 GB VRAM) or AMD Radeon RX 590 (8 GB VRAM), Intel Core i7-10700K or AMD Ryzen 7 5700X"
     },
     {
+      "title": "VHOLUME",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1060 or AMD Radeon RX 580",
+      "cpu": "Intel Core i7-7700 or AMD Ryzen 7 1700",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 or AMD Radeon RX 580, Intel Core i7-7700 or AMD Ryzen 7 1700"
+    },
+    {
       "title": "Landscaper Simulator",
       "tier": "green",
       "gpu": "NVIDIA GTX 1060 / AMD RX 480",
@@ -432,14 +440,6 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 6GB / AMD Radeon RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
-      "title": "VHOLUME",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1060 or AMD Radeon RX 580",
-      "cpu": "Intel Core i7-7700 or AMD Ryzen 7 1700",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 or AMD Radeon RX 580, Intel Core i7-7700 or AMD Ryzen 7 1700"
     },
     {
       "title": "Deadly Trick",
@@ -506,12 +506,12 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 / AMD Radeon RX 580 or equivalent (4 GB VRAM), Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent"
     },
     {
-      "title": "Medieval Horse Dealer Simulator",
+      "title": "ON&OFF",
       "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1070 6GB VRAM",
+      "gpu": "GeForce GTX 1060",
       "cpu": "Intel Core i5",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 6GB VRAM, Intel Core i5"
+      "note": "Doporučená konfigurace: GeForce GTX 1060, Intel Core i5"
     },
     {
       "title": "Elektronická dřevěná ryba",
@@ -530,12 +530,12 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 or Better, Intel Core i5-9400F or Better"
     },
     {
-      "title": "ON&OFF",
+      "title": "Medieval Horse Dealer Simulator",
       "tier": "green",
-      "gpu": "GeForce GTX 1060",
+      "gpu": "Nvidia GeForce GTX 1070 6GB VRAM",
       "cpu": "Intel Core i5",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1060, Intel Core i5"
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 6GB VRAM, Intel Core i5"
     },
     {
       "title": "Super Shout Showdown",
@@ -586,6 +586,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GT 730"
     },
     {
+      "title": "Sensory Overload",
+      "tier": "green",
+      "gpu": "Dedicated GPU with 4 GB VRAM and Vulkan 1.0 support (e.g. NVIDIA GTX 1060 / AMD RX 580)",
+      "cpu": "Quad-core 3.0 GHz (e.g. Intel Core i5-8400 / AMD Ryzen 5 2600)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Dedicated GPU with 4 GB VRAM and Vulkan 1.0 support (e.g. NVIDIA GTX 1060 / AMD RX 580), Quad-core 3.0 GHz (e.g. Intel Core i5-8400 / AMD Ryzen 5 2600)"
+    },
+    {
       "title": "Witchblood",
       "tier": "orange",
       "gpu": "NVIDIA GeForce RTX 2070",
@@ -600,14 +608,6 @@
       "cpu": "Intel Core i7 @ 2.60GHz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650, Intel Core i7 @ 2.60GHz"
-    },
-    {
-      "title": "Sensory Overload",
-      "tier": "green",
-      "gpu": "Dedicated GPU with 4 GB VRAM and Vulkan 1.0 support (e.g. NVIDIA GTX 1060 / AMD RX 580)",
-      "cpu": "Quad-core 3.0 GHz (e.g. Intel Core i5-8400 / AMD Ryzen 5 2600)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Dedicated GPU with 4 GB VRAM and Vulkan 1.0 support (e.g. NVIDIA GTX 1060 / AMD RX 580), Quad-core 3.0 GHz (e.g. Intel Core i5-8400 / AMD Ryzen 5 2600)"
     },
     {
       "title": "梦之岛仲夏夜",
@@ -626,20 +626,20 @@
       "note": "Doporučená konfigurace: Nvidia GTX 1070 | Radeon RX Vega 56, Intel i7-7700 | AMD Ryzen 7 1700X"
     },
     {
-      "title": "Pight",
-      "tier": "green",
-      "gpu": "Intel HD Graphics",
-      "cpu": "Intel Celeron",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics, Intel Celeron"
-    },
-    {
       "title": "Nimbit Frontier",
       "tier": "orange",
       "gpu": "NVIDIA RTX 2060 8GB",
       "cpu": "Ryzen 5 3600 / Intel Core i5-10600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 2060 8GB, Ryzen 5 3600 / Intel Core i5-10600"
+    },
+    {
+      "title": "Pight",
+      "tier": "green",
+      "gpu": "Intel HD Graphics",
+      "cpu": "Intel Celeron",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics, Intel Celeron"
     },
     {
       "title": "Cropia",
@@ -658,6 +658,22 @@
       "note": "Minimální konfigurace: Intel® HD Graphics or better, Intel Core 2 Duo @ 2.00 GHz or equivalent or higher"
     },
     {
+      "title": "Sherlock Holmes: Night Stalker",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce RTX 3060/AMD Radeon RX 5700XT",
+      "cpu": "Intel Core i7-10700k/AMD Ryzen 7 5700X3D",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060/AMD Radeon RX 5700XT, Intel Core i7-10700k/AMD Ryzen 7 5700X3D"
+    },
+    {
+      "title": "Desktop Detective",
+      "tier": "green",
+      "gpu": "AMD Radeon™ R7 260X (2GB VRAM) / NVIDIA® GeForce® GTX 750(2GB VRAM)",
+      "cpu": "AMD FX-4350 / Intel® Core™ i3-3210",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: AMD Radeon™ R7 260X (2GB VRAM) / NVIDIA® GeForce® GTX 750(2GB VRAM), AMD FX-4350 / Intel® Core™ i3-3210"
+    },
+    {
       "title": "猎国沉默专属",
       "tier": "green",
       "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
@@ -672,14 +688,6 @@
       "cpu": "Intel® Core™ i7-4770K / AMD Ryzen 5 1500X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB, Intel® Core™ i7-4770K / AMD Ryzen 5 1500X"
-    },
-    {
-      "title": "Desktop Detective",
-      "tier": "green",
-      "gpu": "AMD Radeon™ R7 260X (2GB VRAM) / NVIDIA® GeForce® GTX 750(2GB VRAM)",
-      "cpu": "AMD FX-4350 / Intel® Core™ i3-3210",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: AMD Radeon™ R7 260X (2GB VRAM) / NVIDIA® GeForce® GTX 750(2GB VRAM), AMD FX-4350 / Intel® Core™ i3-3210"
     },
     {
       "title": "南派盗墓传奇",
@@ -736,14 +744,6 @@
       "cpu": "Intel Core i3",
       "usedMinimum": true,
       "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
-    },
-    {
-      "title": "Sherlock Holmes: Night Stalker",
-      "tier": "orange",
-      "gpu": "NVIDIA GeForce RTX 3060/AMD Radeon RX 5700XT",
-      "cpu": "Intel Core i7-10700k/AMD Ryzen 7 5700X3D",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060/AMD Radeon RX 5700XT, Intel Core i7-10700k/AMD Ryzen 7 5700X3D"
     },
     {
       "title": "Unusual Tales: After Bark",
@@ -848,46 +848,6 @@
       "cpu": "Quad-core CPU",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1050 / AMD Radeon RX 560 (DirectX 11 supported), Quad-core CPU"
-    },
-    {
-      "title": "Project Looking Glass",
-      "tier": "green",
-      "gpu": "Intel HD Graphics 530 or equivalent",
-      "cpu": "Intel Core i3-6100 or AMD FX-6300",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 530 or equivalent, Intel Core i3-6100 or AMD FX-6300"
-    },
-    {
-      "title": "Steel Judgment",
-      "tier": "green",
-      "gpu": "GTX 1660",
-      "cpu": "AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1660, AMD Ryzen 5 3600"
-    },
-    {
-      "title": "A Game About Penguins",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1660 or AMD RX 580",
-      "cpu": "Quad-core Intel o AMD processor, 3 GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1660 or AMD RX 580, Quad-core Intel o AMD processor, 3 GHz"
-    },
-    {
-      "title": "Voracity",
-      "tier": "green",
-      "gpu": "Dedicated GPU (NVIDIA GTX 750 / AMD R7 260 or better)",
-      "cpu": "Intel Core i5 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Dedicated GPU (NVIDIA GTX 750 / AMD R7 260 or better), Intel Core i5 or equivalent"
-    },
-    {
-      "title": "RHYTHMKILL",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1050 | AMD Radeon R9 270X",
-      "cpu": "Intel Core i5-4440 | AMD Ryzen 3 1200",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1050 | AMD Radeon R9 270X, Intel Core i5-4440 | AMD Ryzen 3 1200"
     },
     {
       "title": "DIVE or DIE - Children of Rain",
