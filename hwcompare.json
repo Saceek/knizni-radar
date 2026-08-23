@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-23T00:18:01.143Z",
+  "updatedAt": "2026-08-23T01:18:25.611Z",
   "games": [
     {
       "title": "Big Walk",
@@ -210,7 +210,7 @@
       "note": "Doporučená konfigurace: GTX 1060 or above, Mid-Range Quadcore Processer"
     },
     {
-      "title": "星之旅 Lunarium",
+      "title": "Lunarium",
       "tier": "orange",
       "gpu": "GTX 1080 Ti / RX Vega 64",
       "cpu": "Intel i5 Quad-Core, 3 GHz",
@@ -514,6 +514,14 @@
       "note": "Doporučená konfigurace: GeForce GTX 650 Ti or AMD Radeon HD 7750 (1GB VRAM), Intel Core i3-3240 or AMD FX-6300"
     },
     {
+      "title": "Sensory Overload",
+      "tier": "green",
+      "gpu": "Dedicated GPU with 4 GB VRAM and Vulkan 1.0 support (e.g. NVIDIA GTX 1060 / AMD RX 580)",
+      "cpu": "Quad-core 3.0 GHz (e.g. Intel Core i5-8400 / AMD Ryzen 5 2600)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Dedicated GPU with 4 GB VRAM and Vulkan 1.0 support (e.g. NVIDIA GTX 1060 / AMD RX 580), Quad-core 3.0 GHz (e.g. Intel Core i5-8400 / AMD Ryzen 5 2600)"
+    },
+    {
       "title": "Deadliest Pigeon",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1650 or Better",
@@ -544,14 +552,6 @@
       "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600 or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 2060 / RX 6600 or better, Intel Core i5-10400 / AMD Ryzen 5 3600 or better"
-    },
-    {
-      "title": "Sensory Overload",
-      "tier": "green",
-      "gpu": "Dedicated GPU with 4 GB VRAM and Vulkan 1.0 support (e.g. NVIDIA GTX 1060 / AMD RX 580)",
-      "cpu": "Quad-core 3.0 GHz (e.g. Intel Core i5-8400 / AMD Ryzen 5 2600)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Dedicated GPU with 4 GB VRAM and Vulkan 1.0 support (e.g. NVIDIA GTX 1060 / AMD RX 580), Quad-core 3.0 GHz (e.g. Intel Core i5-8400 / AMD Ryzen 5 2600)"
     },
     {
       "title": "Dream House Cleaning",
@@ -760,86 +760,6 @@
       "cpu": "Intel Core i5-8600 / Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 1660 Ti, Intel Core i5-8600 / Ryzen 5 3600"
-    },
-    {
-      "title": "Hocus Focus",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1050 / AMD Radeon RX 560",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 1600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560, Intel Core i5-8400 / AMD Ryzen 5 1600"
-    },
-    {
-      "title": "PizzaBoy",
-      "tier": "green",
-      "gpu": "Intel®  HD Graphics 5500",
-      "cpu": "i5+",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Intel®  HD Graphics 5500, i5+"
-    },
-    {
-      "title": "Cat Chaos",
-      "tier": "orange",
-      "gpu": "GeForce GTX 1080 or Radeon RX 6600",
-      "cpu": "3.0 GHz Quad Core",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1080 or Radeon RX 6600, 3.0 GHz Quad Core"
-    },
-    {
-      "title": "Powerplay",
-      "tier": "orange",
-      "gpu": "RTX 2060 or similar",
-      "cpu": "2.8 Ghz Dual Core or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 2060 or similar, 2.8 Ghz Dual Core or better"
-    },
-    {
-      "title": "Deer & Boy",
-      "tier": "green",
-      "gpu": "GeForce GTX 1060 / Radeon RX 470",
-      "cpu": "Ryzen 3 1200 / Core i5-7400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1060 / Radeon RX 470, Ryzen 3 1200 / Core i5-7400"
-    },
-    {
-      "title": "Hollow Knight: Silksong",
-      "tier": "green",
-      "gpu": "GeForce GTX 1050 (2GB), Radeon R9 380 (2GB)",
-      "cpu": "Intel Core i5-3470",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1050 (2GB), Radeon R9 380 (2GB), Intel Core i5-3470"
-    },
-    {
-      "title": "007 First Light",
-      "tier": "red",
-      "gpu": "NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT",
-      "cpu": "INTEL CORE i5 13500, AMD RYZEN 5 7600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT, INTEL CORE i5 13500, AMD RYZEN 5 7600"
-    },
-    {
-      "title": "Call of the Elder Gods",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1650 / AMD Radeon RX 580",
-      "cpu": "Intel Core i5-11600K / AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1650 / AMD Radeon RX 580, Intel Core i5-11600K / AMD Ryzen 5 5600X"
-    },
-    {
-      "title": "REPLACED",
-      "tier": "green",
-      "gpu": "GeForce GTX 1060 (6GB) or equivalent",
-      "cpu": "Intel® Core™ i5-8400 Processor",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
-    },
-    {
-      "title": "MOUSE: P.I. For Hire",
-      "tier": "orange",
-      "gpu": "GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600",
-      "cpu": "Intel Core i5 9600 / Ryzen 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600, Intel Core i5 9600 / Ryzen 3600"
     }
   ]
 }
