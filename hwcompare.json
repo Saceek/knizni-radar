@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-23T09:17:48.840Z",
+  "updatedAt": "2026-08-23T10:17:57.956Z",
   "games": [
     {
       "title": "Big Walk",
@@ -130,20 +130,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 3GB / AMD Radeon RX 580 4GB, Intel Core i5-6600K / AMD Ryzen 5 1600"
     },
     {
-      "title": "Cellar Keeper",
-      "tier": "orange",
-      "gpu": "NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT",
-      "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "VHOLUME",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1060 or AMD Radeon RX 580",
       "cpu": "Intel Core i7-7700 or AMD Ryzen 7 1700",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 or AMD Radeon RX 580, Intel Core i7-7700 or AMD Ryzen 7 1700"
+    },
+    {
+      "title": "Cellar Keeper",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT",
+      "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
     },
     {
       "title": "群侠传：幸存者",
@@ -210,7 +210,7 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 750 Ti / AMD equivalent or better, Intel Core i5 or AMD equivalent (quad-core)"
     },
     {
-      "title": "星之旅 Lunarium",
+      "title": "Lunarium",
       "tier": "orange",
       "gpu": "GTX 1080 Ti / RX Vega 64",
       "cpu": "Intel i5 Quad-Core, 3 GHz",
@@ -466,20 +466,20 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 750 2GB, Intel Core i5 2500"
     },
     {
-      "title": "ゆるゆる生配信する推しは100万回死ぬ｜My Fav Chill Streamer Dies a Million Times",
-      "tier": "red",
-      "gpu": "GeForce RTX 3060",
-      "cpu": "Core i5 14400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060, Core i5 14400"
-    },
-    {
       "title": "Medieval Horse Dealer Simulator",
       "tier": "green",
       "gpu": "Nvidia GeForce GTX 1070 6GB VRAM",
       "cpu": "Intel Core i5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 6GB VRAM, Intel Core i5"
+    },
+    {
+      "title": "ゆるゆる生配信する推しは100万回死ぬ｜My Fav Chill Streamer Dies a Million Times",
+      "tier": "red",
+      "gpu": "GeForce RTX 3060",
+      "cpu": "Core i5 14400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3060, Core i5 14400"
     },
     {
       "title": "Together in Forgotten Lands",
@@ -498,20 +498,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 / AMD Radeon RX 580 or equivalent (4 GB VRAM), Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent"
     },
     {
-      "title": "Sensory Overload",
-      "tier": "green",
-      "gpu": "Dedicated GPU with 4 GB VRAM and Vulkan 1.0 support (e.g. NVIDIA GTX 1060 / AMD RX 580)",
-      "cpu": "Quad-core 3.0 GHz (e.g. Intel Core i5-8400 / AMD Ryzen 5 2600)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Dedicated GPU with 4 GB VRAM and Vulkan 1.0 support (e.g. NVIDIA GTX 1060 / AMD RX 580), Quad-core 3.0 GHz (e.g. Intel Core i5-8400 / AMD Ryzen 5 2600)"
-    },
-    {
       "title": "Claws of Power",
       "tier": "green",
       "gpu": "GeForce GTX 650 Ti or AMD Radeon HD 7750 (1GB VRAM)",
       "cpu": "Intel Core i3-3240 or AMD FX-6300",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 650 Ti or AMD Radeon HD 7750 (1GB VRAM), Intel Core i3-3240 or AMD FX-6300"
+    },
+    {
+      "title": "Sensory Overload",
+      "tier": "green",
+      "gpu": "Dedicated GPU with 4 GB VRAM and Vulkan 1.0 support (e.g. NVIDIA GTX 1060 / AMD RX 580)",
+      "cpu": "Quad-core 3.0 GHz (e.g. Intel Core i5-8400 / AMD Ryzen 5 2600)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Dedicated GPU with 4 GB VRAM and Vulkan 1.0 support (e.g. NVIDIA GTX 1060 / AMD RX 580), Quad-core 3.0 GHz (e.g. Intel Core i5-8400 / AMD Ryzen 5 2600)"
     },
     {
       "title": "Puppergeist",
@@ -576,6 +576,14 @@
       "cpu": "Intel Core i3-6100",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel UHD Graphics 620 / NVIDIA GT 1030, Intel Core i3-6100"
+    },
+    {
+      "title": "Witchblood",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce RTX 2070",
+      "cpu": "AMD Ryzen 5 / Intel Core i5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070, AMD Ryzen 5 / Intel Core i5"
     },
     {
       "title": "The Stalked 3",
@@ -744,22 +752,6 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 1600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560, Intel Core i5-8400 / AMD Ryzen 5 1600"
-    },
-    {
-      "title": "PizzaBoy",
-      "tier": "green",
-      "gpu": "Intel®  HD Graphics 5500",
-      "cpu": "i5+",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Intel®  HD Graphics 5500, i5+"
-    },
-    {
-      "title": "Cat Chaos",
-      "tier": "orange",
-      "gpu": "GeForce GTX 1080 or Radeon RX 6600",
-      "cpu": "3.0 GHz Quad Core",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1080 or Radeon RX 6600, 3.0 GHz Quad Core"
     }
   ]
 }
