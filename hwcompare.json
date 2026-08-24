@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T10:18:34.538Z",
+  "updatedAt": "2026-08-24T11:18:41.770Z",
   "games": [
     {
       "title": "Big Walk",
@@ -202,7 +202,7 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 750 Ti / AMD equivalent or better, Intel Core i5 or AMD equivalent (quad-core)"
     },
     {
-      "title": "星之旅 Lunarium",
+      "title": "Lunarium",
       "tier": "orange",
       "gpu": "GTX 1080 Ti / RX Vega 64",
       "cpu": "Intel i5 Quad-Core, 3 GHz",
@@ -234,20 +234,20 @@
       "note": "Doporučená konfigurace: Nvidia RTX 3060 or AMD Radeon RX 5700, i7-9700 @ 3.6 GHz or Ryzen 5 3600 @ 3.6 GHz"
     },
     {
-      "title": "Kill The Shadow",
-      "tier": "red",
-      "gpu": "NVIDIA GeForce RTX 3060 / AMD RX 6600 XT",
-      "cpu": "Intel Core i5-12600K / AMD Ryzen 5 7600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD RX 6600 XT, Intel Core i5-12600K / AMD Ryzen 5 7600X"
-    },
-    {
       "title": "Tukoni: Strážci lesa",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 750 Ti / AMD Radeon R7 260X / Intel UHD 630 — 2 GB VRAM",
       "cpu": "Intel Core i5‑9600K / AMD Ryzen 5 3600 (requires AVX2 instruction set support)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 Ti / AMD Radeon R7 260X / Intel UHD 630 — 2 GB VRAM, Intel Core i5‑9600K / AMD Ryzen 5 3600 (requires AVX2 instruction set support)"
+    },
+    {
+      "title": "Kill The Shadow",
+      "tier": "red",
+      "gpu": "NVIDIA GeForce RTX 3060 / AMD RX 6600 XT",
+      "cpu": "Intel Core i5-12600K / AMD Ryzen 5 7600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD RX 6600 XT, Intel Core i5-12600K / AMD Ryzen 5 7600X"
     },
     {
       "title": "Ledgerbound",
@@ -456,14 +456,6 @@
       "cpu": "Core i5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 1050, Core i5"
-    },
-    {
-      "title": "Claws of Power",
-      "tier": "green",
-      "gpu": "GeForce GTX 650 Ti or AMD Radeon HD 7750 (1GB VRAM)",
-      "cpu": "Intel Core i3-3240 or AMD FX-6300",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 650 Ti or AMD Radeon HD 7750 (1GB VRAM), Intel Core i3-3240 or AMD FX-6300"
     },
     {
       "title": "The World Well: Blood of Caro",
@@ -752,6 +744,14 @@
       "cpu": "i5+",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Intel®  HD Graphics 5500, i5+"
+    },
+    {
+      "title": "Mexican Ninja",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce RTX 2060 or AMD Radeon RX 5600 XT",
+      "cpu": "Intel Core i5-10400F or AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 or AMD Radeon RX 5600 XT, Intel Core i5-10400F or AMD Ryzen 5 3600"
     }
   ]
 }
