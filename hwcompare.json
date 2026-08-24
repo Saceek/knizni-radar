@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T07:18:00.447Z",
+  "updatedAt": "2026-08-24T08:19:01.677Z",
   "games": [
     {
       "title": "Big Walk",
@@ -218,7 +218,7 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 750 Ti / AMD equivalent or better, Intel Core i5 or AMD equivalent (quad-core)"
     },
     {
-      "title": "星之旅 Lunarium",
+      "title": "Lunarium",
       "tier": "orange",
       "gpu": "GTX 1080 Ti / RX Vega 64",
       "cpu": "Intel i5 Quad-Core, 3 GHz",
@@ -570,14 +570,6 @@
       "note": "Doporučená konfigurace: GTX 1660 / RX 590, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
-      "title": "深渊兽潮",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1060 or higher",
-      "cpu": "Intel Core i5-9400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1060 or higher, Intel Core i5-9400"
-    },
-    {
       "title": "Crystal Breaker Inc",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1050 | AMD Radeon RX-580",
@@ -592,6 +584,14 @@
       "cpu": "Intel Core i3-6100",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel UHD Graphics 620 / NVIDIA GT 1030, Intel Core i3-6100"
+    },
+    {
+      "title": "深渊兽潮",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1060 or higher",
+      "cpu": "Intel Core i5-9400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1060 or higher, Intel Core i5-9400"
     },
     {
       "title": "Witchblood",
@@ -744,6 +744,14 @@
       "cpu": "Intel Core i5 2.4GHz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA Geforce GTX 1050, AMD RX 540, Intel Core i5 2.4GHz"
+    },
+    {
+      "title": "浩游超超超变",
+      "tier": "green",
+      "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
+      "cpu": "Intel Core i3",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i3"
     }
   ]
 }
