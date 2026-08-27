@@ -42,6 +42,7 @@ function diffBooks(current, previous) {
     price: b.prices?.length ? Math.min(...b.prices.map((p) => p.price)) : null,
     priceShop: b.prices?.length ? b.prices.sort((a, c) => a.price - c.price)[0].shop : null,
     cat: b.cat,
+    palmknihy: b.palmknihy || null,
   }));
 }
 

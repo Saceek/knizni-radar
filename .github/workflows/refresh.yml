@@ -58,6 +58,10 @@ jobs:
         env:
           GOOGLE_BOOKS_API_KEY: ${{ secrets.GOOGLE_BOOKS_KEY }}
 
+      - name: Knihovna (Palmknihy) → books.json
+        run: node build-library.js
+        continue-on-error: true
+
       - name: Novinky → news.json
         run: node build-news.js
 

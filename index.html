@@ -1199,13 +1199,14 @@ function newsBookTile(b){
   const coverInner = b.cover
     ? `<img class="tile-poster" loading="lazy" decoding="async" src="${esc(b.cover)}" alt="" onerror="this.style.visibility='hidden'" />`
     : `<div class="tile-poster" ${coverBg}><span style="font-size:9px;font-weight:700;color:#fff;line-height:1.1">${esc(b.title)}</span></div>`;
+  const coverWrap = `<div style="position:relative;display:inline-block;overflow:hidden;border-radius:6px">${coverInner}${libraryRibbon(b)}</div>`;
   const rHtml = b.rating!=null ? `<span class="rating ${ratingClass(b.rating)}">${b.rating} %</span>` : "";
   const price = b.price ? `<span class="price" style="font-size:13px">${b.price} Kč</span>` : "";
   const bk=inBacklog(b.title);
-  return `<div class="tile${rarityCls(b.rating)}">${daysLeftBadge(b)}<div class="tile-row">${coverInner}<div>
+  return `<div class="tile${rarityCls(b.rating)}">${daysLeftBadge(b)}<div class="tile-row">${coverWrap}<div>
     <p class="tile-title">${b.link?`<a href="${esc(b.link)}" target="_blank" rel="noreferrer">`:""}${esc(b.title)}${b.link?"</a>":""}</p>
     <p class="tile-sub">${esc(b.author||"")}</p>
-    <div class="tile-meta">${rHtml}${price}<button class="bk ${bk?'on':''}" data-newsbk="${esc(b.title)}" style="margin-left:auto">${bk?'✓':'+'}</button></div>
+    <div class="tile-meta">${rHtml}${price}${libraryPill(b)}<button class="bk ${bk?'on':''}" data-newsbk="${esc(b.title)}" style="margin-left:auto">${bk?'✓':'+'}</button></div>
   </div></div></div>`;
 }
 function newsMovieTile(m){
