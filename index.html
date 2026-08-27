@@ -795,15 +795,21 @@ function diaryViewHtml(){
     <button class="addbtn" id="diary-add-btn">+ Zapsat misi</button>
   </div>`;
   let lastMonth=null;
+  let diaryRepaired=false;
   sorted.forEach(e=>{
     const idx = S.diary.indexOf(e);
     const m = diaryMonthLabel(e.date);
     if(m!==lastMonth){ list += `<div class="diary-month">${esc(m)}</div>`; lastMonth=m; }
     const d = new Date(e.date+"T00:00:00");
     const dateShort = `${d.getDate()}. ${d.getMonth()+1}.`;
+    // Jednou dohledaná obálka/odkaz se rovnou natrvalo zapíše do samotného záznamu - jinak
+    // to byla jen kosmetická záplata pro tenhle render, a jakmile titul vypadne ze všech
+    // zdrojů (backlog i žebříček), fallback už podruhé nemá odkud brát a obálka zase zmizí.
     const fb = diaryFallback(e);
-    const img = e.image || fb.image;
-    const url = e.url || fb.url;
+    if(!e.image && fb.image){ e.image=fb.image; diaryRepaired=true; }
+    if(!e.url && fb.url){ e.url=fb.url; diaryRepaired=true; }
+    const img = e.image;
+    const url = e.url;
     const thumbStyle = img? `background-image:url('${esc(img)}')` : `background:${grad(e.title)}`;
     const sub = e._category==="book" ? esc(e.author||"kniha") : e._category==="comic" ? esc(e.author||"komiks") : e._category==="game" ? "hra" : (e.year?`film / seriál · ${esc(e.year)}`:"film / seriál");
     list += `<div class="diary-row">
@@ -818,6 +824,7 @@ function diaryViewHtml(){
       <button class="diary-rm" data-diary-rm="${idx}" title="Odebrat ze záznamu">✕</button>
     </div>`;
   });
+  if(diaryRepaired){ saveDiaryAndSync(S.diary); }
 
   const side = `<div class="diary-side">
     <div class="ds-lbl">Level progress</div>
