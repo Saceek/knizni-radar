@@ -547,12 +547,43 @@ async function saveRemoteProgress(data){
   return res.ok;
 }
 
+// "Náhrobky" dokončených questů - když se slot vynuluje (progressFinish), zapíše se sem
+// značka. Bez toho by syncProgress() na dalším načtení mohl přepsat už vyprázdněný lokální
+// slot starší vzdálenou verzí, pokud zápis do progress.json ještě nestihl doběhnout (stejná
+// třída chyby jako dřív u deníku, jen tady S.progress není pole, takže jde o jiné řešení).
+const LS_PROGRESS_TOMBSTONES = "knizniRadarProgressDone";
+function loadProgressTombstones(){ try{ return JSON.parse(localStorage.getItem(LS_PROGRESS_TOMBSTONES))||{}; }catch(e){ return {}; } }
+function saveProgressTombstones(t){ try{ localStorage.setItem(LS_PROGRESS_TOMBSTONES, JSON.stringify(t)); }catch(e){} }
+function markProgressFinished(cat){
+  const t=loadProgressTombstones();
+  t[cat]=Date.now();
+  saveProgressTombstones(t);
+}
 async function syncProgress(){
   _progressSyncStatus="syncing"; render();
-  const remote=migrateProgress(await loadRemoteProgress());
-  if(Object.keys(remote).length){ saveProgress(remote); S.progress=remote; }
-  else { S.progress=loadProgress(); }
-  _progressSyncStatus="ok";
+  const remote=migrateProgress(await loadRemoteProgress())||{};
+  const tomb=loadProgressTombstones();
+  // Náhrobky starší pár dní zahodit, ať soubor neroste do nekonečna - do té doby už remote
+  // stejně dávno stihl dohnat lokální stav.
+  const now=Date.now();
+  Object.keys(tomb).forEach(cat=>{ if(now-tomb[cat] > 3*86400000) delete tomb[cat]; });
+  const merged={...remote};
+  Object.keys(tomb).forEach(cat=>{ merged[cat]=null; });
+  const local=loadProgress();
+  Object.keys(local).forEach(cat=>{ if(local[cat] && !merged[cat] && !tomb[cat]) merged[cat]=local[cat]; });
+
+  saveProgress(merged);
+  S.progress=merged;
+  const changed = JSON.stringify(merged)!==JSON.stringify(remote);
+  if(changed){
+    const ok=await saveRemoteProgress(merged);
+    if(ok){ Object.keys(tomb).forEach(cat=>{ if(merged[cat]===null) delete tomb[cat]; }); }
+    saveProgressTombstones(tomb);
+    _progressSyncStatus = ok?"ok":"err";
+  } else {
+    saveProgressTombstones(tomb);
+    _progressSyncStatus = "ok";
+  }
   render();
 }
 
@@ -642,6 +673,7 @@ function progressWidgetHtml(){
 function progressFinish(cat){
   const item = S.progress[cat];
   S.progress[cat]=null;
+  markProgressFinished(cat);
   saveProgressAndSync(S.progress);
   render();
   if(item){
