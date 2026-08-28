@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-28T14:21:50.781Z",
+  "updatedAt": "2026-08-28T15:22:24.583Z",
   "items": [
     {
       "type": "book",
@@ -179,6 +179,66 @@
       "released": "2026-08-27T00:00:00.000Z",
       "gamePass": false,
       "demoAppid": 4715120,
+      "firstSeen": "2026-08-28",
+      "daysLeft": 3
+    },
+    {
+      "type": "movie",
+      "title": "Našeptávač",
+      "year": "2026",
+      "rating": 62,
+      "poster": "https://image.pmgstatic.com/cache/resized/w936/files/images/film/photos/171/472/171472875_uhu3mt.jpg",
+      "url": "https://www.csfd.cz/film/1735556-naseptavac/prehled/",
+      "genres": [
+        "Drama",
+        "Krimi"
+      ],
+      "country": "USA",
+      "vod": [
+        "Netflix"
+      ],
+      "csfdType": "film",
+      "firstSeen": "2026-08-28",
+      "daysLeft": 3
+    },
+    {
+      "type": "series",
+      "title": "Myšilov",
+      "year": "2026",
+      "rating": null,
+      "poster": "https://image.pmgstatic.com/cache/resized/w936/files/images/film/photos/171/532/171532043_zqglri.jpg",
+      "url": "https://www.csfd.cz/film/1884076-mysilov/prehled/",
+      "genres": [
+        "Krimi",
+        "Drama"
+      ],
+      "country": "Jižní Korea",
+      "vod": [
+        "Netflix"
+      ],
+      "csfdType": "seriál",
+      "firstSeen": "2026-08-28",
+      "daysLeft": 3
+    },
+    {
+      "type": "game",
+      "title": "Last Breath 最后的气息",
+      "appid": 4298500,
+      "rating": 100,
+      "reviews": 34,
+      "scoreDesc": "Positive",
+      "price": "5,84€",
+      "image": "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/4298500/400750a86a4d4ee9b5dbea3c6df006ce3bd1f127/header.jpg?t=1787892673",
+      "url": "https://store.steampowered.com/app/4298500/",
+      "tags": [
+        "Akční",
+        "Dobrodružné",
+        "Nezávislé",
+        "RPG"
+      ],
+      "released": "2026-08-27T00:00:00.000Z",
+      "gamePass": false,
+      "demoAppid": 4480000,
       "firstSeen": "2026-08-28",
       "daysLeft": 3
     },
@@ -768,8 +828,8 @@
   "counts": {
     "books": 3,
     "comics": 0,
-    "movies": 3,
-    "series": 0,
-    "games": 32
+    "movies": 4,
+    "series": 1,
+    "games": 33
   }
 }
