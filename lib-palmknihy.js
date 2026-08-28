@@ -16,8 +16,12 @@ async function fetchPalmknihyMatch(page, title, author) {
   await page.waitForTimeout(PALMKNIHY_WAIT);
   const html = await page.content();
   const $ = cheerio.load(html);
-  const wanted = normalizeTitle(`${title} ${author || ""}`).split(" ").filter((w) => w.length > 2);
-  if (!wanted.length) return null;
+  // Titul a autora se musí ověřovat zvlášť, ne jako jeden pytel slov - dvě různé knihy s
+  // podobným názvem (např. "Tohle nikdo nečekal" vs. "Tak tohle nikdo nečekal") jinak snadno
+  // překročí práh shody i s úplně jiným autorem, protože název sám dodá většinu slov.
+  const titleWords = normalizeTitle(title).split(" ").filter((w) => w.length > 2);
+  const authorWords = author ? normalizeTitle(author).split(" ").filter((w) => w.length > 2) : [];
+  if (!titleWords.length) return null;
   let best = null, bestScore = 0;
   $(".result").each((_, el) => {
     const id = $(el).find(".hiddenId").first().attr("value");
@@ -25,11 +29,15 @@ async function fetchPalmknihyMatch(page, title, author) {
     const linkText = $(el).find(`a[href="/Record/${id}"]`).first().text().trim();
     if (!linkText) return;
     const norm = normalizeTitle(linkText);
-    const matches = wanted.filter((w) => norm.includes(w)).length;
-    const score = matches / wanted.length;
+    const titleMatches = titleWords.filter((w) => norm.includes(w)).length;
+    const titleScore = titleMatches / titleWords.length;
+    const authorMatches = authorWords.length ? authorWords.filter((w) => norm.includes(w)).length : 0;
+    const authorOk = !authorWords.length || authorMatches > 0; // známe-li autora, aspoň jedno slovo se musí trefit
+    if (titleScore < 0.7 || !authorOk) return;
+    const score = titleScore + (authorMatches > 0 ? 0.5 : 0);
     if (score > bestScore) { bestScore = score; best = id; }
   });
-  if (!best || bestScore < 0.6) return null;
+  if (!best) return null;
   return { url: `https://katalog.rokyknih.cz/Record/${best}` };
 }
 
