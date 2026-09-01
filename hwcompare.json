@@ -1,4 +1,37 @@
 {
-  "updatedAt": "2026-09-01T16:12:19.650Z",
-  "games": []
+  "updatedAt": "2026-09-01T17:12:21.129Z",
+  "games": [
+    {
+      "title": "Big Ambitions",
+      "tier": "orange",
+      "gpu": "NVIDIA Geforce RTX 2060 or similar (Minimum 8GB vram)",
+      "cpu": "Intel i7 or similar",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA Geforce RTX 2060 or similar (Minimum 8GB vram), Intel i7 or similar"
+    },
+    {
+      "title": "Sandustry",
+      "tier": "green",
+      "gpu": "NVIDIA® GeForce® GTX 960 (4 GB) / AMD Radeon RX 570 (4 GB)",
+      "cpu": "Intel® Core™ i5-9600K (hexa-core) / AMD® Ryzen™ 5 1600 (hexa-core)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 960 (4 GB) / AMD Radeon RX 570 (4 GB), Intel® Core™ i5-9600K (hexa-core) / AMD® Ryzen™ 5 1600 (hexa-core)"
+    },
+    {
+      "title": "No Results Found",
+      "tier": "green",
+      "gpu": "Intel UHD Graphics 620",
+      "cpu": "Intel Core i3-6100",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel UHD Graphics 620, Intel Core i3-6100"
+    },
+    {
+      "title": "Resonance: A Plague Tale Legacy",
+      "tier": "red",
+      "gpu": "8GB VRAM, AMD Radeon RX 6700 XT / Nvidia GeForce RTX 3060 Ti",
+      "cpu": "AMD Ryzen 5 5600X / Intel Core i5-12400F",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 8GB VRAM, AMD Radeon RX 6700 XT / Nvidia GeForce RTX 3060 Ti, AMD Ryzen 5 5600X / Intel Core i5-12400F"
+    }
+  ]
 }
