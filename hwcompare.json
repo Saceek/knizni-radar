@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-08T16:13:23.347Z",
+  "updatedAt": "2026-09-08T17:13:18.077Z",
   "games": [
     {
       "title": "Big Ambitions",
@@ -154,7 +154,7 @@
       "note": "Minimální konfigurace: GeForce GTX 650 (1024 Mb) Radeon HD 7750 (1024 Mb), Iris Pro Graphics 580, Intel Core i5-4570T / AMD A10-5800K APU"
     },
     {
-      "title": "Sherlock Holmes: Night Stalker",
+      "title": "Detective Sherlock: Shadow Stalker",
       "tier": "orange",
       "gpu": "NVIDIA GeForce RTX 3060/AMD Radeon RX 5700XT",
       "cpu": "Intel Core i7-10700k/AMD Ryzen 7 5700X3D",
@@ -234,12 +234,60 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD Radeon RX 480, Intel Core i7-7700k / AMD Ryzen 7 3700X"
     },
     {
-      "title": "Maestro's Cold War 2",
+      "title": "Night Rolls Cozy Store",
       "tier": "green",
-      "gpu": "Intel HD 4000 / AMD Radeon R5 230 / NVIDIA GeForce GT 710",
-      "cpu": "2.5 gz and 2 cores",
+      "gpu": "NVIDIA GTX 1060 / AMD RX 480",
+      "cpu": "i5 7600K / Ryzen 5 2600x",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: Intel HD 4000 / AMD Radeon R5 230 / NVIDIA GeForce GT 710, 2.5 gz and 2 cores"
+      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 480, i5 7600K / Ryzen 5 2600x"
+    },
+    {
+      "title": "Ultrapool",
+      "tier": "green",
+      "gpu": "Any mid-range GPU (e.g., NVIDIA GTX 750 / AMD R7 360 / Intel Iris)",
+      "cpu": "Quad-core CPU @ 2.5 GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Any mid-range GPU (e.g., NVIDIA GTX 750 / AMD R7 360 / Intel Iris), Quad-core CPU @ 2.5 GHz"
+    },
+    {
+      "title": "AI Learns To Drive",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1050 (Pascal), AMD Radeon RX 460 (GCN 4.0)",
+      "cpu": "Intel Core i5-6600K, AMD Ryzen 5 1600, Snapdragon X Elite",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 (Pascal), AMD Radeon RX 460 (GCN 4.0), Intel Core i5-6600K, AMD Ryzen 5 1600, Snapdragon X Elite"
+    },
+    {
+      "title": "Pickle Pete",
+      "tier": "green",
+      "gpu": "DirectX 11 compatible GPU (Intel HD Graphics 4000 or better)",
+      "cpu": "Dual Core CPU @ 2.0 GHz+",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: DirectX 11 compatible GPU (Intel HD Graphics 4000 or better), Dual Core CPU @ 2.0 GHz+"
+    },
+    {
+      "title": "The World Well: Blood of Caro",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 750 2GB",
+      "cpu": "Intel Core i5 2500",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 750 2GB, Intel Core i5 2500"
+    },
+    {
+      "title": "Megastore: Tidy Up Together",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1060 3GB",
+      "cpu": "i5 7600K / Ryzen 5 2600x",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1060 3GB, i5 7600K / Ryzen 5 2600x"
+    },
+    {
+      "title": "Medieval Horse Dealer Simulator",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 1070 6GB VRAM",
+      "cpu": "Intel Core i5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 6GB VRAM, Intel Core i5"
     },
     {
       "title": "Withering Realms",
@@ -248,6 +296,14 @@
       "cpu": "Intel Core i7-8700K | AMD Ryzen 5 3600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 | AMD Radeon RX Vega 56, Intel Core i7-8700K | AMD Ryzen 5 3600X"
+    },
+    {
+      "title": "Maestro's Cold War 2",
+      "tier": "green",
+      "gpu": "Intel HD 4000 / AMD Radeon R5 230 / NVIDIA GeForce GT 710",
+      "cpu": "2.5 gz and 2 cores",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Intel HD 4000 / AMD Radeon R5 230 / NVIDIA GeForce GT 710, 2.5 gz and 2 cores"
     },
     {
       "title": "Sensory Overload",
@@ -282,12 +338,28 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 1650, Intel Core i5-6500"
     },
     {
+      "title": "Tiny Eden",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 6600",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 6600, Intel Core i5-10400 / AMD Ryzen 5 3600"
+    },
+    {
       "title": "我的解体史",
       "tier": "green",
       "gpu": "Intel HD Graphics 530 / AMD Radeon HD 7750 / NVIDIA GeForce GTX 650 (OpenGL 4.6)",
       "cpu": "Intel Core i5-4590 / AMD Ryzen 3 1200 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Intel HD Graphics 530 / AMD Radeon HD 7750 / NVIDIA GeForce GTX 650 (OpenGL 4.6), Intel Core i5-4590 / AMD Ryzen 3 1200 or equivalent"
+    },
+    {
+      "title": "Port of Jumanah",
+      "tier": "green",
+      "gpu": "GTX 1660 6GB / RTX 3050 6GB / RX 6600 8GB or Equivalent",
+      "cpu": "Intel Core i5-9400F, AMD Ryzen 5 2600 or Equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1660 6GB / RTX 3050 6GB / RX 6600 8GB or Equivalent, Intel Core i5-9400F, AMD Ryzen 5 2600 or Equivalent"
     }
   ]
 }
