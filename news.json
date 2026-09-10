@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-10T07:21:27.469Z",
+  "updatedAt": "2026-09-10T08:22:38.005Z",
   "items": [
     {
       "type": "comic",
@@ -123,6 +123,44 @@
       "released": "2026-09-09T00:00:00.000Z",
       "gamePass": false,
       "demoAppid": 4778780,
+      "firstSeen": "2026-09-10",
+      "daysLeft": 3
+    },
+    {
+      "type": "movie",
+      "title": "Resident Evil",
+      "year": "2026",
+      "rating": null,
+      "poster": "https://image.pmgstatic.com/cache/resized/w936/files/images/film/photos/171/252/171252877_96wawb.jpg",
+      "url": "https://www.csfd.cz/film/1661633-resident-evil/prehled/",
+      "genres": [
+        "Horor",
+        "Sci-Fi"
+      ],
+      "country": "USA",
+      "vod": [
+        "Kino"
+      ],
+      "csfdType": "film",
+      "firstSeen": "2026-09-10",
+      "daysLeft": 3
+    },
+    {
+      "type": "series",
+      "title": "Pohřešovaná",
+      "year": "2026",
+      "rating": null,
+      "poster": "https://image.pmgstatic.com/cache/resized/w936/files/images/film/photos/171/331/171331347_m72h6l.jpg",
+      "url": "https://www.csfd.cz/film/1857275-pohresovana/prehled/",
+      "genres": [
+        "Drama",
+        "Krimi"
+      ],
+      "country": "USA / Austrálie",
+      "vod": [
+        "Apple TV+"
+      ],
+      "csfdType": "seriál",
       "firstSeen": "2026-09-10",
       "daysLeft": 3
     },
@@ -740,8 +778,8 @@
   "counts": {
     "books": 5,
     "comics": 3,
-    "movies": 2,
-    "series": 0,
+    "movies": 3,
+    "series": 1,
     "games": 28
   }
 }
