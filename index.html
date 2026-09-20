@@ -1014,7 +1014,7 @@ const VALID_VIEWS = new Set(["news","coming","list","movies","steam","backlog","
 const savedView = localStorage.getItem("knizniRadarView");
 let S = {dark:localStorage.getItem("knizniRadarTheme")!=="light", view:VALID_VIEWS.has(savedView)?savedView:"news", filter:"Vše", sort:"readers", q:"", books:DEMO, status:"idle", updatedAt:null, expanded:null, backlog:loadBacklog(),
   addQ:"", addResults:[], addBusy:false, addMsg:"", addErr:"",
-  games:GAMES_DEMO, gamesStatus:"idle", gamesUpdatedAt:null, gameWin:14, gameGenre:"Vše", gameSort:"reviews",
+  games:GAMES_DEMO, gamesStatus:"idle", gamesUpdatedAt:null, gameWin:14, gameGenre:"Vše", gameSort:"reviews", gameRarity:"Vše",
   movies:MOVIES_DEMO, moviesStatus:"idle", moviesUpdatedAt:null, movieType:"Vše", movieSort:"rating", movieQ:"",
   news:null, newsStatus:"idle", newsUpdatedAt:null,
   coming:null, comingStatus:"idle", comingUpdatedAt:null,
@@ -1174,14 +1174,22 @@ function steamGenres(){
   const c={}; S.games.forEach(g=>(g.tags||[]).forEach(t=>{ if(t) c[t]=(c[t]||0)+1; }));
   return Object.keys(c).sort((a,b)=>c[b]-c[a]);
 }
-function steamFiltered(){
+const RARITY_KEYS = ["leg","epic","rare","common"];
+const RARITY_LABEL = {leg:"★", epic:"◆", rare:"●", common:"○"};
+function steamFilteredByWinGenre(){
   const now=Date.now(), win=S.gameWin*864e5;
   return S.games.filter(g=>{
     const d=g.released?Date.parse(g.released):0;
     const inWin=d && (now-d)<=win && d<=now+864e5;
     const inGenre=S.gameGenre==="Vše" || (g.tags||[]).includes(S.gameGenre);
     return inWin && inGenre;
-  }).sort((a,b)=> rarityRank(b.rating)-rarityRank(a.rating) || (
+  });
+}
+function steamFiltered(){
+  const base = steamFilteredByWinGenre();
+  const r = S.gameRarity||"Vše";
+  return base.filter(g=> r==="Vše" || (rarity(g.rating)||"common")===r)
+  .sort((a,b)=> rarityRank(b.rating)-rarityRank(a.rating) || (
     S.gameSort==="released" ? (Date.parse(b.released)||0)-(Date.parse(a.released)||0) :
     S.gameSort==="rating"   ? (b.rating||0)-(a.rating||0) :
                               (b.reviews||0)-(a.reviews||0)));
@@ -1740,6 +1748,11 @@ function render(){
     else if(S.gamesStatus==="demo") gst='<div class="note warn">games.json se nepodařilo načíst – ukázková data.</div>';
     const wins=[7,14,30].map(w=>`<button class="chip ${S.gameWin===w?'on':''}" data-gwin="${w}">${w} dní</button>`).join("");
     const genres=["Vše",...steamGenres()].map(c=>`<button class="chip ${S.gameGenre===c?'on':''}" data-ggenre="${esc(c)}">${esc(c)}</button>`).join("");
+    const preRarity = steamFilteredByWinGenre();
+    const rarityCounts = {leg:0,epic:0,rare:0,common:0};
+    preRarity.forEach(g=>{ rarityCounts[rarity(g.rating)||"common"]++; });
+    const rarityChips = `<button class="chip ${S.gameRarity==="Vše"?'on':''}" data-grarity="Vše">Vše ${preRarity.length}</button>`
+      + RARITY_KEYS.map(k=>`<button class="chip ${S.gameRarity===k?'on':''}" data-grarity="${k}">${RARITY_LABEL[k]} ${rarityCounts[k]}</button>`).join("");
     const items=steamFiltered();
     const gsort=`<div class="controls"><select id="gsort">
         <option value="reviews"${S.gameSort==='reviews'?' selected':''}>Nejvíc recenzí</option>
@@ -1750,7 +1763,8 @@ function render(){
       + `<div class="chips">${wins}</div>`
       + `<div class="chips">${genres}</div>`
       + gsort
-      + (items.length?items.map(gameCard).join(""):'<div class="empty">Žádná hra v tomto období a žánru.</div>');
+      + `<div class="chips">${rarityChips}</div>`
+      + (items.length?items.map(gameCard).join(""):'<div class="empty">Žádná hra v tomto období, žánru a raritě.</div>');
     const gs=document.getElementById("gsort"); if(gs) gs.onchange=e=>{S.gameSort=e.target.value; render();};
   } else if(S.view==="backlog"){
     const byRarity=(a,b)=>rarityRank(b.rating)-rarityRank(a.rating) || (b.rating??-1)-(a.rating??-1);
@@ -2111,6 +2125,7 @@ document.getElementById("view").onclick=e=>{
     if(item){S.backlog.push({...item,_category:"comic"}); saveBacklogAndSync(S.backlog); render();}} return;}
   const gw=e.target.dataset.gwin; if(gw){S.gameWin=+gw; render(); return;}
   const gg=e.target.dataset.ggenre; if(gg){S.gameGenre=gg; render(); return;}
+  const gr=e.target.dataset.grarity; if(gr){S.gameRarity=gr; render(); return;}
   const qscat=e.target.closest("[data-qscat]")?.dataset.qscat;
   if(qscat){ startQuestFromBacklog(qscat, e.target.closest("[data-qscat]").dataset.qstitle); return; }
   const setcatEl=e.target.closest("[data-setcatval]");
