@@ -677,11 +677,15 @@ const isProgressActive = (cat, title) => S.progress[cat] && S.progress[cat].titl
 // zelený "hotovo" vzhled místo klikacího tlačítka na start.
 function questPlatBtn(cat, title, icon, tooltip){
   if(isProgressActive(cat,title)){
-    const pct = S.progress[cat].total ? Math.round(S.progress[cat].current/S.progress[cat].total*100) : 0;
-    return `<span class="quest-plat-btn" style="color:var(--emerald);border-color:var(--emerald);cursor:default" title="Probíhá (${pct} %)">${icon}</span>`;
+    const item=S.progress[cat];
+    const pct = item.total ? Math.round(item.current/item.total*100) : 0;
+    // Aktivní slot potřebuje ukázat procenta rovnou, ne jen skrz title na hover - u malých
+    // ikon her by jinak zůstala jediným signálem barva, kterou nejde přečíst jako číslo.
+    return `<span class="quest-plat-btn" style="width:auto;padding:0 7px;gap:3px;color:var(--emerald);border-color:var(--emerald);cursor:default" title="Probíhá: ${item.current}/${item.total} ${cfgUnitFor(cat)}">${icon}<span style="font-size:9px;font-weight:700">${pct}%</span></span>`;
   }
   return `<button class="quest-plat-btn" data-qscat="${cat}" data-qstitle="${esc(title)}" title="${esc(tooltip)}">${icon}</button>`;
 }
+const cfgUnitFor = cat => PROG_CFG[cat]?.unit || "";
 function questStartOrActive(cat, title, label, icon){
   if(isProgressActive(cat, title)){
     const pct = S.progress[cat].total ? Math.round(S.progress[cat].current/S.progress[cat].total*100) : 0;
