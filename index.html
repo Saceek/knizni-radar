@@ -2004,18 +2004,15 @@ async function runSearch(){
       const r=await fetch(`/api/proxy?url=${encodeURIComponent(dbkTarget)}`);
       if(r.ok){
         const html=await r.text();
-        // Each entry: <a href="/prehled-knihy/..."><picture>...<img src="COVER" alt="Obálka knihy AUTHOR: TITLE">
-        const bookRe=/<a href="(\/prehled-knihy\/[^"]+)">\s*<picture>[\s\S]*?<img src="([^"]+)" alt="Obálka knihy ([^"]+)"/g;
+        // Obálka a titul/autor jsou dvě oddělené věci na stránce - obrázek nese jen "Obálka
+        // knihy TITUL" (autor skoro nikdy v alt textu), skutečný autor je až v <span class='pozn'>
+        // hned pod odkazem na titul o kus dál. Bez spojení obou částí zůstává autor téměř vždy null.
+        const bookRe=/<img src="([^"]+)" alt="Obálka knihy [^"]+"[\s\S]{0,400}?<a class='new' type='book' href='([^']+)'>([^<]+)<\/a>\s*<br \/><span class='pozn'>\s*([^,<]*),?\s*([^<]*)<\/span>/g;
         for(const m of html.matchAll(bookRe)){
-          const link='https://www.databazeknih.cz'+m[1];
-          const cover=m[2];
-          const altText=m[3]; // "Helena Sováková: Plukovnice lidských duší" or just "Titulek"
-          let title=altText, bookAuthor=null;
-          if(altText.includes(':')){
-            const colonIdx=altText.indexOf(':');
-            bookAuthor=altText.slice(0,colonIdx).trim();
-            title=altText.slice(colonIdx+1).trim();
-          }
+          const cover=m[1];
+          const link='https://www.databazeknih.cz'+m[2];
+          const title=m[3].trim();
+          const bookAuthor=m[5].trim()||null;
           if(!title||online.some(o=>o.link===link)) continue;
           if(authorL && !(bookAuthor||"").toLowerCase().includes(authorL)) continue;
           online.push({title,author:bookAuthor,cover,_category:"book",link,url:link,cat:["databazeknih.cz"]});
