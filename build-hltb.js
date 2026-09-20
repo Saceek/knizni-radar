@@ -45,7 +45,11 @@ async function findSearchEndpoint() {
   for (const src of scriptSrcs) {
     try {
       const js = await getText(BASE + src);
-      const m = js.match(/fetch\(["'](\/api\/[a-zA-Z0-9_]+)["']\s*,\s*\{[^}]*method:\s*["']POST["']/);
+      // HLTB endpoint už nerotuje pod náhodným jednoslovným jménem jako dřív (to bral starý
+      // regex /api/[a-zA-Z0-9_]+ a omylem chytal třeba "/api/error" - jiný fetch v bundlu,
+      // co náhodou taky sedí na "POST"). Endpoint je teď na stabilní víceúrovňové cestě
+      // (aktuálně /api/search/site), pozná se spolehlivě jen podle sousedícího "/init?t=".
+      const m = js.match(/["'`](\/api\/[a-zA-Z0-9_/]+)\/init\?t=/);
       if (m) return m[1];
     } catch (_) { /* ignore individual chunk failures */ }
   }
