@@ -1751,8 +1751,9 @@ function render(){
     const preRarity = steamFilteredByWinGenre();
     const rarityCounts = {leg:0,epic:0,rare:0,common:0};
     preRarity.forEach(g=>{ rarityCounts[rarity(g.rating)||"common"]++; });
+const RARITY_COLOR = {leg:"#ffaa28", epic:"#c9a0ff", rare:"#6aa5ff", common:"var(--sub)"};
     const rarityChips = `<button class="chip ${S.gameRarity==="Vše"?'on':''}" data-grarity="Vše">Vše ${preRarity.length}</button>`
-      + RARITY_KEYS.map(k=>`<button class="chip ${S.gameRarity===k?'on':''}" data-grarity="${k}">${RARITY_LABEL[k]} ${rarityCounts[k]}</button>`).join("");
+      + RARITY_KEYS.map(k=>`<button class="chip ${S.gameRarity===k?'on':''}" data-grarity="${k}" style="${S.gameRarity===k?`background:${RARITY_COLOR[k]};color:#1a1006;border-color:${RARITY_COLOR[k]}`:`color:${RARITY_COLOR[k]};border-color:${RARITY_COLOR[k]}66`}">${RARITY_LABEL[k]} ${rarityCounts[k]}</button>`).join("");
     const items=steamFiltered();
     const gsort=`<div class="controls"><select id="gsort">
         <option value="reviews"${S.gameSort==='reviews'?' selected':''}>Nejvíc recenzí</option>
