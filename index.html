@@ -670,6 +670,25 @@ function progressSlotHtml(cat){
 function progressWidgetHtml(){
   return `<div class="prog-widget">${["book","comic","movie_solo","movie_duo","game_pc","game_ps5","game_nsw2"].map(progressSlotHtml).join("")}</div>`;
 }
+// Je daný titul zrovna aktivní v tomhle slotu Aktivních questů? Používá se v Backlogu, ať
+// tlačítko "▶ Začít" nenabízí start něčeho, co už reálně běží.
+const isProgressActive = (cat, title) => S.progress[cat] && S.progress[cat].title===title;
+// Verze pro platformové ikony (film sám/spolu, hra PC/PS5/Switch) - aktivní slot dostane
+// zelený "hotovo" vzhled místo klikacího tlačítka na start.
+function questPlatBtn(cat, title, icon, tooltip){
+  if(isProgressActive(cat,title)){
+    const pct = S.progress[cat].total ? Math.round(S.progress[cat].current/S.progress[cat].total*100) : 0;
+    return `<span class="quest-plat-btn" style="color:var(--emerald);border-color:var(--emerald);cursor:default" title="Probíhá (${pct} %)">${icon}</span>`;
+  }
+  return `<button class="quest-plat-btn" data-qscat="${cat}" data-qstitle="${esc(title)}" title="${esc(tooltip)}">${icon}</button>`;
+}
+function questStartOrActive(cat, title, label, icon){
+  if(isProgressActive(cat, title)){
+    const pct = S.progress[cat].total ? Math.round(S.progress[cat].current/S.progress[cat].total*100) : 0;
+    return `<span class="bk" style="color:var(--emerald);border-color:var(--emerald);cursor:default" title="${esc(label||'Právě probíhá')}">${icon||'▶'} Probíhá (${pct} %)</span>`;
+  }
+  return null;
+}
 function progressFinish(cat){
   const item = S.progress[cat];
   S.progress[cat]=null;
@@ -1487,6 +1506,7 @@ function card(b,i){
 }
 function backlogCard(b){
   const open = S.expanded===b.title;
+  const questBtn = questStartOrActive("book", b.title) || `<button class="bk quest" data-qscat="book" data-qstitle="${esc(b.title)}">▶ Začít</button>`;
   return `<div class="card${rarityCls(b.rating)}">
     <div>${coverHtml(b)}</div>
     <div class="body">
@@ -1495,7 +1515,7 @@ function backlogCard(b){
       <div class="actions">
         <button class="link" data-more="${esc(b.title)}">${open?"Méně ▲":"Detail & ceny ▼"}</button>
         <button class="bk rm" data-rm="${esc(b.title)}" data-rmcat="book">✕ Odebrat</button>
-        <button class="bk quest" data-qscat="book" data-qstitle="${esc(b.title)}">▶ Začít</button>
+        ${questBtn}
         <button class="bk" data-setcatval="comic" data-setcattitle="${esc(b.title)}" title="Přeřadit do komiksů">💥 Komiks?</button>
         <span class="xp-pill" title="XP za dokončení questu">+80 XP</span>
       </div>
@@ -1523,7 +1543,7 @@ function backlogComicCard(c){
       <div class="meta">${rarityPill(c.rating)}${priceTxt?`<span class="tag">${priceTxt}</span>`:""}</div>
       <div class="actions">
         <button class="bk rm" data-rm="${esc(c.title)}" data-rmcat="comic">✕ Odebrat</button>
-        <button class="bk quest" data-qscat="comic" data-qstitle="${esc(c.title)}">▶ Začít</button>
+        ${questStartOrActive("comic", c.title) || `<button class="bk quest" data-qscat="comic" data-qstitle="${esc(c.title)}">▶ Začít</button>`}
         <button class="bk" data-setcatval="book" data-setcattitle="${esc(c.title)}" title="Přeřadit do knih">📖 Kniha?</button>
         <span class="xp-pill" title="XP za dokončení questu">+60 XP</span>
       </div>
@@ -1547,7 +1567,7 @@ function backlogMovieCard(m){
       </div><div style="text-align:right">${rHtml}</div></div>
       <div class="meta"><span class="mtype ${typeClass}">${esc(m.type||"film")}</span>${vodHtml}${genreHtml}${rarityPill(m.rating)}</div>
       <div class="actions"><button class="bk rm" data-rm="${esc(m.title)}" data-rmcat="movie">✕ Odebrat</button>
-        <span class="quest-plat"><button class="quest-plat-btn" data-qscat="movie_solo" data-qstitle="${esc(m.title)}" title="Začít sám">🎬</button><button class="quest-plat-btn" data-qscat="movie_duo" data-qstitle="${esc(m.title)}" title="Začít s manželkou">❤️</button></span>
+        <span class="quest-plat">${questPlatBtn("movie_solo",m.title,"🎬","Začít sám")}${questPlatBtn("movie_duo",m.title,"❤️","Začít s manželkou")}</span>
         <span class="xp-pill" title="XP za dokončení questu">+50 XP</span></div>
     </div>
   </div>`;
@@ -1564,7 +1584,7 @@ function backlogGameCard(g){
       </div><div style="text-align:right">${rHtml}</div></div>
       <div class="meta">${rarityPill(g.rating)}${(g.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
       <div class="actions"><button class="bk rm" data-rm="${esc(g.title)}" data-rmcat="game">✕ Odebrat</button>
-        <span class="quest-plat"><button class="quest-plat-btn" data-qscat="game_pc" data-qstitle="${esc(g.title)}" title="Začít na PC">🖥️</button><button class="quest-plat-btn" data-qscat="game_ps5" data-qstitle="${esc(g.title)}" title="Začít na PS5">🎮</button><button class="quest-plat-btn" data-qscat="game_nsw2" data-qstitle="${esc(g.title)}" title="Začít na Switch 2">🕹️</button></span>
+        <span class="quest-plat">${questPlatBtn("game_pc",g.title,"🖥️","Začít na PC")}${questPlatBtn("game_ps5",g.title,"🎮","Začít na PS5")}${questPlatBtn("game_nsw2",g.title,"🕹️","Začít na Switch 2")}</span>
         <span class="xp-pill" title="XP za dokončení questu">+120 XP</span>${hltbHtml(g.title,true)}${hwCompareHtml(g.title,!hltbFor(g.title))}</div>
     </div>
   </div>`;
