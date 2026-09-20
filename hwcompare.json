@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-20T22:16:47.516Z",
+  "updatedAt": "2026-09-20T23:17:37.559Z",
   "games": [
     {
       "title": "Valheim",
@@ -90,6 +90,14 @@
       "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 1070 (8 GB) / AMD® Radeon™ RX 5700 XT (8 GB), Intel® Core™ i7-6700 (quad-core) / AMD® Ryzen™ 5 1500X (quad-core)"
     },
     {
+      "title": "Dimraeth",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1050 Ti / AMD RX 560 or better",
+      "cpu": "Intel Core i5 (6th gen) or AMD Ryzen 3",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1050 Ti / AMD RX 560 or better, Intel Core i5 (6th gen) or AMD Ryzen 3"
+    },
+    {
       "title": "Moonlighter 2: The Endless Vault",
       "tier": "orange",
       "gpu": "AMD Radeon RX 5700 or NVidia GeForce RTX 3060 or Intel Arc A770",
@@ -104,14 +112,6 @@
       "cpu": "11th Gen Intel(R) Core(TM) i5-11600K / AMD Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 / AMD Radeon RX 570 (4GB) or the Radeon RX 5500 / RX 5300, 11th Gen Intel(R) Core(TM) i5-11600K / AMD Ryzen 5 5600X"
-    },
-    {
-      "title": "Dimraeth",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1050 Ti / AMD RX 560 or better",
-      "cpu": "Intel Core i5 (6th gen) or AMD Ryzen 3",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1050 Ti / AMD RX 560 or better, Intel Core i5 (6th gen) or AMD Ryzen 3"
     },
     {
       "title": "CONVRGENCE",
@@ -594,20 +594,20 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1050 / AMD Radeon RX 560 or equivalent, Intel Core i5-3470 / AMD Ryzen 3 1200 or equivalent"
     },
     {
-      "title": "COCORO",
-      "tier": "green",
-      "gpu": "Intel HD Graphics, 1920x1080",
-      "cpu": "Intel Core i3 8000 series or later / AMD Ryzen 2000 series or later",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Intel HD Graphics, 1920x1080, Intel Core i3 8000 series or later / AMD Ryzen 2000 series or later"
-    },
-    {
       "title": "The Plant Shop",
       "tier": "green",
       "gpu": "GTX 950 or better",
       "cpu": "3.2 GHz or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 950 or better, 3.2 GHz or better"
+    },
+    {
+      "title": "COCORO",
+      "tier": "green",
+      "gpu": "Intel HD Graphics, 1920x1080",
+      "cpu": "Intel Core i3 8000 series or later / AMD Ryzen 2000 series or later",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Intel HD Graphics, 1920x1080, Intel Core i3 8000 series or later / AMD Ryzen 2000 series or later"
     },
     {
       "title": "Inferno Protocol",
@@ -760,54 +760,6 @@
       "cpu": "Intel Core i5-12600K / AMD Ryzen 5 7600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD RX 6600 XT, Intel Core i5-12600K / AMD Ryzen 5 7600X"
-    },
-    {
-      "title": "Deer & Boy",
-      "tier": "green",
-      "gpu": "GeForce GTX 1060 / Radeon RX 470",
-      "cpu": "Ryzen 3 1200 / Core i5-7400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1060 / Radeon RX 470, Ryzen 3 1200 / Core i5-7400"
-    },
-    {
-      "title": "Hollow Knight: Silksong",
-      "tier": "green",
-      "gpu": "GeForce GTX 1050 (2GB), Radeon R9 380 (2GB)",
-      "cpu": "Intel Core i5-3470",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1050 (2GB), Radeon R9 380 (2GB), Intel Core i5-3470"
-    },
-    {
-      "title": "007 First Light",
-      "tier": "red",
-      "gpu": "NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT",
-      "cpu": "INTEL CORE i5 13500, AMD RYZEN 5 7600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT, INTEL CORE i5 13500, AMD RYZEN 5 7600"
-    },
-    {
-      "title": "Call of the Elder Gods",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1650 / AMD Radeon RX 580",
-      "cpu": "Intel Core i5-11600K / AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1650 / AMD Radeon RX 580, Intel Core i5-11600K / AMD Ryzen 5 5600X"
-    },
-    {
-      "title": "REPLACED",
-      "tier": "green",
-      "gpu": "GeForce GTX 1060 (6GB) or equivalent",
-      "cpu": "Intel® Core™ i5-8400 Processor",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
-    },
-    {
-      "title": "MOUSE: P.I. For Hire",
-      "tier": "orange",
-      "gpu": "GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600",
-      "cpu": "Intel Core i5 9600 / Ryzen 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600, Intel Core i5 9600 / Ryzen 3600"
     }
   ]
 }
