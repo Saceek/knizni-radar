@@ -33,6 +33,13 @@ jobs:
         run: node build-games.js
         continue-on-error: true       # když Steam zlobí, ať to nezhodí aktualizaci knih
 
+      - name: Steam doporučení (wishlist/žánry) → games.json
+        run: node build-steam-recs.js
+        continue-on-error: true       # bez STEAM_API_KEY/STEAM_ID64 secrets se prostě přeskočí
+        env:
+          STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
+          STEAM_ID64: ${{ secrets.STEAM_ID64 }}
+
       - name: HowLongToBeat → hltb.json
         run: node build-hltb.js
         continue-on-error: true       # když HLTB zlobí (mění endpoint), hry se prostě zobrazí bez odznaku

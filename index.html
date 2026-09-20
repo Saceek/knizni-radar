@@ -148,6 +148,10 @@
   .gimg-wrap .gimg{border-radius:0;display:block}
   .gimg-wrap .tile-img{border-radius:0;display:block}
   .demo-ribbon{position:absolute;top:9px;left:-32px;transform:rotate(-45deg);background:var(--emerald);color:#0a2712;font-family:var(--mono);font-size:9px;font-weight:900;padding:3px 34px;letter-spacing:.08em;pointer-events:none}
+  .rec-icons{display:inline-flex;gap:5px;margin-left:4px}
+  .rec-icon{font-size:12px;line-height:1;cursor:default}
+  .rec-icon.wishlist{color:var(--coral)}
+  .rec-icon.recommended{color:#c9a0ff}
   .lib-pill{display:inline-flex;align-items:center;gap:3px;font-size:10px;font-weight:700;padding:2px 8px;border-radius:999px;background:rgba(255,122,61,.18);color:var(--coral);text-decoration:none;white-space:nowrap}
   .lib-pill:hover{background:rgba(255,122,61,.3)}
   .lib-ribbon{position:absolute;top:9px;left:-32px;transform:rotate(-45deg);background:var(--coral);color:#3a1200;font-family:var(--mono);font-size:9px;font-weight:900;padding:3px 34px;letter-spacing:.08em;pointer-events:none;z-index:1}
@@ -1057,6 +1061,10 @@ const IS_IPADOS = /Macintosh/i.test(navigator.userAgent) && navigator.maxTouchPo
 const IS_DESKTOP = !IS_IPADOS && !/Android|iPhone|iPad|iPod|Mobile|Tablet/i.test(navigator.userAgent);
 const steamDeepLink = (url) => { if(!IS_DESKTOP) return url; const m=(url||"").match(/store\.steampowered\.com\/app\/(\d+)/); return m ? `steam://store/${m[1]}` : url; };
 const demoRibbon = (g) => g.demoAppid ? `<span class="demo-ribbon">DEMO</span>` : "";
+const recIconsHtml = (g) => {
+  if(!g.wishlisted && !g.recommended) return "";
+  return `<span class="rec-icons">${g.wishlisted?`<span class="rec-icon wishlist" title="Na tvé Steam wishlistu">♥</span>`:""}${g.recommended?`<span class="rec-icon recommended" title="Doporučeno podle tvých oblíbených žánrů">✦</span>`:""}</span>`;
+};
 // K dispozici jako e-kniha přes Palmknihy v Městské knihovně Rokycany
 const libraryPill = b => b.palmknihy ? `<a href="${esc(b.palmknihy.url)}" target="_blank" rel="noreferrer" class="lib-pill" title="K zapůjčení jako e-kniha - Městská knihovna Rokycany (Palmknihy)">📚 Knihovna</a>` : "";
 const pagesTag = b => b.pages ? `<span class="pages-tag">📖 ${b.pages} str.</span>` : "";
@@ -1430,7 +1438,7 @@ function gameCard(g,i){
         ${g.discount?`<div class="gprice-orig">${esc(g.priceOriginal||"")}</div>`:""}
         ${g.price?`<div class="gprice">${esc(g.price)}${g.discount?`<span class="gdiscount">-${g.discount}%</span>`:""}</div>`:""}
       </div></div>
-      <div class="meta">${rarityPill(g.rating)}${(g.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
+      <div class="meta">${rarityPill(g.rating)}${recIconsHtml(g)}${(g.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
       <div class="actions"><button class="bk ${inBacklog(g.name,"game")?'on':''}" data-gbk="${esc(g.name)}">${inBacklog(g.name,"game")?'✓ V backlogu':'+ Backlog'}</button>${hltbHtml(g.name,true)}${hwCompareHtml(g.name,!hltbFor(g.name))}</div>
     </div>
   </div>`;
@@ -1586,7 +1594,7 @@ function backlogGameCard(g){
         <p class="title">${g.gamePass?gpBadge(g.title):""}<a href="${esc(steamDeepLink(g.url))}">${esc(g.title)}</a></p>
         ${g.discount?`<p class="muted"><span style="text-decoration:line-through">${esc(g.priceOriginal||"")}</span> → ${esc(g.price||"")} <span class="gdiscount">-${g.discount}%</span></p>`:`<p class="muted">${g.price?esc(g.price):""}</p>`}
       </div><div style="text-align:right">${rHtml}</div></div>
-      <div class="meta">${rarityPill(g.rating)}${(g.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
+      <div class="meta">${rarityPill(g.rating)}${recIconsHtml(g)}${(g.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
       <div class="actions"><button class="bk rm" data-rm="${esc(g.title)}" data-rmcat="game">✕ Odebrat</button>
         <span class="quest-plat">${questPlatBtn("game_pc",g.title,"🖥️","Začít na PC")}${questPlatBtn("game_ps5",g.title,"🎮","Začít na PS5")}${questPlatBtn("game_nsw2",g.title,"🕹️","Začít na Switch 2")}</span>
         <span class="xp-pill" title="XP za dokončení questu">+120 XP</span>${hltbHtml(g.title,true)}${hwCompareHtml(g.title,!hltbFor(g.title))}</div>
@@ -2122,7 +2130,7 @@ function addBacklog(t){
   if(c && !inBacklog(t,"comic")){ S.backlog.push({...c,_category:"comic"}); saveBacklogAndSync(S.backlog); render(); }
 }
 function addMovieBacklog(t){ const m=S.movies.find(x=>x.title===t); if(m && !inBacklog(t,"movie")){ S.backlog.push({...m,_category:"movie"}); saveBacklogAndSync(S.backlog); render(); } }
-function addGameBacklog(t){ const g=S.games.find(x=>x.name===t); if(g && !inBacklog(g.name,"game")){ S.backlog.push({title:g.name,_category:"game",appid:g.appid,rating:g.rating,reviews:g.reviews,scoreDesc:g.scoreDesc,image:g.image,url:g.url,tags:g.tags,price:g.price,released:g.released,gamePass:!!g.gamePass,demoAppid:g.demoAppid||null}); saveBacklogAndSync(S.backlog); render(); } }
+function addGameBacklog(t){ const g=S.games.find(x=>x.name===t); if(g && !inBacklog(g.name,"game")){ S.backlog.push({title:g.name,_category:"game",appid:g.appid,rating:g.rating,reviews:g.reviews,scoreDesc:g.scoreDesc,image:g.image,url:g.url,tags:g.tags,price:g.price,released:g.released,gamePass:!!g.gamePass,demoAppid:g.demoAppid||null,wishlisted:!!g.wishlisted,recommended:!!g.recommended}); saveBacklogAndSync(S.backlog); render(); } }
 function addComicBacklog(t){ const c=S.comics.find(x=>x.title===t)||S.comicsBestsellers.find(x=>x.title===t); if(c && !inBacklog(t,"comic")){ S.backlog.push({...c,_category:"comic"}); saveBacklogAndSync(S.backlog); render(); } }
 // Bez cat smaže VŠECHNY položky s tím názvem bez ohledu na kategorii - používat jen tam,
 // kde je kategorie po ruce (skoro všude), holé volání beze jen jako poslední záchrana.
