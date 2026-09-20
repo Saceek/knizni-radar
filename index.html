@@ -1013,7 +1013,7 @@ const MOVIES_DEMO = [
 const VALID_VIEWS = new Set(["news","coming","list","movies","steam","backlog","diary"]);
 const savedView = localStorage.getItem("knizniRadarView");
 let S = {dark:localStorage.getItem("knizniRadarTheme")!=="light", view:VALID_VIEWS.has(savedView)?savedView:"news", filter:"Vše", sort:"readers", q:"", books:DEMO, status:"idle", updatedAt:null, expanded:null, backlog:loadBacklog(),
-  addQ:"", addResults:[], addBusy:false, addMsg:"", addErr:"",
+  addQ:"", addAuthor:"", addResults:[], addBusy:false, addMsg:"", addErr:"",
   games:GAMES_DEMO, gamesStatus:"idle", gamesUpdatedAt:null, gameWin:14, gameGenre:"Vše", gameSort:"reviews", gameRarity:"Vše",
   movies:MOVIES_DEMO, moviesStatus:"idle", moviesUpdatedAt:null, movieType:"Vše", movieSort:"rating", movieQ:"",
   news:null, newsStatus:"idle", newsUpdatedAt:null,
@@ -1867,7 +1867,15 @@ function addPanelHtml(){
 }
 function searchPanelHtml(){
   const cat=S.addCat||"Vše";
-  const ph=cat==="Hry"?"Název hry na Steamu…":cat==="Knihy"?"Název, autor nebo odkaz na databazeknih.cz…":cat==="Filmy & Seriály"?"Název, nebo odkaz na film/seriál na ČSFD…":"Název knihy, filmu, hry…";
+  if(cat==="Knihy"){
+    return `<div style="display:flex;flex-direction:column;gap:8px">
+        <input id="addq" placeholder="Název knihy, nebo odkaz na databazeknih.cz…" value="${esc(S.addQ)}" autocomplete="off" />
+        <input id="addauthor" placeholder="Autor (nepovinné)…" value="${esc(S.addAuthor)}" autocomplete="off" />
+        <button class="addbtn" id="addgo">Hledat</button>
+      </div>
+      <div id="addresults" class="addresults">${resultsHtml()}</div>`;
+  }
+  const ph=cat==="Hry"?"Název hry na Steamu…":cat==="Filmy & Seriály"?"Název, nebo odkaz na film/seriál na ČSFD…":"Název knihy, filmu, hry…";
   return `<div class="mrow">
       <input id="addq" placeholder="${esc(ph)}" value="${esc(S.addQ)}" autocomplete="off" />
       <button class="addbtn" id="addgo" style="align-self:auto">Hledat</button>
@@ -1877,16 +1885,17 @@ function searchPanelHtml(){
 function resultsHtml(){
   if(S.addBusy) return '<div class="tiny" style="padding:8px">Hledám…</div>';
   const cat=S.addCat||"Vše";
-  if(!S.addQ.trim()){
-    const hints={Hry:"Vyhledá real-time na Steamu.",Knihy:"Vyhledá real-time na databazeknih.cz (i podle autora), nebo vlož přímo odkaz na knihu.",Vše:"Prohledá Steam, databazeknih.cz a načtené filmy/seriály.","Filmy & Seriály":"Prohledá načtené ČSFD tituly, nebo vlož přímo odkaz na film/seriál na ČSFD."};
+  if(!S.addQ.trim() && !(cat==="Knihy" && S.addAuthor.trim())){
+    const hints={Hry:"Vyhledá real-time na Steamu.",Knihy:"Vyhledá real-time na databazeknih.cz, nebo vlož přímo odkaz na knihu.",Vše:"Prohledá Steam, databazeknih.cz a načtené filmy/seriály.","Filmy & Seriály":"Prohledá načtené ČSFD tituly, nebo vlož přímo odkaz na film/seriál na ČSFD."};
     return `<div class="tiny" style="padding:8px">${hints[cat]||hints.Vše}</div>`;
   }
   if(!S.addResults.length){
     const rawQ = S.addQ.trim();
     const q=encodeURIComponent(rawQ);
+    const dbkQ=encodeURIComponent([rawQ, cat==="Knihy"?S.addAuthor.trim():""].filter(Boolean).join(" "));
     const links = cat==="Hry"||cat==="Vše" ? `<a href="https://store.steampowered.com/search/?term=${q}" target="_blank" rel="noreferrer" style="color:var(--cyan)">Hledat na Steamu →</a>` : "";
     const csfdLink = (cat==="Filmy & Seriály"||cat==="Vše") ? `<a href="https://www.csfd.cz/hledat/?q=${q}" target="_blank" rel="noreferrer" style="color:var(--cyan)">Hledat na ČSFD →</a>` : "";
-    const dbkLink = (cat==="Knihy"||cat==="Vše") ? `<a href="https://www.databazeknih.cz/vyhledavani/knihy?q=${q}" target="_blank" rel="noreferrer" style="color:var(--cyan)">Hledat na Databazeknih →</a>` : "";
+    const dbkLink = (cat==="Knihy"||cat==="Vše") ? `<a href="https://www.databazeknih.cz/vyhledavani/knihy?q=${dbkQ}" target="_blank" rel="noreferrer" style="color:var(--cyan)">Hledat na Databazeknih →</a>` : "";
     const errBanner = S.addErr ? `<div class="tiny" style="color:var(--rose);margin-bottom:8px">⚠ Vyhledávání selhalo: ${esc(S.addErr)}. Zkus to prosím znovu.</div>` : "";
     // ČSFD blokuje živé vyhledávání (anti-bot) - nabídneme přidat holý záznam, který
     // build-enrich-backlog.js při příštím běhu doplní o rok/plakát/hodnocení z ČSFD.
@@ -1937,8 +1946,10 @@ async function fetchDbkByUrl(link){
 async function runSearch(){
   const q=S.addQ.trim();
   const cat=S.addCat||"Vše";
-  if(!q){ S.addResults=[]; S.addBusy=false; updateResults(); return; }
-  if(/^https?:\/\/(www\.)?databazeknih\.cz\/(prehled-knihy|knihy)\//i.test(q)){
+  const author=(cat==="Knihy" ? S.addAuthor.trim() : "");
+  const bookQ=[q, author].filter(Boolean).join(" ");
+  if(!q && !author){ S.addResults=[]; S.addBusy=false; updateResults(); return; }
+  if(q && /^https?:\/\/(www\.)?databazeknih\.cz\/(prehled-knihy|knihy)\//i.test(q)){
     S.addResults=[]; S.addErr=""; S.addBusy=true; updateResults();
     try{
       const b = await fetchDbkByUrl(q);
@@ -1948,12 +1959,17 @@ async function runSearch(){
     return;
   }
   const ql=q.toLowerCase();
+  const authorL=author.toLowerCase();
   const results=[];
   const searchBooks = cat==="Vše"||cat==="Knihy";
   const searchMovies = cat==="Vše"||cat==="Filmy & Seriály";
   const searchGames = cat==="Vše"||cat==="Hry";
-  // Local data
-  if(searchBooks)(S.books||[]).forEach(b=>{ if((b.title+" "+b.author).toLowerCase().includes(ql)) results.push({...b,_category:"book"}); });
+  // Local data - název i autor musí sedět zvlášť (AND), ne dohromady jako jeden pytel textu
+  if(searchBooks)(S.books||[]).forEach(b=>{
+    const titleOk = !ql || (b.title||"").toLowerCase().includes(ql);
+    const authorOk = !authorL || (b.author||"").toLowerCase().includes(authorL);
+    if(titleOk && authorOk) results.push({...b,_category:"book"});
+  });
   if(searchMovies)(S.movies||[]).forEach(m=>{ if((m.title+" "+(m.country||"")).toLowerCase().includes(ql)) results.push({...m,_category:m.type==="seriál"?"series":"movie"}); });
   if(searchGames)(S.games||[]).forEach(g=>{ if(g.name.toLowerCase().includes(ql)) results.push({title:g.name,_category:"game",image:g.image,url:g.url,tags:g.tags,price:g.price,rating:g.rating,gamePass:!!g.gamePass}); });
   S.addResults=results.slice(0,12);
@@ -1984,7 +2000,7 @@ async function runSearch(){
   // Databazeknih.cz search (primary, Czech books, via vlastní /api/proxy)
   if(searchBooks){
     try{
-      const dbkTarget=`https://www.databazeknih.cz/vyhledavani/knihy?q=${encodeURIComponent(q)}`;
+      const dbkTarget=`https://www.databazeknih.cz/vyhledavani/knihy?q=${encodeURIComponent(bookQ)}`;
       const r=await fetch(`/api/proxy?url=${encodeURIComponent(dbkTarget)}`);
       if(r.ok){
         const html=await r.text();
@@ -1994,14 +2010,15 @@ async function runSearch(){
           const link='https://www.databazeknih.cz'+m[1];
           const cover=m[2];
           const altText=m[3]; // "Helena Sováková: Plukovnice lidských duší" or just "Titulek"
-          let title=altText, author=null;
+          let title=altText, bookAuthor=null;
           if(altText.includes(':')){
             const colonIdx=altText.indexOf(':');
-            author=altText.slice(0,colonIdx).trim();
+            bookAuthor=altText.slice(0,colonIdx).trim();
             title=altText.slice(colonIdx+1).trim();
           }
           if(!title||online.some(o=>o.link===link)) continue;
-          online.push({title,author,cover,_category:"book",link,url:link,cat:["databazeknih.cz"]});
+          if(authorL && !(bookAuthor||"").toLowerCase().includes(authorL)) continue;
+          online.push({title,author:bookAuthor,cover,_category:"book",link,url:link,cat:["databazeknih.cz"]});
           if(online.filter(o=>o._category==="book").length>=8) break;
         }
       } else { errs.push("Databazeknih: HTTP "+r.status); }
@@ -2050,12 +2067,17 @@ function updateResults(){
 }
 function mountAddPanel(){
   document.querySelectorAll('[data-addcat]').forEach(b=>b.onclick=()=>{
-    S.addCat=b.dataset.addcat; S.addQ=""; S.addResults=[]; S.addMsg=""; render();
+    S.addCat=b.dataset.addcat; S.addQ=""; S.addAuthor=""; S.addResults=[]; S.addMsg=""; render();
   });
   const inp=document.getElementById('addq');
   if(inp){
     inp.oninput=e=>{S.addQ=e.target.value; S.addMsg=""; runSearch();};
     inp.onkeydown=e=>{ if(e.key==='Enter'){ e.preventDefault(); runSearch(); } };
+  }
+  const inpAuthor=document.getElementById('addauthor');
+  if(inpAuthor){
+    inpAuthor.oninput=e=>{S.addAuthor=e.target.value; S.addMsg=""; runSearch();};
+    inpAuthor.onkeydown=e=>{ if(e.key==='Enter'){ e.preventDefault(); runSearch(); } };
   }
   const go=document.getElementById('addgo'); if(go) go.onclick=runSearch;
   const rc=document.getElementById('addresults'); if(rc) bindAddButtons(rc);
