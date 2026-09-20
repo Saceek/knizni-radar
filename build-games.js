@@ -19,8 +19,9 @@ const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 const DELAY = 450;
 
 const WINDOW_DAYS = 30;   // build okno (frontend pak zužuje na 7/14/30)
-const MIN_RATING = 85;    // % kladných recenzí
-const MIN_REVIEWS = 30;   // ať 85 % není ze tří recenzí
+const MIN_RATING = 70;    // % kladných recenzí - musí sahat i pod hranici "vzácný" (75 %),
+                           // jinak nemá smysl mít tu kategorii ve filtru vůbec
+const MIN_REVIEWS = 100;  // ať i 70% hodnocení stojí na solidním počtu recenzí, ne pár kusech
 const PAGE = 100;
 const MAX_PAGES = 25;     // pojistka (Steam stejně výsledky shora omezuje)
 const MAX_CAND = 300;     // strop kandidátů → strop appdetails volání
