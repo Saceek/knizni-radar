@@ -946,7 +946,7 @@ function mountDiaryModal(div){
     };
     S.diary.push(entry);
     saveDiaryAndSync(S.diary);
-    if(inBacklog(entry.title)){ S.backlog=S.backlog.filter(x=>x.title!==entry.title); saveBacklogAndSync(S.backlog); }
+    if(inBacklog(entry.title,entry._category)) removeBacklog(entry.title,entry._category);
     div.remove();
     render();
     achToast(entry.title, entryXP(entry));
@@ -1114,7 +1114,10 @@ function hwCompareDot(name){
   return `<span class="hw-dot ${h.tier}" title="${esc(h.note||'')}" style="display:inline-block"></span>`;
 }
 const minPrice = b => {const v=vPrices(b); return v.length?Math.min(...v.map(p=>p.price)):Infinity;};
-const inBacklog = t => S.backlog.some(b=>b.title===t);
+// Bez druhého parametru zůstává staré chování (jen podle názvu) pro místa, kde kategorie
+// není po ruce - ale to je přesně to, co způsobovalo, že si film a kniha se stejným názvem
+// (např. "Osamělý vlk") navzájem "obsadily" backlog. Kdekoliv je kategorie známá, předá se.
+const inBacklog = (t, cat) => S.backlog.some(b=>b.title===t && (cat===undefined || (b._category||"book")===cat));
 const backlogByCategory = cat => S.backlog.filter(b=>(b._category||"book")===cat);
 function normalizeNewsBook(item){
   // news.json book items use singular price/priceShop; backlog cards expect a prices[] array
@@ -1217,7 +1220,7 @@ function newsBookTile(b){
   const coverWrap = `<div style="position:relative;display:inline-block;overflow:hidden;border-radius:6px">${coverInner}${libraryRibbon(b)}</div>`;
   const rHtml = b.rating!=null ? `<span class="rating ${ratingClass(b.rating)}">${b.rating} %</span>` : "";
   const price = b.price ? `<span class="price" style="font-size:13px">${b.price} Kč</span>` : "";
-  const bk=inBacklog(b.title);
+  const bk=inBacklog(b.title,"book");
   return `<div class="tile${rarityCls(b.rating)}">${daysLeftBadge(b)}<div class="tile-row">${coverWrap}<div>
     <p class="tile-title">${b.link?`<a href="${esc(b.link)}" target="_blank" rel="noreferrer">`:""}${esc(b.title)}${b.link?"</a>":""}</p>
     <p class="tile-sub">${esc(b.author||"")}</p>
@@ -1232,7 +1235,7 @@ function newsMovieTile(m){
   const rHtml = m.rating!=null ? `<span class="rating ${ratingClass(m.rating)}">${m.rating} %</span>` : "";
   const typeClass = m.csfdType==="film"||m.type==="movie"?"film":"serial";
   const vodHtml = (m.vod||[]).map(v=>`<span class="mvod ${vodClass(v)}">${esc(v)}</span>`).join("");
-  const bk=inBacklog(m.title);
+  const bk=inBacklog(m.title,"movie");
   return `<div class="tile${rarityCls(m.rating)}">${daysLeftBadge(m)}<div class="tile-row">${posterInner}<div>
     <p class="tile-title"><a href="${esc(m.url)}" target="_blank" rel="noreferrer">${esc(m.title)}</a></p>
     <p class="tile-sub">${esc(m.country||"")}${m.year?" · "+esc(m.year):""}</p>
@@ -1242,7 +1245,7 @@ function newsMovieTile(m){
 function newsGameTile(g){
   const rHtml = g.rating ? `<span class="rating ${ratingClass(g.rating)}">${g.rating} %</span>` : "";
   const imgHtml = g.image ? `<a href="${esc(steamDeepLink(g.url))}" class="gimg-wrap" style="display:block"><img class="tile-img" loading="lazy" decoding="async" src="${esc(g.image)}" alt="" onerror="this.style.visibility='hidden'" />${demoRibbon(g)}</a>` : "";
-  const bk=inBacklog(g.title);
+  const bk=inBacklog(g.title,"game");
   return `<div class="tile${rarityCls(g.rating)} ${g.gamePass?'gamepass':''}">${daysLeftBadge(g)}${imgHtml}
     <p class="tile-title">${g.gamePass?gpBadge(g.title):""}<a href="${esc(steamDeepLink(g.url))}">${esc(g.title)}</a></p>
     <p class="tile-sub">${g.price?esc(g.price):""}</p>
@@ -1258,7 +1261,7 @@ function comicTileHtml(c, attr){
   const priceHtml = c.discount
     ? `<span style="text-decoration:line-through;color:var(--sub);font-size:11px">${c.originalPrice} Kč</span> <span class="price" style="font-size:13px">${c.price} Kč</span><span class="gdiscount">-${c.discount}%</span>`
     : (c.price ? `<span class="price" style="font-size:13px">${c.price} Kč</span>` : "");
-  const bk=inBacklog(c.title);
+  const bk=inBacklog(c.title,"comic");
   const questBtn = attr==="cbk" ? `<button class="bk quest" data-qscat="comic" data-qstitle="${esc(c.title)}">▶ Začít</button>` : "";
   const recatBtn = attr==="cbk" ? `<button class="bk" data-setcatval="book" data-setcattitle="${esc(c.title)}" title="Přeřadit do knih">📖 Kniha?</button>` : "";
   return `<div class="tile${rarityCls(c.rating)}">${c.firstSeen?daysLeftBadge(c):""}<div class="tile-row">${coverInner}<div>
@@ -1292,12 +1295,12 @@ function comingMovieTile(m){
   return `<div class="tile"><div class="tile-row">${posterInner}<div>
     <p class="tile-title"><a href="${esc(m.url)}" target="_blank" rel="noreferrer">${esc(m.title)}</a></p>
     <p class="tile-sub">${esc(m.country||"")}${m.year?" · "+esc(m.year):""}</p>
-    <div class="tile-meta"><span class="mtype ${typeClass}">${typeClass==="film"?"FILM":"SERIÁL"}</span>${vodHtml}${dateHtml}<button class="bk ${inBacklog(m.title)?'on':''}" data-newsmbk="${esc(m.title)}" style="margin-left:auto">${inBacklog(m.title)?'✓':'+'}</button></div>
+    <div class="tile-meta"><span class="mtype ${typeClass}">${typeClass==="film"?"FILM":"SERIÁL"}</span>${vodHtml}${dateHtml}<button class="bk ${inBacklog(m.title,"movie")?'on':''}" data-newsmbk="${esc(m.title)}" style="margin-left:auto">${inBacklog(m.title,"movie")?'✓':'+'}</button></div>
   </div></div></div>`;
 }
 function comingGameTile(g){
   const imgHtml = g.image ? `<img class="tile-img" loading="lazy" decoding="async" src="${esc(g.image)}" alt="" onerror="this.style.visibility='hidden'" />` : "";
-  const bk=inBacklog(g.title);
+  const bk=inBacklog(g.title,"game");
   return `<div class="tile">${imgHtml}
     <p class="tile-title"><a href="${esc(steamDeepLink(g.url))}">${esc(g.title)}</a></p>
     <p class="tile-sub">${esc(g.released||"")}${g.price?" · "+esc(g.price):""}</p>
@@ -1356,7 +1359,7 @@ function movieCard(m,i){
   const typeClass = m.type==="film"?"film":"serial";
   const vodHtml = (m.vod||[]).map(v=>`<span class="mvod ${vodClass(v)}">${esc(v)}</span>`).join("");
   const genreHtml = (m.genres||[]).map(g=>`<span class="tag">${esc(g)}</span>`).join("");
-  const mbk=inBacklog(m.title);
+  const mbk=inBacklog(m.title,"movie");
   return `<div class="card${rarityCls(m.rating)}">
     <div><div class="rank">#${i+1}</div>
       <a href="${esc(m.url)}" target="_blank" rel="noreferrer">${posterHtml}</a></div>
@@ -1405,7 +1408,7 @@ function gameCard(g,i){
         ${g.price?`<div class="gprice">${esc(g.price)}${g.discount?`<span class="gdiscount">-${g.discount}%</span>`:""}</div>`:""}
       </div></div>
       <div class="meta">${rarityPill(g.rating)}${(g.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
-      <div class="actions"><button class="bk ${inBacklog(g.name)?'on':''}" data-gbk="${esc(g.name)}">${inBacklog(g.name)?'✓ V backlogu':'+ Backlog'}</button>${hltbHtml(g.name,true)}${hwCompareHtml(g.name,!hltbFor(g.name))}</div>
+      <div class="actions"><button class="bk ${inBacklog(g.name,"game")?'on':''}" data-gbk="${esc(g.name)}">${inBacklog(g.name,"game")?'✓ V backlogu':'+ Backlog'}</button>${hltbHtml(g.name,true)}${hwCompareHtml(g.name,!hltbFor(g.name))}</div>
     </div>
   </div>`;
 }
@@ -1464,7 +1467,11 @@ function detailHtml(b){ const vp=vPrices(b).sort((x,y)=>x.price-y.price); const 
     ${p.price===m?'<div class="tiny" style="color:var(--emerald)">nejlevnější</div>':''}</a>`).join("")||'<div class="tiny">Ceny se nepodařilo načíst.</div>'}</div></div>`; }
 
 function card(b,i){
-  const open = S.expanded===b.title; const bk=inBacklog(b.title);
+  // Tenhle seznam mixuje knihy a komiksy zobrazené jako knihy (comicAsBook) - kategorie se
+  // určuje stejně jako v addBacklog(), jinak by se komiks už přidaný do backlogu tvářil,
+  // že tam pořád není (kontrola podle názvu+"book" by na _category:"comic" nesedla).
+  const expectedCat = S.comicsBestsellers.some(x=>x.title===b.title) ? "comic" : "book";
+  const open = S.expanded===b.title; const bk=inBacklog(b.title,expectedCat);
   return `<div class="card${rarityCls(b.rating)}">
     <div><div class="rank">#${i+1}</div>${coverHtml(b)}</div>
     <div class="body">
@@ -1487,7 +1494,7 @@ function backlogCard(b){
       <div class="meta">${ratingHtml(b)}${rarityPill(b.rating)}${libraryPill(b)}</div>${pagesTag(b)}
       <div class="actions">
         <button class="link" data-more="${esc(b.title)}">${open?"Méně ▲":"Detail & ceny ▼"}</button>
-        <button class="bk rm" data-rm="${esc(b.title)}">✕ Odebrat</button>
+        <button class="bk rm" data-rm="${esc(b.title)}" data-rmcat="book">✕ Odebrat</button>
         <button class="bk quest" data-qscat="book" data-qstitle="${esc(b.title)}">▶ Začít</button>
         <button class="bk" data-setcatval="comic" data-setcattitle="${esc(b.title)}" title="Přeřadit do komiksů">💥 Komiks?</button>
         <span class="xp-pill" title="XP za dokončení questu">+80 XP</span>
@@ -1515,7 +1522,7 @@ function backlogComicCard(c){
       </div><div style="text-align:right">${rHtml}</div></div>
       <div class="meta">${rarityPill(c.rating)}${priceTxt?`<span class="tag">${priceTxt}</span>`:""}</div>
       <div class="actions">
-        <button class="bk rm" data-rm="${esc(c.title)}">✕ Odebrat</button>
+        <button class="bk rm" data-rm="${esc(c.title)}" data-rmcat="comic">✕ Odebrat</button>
         <button class="bk quest" data-qscat="comic" data-qstitle="${esc(c.title)}">▶ Začít</button>
         <button class="bk" data-setcatval="book" data-setcattitle="${esc(c.title)}" title="Přeřadit do knih">📖 Kniha?</button>
         <span class="xp-pill" title="XP za dokončení questu">+60 XP</span>
@@ -1539,7 +1546,7 @@ function backlogMovieCard(m){
         <p class="muted">${esc(m.country||"")}${m.year?" · "+esc(m.year):""}</p>
       </div><div style="text-align:right">${rHtml}</div></div>
       <div class="meta"><span class="mtype ${typeClass}">${esc(m.type||"film")}</span>${vodHtml}${genreHtml}${rarityPill(m.rating)}</div>
-      <div class="actions"><button class="bk rm" data-rm="${esc(m.title)}">✕ Odebrat</button>
+      <div class="actions"><button class="bk rm" data-rm="${esc(m.title)}" data-rmcat="movie">✕ Odebrat</button>
         <span class="quest-plat"><button class="quest-plat-btn" data-qscat="movie_solo" data-qstitle="${esc(m.title)}" title="Začít sám">🎬</button><button class="quest-plat-btn" data-qscat="movie_duo" data-qstitle="${esc(m.title)}" title="Začít s manželkou">❤️</button></span>
         <span class="xp-pill" title="XP za dokončení questu">+50 XP</span></div>
     </div>
@@ -1556,7 +1563,7 @@ function backlogGameCard(g){
         ${g.discount?`<p class="muted"><span style="text-decoration:line-through">${esc(g.priceOriginal||"")}</span> → ${esc(g.price||"")} <span class="gdiscount">-${g.discount}%</span></p>`:`<p class="muted">${g.price?esc(g.price):""}</p>`}
       </div><div style="text-align:right">${rHtml}</div></div>
       <div class="meta">${rarityPill(g.rating)}${(g.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
-      <div class="actions"><button class="bk rm" data-rm="${esc(g.title)}">✕ Odebrat</button>
+      <div class="actions"><button class="bk rm" data-rm="${esc(g.title)}" data-rmcat="game">✕ Odebrat</button>
         <span class="quest-plat"><button class="quest-plat-btn" data-qscat="game_pc" data-qstitle="${esc(g.title)}" title="Začít na PC">🖥️</button><button class="quest-plat-btn" data-qscat="game_ps5" data-qstitle="${esc(g.title)}" title="Začít na PS5">🎮</button><button class="quest-plat-btn" data-qscat="game_nsw2" data-qstitle="${esc(g.title)}" title="Začít na Switch 2">🕹️</button></span>
         <span class="xp-pill" title="XP za dokončení questu">+120 XP</span>${hltbHtml(g.title,true)}${hwCompareHtml(g.title,!hltbFor(g.title))}</div>
     </div>
@@ -1635,7 +1642,8 @@ function render(){
       if(hero){
         const heroImg = hero.image||hero.poster||hero.cover;
         const heroDataAttr = hero.type==="book"?`data-newsbk="${esc(hero.title)}"`:hero.type==="comic"?`data-newscbk="${esc(hero.title)}"`:hero.type==="game"?`data-newsgbk="${esc(hero.title)}"`:`data-newsmbk="${esc(hero.title)}"`;
-        const heroIsBk = inBacklog(hero.title);
+        const heroCat = hero.type==="series" ? "movie" : hero.type;
+        const heroIsBk = inBacklog(hero.title, heroCat);
         const heroTypeLabel = hero.type==="book"?"KNIHA":hero.type==="comic"?"KOMIKS":hero.type==="game"?"HRA":hero.type==="series"?"SERIÁL":"FILM";
         html += `<div class="hero-banner">
           <div class="hero-text">
@@ -1904,7 +1912,7 @@ function resultsHtml(){
     const csfdUrlMatch = rawQ.match(/^https?:\/\/(www\.)?csfd\.cz\/film\/[^\s]+/i);
     const csfdLinkAddBtn = csfdUrlMatch && (cat==="Filmy & Seriály"||cat==="Vše")
       ? `<div style="margin-top:10px"><button class="bk" data-addcsfdlink="${esc(csfdUrlMatch[0])}">+ Přidat podle odkazu</button></div>` : "";
-    const bareAddBtn = !csfdUrlMatch && (cat==="Filmy & Seriály"||cat==="Vše") && rawQ && !inBacklog(rawQ)
+    const bareAddBtn = !csfdUrlMatch && (cat==="Filmy & Seriály"||cat==="Vše") && rawQ && !inBacklog(rawQ,"movie")
       ? `<div style="margin-top:10px"><button class="bk" data-addbare="${esc(rawQ)}">+ Přidat i bez nalezení</button></div>` : "";
     return `<div class="tiny" style="padding:8px">${errBanner}Nic nenalezeno.<br><br>${[csfdLink,dbkLink,links].filter(Boolean).join(" &nbsp; ")}${csfdLinkAddBtn}${bareAddBtn}</div>`;
   }
@@ -1924,7 +1932,7 @@ function resultsHtml(){
         <div class="muted"><span class="tag" style="font-size:10px;padding:1px 6px">${catLabel}</span> ${sub?esc(sub)+" ":""} ${cat==="game"?priceTxt:""}</div>
         ${extLinkHtml}
       </div>
-      <button class="bk ${inBacklog(r.title)?'on':''}" data-add="${i}">${inBacklog(r.title)?'✓ V backlogu':'+ Přidat'}</button>
+      <button class="bk ${inBacklog(r.title,cat==="series"?"movie":cat)?'on':''}" data-add="${i}">${inBacklog(r.title,cat==="series"?"movie":cat)?'✓ V backlogu':'+ Přidat'}</button>
     </div>`;
   }).join("");
 }
@@ -2029,9 +2037,11 @@ async function runSearch(){
 function bindAddButtons(rc){
   rc.querySelectorAll('[data-add]').forEach(btn=>btn.onclick=()=>{
     const r=S.addResults[+btn.dataset.add];
-    if(!r||inBacklog(r.title)) return;
+    if(!r) return;
     const item={...r};
     if(!item._category) item._category="book";
+    if(item._category==="series") item._category="movie"; // backlog má jen "movie" pro film i seriál
+    if(inBacklog(item.title,item._category)) return;
     S.backlog.push(item);
     saveBacklogAndSync(S.backlog);
     S.addMsg="Přidáno ✓ – "+r.title;
@@ -2039,7 +2049,7 @@ function bindAddButtons(rc){
   });
   rc.querySelectorAll('[data-addbare]').forEach(btn=>btn.onclick=()=>{
     const title=btn.dataset.addbare;
-    if(!title||inBacklog(title)) return;
+    if(!title||inBacklog(title,"movie")) return;
     S.backlog.push({title, _category:"movie", url:`https://www.csfd.cz/hledat/?q=${encodeURIComponent(title)}`});
     saveBacklogAndSync(S.backlog);
     S.addMsg="Přidáno ✓ – "+title+" (detaily doplní příští aktualizace dat)";
@@ -2081,16 +2091,18 @@ function mountAddPanel(){
 }
 
 function addBacklog(t){
-  if(inBacklog(t)) return;
+  if(inBacklog(t,"book")) return;
   const b=S.books.find(x=>x.title===t);
   if(b){ S.backlog.push({...b,_category:"book"}); saveBacklogAndSync(S.backlog); render(); return; }
   const c=S.comicsBestsellers.find(x=>x.title===t);
-  if(c){ S.backlog.push({...c,_category:"comic"}); saveBacklogAndSync(S.backlog); render(); }
+  if(c && !inBacklog(t,"comic")){ S.backlog.push({...c,_category:"comic"}); saveBacklogAndSync(S.backlog); render(); }
 }
-function addMovieBacklog(t){ const m=S.movies.find(x=>x.title===t); if(m && !inBacklog(t)){ S.backlog.push({...m,_category:"movie"}); saveBacklogAndSync(S.backlog); render(); } }
-function addGameBacklog(t){ const g=S.games.find(x=>x.name===t); if(g && !inBacklog(g.name)){ S.backlog.push({title:g.name,_category:"game",appid:g.appid,rating:g.rating,reviews:g.reviews,scoreDesc:g.scoreDesc,image:g.image,url:g.url,tags:g.tags,price:g.price,released:g.released,gamePass:!!g.gamePass,demoAppid:g.demoAppid||null}); saveBacklogAndSync(S.backlog); render(); } }
-function addComicBacklog(t){ const c=S.comics.find(x=>x.title===t)||S.comicsBestsellers.find(x=>x.title===t); if(c && !inBacklog(t)){ S.backlog.push({...c,_category:"comic"}); saveBacklogAndSync(S.backlog); render(); } }
-function removeBacklog(t){ S.backlog=S.backlog.filter(x=>x.title!==t); saveBacklogAndSync(S.backlog); render(); }
+function addMovieBacklog(t){ const m=S.movies.find(x=>x.title===t); if(m && !inBacklog(t,"movie")){ S.backlog.push({...m,_category:"movie"}); saveBacklogAndSync(S.backlog); render(); } }
+function addGameBacklog(t){ const g=S.games.find(x=>x.name===t); if(g && !inBacklog(g.name,"game")){ S.backlog.push({title:g.name,_category:"game",appid:g.appid,rating:g.rating,reviews:g.reviews,scoreDesc:g.scoreDesc,image:g.image,url:g.url,tags:g.tags,price:g.price,released:g.released,gamePass:!!g.gamePass,demoAppid:g.demoAppid||null}); saveBacklogAndSync(S.backlog); render(); } }
+function addComicBacklog(t){ const c=S.comics.find(x=>x.title===t)||S.comicsBestsellers.find(x=>x.title===t); if(c && !inBacklog(t,"comic")){ S.backlog.push({...c,_category:"comic"}); saveBacklogAndSync(S.backlog); render(); } }
+// Bez cat smaže VŠECHNY položky s tím názvem bez ohledu na kategorii - používat jen tam,
+// kde je kategorie po ruce (skoro všude), holé volání beze jen jako poslední záchrana.
+function removeBacklog(t,cat){ S.backlog=S.backlog.filter(x=>!(x.title===t && (cat===undefined || (x._category||"book")===cat))); saveBacklogAndSync(S.backlog); render(); }
 // Kniha/komiks se rozlišuje jen podle zdroje přidání (obecné hledání vs. CREW žebříček), ne
 // podle obsahu - appka to nepozná sama, proto jde kategorii ručně přeřadit.
 function setBacklogCategory(title, cat){
@@ -2100,10 +2112,12 @@ function setBacklogCategory(title, cat){
   saveBacklogAndSync(S.backlog);
   render();
 }
-function toggleBacklog(t){ inBacklog(t)?removeBacklog(t):addBacklog(t); }
-function toggleMovieBacklog(t){ inBacklog(t)?removeBacklog(t):addMovieBacklog(t); }
-function toggleGameBacklog(t){ inBacklog(t)?removeBacklog(t):addGameBacklog(t); }
-function toggleComicBacklog(t){ inBacklog(t)?removeBacklog(t):addComicBacklog(t); }
+// Dívá se na skutečně uloženou kategorii (ne na hádanou) - "Osamělý vlk" v backlogu jako
+// film se tak nikdy neplete s "Osamělý vlk" jako kniha, ať už se tlačítko zmáčkne kdekoliv.
+function toggleBacklog(t){ const x=S.backlog.find(b=>b.title===t); x?removeBacklog(t,x._category||"book"):addBacklog(t); }
+function toggleMovieBacklog(t){ const x=S.backlog.find(b=>b.title===t&&(b._category||"book")==="movie"); x?removeBacklog(t,"movie"):addMovieBacklog(t); }
+function toggleGameBacklog(t){ const x=S.backlog.find(b=>b.title===t&&(b._category||"book")==="game"); x?removeBacklog(t,"game"):addGameBacklog(t); }
+function toggleComicBacklog(t){ const x=S.backlog.find(b=>b.title===t&&(b._category||"book")==="comic"); x?removeBacklog(t,"comic"):addComicBacklog(t); }
 
 document.getElementById("sync-btn").onclick=showSyncSettings;
 document.getElementById("diary-btn").onclick=()=>{
@@ -2128,19 +2142,19 @@ document.getElementById("view").onclick=e=>{
   const f=e.target.dataset.filter; if(f){S.filter=f; render(); return;}
   const m=e.target.dataset.more; if(m){S.expanded=S.expanded===m?null:m; render(); return;}
   const bk=e.target.dataset.bk; if(bk){toggleBacklog(bk); return;}
-  const rm=e.target.dataset.rm; if(rm){removeBacklog(rm); return;}
+  const rm=e.target.dataset.rm; if(rm){removeBacklog(rm, e.target.dataset.rmcat); return;}
   const mt=e.target.dataset.mtype; if(mt){S.movieType=mt; render(); return;}
   const mbk=e.target.dataset.mbk; if(mbk){toggleMovieBacklog(mbk); return;}
   const gbk=e.target.dataset.gbk; if(gbk){toggleGameBacklog(gbk); return;}
-  const nbk=e.target.dataset.newsbk; if(nbk){ if(!inBacklog(nbk)){ const item=(S.news?.items||[]).find(i=>i.title===nbk); if(item){S.backlog.push(normalizeNewsBook(item)); saveBacklogAndSync(S.backlog); render();}} return;}
-  const nmbk=e.target.dataset.newsmbk; if(nmbk){ if(!inBacklog(nmbk)){
+  const nbk=e.target.dataset.newsbk; if(nbk){ if(!inBacklog(nbk,"book")){ const item=(S.news?.items||[]).find(i=>i.title===nbk); if(item){S.backlog.push(normalizeNewsBook(item)); saveBacklogAndSync(S.backlog); render();}} return;}
+  const nmbk=e.target.dataset.newsmbk; if(nmbk){ if(!inBacklog(nmbk,"movie")){
     const item=(S.news?.items||[]).find(i=>i.title===nmbk)||(S.coming?.films||[]).find(i=>i.title===nmbk)||(S.coming?.series||[]).find(i=>i.title===nmbk);
     if(item){S.backlog.push(normalizeNewsMovie(item)); saveBacklogAndSync(S.backlog); render();}} return;}
-  const ngbk=e.target.dataset.newsgbk; if(ngbk){ if(!inBacklog(ngbk)){
+  const ngbk=e.target.dataset.newsgbk; if(ngbk){ if(!inBacklog(ngbk,"game")){
     const item=(S.news?.items||[]).find(i=>i.title===ngbk)||(S.coming?.games||[]).find(i=>i.title===ngbk);
     if(item){S.backlog.push(normalizeNewsGame(item)); saveBacklogAndSync(S.backlog); render();}} return;}
   const cbk=e.target.dataset.cbk; if(cbk){toggleComicBacklog(cbk); return;}
-  const ncbk=e.target.dataset.newscbk; if(ncbk){ if(!inBacklog(ncbk)){
+  const ncbk=e.target.dataset.newscbk; if(ncbk){ if(!inBacklog(ncbk,"comic")){
     const item=(S.news?.items||[]).find(i=>i.title===ncbk);
     if(item){S.backlog.push({...item,_category:"comic"}); saveBacklogAndSync(S.backlog); render();}} return;}
   const gw=e.target.dataset.gwin; if(gw){S.gameWin=+gw; render(); return;}
