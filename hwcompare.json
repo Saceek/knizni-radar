@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-21T12:17:25.752Z",
+  "updatedAt": "2026-09-21T13:17:34.073Z",
   "games": [
     {
       "title": "Valheim",
@@ -386,14 +386,6 @@
       "note": "Doporučená konfigurace: Dedicated GPU with 1 GB VRAM (e.g., NVIDIA GeForce GTX 750 or equivalent), Quad-core Intel/AMD processor, 2.5 GHz or better"
     },
     {
-      "title": "b 2",
-      "tier": "red",
-      "gpu": "AMD Radeon RX 7900 GRE performance class",
-      "cpu": "AMD Ryzen 7 9700X performance class",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: AMD Radeon RX 7900 GRE performance class, AMD Ryzen 7 9700X performance class"
-    },
-    {
       "title": "Warlord: Awaji",
       "tier": "red",
       "gpu": "NVIDIA Geforce RTX 3070",
@@ -408,6 +400,14 @@
       "cpu": "Intel Core i5-4590 / AMD Ryzen 3 1200 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Intel HD Graphics 530 / AMD Radeon HD 7750 / NVIDIA GeForce GTX 650 (OpenGL 4.6), Intel Core i5-4590 / AMD Ryzen 3 1200 or equivalent"
+    },
+    {
+      "title": "DISCIPLINE SIMULATOR",
+      "tier": "orange",
+      "gpu": "RTX 2060",
+      "cpu": "Intel Core i7 8700",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 2060, Intel Core i7 8700"
     },
     {
       "title": "Forsworn",
@@ -434,14 +434,6 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 480, i5 7600K / Ryzen 5 2600x"
     },
     {
-      "title": "DISCIPLINE SIMULATOR",
-      "tier": "orange",
-      "gpu": "RTX 2060",
-      "cpu": "Intel Core i7 8700",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 2060, Intel Core i7 8700"
-    },
-    {
       "title": "Retro Arcade Shop Simulator",
       "tier": "orange",
       "gpu": "NVIDIA GeForce RTX 2070 Super or AMD Radeon RX 6600 XT",
@@ -458,20 +450,20 @@
       "note": "Minimální konfigurace: DirectX 11 compatible GPU (Intel HD Graphics 4000 or better), Dual Core CPU @ 2.0 GHz+"
     },
     {
-      "title": "Dumb Ways to Build",
-      "tier": "red",
-      "gpu": "RTX 3060 (12GB) / RX 6700 XT",
-      "cpu": "6-Core / 12-Thread (Intel i5-12400, Ryzen 5 5600X)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 3060 (12GB) / RX 6700 XT, 6-Core / 12-Thread (Intel i5-12400, Ryzen 5 5600X)"
-    },
-    {
       "title": "Nuclear Design Bureau",
       "tier": "red",
       "gpu": "GeForce RTX 3070 or Radeon RX 6700 XT, 8 GB VRAM",
       "cpu": "8-core, Intel i7-10700 or AMD Ryzen 7 3700X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 3070 or Radeon RX 6700 XT, 8 GB VRAM, 8-core, Intel i7-10700 or AMD Ryzen 7 3700X"
+    },
+    {
+      "title": "Dumb Ways to Build",
+      "tier": "red",
+      "gpu": "RTX 3060 (12GB) / RX 6700 XT",
+      "cpu": "6-Core / 12-Thread (Intel i5-12400, Ryzen 5 5600X)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 3060 (12GB) / RX 6700 XT, 6-Core / 12-Thread (Intel i5-12400, Ryzen 5 5600X)"
     },
     {
       "title": "Dawson Oaks Trailer Park",
@@ -554,20 +546,20 @@
       "note": "Doporučená konfigurace: Intel HD 4000 / AMD Radeon R5 230 / NVIDIA GeForce GT 710, 2.5 gz and 2 cores"
     },
     {
-      "title": "House 2",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1060 3GB/ AMD Radeon RX 580 4GB",
-      "cpu": "Intel Corei5-6600K/ AMD Ryzen 5 1600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1060 3GB/ AMD Radeon RX 580 4GB, Intel Corei5-6600K/ AMD Ryzen 5 1600"
-    },
-    {
       "title": "Golden Swirl",
       "tier": "green",
       "gpu": "Dedicated GPU (e.g., NVIDIA GeForce GTX 1060 or equivalent)",
       "cpu": "Intel Core i5 or higher",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Dedicated GPU (e.g., NVIDIA GeForce GTX 1060 or equivalent), Intel Core i5 or higher"
+    },
+    {
+      "title": "House 2",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 1060 3GB/ AMD Radeon RX 580 4GB",
+      "cpu": "Intel Corei5-6600K/ AMD Ryzen 5 1600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1060 3GB/ AMD Radeon RX 580 4GB, Intel Corei5-6600K/ AMD Ryzen 5 1600"
     },
     {
       "title": "Fracture Point",
@@ -752,6 +744,14 @@
       "cpu": "Intel Core i5 4690 @ 3.5 GHz | AMD Ryzen 5 1600x @ 3.6 GHz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 1050 / RX VEGA-56, Intel Core i5 4690 @ 3.5 GHz | AMD Ryzen 5 1600x @ 3.6 GHz"
+    },
+    {
+      "title": "Kill The Shadow",
+      "tier": "red",
+      "gpu": "NVIDIA GeForce RTX 3060 / AMD RX 6600 XT",
+      "cpu": "Intel Core i5-12600K / AMD Ryzen 5 7600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD RX 6600 XT, Intel Core i5-12600K / AMD Ryzen 5 7600X"
     }
   ]
 }
