@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-21T17:17:47.317Z",
+  "updatedAt": "2026-09-21T18:17:49.818Z",
   "games": [
     {
       "title": "Valheim",
@@ -218,6 +218,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 6600, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
+      "title": "Happy Wheels",
+      "tier": "green",
+      "gpu": "Any GPU with WebGL / DirectX 11 support (Intel HD Graphics 4000 or better)",
+      "cpu": "Intel Core i3 / AMD equivalent, 2.0 GHz or better",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Any GPU with WebGL / DirectX 11 support (Intel HD Graphics 4000 or better), Intel Core i3 / AMD equivalent, 2.0 GHz or better"
+    },
+    {
       "title": "Bones and Coins",
       "tier": "green",
       "gpu": "Intel HD Graphics 5000+",
@@ -234,12 +242,12 @@
       "note": "Minimální konfigurace: Intel HD Graphics 3000, OpenGL 2.0+, 1.2 GHz"
     },
     {
-      "title": "Happy Wheels",
-      "tier": "green",
-      "gpu": "Any GPU with WebGL / DirectX 11 support (Intel HD Graphics 4000 or better)",
-      "cpu": "Intel Core i3 / AMD equivalent, 2.0 GHz or better",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Any GPU with WebGL / DirectX 11 support (Intel HD Graphics 4000 or better), Intel Core i3 / AMD equivalent, 2.0 GHz or better"
+      "title": "Woodo",
+      "tier": "orange",
+      "gpu": "AMD Radeon RX 5600 XT / NVIDIA GeForce RTX 2060",
+      "cpu": "AMD Ryzen 5 5600X / Intel Core i5-12400F",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: AMD Radeon RX 5600 XT / NVIDIA GeForce RTX 2060, AMD Ryzen 5 5600X / Intel Core i5-12400F"
     },
     {
       "title": "Master Of Pottery",
@@ -248,14 +256,6 @@
       "cpu": "Quad core CPU 3.0 GHz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1060 (6 GB), Quad core CPU 3.0 GHz"
-    },
-    {
-      "title": "Woodo",
-      "tier": "orange",
-      "gpu": "AMD Radeon RX 5600 XT / NVIDIA GeForce RTX 2060",
-      "cpu": "AMD Ryzen 5 5600X / Intel Core i5-12400F",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: AMD Radeon RX 5600 XT / NVIDIA GeForce RTX 2060, AMD Ryzen 5 5600X / Intel Core i5-12400F"
     },
     {
       "title": "WheelMates",
@@ -282,20 +282,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 2060/AMD Radeon RX 6600, AMD Ryzen 5 3600 / Intel Core i7 8700"
     },
     {
-      "title": "The Guild 1 Remake: Europa 1410",
-      "tier": "red",
-      "gpu": "NVIDIA GeForce RTX 4070 / AMD Radeon RX 7800 XT",
-      "cpu": "Intel Core i7-12700k / AMD Ryzen 7 5800X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4070 / AMD Radeon RX 7800 XT, Intel Core i7-12700k / AMD Ryzen 7 5800X"
-    },
-    {
       "title": "Police Chief Simulator",
       "tier": "green",
       "gpu": "GeForce GTX 1060",
       "cpu": "Intel Core i5-3550",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce GTX 1060, Intel Core i5-3550"
+    },
+    {
+      "title": "The Guild 1 Remake: Europa 1410",
+      "tier": "red",
+      "gpu": "NVIDIA GeForce RTX 4070 / AMD Radeon RX 7800 XT",
+      "cpu": "Intel Core i7-12700k / AMD Ryzen 7 5800X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4070 / AMD Radeon RX 7800 XT, Intel Core i7-12700k / AMD Ryzen 7 5800X"
     },
     {
       "title": "Parisian Bistro Simulator",
@@ -514,20 +514,20 @@
       "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 or AMD Equivalent, AMD Ryzen 5 3600"
     },
     {
-      "title": "Maestro's Cold War 2",
-      "tier": "green",
-      "gpu": "Intel HD 4000 / AMD Radeon R5 230 / NVIDIA GeForce GT 710",
-      "cpu": "2.5 gz and 2 cores",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Intel HD 4000 / AMD Radeon R5 230 / NVIDIA GeForce GT 710, 2.5 gz and 2 cores"
-    },
-    {
       "title": "Driving Rogue",
       "tier": "orange",
       "gpu": "Nvidia RTX 2060/AMD RX 5060 XT",
       "cpu": "Intel i5-8500/AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia RTX 2060/AMD RX 5060 XT, Intel i5-8500/AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Maestro's Cold War 2",
+      "tier": "green",
+      "gpu": "Intel HD 4000 / AMD Radeon R5 230 / NVIDIA GeForce GT 710",
+      "cpu": "2.5 gz and 2 cores",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Intel HD 4000 / AMD Radeon R5 230 / NVIDIA GeForce GT 710, 2.5 gz and 2 cores"
     },
     {
       "title": "Golden Swirl",
@@ -736,46 +736,6 @@
       "cpu": "Ryzen 3 1200 / Core i5-7400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1060 / Radeon RX 470, Ryzen 3 1200 / Core i5-7400"
-    },
-    {
-      "title": "Hollow Knight: Silksong",
-      "tier": "green",
-      "gpu": "GeForce GTX 1050 (2GB), Radeon R9 380 (2GB)",
-      "cpu": "Intel Core i5-3470",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1050 (2GB), Radeon R9 380 (2GB), Intel Core i5-3470"
-    },
-    {
-      "title": "007 First Light",
-      "tier": "red",
-      "gpu": "NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT",
-      "cpu": "INTEL CORE i5 13500, AMD RYZEN 5 7600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT, INTEL CORE i5 13500, AMD RYZEN 5 7600"
-    },
-    {
-      "title": "Call of the Elder Gods",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1650 / AMD Radeon RX 580",
-      "cpu": "Intel Core i5-11600K / AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1650 / AMD Radeon RX 580, Intel Core i5-11600K / AMD Ryzen 5 5600X"
-    },
-    {
-      "title": "REPLACED",
-      "tier": "green",
-      "gpu": "GeForce GTX 1060 (6GB) or equivalent",
-      "cpu": "Intel® Core™ i5-8400 Processor",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
-    },
-    {
-      "title": "MOUSE: P.I. For Hire",
-      "tier": "orange",
-      "gpu": "GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600",
-      "cpu": "Intel Core i5 9600 / Ryzen 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600, Intel Core i5 9600 / Ryzen 3600"
     }
   ]
 }
