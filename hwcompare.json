@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-21T15:17:49.447Z",
+  "updatedAt": "2026-09-21T16:18:34.301Z",
   "games": [
     {
       "title": "Valheim",
@@ -298,6 +298,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 (6 GB VRAM) / AMD RX 6600 (8 GB VRAM), Intel Core i5-11400 / AMD Ryzen 5 5600X or better"
     },
     {
+      "title": "Happy Wheels",
+      "tier": "green",
+      "gpu": "Any GPU with WebGL / DirectX 11 support (Intel HD Graphics 4000 or better)",
+      "cpu": "Intel Core i3 / AMD equivalent, 2.0 GHz or better",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Any GPU with WebGL / DirectX 11 support (Intel HD Graphics 4000 or better), Intel Core i3 / AMD equivalent, 2.0 GHz or better"
+    },
+    {
       "title": "ZENONIA 1",
       "tier": "green",
       "gpu": "Geforce GTX 1660",
@@ -442,14 +450,6 @@
       "note": "Doporučená konfigurace: GeForce RTX 3070 or Radeon RX 6700 XT, 8 GB VRAM, 8-core, Intel i7-10700 or AMD Ryzen 7 3700X"
     },
     {
-      "title": "Pickle Pete",
-      "tier": "green",
-      "gpu": "DirectX 11 compatible GPU (Intel HD Graphics 4000 or better)",
-      "cpu": "Dual Core CPU @ 2.0 GHz+",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: DirectX 11 compatible GPU (Intel HD Graphics 4000 or better), Dual Core CPU @ 2.0 GHz+"
-    },
-    {
       "title": "Dumb Ways to Build",
       "tier": "red",
       "gpu": "RTX 3060 (12GB) / RX 6700 XT",
@@ -474,20 +474,20 @@
       "note": "Doporučená konfigurace: RTX 5090ti, i9 14900K"
     },
     {
-      "title": "For the Fatherland: Chronicle of Park Chung-hee",
-      "tier": "green",
-      "gpu": "GTX 1650 Super",
-      "cpu": "AMD Ryzen 5 3500",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1650 Super, AMD Ryzen 5 3500"
-    },
-    {
       "title": "Paver: Tidy Up Together",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1070 | AMD Radeon RX-6600",
       "cpu": "Intel Core i5-13400F | AMD Ryzen 5 7600x",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1070 | AMD Radeon RX-6600, Intel Core i5-13400F | AMD Ryzen 5 7600x"
+    },
+    {
+      "title": "For the Fatherland: Chronicle of Park Chung-hee",
+      "tier": "green",
+      "gpu": "GTX 1650 Super",
+      "cpu": "AMD Ryzen 5 3500",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1650 Super, AMD Ryzen 5 3500"
     },
     {
       "title": "창세기전 외전: 서풍의 광시곡 리마스터",
