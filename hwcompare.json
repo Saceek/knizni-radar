@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-21T20:21:31.256Z",
+  "updatedAt": "2026-09-21T22:18:28.578Z",
   "games": [
     {
       "title": "Valheim",
@@ -138,20 +138,20 @@
       "note": "Doporučená konfigurace: 8GB VRAM, AMD Radeon RX 6700 XT / Nvidia GeForce RTX 3060 Ti, AMD Ryzen 5 5600X / Intel Core i5-12400F"
     },
     {
-      "title": "Alchemy Factory",
-      "tier": "orange",
-      "gpu": "Nvidia RTX 2070﻿ or RX 5700, or equivalent performance &amp; VRAM",
-      "cpu": "Ryzen 5 5600X﻿ or ﻿i5-12400 ﻿or equivalent performance, 6 physical cores minimum",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia RTX 2070﻿ or RX 5700, or equivalent performance &amp; VRAM, Ryzen 5 5600X﻿ or ﻿i5-12400 ﻿or equivalent performance, 6 physical cores minimum"
-    },
-    {
       "title": "Scarlet Skips",
       "tier": "red",
       "gpu": "NVIDIA RTX 2080",
       "cpu": "AMD Ryzen 9 3900X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 2080, AMD Ryzen 9 3900X"
+    },
+    {
+      "title": "Alchemy Factory",
+      "tier": "orange",
+      "gpu": "Nvidia RTX 2070﻿ or RX 5700, or equivalent performance &amp; VRAM",
+      "cpu": "Ryzen 5 5600X﻿ or ﻿i5-12400 ﻿or equivalent performance, 6 physical cores minimum",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia RTX 2070﻿ or RX 5700, or equivalent performance &amp; VRAM, Ryzen 5 5600X﻿ or ﻿i5-12400 ﻿or equivalent performance, 6 physical cores minimum"
     },
     {
       "title": "Gunman Contracts - Stand Alone",
@@ -178,6 +178,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 6GB, Intel® Core™ i5-6400"
     },
     {
+      "title": "Happy Wheels",
+      "tier": "green",
+      "gpu": "Any GPU with WebGL / DirectX 11 support (Intel HD Graphics 4000 or better)",
+      "cpu": "Intel Core i3 / AMD equivalent, 2.0 GHz or better",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Any GPU with WebGL / DirectX 11 support (Intel HD Graphics 4000 or better), Intel Core i3 / AMD equivalent, 2.0 GHz or better"
+    },
+    {
       "title": "BOMBANANA!",
       "tier": "green",
       "gpu": "Intel Iris Xe / NVIDIA GTX 1050 / AMD RX 560",
@@ -194,14 +202,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i7-10700 / AMD Ryzen 7 3700X"
     },
     {
-      "title": "Sunken Engine",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1050 4GB",
-      "cpu": "Intel Core i3 (or equivalent AMD)",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GTX 1050 4GB, Intel Core i3 (or equivalent AMD)"
-    },
-    {
       "title": "SPRAWL zero",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1660 Ti or AMD Radeon RX 6500 XT",
@@ -210,12 +210,12 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Ti or AMD Radeon RX 6500 XT, Intel Core i5-10400 or AMD Ryzen 5 3600"
     },
     {
-      "title": "Happy Wheels",
+      "title": "Sunken Engine",
       "tier": "green",
-      "gpu": "Any GPU with WebGL / DirectX 11 support (Intel HD Graphics 4000 or better)",
-      "cpu": "Intel Core i3 / AMD equivalent, 2.0 GHz or better",
+      "gpu": "NVIDIA GTX 1050 4GB",
+      "cpu": "Intel Core i3 (or equivalent AMD)",
       "usedMinimum": true,
-      "note": "Minimální konfigurace: Any GPU with WebGL / DirectX 11 support (Intel HD Graphics 4000 or better), Intel Core i3 / AMD equivalent, 2.0 GHz or better"
+      "note": "Minimální konfigurace: NVIDIA GTX 1050 4GB, Intel Core i3 (or equivalent AMD)"
     },
     {
       "title": "Tiny Eden",
@@ -418,14 +418,6 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 2060, Intel Core i7-12700H"
     },
     {
-      "title": "Retro Arcade Shop Simulator",
-      "tier": "orange",
-      "gpu": "NVIDIA GeForce RTX 2070 Super or AMD Radeon RX 6600 XT",
-      "cpu": "Intel Core i5-12600K or AMD Ryzen 5 7600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 Super or AMD Radeon RX 6600 XT, Intel Core i5-12600K or AMD Ryzen 5 7600X"
-    },
-    {
       "title": "Nuclear Design Bureau",
       "tier": "red",
       "gpu": "GeForce RTX 3070 or Radeon RX 6700 XT, 8 GB VRAM",
@@ -434,12 +426,12 @@
       "note": "Doporučená konfigurace: GeForce RTX 3070 or Radeon RX 6700 XT, 8 GB VRAM, 8-core, Intel i7-10700 or AMD Ryzen 7 3700X"
     },
     {
-      "title": "Dumb Ways to Build",
-      "tier": "red",
-      "gpu": "RTX 3060 (12GB) / RX 6700 XT",
-      "cpu": "6-Core / 12-Thread (Intel i5-12400, Ryzen 5 5600X)",
+      "title": "Retro Arcade Shop Simulator",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce RTX 2070 Super or AMD Radeon RX 6600 XT",
+      "cpu": "Intel Core i5-12600K or AMD Ryzen 5 7600X",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 3060 (12GB) / RX 6700 XT, 6-Core / 12-Thread (Intel i5-12400, Ryzen 5 5600X)"
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 Super or AMD Radeon RX 6600 XT, Intel Core i5-12600K or AMD Ryzen 5 7600X"
     },
     {
       "title": "Dawson Oaks Trailer Park",
@@ -448,6 +440,14 @@
       "cpu": null,
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia Geforce GTX 1080Ti"
+    },
+    {
+      "title": "Dumb Ways to Build",
+      "tier": "red",
+      "gpu": "RTX 3060 (12GB) / RX 6700 XT",
+      "cpu": "6-Core / 12-Thread (Intel i5-12400, Ryzen 5 5600X)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 3060 (12GB) / RX 6700 XT, 6-Core / 12-Thread (Intel i5-12400, Ryzen 5 5600X)"
     },
     {
       "title": "Paver: Tidy Up Together",
@@ -490,14 +490,6 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10600 / AMD Ryzen 5 3600"
     },
     {
-      "title": "Island Market Simulator",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1060 / AMD RX 480",
-      "cpu": "5 7600K / Ryzen 5 2600x",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 480, 5 7600K / Ryzen 5 2600x"
-    },
-    {
       "title": "Soul Chained",
       "tier": "red",
       "gpu": "Nvidia GeForce RTX 3060 or AMD Equivalent",
@@ -512,6 +504,14 @@
       "cpu": "Intel i5-8500/AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia RTX 2060/AMD RX 5060 XT, Intel i5-8500/AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Island Market Simulator",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1060 / AMD RX 480",
+      "cpu": "5 7600K / Ryzen 5 2600x",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 480, 5 7600K / Ryzen 5 2600x"
     },
     {
       "title": "Maestro's Cold War 2",
@@ -538,6 +538,14 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1060 3GB/ AMD Radeon RX 580 4GB, Intel Corei5-6600K/ AMD Ryzen 5 1600"
     },
     {
+      "title": "Kernel Hearts",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce RTX 2060 / GTX 1660 Ti or equivalent",
+      "cpu": "Intel Core i7-10700 / AMD Ryzen 5 3600 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / GTX 1660 Ti or equivalent, Intel Core i7-10700 / AMD Ryzen 5 3600 or equivalent"
+    },
+    {
       "title": "The Headlands",
       "tier": "green",
       "gpu": "NVIDIA GT 730 / AMD Radeon R7 240 or better (2015 and newer)",
@@ -552,14 +560,6 @@
       "cpu": "Intel Core i5-6600 / AMD Ryzen 3 3100",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1660Ti  / AMD RX 5700 XT, Intel Core i5-6600 / AMD Ryzen 3 3100"
-    },
-    {
-      "title": "Kernel Hearts",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce RTX 2060 / GTX 1660 Ti or equivalent",
-      "cpu": "Intel Core i7-10700 / AMD Ryzen 5 3600 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / GTX 1660 Ti or equivalent, Intel Core i7-10700 / AMD Ryzen 5 3600 or equivalent"
     },
     {
       "title": "The Plant Shop",
@@ -626,20 +626,20 @@
       "note": "Doporučená konfigurace: GeForce GTX 1050 (2048 VRAM); Radeon R9 380 (2048 VRAM), 3Ghz 64-bit"
     },
     {
-      "title": "Escape Toon Kingdom",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 960 / AMD equivalent",
-      "cpu": "Intel Core i5 / AMD equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD equivalent, Intel Core i5 / AMD equivalent"
-    },
-    {
       "title": "Curse of Pirates",
       "tier": "green",
       "gpu": "NVIDIA GTX 950",
       "cpu": "2.0 Ghz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 950, 2.0 Ghz"
+    },
+    {
+      "title": "Escape Toon Kingdom",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 960 / AMD equivalent",
+      "cpu": "Intel Core i5 / AMD equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD equivalent, Intel Core i5 / AMD equivalent"
     },
     {
       "title": "Lou's Lagoon",
