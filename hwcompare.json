@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-21T01:17:45.567Z",
+  "updatedAt": "2026-09-21T02:17:05.480Z",
   "games": [
     {
       "title": "Valheim",
@@ -450,20 +450,20 @@
       "note": "Minimální konfigurace: DirectX 11 compatible GPU (Intel HD Graphics 4000 or better), Dual Core CPU @ 2.0 GHz+"
     },
     {
-      "title": "Dumb Ways to Build",
-      "tier": "red",
-      "gpu": "RTX 3060 (12GB) / RX 6700 XT",
-      "cpu": "6-Core / 12-Thread (Intel i5-12400, Ryzen 5 5600X)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 3060 (12GB) / RX 6700 XT, 6-Core / 12-Thread (Intel i5-12400, Ryzen 5 5600X)"
-    },
-    {
       "title": "DISCIPLINE SIMULATOR",
       "tier": "orange",
       "gpu": "RTX 2060",
       "cpu": "Intel Core i7 8700",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 2060, Intel Core i7 8700"
+    },
+    {
+      "title": "Dumb Ways to Build",
+      "tier": "red",
+      "gpu": "RTX 3060 (12GB) / RX 6700 XT",
+      "cpu": "6-Core / 12-Thread (Intel i5-12400, Ryzen 5 5600X)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 3060 (12GB) / RX 6700 XT, 6-Core / 12-Thread (Intel i5-12400, Ryzen 5 5600X)"
     },
     {
       "title": "Nuclear Design Bureau",
@@ -474,20 +474,20 @@
       "note": "Doporučená konfigurace: GeForce RTX 3070 or Radeon RX 6700 XT, 8 GB VRAM, 8-core, Intel i7-10700 or AMD Ryzen 7 3700X"
     },
     {
-      "title": "For the Fatherland: Chronicle of Park Chung-hee",
-      "tier": "green",
-      "gpu": "GTX 1650 Super",
-      "cpu": "AMD Ryzen 5 3500",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1650 Super, AMD Ryzen 5 3500"
-    },
-    {
       "title": "铜刀银剑",
       "tier": "red",
       "gpu": "RTX 5090ti",
       "cpu": "i9 14900K",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 5090ti, i9 14900K"
+    },
+    {
+      "title": "For the Fatherland: Chronicle of Park Chung-hee",
+      "tier": "green",
+      "gpu": "GTX 1650 Super",
+      "cpu": "AMD Ryzen 5 3500",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1650 Super, AMD Ryzen 5 3500"
     },
     {
       "title": "Dawson Oaks Trailer Park",
@@ -554,6 +554,14 @@
       "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 or AMD Equivalent, AMD Ryzen 5 3600"
     },
     {
+      "title": "House 2",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 1060 3GB/ AMD Radeon RX 580 4GB",
+      "cpu": "Intel Corei5-6600K/ AMD Ryzen 5 1600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1060 3GB/ AMD Radeon RX 580 4GB, Intel Corei5-6600K/ AMD Ryzen 5 1600"
+    },
+    {
       "title": "Fracture Point",
       "tier": "green",
       "gpu": "GeForce GTX 1660Ti  / AMD RX 5700 XT",
@@ -568,14 +576,6 @@
       "cpu": "Intel Core i5 or higher",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Dedicated GPU (e.g., NVIDIA GeForce GTX 1060 or equivalent), Intel Core i5 or higher"
-    },
-    {
-      "title": "House 2",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1060 3GB/ AMD Radeon RX 580 4GB",
-      "cpu": "Intel Corei5-6600K/ AMD Ryzen 5 1600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1060 3GB/ AMD Radeon RX 580 4GB, Intel Corei5-6600K/ AMD Ryzen 5 1600"
     },
     {
       "title": "The Headlands",
@@ -760,6 +760,54 @@
       "cpu": "Intel Core i5-12600K / AMD Ryzen 5 7600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD RX 6600 XT, Intel Core i5-12600K / AMD Ryzen 5 7600X"
+    },
+    {
+      "title": "Deer & Boy",
+      "tier": "green",
+      "gpu": "GeForce GTX 1060 / Radeon RX 470",
+      "cpu": "Ryzen 3 1200 / Core i5-7400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1060 / Radeon RX 470, Ryzen 3 1200 / Core i5-7400"
+    },
+    {
+      "title": "Hollow Knight: Silksong",
+      "tier": "green",
+      "gpu": "GeForce GTX 1050 (2GB), Radeon R9 380 (2GB)",
+      "cpu": "Intel Core i5-3470",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1050 (2GB), Radeon R9 380 (2GB), Intel Core i5-3470"
+    },
+    {
+      "title": "007 First Light",
+      "tier": "red",
+      "gpu": "NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT",
+      "cpu": "INTEL CORE i5 13500, AMD RYZEN 5 7600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT, INTEL CORE i5 13500, AMD RYZEN 5 7600"
+    },
+    {
+      "title": "Call of the Elder Gods",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 1650 / AMD Radeon RX 580",
+      "cpu": "Intel Core i5-11600K / AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1650 / AMD Radeon RX 580, Intel Core i5-11600K / AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "REPLACED",
+      "tier": "green",
+      "gpu": "GeForce GTX 1060 (6GB) or equivalent",
+      "cpu": "Intel® Core™ i5-8400 Processor",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
+    },
+    {
+      "title": "MOUSE: P.I. For Hire",
+      "tier": "orange",
+      "gpu": "GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600",
+      "cpu": "Intel Core i5 9600 / Ryzen 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600, Intel Core i5 9600 / Ryzen 3600"
     }
   ]
 }
