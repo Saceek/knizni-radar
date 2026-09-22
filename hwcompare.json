@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T22:17:01.038Z",
+  "updatedAt": "2026-09-22T23:16:47.725Z",
   "games": [
     {
       "title": "Valheim",
@@ -426,20 +426,20 @@
       "note": "Doporučená konfigurace: Intel HD Graphics 530 / AMD Radeon HD 7750 / NVIDIA GeForce GTX 650 (OpenGL 4.6), Intel Core i5-4590 / AMD Ryzen 3 1200 or equivalent"
     },
     {
-      "title": "Nuclear Design Bureau",
-      "tier": "red",
-      "gpu": "GeForce RTX 3070 or Radeon RX 6700 XT, 8 GB VRAM",
-      "cpu": "8-core, Intel i7-10700 or AMD Ryzen 7 3700X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3070 or Radeon RX 6700 XT, 8 GB VRAM, 8-core, Intel i7-10700 or AMD Ryzen 7 3700X"
-    },
-    {
       "title": "Dawson Oaks Trailer Park",
       "tier": "orange",
       "gpu": "Nvidia Geforce GTX 1080Ti",
       "cpu": null,
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia Geforce GTX 1080Ti"
+    },
+    {
+      "title": "Nuclear Design Bureau",
+      "tier": "red",
+      "gpu": "GeForce RTX 3070 or Radeon RX 6700 XT, 8 GB VRAM",
+      "cpu": "8-core, Intel i7-10700 or AMD Ryzen 7 3700X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3070 or Radeon RX 6700 XT, 8 GB VRAM, 8-core, Intel i7-10700 or AMD Ryzen 7 3700X"
     },
     {
       "title": "Dumb Ways to Build",
@@ -752,6 +752,30 @@
       "cpu": "INTEL CORE i5 13500, AMD RYZEN 5 7600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT, INTEL CORE i5 13500, AMD RYZEN 5 7600"
+    },
+    {
+      "title": "Call of the Elder Gods",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 1650 / AMD Radeon RX 580",
+      "cpu": "Intel Core i5-11600K / AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1650 / AMD Radeon RX 580, Intel Core i5-11600K / AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "REPLACED",
+      "tier": "green",
+      "gpu": "GeForce GTX 1060 (6GB) or equivalent",
+      "cpu": "Intel® Core™ i5-8400 Processor",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
+    },
+    {
+      "title": "MOUSE: P.I. For Hire",
+      "tier": "orange",
+      "gpu": "GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600",
+      "cpu": "Intel Core i5 9600 / Ryzen 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600, Intel Core i5 9600 / Ryzen 3600"
     }
   ]
 }
