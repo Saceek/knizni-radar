@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T21:16:17.081Z",
+  "updatedAt": "2026-09-22T22:17:01.038Z",
   "games": [
     {
       "title": "Valheim",
@@ -90,6 +90,14 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1050 Ti / AMD RX 560 or better, Intel Core i5 (6th gen) or AMD Ryzen 3"
     },
     {
+      "title": "Happy Wheels",
+      "tier": "green",
+      "gpu": "Any GPU with WebGL / DirectX 11 support (Intel HD Graphics 4000 or better)",
+      "cpu": "Intel Core i3 / AMD equivalent, 2.0 GHz or better",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Any GPU with WebGL / DirectX 11 support (Intel HD Graphics 4000 or better), Intel Core i3 / AMD equivalent, 2.0 GHz or better"
+    },
+    {
       "title": "ENDLESS Legend™ 2",
       "tier": "green",
       "gpu": "NVIDIA® GeForce® GTX 1070 (8 GB) / AMD® Radeon™ RX 5700 XT (8 GB)",
@@ -104,14 +112,6 @@
       "cpu": "11th Gen Intel(R) Core(TM) i5-11600K / AMD Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 / AMD Radeon RX 570 (4GB) or the Radeon RX 5500 / RX 5300, 11th Gen Intel(R) Core(TM) i5-11600K / AMD Ryzen 5 5600X"
-    },
-    {
-      "title": "Happy Wheels",
-      "tier": "green",
-      "gpu": "Any GPU with WebGL / DirectX 11 support (Intel HD Graphics 4000 or better)",
-      "cpu": "Intel Core i3 / AMD equivalent, 2.0 GHz or better",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Any GPU with WebGL / DirectX 11 support (Intel HD Graphics 4000 or better), Intel Core i3 / AMD equivalent, 2.0 GHz or better"
     },
     {
       "title": "Moonlighter 2: The Endless Vault",
@@ -322,20 +322,20 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD Radeon RX 480, Intel Core i7-7700k / AMD Ryzen 7 3700X"
     },
     {
-      "title": "BRAZILIAN DRUG DEALER BEFORE 4: DEMONS FROM THE PORTAL TO HELL I OPENED ARE STILL IN THE FAVELA AND NOW I HAVE TO SAVE MAMADAS FROM RONALDO",
-      "tier": "green",
-      "gpu": "Intel HD Graphics 4000",
-      "cpu": "Intel Core i3 3110M",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 4000, Intel Core i3 3110M"
-    },
-    {
       "title": "DISCIPLINE SIMULATOR",
       "tier": "orange",
       "gpu": "RTX 2060",
       "cpu": "Intel Core i7 8700",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 2060, Intel Core i7 8700"
+    },
+    {
+      "title": "BRAZILIAN DRUG DEALER BEFORE 4: DEMONS FROM THE PORTAL TO HELL I OPENED ARE STILL IN THE FAVELA AND NOW I HAVE TO SAVE MAMADAS FROM RONALDO",
+      "tier": "green",
+      "gpu": "Intel HD Graphics 4000",
+      "cpu": "Intel Core i3 3110M",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics 4000, Intel Core i3 3110M"
     },
     {
       "title": "Garden of Witches",
@@ -368,6 +368,14 @@
       "cpu": "Intel Core i7-8700K | AMD Ryzen 5 3600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 | AMD Radeon RX Vega 56, Intel Core i7-8700K | AMD Ryzen 5 3600X"
+    },
+    {
+      "title": "Graveyard Keeper 2",
+      "tier": "red",
+      "gpu": "GeForce RTX 3060 or similar",
+      "cpu": "Intel Core i5 (13 gen) or similar",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3060 or similar, Intel Core i5 (13 gen) or similar"
     },
     {
       "title": "点击地牢 Tap Dungeon",
@@ -416,14 +424,6 @@
       "cpu": "Intel Core i5-4590 / AMD Ryzen 3 1200 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Intel HD Graphics 530 / AMD Radeon HD 7750 / NVIDIA GeForce GTX 650 (OpenGL 4.6), Intel Core i5-4590 / AMD Ryzen 3 1200 or equivalent"
-    },
-    {
-      "title": "Graveyard Keeper 2",
-      "tier": "red",
-      "gpu": "GeForce RTX 3060 or similar",
-      "cpu": "Intel Core i5 (13 gen) or similar",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 or similar, Intel Core i5 (13 gen) or similar"
     },
     {
       "title": "Nuclear Design Bureau",
@@ -744,6 +744,14 @@
       "cpu": "Intel Core i5-3470",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1050 (2GB), Radeon R9 380 (2GB), Intel Core i5-3470"
+    },
+    {
+      "title": "007 First Light",
+      "tier": "red",
+      "gpu": "NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT",
+      "cpu": "INTEL CORE i5 13500, AMD RYZEN 5 7600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT, INTEL CORE i5 13500, AMD RYZEN 5 7600"
     }
   ]
 }
