@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T20:17:23.390Z",
+  "updatedAt": "2026-09-22T21:16:17.081Z",
   "games": [
     {
       "title": "Valheim",
@@ -98,20 +98,20 @@
       "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 1070 (8 GB) / AMD® Radeon™ RX 5700 XT (8 GB), Intel® Core™ i7-6700 (quad-core) / AMD® Ryzen™ 5 1500X (quad-core)"
     },
     {
-      "title": "Happy Wheels",
-      "tier": "green",
-      "gpu": "Any GPU with WebGL / DirectX 11 support (Intel HD Graphics 4000 or better)",
-      "cpu": "Intel Core i3 / AMD equivalent, 2.0 GHz or better",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Any GPU with WebGL / DirectX 11 support (Intel HD Graphics 4000 or better), Intel Core i3 / AMD equivalent, 2.0 GHz or better"
-    },
-    {
       "title": "Welcome to Elderfield",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1650 / AMD Radeon RX 570 (4GB) or the Radeon RX 5500 / RX 5300",
       "cpu": "11th Gen Intel(R) Core(TM) i5-11600K / AMD Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 / AMD Radeon RX 570 (4GB) or the Radeon RX 5500 / RX 5300, 11th Gen Intel(R) Core(TM) i5-11600K / AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "Happy Wheels",
+      "tier": "green",
+      "gpu": "Any GPU with WebGL / DirectX 11 support (Intel HD Graphics 4000 or better)",
+      "cpu": "Intel Core i3 / AMD equivalent, 2.0 GHz or better",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Any GPU with WebGL / DirectX 11 support (Intel HD Graphics 4000 or better), Intel Core i3 / AMD equivalent, 2.0 GHz or better"
     },
     {
       "title": "Moonlighter 2: The Endless Vault",
@@ -418,6 +418,14 @@
       "note": "Doporučená konfigurace: Intel HD Graphics 530 / AMD Radeon HD 7750 / NVIDIA GeForce GTX 650 (OpenGL 4.6), Intel Core i5-4590 / AMD Ryzen 3 1200 or equivalent"
     },
     {
+      "title": "Graveyard Keeper 2",
+      "tier": "red",
+      "gpu": "GeForce RTX 3060 or similar",
+      "cpu": "Intel Core i5 (13 gen) or similar",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3060 or similar, Intel Core i5 (13 gen) or similar"
+    },
+    {
       "title": "Nuclear Design Bureau",
       "tier": "red",
       "gpu": "GeForce RTX 3070 or Radeon RX 6700 XT, 8 GB VRAM",
@@ -474,6 +482,14 @@
       "note": "Doporučená konfigurace: Nvidia RTX 2060/AMD RX 5060 XT, Intel i5-8500/AMD Ryzen 5 2600"
     },
     {
+      "title": "Ved: Recure",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 1660Ti",
+      "cpu": "Intel i5+",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1660Ti, Intel i5+"
+    },
+    {
       "title": "For the Fatherland: Chronicle of Park Chung-hee",
       "tier": "green",
       "gpu": "GTX 1650 Super",
@@ -512,22 +528,6 @@
       "cpu": "AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 or AMD Equivalent, AMD Ryzen 5 3600"
-    },
-    {
-      "title": "Ved: Recure",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1660Ti",
-      "cpu": "Intel i5+",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1660Ti, Intel i5+"
-    },
-    {
-      "title": "Graveyard Keeper 2",
-      "tier": "red",
-      "gpu": "GeForce RTX 3060 or similar",
-      "cpu": "Intel Core i5 (13 gen) or similar",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 or similar, Intel Core i5 (13 gen) or similar"
     },
     {
       "title": "The Plant Shop",
@@ -602,20 +602,20 @@
       "note": "Minimální konfigurace: Radeon RX Vega 11 / Intel Iris Xe / GTX 1050 2GB, 2.5 GHz dual-core"
     },
     {
-      "title": "Inferno Protocol",
-      "tier": "green",
-      "gpu": "GTX 1070",
-      "cpu": "Intel i5 8400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1070, Intel i5 8400"
-    },
-    {
       "title": "Animaly Bar: NO HUMANITY!",
       "tier": "green",
       "gpu": "NVIDIA GTX 1660 or AMD Radeon RX 580",
       "cpu": "Intel Core i7-8700K or AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1660 or AMD Radeon RX 580, Intel Core i7-8700K or AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Inferno Protocol",
+      "tier": "green",
+      "gpu": "GTX 1070",
+      "cpu": "Intel i5 8400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1070, Intel i5 8400"
     },
     {
       "title": "Port of Jumanah",
@@ -648,6 +648,14 @@
       "cpu": "2.0 Ghz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 950, 2.0 Ghz"
+    },
+    {
+      "title": "Another Eden Begins",
+      "tier": "green",
+      "gpu": "AMD Radeon™ RX 470 /  Intel® Arc™ A580 /  NVIDIA® GeForce® GTX 1060",
+      "cpu": "AMD Ryzen™ 5 2600 /  Intel® Core™ i5-8400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: AMD Radeon™ RX 470 /  Intel® Arc™ A580 /  NVIDIA® GeForce® GTX 1060, AMD Ryzen™ 5 2600 /  Intel® Core™ i5-8400"
     },
     {
       "title": "I Need to Fix My Dream Car (But I Work at a Junkyard)",
@@ -736,14 +744,6 @@
       "cpu": "Intel Core i5-3470",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1050 (2GB), Radeon R9 380 (2GB), Intel Core i5-3470"
-    },
-    {
-      "title": "007 First Light",
-      "tier": "red",
-      "gpu": "NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT",
-      "cpu": "INTEL CORE i5 13500, AMD RYZEN 5 7600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT, INTEL CORE i5 13500, AMD RYZEN 5 7600"
     }
   ]
 }
