@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T14:18:09.309Z",
+  "updatedAt": "2026-09-22T15:16:47.382Z",
   "games": [
     {
       "title": "Valheim",
@@ -122,20 +122,20 @@
       "note": "Doporučená konfigurace: RTX 3070 / RX 6700 XT, Intel Core i7-8700k / AMD Ryzen 7-5700"
     },
     {
-      "title": "Breathedge 2",
-      "tier": "red",
-      "gpu": "NVidia Geforce RTX 3070 8GB / AMD RX 6700 XT 8GB",
-      "cpu": "Intel Core i7-13700 / AMD Ryzen 7 7700X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVidia Geforce RTX 3070 8GB / AMD RX 6700 XT 8GB, Intel Core i7-13700 / AMD Ryzen 7 7700X"
-    },
-    {
       "title": "Happy Wheels",
       "tier": "green",
       "gpu": "Any GPU with WebGL / DirectX 11 support (Intel HD Graphics 4000 or better)",
       "cpu": "Intel Core i3 / AMD equivalent, 2.0 GHz or better",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Any GPU with WebGL / DirectX 11 support (Intel HD Graphics 4000 or better), Intel Core i3 / AMD equivalent, 2.0 GHz or better"
+    },
+    {
+      "title": "Breathedge 2",
+      "tier": "red",
+      "gpu": "NVidia Geforce RTX 3070 8GB / AMD RX 6700 XT 8GB",
+      "cpu": "Intel Core i7-13700 / AMD Ryzen 7 7700X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVidia Geforce RTX 3070 8GB / AMD RX 6700 XT 8GB, Intel Core i7-13700 / AMD Ryzen 7 7700X"
     },
     {
       "title": "Resonance: A Plague Tale Legacy",
@@ -250,6 +250,14 @@
       "note": "Doporučená konfigurace: AMD Radeon RX 5600 XT / NVIDIA GeForce RTX 2060, AMD Ryzen 5 5600X / Intel Core i5-12400F"
     },
     {
+      "title": "Police Chief Simulator",
+      "tier": "green",
+      "gpu": "GeForce GTX 1060",
+      "cpu": "Intel Core i5-3550",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 1060, Intel Core i5-3550"
+    },
+    {
       "title": "Master Of Pottery",
       "tier": "green",
       "gpu": "GeForce GTX 1060 (6 GB)",
@@ -266,14 +274,6 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 / AMD RX 6600 XT, Intel Core i7-10700K / AMD Ryzen 7 3700X"
     },
     {
-      "title": "Police Chief Simulator",
-      "tier": "green",
-      "gpu": "GeForce GTX 1060",
-      "cpu": "Intel Core i5-3550",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 1060, Intel Core i5-3550"
-    },
-    {
       "title": "Allumeria",
       "tier": "green",
       "gpu": "Nvidia GTX 1650 or Equivalent",
@@ -282,20 +282,20 @@
       "note": "Doporučená konfigurace: Nvidia GTX 1650 or Equivalent, 10th Gen Intel i5 or Equivalent"
     },
     {
-      "title": "Last Breath 最后的气息",
-      "tier": "orange",
-      "gpu": "NVIDIA GeForce GTX 2060/AMD Radeon RX 6600",
-      "cpu": "AMD Ryzen 5 3600 / Intel Core i7 8700",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 2060/AMD Radeon RX 6600, AMD Ryzen 5 3600 / Intel Core i7 8700"
-    },
-    {
       "title": "The Guild 1 Remake: Europa 1410",
       "tier": "red",
       "gpu": "NVIDIA GeForce RTX 4070 / AMD Radeon RX 7800 XT",
       "cpu": "Intel Core i7-12700k / AMD Ryzen 7 5800X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4070 / AMD Radeon RX 7800 XT, Intel Core i7-12700k / AMD Ryzen 7 5800X"
+    },
+    {
+      "title": "Last Breath 最后的气息",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce GTX 2060/AMD Radeon RX 6600",
+      "cpu": "AMD Ryzen 5 3600 / Intel Core i7 8700",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 2060/AMD Radeon RX 6600, AMD Ryzen 5 3600 / Intel Core i7 8700"
     },
     {
       "title": "Parisian Bistro Simulator",
@@ -466,20 +466,20 @@
       "note": "Doporučená konfigurace: Intel UHD Graphics 630, Intel Core i3-8100"
     },
     {
-      "title": "For the Fatherland: Chronicle of Park Chung-hee",
-      "tier": "green",
-      "gpu": "GTX 1650 Super",
-      "cpu": "AMD Ryzen 5 3500",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1650 Super, AMD Ryzen 5 3500"
-    },
-    {
       "title": "Driving Rogue",
       "tier": "orange",
       "gpu": "Nvidia RTX 2060/AMD RX 5060 XT",
       "cpu": "Intel i5-8500/AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia RTX 2060/AMD RX 5060 XT, Intel i5-8500/AMD Ryzen 5 2600"
+    },
+    {
+      "title": "For the Fatherland: Chronicle of Park Chung-hee",
+      "tier": "green",
+      "gpu": "GTX 1650 Super",
+      "cpu": "AMD Ryzen 5 3500",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1650 Super, AMD Ryzen 5 3500"
     },
     {
       "title": "Red Rocket Defencism",
@@ -634,14 +634,6 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 950, 2.0 Ghz"
     },
     {
-      "title": "The Old Flesh of Nuraga",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1050/970, AMD Radeon R9 290 equivalent or better",
-      "cpu": "Intel i5-4590, AMD FX 8350 equivalent or better",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Nvidia GeForce GTX 1050/970, AMD Radeon R9 290 equivalent or better, Intel i5-4590, AMD FX 8350 equivalent or better"
-    },
-    {
       "title": "Another Eden Begins",
       "tier": "green",
       "gpu": "AMD Radeon™ RX 470 /  Intel® Arc™ A580 /  NVIDIA® GeForce® GTX 1060",
@@ -674,6 +666,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 Ti / AMD Radeon R7 260X, Intel Core i3-6100 / AMD FX-8350"
     },
     {
+      "title": "Ved: Recure",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 1660Ti",
+      "cpu": "Intel i5+",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1660Ti, Intel i5+"
+    },
+    {
       "title": "Push Push",
       "tier": "green",
       "gpu": "GTX 1060 / RX 580",
@@ -688,14 +688,6 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580 or equivalent, Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
-      "title": "Ved: Recure",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1660Ti",
-      "cpu": "Intel i5+",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1660Ti, Intel i5+"
     },
     {
       "title": "GON: God Of Nothing",
@@ -728,6 +720,46 @@
       "cpu": "Ryzen 3 1200 / Core i5-7400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1060 / Radeon RX 470, Ryzen 3 1200 / Core i5-7400"
+    },
+    {
+      "title": "Hollow Knight: Silksong",
+      "tier": "green",
+      "gpu": "GeForce GTX 1050 (2GB), Radeon R9 380 (2GB)",
+      "cpu": "Intel Core i5-3470",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1050 (2GB), Radeon R9 380 (2GB), Intel Core i5-3470"
+    },
+    {
+      "title": "007 First Light",
+      "tier": "red",
+      "gpu": "NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT",
+      "cpu": "INTEL CORE i5 13500, AMD RYZEN 5 7600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT, INTEL CORE i5 13500, AMD RYZEN 5 7600"
+    },
+    {
+      "title": "Call of the Elder Gods",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 1650 / AMD Radeon RX 580",
+      "cpu": "Intel Core i5-11600K / AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1650 / AMD Radeon RX 580, Intel Core i5-11600K / AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "REPLACED",
+      "tier": "green",
+      "gpu": "GeForce GTX 1060 (6GB) or equivalent",
+      "cpu": "Intel® Core™ i5-8400 Processor",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
+    },
+    {
+      "title": "MOUSE: P.I. For Hire",
+      "tier": "orange",
+      "gpu": "GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600",
+      "cpu": "Intel Core i5 9600 / Ryzen 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600, Intel Core i5 9600 / Ryzen 3600"
     }
   ]
 }
