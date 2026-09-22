@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T15:16:47.382Z",
+  "updatedAt": "2026-09-22T16:18:09.530Z",
   "games": [
     {
       "title": "Valheim",
@@ -114,20 +114,20 @@
       "note": "Doporučená konfigurace: AMD Radeon RX 5700 or NVidia GeForce RTX 3060 or Intel Arc A770, AMD Ryzen 5 3600 or Intel Core i5-12500"
     },
     {
-      "title": "CONVRGENCE",
-      "tier": "red",
-      "gpu": "RTX 3070 / RX 6700 XT",
-      "cpu": "Intel Core i7-8700k / AMD Ryzen 7-5700",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 3070 / RX 6700 XT, Intel Core i7-8700k / AMD Ryzen 7-5700"
-    },
-    {
       "title": "Happy Wheels",
       "tier": "green",
       "gpu": "Any GPU with WebGL / DirectX 11 support (Intel HD Graphics 4000 or better)",
       "cpu": "Intel Core i3 / AMD equivalent, 2.0 GHz or better",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Any GPU with WebGL / DirectX 11 support (Intel HD Graphics 4000 or better), Intel Core i3 / AMD equivalent, 2.0 GHz or better"
+    },
+    {
+      "title": "CONVRGENCE",
+      "tier": "red",
+      "gpu": "RTX 3070 / RX 6700 XT",
+      "cpu": "Intel Core i7-8700k / AMD Ryzen 7-5700",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 3070 / RX 6700 XT, Intel Core i7-8700k / AMD Ryzen 7-5700"
     },
     {
       "title": "Breathedge 2",
@@ -338,20 +338,20 @@
       "note": "Doporučená konfigurace: GeForce GTX 960 / Radeon R9 380 (2GB VRAM), Intel Core i5-4570 / AMD Ryzen 5 1400"
     },
     {
-      "title": "Megastore: Tidy Up Together",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1060 3GB",
-      "cpu": "i5 7600K / Ryzen 5 2600x",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1060 3GB, i5 7600K / Ryzen 5 2600x"
-    },
-    {
       "title": "DISCIPLINE SIMULATOR",
       "tier": "orange",
       "gpu": "RTX 2060",
       "cpu": "Intel Core i7 8700",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 2060, Intel Core i7 8700"
+    },
+    {
+      "title": "Megastore: Tidy Up Together",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1060 3GB",
+      "cpu": "i5 7600K / Ryzen 5 2600x",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1060 3GB, i5 7600K / Ryzen 5 2600x"
     },
     {
       "title": "Beetleball",
@@ -498,20 +498,20 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10600 / AMD Ryzen 5 3600"
     },
     {
-      "title": "Soul Chained",
-      "tier": "red",
-      "gpu": "Nvidia GeForce RTX 3060 or AMD Equivalent",
-      "cpu": "AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 or AMD Equivalent, AMD Ryzen 5 3600"
-    },
-    {
       "title": "Kernel Hearts",
       "tier": "green",
       "gpu": "NVIDIA GeForce RTX 2060 / GTX 1660 Ti or equivalent",
       "cpu": "Intel Core i7-10700 / AMD Ryzen 5 3600 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / GTX 1660 Ti or equivalent, Intel Core i7-10700 / AMD Ryzen 5 3600 or equivalent"
+    },
+    {
+      "title": "Soul Chained",
+      "tier": "red",
+      "gpu": "Nvidia GeForce RTX 3060 or AMD Equivalent",
+      "cpu": "AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 or AMD Equivalent, AMD Ryzen 5 3600"
     },
     {
       "title": "Island Market Simulator",
@@ -530,22 +530,6 @@
       "note": "Doporučená konfigurace: GTX 950 or better, 3.2 GHz or better"
     },
     {
-      "title": "Maestro's Cold War 2",
-      "tier": "green",
-      "gpu": "Intel HD 4000 / AMD Radeon R5 230 / NVIDIA GeForce GT 710",
-      "cpu": "2.5 gz and 2 cores",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Intel HD 4000 / AMD Radeon R5 230 / NVIDIA GeForce GT 710, 2.5 gz and 2 cores"
-    },
-    {
-      "title": "The Headlands",
-      "tier": "green",
-      "gpu": "NVIDIA GT 730 / AMD Radeon R7 240 or better (2015 and newer)",
-      "cpu": "Intel Core i3-3220 / AMD FX-6300 or better",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GT 730 / AMD Radeon R7 240 or better (2015 and newer), Intel Core i3-3220 / AMD FX-6300 or better"
-    },
-    {
       "title": "House 2",
       "tier": "green",
       "gpu": "Nvidia GeForce GTX 1060 3GB/ AMD Radeon RX 580 4GB",
@@ -554,12 +538,28 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1060 3GB/ AMD Radeon RX 580 4GB, Intel Corei5-6600K/ AMD Ryzen 5 1600"
     },
     {
+      "title": "Maestro's Cold War 2",
+      "tier": "green",
+      "gpu": "Intel HD 4000 / AMD Radeon R5 230 / NVIDIA GeForce GT 710",
+      "cpu": "2.5 gz and 2 cores",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Intel HD 4000 / AMD Radeon R5 230 / NVIDIA GeForce GT 710, 2.5 gz and 2 cores"
+    },
+    {
       "title": "Golden Swirl",
       "tier": "green",
       "gpu": "Dedicated GPU (e.g., NVIDIA GeForce GTX 1060 or equivalent)",
       "cpu": "Intel Core i5 or higher",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Dedicated GPU (e.g., NVIDIA GeForce GTX 1060 or equivalent), Intel Core i5 or higher"
+    },
+    {
+      "title": "The Headlands",
+      "tier": "green",
+      "gpu": "NVIDIA GT 730 / AMD Radeon R7 240 or better (2015 and newer)",
+      "cpu": "Intel Core i3-3220 / AMD FX-6300 or better",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GT 730 / AMD Radeon R7 240 or better (2015 and newer), Intel Core i3-3220 / AMD FX-6300 or better"
     },
     {
       "title": "Fracture Point",
@@ -626,6 +626,14 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD equivalent, Intel Core i5 / AMD equivalent"
     },
     {
+      "title": "Ved: Recure",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 1660Ti",
+      "cpu": "Intel i5+",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1660Ti, Intel i5+"
+    },
+    {
       "title": "Curse of Pirates",
       "tier": "green",
       "gpu": "NVIDIA GTX 950",
@@ -666,14 +674,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 Ti / AMD Radeon R7 260X, Intel Core i3-6100 / AMD FX-8350"
     },
     {
-      "title": "Ved: Recure",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1660Ti",
-      "cpu": "Intel i5+",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1660Ti, Intel i5+"
-    },
-    {
       "title": "Push Push",
       "tier": "green",
       "gpu": "GTX 1060 / RX 580",
@@ -712,54 +712,6 @@
       "cpu": "Intel Core i5-12600K / AMD Ryzen 5 7600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD RX 6600 XT, Intel Core i5-12600K / AMD Ryzen 5 7600X"
-    },
-    {
-      "title": "Deer & Boy",
-      "tier": "green",
-      "gpu": "GeForce GTX 1060 / Radeon RX 470",
-      "cpu": "Ryzen 3 1200 / Core i5-7400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1060 / Radeon RX 470, Ryzen 3 1200 / Core i5-7400"
-    },
-    {
-      "title": "Hollow Knight: Silksong",
-      "tier": "green",
-      "gpu": "GeForce GTX 1050 (2GB), Radeon R9 380 (2GB)",
-      "cpu": "Intel Core i5-3470",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1050 (2GB), Radeon R9 380 (2GB), Intel Core i5-3470"
-    },
-    {
-      "title": "007 First Light",
-      "tier": "red",
-      "gpu": "NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT",
-      "cpu": "INTEL CORE i5 13500, AMD RYZEN 5 7600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT, INTEL CORE i5 13500, AMD RYZEN 5 7600"
-    },
-    {
-      "title": "Call of the Elder Gods",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1650 / AMD Radeon RX 580",
-      "cpu": "Intel Core i5-11600K / AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1650 / AMD Radeon RX 580, Intel Core i5-11600K / AMD Ryzen 5 5600X"
-    },
-    {
-      "title": "REPLACED",
-      "tier": "green",
-      "gpu": "GeForce GTX 1060 (6GB) or equivalent",
-      "cpu": "Intel® Core™ i5-8400 Processor",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
-    },
-    {
-      "title": "MOUSE: P.I. For Hire",
-      "tier": "orange",
-      "gpu": "GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600",
-      "cpu": "Intel Core i5 9600 / Ryzen 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600, Intel Core i5 9600 / Ryzen 3600"
     }
   ]
 }
