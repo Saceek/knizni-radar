@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-21T23:20:06.680Z",
+  "updatedAt": "2026-09-22T00:17:49.130Z",
   "games": [
     {
       "title": "Valheim",
@@ -162,6 +162,14 @@
       "note": "Doporučená konfigurace: VR: RTX 3060 or better, VR: Intel Core i7-12700 or better"
     },
     {
+      "title": "Happy Wheels",
+      "tier": "green",
+      "gpu": "Any GPU with WebGL / DirectX 11 support (Intel HD Graphics 4000 or better)",
+      "cpu": "Intel Core i3 / AMD equivalent, 2.0 GHz or better",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Any GPU with WebGL / DirectX 11 support (Intel HD Graphics 4000 or better), Intel Core i3 / AMD equivalent, 2.0 GHz or better"
+    },
+    {
       "title": "Active Matter",
       "tier": "orange",
       "gpu": "RTX 2060 / RX 5700 XT / ARC A770",
@@ -176,14 +184,6 @@
       "cpu": "Intel® Core™ i5-6400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 6GB, Intel® Core™ i5-6400"
-    },
-    {
-      "title": "Happy Wheels",
-      "tier": "green",
-      "gpu": "Any GPU with WebGL / DirectX 11 support (Intel HD Graphics 4000 or better)",
-      "cpu": "Intel Core i3 / AMD equivalent, 2.0 GHz or better",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Any GPU with WebGL / DirectX 11 support (Intel HD Graphics 4000 or better), Intel Core i3 / AMD equivalent, 2.0 GHz or better"
     },
     {
       "title": "BOMBANANA!",
@@ -362,20 +362,20 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 | AMD Radeon RX Vega 56, Intel Core i7-8700K | AMD Ryzen 5 3600X"
     },
     {
-      "title": "点击地牢 Tap Dungeon",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 650 / AMD Radeon HD 5770",
-      "cpu": "Intel Core i3-3220 / AMD FX-4100",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 650 / AMD Radeon HD 5770, Intel Core i3-3220 / AMD FX-4100"
-    },
-    {
       "title": "DISCIPLINE SIMULATOR",
       "tier": "orange",
       "gpu": "RTX 2060",
       "cpu": "Intel Core i7 8700",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 2060, Intel Core i7 8700"
+    },
+    {
+      "title": "点击地牢 Tap Dungeon",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 650 / AMD Radeon HD 5770",
+      "cpu": "Intel Core i3-3220 / AMD FX-4100",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 650 / AMD Radeon HD 5770, Intel Core i3-3220 / AMD FX-4100"
     },
     {
       "title": "Train Sim World® 7 ",
@@ -394,20 +394,20 @@
       "note": "Doporučená konfigurace: NVIDIA Geforce RTX 3070, Intel i7 11th Gen"
     },
     {
-      "title": "Forsworn",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1660",
-      "cpu": "i5-9400 / Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1660, i5-9400 / Ryzen 5 3600"
-    },
-    {
       "title": "我的解体史",
       "tier": "green",
       "gpu": "Intel HD Graphics 530 / AMD Radeon HD 7750 / NVIDIA GeForce GTX 650 (OpenGL 4.6)",
       "cpu": "Intel Core i5-4590 / AMD Ryzen 3 1200 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Intel HD Graphics 530 / AMD Radeon HD 7750 / NVIDIA GeForce GTX 650 (OpenGL 4.6), Intel Core i5-4590 / AMD Ryzen 3 1200 or equivalent"
+    },
+    {
+      "title": "Forsworn",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1660",
+      "cpu": "i5-9400 / Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1660, i5-9400 / Ryzen 5 3600"
     },
     {
       "title": "Fright Train",
@@ -418,20 +418,20 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 2060, Intel Core i7-12700H"
     },
     {
-      "title": "Dawson Oaks Trailer Park",
-      "tier": "orange",
-      "gpu": "Nvidia Geforce GTX 1080Ti",
-      "cpu": null,
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia Geforce GTX 1080Ti"
-    },
-    {
       "title": "Nuclear Design Bureau",
       "tier": "red",
       "gpu": "GeForce RTX 3070 or Radeon RX 6700 XT, 8 GB VRAM",
       "cpu": "8-core, Intel i7-10700 or AMD Ryzen 7 3700X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 3070 or Radeon RX 6700 XT, 8 GB VRAM, 8-core, Intel i7-10700 or AMD Ryzen 7 3700X"
+    },
+    {
+      "title": "Dawson Oaks Trailer Park",
+      "tier": "orange",
+      "gpu": "Nvidia Geforce GTX 1080Ti",
+      "cpu": null,
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia Geforce GTX 1080Ti"
     },
     {
       "title": "Retro Arcade Shop Simulator",
@@ -490,20 +490,20 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10600 / AMD Ryzen 5 3600"
     },
     {
-      "title": "Soul Chained",
-      "tier": "red",
-      "gpu": "Nvidia GeForce RTX 3060 or AMD Equivalent",
-      "cpu": "AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 or AMD Equivalent, AMD Ryzen 5 3600"
-    },
-    {
       "title": "Driving Rogue",
       "tier": "orange",
       "gpu": "Nvidia RTX 2060/AMD RX 5060 XT",
       "cpu": "Intel i5-8500/AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia RTX 2060/AMD RX 5060 XT, Intel i5-8500/AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Soul Chained",
+      "tier": "red",
+      "gpu": "Nvidia GeForce RTX 3060 or AMD Equivalent",
+      "cpu": "AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 or AMD Equivalent, AMD Ryzen 5 3600"
     },
     {
       "title": "Island Market Simulator",
@@ -530,6 +530,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / GTX 1660 Ti or equivalent, Intel Core i7-10700 / AMD Ryzen 5 3600 or equivalent"
     },
     {
+      "title": "The Headlands",
+      "tier": "green",
+      "gpu": "NVIDIA GT 730 / AMD Radeon R7 240 or better (2015 and newer)",
+      "cpu": "Intel Core i3-3220 / AMD FX-6300 or better",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GT 730 / AMD Radeon R7 240 or better (2015 and newer), Intel Core i3-3220 / AMD FX-6300 or better"
+    },
+    {
       "title": "Golden Swirl",
       "tier": "green",
       "gpu": "Dedicated GPU (e.g., NVIDIA GeForce GTX 1060 or equivalent)",
@@ -544,14 +552,6 @@
       "cpu": "Intel Corei5-6600K/ AMD Ryzen 5 1600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1060 3GB/ AMD Radeon RX 580 4GB, Intel Corei5-6600K/ AMD Ryzen 5 1600"
-    },
-    {
-      "title": "The Headlands",
-      "tier": "green",
-      "gpu": "NVIDIA GT 730 / AMD Radeon R7 240 or better (2015 and newer)",
-      "cpu": "Intel Core i3-3220 / AMD FX-6300 or better",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GT 730 / AMD Radeon R7 240 or better (2015 and newer), Intel Core i3-3220 / AMD FX-6300 or better"
     },
     {
       "title": "Fracture Point",
@@ -744,6 +744,30 @@
       "cpu": "INTEL CORE i5 13500, AMD RYZEN 5 7600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT, INTEL CORE i5 13500, AMD RYZEN 5 7600"
+    },
+    {
+      "title": "Call of the Elder Gods",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 1650 / AMD Radeon RX 580",
+      "cpu": "Intel Core i5-11600K / AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1650 / AMD Radeon RX 580, Intel Core i5-11600K / AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "REPLACED",
+      "tier": "green",
+      "gpu": "GeForce GTX 1060 (6GB) or equivalent",
+      "cpu": "Intel® Core™ i5-8400 Processor",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
+    },
+    {
+      "title": "MOUSE: P.I. For Hire",
+      "tier": "orange",
+      "gpu": "GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600",
+      "cpu": "Intel Core i5 9600 / Ryzen 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600, Intel Core i5 9600 / Ryzen 3600"
     }
   ]
 }
