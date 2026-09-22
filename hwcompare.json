@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T02:21:51.387Z",
+  "updatedAt": "2026-09-22T03:16:40.377Z",
   "games": [
     {
       "title": "Valheim",
@@ -394,20 +394,20 @@
       "note": "Doporučená konfigurace: NVIDIA Geforce RTX 3070, Intel i7 11th Gen"
     },
     {
-      "title": "Forsworn",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1660",
-      "cpu": "i5-9400 / Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1660, i5-9400 / Ryzen 5 3600"
-    },
-    {
       "title": "Fright Train",
       "tier": "orange",
       "gpu": "NVIDIA RTX 2060",
       "cpu": "Intel Core i7-12700H",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 2060, Intel Core i7-12700H"
+    },
+    {
+      "title": "Forsworn",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1660",
+      "cpu": "i5-9400 / Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1660, i5-9400 / Ryzen 5 3600"
     },
     {
       "title": "我的解体史",
@@ -434,20 +434,20 @@
       "note": "Doporučená konfigurace: Nvidia Geforce GTX 1080Ti"
     },
     {
-      "title": "Retro Arcade Shop Simulator",
-      "tier": "orange",
-      "gpu": "NVIDIA GeForce RTX 2070 Super or AMD Radeon RX 6600 XT",
-      "cpu": "Intel Core i5-12600K or AMD Ryzen 5 7600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 Super or AMD Radeon RX 6600 XT, Intel Core i5-12600K or AMD Ryzen 5 7600X"
-    },
-    {
       "title": "Dumb Ways to Build",
       "tier": "red",
       "gpu": "RTX 3060 (12GB) / RX 6700 XT",
       "cpu": "6-Core / 12-Thread (Intel i5-12400, Ryzen 5 5600X)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 3060 (12GB) / RX 6700 XT, 6-Core / 12-Thread (Intel i5-12400, Ryzen 5 5600X)"
+    },
+    {
+      "title": "Retro Arcade Shop Simulator",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce RTX 2070 Super or AMD Radeon RX 6600 XT",
+      "cpu": "Intel Core i5-12600K or AMD Ryzen 5 7600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 Super or AMD Radeon RX 6600 XT, Intel Core i5-12600K or AMD Ryzen 5 7600X"
     },
     {
       "title": "Paver: Tidy Up Together",
@@ -728,6 +728,46 @@
       "cpu": "Ryzen 3 1200 / Core i5-7400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1060 / Radeon RX 470, Ryzen 3 1200 / Core i5-7400"
+    },
+    {
+      "title": "Hollow Knight: Silksong",
+      "tier": "green",
+      "gpu": "GeForce GTX 1050 (2GB), Radeon R9 380 (2GB)",
+      "cpu": "Intel Core i5-3470",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1050 (2GB), Radeon R9 380 (2GB), Intel Core i5-3470"
+    },
+    {
+      "title": "007 First Light",
+      "tier": "red",
+      "gpu": "NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT",
+      "cpu": "INTEL CORE i5 13500, AMD RYZEN 5 7600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT, INTEL CORE i5 13500, AMD RYZEN 5 7600"
+    },
+    {
+      "title": "Call of the Elder Gods",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 1650 / AMD Radeon RX 580",
+      "cpu": "Intel Core i5-11600K / AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1650 / AMD Radeon RX 580, Intel Core i5-11600K / AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "REPLACED",
+      "tier": "green",
+      "gpu": "GeForce GTX 1060 (6GB) or equivalent",
+      "cpu": "Intel® Core™ i5-8400 Processor",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
+    },
+    {
+      "title": "MOUSE: P.I. For Hire",
+      "tier": "orange",
+      "gpu": "GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600",
+      "cpu": "Intel Core i5 9600 / Ryzen 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600, Intel Core i5 9600 / Ryzen 3600"
     }
   ]
 }
