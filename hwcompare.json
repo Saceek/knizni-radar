@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T10:17:25.916Z",
+  "updatedAt": "2026-09-22T11:16:47.631Z",
   "games": [
     {
       "title": "Valheim",
@@ -522,20 +522,20 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 480, 5 7600K / Ryzen 5 2600x"
     },
     {
-      "title": "Maestro's Cold War 2",
-      "tier": "green",
-      "gpu": "Intel HD 4000 / AMD Radeon R5 230 / NVIDIA GeForce GT 710",
-      "cpu": "2.5 gz and 2 cores",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Intel HD 4000 / AMD Radeon R5 230 / NVIDIA GeForce GT 710, 2.5 gz and 2 cores"
-    },
-    {
       "title": "The Plant Shop",
       "tier": "green",
       "gpu": "GTX 950 or better",
       "cpu": "3.2 GHz or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 950 or better, 3.2 GHz or better"
+    },
+    {
+      "title": "Maestro's Cold War 2",
+      "tier": "green",
+      "gpu": "Intel HD 4000 / AMD Radeon R5 230 / NVIDIA GeForce GT 710",
+      "cpu": "2.5 gz and 2 cores",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Intel HD 4000 / AMD Radeon R5 230 / NVIDIA GeForce GT 710, 2.5 gz and 2 cores"
     },
     {
       "title": "The Headlands",
@@ -578,14 +578,6 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1050 / AMD Radeon RX 560 or equivalent, Intel Core i5-3470 / AMD Ryzen 3 1200 or equivalent"
     },
     {
-      "title": "COCORO",
-      "tier": "green",
-      "gpu": "Intel HD Graphics, 1920x1080",
-      "cpu": "Intel Core i3 8000 series or later / AMD Ryzen 2000 series or later",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Intel HD Graphics, 1920x1080, Intel Core i3 8000 series or later / AMD Ryzen 2000 series or later"
-    },
-    {
       "title": "Fish Lab",
       "tier": "green",
       "gpu": "Radeon RX Vega 11 / Intel Iris Xe / GTX 1050 2GB",
@@ -602,20 +594,20 @@
       "note": "Doporučená konfigurace: GTX 1070, Intel i5 8400"
     },
     {
-      "title": "Port of Jumanah",
-      "tier": "green",
-      "gpu": "GTX 1660 6GB / RTX 3050 6GB / RX 6600 8GB or Equivalent",
-      "cpu": "Intel Core i5-9400F, AMD Ryzen 5 2600 or Equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1660 6GB / RTX 3050 6GB / RX 6600 8GB or Equivalent, Intel Core i5-9400F, AMD Ryzen 5 2600 or Equivalent"
-    },
-    {
       "title": "Animaly Bar: NO HUMANITY!",
       "tier": "green",
       "gpu": "NVIDIA GTX 1660 or AMD Radeon RX 580",
       "cpu": "Intel Core i7-8700K or AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1660 or AMD Radeon RX 580, Intel Core i7-8700K or AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Port of Jumanah",
+      "tier": "green",
+      "gpu": "GTX 1660 6GB / RTX 3050 6GB / RX 6600 8GB or Equivalent",
+      "cpu": "Intel Core i5-9400F, AMD Ryzen 5 2600 or Equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1660 6GB / RTX 3050 6GB / RX 6600 8GB or Equivalent, Intel Core i5-9400F, AMD Ryzen 5 2600 or Equivalent"
     },
     {
       "title": "Asterika: Phantom Rose Refrain",
@@ -720,6 +712,54 @@
       "cpu": "Intel Core i5-12600K / AMD Ryzen 5 7600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD RX 6600 XT, Intel Core i5-12600K / AMD Ryzen 5 7600X"
+    },
+    {
+      "title": "Deer & Boy",
+      "tier": "green",
+      "gpu": "GeForce GTX 1060 / Radeon RX 470",
+      "cpu": "Ryzen 3 1200 / Core i5-7400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1060 / Radeon RX 470, Ryzen 3 1200 / Core i5-7400"
+    },
+    {
+      "title": "Hollow Knight: Silksong",
+      "tier": "green",
+      "gpu": "GeForce GTX 1050 (2GB), Radeon R9 380 (2GB)",
+      "cpu": "Intel Core i5-3470",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1050 (2GB), Radeon R9 380 (2GB), Intel Core i5-3470"
+    },
+    {
+      "title": "007 First Light",
+      "tier": "red",
+      "gpu": "NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT",
+      "cpu": "INTEL CORE i5 13500, AMD RYZEN 5 7600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT, INTEL CORE i5 13500, AMD RYZEN 5 7600"
+    },
+    {
+      "title": "Call of the Elder Gods",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 1650 / AMD Radeon RX 580",
+      "cpu": "Intel Core i5-11600K / AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1650 / AMD Radeon RX 580, Intel Core i5-11600K / AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "REPLACED",
+      "tier": "green",
+      "gpu": "GeForce GTX 1060 (6GB) or equivalent",
+      "cpu": "Intel® Core™ i5-8400 Processor",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
+    },
+    {
+      "title": "MOUSE: P.I. For Hire",
+      "tier": "orange",
+      "gpu": "GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600",
+      "cpu": "Intel Core i5 9600 / Ryzen 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600, Intel Core i5 9600 / Ryzen 3600"
     }
   ]
 }
