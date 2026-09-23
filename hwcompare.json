@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-23T09:16:54.598Z",
+  "updatedAt": "2026-09-23T10:16:12.428Z",
   "games": [
     {
       "title": "Valheim",
@@ -170,6 +170,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 6GB, Intel® Core™ i5-6400"
     },
     {
+      "title": "Graveyard Keeper 2",
+      "tier": "red",
+      "gpu": "GeForce RTX 3060 or similar",
+      "cpu": "Intel Core i5 (13 gen) or similar",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3060 or similar, Intel Core i5 (13 gen) or similar"
+    },
+    {
       "title": "BOMBANANA!",
       "tier": "green",
       "gpu": "Intel Iris Xe / NVIDIA GTX 1050 / AMD RX 560",
@@ -192,14 +200,6 @@
       "cpu": "Intel Core i7-10700 / AMD Ryzen 7 3700X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i7-10700 / AMD Ryzen 7 3700X"
-    },
-    {
-      "title": "Graveyard Keeper 2",
-      "tier": "red",
-      "gpu": "GeForce RTX 3060 or similar",
-      "cpu": "Intel Core i5 (13 gen) or similar",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 or similar, Intel Core i5 (13 gen) or similar"
     },
     {
       "title": "Sunken Engine",
@@ -314,20 +314,20 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4000, Intel Core i3 3110M"
     },
     {
-      "title": "Tales of Fear - Episode Zero",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1060 / AMD Radeon RX 480",
-      "cpu": "Intel Core i7-7700k / AMD Ryzen 7 3700X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD Radeon RX 480, Intel Core i7-7700k / AMD Ryzen 7 3700X"
-    },
-    {
       "title": "DISCIPLINE SIMULATOR",
       "tier": "orange",
       "gpu": "RTX 2060",
       "cpu": "Intel Core i7 8700",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 2060, Intel Core i7 8700"
+    },
+    {
+      "title": "Tales of Fear - Episode Zero",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1060 / AMD Radeon RX 480",
+      "cpu": "Intel Core i7-7700k / AMD Ryzen 7 3700X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD Radeon RX 480, Intel Core i7-7700k / AMD Ryzen 7 3700X"
     },
     {
       "title": "Garden of Witches",
@@ -690,20 +690,20 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 2060, Intel i7-9700K"
     },
     {
-      "title": "Cosmic Fear",
-      "tier": "red",
-      "gpu": "Nvidia RTX 4070 / AMD RX 7800XT",
-      "cpu": "Intel 11600k / AMD 5600x",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia RTX 4070 / AMD RX 7800XT, Intel 11600k / AMD 5600x"
-    },
-    {
       "title": "Roadhouse Simulator",
       "tier": "green",
       "gpu": "Nvidia GeForce GTX 1070 or better 6GB VRAM",
       "cpu": "Intel Core i5 (recent generetion)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 or better 6GB VRAM, Intel Core i5 (recent generetion)"
+    },
+    {
+      "title": "Cosmic Fear",
+      "tier": "red",
+      "gpu": "Nvidia RTX 4070 / AMD RX 7800XT",
+      "cpu": "Intel 11600k / AMD 5600x",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia RTX 4070 / AMD RX 7800XT, Intel 11600k / AMD 5600x"
     },
     {
       "title": "DIVE or DIE - Children of Rain",
