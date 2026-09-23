@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-23T02:16:29.276Z",
+  "updatedAt": "2026-09-23T03:17:05.603Z",
   "games": [
     {
       "title": "Valheim",
@@ -242,12 +242,28 @@
       "note": "Doporučená konfigurace: AMD Radeon RX 5600 XT / NVIDIA GeForce RTX 2060, AMD Ryzen 5 5600X / Intel Core i5-12400F"
     },
     {
+      "title": "Graveyard Keeper 2",
+      "tier": "red",
+      "gpu": "GeForce RTX 3060 or similar",
+      "cpu": "Intel Core i5 (13 gen) or similar",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3060 or similar, Intel Core i5 (13 gen) or similar"
+    },
+    {
       "title": "Police Chief Simulator",
       "tier": "green",
       "gpu": "GeForce GTX 1060",
       "cpu": "Intel Core i5-3550",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce GTX 1060, Intel Core i5-3550"
+    },
+    {
+      "title": "The Guild 1 Remake: Europa 1410",
+      "tier": "red",
+      "gpu": "NVIDIA GeForce RTX 4070 / AMD Radeon RX 7800 XT",
+      "cpu": "Intel Core i7-12700k / AMD Ryzen 7 5800X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4070 / AMD Radeon RX 7800 XT, Intel Core i7-12700k / AMD Ryzen 7 5800X"
     },
     {
       "title": "Master Of Pottery",
@@ -266,14 +282,6 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 / AMD RX 6600 XT, Intel Core i7-10700K / AMD Ryzen 7 3700X"
     },
     {
-      "title": "The Guild 1 Remake: Europa 1410",
-      "tier": "red",
-      "gpu": "NVIDIA GeForce RTX 4070 / AMD Radeon RX 7800 XT",
-      "cpu": "Intel Core i7-12700k / AMD Ryzen 7 5800X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4070 / AMD Radeon RX 7800 XT, Intel Core i7-12700k / AMD Ryzen 7 5800X"
-    },
-    {
       "title": "Allumeria",
       "tier": "green",
       "gpu": "Nvidia GTX 1650 or Equivalent",
@@ -288,14 +296,6 @@
       "cpu": "AMD Ryzen 5 3600 / Intel Core i7 8700",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 2060/AMD Radeon RX 6600, AMD Ryzen 5 3600 / Intel Core i7 8700"
-    },
-    {
-      "title": "Graveyard Keeper 2",
-      "tier": "red",
-      "gpu": "GeForce RTX 3060 or similar",
-      "cpu": "Intel Core i5 (13 gen) or similar",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 or similar, Intel Core i5 (13 gen) or similar"
     },
     {
       "title": "Parisian Bistro Simulator",
@@ -744,30 +744,6 @@
       "cpu": "INTEL CORE i5 13500, AMD RYZEN 5 7600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT, INTEL CORE i5 13500, AMD RYZEN 5 7600"
-    },
-    {
-      "title": "Call of the Elder Gods",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1650 / AMD Radeon RX 580",
-      "cpu": "Intel Core i5-11600K / AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1650 / AMD Radeon RX 580, Intel Core i5-11600K / AMD Ryzen 5 5600X"
-    },
-    {
-      "title": "REPLACED",
-      "tier": "green",
-      "gpu": "GeForce GTX 1060 (6GB) or equivalent",
-      "cpu": "Intel® Core™ i5-8400 Processor",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
-    },
-    {
-      "title": "MOUSE: P.I. For Hire",
-      "tier": "orange",
-      "gpu": "GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600",
-      "cpu": "Intel Core i5 9600 / Ryzen 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600, Intel Core i5 9600 / Ryzen 3600"
     }
   ]
 }
