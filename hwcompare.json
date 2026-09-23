@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-23T20:17:01.084Z",
+  "updatedAt": "2026-09-23T21:16:53.865Z",
   "games": [
     {
       "title": "Valheim",
@@ -138,6 +138,14 @@
       "note": "Doporučená konfigurace: VR: RTX 3060 or better, VR: Intel Core i7-12700 or better"
     },
     {
+      "title": "Graveyard Keeper 2",
+      "tier": "red",
+      "gpu": "GeForce RTX 3060 or similar",
+      "cpu": "Intel Core i5 (13 gen) or similar",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3060 or similar, Intel Core i5 (13 gen) or similar"
+    },
+    {
       "title": "Scarlet Skips",
       "tier": "red",
       "gpu": "NVIDIA RTX 2080",
@@ -152,14 +160,6 @@
       "cpu": "Ryzen 5 5600X﻿ or ﻿i5-12400 ﻿or equivalent performance, 6 physical cores minimum",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia RTX 2070﻿ or RX 5700, or equivalent performance &amp; VRAM, Ryzen 5 5600X﻿ or ﻿i5-12400 ﻿or equivalent performance, 6 physical cores minimum"
-    },
-    {
-      "title": "Graveyard Keeper 2",
-      "tier": "red",
-      "gpu": "GeForce RTX 3060 or similar",
-      "cpu": "Intel Core i5 (13 gen) or similar",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 or similar, Intel Core i5 (13 gen) or similar"
     },
     {
       "title": "Active Matter",
@@ -330,20 +330,20 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD Radeon RX 480, Intel Core i7-7700k / AMD Ryzen 7 3700X"
     },
     {
-      "title": "Garden of Witches",
-      "tier": "green",
-      "gpu": "GeForce GTX 960 / Radeon R9 380 (2GB VRAM)",
-      "cpu": "Intel Core i5-4570 / AMD Ryzen 5 1400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 960 / Radeon R9 380 (2GB VRAM), Intel Core i5-4570 / AMD Ryzen 5 1400"
-    },
-    {
       "title": "Megastore: Tidy Up Together",
       "tier": "green",
       "gpu": "NVIDIA GTX 1060 3GB",
       "cpu": "i5 7600K / Ryzen 5 2600x",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 3GB, i5 7600K / Ryzen 5 2600x"
+    },
+    {
+      "title": "Garden of Witches",
+      "tier": "green",
+      "gpu": "GeForce GTX 960 / Radeon R9 380 (2GB VRAM)",
+      "cpu": "Intel Core i5-4570 / AMD Ryzen 5 1400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 960 / Radeon R9 380 (2GB VRAM), Intel Core i5-4570 / AMD Ryzen 5 1400"
     },
     {
       "title": "Beetleball",
@@ -442,20 +442,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1070 | AMD Radeon RX-6600, Intel Core i5-13400F | AMD Ryzen 5 7600x"
     },
     {
-      "title": "창세기전 외전: 서풍의 광시곡 리마스터",
-      "tier": "green",
-      "gpu": "Intel UHD Graphics 630",
-      "cpu": "Intel Core i3-8100",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Intel UHD Graphics 630, Intel Core i3-8100"
-    },
-    {
       "title": "Driving Rogue",
       "tier": "orange",
       "gpu": "Nvidia RTX 2060/AMD RX 5060 XT",
       "cpu": "Intel i5-8500/AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia RTX 2060/AMD RX 5060 XT, Intel i5-8500/AMD Ryzen 5 2600"
+    },
+    {
+      "title": "창세기전 외전: 서풍의 광시곡 리마스터",
+      "tier": "green",
+      "gpu": "Intel UHD Graphics 630",
+      "cpu": "Intel Core i3-8100",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Intel UHD Graphics 630, Intel Core i3-8100"
     },
     {
       "title": "Retro Arcade Shop Simulator",
@@ -706,6 +706,14 @@
       "note": "Doporučená konfigurace: Nvidia RTX 2070﻿ or RX 5700, or equivalent performance &amp; VRAM, Ryzen 5 5600X﻿ or ﻿i5-12400 ﻿or equivalent performance, 6 physical cores minimum"
     },
     {
+      "title": "BioEden",
+      "tier": "green",
+      "gpu": "6 GB VRAM, AMD Radeon RX 580 / Nvidia GeForce GTX 1080",
+      "cpu": "AMD Ryzen 5 1600X / Intel Core i7-7700K",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 6 GB VRAM, AMD Radeon RX 580 / Nvidia GeForce GTX 1080, AMD Ryzen 5 1600X / Intel Core i7-7700K"
+    },
+    {
       "title": "DIVE or DIE - Children of Rain",
       "tier": "green",
       "gpu": "GTX 1050 / RX VEGA-56",
@@ -760,6 +768,22 @@
       "cpu": "Intel Core i5-11600K / AMD Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1650 / AMD Radeon RX 580, Intel Core i5-11600K / AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "REPLACED",
+      "tier": "green",
+      "gpu": "GeForce GTX 1060 (6GB) or equivalent",
+      "cpu": "Intel® Core™ i5-8400 Processor",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
+    },
+    {
+      "title": "MOUSE: P.I. For Hire",
+      "tier": "orange",
+      "gpu": "GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600",
+      "cpu": "Intel Core i5 9600 / Ryzen 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600, Intel Core i5 9600 / Ryzen 3600"
     }
   ]
 }
