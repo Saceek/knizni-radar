@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-23T04:16:38.520Z",
+  "updatedAt": "2026-09-23T05:16:49.154Z",
   "games": [
     {
       "title": "Valheim",
@@ -130,14 +130,6 @@
       "note": "Doporučená konfigurace: NVidia Geforce RTX 3070 8GB / AMD RX 6700 XT 8GB, Intel Core i7-13700 / AMD Ryzen 7 7700X"
     },
     {
-      "title": "Resonance: A Plague Tale Legacy",
-      "tier": "red",
-      "gpu": "8GB VRAM, AMD Radeon RX 6700 XT / Nvidia GeForce RTX 3060 Ti",
-      "cpu": "AMD Ryzen 5 5600X / Intel Core i5-12400F",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: 8GB VRAM, AMD Radeon RX 6700 XT / Nvidia GeForce RTX 3060 Ti, AMD Ryzen 5 5600X / Intel Core i5-12400F"
-    },
-    {
       "title": "Gunman Contracts - Stand Alone",
       "tier": "red",
       "gpu": "VR: RTX 3060 or better",
@@ -226,6 +218,14 @@
       "note": "Minimální konfigurace: Intel HD Graphics 5000+, 2 GHz"
     },
     {
+      "title": "Graveyard Keeper 2",
+      "tier": "red",
+      "gpu": "GeForce RTX 3060 or similar",
+      "cpu": "Intel Core i5 (13 gen) or similar",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3060 or similar, Intel Core i5 (13 gen) or similar"
+    },
+    {
       "title": "Craftomation 101: Programming & Craft",
       "tier": "green",
       "gpu": "Intel HD Graphics 3000, OpenGL 2.0+",
@@ -240,14 +240,6 @@
       "cpu": "AMD Ryzen 5 5600X / Intel Core i5-12400F",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: AMD Radeon RX 5600 XT / NVIDIA GeForce RTX 2060, AMD Ryzen 5 5600X / Intel Core i5-12400F"
-    },
-    {
-      "title": "Graveyard Keeper 2",
-      "tier": "red",
-      "gpu": "GeForce RTX 3060 or similar",
-      "cpu": "Intel Core i5 (13 gen) or similar",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 or similar, Intel Core i5 (13 gen) or similar"
     },
     {
       "title": "Police Chief Simulator",
@@ -466,20 +458,20 @@
       "note": "Doporučená konfigurace: Intel UHD Graphics 630, Intel Core i3-8100"
     },
     {
-      "title": "Driving Rogue",
-      "tier": "orange",
-      "gpu": "Nvidia RTX 2060/AMD RX 5060 XT",
-      "cpu": "Intel i5-8500/AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia RTX 2060/AMD RX 5060 XT, Intel i5-8500/AMD Ryzen 5 2600"
-    },
-    {
       "title": "Ved: Recure",
       "tier": "green",
       "gpu": "Nvidia GeForce GTX 1660Ti",
       "cpu": "Intel i5+",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1660Ti, Intel i5+"
+    },
+    {
+      "title": "Driving Rogue",
+      "tier": "orange",
+      "gpu": "Nvidia RTX 2060/AMD RX 5060 XT",
+      "cpu": "Intel i5-8500/AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia RTX 2060/AMD RX 5060 XT, Intel i5-8500/AMD Ryzen 5 2600"
     },
     {
       "title": "For the Fatherland: Chronicle of Park Chung-hee",
@@ -506,6 +498,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080, Intel Core-i7"
     },
     {
+      "title": "The Plant Shop",
+      "tier": "green",
+      "gpu": "GTX 950 or better",
+      "cpu": "3.2 GHz or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 950 or better, 3.2 GHz or better"
+    },
+    {
       "title": "Anomaly Company",
       "tier": "orange",
       "gpu": "NVIDIA RTX 2060 / AMD Radeon RX 5700",
@@ -520,14 +520,6 @@
       "cpu": "AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 or AMD Equivalent, AMD Ryzen 5 3600"
-    },
-    {
-      "title": "The Plant Shop",
-      "tier": "green",
-      "gpu": "GTX 950 or better",
-      "cpu": "3.2 GHz or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 950 or better, 3.2 GHz or better"
     },
     {
       "title": "Island Market Simulator",
@@ -722,6 +714,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD RX 6600 XT, Intel Core i5-12600K / AMD Ryzen 5 7600X"
     },
     {
+      "title": "Resonance: A Plague Tale Legacy",
+      "tier": "red",
+      "gpu": "8GB VRAM, AMD Radeon RX 6700 XT / Nvidia GeForce RTX 3060 Ti",
+      "cpu": "AMD Ryzen 5 5600X / Intel Core i5-12400F",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 8GB VRAM, AMD Radeon RX 6700 XT / Nvidia GeForce RTX 3060 Ti, AMD Ryzen 5 5600X / Intel Core i5-12400F"
+    },
+    {
       "title": "Deer & Boy",
       "tier": "green",
       "gpu": "GeForce GTX 1060 / Radeon RX 470",
@@ -744,30 +744,6 @@
       "cpu": "INTEL CORE i5 13500, AMD RYZEN 5 7600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT, INTEL CORE i5 13500, AMD RYZEN 5 7600"
-    },
-    {
-      "title": "Call of the Elder Gods",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1650 / AMD Radeon RX 580",
-      "cpu": "Intel Core i5-11600K / AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1650 / AMD Radeon RX 580, Intel Core i5-11600K / AMD Ryzen 5 5600X"
-    },
-    {
-      "title": "REPLACED",
-      "tier": "green",
-      "gpu": "GeForce GTX 1060 (6GB) or equivalent",
-      "cpu": "Intel® Core™ i5-8400 Processor",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
-    },
-    {
-      "title": "MOUSE: P.I. For Hire",
-      "tier": "orange",
-      "gpu": "GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600",
-      "cpu": "Intel Core i5 9600 / Ryzen 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600, Intel Core i5 9600 / Ryzen 3600"
     }
   ]
 }
