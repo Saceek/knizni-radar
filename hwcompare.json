@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-23T19:16:43.789Z",
+  "updatedAt": "2026-09-23T20:17:01.084Z",
   "games": [
     {
       "title": "Valheim",
@@ -154,20 +154,20 @@
       "note": "Doporučená konfigurace: Nvidia RTX 2070﻿ or RX 5700, or equivalent performance &amp; VRAM, Ryzen 5 5600X﻿ or ﻿i5-12400 ﻿or equivalent performance, 6 physical cores minimum"
     },
     {
-      "title": "Active Matter",
-      "tier": "orange",
-      "gpu": "RTX 2060 / RX 5700 XT / ARC A770",
-      "cpu": "Core i5-8700 / Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 2060 / RX 5700 XT / ARC A770, Core i5-8700 / Ryzen 5 3600"
-    },
-    {
       "title": "Graveyard Keeper 2",
       "tier": "red",
       "gpu": "GeForce RTX 3060 or similar",
       "cpu": "Intel Core i5 (13 gen) or similar",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 3060 or similar, Intel Core i5 (13 gen) or similar"
+    },
+    {
+      "title": "Active Matter",
+      "tier": "orange",
+      "gpu": "RTX 2060 / RX 5700 XT / ARC A770",
+      "cpu": "Core i5-8700 / Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 2060 / RX 5700 XT / ARC A770, Core i5-8700 / Ryzen 5 3600"
     },
     {
       "title": "The Legend of Fancy Realm Remake",
@@ -370,6 +370,14 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 6 GB or AMD Radeon RX 5700 with 8 GB VRAM or more, Intel Core i5-9600K @ 3.7 GHz or AMD Ryzen 5 3600 @ 3.6 GHz"
     },
     {
+      "title": "Ved: Recure",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 1660Ti",
+      "cpu": "Intel i5+",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1660Ti, Intel i5+"
+    },
+    {
       "title": "Warlord: Awaji",
       "tier": "red",
       "gpu": "NVIDIA Geforce RTX 3070",
@@ -384,14 +392,6 @@
       "cpu": "Intel Core i7-12700H",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 2060, Intel Core i7-12700H"
-    },
-    {
-      "title": "Ved: Recure",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1660Ti",
-      "cpu": "Intel i5+",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1660Ti, Intel i5+"
     },
     {
       "title": "Forsworn",
@@ -442,20 +442,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1070 | AMD Radeon RX-6600, Intel Core i5-13400F | AMD Ryzen 5 7600x"
     },
     {
-      "title": "Driving Rogue",
-      "tier": "orange",
-      "gpu": "Nvidia RTX 2060/AMD RX 5060 XT",
-      "cpu": "Intel i5-8500/AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia RTX 2060/AMD RX 5060 XT, Intel i5-8500/AMD Ryzen 5 2600"
-    },
-    {
       "title": "창세기전 외전: 서풍의 광시곡 리마스터",
       "tier": "green",
       "gpu": "Intel UHD Graphics 630",
       "cpu": "Intel Core i3-8100",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Intel UHD Graphics 630, Intel Core i3-8100"
+    },
+    {
+      "title": "Driving Rogue",
+      "tier": "orange",
+      "gpu": "Nvidia RTX 2060/AMD RX 5060 XT",
+      "cpu": "Intel i5-8500/AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia RTX 2060/AMD RX 5060 XT, Intel i5-8500/AMD Ryzen 5 2600"
     },
     {
       "title": "Retro Arcade Shop Simulator",
@@ -474,14 +474,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 3 GB or AMD Radeon RX 580 4 GB, Intel Core i5-6600K or AMD Ryzen 5 1400"
     },
     {
-      "title": "For the Fatherland: Chronicle of Park Chung-hee",
-      "tier": "green",
-      "gpu": "GTX 1650 Super",
-      "cpu": "AMD Ryzen 5 3500",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1650 Super, AMD Ryzen 5 3500"
-    },
-    {
       "title": "Kernel Hearts",
       "tier": "green",
       "gpu": "NVIDIA GeForce RTX 2060 / GTX 1660 Ti or equivalent",
@@ -496,6 +488,14 @@
       "cpu": "3.2 GHz or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 950 or better, 3.2 GHz or better"
+    },
+    {
+      "title": "For the Fatherland: Chronicle of Park Chung-hee",
+      "tier": "green",
+      "gpu": "GTX 1650 Super",
+      "cpu": "AMD Ryzen 5 3500",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1650 Super, AMD Ryzen 5 3500"
     },
     {
       "title": "Red Rocket Defencism",
@@ -760,22 +760,6 @@
       "cpu": "Intel Core i5-11600K / AMD Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1650 / AMD Radeon RX 580, Intel Core i5-11600K / AMD Ryzen 5 5600X"
-    },
-    {
-      "title": "REPLACED",
-      "tier": "green",
-      "gpu": "GeForce GTX 1060 (6GB) or equivalent",
-      "cpu": "Intel® Core™ i5-8400 Processor",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
-    },
-    {
-      "title": "MOUSE: P.I. For Hire",
-      "tier": "orange",
-      "gpu": "GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600",
-      "cpu": "Intel Core i5 9600 / Ryzen 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600, Intel Core i5 9600 / Ryzen 3600"
     }
   ]
 }
