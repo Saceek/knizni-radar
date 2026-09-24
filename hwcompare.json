@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-24T11:17:07.319Z",
+  "updatedAt": "2026-09-24T12:16:28.863Z",
   "games": [
     {
       "title": "Valheim",
@@ -90,20 +90,20 @@
       "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 1070 (8 GB) / AMD® Radeon™ RX 5700 XT (8 GB), Intel® Core™ i7-6700 (quad-core) / AMD® Ryzen™ 5 1500X (quad-core)"
     },
     {
-      "title": "Welcome to Elderfield",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1650 / AMD Radeon RX 570 (4GB) or the Radeon RX 5500 / RX 5300",
-      "cpu": "11th Gen Intel(R) Core(TM) i5-11600K / AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 / AMD Radeon RX 570 (4GB) or the Radeon RX 5500 / RX 5300, 11th Gen Intel(R) Core(TM) i5-11600K / AMD Ryzen 5 5600X"
-    },
-    {
       "title": "Graveyard Keeper 2",
       "tier": "red",
       "gpu": "GeForce RTX 3060 or similar",
       "cpu": "Intel Core i5 (13 gen) or similar",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 3060 or similar, Intel Core i5 (13 gen) or similar"
+    },
+    {
+      "title": "Welcome to Elderfield",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1650 / AMD Radeon RX 570 (4GB) or the Radeon RX 5500 / RX 5300",
+      "cpu": "11th Gen Intel(R) Core(TM) i5-11600K / AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 / AMD Radeon RX 570 (4GB) or the Radeon RX 5500 / RX 5300, 11th Gen Intel(R) Core(TM) i5-11600K / AMD Ryzen 5 5600X"
     },
     {
       "title": "Moonlighter 2: The Endless Vault",
@@ -288,14 +288,6 @@
       "cpu": "Quad core CPU 3.0 GHz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1060 (6 GB), Quad core CPU 3.0 GHz"
-    },
-    {
-      "title": "Allumeria",
-      "tier": "green",
-      "gpu": "Nvidia GTX 1650 or Equivalent",
-      "cpu": "10th Gen Intel i5 or Equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GTX 1650 or Equivalent, 10th Gen Intel i5 or Equivalent"
     },
     {
       "title": "Parisian Bistro Simulator",
@@ -698,6 +690,14 @@
       "note": "Doporučená konfigurace: Nvidia RTX 2070﻿ or RX 5700, or equivalent performance &amp; VRAM, Ryzen 5 5600X﻿ or ﻿i5-12400 ﻿or equivalent performance, 6 physical cores minimum"
     },
     {
+      "title": "CONCRETE BURIAL",
+      "tier": "green",
+      "gpu": "GTX 960 or equivalent",
+      "cpu": "2.9 GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GTX 960 or equivalent, 2.9 GHz"
+    },
+    {
       "title": "Cosmic Fear",
       "tier": "red",
       "gpu": "Nvidia RTX 4070 / AMD RX 7800XT",
@@ -706,12 +706,12 @@
       "note": "Doporučená konfigurace: Nvidia RTX 4070 / AMD RX 7800XT, Intel 11600k / AMD 5600x"
     },
     {
-      "title": "CONCRETE BURIAL",
+      "title": "Meow Squad: Incremental Fishing",
       "tier": "green",
-      "gpu": "GTX 960 or equivalent",
-      "cpu": "2.9 GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GTX 960 or equivalent, 2.9 GHz"
+      "gpu": "Nvidia GefForce GTX 1060 of AMD Radeon RX580",
+      "cpu": "Intel Core i5-5600 or AMD Ryzen3 1300",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GefForce GTX 1060 of AMD Radeon RX580, Intel Core i5-5600 or AMD Ryzen3 1300"
     },
     {
       "title": "BioEden",
@@ -736,6 +736,14 @@
       "cpu": "Intel Core i5-12600K / AMD Ryzen 5 7600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD RX 6600 XT, Intel Core i5-12600K / AMD Ryzen 5 7600X"
+    },
+    {
+      "title": "Resonance: A Plague Tale Legacy",
+      "tier": "red",
+      "gpu": "8GB VRAM, AMD Radeon RX 6700 XT / Nvidia GeForce RTX 3060 Ti",
+      "cpu": "AMD Ryzen 5 5600X / Intel Core i5-12400F",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 8GB VRAM, AMD Radeon RX 6700 XT / Nvidia GeForce RTX 3060 Ti, AMD Ryzen 5 5600X / Intel Core i5-12400F"
     }
   ]
 }
