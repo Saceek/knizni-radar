@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-24T03:17:16.867Z",
+  "updatedAt": "2026-09-24T04:16:38.719Z",
   "games": [
     {
       "title": "Valheim",
@@ -106,20 +106,20 @@
       "note": "Doporučená konfigurace: AMD Radeon RX 5700 or NVidia GeForce RTX 3060 or Intel Arc A770, AMD Ryzen 5 3600 or Intel Core i5-12500"
     },
     {
-      "title": "CONVRGENCE",
-      "tier": "red",
-      "gpu": "RTX 3070 / RX 6700 XT",
-      "cpu": "Intel Core i7-8700k / AMD Ryzen 7-5700",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 3070 / RX 6700 XT, Intel Core i7-8700k / AMD Ryzen 7-5700"
-    },
-    {
       "title": "Graveyard Keeper 2",
       "tier": "red",
       "gpu": "GeForce RTX 3060 or similar",
       "cpu": "Intel Core i5 (13 gen) or similar",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 3060 or similar, Intel Core i5 (13 gen) or similar"
+    },
+    {
+      "title": "CONVRGENCE",
+      "tier": "red",
+      "gpu": "RTX 3070 / RX 6700 XT",
+      "cpu": "Intel Core i7-8700k / AMD Ryzen 7-5700",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 3070 / RX 6700 XT, Intel Core i7-8700k / AMD Ryzen 7-5700"
     },
     {
       "title": "Breathedge 2",
@@ -232,6 +232,14 @@
       "cpu": "2 GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 5000+, 2 GHz"
+    },
+    {
+      "title": "SILENT HILL: Townfall",
+      "tier": "red",
+      "gpu": "NVIDIA GeForce RTX 3080 / AMD Radeon RX 7800 XT",
+      "cpu": "AMD Ryzen 7 5700X / Intel i7-9700K",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3080 / AMD Radeon RX 7800 XT, AMD Ryzen 7 5700X / Intel i7-9700K"
     },
     {
       "title": "Woodo",
@@ -602,20 +610,20 @@
       "note": "Doporučená konfigurace: GTX 1660 6GB / RTX 3050 6GB / RX 6600 8GB or Equivalent, Intel Core i5-9400F, AMD Ryzen 5 2600 or Equivalent"
     },
     {
-      "title": "Asterika: Phantom Rose Refrain",
-      "tier": "green",
-      "gpu": "GeForce GTX 1050 (2048 VRAM); Radeon R9 380 (2048 VRAM)",
-      "cpu": "3Ghz 64-bit",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1050 (2048 VRAM); Radeon R9 380 (2048 VRAM), 3Ghz 64-bit"
-    },
-    {
       "title": "Roadhouse Simulator",
       "tier": "green",
       "gpu": "Nvidia GeForce GTX 1070 or better 6GB VRAM",
       "cpu": "Intel Core i5 (recent generetion)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 or better 6GB VRAM, Intel Core i5 (recent generetion)"
+    },
+    {
+      "title": "Asterika: Phantom Rose Refrain",
+      "tier": "green",
+      "gpu": "GeForce GTX 1050 (2048 VRAM); Radeon R9 380 (2048 VRAM)",
+      "cpu": "3Ghz 64-bit",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1050 (2048 VRAM); Radeon R9 380 (2048 VRAM), 3Ghz 64-bit"
     },
     {
       "title": "Curse of Pirates",
@@ -666,20 +674,20 @@
       "note": "Minimální konfigurace: GTX 1060 / RX 580, Intel i3"
     },
     {
-      "title": "GON: God Of Nothing",
-      "tier": "orange",
-      "gpu": "NVIDIA RTX 2060",
-      "cpu": "Intel i7-9700K",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 2060, Intel i7-9700K"
-    },
-    {
       "title": "Rivage",
       "tier": "red",
       "gpu": "NVIDIA RTX 3060 12 GB / AMD RX 6700 XT",
       "cpu": "Intel Core i5-11400F / AMD Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 12 GB / AMD RX 6700 XT, Intel Core i5-11400F / AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "GON: God Of Nothing",
+      "tier": "orange",
+      "gpu": "NVIDIA RTX 2060",
+      "cpu": "Intel i7-9700K",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 2060, Intel i7-9700K"
     },
     {
       "title": "Planet Killer",
@@ -760,6 +768,38 @@
       "cpu": "Intel Core i5-3470",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1050 (2GB), Radeon R9 380 (2GB), Intel Core i5-3470"
+    },
+    {
+      "title": "007 First Light",
+      "tier": "red",
+      "gpu": "NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT",
+      "cpu": "INTEL CORE i5 13500, AMD RYZEN 5 7600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT, INTEL CORE i5 13500, AMD RYZEN 5 7600"
+    },
+    {
+      "title": "Call of the Elder Gods",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 1650 / AMD Radeon RX 580",
+      "cpu": "Intel Core i5-11600K / AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1650 / AMD Radeon RX 580, Intel Core i5-11600K / AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "REPLACED",
+      "tier": "green",
+      "gpu": "GeForce GTX 1060 (6GB) or equivalent",
+      "cpu": "Intel® Core™ i5-8400 Processor",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
+    },
+    {
+      "title": "MOUSE: P.I. For Hire",
+      "tier": "orange",
+      "gpu": "GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600",
+      "cpu": "Intel Core i5 9600 / Ryzen 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600, Intel Core i5 9600 / Ryzen 3600"
     }
   ]
 }
