@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-24T10:16:31.729Z",
+  "updatedAt": "2026-09-24T11:17:07.319Z",
   "games": [
     {
       "title": "Valheim",
@@ -234,20 +234,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 6600, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
-      "title": "Bones and Coins",
-      "tier": "green",
-      "gpu": "Intel HD Graphics 5000+",
-      "cpu": "2 GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 5000+, 2 GHz"
-    },
-    {
       "title": "Woodo",
       "tier": "orange",
       "gpu": "AMD Radeon RX 5600 XT / NVIDIA GeForce RTX 2060",
       "cpu": "AMD Ryzen 5 5600X / Intel Core i5-12400F",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: AMD Radeon RX 5600 XT / NVIDIA GeForce RTX 2060, AMD Ryzen 5 5600X / Intel Core i5-12400F"
+    },
+    {
+      "title": "Bones and Coins",
+      "tier": "green",
+      "gpu": "Intel HD Graphics 5000+",
+      "cpu": "2 GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics 5000+, 2 GHz"
     },
     {
       "title": "Craftomation 101: Programming & Craft",
@@ -594,14 +594,6 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1660 or AMD Radeon RX 580, Intel Core i7-8700K or AMD Ryzen 5 3600"
     },
     {
-      "title": "Inferno Protocol",
-      "tier": "green",
-      "gpu": "GTX 1070",
-      "cpu": "Intel i5 8400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1070, Intel i5 8400"
-    },
-    {
       "title": "Port of Jumanah",
       "tier": "green",
       "gpu": "GTX 1660 6GB / RTX 3050 6GB / RX 6600 8GB or Equivalent",
@@ -626,20 +618,20 @@
       "note": "Doporučená konfigurace: GeForce GTX 1050 (2048 VRAM); Radeon R9 380 (2048 VRAM), 3Ghz 64-bit"
     },
     {
-      "title": "Curse of Pirates",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 950",
-      "cpu": "2.0 Ghz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 950, 2.0 Ghz"
-    },
-    {
       "title": "Escape Toon Kingdom",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 960 / AMD equivalent",
       "cpu": "Intel Core i5 / AMD equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD equivalent, Intel Core i5 / AMD equivalent"
+    },
+    {
+      "title": "Curse of Pirates",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 950",
+      "cpu": "2.0 Ghz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 950, 2.0 Ghz"
     },
     {
       "title": "Rivage",
@@ -744,62 +736,6 @@
       "cpu": "Intel Core i5-12600K / AMD Ryzen 5 7600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD RX 6600 XT, Intel Core i5-12600K / AMD Ryzen 5 7600X"
-    },
-    {
-      "title": "Resonance: A Plague Tale Legacy",
-      "tier": "red",
-      "gpu": "8GB VRAM, AMD Radeon RX 6700 XT / Nvidia GeForce RTX 3060 Ti",
-      "cpu": "AMD Ryzen 5 5600X / Intel Core i5-12400F",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: 8GB VRAM, AMD Radeon RX 6700 XT / Nvidia GeForce RTX 3060 Ti, AMD Ryzen 5 5600X / Intel Core i5-12400F"
-    },
-    {
-      "title": "Deer & Boy",
-      "tier": "green",
-      "gpu": "GeForce GTX 1060 / Radeon RX 470",
-      "cpu": "Ryzen 3 1200 / Core i5-7400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1060 / Radeon RX 470, Ryzen 3 1200 / Core i5-7400"
-    },
-    {
-      "title": "Hollow Knight: Silksong",
-      "tier": "green",
-      "gpu": "GeForce GTX 1050 (2GB), Radeon R9 380 (2GB)",
-      "cpu": "Intel Core i5-3470",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1050 (2GB), Radeon R9 380 (2GB), Intel Core i5-3470"
-    },
-    {
-      "title": "007 First Light",
-      "tier": "red",
-      "gpu": "NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT",
-      "cpu": "INTEL CORE i5 13500, AMD RYZEN 5 7600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT, INTEL CORE i5 13500, AMD RYZEN 5 7600"
-    },
-    {
-      "title": "Call of the Elder Gods",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1650 / AMD Radeon RX 580",
-      "cpu": "Intel Core i5-11600K / AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1650 / AMD Radeon RX 580, Intel Core i5-11600K / AMD Ryzen 5 5600X"
-    },
-    {
-      "title": "REPLACED",
-      "tier": "green",
-      "gpu": "GeForce GTX 1060 (6GB) or equivalent",
-      "cpu": "Intel® Core™ i5-8400 Processor",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
-    },
-    {
-      "title": "MOUSE: P.I. For Hire",
-      "tier": "orange",
-      "gpu": "GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600",
-      "cpu": "Intel Core i5 9600 / Ryzen 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600, Intel Core i5 9600 / Ryzen 3600"
     }
   ]
 }
