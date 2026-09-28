@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-28T17:18:02.940Z",
+  "updatedAt": "2026-09-28T18:17:50.047Z",
   "games": [
     {
       "title": "Valheim",
@@ -298,14 +298,6 @@
       "note": "Doporučená konfigurace: Nvidia GefForce GTX 1060 of AMD Radeon RX580, Intel Core i5-5600 or AMD Ryzen3 1300"
     },
     {
-      "title": "I Know a Guy: Shady Life Simulator",
-      "tier": "orange",
-      "gpu": "Nvidia RTX 2060 or AMD Radeon RX 6600",
-      "cpu": "AMD Ryzen 5 3600 or Intel Core i5-10400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia RTX 2060 or AMD Radeon RX 6600, AMD Ryzen 5 3600 or Intel Core i5-10400"
-    },
-    {
       "title": "DinoBones: Tidy Up the Museum",
       "tier": "orange",
       "gpu": "NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT",
@@ -314,12 +306,12 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
     },
     {
-      "title": "Tales of Fear - Episode Zero",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1060 / AMD Radeon RX 480",
-      "cpu": "Intel Core i7-7700k / AMD Ryzen 7 3700X",
+      "title": "I Know a Guy: Shady Life Simulator",
+      "tier": "orange",
+      "gpu": "Nvidia RTX 2060 or AMD Radeon RX 6600",
+      "cpu": "AMD Ryzen 5 3600 or Intel Core i5-10400",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD Radeon RX 480, Intel Core i7-7700k / AMD Ryzen 7 3700X"
+      "note": "Doporučená konfigurace: Nvidia RTX 2060 or AMD Radeon RX 6600, AMD Ryzen 5 3600 or Intel Core i5-10400"
     },
     {
       "title": "Megastore: Tidy Up Together",
@@ -626,20 +618,20 @@
       "note": "Doporučená konfigurace: GeForce GTX 1660Ti  / AMD RX 5700 XT, Intel Core i5-6600 / AMD Ryzen 3 3100"
     },
     {
-      "title": "False Hero",
-      "tier": "orange",
-      "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 6600",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 6600, Intel Core i5-10400 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "放置斩魔录",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 750 Ti / AMD Radeon R7 360",
       "cpu": "Intel Core i3-2100 / AMD FX-4300",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 750 Ti / AMD Radeon R7 360, Intel Core i3-2100 / AMD FX-4300"
+    },
+    {
+      "title": "False Hero",
+      "tier": "orange",
+      "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 6600",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 6600, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "THE WELL IS NOT EMPTY",
@@ -698,6 +690,14 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 950, 2.0 Ghz"
     },
     {
+      "title": "The Bell Echoes",
+      "tier": "green",
+      "gpu": "Nvidia GeForce GTX 750",
+      "cpu": "Intel Core i5+",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 750, Intel Core i5+"
+    },
+    {
       "title": "I Need to Fix My Dream Car (But I Work at a Junkyard)",
       "tier": "green",
       "gpu": "Nvidia GeForce GTX 1060 8GB VRAM",
@@ -712,14 +712,6 @@
       "cpu": "2.9 GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GTX 960 or equivalent, 2.9 GHz"
-    },
-    {
-      "title": "The Bell Echoes",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 750",
-      "cpu": "Intel Core i5+",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 750, Intel Core i5+"
     },
     {
       "title": "Nightwater",
@@ -786,6 +778,14 @@
       "note": "Doporučená konfigurace: Intel UHD Graphics 630 or better, or equivalent AMD/NVIDIA graphics, Intel Core i5-11500 or better, or equivalent AMD processor"
     },
     {
+      "title": "Model Kit Shop Simulator",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1660 Ti or AMD Radeon RX 5600 XT (6 GB VRAM)",
+      "cpu": "Intel Core i5-8400 or AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Ti or AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-8400 or AMD Ryzen 5 2600"
+    },
+    {
       "title": "Beyond Yardwork Simulator Prologue",
       "tier": "green",
       "gpu": "NVIDIA RTX 3050 Ti / GTX 1660 Ti",
@@ -794,60 +794,12 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3050 Ti / GTX 1660 Ti, Intel Core i5-11400 / AMD Ryzen 5 5600H"
     },
     {
-      "title": "Resonance: A Plague Tale Legacy",
+      "title": "Liminal Shroud",
       "tier": "red",
-      "gpu": "8GB VRAM, AMD Radeon RX 6700 XT / Nvidia GeForce RTX 3060 Ti",
-      "cpu": "AMD Ryzen 5 5600X / Intel Core i5-12400F",
+      "gpu": "NVIDIA RTX 3070 8GB, AMD RX 6800 16GB",
+      "cpu": "Intel Core i7-12700K, AMD Ryzen 7 5800X",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: 8GB VRAM, AMD Radeon RX 6700 XT / Nvidia GeForce RTX 3060 Ti, AMD Ryzen 5 5600X / Intel Core i5-12400F"
-    },
-    {
-      "title": "Deer & Boy",
-      "tier": "green",
-      "gpu": "GeForce GTX 1060 / Radeon RX 470",
-      "cpu": "Ryzen 3 1200 / Core i5-7400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1060 / Radeon RX 470, Ryzen 3 1200 / Core i5-7400"
-    },
-    {
-      "title": "Hollow Knight: Silksong",
-      "tier": "green",
-      "gpu": "GeForce GTX 1050 (2GB), Radeon R9 380 (2GB)",
-      "cpu": "Intel Core i5-3470",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1050 (2GB), Radeon R9 380 (2GB), Intel Core i5-3470"
-    },
-    {
-      "title": "007 First Light",
-      "tier": "red",
-      "gpu": "NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT",
-      "cpu": "INTEL CORE i5 13500, AMD RYZEN 5 7600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT, INTEL CORE i5 13500, AMD RYZEN 5 7600"
-    },
-    {
-      "title": "Call of the Elder Gods",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1650 / AMD Radeon RX 580",
-      "cpu": "Intel Core i5-11600K / AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1650 / AMD Radeon RX 580, Intel Core i5-11600K / AMD Ryzen 5 5600X"
-    },
-    {
-      "title": "REPLACED",
-      "tier": "green",
-      "gpu": "GeForce GTX 1060 (6GB) or equivalent",
-      "cpu": "Intel® Core™ i5-8400 Processor",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
-    },
-    {
-      "title": "MOUSE: P.I. For Hire",
-      "tier": "orange",
-      "gpu": "GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600",
-      "cpu": "Intel Core i5 9600 / Ryzen 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600, Intel Core i5 9600 / Ryzen 3600"
+      "note": "Doporučená konfigurace: NVIDIA RTX 3070 8GB, AMD RX 6800 16GB, Intel Core i7-12700K, AMD Ryzen 7 5800X"
     }
   ]
 }
