@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T14:17:50.815Z",
+  "updatedAt": "2026-09-29T15:17:29.814Z",
   "games": [
     {
       "title": "Valheim",
@@ -106,20 +106,20 @@
       "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 1070 (8 GB) / AMD® Radeon™ RX 5700 XT (8 GB), Intel® Core™ i7-6700 (quad-core) / AMD® Ryzen™ 5 1500X (quad-core)"
     },
     {
-      "title": "Moonlighter 2: The Endless Vault",
-      "tier": "orange",
-      "gpu": "AMD Radeon RX 5700 or NVidia GeForce RTX 3060 or Intel Arc A770",
-      "cpu": "AMD Ryzen 5 3600 or Intel Core i5-12500",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: AMD Radeon RX 5700 or NVidia GeForce RTX 3060 or Intel Arc A770, AMD Ryzen 5 3600 or Intel Core i5-12500"
-    },
-    {
       "title": "CONVRGENCE",
       "tier": "red",
       "gpu": "RTX 3070 / RX 6700 XT",
       "cpu": "Intel Core i7-8700k / AMD Ryzen 7-5700",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 3070 / RX 6700 XT, Intel Core i7-8700k / AMD Ryzen 7-5700"
+    },
+    {
+      "title": "Way of the Hunter 2",
+      "tier": "orange",
+      "gpu": "GeForce RTX 4060 Ti / Radeon RX 7600 XT",
+      "cpu": "Ryzen 5 7600X / Core i5-14600K",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 4060 Ti / Radeon RX 7600 XT, Ryzen 5 7600X / Core i5-14600K"
     },
     {
       "title": "Gunman Contracts - Stand Alone",
@@ -184,14 +184,6 @@
       "cpu": "Intel Core i5-10400 or AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Ti or AMD Radeon RX 6500 XT, Intel Core i5-10400 or AMD Ryzen 5 3600"
-    },
-    {
-      "title": "BOMBANANA!",
-      "tier": "green",
-      "gpu": "Intel Iris Xe / NVIDIA GTX 1050 / AMD RX 560",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Intel Iris Xe / NVIDIA GTX 1050 / AMD RX 560, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
       "title": "Woodo",
@@ -386,20 +378,20 @@
       "note": "Doporučená konfigurace: NVIDIA Geforce RTX 3070, Intel i7 11th Gen"
     },
     {
-      "title": "Apocalypter",
-      "tier": "orange",
-      "gpu": "Nvidia GeForce GTX 1070 TI or AMD equivalent",
-      "cpu": "+3 GHZ octa core processor",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 TI or AMD equivalent, +3 GHZ octa core processor"
-    },
-    {
       "title": "Bunker Tidy Up",
       "tier": "red",
       "gpu": "RTX 3060",
       "cpu": "Intel Core i7 8700K",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 3060, Intel Core i7 8700K"
+    },
+    {
+      "title": "Apocalypter",
+      "tier": "orange",
+      "gpu": "Nvidia GeForce GTX 1070 TI or AMD equivalent",
+      "cpu": "+3 GHZ octa core processor",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 TI or AMD equivalent, +3 GHZ octa core processor"
     },
     {
       "title": "Rivage",
@@ -482,12 +474,12 @@
       "note": "Doporučená konfigurace: GTX 950 or better, 3.2 GHz or better"
     },
     {
-      "title": "Lucid Cats",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1060",
-      "cpu": "Intel Core i5-8400",
+      "title": "Gamer Stop Simulator",
+      "tier": "red",
+      "gpu": "NVIDIA GeForce RTX 4060",
+      "cpu": "Intel Core i5-10400F @ 2.90GHz",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, Intel Core i5-8400"
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4060, Intel Core i5-10400F @ 2.90GHz"
     },
     {
       "title": "Roadhouse Simulator",
@@ -496,6 +488,14 @@
       "cpu": "Intel Core i5 (recent generetion)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 or better 6GB VRAM, Intel Core i5 (recent generetion)"
+    },
+    {
+      "title": "Lucid Cats",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1060",
+      "cpu": "Intel Core i5-8400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, Intel Core i5-8400"
     },
     {
       "title": "Retro Arcade Shop Simulator",
@@ -538,14 +538,6 @@
       "note": "Doporučená konfigurace: GTX 1650 Super, AMD Ryzen 5 3500"
     },
     {
-      "title": "The Headlands",
-      "tier": "green",
-      "gpu": "NVIDIA GT 730 / AMD Radeon R7 240 or better (2015 and newer)",
-      "cpu": "Intel Core i3-3220 / AMD FX-6300 or better",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GT 730 / AMD Radeon R7 240 or better (2015 and newer), Intel Core i3-3220 / AMD FX-6300 or better"
-    },
-    {
       "title": "Red Rocket Defencism",
       "tier": "orange",
       "gpu": "NVIDIA GeForce GTX 1080",
@@ -554,12 +546,12 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080, Intel Core-i7"
     },
     {
-      "title": "Soul Chained",
-      "tier": "red",
-      "gpu": "Nvidia GeForce RTX 3060 or AMD Equivalent",
-      "cpu": "AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 or AMD Equivalent, AMD Ryzen 5 3600"
+      "title": "The Headlands",
+      "tier": "green",
+      "gpu": "NVIDIA GT 730 / AMD Radeon R7 240 or better (2015 and newer)",
+      "cpu": "Intel Core i3-3220 / AMD FX-6300 or better",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GT 730 / AMD Radeon R7 240 or better (2015 and newer), Intel Core i3-3220 / AMD FX-6300 or better"
     },
     {
       "title": "放置斩魔录",
@@ -568,6 +560,14 @@
       "cpu": "Intel Core i3-2100 / AMD FX-4300",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 750 Ti / AMD Radeon R7 360, Intel Core i3-2100 / AMD FX-4300"
+    },
+    {
+      "title": "Soul Chained",
+      "tier": "red",
+      "gpu": "Nvidia GeForce RTX 3060 or AMD Equivalent",
+      "cpu": "AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 or AMD Equivalent, AMD Ryzen 5 3600"
     },
     {
       "title": "Glider Sim Deluxe – Soaring Simulator",
@@ -770,6 +770,14 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 6GB / GTX 1650 / AMD RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
+      "title": "Beyond Yardwork Simulator Prologue",
+      "tier": "green",
+      "gpu": "NVIDIA RTX 3050 Ti / GTX 1660 Ti",
+      "cpu": "Intel Core i5-11400 / AMD Ryzen 5 5600H",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 3050 Ti / GTX 1660 Ti, Intel Core i5-11400 / AMD Ryzen 5 5600H"
+    },
+    {
       "title": "BioEden",
       "tier": "green",
       "gpu": "6 GB VRAM, AMD Radeon RX 580 / Nvidia GeForce GTX 1080",
@@ -784,14 +792,6 @@
       "cpu": "Intel Core i7-12700K, AMD Ryzen 7 5800X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 3070 8GB, AMD RX 6800 16GB, Intel Core i7-12700K, AMD Ryzen 7 5800X"
-    },
-    {
-      "title": "Beyond Yardwork Simulator Prologue",
-      "tier": "green",
-      "gpu": "NVIDIA RTX 3050 Ti / GTX 1660 Ti",
-      "cpu": "Intel Core i5-11400 / AMD Ryzen 5 5600H",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 3050 Ti / GTX 1660 Ti, Intel Core i5-11400 / AMD Ryzen 5 5600H"
     },
     {
       "title": "琉璃烟火-Flame in Glass-",
