@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-01T18:16:23.449Z",
+  "updatedAt": "2026-10-01T19:16:30.307Z",
   "games": [
     {
       "title": "Valheim",
@@ -82,14 +82,6 @@
       "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 1070 (8 GB) / AMD® Radeon™ RX 5700 XT (8 GB), Intel® Core™ i7-6700 (quad-core) / AMD® Ryzen™ 5 1500X (quad-core)"
     },
     {
-      "title": "Nivalis Nights",
-      "tier": "red",
-      "gpu": "NVIDIA GeForce RTX 4070 / AMD Radeon RX 7800 XT (12 GB VRAM or more)",
-      "cpu": "Intel Core i5-13600K / AMD Ryzen 5 7600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4070 / AMD Radeon RX 7800 XT (12 GB VRAM or more), Intel Core i5-13600K / AMD Ryzen 5 7600"
-    },
-    {
       "title": "Way of the Hunter 2",
       "tier": "orange",
       "gpu": "GeForce RTX 4060 Ti / Radeon RX 7600 XT",
@@ -122,12 +114,12 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 / AMD Radeon RX 570 (4GB) or the Radeon RX 5500 / RX 5300, 11th Gen Intel(R) Core(TM) i5-11600K / AMD Ryzen 5 5600X"
     },
     {
-      "title": "Alchemy Factory",
-      "tier": "orange",
-      "gpu": "Nvidia RTX 2070﻿ or RX 5700, or equivalent performance &amp; VRAM",
-      "cpu": "Ryzen 5 5600X﻿ or ﻿i5-12400 ﻿or equivalent performance, 6 physical cores minimum",
+      "title": "Nivalis Nights",
+      "tier": "red",
+      "gpu": "NVIDIA GeForce RTX 4070 / AMD Radeon RX 7800 XT (12 GB VRAM or more)",
+      "cpu": "Intel Core i5-13600K / AMD Ryzen 5 7600",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia RTX 2070﻿ or RX 5700, or equivalent performance &amp; VRAM, Ryzen 5 5600X﻿ or ﻿i5-12400 ﻿or equivalent performance, 6 physical cores minimum"
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4070 / AMD Radeon RX 7800 XT (12 GB VRAM or more), Intel Core i5-13600K / AMD Ryzen 5 7600"
     },
     {
       "title": "Transport Fever 3",
@@ -136,6 +128,14 @@
       "cpu": "Intel Core i7-13700K or AMD Ryzen 7 7800X3D (AVX2 support required)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3070 or AMD Radeon RX 6800 or Intel Arc A770, 8 GB VRAM, Intel Core i7-13700K or AMD Ryzen 7 7800X3D (AVX2 support required)"
+    },
+    {
+      "title": "Alchemy Factory",
+      "tier": "orange",
+      "gpu": "Nvidia RTX 2070﻿ or RX 5700, or equivalent performance &amp; VRAM",
+      "cpu": "Ryzen 5 5600X﻿ or ﻿i5-12400 ﻿or equivalent performance, 6 physical cores minimum",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia RTX 2070﻿ or RX 5700, or equivalent performance &amp; VRAM, Ryzen 5 5600X﻿ or ﻿i5-12400 ﻿or equivalent performance, 6 physical cores minimum"
     },
     {
       "title": "The Legend of Fancy Realm Remake",
@@ -266,6 +266,14 @@
       "note": "Doporučená konfigurace: GeForce GTX 1060 (6 GB), Quad core CPU 3.0 GHz"
     },
     {
+      "title": "DYNASTY WARRIORS 3: Complete Edition Remastered",
+      "tier": "red",
+      "gpu": "NVIDIA GeForce RTX 3060 (VRAM 8GB) or better, AMD Radeon RX 6700XT (VRAM 12GB) or better",
+      "cpu": "Intel Core i7-10700K or better, AMD Ryzen 7 3700X or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 (VRAM 8GB) or better, AMD Radeon RX 6700XT (VRAM 12GB) or better, Intel Core i7-10700K or better, AMD Ryzen 7 3700X or better"
+    },
+    {
       "title": "Parisian Bistro Simulator",
       "tier": "orange",
       "gpu": "NVIDIA GeForce RTX 2060 (6 GB VRAM) / AMD RX 6600 (8 GB VRAM)",
@@ -280,14 +288,6 @@
       "cpu": "Intel Core i5-5600 or AMD Ryzen3 1300",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GefForce GTX 1060 of AMD Radeon RX580, Intel Core i5-5600 or AMD Ryzen3 1300"
-    },
-    {
-      "title": "DYNASTY WARRIORS 3: Complete Edition Remastered",
-      "tier": "red",
-      "gpu": "NVIDIA GeForce RTX 3060 (VRAM 8GB) or better, AMD Radeon RX 6700XT (VRAM 12GB) or better",
-      "cpu": "Intel Core i7-10700K or better, AMD Ryzen 7 3700X or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 (VRAM 8GB) or better, AMD Radeon RX 6700XT (VRAM 12GB) or better, Intel Core i7-10700K or better, AMD Ryzen 7 3700X or better"
     },
     {
       "title": "I Know a Guy: Shady Life Simulator",
@@ -682,20 +682,20 @@
       "note": "Doporučená konfigurace: Nvidia RTX 4070 / AMD RX 7800XT, Intel 11600k / AMD 5600x"
     },
     {
-      "title": "Breakout Garage",
-      "tier": "orange",
-      "gpu": "GeForce RTX 3060 / Radeon RX 6600 XT",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 / Radeon RX 6600 XT, Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
       "title": "RADIOSOL",
       "tier": "red",
       "gpu": "NVIDIA GeForce RTX 3060",
       "cpu": "11th Gen Intel(R) Core i7-11800H @ 2.30GHz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060, 11th Gen Intel(R) Core i7-11800H @ 2.30GHz"
+    },
+    {
+      "title": "Breakout Garage",
+      "tier": "orange",
+      "gpu": "GeForce RTX 3060 / Radeon RX 6600 XT",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3060 / Radeon RX 6600 XT, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
       "title": "Beyond Yardwork Simulator Prologue",
@@ -768,38 +768,6 @@
       "cpu": "Intel Core i5-3470",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1050 (2GB), Radeon R9 380 (2GB), Intel Core i5-3470"
-    },
-    {
-      "title": "007 First Light",
-      "tier": "red",
-      "gpu": "NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT",
-      "cpu": "INTEL CORE i5 13500, AMD RYZEN 5 7600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT, INTEL CORE i5 13500, AMD RYZEN 5 7600"
-    },
-    {
-      "title": "Call of the Elder Gods",
-      "tier": "green",
-      "gpu": "Nvidia GeForce GTX 1650 / AMD Radeon RX 580",
-      "cpu": "Intel Core i5-11600K / AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1650 / AMD Radeon RX 580, Intel Core i5-11600K / AMD Ryzen 5 5600X"
-    },
-    {
-      "title": "REPLACED",
-      "tier": "green",
-      "gpu": "GeForce GTX 1060 (6GB) or equivalent",
-      "cpu": "Intel® Core™ i5-8400 Processor",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
-    },
-    {
-      "title": "MOUSE: P.I. For Hire",
-      "tier": "orange",
-      "gpu": "GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600",
-      "cpu": "Intel Core i5 9600 / Ryzen 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600, Intel Core i5 9600 / Ryzen 3600"
     }
   ]
 }
