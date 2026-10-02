@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-02T05:17:45.525Z",
+  "updatedAt": "2026-10-02T06:16:30.642Z",
   "games": [
     {
       "title": "Valheim",
@@ -114,20 +114,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4070 / AMD Radeon RX 7800 XT (12 GB VRAM or more), Intel Core i5-13600K / AMD Ryzen 5 7600"
     },
     {
-      "title": "Gunman Contracts - Stand Alone",
-      "tier": "red",
-      "gpu": "VR: RTX 3060 or better",
-      "cpu": "VR: Intel Core i7-12700 or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: VR: RTX 3060 or better, VR: Intel Core i7-12700 or better"
-    },
-    {
       "title": "Transport Fever 3",
       "tier": "red",
       "gpu": "NVIDIA GeForce RTX 3070 or AMD Radeon RX 6800 or Intel Arc A770, 8 GB VRAM",
       "cpu": "Intel Core i7-13700K or AMD Ryzen 7 7800X3D (AVX2 support required)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3070 or AMD Radeon RX 6800 or Intel Arc A770, 8 GB VRAM, Intel Core i7-13700K or AMD Ryzen 7 7800X3D (AVX2 support required)"
+    },
+    {
+      "title": "Gunman Contracts - Stand Alone",
+      "tier": "red",
+      "gpu": "VR: RTX 3060 or better",
+      "cpu": "VR: Intel Core i7-12700 or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: VR: RTX 3060 or better, VR: Intel Core i7-12700 or better"
     },
     {
       "title": "Welcome to Elderfield",
@@ -610,14 +610,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / RTX 2060 or AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-9600K or AMD Ryzen 5 3600"
     },
     {
-      "title": "Port of Jumanah",
-      "tier": "green",
-      "gpu": "GTX 1660 6GB / RTX 3050 6GB / RX 6600 8GB or Equivalent",
-      "cpu": "Intel Core i5-9400F, AMD Ryzen 5 2600 or Equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1660 6GB / RTX 3050 6GB / RX 6600 8GB or Equivalent, Intel Core i5-9400F, AMD Ryzen 5 2600 or Equivalent"
-    },
-    {
       "title": "CONCRETE BURIAL",
       "tier": "green",
       "gpu": "GTX 960 or equivalent",
@@ -626,12 +618,12 @@
       "note": "Minimální konfigurace: GTX 960 or equivalent, 2.9 GHz"
     },
     {
-      "title": "Escape Toon Kingdom",
+      "title": "Port of Jumanah",
       "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 960 / AMD equivalent",
-      "cpu": "Intel Core i5 / AMD equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD equivalent, Intel Core i5 / AMD equivalent"
+      "gpu": "GTX 1660 6GB / RTX 3050 6GB / RX 6600 8GB or Equivalent",
+      "cpu": "Intel Core i5-9400F, AMD Ryzen 5 2600 or Equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1660 6GB / RTX 3050 6GB / RX 6600 8GB or Equivalent, Intel Core i5-9400F, AMD Ryzen 5 2600 or Equivalent"
     },
     {
       "title": "RADIOSOL",
@@ -640,6 +632,14 @@
       "cpu": "11th Gen Intel(R) Core i7-11800H @ 2.30GHz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060, 11th Gen Intel(R) Core i7-11800H @ 2.30GHz"
+    },
+    {
+      "title": "Escape Toon Kingdom",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 960 / AMD equivalent",
+      "cpu": "Intel Core i5 / AMD equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD equivalent, Intel Core i5 / AMD equivalent"
     },
     {
       "title": "Nightwater",
