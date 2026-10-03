@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-03T03:17:45.877Z",
+  "updatedAt": "2026-10-03T04:17:50.207Z",
   "games": [
     {
       "title": "Valheim",
@@ -194,20 +194,20 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i7-10700 / AMD Ryzen 7 3700X"
     },
     {
-      "title": "Sunken Engine",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1050 4GB",
-      "cpu": "Intel Core i3 (or equivalent AMD)",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GTX 1050 4GB, Intel Core i3 (or equivalent AMD)"
-    },
-    {
       "title": "DYNASTY WARRIORS 3: Complete Edition Remastered",
       "tier": "red",
       "gpu": "NVIDIA GeForce RTX 3060 (VRAM 8GB) or better, AMD Radeon RX 6700XT (VRAM 12GB) or better",
       "cpu": "Intel Core i7-10700K or better, AMD Ryzen 7 3700X or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 (VRAM 8GB) or better, AMD Radeon RX 6700XT (VRAM 12GB) or better, Intel Core i7-10700K or better, AMD Ryzen 7 3700X or better"
+    },
+    {
+      "title": "Sunken Engine",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1050 4GB",
+      "cpu": "Intel Core i3 (or equivalent AMD)",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GTX 1050 4GB, Intel Core i3 (or equivalent AMD)"
     },
     {
       "title": "Police Chief Simulator",
@@ -314,14 +314,6 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 TI or AMD equivalent, +3 GHZ octa core processor"
     },
     {
-      "title": "Fright Train",
-      "tier": "orange",
-      "gpu": "NVIDIA RTX 2060",
-      "cpu": "Intel Core i7-12700H",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 2060, Intel Core i7-12700H"
-    },
-    {
       "title": "Rivage",
       "tier": "red",
       "gpu": "NVIDIA RTX 3060 12 GB / AMD RX 6700 XT",
@@ -330,12 +322,12 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 12 GB / AMD RX 6700 XT, Intel Core i5-11400F / AMD Ryzen 5 5600X"
     },
     {
-      "title": "Forsworn",
-      "tier": "green",
-      "gpu": "NVIDIA GTX 1660",
-      "cpu": "i5-9400 / Ryzen 5 3600",
+      "title": "Fright Train",
+      "tier": "orange",
+      "gpu": "NVIDIA RTX 2060",
+      "cpu": "Intel Core i7-12700H",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1660, i5-9400 / Ryzen 5 3600"
+      "note": "Doporučená konfigurace: NVIDIA RTX 2060, Intel Core i7-12700H"
     },
     {
       "title": "Dawson Oaks Trailer Park",
@@ -344,6 +336,14 @@
       "cpu": null,
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia Geforce GTX 1080Ti"
+    },
+    {
+      "title": "Forsworn",
+      "tier": "green",
+      "gpu": "NVIDIA GTX 1660",
+      "cpu": "i5-9400 / Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1660, i5-9400 / Ryzen 5 3600"
     },
     {
       "title": "Driving Rogue",
@@ -562,14 +562,6 @@
       "note": "Doporučená konfigurace: Dedicated GPU (e.g., NVIDIA GeForce GTX 1060 or equivalent), Intel Core i5 or higher"
     },
     {
-      "title": "Dark Bone Prison",
-      "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 750 Ti / AMD Radeon R7 260X",
-      "cpu": "Intel Core i3-6100 / AMD FX-8350",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 Ti / AMD Radeon R7 260X, Intel Core i3-6100 / AMD FX-8350"
-    },
-    {
       "title": "RADIOSOL",
       "tier": "red",
       "gpu": "NVIDIA GeForce RTX 3060",
@@ -578,12 +570,12 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060, 11th Gen Intel(R) Core i7-11800H @ 2.30GHz"
     },
     {
-      "title": "Museologist: Tidy Up the Museum!",
+      "title": "Dark Bone Prison",
       "tier": "green",
-      "gpu": "NVIDIA GeForce GTX 1660 Super / RTX 2060 or AMD Radeon RX 5600 XT (6 GB VRAM)",
-      "cpu": "Intel Core i5-9600K or AMD Ryzen 5 3600",
+      "gpu": "NVIDIA GeForce GTX 750 Ti / AMD Radeon R7 260X",
+      "cpu": "Intel Core i3-6100 / AMD FX-8350",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / RTX 2060 or AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-9600K or AMD Ryzen 5 3600"
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 Ti / AMD Radeon R7 260X, Intel Core i3-6100 / AMD FX-8350"
     },
     {
       "title": "Game Keeper: Somebody Messed Up My Shop!",
@@ -592,6 +584,14 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Museologist: Tidy Up the Museum!",
+      "tier": "green",
+      "gpu": "NVIDIA GeForce GTX 1660 Super / RTX 2060 or AMD Radeon RX 5600 XT (6 GB VRAM)",
+      "cpu": "Intel Core i5-9600K or AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / RTX 2060 or AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-9600K or AMD Ryzen 5 3600"
     },
     {
       "title": "Delverium",
@@ -674,20 +674,20 @@
       "note": "Doporučená konfigurace: Nvidia RTX 4070 / AMD RX 7800XT, Intel 11600k / AMD 5600x"
     },
     {
-      "title": "Beyond Yardwork Simulator Prologue",
-      "tier": "green",
-      "gpu": "NVIDIA RTX 3050 Ti / GTX 1660 Ti",
-      "cpu": "Intel Core i5-11400 / AMD Ryzen 5 5600H",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 3050 Ti / GTX 1660 Ti, Intel Core i5-11400 / AMD Ryzen 5 5600H"
-    },
-    {
       "title": "RetroSpace",
       "tier": "green",
       "gpu": "NVIDIA GeForce GTX 1650 or AMD Radeon RX 6600",
       "cpu": "Intel Core i5-11600K or AMD Ryzen 5 5600G",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 or AMD Radeon RX 6600, Intel Core i5-11600K or AMD Ryzen 5 5600G"
+    },
+    {
+      "title": "Beyond Yardwork Simulator Prologue",
+      "tier": "green",
+      "gpu": "NVIDIA RTX 3050 Ti / GTX 1660 Ti",
+      "cpu": "Intel Core i5-11400 / AMD Ryzen 5 5600H",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 3050 Ti / GTX 1660 Ti, Intel Core i5-11400 / AMD Ryzen 5 5600H"
     },
     {
       "title": "Cat Me If You Can",
