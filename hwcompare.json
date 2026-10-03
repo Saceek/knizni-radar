@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-03T08:17:40.802Z",
+  "updatedAt": "2026-10-03T09:17:06.206Z",
   "games": [
     {
       "title": "Valheim",
@@ -546,20 +546,20 @@
       "note": "Minimální konfigurace: Radeon RX Vega 11 / Intel Iris Xe / GTX 1050 2GB, 2.5 GHz dual-core"
     },
     {
-      "title": "Golden Swirl",
-      "tier": "green",
-      "gpu": "Dedicated GPU (e.g., NVIDIA GeForce GTX 1060 or equivalent)",
-      "cpu": "Intel Core i5 or higher",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Dedicated GPU (e.g., NVIDIA GeForce GTX 1060 or equivalent), Intel Core i5 or higher"
-    },
-    {
       "title": "RADIOSOL",
       "tier": "red",
       "gpu": "NVIDIA GeForce RTX 3060",
       "cpu": "11th Gen Intel(R) Core i7-11800H @ 2.30GHz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060, 11th Gen Intel(R) Core i7-11800H @ 2.30GHz"
+    },
+    {
+      "title": "Golden Swirl",
+      "tier": "green",
+      "gpu": "Dedicated GPU (e.g., NVIDIA GeForce GTX 1060 or equivalent)",
+      "cpu": "Intel Core i5 or higher",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Dedicated GPU (e.g., NVIDIA GeForce GTX 1060 or equivalent), Intel Core i5 or higher"
     },
     {
       "title": "Game Keeper: Somebody Messed Up My Shop!",
@@ -760,6 +760,22 @@
       "cpu": "Intel Core i5-11600K / AMD Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1650 / AMD Radeon RX 580, Intel Core i5-11600K / AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "REPLACED",
+      "tier": "green",
+      "gpu": "GeForce GTX 1060 (6GB) or equivalent",
+      "cpu": "Intel® Core™ i5-8400 Processor",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
+    },
+    {
+      "title": "MOUSE: P.I. For Hire",
+      "tier": "orange",
+      "gpu": "GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600",
+      "cpu": "Intel Core i5 9600 / Ryzen 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600, Intel Core i5 9600 / Ryzen 3600"
     }
   ]
 }
