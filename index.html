@@ -74,7 +74,7 @@
     .launcher-rail .rail-sep{width:1px;height:28px;margin:0 4px}
     .row{flex-wrap:wrap;gap:10px}
   }
-  .ic{width:1em;height:1em;flex:none;display:inline-block;vertical-align:-.14em}
+  .ic{width:1em;height:1em;flex:none;display:inline-block;vertical-align:-.14em;pointer-events:none}  /* klik musí dopadnout na tlačítko (handlery čtou e.target.dataset) */
   .nav .tab,.rail-btn{font-size:22px;color:var(--c,var(--sub));transition:background .2s,box-shadow .2s}
   .nav .tab .ic,.rail-btn .ic{opacity:.85;transition:opacity .2s,filter .2s}
   .nav .tab:hover,.rail-btn:hover{background:rgba(255,255,255,.07);color:var(--c,var(--text))}
