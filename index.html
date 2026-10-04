@@ -87,6 +87,17 @@
   .shelf h3 .more:hover{color:var(--text)}
   .srow{display:flex;gap:14px;overflow-x:auto;padding:6px 2px 14px;scrollbar-width:none;scroll-snap-type:x proximity}
   .srow::-webkit-scrollbar{display:none}
+  /* šipky pro posun řad (myš bez touchpadu) */
+  .srow-wrap{position:relative}
+  .srow-wrap.can-r .srow{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 70px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 70px),transparent)}
+  .srow-wrap.can-l .srow{-webkit-mask-image:linear-gradient(90deg,transparent,#000 70px);mask-image:linear-gradient(90deg,transparent,#000 70px)}
+  .srow-wrap.can-l.can-r .srow{-webkit-mask-image:linear-gradient(90deg,transparent,#000 70px,#000 calc(100% - 70px),transparent);mask-image:linear-gradient(90deg,transparent,#000 70px,#000 calc(100% - 70px),transparent)}
+  .sarr{position:absolute;z-index:6;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:1px solid var(--line2);background:rgba(23,23,26,.92);color:var(--text);font-size:22px;display:none;place-items:center;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.6);opacity:0;transition:opacity .2s,background .2s}
+  .sarr:hover{background:var(--text);color:#111}
+  .sarr.l{left:-14px} .sarr.r{right:-14px}
+  .srow-wrap.can-l .sarr.l,.srow-wrap.can-r .sarr.r{display:grid}
+  .srow-wrap:hover .sarr,.sarr:focus-visible{opacity:1}
+  @media (hover:none){ .sarr{display:none!important} }
   .pagehead{padding:0 var(--gut);margin-bottom:24px}
   .pagehead h1{font:800 44px/1.05 var(--serif);margin:0 0 6px;letter-spacing:-.02em}
   .pagehead p{color:var(--sub);margin:0;font-size:15px}
@@ -392,6 +403,8 @@
 const DATA_URL = "books.json";
 // Ikony: Phosphor duotone (MIT, phosphoricons.com), vložené přímo – appka nezávisí na CDN
 const ICON_SVG = {
+ "caret-left": "<path d=\"M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z\"/>",
+ "caret-right": "<path d=\"M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z\"/>",
  "crown": "<path d=\"M216.71,99.73l-15.6,93.59a8,8,0,0,1-7.89,6.68H62.78a8,8,0,0,1-7.89-6.68L39.29,99.73l.08,0a19.82,19.82,0,0,0,9.22-4.16h0L88,144l32-73.65h0a20,20,0,0,0,15.92,0h0L168,144l39.39-48.48h0a19.82,19.82,0,0,0,9.22,4.16Z\" opacity=\"0.2\"/><path d=\"M248,80a28,28,0,1,0-51.12,15.77l-26.79,33L146,73.4a28,28,0,1,0-36.06,0L85.91,128.74l-26.79-33a28,28,0,1,0-26.6,12L47,194.63A16,16,0,0,0,62.78,208H193.22A16,16,0,0,0,209,194.63l14.47-86.85A28,28,0,0,0,248,80ZM128,40a12,12,0,1,1-12,12A12,12,0,0,1,128,40ZM24,80A12,12,0,1,1,36,92,12,12,0,0,1,24,80ZM193.22,192H62.78L48.86,108.52,81.79,149A8,8,0,0,0,88,152a7.83,7.83,0,0,0,1.08-.07,8,8,0,0,0,6.26-4.74l29.3-67.4a27,27,0,0,0,6.72,0l29.3,67.4a8,8,0,0,0,6.26,4.74A7.83,7.83,0,0,0,168,152a8,8,0,0,0,6.21-3l32.93-40.52ZM220,92a12,12,0,1,1,12-12A12,12,0,0,1,220,92Z\"/>",
  "star": "<path d=\"M229.06,108.79l-48.7,42,14.88,62.79a8.4,8.4,0,0,1-12.52,9.17L128,189.09,73.28,222.74a8.4,8.4,0,0,1-12.52-9.17l14.88-62.79-48.7-42A8.46,8.46,0,0,1,31.73,94L95.64,88.8l24.62-59.6a8.36,8.36,0,0,1,15.48,0l24.62,59.6L224.27,94A8.46,8.46,0,0,1,229.06,108.79Z\" opacity=\"0.2\"/><path d=\"M239.18,97.26A16.38,16.38,0,0,0,224.92,86l-59-4.76L143.14,26.15a16.36,16.36,0,0,0-30.27,0L90.11,81.23,31.08,86a16.46,16.46,0,0,0-9.37,28.86l45,38.83L53,211.75a16.38,16.38,0,0,0,24.5,17.82L128,198.49l50.53,31.08A16.4,16.4,0,0,0,203,211.75l-13.76-58.07,45-38.83A16.43,16.43,0,0,0,239.18,97.26Zm-15.34,5.47-48.7,42a8,8,0,0,0-2.56,7.91l14.88,62.8a.37.37,0,0,1-.17.48c-.18.14-.23.11-.38,0l-54.72-33.65a8,8,0,0,0-8.38,0L69.09,215.94c-.15.09-.19.12-.38,0a.37.37,0,0,1-.17-.48l14.88-62.8a8,8,0,0,0-2.56-7.91l-48.7-42c-.12-.1-.23-.19-.13-.5s.18-.27.33-.29l63.92-5.16A8,8,0,0,0,103,91.86l24.62-59.61c.08-.17.11-.25.35-.25s.27.08.35.25L153,91.86a8,8,0,0,0,6.75,4.92l63.92,5.16c.15,0,.24,0,.33.29S224,102.63,223.84,102.73Z\"/>",
  "check": "<path d=\"M232,56V200a16,16,0,0,1-16,16H40a16,16,0,0,1-16-16V56A16,16,0,0,1,40,40H216A16,16,0,0,1,232,56Z\" opacity=\"0.2\"/><path d=\"M205.66,85.66l-96,96a8,8,0,0,1-11.32,0l-40-40a8,8,0,0,1,11.32-11.32L104,164.69l90.34-90.35a8,8,0,0,1,11.32,11.32Z\"/>",
@@ -1733,8 +1746,21 @@ function render(){
 
   const upd = S.view==="movies"?S.moviesUpdatedAt:S.view==="steam"?S.gamesUpdatedAt:S.view==="list"?S.updatedAt:S.view==="coming"?S.comingUpdatedAt:S.newsUpdatedAt;
   document.getElementById("foot").innerHTML = `<span>Data: Kosmas · Dobrovský · CREW · databazeknih.cz · ČSFD · Steam · HowLongToBeat · Můj seznam se synchronizuje přes GitHub</span>${upd?`<span>aktualizováno ${relTime(upd)}</span>`:""}`;
+  enhanceRows();
   hydrateCovers();
 }
+// Vodorovné řady: šipky vlevo/vpravo (zobrazí se jen tam, kam se dá ještě posunout)
+function enhanceRows(){
+  document.querySelectorAll("#view .srow").forEach(row=>{
+    const wrap=document.createElement("div"); wrap.className="srow-wrap";
+    row.parentNode.insertBefore(wrap,row); wrap.appendChild(row);
+    wrap.insertAdjacentHTML("beforeend", `<button class="sarr l" data-sdir="-1" aria-label="Posunout doleva">${icon("caret-left")}</button><button class="sarr r" data-sdir="1" aria-label="Posunout doprava">${icon("caret-right")}</button>`);
+    const upd=()=>{ wrap.classList.toggle("can-l", row.scrollLeft>4); wrap.classList.toggle("can-r", row.scrollLeft+row.clientWidth < row.scrollWidth-4); };
+    row.addEventListener("scroll", upd, {passive:true});
+    upd();
+  });
+}
+window.addEventListener("resize", ()=>document.querySelectorAll("#view .srow").forEach(r=>r.dispatchEvent(new Event("scroll"))));
 
 function tryImg(el, src){ return new Promise(res=>{ const img=document.createElement('img'); img.referrerPolicy='no-referrer';
   img.onload=()=>{ el.appendChild(img); res(true); }; img.onerror=()=>res(false); img.src=src; }); }
@@ -2031,6 +2057,7 @@ document.getElementById("brand").onclick=()=>goView("news");
 window.addEventListener("scroll",()=>document.getElementById("topnav").classList.toggle("solid", window.scrollY>30), {passive:true});
 document.getElementById("view").onclick=e=>{
   if(e.target.dataset.closemodal){ S.expanded=null; render(); return; }
+  const sd=e.target.dataset.sdir; if(sd){ const row=e.target.parentElement.querySelector(".srow"); row.scrollBy({left:+sd*Math.max(200,row.clientWidth*0.85), behavior:"smooth"}); return; }
   const gv=e.target.dataset.goview; if(gv){ goView(gv); return; }
   const cf=e.target.dataset.comingf; if(cf){ S.comingFilter=cf; render(); return; }
   const f=e.target.dataset.filter; if(f){S.filter=f; render(); return;}
