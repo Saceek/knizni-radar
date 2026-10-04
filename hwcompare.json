@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-04T09:17:49.594Z",
+  "updatedAt": "2026-10-04T09:57:01.039Z",
   "games": [
     {
       "title": "Valheim",
@@ -422,18 +422,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 (VRAM 8GB) or better, AMD Radeon RX 6700XT (VRAM 12GB) or better, Intel Core i7-10700K or better, AMD Ryzen 7 3700X or better"
     },
     {
-      "title": "프린세스 메이커 : 예언의 아이들",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 260, ATI Radeon 4870",
-      "cpu": "1.7 GHz Dual Core CPU",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 260, ATI Radeon 4870, 1.7 GHz Dual Core CPU"
-    },
-    {
       "title": "Well Dweller",
       "tier": "green",
       "tiers": {
@@ -444,6 +432,18 @@
       "cpu": "Intel Pentium E2180 (2 * 2000), AMD Athlon Dual Core 4450e (2 * 2300), or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce GT 220 (1024 MB), Radeon HD 4650 (1024 VRAM), or equivalent, Intel Pentium E2180 (2 * 2000), AMD Athlon Dual Core 4450e (2 * 2300), or equivalent"
+    },
+    {
+      "title": "프린세스 메이커 : 예언의 아이들",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 260, ATI Radeon 4870",
+      "cpu": "1.7 GHz Dual Core CPU",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 260, ATI Radeon 4870, 1.7 GHz Dual Core CPU"
     },
     {
       "title": "Woodo",
@@ -854,18 +854,6 @@
       "note": "Minimální konfigurace: Nvidia GT640"
     },
     {
-      "title": "Fright Train",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA RTX 2060",
-      "cpu": "Intel Core i7-12700H",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 2060, Intel Core i7-12700H"
-    },
-    {
       "title": "Wild West Pioneers",
       "tier": "green",
       "tiers": {
@@ -876,6 +864,18 @@
       "cpu": "Intel Core i5-8600K / AMD Ryzen 5 1600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1660 SUPER 6GB / AMD Radeon RX Vega 56 8GB, Intel Core i5-8600K / AMD Ryzen 5 1600"
+    },
+    {
+      "title": "Fright Train",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA RTX 2060",
+      "cpu": "Intel Core i7-12700H",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 2060, Intel Core i7-12700H"
     },
     {
       "title": "Dawson Oaks Trailer Park",
@@ -902,18 +902,6 @@
       "note": "Minimální konfigurace: DirectX 9/OpenGL 4.1 capable GPU, Intel Core2 Duo or better"
     },
     {
-      "title": "Woman Simulator",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "RTX 3060 / Radeon RX 6600 XT",
-      "cpu": "Intel core i5 / Ryzen 5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 3060 / Radeon RX 6600 XT, Intel core i5 / Ryzen 5"
-    },
-    {
       "title": "Between Adventures IDLE",
       "tier": "green",
       "tiers": {
@@ -924,6 +912,18 @@
       "cpu": "Dual-Core 1.8 GHZ or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce 840M (Intergrated Graphics OK), Dual-Core 1.8 GHZ or equivalent"
+    },
+    {
+      "title": "Woman Simulator",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "RTX 3060 / Radeon RX 6600 XT",
+      "cpu": "Intel core i5 / Ryzen 5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 3060 / Radeon RX 6600 XT, Intel core i5 / Ryzen 5"
     },
     {
       "title": "Forsworn",
@@ -1418,6 +1418,18 @@
       "note": "Doporučená konfigurace: 8GBs VRAM | NVIDIA RTX-2070 | AMD Radeon RX 6700, Intel i5 9600k | AMD Ryzen 5 5600x"
     },
     {
+      "title": "SCREENSIDE FISHER",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 460 or AMD Radeon HD 6850",
+      "cpu": "Intel Core i3 or AMD equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 460 or AMD Radeon HD 6850, Intel Core i3 or AMD equivalent"
+    },
+    {
       "title": "Sniper Dan",
       "tier": "green",
       "tiers": {
@@ -1430,16 +1442,16 @@
       "note": "Doporučená konfigurace: GeForce GTX 970 (4096 MB) or Radeon R9 270X (2048 MB), Intel Core i7-6700K (4 * 4000) or equivalent/AMD Ryzen 1500X (4 * 3500) or equivalent"
     },
     {
-      "title": "SCREENSIDE FISHER",
+      "title": "RetroSpace",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "GeForce GTX 460 or AMD Radeon HD 6850",
-      "cpu": "Intel Core i3 or AMD equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 460 or AMD Radeon HD 6850, Intel Core i3 or AMD equivalent"
+      "gpu": "NVIDIA GeForce GTX 1650 or AMD Radeon RX 6600",
+      "cpu": "Intel Core i5-11600K or AMD Ryzen 5 5600G",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 or AMD Radeon RX 6600, Intel Core i5-11600K or AMD Ryzen 5 5600G"
     },
     {
       "title": "Fish Lab",
@@ -1502,18 +1514,6 @@
       "note": "Doporučená konfigurace: Dedicated GPU (e.g., NVIDIA GeForce GTX 1060 or equivalent), Intel Core i5 or higher"
     },
     {
-      "title": "RetroSpace",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1650 or AMD Radeon RX 6600",
-      "cpu": "Intel Core i5-11600K or AMD Ryzen 5 5600G",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 or AMD Radeon RX 6600, Intel Core i5-11600K or AMD Ryzen 5 5600G"
-    },
-    {
       "title": "HOPE 01",
       "tier": "green",
       "tiers": {
@@ -1536,6 +1536,18 @@
       "cpu": "Intel i5-7600K / AMD Ryzen 5 3600",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GTX 1060 / Radeon RX 6600, Intel i5-7600K / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Intravenous 3: Borderline",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "512 MB VRAM, RX 460/GTX 1050/Iris Xe DG1 or equivalent",
+      "cpu": "Ryzen 3 3300X or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 512 MB VRAM, RX 460/GTX 1050/Iris Xe DG1 or equivalent, Ryzen 3 3300X or equivalent"
     },
     {
       "title": "Flamecraft",
@@ -1572,18 +1584,6 @@
       "cpu": "Intel Core i5, AMD Ryzen 5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Intel iris Xe / Geforce GTX 750 / AMD Radeon HD 7770, Intel Core i5, AMD Ryzen 5"
-    },
-    {
-      "title": "Intravenous 3: Borderline",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "512 MB VRAM, RX 460/GTX 1050/Iris Xe DG1 or equivalent",
-      "cpu": "Ryzen 3 3300X or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: 512 MB VRAM, RX 460/GTX 1050/Iris Xe DG1 or equivalent, Ryzen 3 3300X or equivalent"
     },
     {
       "title": "Mixed Spirits: Bartender",
@@ -1886,30 +1886,6 @@
       "note": "Minimální konfigurace: Integrated GPU with OpenGL 3.2 / DirectX 10 support, Intel Core i3 or equivalent"
     },
     {
-      "title": "Sublight",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DX10, DX11, DX12 or Vulkan capable GPUs",
-      "cpu": "Intel Core i7 (4th gen or newer) / AMD equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: DX10, DX11, DX12 or Vulkan capable GPUs, Intel Core i7 (4th gen or newer) / AMD equivalent"
-    },
-    {
-      "title": "Drop Command",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "orange"
-      },
-      "gpu": "NVIDIA RTX 3080",
-      "cpu": "Intel Core i7-6700K/AMD Ryzen 7 1700",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 3080, Intel Core i7-6700K/AMD Ryzen 7 1700"
-    },
-    {
       "title": "大荒",
       "tier": "green",
       "tiers": {
@@ -1932,6 +1908,30 @@
       "cpu": "Intel® Core™ i5-9600/AMD Ryzen 5 2600X",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Nvidia GeForce GTX970/AMD Radeon R9 390, Intel® Core™ i5-9600/AMD Ryzen 5 2600X"
+    },
+    {
+      "title": "Sublight",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DX10, DX11, DX12 or Vulkan capable GPUs",
+      "cpu": "Intel Core i7 (4th gen or newer) / AMD equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: DX10, DX11, DX12 or Vulkan capable GPUs, Intel Core i7 (4th gen or newer) / AMD equivalent"
+    },
+    {
+      "title": "Drop Command",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "orange"
+      },
+      "gpu": "NVIDIA RTX 3080",
+      "cpu": "Intel Core i7-6700K/AMD Ryzen 7 1700",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 3080, Intel Core i7-6700K/AMD Ryzen 7 1700"
     },
     {
       "title": "Cat Me If You Can",
@@ -1982,18 +1982,6 @@
       "note": "Minimální konfigurace: Any, 2Ghz+"
     },
     {
-      "title": "天衍",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "2GB RAM",
-      "cpu": "Intel i5或同级别",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: 2GB RAM, Intel i5或同级别"
-    },
-    {
       "title": "Crack the Pack",
       "tier": "green",
       "tiers": {
@@ -2004,6 +1992,18 @@
       "cpu": "2.7 GHz Dual Core",
       "usedMinimum": true,
       "note": "Minimální konfigurace: 512MB, OpenGL 3+, 2.7 GHz Dual Core"
+    },
+    {
+      "title": "天衍",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "2GB RAM",
+      "cpu": "Intel i5或同级别",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 2GB RAM, Intel i5或同级别"
     },
     {
       "title": "The Incident at Galley House",
