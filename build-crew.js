@@ -133,7 +133,14 @@ async function enrichDatabazeknih(title) {
       if (m) { const n = parseInt(m[1], 10); if (n >= 0 && n <= 100) rating = n; }
     });
 
-    return { rating, link };
+    // žánry: odkazy na /zanry/... v boxu s informacemi o knize
+    const genres = [];
+    $$("a[href*='/zanry/']").each((_, el) => {
+      const g = $$(el).text().trim();
+      if (g && g.length < 40 && !genres.includes(g)) genres.push(g);
+    });
+
+    return { rating, link, genres: genres.slice(0, 4) };
   } catch (e) {
     console.warn("[crew dbk]", title, "→", e.message);
     return {};
@@ -159,6 +166,7 @@ async function enrichList(items, label) {
       rating: dbk.rating ?? null,
       ratingSource: dbk.rating != null ? "databazeknih.cz" : null,
       link: dbk.link || null,
+      genres: dbk.genres || [],
       price: it.price,
       originalPrice: it.originalPrice,
       discount: it.discount,

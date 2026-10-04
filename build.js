@@ -160,8 +160,15 @@ async function enrichDatabazeknih(title) {
       if (m) { const n = parseInt(m[1], 10); if (n >= 0 && n <= 100) rating = n; }
     });
 
+    // žánry: odkazy na /zanry/... v boxu s informacemi o knize
+    const genres = [];
+    $$("a[href*='/zanry/']").each((_, el) => {
+      const g = $$(el).text().trim();
+      if (g && g.length < 40 && !genres.includes(g)) genres.push(g);
+    });
+
     const cover = $$("meta[property='og:image']").attr("content") || null;
-    return { rating, cover, link };
+    return { rating, cover, link, genres: genres.slice(0, 4) };
   } catch (e) { console.warn("[dbk]", title, "→", e.message); return {}; }
 }
 
@@ -242,6 +249,7 @@ async function main() {
       title: b.title,
       author: b.author || "neznámý autor",
       cat: [...new Set(b.shops)],
+      genres: e.genres || [],
       rating: e.rating ?? null,
       ratingSource: e.rating != null ? "databazeknih.cz" : null,
       readers: agg.length - i,

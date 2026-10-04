@@ -1039,7 +1039,7 @@ const MOVIES_DEMO = [
 
 const VALID_VIEWS = new Set(["news","coming","list","movies","steam","backlog","diary"]);
 const savedView = localStorage.getItem("knizniRadarView");
-let S = {dark:localStorage.getItem("knizniRadarTheme")!=="light", view:VALID_VIEWS.has(savedView)?savedView:"news", filter:"Vše", sort:"readers", q:"", books:DEMO, status:"idle", updatedAt:null, expanded:null, backlog:loadBacklog(),
+let S = {dark:localStorage.getItem("knizniRadarTheme")!=="light", view:VALID_VIEWS.has(savedView)?savedView:"news", filter:"Vše", bookGenre:"Vše", bookRarity:"Vše", sort:"readers", q:"", books:DEMO, status:"idle", updatedAt:null, expanded:null, backlog:loadBacklog(),
   addQ:"", addAuthor:"", addResults:[], addBusy:false, addMsg:"", addErr:"",
   games:GAMES_DEMO, gamesStatus:"idle", gamesUpdatedAt:null, gameWin:14, gameGenre:"Vše", gameSort:"reviews", gameRarity:"Vše",
   movies:MOVIES_DEMO, moviesStatus:"idle", moviesUpdatedAt:null, movieType:"Vše", movieGenre:"Vše", movieRarity:"Vše", movieSort:"rating", movieQ:"",
@@ -1465,6 +1465,7 @@ function comicAsBook(c,i,total){
     title: c.title,
     author: c.author || "neznámý autor",
     cat: ["CREW"],
+    genres: c.genres || [],
     rating: c.rating,
     ratingSource: c.ratingSource,
     link: c.link,
@@ -1481,9 +1482,19 @@ function filterChips(){
   const c={}; allListItems().forEach(b=>(b.cat||[]).forEach(g=>{ if(g) c[g]=(c[g]||0)+1; }));
   return Object.entries(c).sort((a,b)=>b[1]-a[1]).map(x=>x[0]);
 }
-function listFiltered(){
+function bookGenres(){
+  const c={}; listFilteredByShopGenre(true).forEach(b=>(b.genres||[]).forEach(g=>{ if(g) c[g]=(c[g]||0)+1; }));
+  return Object.keys(c).sort((a,b)=>c[b]-c[a] || a.localeCompare(b,"cs"));
+}
+function listFilteredByShopGenre(ignoreGenre){
   const q = S.q.trim().toLowerCase();
-  let r = allListItems().filter(b => (!q || (b.title+" "+b.author).toLowerCase().includes(q)) && (S.filter==="Vše" || (b.cat||[]).includes(S.filter)));
+  return allListItems().filter(b => (!q || (b.title+" "+b.author).toLowerCase().includes(q))
+    && (S.filter==="Vše" || (b.cat||[]).includes(S.filter))
+    && (ignoreGenre || S.bookGenre==="Vše" || (b.genres||[]).includes(S.bookGenre)));
+}
+function listFiltered(){
+  const rr = S.bookRarity||"Vše";
+  let r = listFilteredByShopGenre().filter(b => rr==="Vše" || (rarity(b.rating)||"common")===rr);
   return r.sort((a,b)=> rarityRank(b.rating)-rarityRank(a.rating) || (
     S.sort==="readers" ? (b.readers||0)-(a.readers||0) :
     S.sort==="price"   ? minPrice(a)-minPrice(b) :
@@ -1868,8 +1879,13 @@ function render(){
     });
   } else {
     const chips = ["Vše",...filterChips()].map(c=>`<button class="chip ${S.filter===c?'on':''}" data-filter="${esc(c)}">${esc(c)}</button>`).join("");
+    const bgenreList = bookGenres();
+    if(S.bookGenre!=="Vše" && !bgenreList.includes(S.bookGenre)) S.bookGenre="Vše";
+    const bgenres = bgenreList.length ? ["Vše",...bgenreList].map(g=>`<button class="chip ${S.bookGenre===g?'on':''}" data-bgenre="${esc(g)}">${esc(g)}</button>`).join("") : "";
+    const brarity = rarityChipsHtml(listFilteredByShopGenre(), S.bookRarity, "data-brarity");
     const items = listFiltered();
     view.innerHTML = `<div class="chips">${chips}</div>
+      ${bgenres?`<div class="chips">${bgenres}</div>`:""}
       <div class="controls">
         <input id="q" placeholder="Hledat titul nebo autora…" value="${esc(S.q)}" />
         <select id="sort">
@@ -1878,6 +1894,7 @@ function render(){
           <option value="price"${S.sort==='price'?' selected':''}>Nejnižší cena</option>
         </select>
       </div>
+      <div class="chips">${brarity}</div>
       ${S.comicsStatus==="loading"?'<div class="note warn">Načítám komiksy…</div>':""}
       ${S.comicsStatus==="demo"?'<div class="note warn">crew.json se nepodařilo načíst.</div>':""}
       ${items.length?items.map((b,i)=>card(b,i)).join(""):'<div class="empty">Žádný titul neodpovídá filtru.</div>'}`;
@@ -2187,6 +2204,8 @@ document.getElementById("nav").onclick=e=>{const v=e.target.dataset.view; if(v){
   else { render(); } }};
 document.getElementById("view").onclick=e=>{
   const f=e.target.dataset.filter; if(f){S.filter=f; render(); return;}
+  const bg=e.target.dataset.bgenre; if(bg){S.bookGenre=bg; render(); return;}
+  const br=e.target.dataset.brarity; if(br){S.bookRarity=br; render(); return;}
   const m=e.target.dataset.more; if(m){S.expanded=S.expanded===m?null:m; render(); return;}
   const bk=e.target.dataset.bk; if(bk){toggleBacklog(bk); return;}
   const rm=e.target.dataset.rm; if(rm){removeBacklog(rm, e.target.dataset.rmcat); return;}
