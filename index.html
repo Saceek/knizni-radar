@@ -529,6 +529,14 @@ async function saveRemoteDiary(data){
 
 // Klíč pro sloučení záznamů beze společného ID - dost jedinečný na to, aby dva různé
 // zápisy nesplynuly, ale pořád stabilní napříč zařízeními pro stejný reálný záznam.
+// Neodeslané lokální změny (deník, aktivní questy). Při načtení je zdrojem pravdy GitHub –
+// lokální stav vyhraje jen tehdy, když se poslední změna z tohohle zařízení prokazatelně
+// neodeslala (např. iPad Safari uspí kartu dřív, než zápis doběhne). Dřív se lokální stav
+// slučoval vždy, a zařízení se starou pamětí tak vracelo smazané záznamy a ukončené questy.
+const LS_DIRTY = "knizniRadarUnsynced";
+function isDirty(k){ try{ return !!(JSON.parse(localStorage.getItem(LS_DIRTY))||{})[k]; }catch(e){ return false; } }
+function setDirty(k, on){ try{ const d=JSON.parse(localStorage.getItem(LS_DIRTY))||{}; if(on) d[k]=Date.now(); else delete d[k]; localStorage.setItem(LS_DIRTY, JSON.stringify(d)); }catch(e){} }
+
 const diaryEntryKey = e => `${e.title}||${e.date}||${e._category}||${e.note||""}`;
 function mergeDiaryEntries(remote, local){
   const seen = new Set(remote.map(diaryEntryKey));
@@ -539,33 +547,26 @@ function mergeDiaryEntries(remote, local){
 async function syncDiary(){
   _diarySyncStatus="syncing"; render();
   const remote=await loadRemoteDiary();
-  const local=loadDiary();
-  if(remote){
-    // Sloučit, ne přepsat - jinak zápis, co se z libovolného důvodu neodeslal (např. iPad
-    // Safari uspí kartu při přepnutí appky dřív, než request doběhne), zmizí beze stopy hned
-    // při dalším načtení stránky, protože by ho přepsala starší vzdálená verze.
-    const merged = mergeDiaryEntries(remote, local);
-    saveDiary(merged);
-    S.diary = merged;
-    if(merged.length !== remote.length){
-      // Lokálně bylo něco navíc, co na vzdáleném chybělo - rovnou to dosynchronizovat zpět.
-      const ok = await saveRemoteDiary(merged);
-      _diarySyncStatus = ok ? "ok" : "err";
-      if(!ok) _diarySyncError = "Automatické dosynchronizování staršího záznamu selhalo, zkusí se znovu příště.";
-    } else {
-      _diarySyncStatus = "ok";
-    }
+  if(!remote){ S.diary = loadDiary(); _diarySyncStatus = "ok"; render(); return; }
+  if(isDirty("diary")){
+    // Neodeslaný zápis z tohohle zařízení – přidat ho k vzdálené verzi a dosynchronizovat
+    const merged = mergeDiaryEntries(remote, loadDiary());
+    saveDiary(merged); S.diary = merged;
+    const ok = await saveRemoteDiary(merged);
+    if(ok) setDirty("diary", false);
+    _diarySyncStatus = ok ? "ok" : "err";
   } else {
-    S.diary = local;
+    saveDiary(remote); S.diary = remote;
     _diarySyncStatus = "ok";
   }
   render();
 }
 
 async function saveDiaryAndSync(a){
-  saveDiary(a);
+  saveDiary(a); setDirty("diary", true);
   _diarySyncStatus="syncing"; render();
   const ok=await saveRemoteDiary(a);
+  if(ok) setDirty("diary", false);
   _diarySyncStatus=ok?"ok":"err";
   render();
 }
@@ -599,50 +600,30 @@ async function saveRemoteProgress(data){
   return res.ok;
 }
 
-// "Náhrobky" dokončených questů - když se slot vynuluje (progressFinish), zapíše se sem
-// značka. Bez toho by syncProgress() na dalším načtení mohl přepsat už vyprázdněný lokální
-// slot starší vzdálenou verzí, pokud zápis do progress.json ještě nestihl doběhnout (stejná
-// třída chyby jako dřív u deníku, jen tady S.progress není pole, takže jde o jiné řešení).
-const LS_PROGRESS_TOMBSTONES = "knizniRadarProgressDone";
-function loadProgressTombstones(){ try{ return JSON.parse(localStorage.getItem(LS_PROGRESS_TOMBSTONES))||{}; }catch(e){ return {}; } }
-function saveProgressTombstones(t){ try{ localStorage.setItem(LS_PROGRESS_TOMBSTONES, JSON.stringify(t)); }catch(e){} }
-function markProgressFinished(cat){
-  const t=loadProgressTombstones();
-  t[cat]=Date.now();
-  saveProgressTombstones(t);
-}
 async function syncProgress(){
   _progressSyncStatus="syncing"; render();
-  const remote=migrateProgress(await loadRemoteProgress())||{};
-  const tomb=loadProgressTombstones();
-  // Náhrobky starší pár dní zahodit, ať soubor neroste do nekonečna - do té doby už remote
-  // stejně dávno stihl dohnat lokální stav.
-  const now=Date.now();
-  Object.keys(tomb).forEach(cat=>{ if(now-tomb[cat] > 3*86400000) delete tomb[cat]; });
-  const merged={...remote};
-  Object.keys(tomb).forEach(cat=>{ merged[cat]=null; });
-  const local=loadProgress();
-  Object.keys(local).forEach(cat=>{ if(local[cat] && !merged[cat] && !tomb[cat]) merged[cat]=local[cat]; });
-
-  saveProgress(merged);
-  S.progress=merged;
-  const changed = JSON.stringify(merged)!==JSON.stringify(remote);
-  if(changed){
-    const ok=await saveRemoteProgress(merged);
-    if(ok){ Object.keys(tomb).forEach(cat=>{ if(merged[cat]===null) delete tomb[cat]; }); }
-    saveProgressTombstones(tomb);
-    _progressSyncStatus = ok?"ok":"err";
+  try{ localStorage.removeItem("knizniRadarProgressDone"); }catch(e){}  // staré „náhrobky“, už nepotřeba
+  const remote=await loadRemoteProgress();
+  if(!remote){ S.progress = loadProgress(); _progressSyncStatus = "ok"; render(); return; }
+  if(isDirty("progress")){
+    // Neodeslaná změna z tohohle zařízení vyhrává – dosynchronizovat ji
+    S.progress = loadProgress();
+    const ok = await saveRemoteProgress(S.progress);
+    if(ok) setDirty("progress", false);
+    _progressSyncStatus = ok ? "ok" : "err";
   } else {
-    saveProgressTombstones(tomb);
+    S.progress = migrateProgress(remote);
+    saveProgress(S.progress);
     _progressSyncStatus = "ok";
   }
   render();
 }
 
 async function saveProgressAndSync(a){
-  saveProgress(a);
+  saveProgress(a); setDirty("progress", true);
   _progressSyncStatus="syncing"; render();
   const ok=await saveRemoteProgress(a);
+  if(ok) setDirty("progress", false);
   _progressSyncStatus=ok?"ok":"err";
   render();
 }
@@ -751,7 +732,6 @@ function questStartOrActive(cat, title){
 function progressFinish(cat){
   const item = S.progress[cat];
   S.progress[cat]=null;
-  markProgressFinished(cat);
   saveProgressAndSync(S.progress);
   render();
   if(item){
