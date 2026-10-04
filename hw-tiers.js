@@ -9,16 +9,31 @@
  *
  * Xbox Ally X (ASUS ROG Xbox Ally X, 2025): AMD Ryzen AI Z2 Extreme (Zen 5, 8 jader)
  * + integrovaná grafika Radeon 890M (RDNA 3.5, 16 CU). Ukotveno v tabulkách níž.
+ * Herní PC: Ryzen 7 9800X3D + GeForce RTX 4070 + 32 GB DDR5.
  */
 
 const ALLY_X_GPU_SCORE = 30;   // Radeon 890M
 const ALLY_X_CPU_SCORE = 26;   // Ryzen AI Z2 Extreme
+const PC_GPU_SCORE = 52;       // RTX 4070
+const PC_CPU_SCORE = 50;       // Ryzen 7 9800X3D (nejrychlejší herní CPU, nad 9950X díky 3D V-Cache)
+
+// Zařízení, pro která build-hwcompare.js počítá status (key = klíč v hwcompare.json → tiers)
+const DEVICES = [
+  { key: "allyx", label: "Ally X", gpu: ALLY_X_GPU_SCORE, cpu: ALLY_X_CPU_SCORE },
+  { key: "pc", label: "PC", gpu: PC_GPU_SCORE, cpu: PC_CPU_SCORE },
+];
 
 // Řazeno od nejslabší po nejsilnější v každé generaci; matching hledá NEJDELŠÍ shodu
 // podstring v textu požadavků, takže pořadí v poli nevadí.
 const GPU_TIERS = [
   ["intel hd graphics", 2], ["intel uhd graphics", 3], ["intel iris xe", 12],
   ["geforce 210", 2], ["gt 710", 3], ["gt 730", 4], ["gtx 650", 6],
+  ["gtx 660", 6], ["gtx 670", 8], ["gtx 680", 9], ["gtx 760", 7], ["gtx 770", 9], ["gtx 780", 11],
+  ["gtx 970", 14], ["gtx 980 ti", 21], ["gtx 980", 17],
+  ["radeon hd 7850", 6], ["radeon hd 7870", 7], ["radeon hd 7950", 8], ["radeon hd 7970", 9],
+  ["radeon r9 270", 7], ["radeon r9 280", 9], ["radeon r9 290", 12], ["radeon r9 390", 14], ["radeon r9 fury", 18],
+  ["radeon rx 470", 13], ["radeon rx 480", 15], ["vega 56", 22], ["vega 64", 24],
+  ["radeon rx 9060 xt", 44], ["radeon rx 9070 xt", 66], ["radeon rx 9070", 60], ["rtx 5060 ti", 46], ["rtx 5060", 42],
   ["gtx 750 ti", 8], ["gtx 750", 7], ["radeon hd 7750", 6], ["radeon r7 260", 8],
   ["gtx 950", 10], ["radeon r9 380", 10], ["radeon rx 460", 9], ["radeon rx 560", 10],
   ["gtx 960", 11], ["gtx 1050 ti", 13], ["gtx 1050", 12], ["radeon rx 570", 15],
@@ -61,11 +76,16 @@ const CPU_TIERS = [
   ["ryzen 7 7700x", 35], ["ryzen 9 7900x", 40], ["ryzen 9 7950x", 43],
   ["core i5-13400", 29], ["core i7-13700", 40], ["core i9-13900", 44],
   ["core i5-14400", 30], ["core i7-14700", 41], ["core i9-14900", 45],
-  ["ryzen 9 9950x", 46], ["ryzen 7 9700x", 37],
+  ["ryzen 9 9950x", 46], ["ryzen 7 9700x", 37], ["ryzen 5 9600x", 34], ["ryzen 5 7600x", 32], ["ryzen 5 7600", 31],
+  ["ryzen 7 5800x3d", 34], ["ryzen 7 7800x3d", 45], ["ryzen 9 7950x3d", 46],
+  ["ryzen 7 9800x3d", PC_CPU_SCORE], ["ryzen 9 9950x3d", 51],
 ];
 
 function normalize(s) {
-  return (s || "").toLowerCase().replace(/[®™©]/g, "").replace(/\s+/g, " ").trim();
+  return (s || "").toLowerCase().replace(/[®™©]/g, "").replace(/\s+/g, " ")
+    .replace(/\b(gtx|rtx|gt|rx|hd|r9|r7)(\d)/g, "$1 $2")                 // "GTX970" → "gtx 970"
+    .replace(/\b(rx|r9|r7|hd) (\d)/g, "radeon $1 $2").replace(/radeon radeon/g, "radeon")  // "RX 580" → "radeon rx 580"
+    .trim();
 }
 
 // Steam řádky typu "GTX 1050 (2GB), Radeon R9 380 (2GB)" nabízí VÝBĚR - stačí splnit
@@ -81,7 +101,22 @@ function matchTier(text, tiers) {
   return { name: weakest[0], score: weakest[1] };
 }
 
-function matchGpuTier(text) { return matchTier(text, GPU_TIERS); }
+// Hry s nízkými nároky často grafiku neuvádí konkrétně ("Integrated GPU", "DirectX 9 compatible",
+// "Intel UHD 630") nebo uvádí karty starší než tabulka (GTX 460, HD 6870) - obě zařízení je
+// zvládnou s rezervou, proto jim dáváme nízké skóre místo "nespárováno".
+const LOW_END_GPU = /integrated|intel (u)?hd|\buhd\b|vega [3-8]\b|opengl|directx (9|10|11)|direct3d|dx ?(9|10|11)|shader model [1-4]|\b(any|most)\b|\b\d{2,3} ?mb\b|\b[12] ?gb\b|gtx [2-5]\d{2}\b|gtx [89]\d{2}m|gt \d{3}\b|gts \d{3}|geforce (8|9)\d{3}|geforce \d{3}m|radeon hd [2-6]\d{3}|radeon [2-6]\d{3}\b|radeon r7 2[0-5]\d/;
+const LOW_END_SCORE = 5;
+
+function matchGpuTier(text) {
+  // "UHD-Graphics-620", "RX VEGA-56" → mezery; "Nvidia 1060" / "GTX 2060" → správný prefix řady
+  const t = normalize(text).replace(/-/g, " ")
+    .replace(/\b(?:nvidia|geforce)(?: gtx| rtx)? (1[06]\d0)\b/g, "gtx $1")
+    .replace(/\b(?:nvidia|geforce|gtx)(?: rtx)? ([2-5]0\d0)\b/g, "rtx $1");
+  const hit = matchTier(t, GPU_TIERS);
+  if (hit) return hit;
+  const bigVram = /\b([4-9]|[1-9]\d) ?gb\b/.test(t);   // "8GB VRAM" není nízký nárok, i když jinak nic konkrétního
+  return !bigVram && LOW_END_GPU.test(t) ? { name: "nízké nároky", score: LOW_END_SCORE } : null;
+}
 function matchCpuTier(text) { return matchTier(text, CPU_TIERS); }
 
-module.exports = { ALLY_X_GPU_SCORE, ALLY_X_CPU_SCORE, matchGpuTier, matchCpuTier };
+module.exports = { ALLY_X_GPU_SCORE, ALLY_X_CPU_SCORE, DEVICES, matchGpuTier, matchCpuTier };

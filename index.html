@@ -1132,17 +1132,27 @@ async function loadHwCompare(){
   }catch(e){ S.hwCompareMap = new Map(); }
   render();
 }
-const HW_TIER_LABEL = {green:"Ally X zvládne s rezervou", orange:"Ally X je zhruba na hraně", red:"Ally X je slabší než doporučeno"};
-function hwCompareHtml(name, pushRight){
+// Zařízení musí odpovídat DEVICES v hw-tiers.js (klíče v hwcompare.json → tiers)
+const HW_DEVICES = [{key:"allyx", label:"Ally X"}, {key:"pc", label:"PC"}];
+const HW_TIER_SHORT = {green:"s rezervou", orange:"na hraně", red:"slabší"};
+const HW_TIER_LABEL = {green:"zvládne s rezervou", orange:"je zhruba na hraně", red:"je slabší než doporučeno"};
+function hwTiers(name){
   const h = S.hwCompareMap ? S.hwCompareMap.get(normalizeGameTitle(name)) : null;
-  if(!h) return "";
-  return `<span class="hw-compare" style="${pushRight?'margin-left:auto':''}" title="${esc(h.note||'')}"><span class="hw-dot ${h.tier}"></span>${HW_TIER_LABEL[h.tier]||''}</span>`;
+  if(!h) return null;
+  const tiers = h.tiers || {allyx:h.tier};  // starší hwcompare.json bez tiers
+  const list = HW_DEVICES.filter(d=>tiers[d.key]).map(d=>({...d, tier:tiers[d.key], title:`${d.label} ${HW_TIER_LABEL[tiers[d.key]]} · ${h.note||''}`}));
+  return list.length ? list : null;
 }
-// Kompaktní varianta jen s tečkou (bez textového popisku) - pro malé dlaždice v Novinkách
+function hwCompareHtml(name, pushRight){
+  const list = hwTiers(name);
+  if(!list) return "";
+  return list.map((d,i)=>`<span class="hw-compare" style="${pushRight&&i===0?'margin-left:auto':''}" title="${esc(d.title)}"><span class="hw-dot ${d.tier}"></span>${d.label} ${HW_TIER_SHORT[d.tier]||''}</span>`).join("");
+}
+// Kompaktní varianta jen s tečkami (bez textového popisku) - pro malé dlaždice v Novinkách
 function hwCompareDot(name){
-  const h = S.hwCompareMap ? S.hwCompareMap.get(normalizeGameTitle(name)) : null;
-  if(!h) return "";
-  return `<span class="hw-dot ${h.tier}" title="${esc(h.note||'')}" style="display:inline-block"></span>`;
+  const list = hwTiers(name);
+  if(!list) return "";
+  return list.map(d=>`<span class="hw-dot ${d.tier}" title="${esc(d.title)}" style="display:inline-block"></span>`).join("");
 }
 const minPrice = b => {const v=vPrices(b); return v.length?Math.min(...v.map(p=>p.price)):Infinity;};
 // Bez druhého parametru zůstává staré chování (jen podle názvu) pro místa, kde kategorie

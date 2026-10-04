@@ -8,13 +8,15 @@
  * grafiky a procesoru a porovná je s Xbox Ally X (Radeon 890M / Ryzen AI Z2
  * Extreme) přes ruční tabulku tříd výkonu v hw-tiers.js.
  *
- * Výstup: hwcompare.json → { updatedAt, games: [{ title, tier, note, gpu, cpu }] }
- *   tier: "green" (Ally X silnější) | "orange" (±15 %) | "red" (Ally X slabší) | null (nenalezeno)
+ * Výstup: hwcompare.json → { updatedAt, games: [{ title, tier, tiers, note, gpu, cpu }] }
+ *   tiers: { allyx, pc } – pro každé zařízení z DEVICES v hw-tiers.js
+ *   tier:  totéž co tiers.allyx (zpětná kompatibilita)
+ *   hodnoty: "green" (zařízení silnější) | "orange" (±15 %) | "red" (zařízení slabší)
  */
 
 const fs = require("fs");
 const path = require("path");
-const { ALLY_X_GPU_SCORE, ALLY_X_CPU_SCORE, matchGpuTier, matchCpuTier } = require("./hw-tiers");
+const { DEVICES, matchGpuTier, matchCpuTier } = require("./hw-tiers");
 const { normalizeGameTitle } = require("./gamepass-match");
 
 const DIR = __dirname;
@@ -80,24 +82,27 @@ async function fetchRequirements(appid) {
   if (!node?.success || !node.data) return null;
   const req = node.data.pc_requirements;
   if (!req) return null;
-  // Recommended je náš cílový styl hraní ("100 % detaily"); když chybí, spadneme na minimum
-  const html = (typeof req.recommended === "string" && req.recommended) || (typeof req.minimum === "string" && req.minimum) || "";
-  if (!html) return null;
-  const text = stripHtml(html);
-  return {
-    gpu: extractField(text, "Graphics"),
-    cpu: extractField(text, "Processor"),
-    usedMinimum: !req.recommended,
+  // Recommended je náš cílový styl hraní ("100 % detaily"); když chybí nebo v něm není
+  // vyplněná grafika (častý případ: jen "Requires a 64-bit processor"), spadneme na minimum
+  const parse = (html) => {
+    if (typeof html !== "string" || !html) return null;
+    const text = stripHtml(html);
+    const gpu = extractField(text, "Graphics") || extractField(text, "Video Card") || extractField(text, "Video");
+    return gpu ? { gpu, cpu: extractField(text, "Processor") } : null;
   };
+  const rec = parse(req.recommended);
+  if (rec) return { ...rec, usedMinimum: false };
+  const min = parse(req.minimum);
+  return min ? { ...min, usedMinimum: true } : null;
 }
 
-function compare(gpuMatch, cpuMatch) {
+function compare(device, gpuMatch, cpuMatch) {
   // Grafika rozhoduje hlavně (hry jsou dnes většinou GPU-bound); CPU jen dorovnává hraniční případy.
   if (!gpuMatch) return null;
-  const ratio = ALLY_X_GPU_SCORE / gpuMatch.score;
+  const ratio = device.gpu / gpuMatch.score;
   let tier = ratio >= 1.15 ? "green" : ratio >= 0.85 ? "orange" : "red";
   if (cpuMatch) {
-    const cpuRatio = ALLY_X_CPU_SCORE / cpuMatch.score;
+    const cpuRatio = device.cpu / cpuMatch.score;
     if (cpuRatio < 0.85 && tier === "green") tier = "orange";  // CPU by mohl brzdit i přes silnější grafiku
     if (cpuRatio < 0.7 && tier === "orange") tier = "red";
   }
@@ -116,15 +121,16 @@ async function main() {
       if (!req) { console.log(`  ✗ ${title} (bez požadavků na Steamu)`); await sleep(DELAY); continue; }
       const gpuMatch = matchGpuTier(req.gpu);
       const cpuMatch = matchCpuTier(req.cpu);
-      const tier = compare(gpuMatch, cpuMatch);
+      const tiers = Object.fromEntries(DEVICES.map((d) => [d.key, compare(d, gpuMatch, cpuMatch)]));
+      const tier = tiers.allyx;
       if (!tier) { console.log(`  ✗ ${title} (grafiku "${req.gpu}" se nepodařilo spárovat)`); await sleep(DELAY); continue; }
       out.push({
-        title, tier,
+        title, tier, tiers,
         gpu: req.gpu, cpu: req.cpu,
         usedMinimum: req.usedMinimum,
         note: `${req.usedMinimum ? "Minimální" : "Doporučená"} konfigurace: ${req.gpu || "?"}${req.cpu ? ", " + req.cpu : ""}`,
       });
-      console.log(`  ✓ ${title} → ${tier} (${req.gpu})`);
+      console.log(`  ✓ ${title} → ${DEVICES.map((d) => d.label + " " + tiers[d.key]).join(", ")} (${req.gpu})`);
     } catch (e) {
       console.warn(`  ! ${title} →`, e.message);
     }
