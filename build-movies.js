@@ -92,6 +92,13 @@ async function main() {
 
   console.log(`[movies] ${films.length} filmů, ${series.length} seriálů, ${cinemaItems.length} kino, ${vodItems.length} VOD`);
 
+  // ČSFD občas vrátí GitHub runneru stránku bez sekcí (anti-bot) → nepřepisuj dobrá data prázdnými
+  if (!films.length && !series.length) {
+    await browser.close();
+    console.error("[movies] ČSFD nevrátilo žádné tituly — movies.json ponechán beze změny");
+    process.exit(1);
+  }
+
   const cinemaIds = new Set(cinemaItems.map((i) => i.id).filter(Boolean));
   const vodIds = new Set(vodItems.map((i) => i.id).filter(Boolean));
 
