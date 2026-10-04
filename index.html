@@ -1042,7 +1042,7 @@ const savedView = localStorage.getItem("knizniRadarView");
 let S = {dark:localStorage.getItem("knizniRadarTheme")!=="light", view:VALID_VIEWS.has(savedView)?savedView:"news", filter:"Vše", sort:"readers", q:"", books:DEMO, status:"idle", updatedAt:null, expanded:null, backlog:loadBacklog(),
   addQ:"", addAuthor:"", addResults:[], addBusy:false, addMsg:"", addErr:"",
   games:GAMES_DEMO, gamesStatus:"idle", gamesUpdatedAt:null, gameWin:14, gameGenre:"Vše", gameSort:"reviews", gameRarity:"Vše",
-  movies:MOVIES_DEMO, moviesStatus:"idle", moviesUpdatedAt:null, movieType:"Vše", movieSort:"rating", movieQ:"",
+  movies:MOVIES_DEMO, moviesStatus:"idle", moviesUpdatedAt:null, movieType:"Vše", movieGenre:"Vše", movieRarity:"Vše", movieSort:"rating", movieQ:"",
   news:null, newsStatus:"idle", newsUpdatedAt:null,
   coming:null, comingStatus:"idle", comingUpdatedAt:null,
   comics:[], comicsBestsellers:[], comicsStatus:"idle", comicsUpdatedAt:null,
@@ -1210,6 +1210,13 @@ function steamGenres(){
 }
 const RARITY_KEYS = ["leg","epic","rare","common"];
 const RARITY_LABEL = {leg:"★", epic:"◆", rare:"●", common:"○"};
+const RARITY_COLOR = {leg:"#ffaa28", epic:"#c9a0ff", rare:"#6aa5ff", common:"var(--sub)"};
+function rarityChipsHtml(items, active, attr){
+  const counts = {leg:0,epic:0,rare:0,common:0};
+  items.forEach(x=>{ counts[rarity(x.rating)||"common"]++; });
+  return `<button class="chip ${active==="Vše"?'on':''}" ${attr}="Vše">Vše ${items.length}</button>`
+    + RARITY_KEYS.map(k=>`<button class="chip ${active===k?'on':''}" ${attr}="${k}" style="${active===k?`background:${RARITY_COLOR[k]};color:#1a1006;border-color:${RARITY_COLOR[k]}`:`color:${RARITY_COLOR[k]};border-color:${RARITY_COLOR[k]}66`}">${RARITY_LABEL[k]} ${counts[k]}</button>`).join("");
+}
 function steamFilteredByWinGenre(){
   const now=Date.now(), win=S.gameWin*864e5;
   return S.games.filter(g=>{
@@ -1369,13 +1376,22 @@ function movieVodTags(){
   const c={}; S.movies.forEach(m=>(m.vod||[]).forEach(v=>{ if(v) c[v]=(c[v]||0)+1; }));
   return Object.keys(c).sort((a,b)=>c[b]-c[a]);
 }
-function moviesFiltered(){
+function movieGenres(){
+  const c={}; S.movies.forEach(m=>(m.genres||[]).forEach(g=>{ if(g) c[g]=(c[g]||0)+1; }));
+  return Object.keys(c).sort((a,b)=>c[b]-c[a] || a.localeCompare(b,"cs"));
+}
+function moviesFilteredByTypeGenre(){
   const q=S.movieQ.trim().toLowerCase();
   return S.movies.filter(m=>{
     const inType=S.movieType==="Vše" || m.type===S.movieType;
+    const inGenre=S.movieGenre==="Vše" || (m.genres||[]).includes(S.movieGenre);
     const inQ=!q || (m.title||"").toLowerCase().includes(q) || (m.genres||[]).join(" ").toLowerCase().includes(q);
-    return inType && inQ;
-  }).sort((a,b)=> rarityRank(b.rating)-rarityRank(a.rating) || (
+    return inType && inGenre && inQ;
+  });
+}
+function moviesFiltered(){
+  const r = S.movieRarity||"Vše";
+  return moviesFilteredByTypeGenre().filter(m=> r==="Vše" || (rarity(m.rating)||"common")===r).sort((a,b)=> rarityRank(b.rating)-rarityRank(a.rating) || (
     S.movieSort==="rating" ? (b.rating||0)-(a.rating||0) :
     S.movieSort==="year"   ? ((b.year||"")<(a.year||"")?-1:1) : 0));
 }
@@ -1774,10 +1790,14 @@ function render(){
         <option value="rating"${S.movieSort==='rating'?' selected':''}>Dle hodnocení</option>
         <option value="year"${S.movieSort==='year'?' selected':''}>Nejnovější</option>
       </select>`;
+    const mgenres=["Vše",...movieGenres()].map(g=>`<button class="chip ${S.movieGenre===g?'on':''}" data-mgenre="${esc(g)}">${esc(g)}</button>`).join("");
+    const mrarity=rarityChipsHtml(moviesFilteredByTypeGenre(), S.movieRarity, "data-mrarity");
     const items=moviesFiltered();
     view.innerHTML = mst
       + `<div class="chips">${types}</div>`
+      + `<div class="chips">${mgenres}</div>`
       + `<div class="controls"><input id="mq" placeholder="Hledat film nebo seriál…" value="${esc(S.movieQ)}" />${msort}</div>`
+      + `<div class="chips">${mrarity}</div>`
       + (items.length?items.map((m,i)=>movieCard(m,i)).join(""):'<div class="empty">Žádný titul neodpovídá filtru.</div>');
     const mqi=document.getElementById("mq"); if(mqi) mqi.oninput=e=>{S.movieQ=e.target.value; render();};
     const ms=document.getElementById("msort"); if(ms) ms.onchange=e=>{S.movieSort=e.target.value; render();};
@@ -1788,12 +1808,7 @@ function render(){
     else if(S.gamesStatus==="demo") gst='<div class="note warn">games.json se nepodařilo načíst – ukázková data.</div>';
     const wins=[7,14,30].map(w=>`<button class="chip ${S.gameWin===w?'on':''}" data-gwin="${w}">${w} dní</button>`).join("");
     const genres=["Vše",...steamGenres()].map(c=>`<button class="chip ${S.gameGenre===c?'on':''}" data-ggenre="${esc(c)}">${esc(c)}</button>`).join("");
-    const preRarity = steamFilteredByWinGenre();
-    const rarityCounts = {leg:0,epic:0,rare:0,common:0};
-    preRarity.forEach(g=>{ rarityCounts[rarity(g.rating)||"common"]++; });
-const RARITY_COLOR = {leg:"#ffaa28", epic:"#c9a0ff", rare:"#6aa5ff", common:"var(--sub)"};
-    const rarityChips = `<button class="chip ${S.gameRarity==="Vše"?'on':''}" data-grarity="Vše">Vše ${preRarity.length}</button>`
-      + RARITY_KEYS.map(k=>`<button class="chip ${S.gameRarity===k?'on':''}" data-grarity="${k}" style="${S.gameRarity===k?`background:${RARITY_COLOR[k]};color:#1a1006;border-color:${RARITY_COLOR[k]}`:`color:${RARITY_COLOR[k]};border-color:${RARITY_COLOR[k]}66`}">${RARITY_LABEL[k]} ${rarityCounts[k]}</button>`).join("");
+    const rarityChips = rarityChipsHtml(steamFilteredByWinGenre(), S.gameRarity, "data-grarity");
     const items=steamFiltered();
     const gsort=`<div class="controls"><select id="gsort">
         <option value="reviews"${S.gameSort==='reviews'?' selected':''}>Nejvíc recenzí</option>
@@ -2176,6 +2191,8 @@ document.getElementById("view").onclick=e=>{
   const bk=e.target.dataset.bk; if(bk){toggleBacklog(bk); return;}
   const rm=e.target.dataset.rm; if(rm){removeBacklog(rm, e.target.dataset.rmcat); return;}
   const mt=e.target.dataset.mtype; if(mt){S.movieType=mt; render(); return;}
+  const mg=e.target.dataset.mgenre; if(mg){S.movieGenre=mg; render(); return;}
+  const mr=e.target.dataset.mrarity; if(mr){S.movieRarity=mr; render(); return;}
   const mbk=e.target.dataset.mbk; if(mbk){toggleMovieBacklog(mbk); return;}
   const gbk=e.target.dataset.gbk; if(gbk){toggleGameBacklog(gbk); return;}
   const nbk=e.target.dataset.newsbk; if(nbk){ if(!inBacklog(nbk,"book")){ const item=(S.news?.items||[]).find(i=>i.title===nbk); if(item){S.backlog.push(normalizeNewsBook(item)); saveBacklogAndSync(S.backlog); render();}} return;}
