@@ -108,7 +108,13 @@
   .crown{position:absolute;z-index:2;top:8px;left:8px;width:24px;height:24px;border-radius:6px;background:var(--gold);color:#111;display:grid;place-items:center;font-size:15px;box-shadow:0 4px 12px rgba(0,0,0,.4)}
   .tagr{position:absolute;z-index:2;top:8px;left:8px;font:800 10px var(--sans);letter-spacing:.06em;padding:3px 6px;border-radius:4px;background:rgba(0,0,0,.78);color:var(--text)}
   .crown + .tagr{left:38px}
-  .tagr.new{background:var(--red);color:#fff}
+  /* životnost v Novinkách (3 → 2 → 1 den) */
+  .life{position:absolute;z-index:2;right:8px;bottom:8px;display:flex;align-items:center;gap:6px;font:800 10px var(--sans);letter-spacing:.06em;padding:4px 7px;border-radius:5px;background:rgba(0,0,0,.82);color:var(--text);white-space:nowrap}
+  .life i{display:flex;gap:2px;font-style:normal}
+  .life i b{width:5px;height:9px;border-radius:1.5px;background:rgba(255,255,255,.25)}
+  .life i b.on{background:currentColor}
+  .life.d3{background:var(--red);color:#fff}
+  .life.d1{background:var(--amber);color:#111}
   .tagr.gp{left:auto;right:44px;background:#107c10;color:#fff}
   .addb{position:absolute;z-index:3;right:8px;top:8px;width:30px;height:30px;border-radius:50%;background:rgba(0,0,0,.72);border:1px solid rgba(255,255,255,.35);color:#fff;display:grid;place-items:center;font-size:16px;cursor:pointer;opacity:0;transition:opacity .2s,background .2s}
   .p:hover .addb,.w:hover .addb,.addb.on,.addb:focus-visible{opacity:1}
@@ -1340,7 +1346,14 @@ const scoreBadge = (r, title) => r==null ? "" : `<span class="sc ${rarity(r)||""
 const crownHtml = r => rarity(r)==="leg" ? `<span class="crown" title="Legendární">${icon("crown")}</span>` : "";
 const imgTag = (src, extra="") => src ? `<img loading="lazy" decoding="async" referrerpolicy="no-referrer" src="${esc(src)}" alt="" onerror="this.style.visibility='hidden'" ${extra}>` : "";
 const bkBtn = (attr, val, on, label) => `<button class="addb ${on?'on':''}" data-${attr}="${esc(val)}" title="${on?'V Mém seznamu – kliknutím odebrat':'Přidat do Mého seznamu'}" aria-label="${esc(label||val)}">${icon(on?"check":"plus")}</button>`;
-const newTag = item => item && item.daysLeft===3 ? `<span class="tagr new">NOVÉ</span>` : "";
+// Kolik dní ještě titul zůstane v Novinkách (news.json drží každou položku 3 dny)
+const newTag = item => {
+  if(!item || item.daysLeft==null) return "";
+  const d = Math.max(1, Math.min(3, item.daysLeft));
+  const label = d===3 ? "NOVÉ" : d===2 ? "2 DNY" : "1 DEN";
+  const tip = d===1 ? "V Novinkách naposledy – zítra zmizí" : `V Novinkách ještě ${d} dny`;
+  return `<span class="life d${d}" title="${tip}">${label}<i>${[1,2,3].map(n=>`<b class="${n<=d?"on":""}"></b>`).join("")}</i></span>`;
+};
 const metaJoin = arr => arr.filter(Boolean).join('<span class="dot"></span>');
 const relTime = iso => { if(!iso) return ""; const m=Math.round((Date.now()-new Date(iso))/60000); return m<1?"právě teď":m<60?`před ${m} min`:m<1440?`před ${Math.round(m/60)} h`:new Date(iso).toLocaleDateString("cs-CZ"); };
 
