@@ -225,6 +225,28 @@ async function fetchDemoAppid(appid) {
   } catch (e) { return null; }
 }
 
+// Souhrn recenzí ze Steamu. Steam sám skóre ukazuje až od 10 recenzí, pod tím nic nevracíme
+// (nevydaná hra má 0 → zůstane bez hodnocení a zkusí se znovu při dalším běhu).
+async function fetchSteamReviews(appid) {
+  try {
+    const j = JSON.parse(await getHtml(`https://store.steampowered.com/appreviews/${appid}?json=1&language=all&purchase_type=all&num_per_page=0&filter=summary`));
+    const q = j && j.query_summary;
+    if (!q || !q.total_reviews || q.total_reviews < 10) return null;
+    return { rating: Math.round((q.total_positive / q.total_reviews) * 100), reviews: q.total_reviews, scoreDesc: q.review_score_desc || null };
+  } catch (e) { return null; }
+}
+
+// Aktuální cena/sleva v CZ obchodě. Bez price_overview (nevydaná nebo free hra) necháme cenu beze změny.
+async function fetchSteamPrice(appid) {
+  try {
+    const j = JSON.parse(await getHtml(`https://store.steampowered.com/api/appdetails?appids=${appid}&filters=price_overview&cc=cz&l=czech`));
+    const p = j && j[appid] && j[appid].success && j[appid].data && j[appid].data.price_overview;
+    if (!p) return null;
+    const discount = p.discount_percent || 0;
+    return { price: p.final_formatted, priceOriginal: discount ? p.initial_formatted : null, discount: discount || null };
+  } catch (e) { return null; }
+}
+
 // Počet stran přímo z databazeknih.cz - je to na stránce, ale dotahuje se JS teprve po
 // rozkliknutí odkazu "Více info" (v prostém fetch/cheerio HTML vůbec není), proto Playwright.
 async function fetchPagesFromDatabazeknih(page, link, expectedTitle) {
@@ -293,6 +315,27 @@ async function main() {
       changed++;
       if (demoAppid) console.log(`    ${item.title}: demo appid ${demoAppid}`);
       await sleep(DELAY);
+    }
+  }
+
+  // Hodnocení + cena her ze Steamu – u všech her při každém běhu: hry přidané před vydáním
+  // hodnocení nemají vůbec, u vydaných se mění hodnocení i slevy
+  const toSyncSteam = backlog.filter((item) => item._category === "game" && (item.appid || appidFromUrl(item.url)));
+  if (toSyncSteam.length) {
+    console.log(`[enrich] ${toSyncSteam.length} her k synchronizaci hodnocení a ceny ze Steamu`);
+    for (const item of toSyncSteam) {
+      const appid = item.appid || appidFromUrl(item.url);
+      const before = JSON.stringify([item.rating, item.reviews, item.scoreDesc, item.price, item.priceOriginal, item.discount]);
+      const reviews = await fetchSteamReviews(appid);
+      if (reviews) Object.assign(item, reviews);
+      await sleep(DELAY);
+      const price = await fetchSteamPrice(appid);
+      if (price) Object.assign(item, price);
+      await sleep(DELAY);
+      if (JSON.stringify([item.rating, item.reviews, item.scoreDesc, item.price, item.priceOriginal, item.discount]) !== before) {
+        changed++;
+        console.log(`    ${item.title}: ${item.rating != null ? item.rating + " %" : "bez hodnocení"}, ${item.price || "bez ceny"}${item.discount ? ` (-${item.discount} %)` : ""}`);
+      }
     }
   }
 
