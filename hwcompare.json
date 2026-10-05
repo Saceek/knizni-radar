@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-05T10:16:45.926Z",
+  "updatedAt": "2026-10-05T11:16:51.794Z",
   "games": [
     {
       "title": "Valheim",
@@ -266,18 +266,6 @@
       "note": "Minimální konfigurace: The game takes around 150 MB of VRAM peak, so it should run on most systems. I've learned my lesson here."
     },
     {
-      "title": "Touhou Koumakyou: New Classic - the Embodiment of Scarlet Devil",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "UHD-Graphics-620",
-      "cpu": "core i5 8350U",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: UHD-Graphics-620, core i5 8350U"
-    },
-    {
       "title": "Shroom and Gloom",
       "tier": "green",
       "tiers": {
@@ -288,6 +276,18 @@
       "cpu": "Intel Core i7-6950X / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 1080 / Radeon RX Vega 56 / Arc A580, Intel Core i7-6950X / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Touhou Koumakyou: New Classic - the Embodiment of Scarlet Devil",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "UHD-Graphics-620",
+      "cpu": "core i5 8350U",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: UHD-Graphics-620, core i5 8350U"
     },
     {
       "title": "Trails in the Sky 2nd Chapter",
@@ -674,18 +674,6 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 750 Ti, Intel i5 Quad-Core"
     },
     {
-      "title": "I Know a Guy: Shady Life Simulator",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "Nvidia RTX 2060 or AMD Radeon RX 6600",
-      "cpu": "AMD Ryzen 5 3600 or Intel Core i5-10400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia RTX 2060 or AMD Radeon RX 6600, AMD Ryzen 5 3600 or Intel Core i5-10400"
-    },
-    {
       "title": "Parisian Bistro Simulator",
       "tier": "orange",
       "tiers": {
@@ -696,6 +684,18 @@
       "cpu": "Intel Core i5-11400 / AMD Ryzen 5 5600X or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 (6 GB VRAM) / AMD RX 6600 (8 GB VRAM), Intel Core i5-11400 / AMD Ryzen 5 5600X or better"
+    },
+    {
+      "title": "I Know a Guy: Shady Life Simulator",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "Nvidia RTX 2060 or AMD Radeon RX 6600",
+      "cpu": "AMD Ryzen 5 3600 or Intel Core i5-10400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia RTX 2060 or AMD Radeon RX 6600, AMD Ryzen 5 3600 or Intel Core i5-10400"
     },
     {
       "title": "Meow Squad: Incremental Fishing",
@@ -878,18 +878,6 @@
       "note": "Minimální konfigurace: Nvidia GT640"
     },
     {
-      "title": "Dawson Oaks Trailer Park",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "Nvidia Geforce GTX 1080Ti",
-      "cpu": null,
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia Geforce GTX 1080Ti"
-    },
-    {
       "title": "Woman Simulator",
       "tier": "orange",
       "tiers": {
@@ -900,6 +888,18 @@
       "cpu": "Intel core i5 / Ryzen 5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 3060 / Radeon RX 6600 XT, Intel core i5 / Ryzen 5"
+    },
+    {
+      "title": "Dawson Oaks Trailer Park",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "Nvidia Geforce GTX 1080Ti",
+      "cpu": null,
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia Geforce GTX 1080Ti"
     },
     {
       "title": "Scapewatch: Idle MMO",
@@ -1046,18 +1046,6 @@
       "note": "Minimální konfigurace: 512MB, OpenGL 3+, 2.7 GHz Dual Core"
     },
     {
-      "title": "Nuclear Design Bureau",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "orange"
-      },
-      "gpu": "GeForce RTX 4070 or Radeon RX 7800 XT, 12 GB VRAM",
-      "cpu": "8-core, Intel i7-12700 or AMD Ryzen 7 5800X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 4070 or Radeon RX 7800 XT, 12 GB VRAM, 8-core, Intel i7-12700 or AMD Ryzen 7 5800X"
-    },
-    {
       "title": "Wand & Order: Tidy up the magic shop!",
       "tier": "green",
       "tiers": {
@@ -1068,6 +1056,18 @@
       "cpu": "Intel i3 / AMD FX series or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia 1060/AMD equivalent, Intel i3 / AMD FX series or equivalent"
+    },
+    {
+      "title": "Nuclear Design Bureau",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "orange"
+      },
+      "gpu": "GeForce RTX 4070 or Radeon RX 7800 XT, 12 GB VRAM",
+      "cpu": "8-core, Intel i7-12700 or AMD Ryzen 7 5800X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 4070 or Radeon RX 7800 XT, 12 GB VRAM, 8-core, Intel i7-12700 or AMD Ryzen 7 5800X"
     },
     {
       "title": "창세기전 외전: 서풍의 광시곡 리마스터",
@@ -1214,6 +1214,18 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 750 Ti / AMD Radeon R7 360, Intel Core i3-2100 / AMD FX-4300"
     },
     {
+      "title": "False Hero",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 6600",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 6600, Intel Core i5-10400 / AMD Ryzen 5 3600"
+    },
+    {
       "title": "Land of Glarefall",
       "tier": "green",
       "tiers": {
@@ -1236,18 +1248,6 @@
       "cpu": "Intel Core i7-10700 / AMD Ryzen 5 3600 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / GTX 1660 Ti or equivalent, Intel Core i7-10700 / AMD Ryzen 5 3600 or equivalent"
-    },
-    {
-      "title": "False Hero",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 6600",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 6600, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "The Bell Echoes",
@@ -1706,6 +1706,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX3060 6GB, Intel Core i5-12400"
     },
     {
+      "title": "崇祯直聘：明末官场沉浮模拟器",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Dedicated or modern integrated graphics with OpenGL 3.3 support",
+      "cpu": "Intel Core i5 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Dedicated or modern integrated graphics with OpenGL 3.3 support, Intel Core i5 or equivalent"
+    },
+    {
       "title": "Duo Quest",
       "tier": "green",
       "tiers": {
@@ -1728,18 +1740,6 @@
       "cpu": "Intel i3",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GTX 1060 / RX 580, Intel i3"
-    },
-    {
-      "title": "崇祯直聘：明末官场沉浮模拟器",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Dedicated or modern integrated graphics with OpenGL 3.3 support",
-      "cpu": "Intel Core i5 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Dedicated or modern integrated graphics with OpenGL 3.3 support, Intel Core i5 or equivalent"
     },
     {
       "title": "Planet Killer",
@@ -2112,42 +2112,6 @@
       "cpu": "Intel® Core™ i5-8400 Processor",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
-    },
-    {
-      "title": "MOUSE: P.I. For Hire",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600",
-      "cpu": "Intel Core i5 9600 / Ryzen 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600, Intel Core i5 9600 / Ryzen 3600"
-    },
-    {
-      "title": "Hellblade II: Senua’s Saga",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "orange"
-      },
-      "gpu": "Nvidia RTX 3080 | AMD RX 6800 XT | Intel Arc A770",
-      "cpu": "Intel i7-10700K | AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia RTX 3080 | AMD RX 6800 XT | Intel Arc A770, Intel i7-10700K | AMD Ryzen 5 5600X"
-    },
-    {
-      "title": "Gears of War: E-Day",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 5060 / NVIDIA GeForce RTX 3060ti / AMD Radeon RX 6700 XT / Radeon RX 9060 XT",
-      "cpu": "AMD Ryzen 5 5600 / Intel i5-11600K",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 5060 / NVIDIA GeForce RTX 3060ti / AMD Radeon RX 6700 XT / Radeon RX 9060 XT, AMD Ryzen 5 5600 / Intel i5-11600K"
     }
   ]
 }
