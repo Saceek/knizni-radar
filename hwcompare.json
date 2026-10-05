@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-05T02:17:35.897Z",
+  "updatedAt": "2026-10-05T03:16:44.586Z",
   "games": [
     {
       "title": "Valheim",
@@ -218,6 +218,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3070 or AMD Radeon RX 6800 or Intel Arc A770, 8 GB VRAM, Intel Core i7-13700K or AMD Ryzen 7 7800X3D (AVX2 support required)"
     },
     {
+      "title": "SILENT HILL: Townfall",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "orange"
+      },
+      "gpu": "NVIDIA GeForce RTX 3080 / AMD Radeon RX 7800 XT",
+      "cpu": "AMD Ryzen 7 5700X / Intel i7-9700K",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3080 / AMD Radeon RX 7800 XT, AMD Ryzen 7 5700X / Intel i7-9700K"
+    },
+    {
       "title": "Way of the Hunter 2",
       "tier": "orange",
       "tiers": {
@@ -386,18 +398,6 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1050 Ti / AMD RX 560 or better, Intel Core i5 (6th gen) or AMD Ryzen 3"
     },
     {
-      "title": "In Falsus",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 980",
-      "cpu": "Intel i5-7500",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 980, Intel i5-7500"
-    },
-    {
       "title": "DYNASTY WARRIORS 3: Complete Edition Remastered",
       "tier": "red",
       "tiers": {
@@ -408,6 +408,18 @@
       "cpu": "Intel Core i7-10700K or better, AMD Ryzen 7 3700X or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 (VRAM 8GB) or better, AMD Radeon RX 6700XT (VRAM 12GB) or better, Intel Core i7-10700K or better, AMD Ryzen 7 3700X or better"
+    },
+    {
+      "title": "In Falsus",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 980",
+      "cpu": "Intel i5-7500",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 980, Intel i5-7500"
     },
     {
       "title": "Well Dweller",
@@ -986,18 +998,6 @@
       "note": "Doporučená konfigurace: GeForce RTX 2060 / Radeon RX 5700, Intel Core i7-11700K @ 3.60GHz / AMD Ryzen 7 5700"
     },
     {
-      "title": "Warlord: Awaji",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "orange"
-      },
-      "gpu": "NVIDIA Geforce RTX 3070",
-      "cpu": "Intel i7 11th Gen",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA Geforce RTX 3070, Intel i7 11th Gen"
-    },
-    {
       "title": "Crown Siege",
       "tier": "green",
       "tiers": {
@@ -1008,6 +1008,18 @@
       "cpu": "2-core / 4-thread CPU",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GTX 750ti, 2-core / 4-thread CPU"
+    },
+    {
+      "title": "Warlord: Awaji",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "orange"
+      },
+      "gpu": "NVIDIA Geforce RTX 3070",
+      "cpu": "Intel i7 11th Gen",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA Geforce RTX 3070, Intel i7 11th Gen"
     },
     {
       "title": "The Magus Circle",
@@ -1454,18 +1466,6 @@
       "note": "Minimální konfigurace: Radeon RX Vega 11 / Intel Iris Xe / GTX 1050 2GB, 2.5 GHz dual-core"
     },
     {
-      "title": "Old Market Restored",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 660",
-      "cpu": "Intel Core i3 3000 or later",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 660, Intel Core i3 3000 or later"
-    },
-    {
       "title": "Frutiger Home",
       "tier": "green",
       "tiers": {
@@ -1476,6 +1476,18 @@
       "cpu": "Intel i5-7600K / AMD Ryzen 5 3600",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GTX 1060 / Radeon RX 6600, Intel i5-7600K / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Old Market Restored",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 660",
+      "cpu": "Intel Core i3 3000 or later",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 660, Intel Core i3 3000 or later"
     },
     {
       "title": "Songs of Glimmerwick",
@@ -1706,18 +1718,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX3060 6GB, Intel Core i5-12400"
     },
     {
-      "title": "Push Push",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 1060 / RX 580",
-      "cpu": "Intel i3",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GTX 1060 / RX 580, Intel i3"
-    },
-    {
       "title": "Duo Quest",
       "tier": "green",
       "tiers": {
@@ -1728,6 +1728,18 @@
       "cpu": "Intel Core i5",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560, Intel Core i5"
+    },
+    {
+      "title": "Push Push",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 1060 / RX 580",
+      "cpu": "Intel i3",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GTX 1060 / RX 580, Intel i3"
     },
     {
       "title": "DR Dominoes",
@@ -2088,18 +2100,6 @@
       "cpu": "Intel® Core™ i5-8400 Processor",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
-    },
-    {
-      "title": "MOUSE: P.I. For Hire",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600",
-      "cpu": "Intel Core i5 9600 / Ryzen 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600, Intel Core i5 9600 / Ryzen 3600"
     }
   ]
 }
