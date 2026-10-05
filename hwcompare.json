@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-05T15:18:06.671Z",
+  "updatedAt": "2026-10-05T16:17:12.756Z",
   "games": [
     {
       "title": "Valheim",
@@ -470,18 +470,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i7-10700 / AMD Ryzen 7 3700X"
     },
     {
-      "title": "OpenFront",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Graphics: DirectX 11 compatible",
-      "cpu": "Processor: Dual-core 2.0 GHz or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Graphics: DirectX 11 compatible, Processor: Dual-core 2.0 GHz or equivalent"
-    },
-    {
       "title": "DinoBones: Tidy Up the Museum",
       "tier": "orange",
       "tiers": {
@@ -492,6 +480,18 @@
       "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "OpenFront",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Graphics: DirectX 11 compatible",
+      "cpu": "Processor: Dual-core 2.0 GHz or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Graphics: DirectX 11 compatible, Processor: Dual-core 2.0 GHz or equivalent"
     },
     {
       "title": "Sunken Engine",
@@ -806,18 +806,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 6 GB or AMD Radeon RX 5700 with 8 GB VRAM or more, Intel Core i5-9600K @ 3.7 GHz or AMD Ryzen 5 3600 @ 3.6 GHz"
     },
     {
-      "title": "Tenebris: Terra Incognita",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 260 or equivalent",
-      "cpu": "Intel Core 2 Duo or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 260 or equivalent, Intel Core 2 Duo or equivalent"
-    },
-    {
       "title": "Wild West Pioneers",
       "tier": "green",
       "tiers": {
@@ -828,6 +816,18 @@
       "cpu": "Intel Core i5-8600K / AMD Ryzen 5 1600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1660 SUPER 6GB / AMD Radeon RX Vega 56 8GB, Intel Core i5-8600K / AMD Ryzen 5 1600"
+    },
+    {
+      "title": "Tenebris: Terra Incognita",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 260 or equivalent",
+      "cpu": "Intel Core 2 Duo or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 260 or equivalent, Intel Core 2 Duo or equivalent"
     },
     {
       "title": "Stranded with You",
@@ -936,18 +936,6 @@
       "cpu": "i5-9400 / Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1660, i5-9400 / Ryzen 5 3600"
-    },
-    {
-      "title": "Between Adventures IDLE",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce 840M (Intergrated Graphics OK)",
-      "cpu": "Dual-Core 1.8 GHZ or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce 840M (Intergrated Graphics OK), Dual-Core 1.8 GHZ or equivalent"
     },
     {
       "title": "Tasty Chef",
@@ -1070,6 +1058,30 @@
       "note": "Doporučená konfigurace: GeForce RTX 4070 or Radeon RX 7800 XT, 12 GB VRAM, 8-core, Intel i7-12700 or AMD Ryzen 7 5800X"
     },
     {
+      "title": "Game Keeper: Somebody Messed Up My Shop!",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Rehaunted",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "orange"
+      },
+      "gpu": "NVIDIA® GeForce® RTX 3070 | 8GB VRAM",
+      "cpu": "Intel Core i7-6700K or AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA® GeForce® RTX 3070 | 8GB VRAM, Intel Core i7-6700K or AMD Ryzen 5 3600"
+    },
+    {
       "title": "창세기전 외전: 서풍의 광시곡 리마스터",
       "tier": "green",
       "tiers": {
@@ -1094,18 +1106,6 @@
       "note": "Doporučená konfigurace: Gaming graphics card with at least 8GB of DEDICATED memory (some examples but not limited to Nvidia 2080 TI or AMD Radeon VII), 8 core or more CPU (some examples but not limited to: Intel Core 9-10980XE @ 3.0GHz, Intel Core i9-9900KS @ 4.00GHz, AMD Ryzen 9 3900X, or AMD Ryzen 9 3950X)"
     },
     {
-      "title": "Rehaunted",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "orange"
-      },
-      "gpu": "NVIDIA® GeForce® RTX 3070 | 8GB VRAM",
-      "cpu": "Intel Core i7-6700K or AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA® GeForce® RTX 3070 | 8GB VRAM, Intel Core i7-6700K or AMD Ryzen 5 3600"
-    },
-    {
       "title": "Dumb Ways to Build",
       "tier": "red",
       "tiers": {
@@ -1116,18 +1116,6 @@
       "cpu": "6-Core / 12-Thread (Intel i5-12400, Ryzen 5 5600X)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 3060 (12GB) / RX 6700 XT, 6-Core / 12-Thread (Intel i5-12400, Ryzen 5 5600X)"
-    },
-    {
-      "title": "Game Keeper: Somebody Messed Up My Shop!",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
       "title": "Fallen Tear: The Ascension",
@@ -1430,18 +1418,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / RTX 2060 or AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-9600K or AMD Ryzen 5 3600"
     },
     {
-      "title": "Glider Sim Deluxe – Soaring Simulator",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 1070",
-      "cpu": "Core i5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1070, Core i5"
-    },
-    {
       "title": "Frutiger Home",
       "tier": "green",
       "tiers": {
@@ -1452,6 +1428,18 @@
       "cpu": "Intel i5-7600K / AMD Ryzen 5 3600",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GTX 1060 / Radeon RX 6600, Intel i5-7600K / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Glider Sim Deluxe – Soaring Simulator",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 1070",
+      "cpu": "Core i5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1070, Core i5"
     },
     {
       "title": "Anomaly Company",
@@ -2112,6 +2100,42 @@
       "cpu": "Intel® Core™ i5-8400 Processor",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
+    },
+    {
+      "title": "MOUSE: P.I. For Hire",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600",
+      "cpu": "Intel Core i5 9600 / Ryzen 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600, Intel Core i5 9600 / Ryzen 3600"
+    },
+    {
+      "title": "Hellblade II: Senua’s Saga",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "orange"
+      },
+      "gpu": "Nvidia RTX 3080 | AMD RX 6800 XT | Intel Arc A770",
+      "cpu": "Intel i7-10700K | AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia RTX 3080 | AMD RX 6800 XT | Intel Arc A770, Intel i7-10700K | AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "Gears of War: E-Day",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 5060 / NVIDIA GeForce RTX 3060ti / AMD Radeon RX 6700 XT / Radeon RX 9060 XT",
+      "cpu": "AMD Ryzen 5 5600 / Intel i5-11600K",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 5060 / NVIDIA GeForce RTX 3060ti / AMD Radeon RX 6700 XT / Radeon RX 9060 XT, AMD Ryzen 5 5600 / Intel i5-11600K"
     }
   ]
 }
