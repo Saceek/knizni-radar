@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-05T14:17:26.885Z",
+  "updatedAt": "2026-10-05T15:18:06.671Z",
   "games": [
     {
       "title": "Valheim",
@@ -278,18 +278,6 @@
       "note": "Doporučená konfigurace: GeForce RTX 1080 / Radeon RX Vega 56 / Arc A580, Intel Core i7-6950X / AMD Ryzen 5 2600"
     },
     {
-      "title": "Touhou Koumakyou: New Classic - the Embodiment of Scarlet Devil",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "UHD-Graphics-620",
-      "cpu": "core i5 8350U",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: UHD-Graphics-620, core i5 8350U"
-    },
-    {
       "title": "Trails in the Sky 2nd Chapter",
       "tier": "green",
       "tiers": {
@@ -300,6 +288,18 @@
       "cpu": "AMD Ryzen 5 1600",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 1050, AMD Ryzen 5 1600"
+    },
+    {
+      "title": "Touhou Koumakyou: New Classic - the Embodiment of Scarlet Devil",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "UHD-Graphics-620",
+      "cpu": "core i5 8350U",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: UHD-Graphics-620, core i5 8350U"
     },
     {
       "title": "Gunman Contracts - Stand Alone",
@@ -950,6 +950,18 @@
       "note": "Minimální konfigurace: NVIDIA GeForce 840M (Intergrated Graphics OK), Dual-Core 1.8 GHZ or equivalent"
     },
     {
+      "title": "Tasty Chef",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "GeForce RTX 2060 / Radeon RX 5700",
+      "cpu": "Intel Core i7-11700K @ 3.60GHz / AMD Ryzen 7 5700",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 2060 / Radeon RX 5700, Intel Core i7-11700K @ 3.60GHz / AMD Ryzen 7 5700"
+    },
+    {
       "title": "HoloTrials: Case Covered",
       "tier": "green",
       "tiers": {
@@ -960,18 +972,6 @@
       "cpu": "Intel® Core™ i5-3570 (or similar with SSE2 support)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 660 (VRAM 2GB or better), Intel® Core™ i5-3570 (or similar with SSE2 support)"
-    },
-    {
-      "title": "地下城竞技场",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 760 | AMD Radeon HD 7950",
-      "cpu": "Intel Core i3-2100 | AMD FX-6300",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 760 | AMD Radeon HD 7950, Intel Core i3-2100 | AMD FX-6300"
     },
     {
       "title": "Paver: Tidy Up Together",
@@ -986,16 +986,16 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1070 | AMD Radeon RX-6600, Intel Core i5-13400F | AMD Ryzen 5 7600x"
     },
     {
-      "title": "Tasty Chef",
-      "tier": "orange",
+      "title": "地下城竞技场",
+      "tier": "green",
       "tiers": {
-        "allyx": "orange",
+        "allyx": "green",
         "pc": "green"
       },
-      "gpu": "GeForce RTX 2060 / Radeon RX 5700",
-      "cpu": "Intel Core i7-11700K @ 3.60GHz / AMD Ryzen 7 5700",
+      "gpu": "NVIDIA GeForce GTX 760 | AMD Radeon HD 7950",
+      "cpu": "Intel Core i3-2100 | AMD FX-6300",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 2060 / Radeon RX 5700, Intel Core i7-11700K @ 3.60GHz / AMD Ryzen 7 5700"
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 760 | AMD Radeon HD 7950, Intel Core i3-2100 | AMD FX-6300"
     },
     {
       "title": "Crown Siege",
@@ -1022,18 +1022,6 @@
       "note": "Doporučená konfigurace: NVIDIA Geforce RTX 3070, Intel i7 11th Gen"
     },
     {
-      "title": "The Magus Circle",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DX10, DX11, DX12 capable",
-      "cpu": "Intel Core i5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: DX10, DX11, DX12 capable, Intel Core i5"
-    },
-    {
       "title": "Wand & Order: Tidy up the magic shop!",
       "tier": "green",
       "tiers": {
@@ -1044,6 +1032,18 @@
       "cpu": "Intel i3 / AMD FX series or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia 1060/AMD equivalent, Intel i3 / AMD FX series or equivalent"
+    },
+    {
+      "title": "The Magus Circle",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DX10, DX11, DX12 capable",
+      "cpu": "Intel Core i5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: DX10, DX11, DX12 capable, Intel Core i5"
     },
     {
       "title": "Pibcremental",
@@ -1406,6 +1406,18 @@
       "note": "Doporučená konfigurace: GeForce GTX 970 (4096 MB) or Radeon R9 270X (2048 MB), Intel Core i7-6700K (4 * 4000) or equivalent/AMD Ryzen 1500X (4 * 3500) or equivalent"
     },
     {
+      "title": "Songs of Glimmerwick",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Geforce 9600 GS, Radeon HD4000, Shader Model 3.0, 512 MB",
+      "cpu": "Dual-core processor (Intel Dual Core 2.0 GHz or AMD Athlon X2 5200+ 2.6 GHz)",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Geforce 9600 GS, Radeon HD4000, Shader Model 3.0, 512 MB, Dual-core processor (Intel Dual Core 2.0 GHz or AMD Athlon X2 5200+ 2.6 GHz)"
+    },
+    {
       "title": "Museologist: Tidy Up the Museum!",
       "tier": "green",
       "tiers": {
@@ -1428,18 +1440,6 @@
       "cpu": "Core i5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1070, Core i5"
-    },
-    {
-      "title": "Songs of Glimmerwick",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Geforce 9600 GS, Radeon HD4000, Shader Model 3.0, 512 MB",
-      "cpu": "Dual-core processor (Intel Dual Core 2.0 GHz or AMD Athlon X2 5200+ 2.6 GHz)",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Geforce 9600 GS, Radeon HD4000, Shader Model 3.0, 512 MB, Dual-core processor (Intel Dual Core 2.0 GHz or AMD Athlon X2 5200+ 2.6 GHz)"
     },
     {
       "title": "Frutiger Home",
@@ -1634,18 +1634,6 @@
       "note": "Doporučená konfigurace: GeForce RTX 3060 / Radeon RX 6600 XT, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
-      "title": "HIROTONFA’s American Revolution Smuggler",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Compatible OpenGL / VRAM 1GB or better",
-      "cpu": "Intel Core i3-4340 or better processor",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Compatible OpenGL / VRAM 1GB or better, Intel Core i3-4340 or better processor"
-    },
-    {
       "title": "Nighthawks",
       "tier": "green",
       "tiers": {
@@ -1670,6 +1658,18 @@
       "note": "Doporučená konfigurace: Vulkan, DirectX 12 or OpenGL ES, Quad-core Intel 2.5 GHz (or AMD equivalent) or better"
     },
     {
+      "title": "HIROTONFA’s American Revolution Smuggler",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Compatible OpenGL / VRAM 1GB or better",
+      "cpu": "Intel Core i3-4340 or better processor",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Compatible OpenGL / VRAM 1GB or better, Intel Core i3-4340 or better processor"
+    },
+    {
       "title": "I Need to Fix My Dream Car (But I Work at a Junkyard)",
       "tier": "green",
       "tiers": {
@@ -1680,6 +1680,18 @@
       "cpu": "Intel Core i5 3.0 GHz or Ryzen",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1060 8GB VRAM, Intel Core i5 3.0 GHz or Ryzen"
+    },
+    {
+      "title": "崇祯直聘：明末官场沉浮模拟器",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Dedicated or modern integrated graphics with OpenGL 3.3 support",
+      "cpu": "Intel Core i5 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Dedicated or modern integrated graphics with OpenGL 3.3 support, Intel Core i5 or equivalent"
     },
     {
       "title": "心象天儀本線 ~Per aspera ad astra~",
@@ -1704,18 +1716,6 @@
       "cpu": "Intel Core i5-12400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX3060 6GB, Intel Core i5-12400"
-    },
-    {
-      "title": "崇祯直聘：明末官场沉浮模拟器",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Dedicated or modern integrated graphics with OpenGL 3.3 support",
-      "cpu": "Intel Core i5 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Dedicated or modern integrated graphics with OpenGL 3.3 support, Intel Core i5 or equivalent"
     },
     {
       "title": "Duo Quest",
@@ -1934,18 +1934,6 @@
       "note": "Doporučená konfigurace: 2GB RAM, Intel i5或同级别"
     },
     {
-      "title": "BrokenLore: DON’T LIE",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "orange"
-      },
-      "gpu": "RTX 4070",
-      "cpu": "Intel Core i7",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 4070, Intel Core i7"
-    },
-    {
       "title": "Monastery: Ora et Labora",
       "tier": "green",
       "tiers": {
@@ -1956,6 +1944,18 @@
       "cpu": "Intel Core i5-11600 or AMD Ryzen 5 5600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 (8 GB) or AMD Radeon RX 5600 XT (6 GB) or Intel Arc A750 (8 GB), Intel Core i5-11600 or AMD Ryzen 5 5600"
+    },
+    {
+      "title": "BrokenLore: DON’T LIE",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "orange"
+      },
+      "gpu": "RTX 4070",
+      "cpu": "Intel Core i7",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 4070, Intel Core i7"
     },
     {
       "title": "The Incident at Galley House",
