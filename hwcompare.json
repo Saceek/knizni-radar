@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-06T05:17:27.164Z",
+  "updatedAt": "2026-10-06T06:17:16.569Z",
   "games": [
     {
       "title": "Valheim",
@@ -878,18 +878,6 @@
       "note": "Doporučená konfigurace: Nvidia RTX 2060/AMD RX 5060 XT, Intel i5-8500/AMD Ryzen 5 2600"
     },
     {
-      "title": "Forsworn",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 1660",
-      "cpu": "i5-9400 / Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1660, i5-9400 / Ryzen 5 3600"
-    },
-    {
       "title": "Tasty Chef",
       "tier": "orange",
       "tiers": {
@@ -900,6 +888,18 @@
       "cpu": "Intel Core i7-11700K @ 3.60GHz / AMD Ryzen 7 5700",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 2060 / Radeon RX 5700, Intel Core i7-11700K @ 3.60GHz / AMD Ryzen 7 5700"
+    },
+    {
+      "title": "Forsworn",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 1660",
+      "cpu": "i5-9400 / Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1660, i5-9400 / Ryzen 5 3600"
     },
     {
       "title": "Paver: Tidy Up Together",
@@ -1322,18 +1322,6 @@
       "note": "Doporučená konfigurace: NVIDIA RTX2060 6G, Intel Core i7"
     },
     {
-      "title": "Code Velocity",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Integrated/independent",
-      "cpu": "Intel Core-i3 or faster processor",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Integrated/independent, Intel Core-i3 or faster processor"
-    },
-    {
       "title": "Frutiger Home",
       "tier": "green",
       "tiers": {
@@ -1344,6 +1332,18 @@
       "cpu": "Intel i5-7600K / AMD Ryzen 5 3600",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GTX 1060 / Radeon RX 6600, Intel i5-7600K / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Code Velocity",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Integrated/independent",
+      "cpu": "Intel Core-i3 or faster processor",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Integrated/independent, Intel Core-i3 or faster processor"
     },
     {
       "title": "SCREENSIDE FISHER",
@@ -1358,18 +1358,6 @@
       "note": "Minimální konfigurace: GeForce GTX 460 or AMD Radeon HD 6850, Intel Core i3 or AMD equivalent"
     },
     {
-      "title": "嘉豪",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Modern graphics card supporting OpenGL 3.3 or Direct3D 11",
-      "cpu": "Quad-core 64-bit processor at 2.5 GHz or higher",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Modern graphics card supporting OpenGL 3.3 or Direct3D 11, Quad-core 64-bit processor at 2.5 GHz or higher"
-    },
-    {
       "title": "Museologist: Tidy Up the Museum!",
       "tier": "green",
       "tiers": {
@@ -1380,6 +1368,18 @@
       "cpu": "Intel Core i5-9600K or AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / RTX 2060 or AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-9600K or AMD Ryzen 5 3600"
+    },
+    {
+      "title": "嘉豪",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Modern graphics card supporting OpenGL 3.3 or Direct3D 11",
+      "cpu": "Quad-core 64-bit processor at 2.5 GHz or higher",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Modern graphics card supporting OpenGL 3.3 or Direct3D 11, Quad-core 64-bit processor at 2.5 GHz or higher"
     },
     {
       "title": "Sniper Dan",
@@ -1598,6 +1598,18 @@
       "note": "Minimální konfigurace: Compatible OpenGL / VRAM 1GB or better, Intel Core i3-4340 or better processor"
     },
     {
+      "title": "Breakout Garage",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "GeForce RTX 3060 / Radeon RX 6600 XT",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3060 / Radeon RX 6600 XT, Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
       "title": "Nighthawks",
       "tier": "green",
       "tiers": {
@@ -1620,18 +1632,6 @@
       "cpu": "Intel Core i5 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Dedicated or modern integrated graphics with OpenGL 3.3 support, Intel Core i5 or equivalent"
-    },
-    {
-      "title": "Breakout Garage",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "GeForce RTX 3060 / Radeon RX 6600 XT",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 / Radeon RX 6600 XT, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
       "title": "I Need to Fix My Dream Car (But I Work at a Junkyard)",
@@ -1812,18 +1812,6 @@
       "cpu": "Intel Core i7 (4th gen or newer) / AMD equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: DX10, DX11, DX12 or Vulkan capable GPUs, Intel Core i7 (4th gen or newer) / AMD equivalent"
-    },
-    {
-      "title": "Bookstore Incremental",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Any",
-      "cpu": "2Ghz+",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Any, 2Ghz+"
     },
     {
       "title": "琉璃烟火-Flame in Glass-",
