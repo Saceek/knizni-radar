@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-06T08:17:19.354Z",
+  "updatedAt": "2026-10-06T09:17:07.494Z",
   "games": [
     {
       "title": "WARDOGS",
@@ -324,18 +324,6 @@
       "cpu": "Dual Core 2 GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: 1 GB RAM, Dual Core 2 GHz"
-    },
-    {
-      "title": "Asgard's Fall — Viking Survivors",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 770 / Radeon 8950 HD",
-      "cpu": "Intel i5-7200U @ 2.50GHz or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GTX 770 / Radeon 8950 HD, Intel i5-7200U @ 2.50GHz or equivalent"
     },
     {
       "title": "Gladio Mori",
@@ -914,18 +902,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 760 | AMD Radeon HD 7950, Intel Core i3-2100 | AMD FX-6300"
     },
     {
-      "title": "HoloTrials: Case Covered",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA® GeForce® GTX 660 (VRAM 2GB or better)",
-      "cpu": "Intel® Core™ i5-3570 (or similar with SSE2 support)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 660 (VRAM 2GB or better), Intel® Core™ i5-3570 (or similar with SSE2 support)"
-    },
-    {
       "title": "Game Keeper: Somebody Messed Up My Shop!",
       "tier": "orange",
       "tiers": {
@@ -936,6 +912,18 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "HoloTrials: Case Covered",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA® GeForce® GTX 660 (VRAM 2GB or better)",
+      "cpu": "Intel® Core™ i5-3570 (or similar with SSE2 support)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 660 (VRAM 2GB or better), Intel® Core™ i5-3570 (or similar with SSE2 support)"
     },
     {
       "title": "Wand & Order: Tidy up the magic shop!",
@@ -1274,18 +1262,6 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1660 or AMD Radeon RX 580, Intel Core i7-8700K or AMD Ryzen 5 3600"
     },
     {
-      "title": "The Headlands",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GT 730 / AMD Radeon R7 240 or better (2015 and newer)",
-      "cpu": "Intel Core i3-3220 / AMD FX-6300 or better",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GT 730 / AMD Radeon R7 240 or better (2015 and newer), Intel Core i3-3220 / AMD FX-6300 or better"
-    },
-    {
       "title": "Songs of Glimmerwick",
       "tier": "green",
       "tiers": {
@@ -1298,16 +1274,16 @@
       "note": "Minimální konfigurace: Geforce 9600 GS, Radeon HD4000, Shader Model 3.0, 512 MB, Dual-core processor (Intel Dual Core 2.0 GHz or AMD Athlon X2 5200+ 2.6 GHz)"
     },
     {
-      "title": "Heroes' Vow: Three Kingdoms",
-      "tier": "orange",
+      "title": "The Headlands",
+      "tier": "green",
       "tiers": {
-        "allyx": "orange",
+        "allyx": "green",
         "pc": "green"
       },
-      "gpu": "NVIDIA RTX2060 6G",
-      "cpu": "Intel Core i7",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX2060 6G, Intel Core i7"
+      "gpu": "NVIDIA GT 730 / AMD Radeon R7 240 or better (2015 and newer)",
+      "cpu": "Intel Core i3-3220 / AMD FX-6300 or better",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GT 730 / AMD Radeon R7 240 or better (2015 and newer), Intel Core i3-3220 / AMD FX-6300 or better"
     },
     {
       "title": "Frutiger Home",
@@ -1322,6 +1298,18 @@
       "note": "Minimální konfigurace: NVIDIA GTX 1060 / Radeon RX 6600, Intel i5-7600K / AMD Ryzen 5 3600"
     },
     {
+      "title": "Heroes' Vow: Three Kingdoms",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA RTX2060 6G",
+      "cpu": "Intel Core i7",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX2060 6G, Intel Core i7"
+    },
+    {
       "title": "Code Velocity",
       "tier": "green",
       "tiers": {
@@ -1334,18 +1322,6 @@
       "note": "Doporučená konfigurace: Integrated/independent, Intel Core-i3 or faster processor"
     },
     {
-      "title": "Museologist: Tidy Up the Museum!",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1660 Super / RTX 2060 or AMD Radeon RX 5600 XT (6 GB VRAM)",
-      "cpu": "Intel Core i5-9600K or AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / RTX 2060 or AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-9600K or AMD Ryzen 5 3600"
-    },
-    {
       "title": "SCREENSIDE FISHER",
       "tier": "green",
       "tiers": {
@@ -1356,6 +1332,18 @@
       "cpu": "Intel Core i3 or AMD equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce GTX 460 or AMD Radeon HD 6850, Intel Core i3 or AMD equivalent"
+    },
+    {
+      "title": "Museologist: Tidy Up the Museum!",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1660 Super / RTX 2060 or AMD Radeon RX 5600 XT (6 GB VRAM)",
+      "cpu": "Intel Core i5-9600K or AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / RTX 2060 or AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-9600K or AMD Ryzen 5 3600"
     },
     {
       "title": "嘉豪",
@@ -1466,18 +1454,6 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 940M, Intel® Core™ i5-2430M"
     },
     {
-      "title": "Delverium",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel iris Xe / Geforce GTX 750 / AMD Radeon HD 7770",
-      "cpu": "Intel Core i5, AMD Ryzen 5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Intel iris Xe / Geforce GTX 750 / AMD Radeon HD 7770, Intel Core i5, AMD Ryzen 5"
-    },
-    {
       "title": "Crack the Pack",
       "tier": "green",
       "tiers": {
@@ -1488,6 +1464,18 @@
       "cpu": "2.7 GHz Dual Core",
       "usedMinimum": true,
       "note": "Minimální konfigurace: 512MB, OpenGL 3+, 2.7 GHz Dual Core"
+    },
+    {
+      "title": "Delverium",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel iris Xe / Geforce GTX 750 / AMD Radeon HD 7770",
+      "cpu": "Intel Core i5, AMD Ryzen 5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Intel iris Xe / Geforce GTX 750 / AMD Radeon HD 7770, Intel Core i5, AMD Ryzen 5"
     },
     {
       "title": "Mixed Spirits: Bartender",
@@ -1562,6 +1550,18 @@
       "note": "Doporučená konfigurace: Vulkan, DirectX 12 or OpenGL ES, Quad-core Intel 2.5 GHz (or AMD equivalent) or better"
     },
     {
+      "title": "崇祯直聘：明末官场沉浮模拟器",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Dedicated or modern integrated graphics with OpenGL 3.3 support",
+      "cpu": "Intel Core i5 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Dedicated or modern integrated graphics with OpenGL 3.3 support, Intel Core i5 or equivalent"
+    },
+    {
       "title": "Escape Toon Kingdom",
       "tier": "green",
       "tiers": {
@@ -1584,18 +1584,6 @@
       "cpu": "Intel Core i3-4340 or better processor",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Compatible OpenGL / VRAM 1GB or better, Intel Core i3-4340 or better processor"
-    },
-    {
-      "title": "崇祯直聘：明末官场沉浮模拟器",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Dedicated or modern integrated graphics with OpenGL 3.3 support",
-      "cpu": "Intel Core i5 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Dedicated or modern integrated graphics with OpenGL 3.3 support, Intel Core i5 or equivalent"
     },
     {
       "title": "Breakout Garage",
