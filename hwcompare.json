@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-06T16:17:11.641Z",
+  "updatedAt": "2026-10-06T17:17:14.649Z",
   "games": [
     {
       "title": "WARDOGS",
@@ -650,18 +650,6 @@
       "note": "Doporučená konfigurace: Nvidia GefForce GTX 1060 of AMD Radeon RX580, Intel Core i5-5600 or AMD Ryzen3 1300"
     },
     {
-      "title": "It's Fine",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Any GPU with 512 MB VRAM and DX10/11 feature-set (Intel HD 3000+, NVIDIA GT 710, AMD HD 6450, etc.)",
-      "cpu": "Dual-core CPU, 2 GHz (Intel Core i3-2100 / AMD FX-4100 or equivalent)",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Any GPU with 512 MB VRAM and DX10/11 feature-set (Intel HD 3000+, NVIDIA GT 710, AMD HD 6450, etc.), Dual-core CPU, 2 GHz (Intel Core i3-2100 / AMD FX-4100 or equivalent)"
-    },
-    {
       "title": "Neat!",
       "tier": "green",
       "tiers": {
@@ -672,6 +660,18 @@
       "cpu": "Intel Core i3-2100 or AMD FX-6300",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GT 530, 2 GB or AMD Radeon R7 250, 1 GB, Intel Core i3-2100 or AMD FX-6300"
+    },
+    {
+      "title": "It's Fine",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Any GPU with 512 MB VRAM and DX10/11 feature-set (Intel HD 3000+, NVIDIA GT 710, AMD HD 6450, etc.)",
+      "cpu": "Dual-core CPU, 2 GHz (Intel Core i3-2100 / AMD FX-4100 or equivalent)",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Any GPU with 512 MB VRAM and DX10/11 feature-set (Intel HD 3000+, NVIDIA GT 710, AMD HD 6450, etc.), Dual-core CPU, 2 GHz (Intel Core i3-2100 / AMD FX-4100 or equivalent)"
     },
     {
       "title": "Sengoku Rance",
@@ -960,18 +960,6 @@
       "cpu": "2-core / 4-thread CPU",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GTX 750ti, 2-core / 4-thread CPU"
-    },
-    {
-      "title": "Warlord: Awaji",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "orange"
-      },
-      "gpu": "NVIDIA Geforce RTX 3070",
-      "cpu": "Intel i7 11th Gen",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA Geforce RTX 3070, Intel i7 11th Gen"
     },
     {
       "title": "Pibcremental",
@@ -1286,18 +1274,6 @@
       "note": "Minimální konfigurace: NVIDIA GT 730 / AMD Radeon R7 240 or better (2015 and newer), Intel Core i3-3220 / AMD FX-6300 or better"
     },
     {
-      "title": "Heroes' Vow: Three Kingdoms",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA RTX2060 6G",
-      "cpu": "Intel Core i7",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX2060 6G, Intel Core i7"
-    },
-    {
       "title": "SCREENSIDE FISHER",
       "tier": "green",
       "tiers": {
@@ -1320,6 +1296,18 @@
       "cpu": "Intel Core i5-9600K or AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / RTX 2060 or AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-9600K or AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Heroes' Vow: Three Kingdoms",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA RTX2060 6G",
+      "cpu": "Intel Core i7",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX2060 6G, Intel Core i7"
     },
     {
       "title": "Code Velocity",
@@ -1416,18 +1404,6 @@
       "cpu": "AMD Ryzen 5 5600X, Ryzen 5 7600, or Intel Core i5-12400 / 13400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Most GFX Cards, AMD Ryzen 5 5600X, Ryzen 5 7600, or Intel Core i5-12400 / 13400"
-    },
-    {
-      "title": "Golden Swirl",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Dedicated GPU (e.g., NVIDIA GeForce GTX 1060 or equivalent)",
-      "cpu": "Intel Core i5 or higher",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Dedicated GPU (e.g., NVIDIA GeForce GTX 1060 or equivalent), Intel Core i5 or higher"
     },
     {
       "title": "Crack the Pack",
@@ -1550,18 +1526,6 @@
       "note": "Doporučená konfigurace: Nvidia RTX 2070﻿ or RX 5700, or equivalent performance &amp; VRAM, Ryzen 5 5600X﻿ or ﻿i5-12400 ﻿or equivalent performance, 6 physical cores minimum"
     },
     {
-      "title": "Breakout Garage",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "GeForce RTX 3060 / Radeon RX 6600 XT",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 / Radeon RX 6600 XT, Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
       "title": "Nighthawks",
       "tier": "green",
       "tiers": {
@@ -1572,6 +1536,18 @@
       "cpu": "2Ghz or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: DX10, DX11, and DX12-capable GPUs, 2Ghz or better"
+    },
+    {
+      "title": "Breakout Garage",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "GeForce RTX 3060 / Radeon RX 6600 XT",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3060 / Radeon RX 6600 XT, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
       "title": "Escape Toon Kingdom",
@@ -1778,18 +1754,6 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 (8 GB) or AMD Radeon RX 5600 XT (6 GB) or Intel Arc A750 (8 GB), Intel Core i5-11600 or AMD Ryzen 5 5600"
     },
     {
-      "title": "天衍",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "2GB RAM",
-      "cpu": "Intel i5或同级别",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: 2GB RAM, Intel i5或同级别"
-    },
-    {
       "title": "BrokenLore: DON’T LIE",
       "tier": "red",
       "tiers": {
@@ -1800,6 +1764,18 @@
       "cpu": "Intel Core i7",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 4070, Intel Core i7"
+    },
+    {
+      "title": "天衍",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "2GB RAM",
+      "cpu": "Intel i5或同级别",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 2GB RAM, Intel i5或同级别"
     },
     {
       "title": "Draco and the Seven Scales",
