@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-06T21:17:48.873Z",
+  "updatedAt": "2026-10-06T22:16:46.549Z",
   "games": [
     {
       "title": "WARDOGS",
@@ -458,18 +458,6 @@
       "note": "Minimální konfigurace: Intel UHD 630, Vega 7, Intel Core i5, 2.2Hz dual core"
     },
     {
-      "title": "Sunken Engine",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 1050 4GB",
-      "cpu": "Intel Core i3 (or equivalent AMD)",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GTX 1050 4GB, Intel Core i3 (or equivalent AMD)"
-    },
-    {
       "title": "Anime Shop Simulator ✨",
       "tier": "green",
       "tiers": {
@@ -480,6 +468,18 @@
       "cpu": "Intel Core i3 3.0 GHz or Ryzen 3xxx",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Nvidia GeForce GTX 960 4GB VRAM, Intel Core i3 3.0 GHz or Ryzen 3xxx"
+    },
+    {
+      "title": "Sunken Engine",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 1050 4GB",
+      "cpu": "Intel Core i3 (or equivalent AMD)",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GTX 1050 4GB, Intel Core i3 (or equivalent AMD)"
     },
     {
       "title": "Police Chief Simulator",
@@ -602,6 +602,18 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 2060"
     },
     {
+      "title": "STAR WARS: Galactic Racer™",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GeForce RTX 3060 Ti / Intel Arc B580 / AMD Radeon RX 6700 XT",
+      "cpu": "Intel Core i7-10700 / AMD Ryzen 7 3700X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 Ti / Intel Arc B580 / AMD Radeon RX 6700 XT, Intel Core i7-10700 / AMD Ryzen 7 3700X"
+    },
+    {
       "title": "The Piper of Dawn",
       "tier": "green",
       "tiers": {
@@ -662,16 +674,16 @@
       "note": "Doporučená konfigurace: Nvidia GefForce GTX 1060 of AMD Radeon RX580, Intel Core i5-5600 or AMD Ryzen3 1300"
     },
     {
-      "title": "STAR WARS: Galactic Racer™",
-      "tier": "red",
+      "title": "It's Fine",
+      "tier": "green",
       "tiers": {
-        "allyx": "red",
+        "allyx": "green",
         "pc": "green"
       },
-      "gpu": "Nvidia GeForce RTX 3060 Ti / Intel Arc B580 / AMD Radeon RX 6700 XT",
-      "cpu": "Intel Core i7-10700 / AMD Ryzen 7 3700X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 Ti / Intel Arc B580 / AMD Radeon RX 6700 XT, Intel Core i7-10700 / AMD Ryzen 7 3700X"
+      "gpu": "Any GPU with 512 MB VRAM and DX10/11 feature-set (Intel HD 3000+, NVIDIA GT 710, AMD HD 6450, etc.)",
+      "cpu": "Dual-core CPU, 2 GHz (Intel Core i3-2100 / AMD FX-4100 or equivalent)",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Any GPU with 512 MB VRAM and DX10/11 feature-set (Intel HD 3000+, NVIDIA GT 710, AMD HD 6450, etc.), Dual-core CPU, 2 GHz (Intel Core i3-2100 / AMD FX-4100 or equivalent)"
     },
     {
       "title": "Neat!",
@@ -684,18 +696,6 @@
       "cpu": "Intel Core i3-2100 or AMD FX-6300",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GT 530, 2 GB or AMD Radeon R7 250, 1 GB, Intel Core i3-2100 or AMD FX-6300"
-    },
-    {
-      "title": "It's Fine",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Any GPU with 512 MB VRAM and DX10/11 feature-set (Intel HD 3000+, NVIDIA GT 710, AMD HD 6450, etc.)",
-      "cpu": "Dual-core CPU, 2 GHz (Intel Core i3-2100 / AMD FX-4100 or equivalent)",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Any GPU with 512 MB VRAM and DX10/11 feature-set (Intel HD 3000+, NVIDIA GT 710, AMD HD 6450, etc.), Dual-core CPU, 2 GHz (Intel Core i3-2100 / AMD FX-4100 or equivalent)"
     },
     {
       "title": "Sengoku Rance",
@@ -722,18 +722,6 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 TI or AMD equivalent, +3 GHZ octa core processor"
     },
     {
-      "title": "Wild West Pioneers",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 1660 SUPER 6GB / AMD Radeon RX Vega 56 8GB",
-      "cpu": "Intel Core i5-8600K / AMD Ryzen 5 1600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1660 SUPER 6GB / AMD Radeon RX Vega 56 8GB, Intel Core i5-8600K / AMD Ryzen 5 1600"
-    },
-    {
       "title": "Rivage",
       "tier": "red",
       "tiers": {
@@ -744,6 +732,18 @@
       "cpu": "Intel Core i5-11400F / AMD Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 12 GB / AMD RX 6700 XT, Intel Core i5-11400F / AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "Wild West Pioneers",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 1660 SUPER 6GB / AMD Radeon RX Vega 56 8GB",
+      "cpu": "Intel Core i5-8600K / AMD Ryzen 5 1600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1660 SUPER 6GB / AMD Radeon RX Vega 56 8GB, Intel Core i5-8600K / AMD Ryzen 5 1600"
     },
     {
       "title": "Tidy Up History",
@@ -1238,6 +1238,18 @@
       "note": "Minimální konfigurace: Geforce 9600 GS, Radeon HD4000, Shader Model 3.0, 512 MB, Dual-core processor (Intel Dual Core 2.0 GHz or AMD Athlon X2 5200+ 2.6 GHz)"
     },
     {
+      "title": "Museologist: Tidy Up the Museum!",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1660 Super / RTX 2060 or AMD Radeon RX 5600 XT (6 GB VRAM)",
+      "cpu": "Intel Core i5-9600K or AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / RTX 2060 or AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-9600K or AMD Ryzen 5 3600"
+    },
+    {
       "title": "Frutiger Home",
       "tier": "green",
       "tiers": {
@@ -1260,18 +1272,6 @@
       "cpu": "Intel Core i7-8700K or AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1660 or AMD Radeon RX 580, Intel Core i7-8700K or AMD Ryzen 5 3600"
-    },
-    {
-      "title": "Museologist: Tidy Up the Museum!",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1660 Super / RTX 2060 or AMD Radeon RX 5600 XT (6 GB VRAM)",
-      "cpu": "Intel Core i5-9600K or AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / RTX 2060 or AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-9600K or AMD Ryzen 5 3600"
     },
     {
       "title": "The Headlands",
@@ -1394,18 +1394,6 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10600 / AMD Ryzen 5 3600"
     },
     {
-      "title": "HOPE 01",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Most GFX Cards",
-      "cpu": "AMD Ryzen 5 5600X, Ryzen 5 7600, or Intel Core i5-12400 / 13400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Most GFX Cards, AMD Ryzen 5 5600X, Ryzen 5 7600, or Intel Core i5-12400 / 13400"
-    },
-    {
       "title": "Crack the Pack",
       "tier": "green",
       "tiers": {
@@ -1416,6 +1404,18 @@
       "cpu": "2.7 GHz Dual Core",
       "usedMinimum": true,
       "note": "Minimální konfigurace: 512MB, OpenGL 3+, 2.7 GHz Dual Core"
+    },
+    {
+      "title": "HOPE 01",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Most GFX Cards",
+      "cpu": "AMD Ryzen 5 5600X, Ryzen 5 7600, or Intel Core i5-12400 / 13400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Most GFX Cards, AMD Ryzen 5 5600X, Ryzen 5 7600, or Intel Core i5-12400 / 13400"
     },
     {
       "title": "Delverium",
@@ -1670,18 +1670,6 @@
       "note": "Minimální konfigurace: Nvidia GTX 1050 / AMD RX550, Intel Core i5 2.5 GHz / AMD Ryzen 5"
     },
     {
-      "title": "大荒",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Dedicated graphics with OpenGL 3.3 support",
-      "cpu": "Intel Core i5-6600K, AMD Ryzen 5 1600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Dedicated graphics with OpenGL 3.3 support, Intel Core i5-6600K, AMD Ryzen 5 1600"
-    },
-    {
       "title": "SiN Reloaded",
       "tier": "green",
       "tiers": {
@@ -1692,6 +1680,18 @@
       "cpu": "Intel Core i5-2300 2.8 GHz/AMD Phenom II X4 945 3.0 GHz or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GPU with DirectX 11 or Vulkan 1.1 support, Intel Core i5-2300 2.8 GHz/AMD Phenom II X4 945 3.0 GHz or equivalent"
+    },
+    {
+      "title": "大荒",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Dedicated graphics with OpenGL 3.3 support",
+      "cpu": "Intel Core i5-6600K, AMD Ryzen 5 1600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Dedicated graphics with OpenGL 3.3 support, Intel Core i5-6600K, AMD Ryzen 5 1600"
     },
     {
       "title": "Beyond Yardwork Simulator Prologue",
@@ -1778,18 +1778,6 @@
       "note": "Doporučená konfigurace: 2GB RAM, Intel i5或同级别"
     },
     {
-      "title": "Draco and the Seven Scales",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "128MB",
-      "cpu": null,
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: 128MB"
-    },
-    {
       "title": "Tidy Up the Flower Shop",
       "tier": "orange",
       "tiers": {
@@ -1800,6 +1788,18 @@
       "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10400 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Draco and the Seven Scales",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "128MB",
+      "cpu": null,
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: 128MB"
     },
     {
       "title": "The Incident at Galley House",
