@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-06T06:17:16.569Z",
+  "updatedAt": "2026-10-06T07:17:16.933Z",
   "games": [
     {
       "title": "Valheim",
@@ -326,18 +326,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 6GB, Intel® Core™ i5-6400"
     },
     {
-      "title": "Asgard's Fall — Viking Survivors",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 770 / Radeon 8950 HD",
-      "cpu": "Intel i5-7200U @ 2.50GHz or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GTX 770 / Radeon 8950 HD, Intel i5-7200U @ 2.50GHz or equivalent"
-    },
-    {
       "title": "Batomon Showdown",
       "tier": "green",
       "tiers": {
@@ -348,6 +336,18 @@
       "cpu": "Dual Core 2 GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: 1 GB RAM, Dual Core 2 GHz"
+    },
+    {
+      "title": "Asgard's Fall — Viking Survivors",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 770 / Radeon 8950 HD",
+      "cpu": "Intel i5-7200U @ 2.50GHz or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GTX 770 / Radeon 8950 HD, Intel i5-7200U @ 2.50GHz or equivalent"
     },
     {
       "title": "Gladio Mori",
@@ -722,18 +722,6 @@
       "note": "Doporučená konfigurace: OpenGL ES 2.0 hardware driver support required for WebGL acceleration. (AMD Catalyst 10.9, nVidia 358.50), 2+ GHz Processor"
     },
     {
-      "title": "Tidy Up History",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVidia GeForce GTX 1050",
-      "cpu": "Intel i5-2500 3.3GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVidia GeForce GTX 1050, Intel i5-2500 3.3GHz"
-    },
-    {
       "title": "Rivage",
       "tier": "red",
       "tiers": {
@@ -744,6 +732,18 @@
       "cpu": "Intel Core i5-11400F / AMD Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 12 GB / AMD RX 6700 XT, Intel Core i5-11400F / AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "Tidy Up History",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVidia GeForce GTX 1050",
+      "cpu": "Intel i5-2500 3.3GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVidia GeForce GTX 1050, Intel i5-2500 3.3GHz"
     },
     {
       "title": "Rollout Inline",
@@ -794,6 +794,18 @@
       "note": "Doporučená konfigurace: GTX 260 or equivalent, Intel Core 2 Duo or equivalent"
     },
     {
+      "title": "Dawson Oaks Trailer Park",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "Nvidia Geforce GTX 1080Ti",
+      "cpu": null,
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia Geforce GTX 1080Ti"
+    },
+    {
       "title": "Stranded with You",
       "tier": "green",
       "tiers": {
@@ -816,18 +828,6 @@
       "cpu": "Intel Core i7-12700H",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 2060, Intel Core i7-12700H"
-    },
-    {
-      "title": "Dawson Oaks Trailer Park",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "Nvidia Geforce GTX 1080Ti",
-      "cpu": null,
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia Geforce GTX 1080Ti"
     },
     {
       "title": "Woman Simulator",
@@ -1346,18 +1346,6 @@
       "note": "Doporučená konfigurace: Integrated/independent, Intel Core-i3 or faster processor"
     },
     {
-      "title": "SCREENSIDE FISHER",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 460 or AMD Radeon HD 6850",
-      "cpu": "Intel Core i3 or AMD equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 460 or AMD Radeon HD 6850, Intel Core i3 or AMD equivalent"
-    },
-    {
       "title": "Museologist: Tidy Up the Museum!",
       "tier": "green",
       "tiers": {
@@ -1368,6 +1356,18 @@
       "cpu": "Intel Core i5-9600K or AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / RTX 2060 or AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-9600K or AMD Ryzen 5 3600"
+    },
+    {
+      "title": "SCREENSIDE FISHER",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 460 or AMD Radeon HD 6850",
+      "cpu": "Intel Core i3 or AMD equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 460 or AMD Radeon HD 6850, Intel Core i3 or AMD equivalent"
     },
     {
       "title": "嘉豪",
@@ -1598,6 +1598,18 @@
       "note": "Minimální konfigurace: Compatible OpenGL / VRAM 1GB or better, Intel Core i3-4340 or better processor"
     },
     {
+      "title": "崇祯直聘：明末官场沉浮模拟器",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Dedicated or modern integrated graphics with OpenGL 3.3 support",
+      "cpu": "Intel Core i5 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Dedicated or modern integrated graphics with OpenGL 3.3 support, Intel Core i5 or equivalent"
+    },
+    {
       "title": "Breakout Garage",
       "tier": "orange",
       "tiers": {
@@ -1620,18 +1632,6 @@
       "cpu": "2Ghz or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: DX10, DX11, and DX12-capable GPUs, 2Ghz or better"
-    },
-    {
-      "title": "崇祯直聘：明末官场沉浮模拟器",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Dedicated or modern integrated graphics with OpenGL 3.3 support",
-      "cpu": "Intel Core i5 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Dedicated or modern integrated graphics with OpenGL 3.3 support, Intel Core i5 or equivalent"
     },
     {
       "title": "I Need to Fix My Dream Car (But I Work at a Junkyard)",
