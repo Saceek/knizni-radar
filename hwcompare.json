@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-06T04:17:21.647Z",
+  "updatedAt": "2026-10-06T05:17:27.164Z",
   "games": [
     {
       "title": "Valheim",
@@ -818,18 +818,6 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 2060, Intel Core i7-12700H"
     },
     {
-      "title": "Woman Simulator",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "RTX 3060 / Radeon RX 6600 XT",
-      "cpu": "Intel core i5 / Ryzen 5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 3060 / Radeon RX 6600 XT, Intel core i5 / Ryzen 5"
-    },
-    {
       "title": "Dawson Oaks Trailer Park",
       "tier": "orange",
       "tiers": {
@@ -840,6 +828,18 @@
       "cpu": null,
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia Geforce GTX 1080Ti"
+    },
+    {
+      "title": "Woman Simulator",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "RTX 3060 / Radeon RX 6600 XT",
+      "cpu": "Intel core i5 / Ryzen 5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 3060 / Radeon RX 6600 XT, Intel core i5 / Ryzen 5"
     },
     {
       "title": "RIG Riot",
@@ -914,18 +914,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1070 | AMD Radeon RX-6600, Intel Core i5-13400F | AMD Ryzen 5 7600x"
     },
     {
-      "title": "HoloTrials: Case Covered",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA® GeForce® GTX 660 (VRAM 2GB or better)",
-      "cpu": "Intel® Core™ i5-3570 (or similar with SSE2 support)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 660 (VRAM 2GB or better), Intel® Core™ i5-3570 (or similar with SSE2 support)"
-    },
-    {
       "title": "地下城竞技场",
       "tier": "green",
       "tiers": {
@@ -936,6 +924,18 @@
       "cpu": "Intel Core i3-2100 | AMD FX-6300",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 760 | AMD Radeon HD 7950, Intel Core i3-2100 | AMD FX-6300"
+    },
+    {
+      "title": "HoloTrials: Case Covered",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA® GeForce® GTX 660 (VRAM 2GB or better)",
+      "cpu": "Intel® Core™ i5-3570 (or similar with SSE2 support)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 660 (VRAM 2GB or better), Intel® Core™ i5-3570 (or similar with SSE2 support)"
     },
     {
       "title": "Game Keeper: Somebody Messed Up My Shop!",
@@ -962,6 +962,18 @@
       "note": "Doporučená konfigurace: Nvidia 1060/AMD equivalent, Intel i3 / AMD FX series or equivalent"
     },
     {
+      "title": "The Magus Circle",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DX10, DX11, DX12 capable",
+      "cpu": "Intel Core i5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: DX10, DX11, DX12 capable, Intel Core i5"
+    },
+    {
       "title": "Crown Siege",
       "tier": "green",
       "tiers": {
@@ -984,18 +996,6 @@
       "cpu": "Intel i7 11th Gen",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA Geforce RTX 3070, Intel i7 11th Gen"
-    },
-    {
-      "title": "The Magus Circle",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DX10, DX11, DX12 capable",
-      "cpu": "Intel Core i5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: DX10, DX11, DX12 capable, Intel Core i5"
     },
     {
       "title": "Pibcremental",
@@ -1334,18 +1334,6 @@
       "note": "Doporučená konfigurace: Integrated/independent, Intel Core-i3 or faster processor"
     },
     {
-      "title": "SCREENSIDE FISHER",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 460 or AMD Radeon HD 6850",
-      "cpu": "Intel Core i3 or AMD equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 460 or AMD Radeon HD 6850, Intel Core i3 or AMD equivalent"
-    },
-    {
       "title": "Frutiger Home",
       "tier": "green",
       "tiers": {
@@ -1356,6 +1344,18 @@
       "cpu": "Intel i5-7600K / AMD Ryzen 5 3600",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GTX 1060 / Radeon RX 6600, Intel i5-7600K / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "SCREENSIDE FISHER",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 460 or AMD Radeon HD 6850",
+      "cpu": "Intel Core i3 or AMD equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 460 or AMD Radeon HD 6850, Intel Core i3 or AMD equivalent"
     },
     {
       "title": "嘉豪",
@@ -1370,18 +1370,6 @@
       "note": "Doporučená konfigurace: Modern graphics card supporting OpenGL 3.3 or Direct3D 11, Quad-core 64-bit processor at 2.5 GHz or higher"
     },
     {
-      "title": "Sniper Dan",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 970 (4096 MB) or Radeon R9 270X (2048 MB)",
-      "cpu": "Intel Core i7-6700K (4 * 4000) or equivalent/AMD Ryzen 1500X (4 * 3500) or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 970 (4096 MB) or Radeon R9 270X (2048 MB), Intel Core i7-6700K (4 * 4000) or equivalent/AMD Ryzen 1500X (4 * 3500) or equivalent"
-    },
-    {
       "title": "Museologist: Tidy Up the Museum!",
       "tier": "green",
       "tiers": {
@@ -1392,6 +1380,18 @@
       "cpu": "Intel Core i5-9600K or AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / RTX 2060 or AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-9600K or AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Sniper Dan",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 970 (4096 MB) or Radeon R9 270X (2048 MB)",
+      "cpu": "Intel Core i7-6700K (4 * 4000) or equivalent/AMD Ryzen 1500X (4 * 3500) or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 970 (4096 MB) or Radeon R9 270X (2048 MB), Intel Core i7-6700K (4 * 4000) or equivalent/AMD Ryzen 1500X (4 * 3500) or equivalent"
     },
     {
       "title": "Glider Sim Deluxe – Soaring Simulator",
@@ -1406,18 +1406,6 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1070, Core i5"
     },
     {
-      "title": "Anomaly Company",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA RTX 2060 / AMD Radeon RX 5700",
-      "cpu": "Intel Core i5-10600 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10600 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "Old Market Restored",
       "tier": "green",
       "tiers": {
@@ -1428,6 +1416,18 @@
       "cpu": "Intel Core i3 3000 or later",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 660, Intel Core i3 3000 or later"
+    },
+    {
+      "title": "Anomaly Company",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA RTX 2060 / AMD Radeon RX 5700",
+      "cpu": "Intel Core i5-10600 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10600 / AMD Ryzen 5 3600"
     },
     {
       "title": "Fish Lab",
@@ -1442,18 +1442,6 @@
       "note": "Minimální konfigurace: Radeon RX Vega 11 / Intel Iris Xe / GTX 1050 2GB, 2.5 GHz dual-core"
     },
     {
-      "title": "Golden Swirl",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Dedicated GPU (e.g., NVIDIA GeForce GTX 1060 or equivalent)",
-      "cpu": "Intel Core i5 or higher",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Dedicated GPU (e.g., NVIDIA GeForce GTX 1060 or equivalent), Intel Core i5 or higher"
-    },
-    {
       "title": "HOPE 01",
       "tier": "green",
       "tiers": {
@@ -1464,6 +1452,18 @@
       "cpu": "AMD Ryzen 5 5600X, Ryzen 5 7600, or Intel Core i5-12400 / 13400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Most GFX Cards, AMD Ryzen 5 5600X, Ryzen 5 7600, or Intel Core i5-12400 / 13400"
+    },
+    {
+      "title": "Golden Swirl",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Dedicated GPU (e.g., NVIDIA GeForce GTX 1060 or equivalent)",
+      "cpu": "Intel Core i5 or higher",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Dedicated GPU (e.g., NVIDIA GeForce GTX 1060 or equivalent), Intel Core i5 or higher"
     },
     {
       "title": "Flamecraft",
@@ -1718,18 +1718,6 @@
       "note": "Minimální konfigurace: 1 GB, Dual Core"
     },
     {
-      "title": "Cosmic Fear",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "orange"
-      },
-      "gpu": "Nvidia RTX 4070 / AMD RX 7800XT",
-      "cpu": "Intel 11600k / AMD 5600x",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia RTX 4070 / AMD RX 7800XT, Intel 11600k / AMD 5600x"
-    },
-    {
       "title": "Drop Command",
       "tier": "red",
       "tiers": {
@@ -1740,6 +1728,18 @@
       "cpu": "Intel Core i7-6700K/AMD Ryzen 7 1700",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 3080, Intel Core i7-6700K/AMD Ryzen 7 1700"
+    },
+    {
+      "title": "Cosmic Fear",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "orange"
+      },
+      "gpu": "Nvidia RTX 4070 / AMD RX 7800XT",
+      "cpu": "Intel 11600k / AMD 5600x",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia RTX 4070 / AMD RX 7800XT, Intel 11600k / AMD 5600x"
     },
     {
       "title": "Infinity: HexaDome Tactics",
