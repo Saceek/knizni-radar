@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-06T19:17:03.463Z",
+  "updatedAt": "2026-10-06T20:17:17.441Z",
   "games": [
     {
       "title": "WARDOGS",
@@ -326,18 +326,6 @@
       "note": "Minimální konfigurace: 1 GB RAM, Dual Core 2 GHz"
     },
     {
-      "title": "Gladio Mori",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 1070",
-      "cpu": "3.5GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GTX 1070, 3.5GHz"
-    },
-    {
       "title": "DYNASTY WARRIORS 3: Complete Edition Remastered",
       "tier": "red",
       "tiers": {
@@ -348,6 +336,18 @@
       "cpu": "Intel Core i7-10700K or better, AMD Ryzen 7 3700X or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 (VRAM 8GB) or better, AMD Radeon RX 6700XT (VRAM 12GB) or better, Intel Core i7-10700K or better, AMD Ryzen 7 3700X or better"
+    },
+    {
+      "title": "Gladio Mori",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 1070",
+      "cpu": "3.5GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GTX 1070, 3.5GHz"
     },
     {
       "title": "Dimraeth",
@@ -710,16 +710,16 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 TI or AMD equivalent, +3 GHZ octa core processor"
     },
     {
-      "title": "Rivage",
+      "title": "STAR WARS: Galactic Racer™",
       "tier": "red",
       "tiers": {
         "allyx": "red",
         "pc": "green"
       },
-      "gpu": "NVIDIA RTX 3060 12 GB / AMD RX 6700 XT",
-      "cpu": "Intel Core i5-11400F / AMD Ryzen 5 5600X",
+      "gpu": "Nvidia GeForce RTX 3060 Ti / Intel Arc B580 / AMD Radeon RX 6700 XT",
+      "cpu": "Intel Core i7-10700 / AMD Ryzen 7 3700X",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 3060 12 GB / AMD RX 6700 XT, Intel Core i5-11400F / AMD Ryzen 5 5600X"
+      "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 Ti / Intel Arc B580 / AMD Radeon RX 6700 XT, Intel Core i7-10700 / AMD Ryzen 7 3700X"
     },
     {
       "title": "Wild West Pioneers",
@@ -732,6 +732,18 @@
       "cpu": "Intel Core i5-8600K / AMD Ryzen 5 1600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1660 SUPER 6GB / AMD Radeon RX Vega 56 8GB, Intel Core i5-8600K / AMD Ryzen 5 1600"
+    },
+    {
+      "title": "Rivage",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA RTX 3060 12 GB / AMD RX 6700 XT",
+      "cpu": "Intel Core i5-11400F / AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 3060 12 GB / AMD RX 6700 XT, Intel Core i5-11400F / AMD Ryzen 5 5600X"
     },
     {
       "title": "Tidy Up History",
@@ -878,18 +890,6 @@
       "note": "Doporučená konfigurace: Nvidia RTX 2060/AMD RX 5060 XT, Intel i5-8500/AMD Ryzen 5 2600"
     },
     {
-      "title": "STAR WARS: Galactic Racer™",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "Nvidia GeForce RTX 3060 Ti / Intel Arc B580 / AMD Radeon RX 6700 XT",
-      "cpu": "Intel Core i7-10700 / AMD Ryzen 7 3700X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 Ti / Intel Arc B580 / AMD Radeon RX 6700 XT, Intel Core i7-10700 / AMD Ryzen 7 3700X"
-    },
-    {
       "title": "Forsworn",
       "tier": "green",
       "tiers": {
@@ -1034,18 +1034,6 @@
       "note": "Doporučená konfigurace: NVIDIA® GeForce® RTX 3070 | 8GB VRAM, Intel Core i7-6700K or AMD Ryzen 5 3600"
     },
     {
-      "title": "Dumb Ways to Build",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "RTX 3060 (12GB) / RX 6700 XT",
-      "cpu": "6-Core / 12-Thread (Intel i5-12400, Ryzen 5 5600X)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 3060 (12GB) / RX 6700 XT, 6-Core / 12-Thread (Intel i5-12400, Ryzen 5 5600X)"
-    },
-    {
       "title": "iRacing® Studios NASCAR 26",
       "tier": "red",
       "tiers": {
@@ -1056,6 +1044,18 @@
       "cpu": "8 core or more CPU (some examples but not limited to: Intel Core 9-10980XE @ 3.0GHz, Intel Core i9-9900KS @ 4.00GHz, AMD Ryzen 9 3900X, or AMD Ryzen 9 3950X)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Gaming graphics card with at least 8GB of DEDICATED memory (some examples but not limited to Nvidia 2080 TI or AMD Radeon VII), 8 core or more CPU (some examples but not limited to: Intel Core 9-10980XE @ 3.0GHz, Intel Core i9-9900KS @ 4.00GHz, AMD Ryzen 9 3900X, or AMD Ryzen 9 3950X)"
+    },
+    {
+      "title": "Dumb Ways to Build",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "RTX 3060 (12GB) / RX 6700 XT",
+      "cpu": "6-Core / 12-Thread (Intel i5-12400, Ryzen 5 5600X)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 3060 (12GB) / RX 6700 XT, 6-Core / 12-Thread (Intel i5-12400, Ryzen 5 5600X)"
     },
     {
       "title": "Fallen Tear: The Ascension",
@@ -1490,18 +1490,6 @@
       "note": "Doporučená konfigurace: Nvidia RTX3060 or AMD RX 6600 XT, Intel core Core i5-8600K or AMD Ryzen 5 3600X"
     },
     {
-      "title": "崇祯直聘：明末官场沉浮模拟器",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Dedicated or modern integrated graphics with OpenGL 3.3 support",
-      "cpu": "Intel Core i5 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Dedicated or modern integrated graphics with OpenGL 3.3 support, Intel Core i5 or equivalent"
-    },
-    {
       "title": "Cloudscrapers",
       "tier": "green",
       "tiers": {
@@ -1514,16 +1502,16 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 560 | AMD Radeon HD 6870, Intel Core i5-2300 | AMD FX-4350"
     },
     {
-      "title": "Nighthawks",
+      "title": "崇祯直聘：明末官场沉浮模拟器",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "DX10, DX11, and DX12-capable GPUs",
-      "cpu": "2Ghz or better",
+      "gpu": "Dedicated or modern integrated graphics with OpenGL 3.3 support",
+      "cpu": "Intel Core i5 or equivalent",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: DX10, DX11, and DX12-capable GPUs, 2Ghz or better"
+      "note": "Doporučená konfigurace: Dedicated or modern integrated graphics with OpenGL 3.3 support, Intel Core i5 or equivalent"
     },
     {
       "title": "eXoSpace Combat Engineer",
@@ -1538,6 +1526,18 @@
       "note": "Doporučená konfigurace: Vulkan, DirectX 12 or OpenGL ES, Quad-core Intel 2.5 GHz (or AMD equivalent) or better"
     },
     {
+      "title": "Breakout Garage",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "GeForce RTX 3060 / Radeon RX 6600 XT",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3060 / Radeon RX 6600 XT, Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
       "title": "Nightwater",
       "tier": "orange",
       "tiers": {
@@ -1550,16 +1550,16 @@
       "note": "Doporučená konfigurace: Nvidia RTX 2070﻿ or RX 5700, or equivalent performance &amp; VRAM, Ryzen 5 5600X﻿ or ﻿i5-12400 ﻿or equivalent performance, 6 physical cores minimum"
     },
     {
-      "title": "Breakout Garage",
-      "tier": "orange",
+      "title": "Nighthawks",
+      "tier": "green",
       "tiers": {
-        "allyx": "orange",
+        "allyx": "green",
         "pc": "green"
       },
-      "gpu": "GeForce RTX 3060 / Radeon RX 6600 XT",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "gpu": "DX10, DX11, and DX12-capable GPUs",
+      "cpu": "2Ghz or better",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 / Radeon RX 6600 XT, Intel Core i5-8400 / AMD Ryzen 5 2600"
+      "note": "Doporučená konfigurace: DX10, DX11, and DX12-capable GPUs, 2Ghz or better"
     },
     {
       "title": "Escape Toon Kingdom",
@@ -1800,6 +1800,18 @@
       "cpu": null,
       "usedMinimum": true,
       "note": "Minimální konfigurace: 128MB"
+    },
+    {
+      "title": "Tidy Up the Flower Shop",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "The Incident at Galley House",
