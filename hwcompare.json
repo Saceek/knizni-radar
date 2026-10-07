@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-07T22:16:16.546Z",
+  "updatedAt": "2026-10-07T23:16:54.428Z",
   "games": [
     {
       "title": "TCG Card Shop Simulator",
@@ -290,18 +290,6 @@
       "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 Ti / Intel Arc B580 / AMD Radeon RX 6700 XT, Intel Core i7-10700 / AMD Ryzen 7 3700X"
     },
     {
-      "title": "DYNASTY WARRIORS 3: Complete Edition Remastered",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 3060 (VRAM 8GB) or better, AMD Radeon RX 6700XT (VRAM 12GB) or better",
-      "cpu": "Intel Core i7-10700K or better, AMD Ryzen 7 3700X or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 (VRAM 8GB) or better, AMD Radeon RX 6700XT (VRAM 12GB) or better, Intel Core i7-10700K or better, AMD Ryzen 7 3700X or better"
-    },
-    {
       "title": "Batomon Showdown",
       "tier": "green",
       "tiers": {
@@ -312,6 +300,18 @@
       "cpu": "Dual Core 2 GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: 1 GB RAM, Dual Core 2 GHz"
+    },
+    {
+      "title": "DYNASTY WARRIORS 3: Complete Edition Remastered",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060 (VRAM 8GB) or better, AMD Radeon RX 6700XT (VRAM 12GB) or better",
+      "cpu": "Intel Core i7-10700K or better, AMD Ryzen 7 3700X or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 (VRAM 8GB) or better, AMD Radeon RX 6700XT (VRAM 12GB) or better, Intel Core i7-10700K or better, AMD Ryzen 7 3700X or better"
     },
     {
       "title": "Gladio Mori",
@@ -722,6 +722,18 @@
       "note": "Minimální konfigurace: NVidia GeForce GTX 1050, Intel i5-2500 3.3GHz"
     },
     {
+      "title": "Woman Simulator",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "RTX 3060 / Radeon RX 6600 XT",
+      "cpu": "Intel core i5 / Ryzen 5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 3060 / Radeon RX 6600 XT, Intel core i5 / Ryzen 5"
+    },
+    {
       "title": "Rollout Inline",
       "tier": "green",
       "tiers": {
@@ -744,18 +756,6 @@
       "cpu": "Intel Core2 Duo or better",
       "usedMinimum": true,
       "note": "Minimální konfigurace: DirectX 9/OpenGL 4.1 capable GPU, Intel Core2 Duo or better"
-    },
-    {
-      "title": "Woman Simulator",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "RTX 3060 / Radeon RX 6600 XT",
-      "cpu": "Intel core i5 / Ryzen 5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 3060 / Radeon RX 6600 XT, Intel core i5 / Ryzen 5"
     },
     {
       "title": "Scapewatch: Idle MMO",
@@ -902,6 +902,18 @@
       "note": "Minimální konfigurace: GTX 750ti, 2-core / 4-thread CPU"
     },
     {
+      "title": "Nuclear Design Bureau",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "orange"
+      },
+      "gpu": "GeForce RTX 4070 or Radeon RX 7800 XT, 12 GB VRAM",
+      "cpu": "8-core, Intel i7-12700 or AMD Ryzen 7 5800X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 4070 or Radeon RX 7800 XT, 12 GB VRAM, 8-core, Intel i7-12700 or AMD Ryzen 7 5800X"
+    },
+    {
       "title": "창세기전 외전: 서풍의 광시곡 리마스터",
       "tier": "green",
       "tiers": {
@@ -924,18 +936,6 @@
       "cpu": "2.7 GHz Dual Core",
       "usedMinimum": true,
       "note": "Minimální konfigurace: 512MB, OpenGL 3+, 2.7 GHz Dual Core"
-    },
-    {
-      "title": "Nuclear Design Bureau",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "orange"
-      },
-      "gpu": "GeForce RTX 4070 or Radeon RX 7800 XT, 12 GB VRAM",
-      "cpu": "8-core, Intel i7-12700 or AMD Ryzen 7 5800X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 4070 or Radeon RX 7800 XT, 12 GB VRAM, 8-core, Intel i7-12700 or AMD Ryzen 7 5800X"
     },
     {
       "title": "Rehaunted",
@@ -1562,18 +1562,6 @@
       "note": "Doporučená konfigurace: Dedicated graphics with OpenGL 3.3 support, Intel Core i5-6600K, AMD Ryzen 5 1600"
     },
     {
-      "title": "Infinity: HexaDome Tactics",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Nvidia GTX 1050 / AMD RX550",
-      "cpu": "Intel Core i5 2.5 GHz / AMD Ryzen 5",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Nvidia GTX 1050 / AMD RX550, Intel Core i5 2.5 GHz / AMD Ryzen 5"
-    },
-    {
       "title": "Tidy Up the Flower Shop",
       "tier": "orange",
       "tiers": {
@@ -1584,6 +1572,18 @@
       "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10400 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Infinity: HexaDome Tactics",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GTX 1050 / AMD RX550",
+      "cpu": "Intel Core i5 2.5 GHz / AMD Ryzen 5",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Nvidia GTX 1050 / AMD RX550, Intel Core i5 2.5 GHz / AMD Ryzen 5"
     },
     {
       "title": "Beyond Yardwork Simulator Prologue",
