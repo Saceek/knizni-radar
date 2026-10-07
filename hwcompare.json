@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-07T12:16:25.300Z",
+  "updatedAt": "2026-10-07T13:17:00.031Z",
   "games": [
     {
       "title": "WARDOGS",
@@ -554,18 +554,6 @@
       "note": "Minimální konfigurace: Nvidia GeForce 1050, Intel Core i5"
     },
     {
-      "title": "Craftomation 101: Programming & Craft",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel HD Graphics 3000, OpenGL 2.0+",
-      "cpu": "1.2 GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 3000, OpenGL 2.0+, 1.2 GHz"
-    },
-    {
       "title": "BRAZILIAN DRUG DEALER BEFORE 4: DEMONS FROM THE PORTAL TO HELL I OPENED ARE STILL IN THE FAVELA AND NOW I HAVE TO SAVE MAMADAS FROM RONALDO",
       "tier": "green",
       "tiers": {
@@ -576,6 +564,18 @@
       "cpu": "Intel Core i3 3110M",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 4000, Intel Core i3 3110M"
+    },
+    {
+      "title": "Craftomation 101: Programming & Craft",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD Graphics 3000, OpenGL 2.0+",
+      "cpu": "1.2 GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics 3000, OpenGL 2.0+, 1.2 GHz"
     },
     {
       "title": "Tvoje snoubenka",
@@ -806,18 +806,6 @@
       "note": "Doporučená konfigurace: GTX 260 or equivalent, Intel Core 2 Duo or equivalent"
     },
     {
-      "title": "Dawson Oaks Trailer Park",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "Nvidia Geforce GTX 1080Ti",
-      "cpu": null,
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia Geforce GTX 1080Ti"
-    },
-    {
       "title": "Scapewatch: Idle MMO",
       "tier": "green",
       "tiers": {
@@ -828,6 +816,18 @@
       "cpu": "Any dual-core 2.4 GHz from 2015 or later",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Any GPU with hardware acceleration, Any dual-core 2.4 GHz from 2015 or later"
+    },
+    {
+      "title": "Dawson Oaks Trailer Park",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "Nvidia Geforce GTX 1080Ti",
+      "cpu": null,
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia Geforce GTX 1080Ti"
     },
     {
       "title": "Fright Train",
@@ -1442,18 +1442,6 @@
       "note": "Doporučená konfigurace: Nvidia RTX3060 or AMD RX 6600 XT, Intel core Core i5-8600K or AMD Ryzen 5 3600X"
     },
     {
-      "title": "Cloudscrapers",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 560 | AMD Radeon HD 6870",
-      "cpu": "Intel Core i5-2300 | AMD FX-4350",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 560 | AMD Radeon HD 6870, Intel Core i5-2300 | AMD FX-4350"
-    },
-    {
       "title": "Nighthawks",
       "tier": "green",
       "tiers": {
@@ -1464,6 +1452,18 @@
       "cpu": "2Ghz or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: DX10, DX11, and DX12-capable GPUs, 2Ghz or better"
+    },
+    {
+      "title": "Cloudscrapers",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 560 | AMD Radeon HD 6870",
+      "cpu": "Intel Core i5-2300 | AMD FX-4350",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 560 | AMD Radeon HD 6870, Intel Core i5-2300 | AMD FX-4350"
     },
     {
       "title": "Nightwater",
@@ -1514,18 +1514,6 @@
       "note": "Minimální konfigurace: Compatible OpenGL / VRAM 1GB or better, Intel Core i3-4340 or better processor"
     },
     {
-      "title": "Tank Battle Classic",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX3060 6GB",
-      "cpu": "Intel Core i5-12400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX3060 6GB, Intel Core i5-12400"
-    },
-    {
       "title": "心象天儀本線 ~Per aspera ad astra~",
       "tier": "green",
       "tiers": {
@@ -1536,6 +1524,18 @@
       "cpu": "X64 architecture with SSE2 support",
       "usedMinimum": true,
       "note": "Minimální konfigurace: DX10, DX11, DX12 capable GPUs, X64 architecture with SSE2 support"
+    },
+    {
+      "title": "Tank Battle Classic",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX3060 6GB",
+      "cpu": "Intel Core i5-12400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX3060 6GB, Intel Core i5-12400"
     },
     {
       "title": "I Need to Fix My Dream Car (But I Work at a Junkyard)",
@@ -1728,6 +1728,18 @@
       "cpu": null,
       "usedMinimum": true,
       "note": "Minimální konfigurace: 128MB"
+    },
+    {
+      "title": "Tunnel Escape Fates Entwined",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DirectX 9/OpenGL 4.1 capable GPU",
+      "cpu": "Intel Core2 Duo or better",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: DirectX 9/OpenGL 4.1 capable GPU, Intel Core2 Duo or better"
     },
     {
       "title": "The Incident at Galley House",
