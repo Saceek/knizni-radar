@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-07T05:16:42.368Z",
+  "updatedAt": "2026-10-07T06:16:55.807Z",
   "games": [
     {
       "title": "WARDOGS",
@@ -398,6 +398,18 @@
       "note": "Doporučená konfigurace: AMD Radeon RX 5600 XT / NVIDIA GeForce RTX 2060, AMD Ryzen 5 5600X / Intel Core i5-12400F"
     },
     {
+      "title": "STAR WARS: Galactic Racer™",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GeForce RTX 3060 Ti / Intel Arc B580 / AMD Radeon RX 6700 XT",
+      "cpu": "Intel Core i7-10700 / AMD Ryzen 7 3700X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 Ti / Intel Arc B580 / AMD Radeon RX 6700 XT, Intel Core i7-10700 / AMD Ryzen 7 3700X"
+    },
+    {
       "title": "DinoBones: Tidy Up the Museum",
       "tier": "orange",
       "tiers": {
@@ -432,18 +444,6 @@
       "cpu": "Intel Core i7-10700 / AMD Ryzen 7 3700X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i7-10700 / AMD Ryzen 7 3700X"
-    },
-    {
-      "title": "STAR WARS: Galactic Racer™",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "Nvidia GeForce RTX 3060 Ti / Intel Arc B580 / AMD Radeon RX 6700 XT",
-      "cpu": "Intel Core i7-10700 / AMD Ryzen 7 3700X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 Ti / Intel Arc B580 / AMD Radeon RX 6700 XT, Intel Core i7-10700 / AMD Ryzen 7 3700X"
     },
     {
       "title": "Antivirus Survivors 2003 Professional",
@@ -662,18 +662,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 (6 GB VRAM) / AMD RX 6600 (8 GB VRAM), Intel Core i5-11400 / AMD Ryzen 5 5600X or better"
     },
     {
-      "title": "Meow Squad: Incremental Fishing",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Nvidia GefForce GTX 1060 of AMD Radeon RX580",
-      "cpu": "Intel Core i5-5600 or AMD Ryzen3 1300",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GefForce GTX 1060 of AMD Radeon RX580, Intel Core i5-5600 or AMD Ryzen3 1300"
-    },
-    {
       "title": "Sengoku Rance",
       "tier": "green",
       "tiers": {
@@ -684,6 +672,18 @@
       "cpu": "2+ GHz Processor",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: OpenGL ES 2.0 hardware driver support required for WebGL acceleration. (AMD Catalyst 10.9, nVidia 358.50), 2+ GHz Processor"
+    },
+    {
+      "title": "Meow Squad: Incremental Fishing",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GefForce GTX 1060 of AMD Radeon RX580",
+      "cpu": "Intel Core i5-5600 or AMD Ryzen3 1300",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GefForce GTX 1060 of AMD Radeon RX580, Intel Core i5-5600 or AMD Ryzen3 1300"
     },
     {
       "title": "It's Fine",
@@ -1370,18 +1370,6 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10600 / AMD Ryzen 5 3600"
     },
     {
-      "title": "Crack the Pack",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "512MB, OpenGL 3+",
-      "cpu": "2.7 GHz Dual Core",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: 512MB, OpenGL 3+, 2.7 GHz Dual Core"
-    },
-    {
       "title": "HOPE 01",
       "tier": "green",
       "tiers": {
@@ -1392,6 +1380,18 @@
       "cpu": "AMD Ryzen 5 5600X, Ryzen 5 7600, or Intel Core i5-12400 / 13400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Most GFX Cards, AMD Ryzen 5 5600X, Ryzen 5 7600, or Intel Core i5-12400 / 13400"
+    },
+    {
+      "title": "Crack the Pack",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "512MB, OpenGL 3+",
+      "cpu": "2.7 GHz Dual Core",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: 512MB, OpenGL 3+, 2.7 GHz Dual Core"
     },
     {
       "title": "Delverium",
