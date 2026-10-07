@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-07T10:16:57.190Z",
+  "updatedAt": "2026-10-07T11:16:54.277Z",
   "games": [
     {
       "title": "WARDOGS",
@@ -386,18 +386,6 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 260, ATI Radeon 4870, 1.7 GHz Dual Core CPU"
     },
     {
-      "title": "Woodo",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "AMD Radeon RX 5600 XT / NVIDIA GeForce RTX 2060",
-      "cpu": "AMD Ryzen 5 5600X / Intel Core i5-12400F",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: AMD Radeon RX 5600 XT / NVIDIA GeForce RTX 2060, AMD Ryzen 5 5600X / Intel Core i5-12400F"
-    },
-    {
       "title": "STAR WARS: Galactic Racer™",
       "tier": "red",
       "tiers": {
@@ -408,6 +396,18 @@
       "cpu": "Intel Core i7-10700 / AMD Ryzen 7 3700X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 Ti / Intel Arc B580 / AMD Radeon RX 6700 XT, Intel Core i7-10700 / AMD Ryzen 7 3700X"
+    },
+    {
+      "title": "Woodo",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "AMD Radeon RX 5600 XT / NVIDIA GeForce RTX 2060",
+      "cpu": "AMD Ryzen 5 5600X / Intel Core i5-12400F",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: AMD Radeon RX 5600 XT / NVIDIA GeForce RTX 2060, AMD Ryzen 5 5600X / Intel Core i5-12400F"
     },
     {
       "title": "DinoBones: Tidy Up the Museum",
@@ -734,18 +734,6 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 12 GB / AMD RX 6700 XT, Intel Core i5-11400F / AMD Ryzen 5 5600X"
     },
     {
-      "title": "Rollout Inline",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 1050 Ti or Radeon RX 460 (4GB)",
-      "cpu": "Intel Core i5-6600k or AMD Ryzen 3 3300X",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 1050 Ti or Radeon RX 460 (4GB), Intel Core i5-6600k or AMD Ryzen 3 3300X"
-    },
-    {
       "title": "Tidy Up History",
       "tier": "green",
       "tiers": {
@@ -756,6 +744,18 @@
       "cpu": "Intel i5-2500 3.3GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVidia GeForce GTX 1050, Intel i5-2500 3.3GHz"
+    },
+    {
+      "title": "Rollout Inline",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 1050 Ti or Radeon RX 460 (4GB)",
+      "cpu": "Intel Core i5-6600k or AMD Ryzen 3 3300X",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 1050 Ti or Radeon RX 460 (4GB), Intel Core i5-6600k or AMD Ryzen 3 3300X"
     },
     {
       "title": "Train Sim World® 7 ",
@@ -1442,18 +1442,6 @@
       "note": "Doporučená konfigurace: Nvidia RTX3060 or AMD RX 6600 XT, Intel core Core i5-8600K or AMD Ryzen 5 3600X"
     },
     {
-      "title": "eXoSpace Combat Engineer",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Vulkan, DirectX 12 or OpenGL ES",
-      "cpu": "Quad-core Intel 2.5 GHz (or AMD equivalent) or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Vulkan, DirectX 12 or OpenGL ES, Quad-core Intel 2.5 GHz (or AMD equivalent) or better"
-    },
-    {
       "title": "Cloudscrapers",
       "tier": "green",
       "tiers": {
@@ -1526,18 +1514,6 @@
       "note": "Minimální konfigurace: Compatible OpenGL / VRAM 1GB or better, Intel Core i3-4340 or better processor"
     },
     {
-      "title": "心象天儀本線 ~Per aspera ad astra~",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DX10, DX11, DX12 capable GPUs",
-      "cpu": "X64 architecture with SSE2 support",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: DX10, DX11, DX12 capable GPUs, X64 architecture with SSE2 support"
-    },
-    {
       "title": "Tank Battle Classic",
       "tier": "red",
       "tiers": {
@@ -1548,6 +1524,18 @@
       "cpu": "Intel Core i5-12400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX3060 6GB, Intel Core i5-12400"
+    },
+    {
+      "title": "心象天儀本線 ~Per aspera ad astra~",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DX10, DX11, DX12 capable GPUs",
+      "cpu": "X64 architecture with SSE2 support",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: DX10, DX11, DX12 capable GPUs, X64 architecture with SSE2 support"
     },
     {
       "title": "I Need to Fix My Dream Car (But I Work at a Junkyard)",
