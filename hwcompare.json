@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-07T00:16:36.405Z",
+  "updatedAt": "2026-10-07T01:16:26.816Z",
   "games": [
     {
       "title": "WARDOGS",
@@ -506,6 +506,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4070 / AMD Radeon RX 7800 XT, Intel Core i7-12700k / AMD Ryzen 7 5800X"
     },
     {
+      "title": "STAR WARS: Galactic Racer™",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GeForce RTX 3060 Ti / Intel Arc B580 / AMD Radeon RX 6700 XT",
+      "cpu": "Intel Core i7-10700 / AMD Ryzen 7 3700X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 Ti / Intel Arc B580 / AMD Radeon RX 6700 XT, Intel Core i7-10700 / AMD Ryzen 7 3700X"
+    },
+    {
       "title": "Kingdom Rush 6: Genesis TD",
       "tier": "green",
       "tiers": {
@@ -540,18 +552,6 @@
       "cpu": "Intel Core i7 8700K",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 3060, Intel Core i7 8700K"
-    },
-    {
-      "title": "STAR WARS: Galactic Racer™",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "Nvidia GeForce RTX 3060 Ti / Intel Arc B580 / AMD Radeon RX 6700 XT",
-      "cpu": "Intel Core i7-10700 / AMD Ryzen 7 3700X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 Ti / Intel Arc B580 / AMD Radeon RX 6700 XT, Intel Core i7-10700 / AMD Ryzen 7 3700X"
     },
     {
       "title": "Craftomation 101: Programming & Craft",
@@ -674,6 +674,18 @@
       "note": "Doporučená konfigurace: Nvidia GefForce GTX 1060 of AMD Radeon RX580, Intel Core i5-5600 or AMD Ryzen3 1300"
     },
     {
+      "title": "Sengoku Rance",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "OpenGL ES 2.0 hardware driver support required for WebGL acceleration. (AMD Catalyst 10.9, nVidia 358.50)",
+      "cpu": "2+ GHz Processor",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: OpenGL ES 2.0 hardware driver support required for WebGL acceleration. (AMD Catalyst 10.9, nVidia 358.50), 2+ GHz Processor"
+    },
+    {
       "title": "It's Fine",
       "tier": "green",
       "tiers": {
@@ -696,18 +708,6 @@
       "cpu": "Intel Core i3-2100 or AMD FX-6300",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GT 530, 2 GB or AMD Radeon R7 250, 1 GB, Intel Core i3-2100 or AMD FX-6300"
-    },
-    {
-      "title": "Sengoku Rance",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "OpenGL ES 2.0 hardware driver support required for WebGL acceleration. (AMD Catalyst 10.9, nVidia 358.50)",
-      "cpu": "2+ GHz Processor",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: OpenGL ES 2.0 hardware driver support required for WebGL acceleration. (AMD Catalyst 10.9, nVidia 358.50), 2+ GHz Processor"
     },
     {
       "title": "Apocalypter",
@@ -782,18 +782,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 6 GB or AMD Radeon RX 5700 with 8 GB VRAM or more, Intel Core i5-9600K @ 3.7 GHz or AMD Ryzen 5 3600 @ 3.6 GHz"
     },
     {
-      "title": "Tenebris: Terra Incognita",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 260 or equivalent",
-      "cpu": "Intel Core 2 Duo or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 260 or equivalent, Intel Core 2 Duo or equivalent"
-    },
-    {
       "title": "Woman Simulator",
       "tier": "orange",
       "tiers": {
@@ -804,6 +792,18 @@
       "cpu": "Intel core i5 / Ryzen 5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 3060 / Radeon RX 6600 XT, Intel core i5 / Ryzen 5"
+    },
+    {
+      "title": "Tenebris: Terra Incognita",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 260 or equivalent",
+      "cpu": "Intel Core 2 Duo or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 260 or equivalent, Intel Core 2 Duo or equivalent"
     },
     {
       "title": "Stranded with You",
@@ -924,18 +924,6 @@
       "cpu": "Intel Core i5-13400F | AMD Ryzen 5 7600x",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1070 | AMD Radeon RX-6600, Intel Core i5-13400F | AMD Ryzen 5 7600x"
-    },
-    {
-      "title": "地下城竞技场",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 760 | AMD Radeon HD 7950",
-      "cpu": "Intel Core i3-2100 | AMD FX-6300",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 760 | AMD Radeon HD 7950, Intel Core i3-2100 | AMD FX-6300"
     },
     {
       "title": "HoloTrials: Case Covered",
@@ -1238,18 +1226,6 @@
       "note": "Minimální konfigurace: Geforce 9600 GS, Radeon HD4000, Shader Model 3.0, 512 MB, Dual-core processor (Intel Dual Core 2.0 GHz or AMD Athlon X2 5200+ 2.6 GHz)"
     },
     {
-      "title": "Frutiger Home",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 1060 / Radeon RX 6600",
-      "cpu": "Intel i5-7600K / AMD Ryzen 5 3600",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GTX 1060 / Radeon RX 6600, Intel i5-7600K / AMD Ryzen 5 3600"
-    },
-    {
       "title": "Museologist: Tidy Up the Museum!",
       "tier": "green",
       "tiers": {
@@ -1260,6 +1236,18 @@
       "cpu": "Intel Core i5-9600K or AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / RTX 2060 or AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-9600K or AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Frutiger Home",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 1060 / Radeon RX 6600",
+      "cpu": "Intel i5-7600K / AMD Ryzen 5 3600",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GTX 1060 / Radeon RX 6600, Intel i5-7600K / AMD Ryzen 5 3600"
     },
     {
       "title": "Animaly Bar: NO HUMANITY!",
@@ -1478,30 +1466,6 @@
       "note": "Doporučená konfigurace: Nvidia RTX3060 or AMD RX 6600 XT, Intel core Core i5-8600K or AMD Ryzen 5 3600X"
     },
     {
-      "title": "Cloudscrapers",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 560 | AMD Radeon HD 6870",
-      "cpu": "Intel Core i5-2300 | AMD FX-4350",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 560 | AMD Radeon HD 6870, Intel Core i5-2300 | AMD FX-4350"
-    },
-    {
-      "title": "崇祯直聘：明末官场沉浮模拟器",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Dedicated or modern integrated graphics with OpenGL 3.3 support",
-      "cpu": "Intel Core i5 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Dedicated or modern integrated graphics with OpenGL 3.3 support, Intel Core i5 or equivalent"
-    },
-    {
       "title": "eXoSpace Combat Engineer",
       "tier": "green",
       "tiers": {
@@ -1514,6 +1478,18 @@
       "note": "Doporučená konfigurace: Vulkan, DirectX 12 or OpenGL ES, Quad-core Intel 2.5 GHz (or AMD equivalent) or better"
     },
     {
+      "title": "Cloudscrapers",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 560 | AMD Radeon HD 6870",
+      "cpu": "Intel Core i5-2300 | AMD FX-4350",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 560 | AMD Radeon HD 6870, Intel Core i5-2300 | AMD FX-4350"
+    },
+    {
       "title": "Nighthawks",
       "tier": "green",
       "tiers": {
@@ -1524,6 +1500,18 @@
       "cpu": "2Ghz or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: DX10, DX11, and DX12-capable GPUs, 2Ghz or better"
+    },
+    {
+      "title": "崇祯直聘：明末官场沉浮模拟器",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Dedicated or modern integrated graphics with OpenGL 3.3 support",
+      "cpu": "Intel Core i5 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Dedicated or modern integrated graphics with OpenGL 3.3 support, Intel Core i5 or equivalent"
     },
     {
       "title": "Breakout Garage",
@@ -1634,18 +1622,6 @@
       "note": "Minimální konfigurace: 1 GB, Dual Core"
     },
     {
-      "title": "Push Push",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 1060 / RX 580",
-      "cpu": "Intel i3",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GTX 1060 / RX 580, Intel i3"
-    },
-    {
       "title": "Drop Command",
       "tier": "red",
       "tiers": {
@@ -1670,18 +1646,6 @@
       "note": "Minimální konfigurace: Nvidia GTX 1050 / AMD RX550, Intel Core i5 2.5 GHz / AMD Ryzen 5"
     },
     {
-      "title": "SiN Reloaded",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GPU with DirectX 11 or Vulkan 1.1 support",
-      "cpu": "Intel Core i5-2300 2.8 GHz/AMD Phenom II X4 945 3.0 GHz or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GPU with DirectX 11 or Vulkan 1.1 support, Intel Core i5-2300 2.8 GHz/AMD Phenom II X4 945 3.0 GHz or equivalent"
-    },
-    {
       "title": "大荒",
       "tier": "green",
       "tiers": {
@@ -1692,6 +1656,18 @@
       "cpu": "Intel Core i5-6600K, AMD Ryzen 5 1600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Dedicated graphics with OpenGL 3.3 support, Intel Core i5-6600K, AMD Ryzen 5 1600"
+    },
+    {
+      "title": "SiN Reloaded",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GPU with DirectX 11 or Vulkan 1.1 support",
+      "cpu": "Intel Core i5-2300 2.8 GHz/AMD Phenom II X4 945 3.0 GHz or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GPU with DirectX 11 or Vulkan 1.1 support, Intel Core i5-2300 2.8 GHz/AMD Phenom II X4 945 3.0 GHz or equivalent"
     },
     {
       "title": "Beyond Yardwork Simulator Prologue",
@@ -1956,6 +1932,18 @@
       "cpu": "Intel® Core™ i5-8400 Processor",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
+    },
+    {
+      "title": "MOUSE: P.I. For Hire",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600",
+      "cpu": "Intel Core i5 9600 / Ryzen 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600, Intel Core i5 9600 / Ryzen 3600"
     },
     {
       "title": "Hellblade II: Senua’s Saga",
