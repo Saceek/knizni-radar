@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-07T18:17:15.729Z",
+  "updatedAt": "2026-10-07T19:16:45.847Z",
   "games": [
     {
       "title": "WARDOGS",
@@ -506,18 +506,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4070 / AMD Radeon RX 7800 XT, Intel Core i7-12700k / AMD Ryzen 7 5800X"
     },
     {
-      "title": "Bunker Tidy Up",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "RTX 3060",
-      "cpu": "Intel Core i7 8700K",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 3060, Intel Core i7 8700K"
-    },
-    {
       "title": "Kingdom Rush 6: Genesis TD",
       "tier": "green",
       "tiers": {
@@ -528,6 +516,18 @@
       "cpu": "Quad Core CPU",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel UHD 600, Quad Core CPU"
+    },
+    {
+      "title": "Bunker Tidy Up",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "RTX 3060",
+      "cpu": "Intel Core i7 8700K",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 3060, Intel Core i7 8700K"
     },
     {
       "title": "Toy Shire",
@@ -1466,6 +1466,18 @@
       "note": "Doporučená konfigurace: GeForce RTX 3060 / Radeon RX 6600 XT, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
+      "title": "心象天儀本線 ~Per aspera ad astra~",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DX10, DX11, DX12 capable GPUs",
+      "cpu": "X64 architecture with SSE2 support",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: DX10, DX11, DX12 capable GPUs, X64 architecture with SSE2 support"
+    },
+    {
       "title": "Escape Toon Kingdom",
       "tier": "green",
       "tiers": {
@@ -1488,18 +1500,6 @@
       "cpu": "Intel Core i3-4340 or better processor",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Compatible OpenGL / VRAM 1GB or better, Intel Core i3-4340 or better processor"
-    },
-    {
-      "title": "心象天儀本線 ~Per aspera ad astra~",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DX10, DX11, DX12 capable GPUs",
-      "cpu": "X64 architecture with SSE2 support",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: DX10, DX11, DX12 capable GPUs, X64 architecture with SSE2 support"
     },
     {
       "title": "Tank Battle Classic",
@@ -1670,18 +1670,6 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 (8 GB) or AMD Radeon RX 5600 XT (6 GB) or Intel Arc A750 (8 GB), Intel Core i5-11600 or AMD Ryzen 5 5600"
     },
     {
-      "title": "琉璃烟火-Flame in Glass-",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel UHD Graphics 630 or better, or equivalent AMD/NVIDIA graphics",
-      "cpu": "Intel Core i5-11500 or better, or equivalent AMD processor",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Intel UHD Graphics 630 or better, or equivalent AMD/NVIDIA graphics, Intel Core i5-11500 or better, or equivalent AMD processor"
-    },
-    {
       "title": "Tunnel Escape Fates Entwined",
       "tier": "green",
       "tiers": {
@@ -1692,6 +1680,18 @@
       "cpu": "Intel Core2 Duo or better",
       "usedMinimum": true,
       "note": "Minimální konfigurace: DirectX 9/OpenGL 4.1 capable GPU, Intel Core2 Duo or better"
+    },
+    {
+      "title": "琉璃烟火-Flame in Glass-",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel UHD Graphics 630 or better, or equivalent AMD/NVIDIA graphics",
+      "cpu": "Intel Core i5-11500 or better, or equivalent AMD processor",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Intel UHD Graphics 630 or better, or equivalent AMD/NVIDIA graphics, Intel Core i5-11500 or better, or equivalent AMD processor"
     },
     {
       "title": "天衍",
