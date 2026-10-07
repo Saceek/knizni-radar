@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-07T02:17:18.760Z",
+  "updatedAt": "2026-10-07T03:16:42.357Z",
   "games": [
     {
       "title": "WARDOGS",
@@ -722,18 +722,6 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 TI or AMD equivalent, +3 GHZ octa core processor"
     },
     {
-      "title": "Rivage",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA RTX 3060 12 GB / AMD RX 6700 XT",
-      "cpu": "Intel Core i5-11400F / AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 3060 12 GB / AMD RX 6700 XT, Intel Core i5-11400F / AMD Ryzen 5 5600X"
-    },
-    {
       "title": "Wild West Pioneers",
       "tier": "green",
       "tiers": {
@@ -746,16 +734,16 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1660 SUPER 6GB / AMD Radeon RX Vega 56 8GB, Intel Core i5-8600K / AMD Ryzen 5 1600"
     },
     {
-      "title": "Tidy Up History",
-      "tier": "green",
+      "title": "Rivage",
+      "tier": "red",
       "tiers": {
-        "allyx": "green",
+        "allyx": "red",
         "pc": "green"
       },
-      "gpu": "NVidia GeForce GTX 1050",
-      "cpu": "Intel i5-2500 3.3GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVidia GeForce GTX 1050, Intel i5-2500 3.3GHz"
+      "gpu": "NVIDIA RTX 3060 12 GB / AMD RX 6700 XT",
+      "cpu": "Intel Core i5-11400F / AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 3060 12 GB / AMD RX 6700 XT, Intel Core i5-11400F / AMD Ryzen 5 5600X"
     },
     {
       "title": "Rollout Inline",
@@ -768,6 +756,18 @@
       "cpu": "Intel Core i5-6600k or AMD Ryzen 3 3300X",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce GTX 1050 Ti or Radeon RX 460 (4GB), Intel Core i5-6600k or AMD Ryzen 3 3300X"
+    },
+    {
+      "title": "Tidy Up History",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVidia GeForce GTX 1050",
+      "cpu": "Intel i5-2500 3.3GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVidia GeForce GTX 1050, Intel i5-2500 3.3GHz"
     },
     {
       "title": "Train Sim World® 7 ",
