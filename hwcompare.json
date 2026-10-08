@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-08T15:16:12.497Z",
+  "updatedAt": "2026-10-08T16:16:03.942Z",
   "games": [
     {
       "title": "TCG Card Shop Simulator",
@@ -182,6 +182,18 @@
       "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 1070 (8 GB) / AMD® Radeon™ RX 5700 XT (8 GB), Intel® Core™ i7-6700 (quad-core) / AMD® Ryzen™ 5 1500X (quad-core)"
     },
     {
+      "title": "STAR WARS: Galactic Racer™",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GeForce RTX 3060 Ti / Intel Arc B580 / AMD Radeon RX 6700 XT",
+      "cpu": "Intel Core i7-10700 / AMD Ryzen 7 3700X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 Ti / Intel Arc B580 / AMD Radeon RX 6700 XT, Intel Core i7-10700 / AMD Ryzen 7 3700X"
+    },
+    {
       "title": "Way of the Hunter 2",
       "tier": "orange",
       "tiers": {
@@ -204,18 +216,6 @@
       "cpu": "AMD Ryzen 5 1600",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 1050, AMD Ryzen 5 1600"
-    },
-    {
-      "title": "STAR WARS: Galactic Racer™",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "Nvidia GeForce RTX 3060 Ti / Intel Arc B580 / AMD Radeon RX 6700 XT",
-      "cpu": "Intel Core i7-10700 / AMD Ryzen 7 3700X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 Ti / Intel Arc B580 / AMD Radeon RX 6700 XT, Intel Core i7-10700 / AMD Ryzen 7 3700X"
     },
     {
       "title": "Afterbeat (Project Arrhythmia)",
@@ -842,18 +842,6 @@
       "note": "Doporučená konfigurace: Nvidia RTX 2060/AMD RX 5060 XT, Intel i5-8500/AMD Ryzen 5 2600"
     },
     {
-      "title": "Paver: Tidy Up Together",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1070 | AMD Radeon RX-6600",
-      "cpu": "Intel Core i5-13400F | AMD Ryzen 5 7600x",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1070 | AMD Radeon RX-6600, Intel Core i5-13400F | AMD Ryzen 5 7600x"
-    },
-    {
       "title": "Wand & Order: Tidy up the magic shop!",
       "tier": "green",
       "tiers": {
@@ -864,6 +852,18 @@
       "cpu": "Intel i3 / AMD FX series or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia 1060/AMD equivalent, Intel i3 / AMD FX series or equivalent"
+    },
+    {
+      "title": "Paver: Tidy Up Together",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1070 | AMD Radeon RX-6600",
+      "cpu": "Intel Core i5-13400F | AMD Ryzen 5 7600x",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1070 | AMD Radeon RX-6600, Intel Core i5-13400F | AMD Ryzen 5 7600x"
     },
     {
       "title": "The Magus Circle",
@@ -938,18 +938,6 @@
       "note": "Doporučená konfigurace: Gaming graphics card with at least 8GB of DEDICATED memory (some examples but not limited to Nvidia 2080 TI or AMD Radeon VII), 8 core or more CPU (some examples but not limited to: Intel Core 9-10980XE @ 3.0GHz, Intel Core i9-9900KS @ 4.00GHz, AMD Ryzen 9 3900X, or AMD Ryzen 9 3950X)"
     },
     {
-      "title": "Rehaunted",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "orange"
-      },
-      "gpu": "NVIDIA® GeForce® RTX 3070 | 8GB VRAM",
-      "cpu": "Intel Core i7-6700K or AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA® GeForce® RTX 3070 | 8GB VRAM, Intel Core i7-6700K or AMD Ryzen 5 3600"
-    },
-    {
       "title": "Fallen Tear: The Ascension",
       "tier": "green",
       "tiers": {
@@ -960,6 +948,18 @@
       "cpu": "Intel Core i5-6600K or AMD Ryzen 5 1400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 3 GB or AMD Radeon RX 580 4 GB, Intel Core i5-6600K or AMD Ryzen 5 1400"
+    },
+    {
+      "title": "Rehaunted",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "orange"
+      },
+      "gpu": "NVIDIA® GeForce® RTX 3070 | 8GB VRAM",
+      "cpu": "Intel Core i7-6700K or AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA® GeForce® RTX 3070 | 8GB VRAM, Intel Core i7-6700K or AMD Ryzen 5 3600"
     },
     {
       "title": "The Plant Shop",
