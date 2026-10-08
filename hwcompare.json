@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-08T03:16:07.622Z",
+  "updatedAt": "2026-10-08T04:17:03.288Z",
   "games": [
     {
       "title": "TCG Card Shop Simulator",
@@ -240,18 +240,6 @@
       "cpu": null,
       "usedMinimum": true,
       "note": "Minimální konfigurace: The game takes around 150 MB of VRAM peak, so it should run on most systems. I've learned my lesson here."
-    },
-    {
-      "title": "Gunman Contracts - Stand Alone",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "VR: RTX 3060 or better",
-      "cpu": "VR: Intel Core i7-12700 or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: VR: RTX 3060 or better, VR: Intel Core i7-12700 or better"
     },
     {
       "title": "STAR WARS: Galactic Racer™",
@@ -578,18 +566,6 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 750 Ti, Intel i5 Quad-Core"
     },
     {
-      "title": "Master Of Pottery",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 1060 (6 GB)",
-      "cpu": "Quad core CPU 3.0 GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1060 (6 GB), Quad core CPU 3.0 GHz"
-    },
-    {
       "title": "Sengoku Rance",
       "tier": "green",
       "tiers": {
@@ -600,6 +576,18 @@
       "cpu": "2+ GHz Processor",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: OpenGL ES 2.0 hardware driver support required for WebGL acceleration. (AMD Catalyst 10.9, nVidia 358.50), 2+ GHz Processor"
+    },
+    {
+      "title": "Master Of Pottery",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 1060 (6 GB)",
+      "cpu": "Quad core CPU 3.0 GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1060 (6 GB), Quad core CPU 3.0 GHz"
     },
     {
       "title": "I Know a Guy: Shady Life Simulator",
@@ -840,6 +828,18 @@
       "cpu": "AMD Ryzen 5 5600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX1070, AMD Ryzen 5 5600"
+    },
+    {
+      "title": "Neon Abyss 2",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 950, Radeon R7 360, or Intel HD Graphics 630",
+      "cpu": "Dual Core 2.4 GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 950, Radeon R7 360, or Intel HD Graphics 630, Dual Core 2.4 GHz"
     },
     {
       "title": "Driving Rogue",
@@ -1214,18 +1214,6 @@
       "note": "Minimální konfigurace: NVIDIA GT 730 / AMD Radeon R7 240 or better (2015 and newer), Intel Core i3-3220 / AMD FX-6300 or better"
     },
     {
-      "title": "Heroes' Vow: Three Kingdoms",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA RTX2060 6G",
-      "cpu": "Intel Core i7",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX2060 6G, Intel Core i7"
-    },
-    {
       "title": "Crack the Pack",
       "tier": "green",
       "tiers": {
@@ -1236,6 +1224,18 @@
       "cpu": "2.7 GHz Dual Core",
       "usedMinimum": true,
       "note": "Minimální konfigurace: 512MB, OpenGL 3+, 2.7 GHz Dual Core"
+    },
+    {
+      "title": "Heroes' Vow: Three Kingdoms",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA RTX2060 6G",
+      "cpu": "Intel Core i7",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX2060 6G, Intel Core i7"
     },
     {
       "title": "Code Velocity",
@@ -1452,18 +1452,6 @@
       "cpu": "X64 architecture with SSE2 support",
       "usedMinimum": true,
       "note": "Minimální konfigurace: DX10, DX11, DX12 capable GPUs, X64 architecture with SSE2 support"
-    },
-    {
-      "title": "Escape Toon Kingdom",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 960 / AMD equivalent",
-      "cpu": "Intel Core i5 / AMD equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD equivalent, Intel Core i5 / AMD equivalent"
     },
     {
       "title": "Tank Battle Classic",
