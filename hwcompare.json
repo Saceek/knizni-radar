@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-08T20:15:52.792Z",
+  "updatedAt": "2026-10-08T21:16:01.582Z",
   "games": [
     {
       "title": "TCG Card Shop Simulator",
@@ -122,18 +122,6 @@
       "note": "Doporučená konfigurace: GeForce RTX 3060 or similar, Intel Core i5 (13 gen) or similar"
     },
     {
-      "title": "Emberward",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "2GB GPU Memory, capable of OpenGL 3.0+ support",
-      "cpu": "4GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: 2GB GPU Memory, capable of OpenGL 3.0+ support, 4GHz"
-    },
-    {
       "title": "Happy Wheels",
       "tier": "green",
       "tiers": {
@@ -144,6 +132,18 @@
       "cpu": "Intel Core i3 / AMD equivalent, 2.0 GHz or better",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Any GPU with WebGL / DirectX 11 support (Intel HD Graphics 4000 or better), Intel Core i3 / AMD equivalent, 2.0 GHz or better"
+    },
+    {
+      "title": "Emberward",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "2GB GPU Memory, capable of OpenGL 3.0+ support",
+      "cpu": "4GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: 2GB GPU Memory, capable of OpenGL 3.0+ support, 4GHz"
     },
     {
       "title": "Nivalis Nights",
@@ -806,18 +806,6 @@
       "note": "Doporučená konfigurace: GeForce RTX 2060 / Radeon RX 5700, Intel Core i7-11700K @ 3.60GHz / AMD Ryzen 7 5700"
     },
     {
-      "title": "RIG Riot",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX1070",
-      "cpu": "AMD Ryzen 5 5600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX1070, AMD Ryzen 5 5600"
-    },
-    {
       "title": "Neon Abyss 2",
       "tier": "green",
       "tiers": {
@@ -828,6 +816,18 @@
       "cpu": "Dual Core 2.4 GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce GTX 950, Radeon R7 360, or Intel HD Graphics 630, Dual Core 2.4 GHz"
+    },
+    {
+      "title": "RIG Riot",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX1070",
+      "cpu": "AMD Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX1070, AMD Ryzen 5 5600"
     },
     {
       "title": "Wand & Order: Tidy up the magic shop!",
@@ -914,18 +914,6 @@
       "note": "Minimální konfigurace: 512MB, OpenGL 3+, 2.7 GHz Dual Core"
     },
     {
-      "title": "창세기전 외전: 서풍의 광시곡 리마스터",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel UHD Graphics 630",
-      "cpu": "Intel Core i3-8100",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Intel UHD Graphics 630, Intel Core i3-8100"
-    },
-    {
       "title": "iRacing® Studios NASCAR 26",
       "tier": "red",
       "tiers": {
@@ -936,6 +924,18 @@
       "cpu": "8 core or more CPU (some examples but not limited to: Intel Core 9-10980XE @ 3.0GHz, Intel Core i9-9900KS @ 4.00GHz, AMD Ryzen 9 3900X, or AMD Ryzen 9 3950X)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Gaming graphics card with at least 8GB of DEDICATED memory (some examples but not limited to Nvidia 2080 TI or AMD Radeon VII), 8 core or more CPU (some examples but not limited to: Intel Core 9-10980XE @ 3.0GHz, Intel Core i9-9900KS @ 4.00GHz, AMD Ryzen 9 3900X, or AMD Ryzen 9 3950X)"
+    },
+    {
+      "title": "창세기전 외전: 서풍의 광시곡 리마스터",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel UHD Graphics 630",
+      "cpu": "Intel Core i3-8100",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Intel UHD Graphics 630, Intel Core i3-8100"
     },
     {
       "title": "Fallen Tear: The Ascension",
@@ -1022,6 +1022,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 660 or AMD Radeon R9 270, Intel Core i5"
     },
     {
+      "title": "Clive Barker's Hellraiser: Revival",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "AMD Radeon RX 6600 XT, NVIDIA RTX 3060",
+      "cpu": "AMD Ryzen 5 5600X, Intel Core i5-12400F",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: AMD Radeon RX 6600 XT, NVIDIA RTX 3060, AMD Ryzen 5 5600X, Intel Core i5-12400F"
+    },
+    {
       "title": "放置斩魔录",
       "tier": "green",
       "tiers": {
@@ -1092,18 +1104,6 @@
       "cpu": "Intel Core i5+",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 750, Intel Core i5+"
-    },
-    {
-      "title": "Clive Barker's Hellraiser: Revival",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "AMD Radeon RX 6600 XT, NVIDIA RTX 3060",
-      "cpu": "AMD Ryzen 5 5600X, Intel Core i5-12400F",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: AMD Radeon RX 6600 XT, NVIDIA RTX 3060, AMD Ryzen 5 5600X, Intel Core i5-12400F"
     },
     {
       "title": "Kernel Hearts",
@@ -1310,6 +1310,18 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10600 / AMD Ryzen 5 3600"
     },
     {
+      "title": "Order of the Sinking Star",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 2070 Ti or AMD Radeon RX 5700 or Intel Arc B5700",
+      "cpu": "Intel Core i5-9600K or AMD Ryzen R5 3600 processor",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 2070 Ti or AMD Radeon RX 5700 or Intel Arc B5700, Intel Core i5-9600K or AMD Ryzen R5 3600 processor"
+    },
+    {
       "title": "HOPE 01",
       "tier": "green",
       "tiers": {
@@ -1466,18 +1478,6 @@
       "note": "Minimální konfigurace: GTX 1650, Intel i5"
     },
     {
-      "title": "Order of the Sinking Star",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 2070 Ti or AMD Radeon RX 5700 or Intel Arc B5700",
-      "cpu": "Intel Core i5-9600K or AMD Ryzen R5 3600 processor",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 2070 Ti or AMD Radeon RX 5700 or Intel Arc B5700, Intel Core i5-9600K or AMD Ryzen R5 3600 processor"
-    },
-    {
       "title": "Duo Quest",
       "tier": "green",
       "tiers": {
@@ -1584,6 +1584,18 @@
       "cpu": "Intel Core i3 or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Integrated GPU with OpenGL 3.2 / DirectX 10 support, Intel Core i3 or equivalent"
+    },
+    {
+      "title": "CPM 2",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1650 / RTX 3050 or better (4+ GB)",
+      "cpu": "Intel Core i5-13400F / AMD Ryzen 5 7500F (6+ cores)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 / RTX 3050 or better (4+ GB), Intel Core i5-13400F / AMD Ryzen 5 7500F (6+ cores)"
     },
     {
       "title": "Sublight",
