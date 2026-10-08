@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-08T10:16:37.017Z",
+  "updatedAt": "2026-10-08T10:42:28.466Z",
   "games": [
     {
       "title": "TCG Card Shop Simulator",
@@ -218,18 +218,6 @@
       "note": "Doporučená konfigurace: RTX 3070 / RX 6700 XT, Intel Core i7-8700k / AMD Ryzen 7-5700"
     },
     {
-      "title": "20 More, Somehow Even Smaller, Mazes",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "The game takes around 150 MB of VRAM peak, so it should run on most systems. I've learned my lesson here.",
-      "cpu": null,
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: The game takes around 150 MB of VRAM peak, so it should run on most systems. I've learned my lesson here."
-    },
-    {
       "title": "STAR WARS: Galactic Racer™",
       "tier": "red",
       "tiers": {
@@ -240,6 +228,18 @@
       "cpu": "Intel Core i7-10700 / AMD Ryzen 7 3700X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 Ti / Intel Arc B580 / AMD Radeon RX 6700 XT, Intel Core i7-10700 / AMD Ryzen 7 3700X"
+    },
+    {
+      "title": "20 More, Somehow Even Smaller, Mazes",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "The game takes around 150 MB of VRAM peak, so it should run on most systems. I've learned my lesson here.",
+      "cpu": null,
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: The game takes around 150 MB of VRAM peak, so it should run on most systems. I've learned my lesson here."
     },
     {
       "title": "Active Matter",
@@ -396,18 +396,6 @@
       "cpu": "Intel Core i7-10700 / AMD Ryzen 7 3700X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i7-10700 / AMD Ryzen 7 3700X"
-    },
-    {
-      "title": "Slow Roads",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel UHD 630, Vega 7",
-      "cpu": "Intel Core i5, 2.2Hz dual core",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel UHD 630, Vega 7, Intel Core i5, 2.2Hz dual core"
     },
     {
       "title": "Superhero Simulator",
@@ -590,18 +578,6 @@
       "note": "Doporučená konfigurace: Nvidia RTX 2060 or AMD Radeon RX 6600, AMD Ryzen 5 3600 or Intel Core i5-10400"
     },
     {
-      "title": "Parisian Bistro Simulator",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 2060 (6 GB VRAM) / AMD RX 6600 (8 GB VRAM)",
-      "cpu": "Intel Core i5-11400 / AMD Ryzen 5 5600X or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 (6 GB VRAM) / AMD RX 6600 (8 GB VRAM), Intel Core i5-11400 / AMD Ryzen 5 5600X or better"
-    },
-    {
       "title": "It's Fine",
       "tier": "green",
       "tiers": {
@@ -612,6 +588,18 @@
       "cpu": "Dual-core CPU, 2 GHz (Intel Core i3-2100 / AMD FX-4100 or equivalent)",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Any GPU with 512 MB VRAM and DX10/11 feature-set (Intel HD 3000+, NVIDIA GT 710, AMD HD 6450, etc.), Dual-core CPU, 2 GHz (Intel Core i3-2100 / AMD FX-4100 or equivalent)"
+    },
+    {
+      "title": "Parisian Bistro Simulator",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 2060 (6 GB VRAM) / AMD RX 6600 (8 GB VRAM)",
+      "cpu": "Intel Core i5-11400 / AMD Ryzen 5 5600X or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 (6 GB VRAM) / AMD RX 6600 (8 GB VRAM), Intel Core i5-11400 / AMD Ryzen 5 5600X or better"
     },
     {
       "title": "Meow Squad: Incremental Fishing",
