@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-08T18:16:57.714Z",
+  "updatedAt": "2026-10-08T19:16:53.569Z",
   "games": [
     {
       "title": "TCG Card Shop Simulator",
@@ -770,18 +770,6 @@
       "note": "Doporučená konfigurace: GTX 260 or equivalent, Intel Core 2 Duo or equivalent"
     },
     {
-      "title": "Fright Train",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA RTX 2060",
-      "cpu": "Intel Core i7-12700H",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 2060, Intel Core i7-12700H"
-    },
-    {
       "title": "Game Keeper: Somebody Messed Up My Shop!",
       "tier": "orange",
       "tiers": {
@@ -792,6 +780,18 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Fright Train",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA RTX 2060",
+      "cpu": "Intel Core i7-12700H",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 2060, Intel Core i7-12700H"
     },
     {
       "title": "Tasty Chef",
@@ -1130,18 +1130,6 @@
       "note": "Minimální konfigurace: Geforce 9600 GS, Radeon HD4000, Shader Model 3.0, 512 MB, Dual-core processor (Intel Dual Core 2.0 GHz or AMD Athlon X2 5200+ 2.6 GHz)"
     },
     {
-      "title": "STUNTBOOST",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTS 450, 1 GB | AMD Radeon HD 5750, 1 GB",
-      "cpu": "Intel Core 2 Duo E6750, 2.66 GHz | AMD Phenom II X3 720, 2.8 GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTS 450, 1 GB | AMD Radeon HD 5750, 1 GB, Intel Core 2 Duo E6750, 2.66 GHz | AMD Phenom II X3 720, 2.8 GHz"
-    },
-    {
       "title": "Museologist: Tidy Up the Museum!",
       "tier": "green",
       "tiers": {
@@ -1152,6 +1140,18 @@
       "cpu": "Intel Core i5-9600K or AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / RTX 2060 or AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-9600K or AMD Ryzen 5 3600"
+    },
+    {
+      "title": "STUNTBOOST",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTS 450, 1 GB | AMD Radeon HD 5750, 1 GB",
+      "cpu": "Intel Core 2 Duo E6750, 2.66 GHz | AMD Phenom II X3 720, 2.8 GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTS 450, 1 GB | AMD Radeon HD 5750, 1 GB, Intel Core 2 Duo E6750, 2.66 GHz | AMD Phenom II X3 720, 2.8 GHz"
     },
     {
       "title": "Frutiger Home",
@@ -1236,6 +1236,18 @@
       "cpu": "Intel Core-i3 or faster processor",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Integrated/independent, Intel Core-i3 or faster processor"
+    },
+    {
+      "title": "Clive Barker's Hellraiser: Revival",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "AMD Radeon RX 6600 XT, NVIDIA RTX 3060",
+      "cpu": "AMD Ryzen 5 5600X, Intel Core i5-12400F",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: AMD Radeon RX 6600 XT, NVIDIA RTX 3060, AMD Ryzen 5 5600X, Intel Core i5-12400F"
     },
     {
       "title": "Sniper Dan",
@@ -1370,18 +1382,6 @@
       "note": "Doporučená konfigurace: Dedicated or modern integrated graphics with OpenGL 3.3 support, Intel Core i5 or equivalent"
     },
     {
-      "title": "Clive Barker's Hellraiser: Revival",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "AMD Radeon RX 6600 XT, NVIDIA RTX 3060",
-      "cpu": "AMD Ryzen 5 5600X, Intel Core i5-12400F",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: AMD Radeon RX 6600 XT, NVIDIA RTX 3060, AMD Ryzen 5 5600X, Intel Core i5-12400F"
-    },
-    {
       "title": "Nighthawks",
       "tier": "green",
       "tiers": {
@@ -1502,18 +1502,6 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3080, Intel Core i7-6700K/AMD Ryzen 7 1700"
     },
     {
-      "title": "Tidy Up the Flower Shop",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10400 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "Needle In A Haystack",
       "tier": "green",
       "tiers": {
@@ -1524,6 +1512,18 @@
       "cpu": "Intel Core i7-3770 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 or equivalent, Intel Core i7-3770 or equivalent"
+    },
+    {
+      "title": "Tidy Up the Flower Shop",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "大荒",
