@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T10:41:46.489Z",
+  "updatedAt": "2026-10-09T11:16:21.099Z",
   "games": [
     {
       "title": "TCG Card Shop Simulator",
@@ -350,6 +350,18 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1050 Ti / AMD RX 560 or better, Intel Core i5 (6th gen) or AMD Ryzen 3"
     },
     {
+      "title": "Used Cars Simulator",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "Nvidia RTX 3060 or AMD Radeon RX 5700",
+      "cpu": "i7-9700 @ 3.6 GHz or Ryzen 5 3600 @ 3.6 GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia RTX 3060 or AMD Radeon RX 5700, i7-9700 @ 3.6 GHz or Ryzen 5 3600 @ 3.6 GHz"
+    },
+    {
       "title": "프린세스 메이커 : 예언의 아이들",
       "tier": "green",
       "tiers": {
@@ -398,6 +410,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
     },
     {
+      "title": "Clive Barker's Hellraiser: Revival",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "AMD Radeon RX 6600 XT, NVIDIA RTX 3060",
+      "cpu": "AMD Ryzen 5 5600X, Intel Core i5-12400F",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: AMD Radeon RX 6600 XT, NVIDIA RTX 3060, AMD Ryzen 5 5600X, Intel Core i5-12400F"
+    },
+    {
       "title": "OpenFront",
       "tier": "green",
       "tiers": {
@@ -420,18 +444,6 @@
       "cpu": "Intel Core i7-10700 / AMD Ryzen 7 3700X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i7-10700 / AMD Ryzen 7 3700X"
-    },
-    {
-      "title": "Clive Barker's Hellraiser: Revival",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "AMD Radeon RX 6600 XT, NVIDIA RTX 3060",
-      "cpu": "AMD Ryzen 5 5600X, Intel Core i5-12400F",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: AMD Radeon RX 6600 XT, NVIDIA RTX 3060, AMD Ryzen 5 5600X, Intel Core i5-12400F"
     },
     {
       "title": "Slow Roads",
@@ -1142,18 +1154,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / GTX 1660 Ti or equivalent, Intel Core i7-10700 / AMD Ryzen 5 3600 or equivalent"
     },
     {
-      "title": "Songs of Glimmerwick",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Geforce 9600 GS, Radeon HD4000, Shader Model 3.0, 512 MB",
-      "cpu": "Dual-core processor (Intel Dual Core 2.0 GHz or AMD Athlon X2 5200+ 2.6 GHz)",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Geforce 9600 GS, Radeon HD4000, Shader Model 3.0, 512 MB, Dual-core processor (Intel Dual Core 2.0 GHz or AMD Athlon X2 5200+ 2.6 GHz)"
-    },
-    {
       "title": "CPM 2",
       "tier": "green",
       "tiers": {
@@ -1164,6 +1164,18 @@
       "cpu": "Intel Core i5-13400F / AMD Ryzen 5 7500F (6+ cores)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 / RTX 3050 or better (4+ GB), Intel Core i5-13400F / AMD Ryzen 5 7500F (6+ cores)"
+    },
+    {
+      "title": "Songs of Glimmerwick",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Geforce 9600 GS, Radeon HD4000, Shader Model 3.0, 512 MB",
+      "cpu": "Dual-core processor (Intel Dual Core 2.0 GHz or AMD Athlon X2 5200+ 2.6 GHz)",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Geforce 9600 GS, Radeon HD4000, Shader Model 3.0, 512 MB, Dual-core processor (Intel Dual Core 2.0 GHz or AMD Athlon X2 5200+ 2.6 GHz)"
     },
     {
       "title": "Museologist: Tidy Up the Museum!",
@@ -1190,18 +1202,6 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTS 450, 1 GB | AMD Radeon HD 5750, 1 GB, Intel Core 2 Duo E6750, 2.66 GHz | AMD Phenom II X3 720, 2.8 GHz"
     },
     {
-      "title": "Frutiger Home",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 1060 / Radeon RX 6600",
-      "cpu": "Intel i5-7600K / AMD Ryzen 5 3600",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GTX 1060 / Radeon RX 6600, Intel i5-7600K / AMD Ryzen 5 3600"
-    },
-    {
       "title": "Crack the Pack",
       "tier": "green",
       "tiers": {
@@ -1212,6 +1212,18 @@
       "cpu": "2.7 GHz Dual Core",
       "usedMinimum": true,
       "note": "Minimální konfigurace: 512MB, OpenGL 3+, 2.7 GHz Dual Core"
+    },
+    {
+      "title": "Frutiger Home",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 1060 / Radeon RX 6600",
+      "cpu": "Intel i5-7600K / AMD Ryzen 5 3600",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GTX 1060 / Radeon RX 6600, Intel i5-7600K / AMD Ryzen 5 3600"
     },
     {
       "title": "Animaly Bar: NO HUMANITY!",
@@ -1670,6 +1682,18 @@
       "note": "Minimální konfigurace: 128MB"
     },
     {
+      "title": "Birb",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD Graphics 4000",
+      "cpu": "Intel Core i5 or superior",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Intel HD Graphics 4000, Intel Core i5 or superior"
+    },
+    {
       "title": "天衍",
       "tier": "green",
       "tiers": {
@@ -1692,18 +1716,6 @@
       "cpu": "64-bit quad-core",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Any modern GPU, 64-bit quad-core"
-    },
-    {
-      "title": "Birb",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel HD Graphics 4000",
-      "cpu": "Intel Core i5 or superior",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Intel HD Graphics 4000, Intel Core i5 or superior"
     },
     {
       "title": "The Incident at Galley House",
