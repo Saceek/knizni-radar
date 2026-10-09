@@ -458,118 +458,8 @@ let _diarySyncStatus = "off";
 let _syncError = "";
 let _diarySyncError = "";
 
-// Zápis jde přes vlastní server-side proxy (/api/sync) - token pro GitHub API zůstává jen
-// jako Cloudflare Pages secret na serveru, appka žádný token nezná ani se na něj neptá.
-async function syncPut(file, data){
-  try{
-    const r=await fetch("/api/sync",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({file,data})});
-    if(!r.ok){
-      const err=await r.json().catch(()=>({}));
-      return {ok:false, error: err.error || `HTTP ${r.status}`};
-    }
-    return {ok:true};
-  }catch(e){ return {ok:false, error:e.message}; }
-}
-
-async function loadRemoteBacklog(){
-  try{
-    const r=await fetch(BACKLOG_PATH+"?t="+Date.now(),{cache:"no-store"});
-    if(!r.ok) return null;
-    const d=await r.json();
-    return Array.isArray(d)?d:null;
-  }catch(e){ return null; }
-}
-
-async function saveRemoteBacklog(data){
-  const res=await syncPut(BACKLOG_PATH, data);
-  if(!res.ok) _syncError=res.error;
-  return res.ok;
-}
-
-async function syncBacklog(){
-  _syncStatus="syncing"; render();
-  const remote=await loadRemoteBacklog();
-  if(remote){
-    // Always use remote as source of truth on load
-    saveBacklog(remote); S.backlog=remote;
-    _syncStatus="ok";
-  } else {
-    // No remote: use local
-    S.backlog=loadBacklog();
-    _syncStatus="ok";
-  }
-  render();
-}
-
-async function saveBacklogAndSync(a){
-  saveBacklog(a);
-  _syncStatus="syncing"; _syncError=""; render();
-  const ok=await saveRemoteBacklog(a);
-  _syncStatus=ok?"ok":"err";
-  render();
-}
-
 function loadDiary(){ try{ return JSON.parse(localStorage.getItem(LS_DIARY_KEY))||[]; }catch(e){ return []; } }
 function saveDiary(a){ try{ localStorage.setItem(LS_DIARY_KEY, JSON.stringify(a)); }catch(e){} }
-
-async function loadRemoteDiary(){
-  try{
-    const r=await fetch(DIARY_PATH+"?t="+Date.now(),{cache:"no-store"});
-    if(!r.ok) return null;
-    const d=await r.json();
-    return Array.isArray(d)?d:null;
-  }catch(e){ return null; }
-}
-
-async function saveRemoteDiary(data){
-  const res=await syncPut(DIARY_PATH, data);
-  if(!res.ok) _diarySyncError=res.error;
-  return res.ok;
-}
-
-// Klíč pro sloučení záznamů beze společného ID - dost jedinečný na to, aby dva různé
-// zápisy nesplynuly, ale pořád stabilní napříč zařízeními pro stejný reálný záznam.
-// Neodeslané lokální změny (deník, aktivní questy). Při načtení je zdrojem pravdy GitHub –
-// lokální stav vyhraje jen tehdy, když se poslední změna z tohohle zařízení prokazatelně
-// neodeslala (např. iPad Safari uspí kartu dřív, než zápis doběhne). Dřív se lokální stav
-// slučoval vždy, a zařízení se starou pamětí tak vracelo smazané záznamy a ukončené questy.
-const LS_DIRTY = "knizniRadarUnsynced";
-function isDirty(k){ try{ return !!(JSON.parse(localStorage.getItem(LS_DIRTY))||{})[k]; }catch(e){ return false; } }
-function setDirty(k, on){ try{ const d=JSON.parse(localStorage.getItem(LS_DIRTY))||{}; if(on) d[k]=Date.now(); else delete d[k]; localStorage.setItem(LS_DIRTY, JSON.stringify(d)); }catch(e){} }
-
-const diaryEntryKey = e => `${e.title}||${e.date}||${e._category}||${e.note||""}`;
-function mergeDiaryEntries(remote, local){
-  const seen = new Set(remote.map(diaryEntryKey));
-  const merged = [...remote];
-  local.forEach(e=>{ const k=diaryEntryKey(e); if(!seen.has(k)){ merged.push(e); seen.add(k); } });
-  return merged;
-}
-async function syncDiary(){
-  _diarySyncStatus="syncing"; render();
-  const remote=await loadRemoteDiary();
-  if(!remote){ S.diary = loadDiary(); _diarySyncStatus = "ok"; render(); return; }
-  if(isDirty("diary")){
-    // Neodeslaný zápis z tohohle zařízení – přidat ho k vzdálené verzi a dosynchronizovat
-    const merged = mergeDiaryEntries(remote, loadDiary());
-    saveDiary(merged); S.diary = merged;
-    const ok = await saveRemoteDiary(merged);
-    if(ok) setDirty("diary", false);
-    _diarySyncStatus = ok ? "ok" : "err";
-  } else {
-    saveDiary(remote); S.diary = remote;
-    _diarySyncStatus = "ok";
-  }
-  render();
-}
-
-async function saveDiaryAndSync(a){
-  saveDiary(a); setDirty("diary", true);
-  _diarySyncStatus="syncing"; render();
-  const ok=await saveRemoteDiary(a);
-  if(ok) setDirty("diary", false);
-  _diarySyncStatus=ok?"ok":"err";
-  render();
-}
 
 const LS_PROGRESS_KEY = "knizniRadarProgress";
 const PROGRESS_PATH = "progress.json";
@@ -585,48 +475,127 @@ function migrateProgress(p){
 function loadProgress(){ try{ return migrateProgress(JSON.parse(localStorage.getItem(LS_PROGRESS_KEY))||{}); }catch(e){ return {}; } }
 function saveProgress(a){ try{ localStorage.setItem(LS_PROGRESS_KEY, JSON.stringify(a)); }catch(e){} }
 
-async function loadRemoteProgress(){
+/* ================== Sync (backlog, deník, aktivní questy) ==================
+ * Čtení jde přes /api/sync?file= (čerstvě z GitHubu – statický soubor na webu se po zápisu
+ * obnoví až s dalším nasazením), záložně statický soubor (lokální vývoj bez serveru).
+ * Zápis posílá jen ZMĚNY oproti stavu, který tahle karta naposledy viděla („base“), aplikované
+ * na aktuální stav z GitHubu (tříbodové sloučení). Karta otevřená dny se zastaralou pamětí
+ * tak nepřepíše změny z jiných zařízení ani nevrátí ukončené questy a smazané záznamy.
+ * Neodeslané změny (např. iPad Safari uspí kartu uprostřed zápisu) se dosynchronizují při
+ * dalším načtení. Server navíc odmítne zápis od staré verze stránky (X-Radar-Client).
+ */
+const CLIENT_VERSION = 3;  // musí být >= MIN_CLIENT ve functions/api/sync.js
+async function syncPut(file, data){
   try{
-    const r=await fetch(PROGRESS_PATH+"?t="+Date.now(),{cache:"no-store"});
-    if(!r.ok) return null;
-    const d=await r.json();
-    return (d && typeof d==="object")?d:null;
-  }catch(e){ return null; }
+    const r=await fetch("/api/sync",{method:"POST",headers:{"Content-Type":"application/json","X-Radar-Client":String(CLIENT_VERSION)},body:JSON.stringify({file,data})});
+    if(!r.ok){
+      const err=await r.json().catch(()=>({}));
+      return {ok:false, error: err.error || `HTTP ${r.status}`};
+    }
+    return {ok:true};
+  }catch(e){ return {ok:false, error:e.message}; }
 }
-
-async function saveRemoteProgress(data){
-  const res=await syncPut(PROGRESS_PATH, data);
-  if(!res.ok) _progressSyncError=res.error;
-  return res.ok;
-}
-
-async function syncProgress(){
-  _progressSyncStatus="syncing"; render();
-  try{ localStorage.removeItem("knizniRadarProgressDone"); }catch(e){}  // staré „náhrobky“, už nepotřeba
-  const remote=await loadRemoteProgress();
-  if(!remote){ S.progress = loadProgress(); _progressSyncStatus = "ok"; render(); return; }
-  if(isDirty("progress")){
-    // Neodeslaná změna z tohohle zařízení vyhrává – dosynchronizovat ji
-    S.progress = loadProgress();
-    const ok = await saveRemoteProgress(S.progress);
-    if(ok) setDirty("progress", false);
-    _progressSyncStatus = ok ? "ok" : "err";
-  } else {
-    S.progress = migrateProgress(remote);
-    saveProgress(S.progress);
-    _progressSyncStatus = "ok";
+const isArr = d => Array.isArray(d);
+const isObj = d => !!d && typeof d==="object" && !Array.isArray(d);
+async function fetchRemote(file, valid){
+  for(const url of [`/api/sync?file=${encodeURIComponent(file)}&t=${Date.now()}`, `${file}?t=${Date.now()}`]){
+    try{ const r=await fetch(url,{cache:"no-store"}); if(!r.ok) continue; const d=await r.json(); if(valid(d)) return d; }catch(e){}
   }
-  render();
+  return null;
 }
 
-async function saveProgressAndSync(a){
-  saveProgress(a); setDirty("progress", true);
-  _progressSyncStatus="syncing"; render();
-  const ok=await saveRemoteProgress(a);
-  if(ok) setDirty("progress", false);
-  _progressSyncStatus=ok?"ok":"err";
-  render();
+const LS_DIRTY = "knizniRadarUnsynced";
+function isDirty(k){ try{ return !!(JSON.parse(localStorage.getItem(LS_DIRTY))||{})[k]; }catch(e){ return false; } }
+function setDirty(k, on){ try{ const d=JSON.parse(localStorage.getItem(LS_DIRTY))||{}; if(on) d[k]=Date.now(); else delete d[k]; localStorage.setItem(LS_DIRTY, JSON.stringify(d)); }catch(e){} }
+function loadBase(f){ try{ return JSON.parse(localStorage.getItem("knizniRadarBase:"+f)); }catch(e){ return null; } }
+function saveBase(f, d){ try{ localStorage.setItem("knizniRadarBase:"+f, JSON.stringify(d)); }catch(e){} }
+const clone = d => JSON.parse(JSON.stringify(d));
+
+// Klíč záznamu v poli – stabilní napříč zařízeními pro stejný reálný záznam
+const diaryEntryKey = e => `${e.title}||${e.date}||${e._category}||${e.note||""}`;
+const backlogKey = b => `${b.title}||${b._category||"book"}`;
+// Změny local oproti base aplikované na remote. Bez base (první zápis na zařízení) vyhrává local.
+function merge3(file, remote, local, base){
+  if(!base) return clone(local);
+  if(file===PROGRESS_PATH){
+    const out = clone(remote);
+    new Set([...Object.keys(local||{}), ...Object.keys(base||{})]).forEach(c=>{
+      if(JSON.stringify(local[c]??null)!==JSON.stringify(base[c]??null)) out[c] = local[c]==null ? null : clone(local[c]);
+    });
+    return out;
+  }
+  const key = file===DIARY_PATH ? diaryEntryKey : backlogKey;
+  const B = new Map(base.map(x=>[key(x), JSON.stringify(x)]));
+  const Lm = new Map(local.map(x=>[key(x), x]));
+  const out = remote.filter(x=>{ const k=key(x); return !(B.has(k) && !Lm.has(k)); });  // lokálně smazané
+  const R = new Map(out.map((x,i)=>[key(x), i]));
+  local.forEach(x=>{
+    const k=key(x), s=JSON.stringify(x);
+    if(!B.has(k)){ if(!R.has(k)){ out.push(clone(x)); R.set(k, out.length-1); } }   // lokálně přidané
+    else if(B.get(k)!==s && R.has(k)) out[R.get(k)] = clone(x);                     // lokálně změněné
+  });
+  return out;
 }
+
+function setSyncState(file, status, err){
+  if(file===BACKLOG_PATH){ _syncStatus=status; _syncError=err||""; }
+  else if(file===DIARY_PATH){ _diarySyncStatus=status; _diarySyncError=err||""; }
+  else { _progressSyncStatus=status; _progressSyncError=err||""; }
+}
+const SYNC_FILES = {
+  [BACKLOG_PATH]: {get:()=>S.backlog, set:a=>{ S.backlog=a; saveBacklog(a); }, load:()=>loadBacklog(), valid:isArr},
+  [DIARY_PATH]:   {get:()=>S.diary,   set:a=>{ S.diary=a; saveDiary(a); },     load:()=>loadDiary(),   valid:isArr},
+  [PROGRESS_PATH]:{get:()=>S.progress,set:a=>{ S.progress=migrateProgress(a); saveProgress(S.progress); }, load:()=>loadProgress(), valid:isObj},
+};
+// zápisy do jednoho souboru jdou za sebou (rychlé klikání +/+/+ se jinak předbíhá)
+const _syncQueue = {};
+const enqueue = (file, fn) => (_syncQueue[file] = (_syncQueue[file]||Promise.resolve()).then(fn, fn));
+
+async function pushMerged(file, remoteKnown){
+  const F = SYNC_FILES[file];
+  const snapshot = clone(F.get());
+  const remote = remoteKnown || await fetchRemote(file, F.valid);
+  const merged = remote ? merge3(file, remote, snapshot, loadBase(file)) : snapshot;
+  const res = await syncPut(file, merged);
+  if(!res.ok){ setSyncState(file, "err", res.error); return false; }
+  saveBase(file, merged);
+  // změny udělané v kartě během odesílání nezahodit
+  const now = F.get();
+  const pending = JSON.stringify(now)!==JSON.stringify(snapshot);
+  F.set(pending ? merge3(file, merged, now, snapshot) : merged);
+  setDirty(file, pending);
+  setSyncState(file, "ok");
+  return true;
+}
+function syncFile(file){
+  return enqueue(file, async ()=>{
+    const F = SYNC_FILES[file];
+    setSyncState(file, "syncing"); render();
+    const remote = await fetchRemote(file, F.valid);
+    if(!remote){ F.set(F.load()); setSyncState(file, "ok"); }
+    else if(isDirty(file)){ await pushMerged(file, remote); }
+    else { F.set(remote); saveBase(file, remote); setSyncState(file, "ok"); }
+    render();
+  });
+}
+function saveFileAndSync(file, data){
+  SYNC_FILES[file].set(data); setDirty(file, true);
+  setSyncState(file, "syncing"); render();
+  return enqueue(file, async ()=>{ await pushMerged(file); render(); });
+}
+const syncBacklog = () => syncFile(BACKLOG_PATH);
+const syncDiary = () => syncFile(DIARY_PATH);
+const syncProgress = () => syncFile(PROGRESS_PATH);
+const saveBacklogAndSync = a => saveFileAndSync(BACKLOG_PATH, a);
+const saveDiaryAndSync = a => saveFileAndSync(DIARY_PATH, a);
+const saveProgressAndSync = a => saveFileAndSync(PROGRESS_PATH, a);
+// návrat na kartu (přepnutí aplikace na iPadu, jiné okno) → nejdřív stáhnout aktuální stav
+let _lastResync = Date.now();
+document.addEventListener("visibilitychange", ()=>{
+  if(document.visibilityState!=="visible" || Date.now()-_lastResync < 15000) return;
+  _lastResync = Date.now();
+  syncBacklog(); syncDiary(); syncProgress();
+});
 
 const DIARY_MONTHS = ["Leden","Únor","Březen","Duben","Květen","Červen","Červenec","Srpen","Září","Říjen","Listopad","Prosinec"];
 function diaryMonthLabel(dateStr){ const d=new Date(dateStr+"T00:00:00"); return `${DIARY_MONTHS[d.getMonth()]} ${d.getFullYear()}`; }

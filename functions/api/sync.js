@@ -7,6 +7,12 @@
  * nikdy nevidí.
  *
  *   POST /api/sync   body: { file: "diary.json" | "backlog.json" | "progress.json", data: <cokoliv serializovatelného> }
+ *   GET  /api/sync?file=progress.json   → aktuální obsah přímo z GitHubu (statický soubor na webu
+ *                                          se po zápisu obnoví až s dalším nasazením, ~1 min)
+ *
+ * Zápis vyžaduje hlavičku X-Radar-Client >= MIN_CLIENT. Stará verze stránky, která zůstala
+ * otevřená v kartě (iPad Safari je drží dny), by jinak slučovala zastaralou lokální paměť
+ * a vracela do souborů ukončené questy a smazané záznamy.
  *
  * Jde o osobní jednouživatelskou appku - endpoint proto nemá vlastní
  * autentizaci uživatele (kdokoliv se stránkou může zapisovat), ale
@@ -17,6 +23,21 @@
 const ALLOWED_FILES = new Set(["diary.json", "backlog.json", "progress.json"]);
 const REPO_OWNER = "Saceek";
 const REPO_NAME = "knizni-radar";
+const MIN_CLIENT = 3;
+const JSON_HEADERS = { "Content-Type": "application/json", "Cache-Control": "no-store" };
+
+export async function onRequestGet(context) {
+  const { request, env } = context;
+  const file = new URL(request.url).searchParams.get("file");
+  if (!ALLOWED_FILES.has(file)) return new Response(JSON.stringify({ error: "Soubor není povolen" }), { status: 403, headers: JSON_HEADERS });
+  const token = env.GITHUB_SYNC_TOKEN;
+  if (!token) return new Response(JSON.stringify({ error: "Server není nastaven" }), { status: 500, headers: JSON_HEADERS });
+  const r = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${file}?ref=main&t=${Date.now()}`, {
+    headers: { Authorization: `Bearer ${token}`, Accept: "application/vnd.github.raw+json", "User-Agent": "knizni-radar-sync" },
+  });
+  if (!r.ok) return new Response(JSON.stringify({ error: `GitHub ${r.status}` }), { status: 502, headers: JSON_HEADERS });
+  return new Response(await r.text(), { status: 200, headers: JSON_HEADERS });
+}
 
 export async function onRequestPost(context) {
   const { request, env } = context;
@@ -36,6 +57,9 @@ export async function onRequestPost(context) {
   }
 
   const { file, data } = body || {};
+  if (+(request.headers.get("X-Radar-Client") || 0) < MIN_CLIENT) {
+    return new Response(JSON.stringify({ error: "Stará verze stránky – obnov ji (zavři a znovu otevři kartu)" }), { status: 409, headers: { "Content-Type": "application/json" } });
+  }
   if (!ALLOWED_FILES.has(file)) {
     return new Response(JSON.stringify({ error: "Soubor není povolen" }), { status: 403, headers: { "Content-Type": "application/json" } });
   }
