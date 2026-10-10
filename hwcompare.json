@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T18:16:50.043Z",
+  "updatedAt": "2026-10-10T19:16:51.517Z",
   "games": [
     {
       "title": "RuneScape: Dragonwilds",
@@ -218,18 +218,6 @@
       "note": "Doporučená konfigurace: GeForce RTX 4060 Ti / Radeon RX 7600 XT, Ryzen 5 7600X / Core i5-14600K"
     },
     {
-      "title": "Afterbeat (Project Arrhythmia)",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1650 or AMD Radeon RX 6500 XT",
-      "cpu": "Intel Core i5-10400F @ 2.90GHz or AMD Ryzen 5 5600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 or AMD Radeon RX 6500 XT, Intel Core i5-10400F @ 2.90GHz or AMD Ryzen 5 5600"
-    },
-    {
       "title": "20 More, Somehow Even Smaller, Mazes",
       "tier": "green",
       "tiers": {
@@ -240,6 +228,18 @@
       "cpu": null,
       "usedMinimum": true,
       "note": "Minimální konfigurace: The game takes around 150 MB of VRAM peak, so it should run on most systems. I've learned my lesson here."
+    },
+    {
+      "title": "Afterbeat (Project Arrhythmia)",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1650 or AMD Radeon RX 6500 XT",
+      "cpu": "Intel Core i5-10400F @ 2.90GHz or AMD Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 or AMD Radeon RX 6500 XT, Intel Core i5-10400F @ 2.90GHz or AMD Ryzen 5 5600"
     },
     {
       "title": "CONVRGENCE",
@@ -770,6 +770,30 @@
       "note": "Doporučená konfigurace: Any GPU with hardware acceleration, Any dual-core 2.4 GHz from 2015 or later"
     },
     {
+      "title": "Permafrost",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "Nvidia RTX 3070 Ti 8GB or AMD Radeon RX 6750 XT 12GB",
+      "cpu": "Intel Core i5-12400 or AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia RTX 3070 Ti 8GB or AMD Radeon RX 6750 XT 12GB, Intel Core i5-12400 or AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "Wand & Order: Tidy up the magic shop!",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Nvidia 1060/AMD equivalent",
+      "cpu": "Intel i3 / AMD FX series or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia 1060/AMD equivalent, Intel i3 / AMD FX series or equivalent"
+    },
+    {
       "title": "Train Sim World® 7 ",
       "tier": "orange",
       "tiers": {
@@ -806,18 +830,6 @@
       "note": "Doporučená konfigurace: Nvidia Geforce GTX 1080Ti"
     },
     {
-      "title": "Wand & Order: Tidy up the magic shop!",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Nvidia 1060/AMD equivalent",
-      "cpu": "Intel i3 / AMD FX series or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia 1060/AMD equivalent, Intel i3 / AMD FX series or equivalent"
-    },
-    {
       "title": "Tasty Chef",
       "tier": "orange",
       "tiers": {
@@ -828,18 +840,6 @@
       "cpu": "Intel Core i7-11700K @ 3.60GHz / AMD Ryzen 7 5700",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 2060 / Radeon RX 5700, Intel Core i7-11700K @ 3.60GHz / AMD Ryzen 7 5700"
-    },
-    {
-      "title": "Permafrost",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "Nvidia RTX 3070 Ti 8GB or AMD Radeon RX 6750 XT 12GB",
-      "cpu": "Intel Core i5-12400 or AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia RTX 3070 Ti 8GB or AMD Radeon RX 6750 XT 12GB, Intel Core i5-12400 or AMD Ryzen 5 5600X"
     },
     {
       "title": "Fright Train",
@@ -1094,18 +1094,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060, 11th Gen Intel(R) Core i7-11800H @ 2.30GHz"
     },
     {
-      "title": "Duckoleon",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Radeon RX 5500 XT OC 8G or Nvidia GTX 1660",
-      "cpu": "AMD Ryzen 5 3600 6-Core 3.60 GHz or Intel Core i5-9600K 6-Core 3.7 GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Radeon RX 5500 XT OC 8G or Nvidia GTX 1660, AMD Ryzen 5 3600 6-Core 3.60 GHz or Intel Core i5-9600K 6-Core 3.7 GHz"
-    },
-    {
       "title": "Invokyr",
       "tier": "orange",
       "tiers": {
@@ -1116,6 +1104,18 @@
       "cpu": "Intel Core i5-11500 Or AMD Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 Or AMD Radeon RX 6600 XT, Intel Core i5-11500 Or AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "Duckoleon",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Radeon RX 5500 XT OC 8G or Nvidia GTX 1660",
+      "cpu": "AMD Ryzen 5 3600 6-Core 3.60 GHz or Intel Core i5-9600K 6-Core 3.7 GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Radeon RX 5500 XT OC 8G or Nvidia GTX 1660, AMD Ryzen 5 3600 6-Core 3.60 GHz or Intel Core i5-9600K 6-Core 3.7 GHz"
     },
     {
       "title": "The Bell Echoes",
@@ -1442,6 +1442,18 @@
       "note": "Doporučená konfigurace: Graphics card with DX10, Intel Core i5 or better"
     },
     {
+      "title": "Needle In A Haystack",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1650 or equivalent",
+      "cpu": "Intel Core i7-3770 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 or equivalent, Intel Core i7-3770 or equivalent"
+    },
+    {
       "title": "Tidy Up the Flower Shop",
       "tier": "orange",
       "tiers": {
@@ -1454,16 +1466,28 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
-      "title": "Needle In A Haystack",
+      "title": "Birb",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "NVIDIA GeForce GTX 1650 or equivalent",
-      "cpu": "Intel Core i7-3770 or equivalent",
+      "gpu": "Intel HD Graphics 4000",
+      "cpu": "Intel Core i5 or superior",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 or equivalent, Intel Core i7-3770 or equivalent"
+      "note": "Doporučená konfigurace: Intel HD Graphics 4000, Intel Core i5 or superior"
+    },
+    {
+      "title": "Japanese Ramen Simulator",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1660 / Radeon R9 390X (6GB+ of VRAM)",
+      "cpu": "Intel Core i7",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / Radeon R9 390X (6GB+ of VRAM), Intel Core i7"
     },
     {
       "title": "Duo Quest",
@@ -1488,30 +1512,6 @@
       "cpu": "Dual Core",
       "usedMinimum": true,
       "note": "Minimální konfigurace: 1 GB, Dual Core"
-    },
-    {
-      "title": "Japanese Ramen Simulator",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1660 / Radeon R9 390X (6GB+ of VRAM)",
-      "cpu": "Intel Core i7",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / Radeon R9 390X (6GB+ of VRAM), Intel Core i7"
-    },
-    {
-      "title": "Birb",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel HD Graphics 4000",
-      "cpu": "Intel Core i5 or superior",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Intel HD Graphics 4000, Intel Core i5 or superior"
     },
     {
       "title": "Drop Command",
