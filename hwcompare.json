@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T09:16:29.451Z",
+  "updatedAt": "2026-10-10T09:59:55.040Z",
   "games": [
     {
       "title": "RuneScape: Dragonwilds",
@@ -110,18 +110,6 @@
       "note": "Doporučená konfigurace: GeForce RTX 3060 or similar, Intel Core i5 (13 gen) or similar"
     },
     {
-      "title": "TUNG",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "GTX 1080",
-      "cpu": "Intel Core i5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1080, Intel Core i5"
-    },
-    {
       "title": "Happy Wheels",
       "tier": "green",
       "tiers": {
@@ -206,18 +194,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3080 / AMD Radeon RX 7800 XT, AMD Ryzen 7 5700X / Intel i7-9700K"
     },
     {
-      "title": "Trails in the Sky 2nd Chapter",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1050",
-      "cpu": "AMD Ryzen 5 1600",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 1050, AMD Ryzen 5 1600"
-    },
-    {
       "title": "Clive Barker's Hellraiser: Revival",
       "tier": "orange",
       "tiers": {
@@ -228,6 +204,18 @@
       "cpu": "AMD Ryzen 5 5600X, Intel Core i5-12400F",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: AMD Radeon RX 6600 XT, NVIDIA RTX 3060, AMD Ryzen 5 5600X, Intel Core i5-12400F"
+    },
+    {
+      "title": "Trails in the Sky 2nd Chapter",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1050",
+      "cpu": "AMD Ryzen 5 1600",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 1050, AMD Ryzen 5 1600"
     },
     {
       "title": "Way of the Hunter 2",
@@ -276,6 +264,18 @@
       "cpu": "Intel Core i7-8700k / AMD Ryzen 7-5700",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 3070 / RX 6700 XT, Intel Core i7-8700k / AMD Ryzen 7-5700"
+    },
+    {
+      "title": "TUNG",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "GTX 1080",
+      "cpu": "Intel Core i5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1080, Intel Core i5"
     },
     {
       "title": "Active Matter",
@@ -446,6 +446,18 @@
       "note": "Minimální konfigurace: Intel UHD 630, Vega 7, Intel Core i5, 2.2Hz dual core"
     },
     {
+      "title": "Order of the Sinking Star",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 2070 Ti or AMD Radeon RX 5700 or Intel Arc B570",
+      "cpu": "Intel Core i5-9600K or AMD Ryzen R5 3600 processor",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 2070 Ti or AMD Radeon RX 5700 or Intel Arc B570, Intel Core i5-9600K or AMD Ryzen R5 3600 processor"
+    },
+    {
       "title": "Superhero Simulator",
       "tier": "green",
       "tiers": {
@@ -480,18 +492,6 @@
       "cpu": "Intel Core i5-3550",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce GTX 1060, Intel Core i5-3550"
-    },
-    {
-      "title": "Order of the Sinking Star",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 2070 Ti or AMD Radeon RX 5700 or Intel Arc B570",
-      "cpu": "Intel Core i5-9600K or AMD Ryzen R5 3600 processor",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 2070 Ti or AMD Radeon RX 5700 or Intel Arc B570, Intel Core i5-9600K or AMD Ryzen R5 3600 processor"
     },
     {
       "title": "Bunker Tidy Up",
@@ -686,18 +686,6 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1660 SUPER 6GB / AMD Radeon RX Vega 56 8GB, Intel Core i5-8600K / AMD Ryzen 5 1600"
     },
     {
-      "title": "Woman Simulator",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "RTX 3060 / Radeon RX 6600 XT",
-      "cpu": "Intel core i5 / Ryzen 5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 3060 / Radeon RX 6600 XT, Intel core i5 / Ryzen 5"
-    },
-    {
       "title": "Rivage",
       "tier": "red",
       "tiers": {
@@ -708,6 +696,18 @@
       "cpu": "Intel Core i5-11400F / AMD Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 12 GB / AMD RX 6700 XT, Intel Core i5-11400F / AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "Woman Simulator",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "RTX 3060 / Radeon RX 6600 XT",
+      "cpu": "Intel core i5 / Ryzen 5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 3060 / Radeon RX 6600 XT, Intel core i5 / Ryzen 5"
     },
     {
       "title": "Stranded with You",
@@ -950,18 +950,6 @@
       "note": "Doporučená konfigurace: Intel UHD Graphics 630, Intel Core i3-8100"
     },
     {
-      "title": "The Plant Shop",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 950 or better",
-      "cpu": "3.2 GHz or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 950 or better, 3.2 GHz or better"
-    },
-    {
       "title": "Silver Pines",
       "tier": "green",
       "tiers": {
@@ -972,6 +960,18 @@
       "cpu": "Intel Core i5-6600 or AMD Ryzen 5 1600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NIVIDIA GeForce GTX 770, AMD Radeon R9 380, Intel Core i5-6600 or AMD Ryzen 5 1600"
+    },
+    {
+      "title": "The Plant Shop",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 950 or better",
+      "cpu": "3.2 GHz or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 950 or better, 3.2 GHz or better"
     },
     {
       "title": "Deskrawl: Idle ARPG",
@@ -1166,18 +1166,6 @@
       "note": "Minimální konfigurace: 512MB, OpenGL 3+, 2.7 GHz Dual Core"
     },
     {
-      "title": "STUNTBOOST",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTS 450, 1 GB | AMD Radeon HD 5750, 1 GB",
-      "cpu": "Intel Core 2 Duo E6750, 2.66 GHz | AMD Phenom II X3 720, 2.8 GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTS 450, 1 GB | AMD Radeon HD 5750, 1 GB, Intel Core 2 Duo E6750, 2.66 GHz | AMD Phenom II X3 720, 2.8 GHz"
-    },
-    {
       "title": "Invokyr",
       "tier": "orange",
       "tiers": {
@@ -1188,6 +1176,18 @@
       "cpu": "Intel Core i5-11500 Or AMD Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 Or AMD Radeon RX 6600 XT, Intel Core i5-11500 Or AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "STUNTBOOST",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTS 450, 1 GB | AMD Radeon HD 5750, 1 GB",
+      "cpu": "Intel Core 2 Duo E6750, 2.66 GHz | AMD Phenom II X3 720, 2.8 GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTS 450, 1 GB | AMD Radeon HD 5750, 1 GB, Intel Core 2 Duo E6750, 2.66 GHz | AMD Phenom II X3 720, 2.8 GHz"
     },
     {
       "title": "Frutiger Home",
@@ -1370,6 +1370,18 @@
       "note": "Doporučená konfigurace: DX10, DX11, and DX12-capable GPUs, 2Ghz or better"
     },
     {
+      "title": "Airport Control 27",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "orange"
+      },
+      "gpu": "Nvidia GeForce RTX 3070, AMD Radeon RX RX 6750 GRE, Intel Arc B580 graphics card or better (min 8GB VRAM, DX12 support)",
+      "cpu": "Intel Core i7-12700, AMD Ryzen 5 9600X, or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce RTX 3070, AMD Radeon RX RX 6750 GRE, Intel Arc B580 graphics card or better (min 8GB VRAM, DX12 support), Intel Core i7-12700, AMD Ryzen 5 9600X, or better"
+    },
+    {
       "title": "Breakout Garage",
       "tier": "orange",
       "tiers": {
@@ -1514,18 +1526,6 @@
       "note": "Doporučená konfigurace: GPU with DirectX 11 or Vulkan 1.1 support, Intel Core i5-2300 2.8 GHz/AMD Phenom II X4 945 3.0 GHz or equivalent"
     },
     {
-      "title": "Birb",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel HD Graphics 4000",
-      "cpu": "Intel Core i5 or superior",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Intel HD Graphics 4000, Intel Core i5 or superior"
-    },
-    {
       "title": "Tunnel Escape Fates Entwined",
       "tier": "green",
       "tiers": {
@@ -1538,6 +1538,18 @@
       "note": "Minimální konfigurace: DirectX 9/OpenGL 4.1 capable GPU, Intel Core2 Duo or better"
     },
     {
+      "title": "Birb",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD Graphics 4000",
+      "cpu": "Intel Core i5 or superior",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Intel HD Graphics 4000, Intel Core i5 or superior"
+    },
+    {
       "title": "Deleted Wiki: Clean Up the Lost Files",
       "tier": "green",
       "tiers": {
@@ -1548,6 +1560,18 @@
       "cpu": "64-bit quad-core",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Any modern GPU, 64-bit quad-core"
+    },
+    {
+      "title": "Duelant: Nečinná Expedice",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Graphics card with DX10",
+      "cpu": "Intel Core i5 or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Graphics card with DX10, Intel Core i5 or better"
     },
     {
       "title": "BuGarden",
@@ -1586,18 +1610,6 @@
       "note": "Doporučená konfigurace: DX10, DX11, DX12 or Vulkan capable GPUs, Intel Core i7 (4th gen or newer) / AMD equivalent"
     },
     {
-      "title": "Duelant: Nečinná Expedice",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Graphics card with DX10",
-      "cpu": "Intel Core i5 or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Graphics card with DX10, Intel Core i5 or better"
-    },
-    {
       "title": "琉璃烟火-Flame in Glass-",
       "tier": "green",
       "tiers": {
@@ -1632,6 +1644,18 @@
       "cpu": "Intel i5或同级别",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: 2GB RAM, Intel i5或同级别"
+    },
+    {
+      "title": "Japanese Ramen Simulator",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1660 / Radeon R9 390X (6GB+ of VRAM)",
+      "cpu": "Intel Core i7",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / Radeon R9 390X (6GB+ of VRAM), Intel Core i7"
     },
     {
       "title": "Let's Tidy Up! : Treasure",
