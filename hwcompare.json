@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T13:16:14.283Z",
+  "updatedAt": "2026-10-10T14:16:10.599Z",
   "games": [
     {
       "title": "RuneScape: Dragonwilds",
@@ -542,6 +542,18 @@
       "note": "Minimální konfigurace: Nvidia GeForce 1050, Intel Core i5"
     },
     {
+      "title": "CPM 2",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1650 / RTX 3050 or better (4+ GB)",
+      "cpu": "Intel Core i5-13400F / AMD Ryzen 5 7500F (6+ cores)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 / RTX 3050 or better (4+ GB), Intel Core i5-13400F / AMD Ryzen 5 7500F (6+ cores)"
+    },
+    {
       "title": "BRAZILIAN DRUG DEALER BEFORE 4: DEMONS FROM THE PORTAL TO HELL I OPENED ARE STILL IN THE FAVELA AND NOW I HAVE TO SAVE MAMADAS FROM RONALDO",
       "tier": "green",
       "tiers": {
@@ -564,18 +576,6 @@
       "cpu": "1.2 GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: DirectX 9 compatible graphics card, 1.2 GHz"
-    },
-    {
-      "title": "CPM 2",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1650 / RTX 3050 or better (4+ GB)",
-      "cpu": "Intel Core i5-13400F / AMD Ryzen 5 7500F (6+ cores)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 / RTX 3050 or better (4+ GB), Intel Core i5-13400F / AMD Ryzen 5 7500F (6+ cores)"
     },
     {
       "title": "DISCIPLINE SIMULATOR",
@@ -890,6 +890,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 or AMD Radeon RX 6600, Intel Core i5-11600K or AMD Ryzen 5 5600G"
     },
     {
+      "title": "Permafrost",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "Nvidia RTX 3070 Ti 8GB or AMD Radeon RX 6750 XT 12GB",
+      "cpu": "Intel Core i5-12400 or AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia RTX 3070 Ti 8GB or AMD Radeon RX 6750 XT 12GB, Intel Core i5-12400 or AMD Ryzen 5 5600X"
+    },
+    {
       "title": "The Magus Circle",
       "tier": "green",
       "tiers": {
@@ -936,18 +948,6 @@
       "cpu": "8 core or more CPU (some examples but not limited to: Intel Core 9-10980XE @ 3.0GHz, Intel Core i9-9900KS @ 4.00GHz, AMD Ryzen 9 3900X, or AMD Ryzen 9 3950X)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Gaming graphics card with at least 8GB of DEDICATED memory (some examples but not limited to Nvidia 2080 TI or AMD Radeon VII), 8 core or more CPU (some examples but not limited to: Intel Core 9-10980XE @ 3.0GHz, Intel Core i9-9900KS @ 4.00GHz, AMD Ryzen 9 3900X, or AMD Ryzen 9 3950X)"
-    },
-    {
-      "title": "Permafrost",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "Nvidia RTX 3070 Ti 8GB or AMD Radeon RX 6750 XT 12GB",
-      "cpu": "Intel Core i5-12400 or AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia RTX 3070 Ti 8GB or AMD Radeon RX 6750 XT 12GB, Intel Core i5-12400 or AMD Ryzen 5 5600X"
     },
     {
       "title": "창세기전 외전: 서풍의 광시곡 리마스터",
@@ -1154,18 +1154,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / RTX 2060 or AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-9600K or AMD Ryzen 5 3600"
     },
     {
-      "title": "Crack the Pack",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "512MB, OpenGL 3+",
-      "cpu": "2.7 GHz Dual Core",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: 512MB, OpenGL 3+, 2.7 GHz Dual Core"
-    },
-    {
       "title": "Invokyr",
       "tier": "orange",
       "tiers": {
@@ -1176,6 +1164,18 @@
       "cpu": "Intel Core i5-11500 Or AMD Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 Or AMD Radeon RX 6600 XT, Intel Core i5-11500 Or AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "Crack the Pack",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "512MB, OpenGL 3+",
+      "cpu": "2.7 GHz Dual Core",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: 512MB, OpenGL 3+, 2.7 GHz Dual Core"
     },
     {
       "title": "STUNTBOOST",
@@ -1322,18 +1322,6 @@
       "note": "Doporučená konfigurace: Intel iris Xe / Geforce GTX 750 / AMD Radeon HD 7770, Intel Core i5, AMD Ryzen 5"
     },
     {
-      "title": "Flamecraft",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 940M",
-      "cpu": "Intel® Core™ i5-2430M",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 940M, Intel® Core™ i5-2430M"
-    },
-    {
       "title": "Mixed Spirits: Bartender",
       "tier": "green",
       "tiers": {
@@ -1344,6 +1332,18 @@
       "cpu": "Intel Pentium CPU G860",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce 840M, Intel Pentium CPU G860"
+    },
+    {
+      "title": "Flamecraft",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 940M",
+      "cpu": "Intel® Core™ i5-2430M",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 940M, Intel® Core™ i5-2430M"
     },
     {
       "title": "CONCRETE BURIAL",
@@ -1368,18 +1368,6 @@
       "cpu": "2Ghz or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: DX10, DX11, and DX12-capable GPUs, 2Ghz or better"
-    },
-    {
-      "title": "Airport Control 27",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "orange"
-      },
-      "gpu": "Nvidia GeForce RTX 3070, AMD Radeon RX RX 6750 GRE, Intel Arc B580 graphics card or better (min 8GB VRAM, DX12 support)",
-      "cpu": "Intel Core i7-12700, AMD Ryzen 5 9600X, or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce RTX 3070, AMD Radeon RX RX 6750 GRE, Intel Arc B580 graphics card or better (min 8GB VRAM, DX12 support), Intel Core i7-12700, AMD Ryzen 5 9600X, or better"
     },
     {
       "title": "Breakout Garage",
