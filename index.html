@@ -264,6 +264,36 @@
   .kind{display:inline-block;font:800 10px var(--sans);letter-spacing:.08em;padding:2px 6px;border-radius:4px;margin-bottom:6px;background:rgba(255,255,255,.08);color:var(--sub)}
   .up .addb{position:static;opacity:1;flex:none}
 
+  /* Čeština do her */
+  .cz{display:inline-flex;align-items:center;gap:5px;height:22px;padding:0 7px 0 4px;border-radius:5px;font:800 11px var(--sans);letter-spacing:.03em;white-space:nowrap;line-height:1;border:0;cursor:pointer;flex:none;vertical-align:middle}
+  .cz .fl{width:16px;height:11px;border-radius:2px;flex:none;background:linear-gradient(#fff 0 50%,#d7141a 50%);position:relative;overflow:hidden;pointer-events:none}
+  .cz .fl:before{content:"";position:absolute;left:0;top:0;bottom:0;width:0;border-style:solid;border-width:5.5px 0 5.5px 8px;border-color:transparent transparent transparent #11457e}
+  .cz.off,.cz.full{background:#46c46a;color:#062a12}
+  .cz.fan{background:#5aa9ff;color:#06203d}
+  .cz.wip{background:rgba(20,40,70,.9);color:#8ec5ff;box-shadow:inset 0 0 0 1px rgba(90,169,255,.6)}
+  .cz.none{background:rgba(0,0,0,.6);padding:0 4px;gap:0}
+  .cz.none .fl{filter:grayscale(1);opacity:.55}
+  .cz.sm{height:18px;font-size:10px;padding:0 5px 0 3px} .cz.sm .fl{width:13px;height:9px} .cz.sm .fl:before{border-width:4.5px 0 4.5px 6.5px}
+  .w .im .br{position:absolute;z-index:2;right:8px;bottom:8px;display:flex;gap:6px;align-items:center}
+  .w .im .br .life{position:static}
+  .czm{max-width:560px;padding:0;overflow:hidden}
+  .czm .top{position:relative;height:150px;background:var(--bg3)}
+  .czm .top img{width:100%;height:100%;object-fit:cover;opacity:.55}
+  .czm .top h2{position:absolute;left:20px;right:20px;bottom:12px;margin:0;font:800 28px var(--serif);text-shadow:0 2px 14px rgba(0,0,0,.7)}
+  .czm .bd{padding:6px 20px 20px}
+  .czsec{margin-top:14px}
+  .czsec h4{margin:0 0 8px;font:800 12px var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--sub)}
+  .ok,.no{display:flex;align-items:center;gap:8px;font-size:14px;margin:6px 0}
+  .ok i,.no i{width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:12px;font-weight:800}
+  .ok i{background:rgba(70,196,106,.2);color:#46c46a} .no i{background:rgba(255,255,255,.08);color:var(--mute)}
+  .src{background:var(--bg3);border-radius:12px;padding:14px;margin-top:10px}
+  .src .hd{display:flex;align-items:center;gap:10px}
+  .src .hd b{font-size:15px} .src .hd small{color:var(--sub);font-size:12.5px}
+  .bars{display:grid;grid-template-columns:100px 1fr 44px;gap:8px 10px;align-items:center;margin-top:12px;font-size:12.5px;color:var(--sub)}
+  .bars .tr2{height:7px;border-radius:4px;background:rgba(255,255,255,.08);overflow:hidden}
+  .bars .tr2 i{display:block;height:100%;background:#5aa9ff} .bars .tr2 i.done{background:#46c46a}
+  .bars span:last-child{text-align:right;font-weight:700;color:var(--text)}
+
   /* Metacritic */
   .mc{display:inline-grid;place-items:center;min-width:30px;height:30px;padding:0 4px;border-radius:6px;font:800 14px var(--sans);line-height:1;color:#111;background:var(--mcc);font-variant-numeric:tabular-nums;flex:none}
   .mc.lg{min-width:54px;height:54px;font-size:24px;border-radius:9px}
@@ -1060,6 +1090,7 @@ let S = {view:VALID_VIEWS.has(savedView)?savedView:"news", filter:"Vše", bookGe
   news:null, newsStatus:"idle", newsUpdatedAt:null,
   coming:null, comingStatus:"idle", comingUpdatedAt:null,
   mc:null, mcStatus:"idle", mcUpdatedAt:null, mcYear:null, mcTab:"games",
+  czMap:null, czOpen:null, gameCz:"Vše",
   comics:[], comicsBestsellers:[], comicsStatus:"idle", comicsUpdatedAt:null,
   addCat:"Vše",
   diary:loadDiary(), diaryCat:"book", diaryQ:"", diaryDate:new Date().toISOString().slice(0,10), diaryNote:"", diarySelected:null,
@@ -1225,7 +1256,7 @@ function steamFilteredByWinGenre(){
 function steamFiltered(){
   const base = steamFilteredByWinGenre();
   const r = S.gameRarity||"Vše";
-  return base.filter(g=> r==="Vše" || (rarity(g.rating)||"common")===r)
+  return base.filter(g=> (r==="Vše" || (rarity(g.rating)||"common")===r) && czFilterOk(g.name))
   .sort((a,b)=> rarityRank(b.rating)-rarityRank(a.rating) || (
     S.gameSort==="released" ? (Date.parse(b.released)||0)-(Date.parse(a.released)||0) :
     S.gameSort==="rating"   ? (b.rating||0)-(a.rating||0) :
@@ -1239,6 +1270,15 @@ async function loadNews(){
     const d = await r.json();
     S.news = d; S.newsUpdatedAt = d.updatedAt || null; S.newsStatus="live";
   }catch(e){ S.news = null; S.newsStatus="empty"; }
+  render();
+}
+async function loadCzech(){
+  try{
+    const r = await fetch("czech.json?t=" + Date.now(), {cache:"no-store"});
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    const d = await r.json();
+    S.czMap = new Map(Object.entries(d.games||{}));
+  }catch(e){ S.czMap = new Map(); }
   render();
 }
 async function loadMetacritic(){
@@ -1387,6 +1427,71 @@ function gameImgFallbacks(g){
   return [...new Set([swap("shared.cloudflare.steamstatic.com"), swap("shared.fastly.steamstatic.com"), img, id?`https://cdn.cloudflare.steamstatic.com/steam/apps/${id}/header.jpg`:null].filter(Boolean))];
 }
 // široká dlaždice (hry)
+/* ---- čeština do her (czech.json: oficiálně ze Steamu + lokalizace.net / hernipreklady.cz) ---- */
+// stejný klíč jako build-czech.js
+const czKey = t => normalizeGameTitle(String(t||"").replace(/&amp;/g,"&").replace(/[™®©]/g,"").replace(/['’`]/g,""));
+const czInfo = t => S.czMap ? S.czMap.get(czKey(t)) : null;
+function czState(t){
+  const c = czInfo(t);
+  if(!c) return null;
+  if(c.official==="full") return {k:"full", label:"CZ dabing", line:"oficiálně: rozhraní, titulky i dabing"};
+  if(c.official==="text") return {k:"off", label:"CZ", line:"oficiálně: rozhraní a titulky"};
+  if(c.ln || c.hp){
+    const hpAvg = c.hp && c.hp.bars.length ? Math.round(c.hp.bars.reduce((a,b)=>a+b.v,0)/c.hp.bars.length) : null;
+    const done = (c.ln && c.ln.pct===100) || (c.hp && c.hp.bars.length && c.hp.bars.every(b=>b.v===100));
+    const pct = c.ln && c.ln.pct!=null ? c.ln.pct : hpAvg;
+    return done ? {k:"fan", label:"CZ fan", line:"fanouškovská čeština"} : {k:"wip", label: pct!=null?`CZ ${pct} %`:"CZ fan", line: pct!=null?`fanouškovská čeština se překládá – ${pct} %`:"fanouškovská čeština"};
+  }
+  if(c.official==="none") return {k:"none", label:"bez CZ", line:"čeština zatím není"};
+  return null;  // neověřeno
+}
+const czBadge = (t, sm) => { const st = czState(t); return st ? `<span class="cz ${st.k} ${sm?"sm":""}" data-cz="${esc(t)}" role="button" title="${esc(st.line)} – podrobnosti"><span class="fl"></span>${st.k==="none"?"":esc(st.label)}</span>` : ""; };
+function czFilterOk(t){
+  if(S.gameCz==="Vše") return true;
+  const st = czState(t); if(!st) return false;
+  return S.gameCz==="official" ? (st.k==="off"||st.k==="full") : st.k!=="none";
+}
+function czModalHtml(t){
+  const c = czInfo(t); if(!c) return "";
+  const g = (S.games||[]).find(x=>czKey(x.name)===czKey(t)) || S.backlog.find(x=>czKey(x.title)===czKey(t)) || (S.news?.items||[]).find(x=>czKey(x.title)===czKey(t));
+  const img = (g && g.image) || (c.appid ? `https://cdn.cloudflare.steamstatic.com/steam/apps/${c.appid}/header.jpg` : null);
+  const src = (name, url, sub, bars) => `<div class="src"><div class="hd"><div><b>${name}</b><br><small>${sub}</small></div><a class="qb go" href="${esc(url)}" target="_blank" rel="noreferrer" style="margin-left:auto">Stáhnout ${icon("arrow-up-right")}</a></div>
+    ${bars.length?`<div class="bars">${bars.map(b=>`<span>${esc(b.k)}</span><span class="tr2"><i class="${b.v===100?"done":""}" style="width:${b.v}%"></i></span><span>${b.v} %</span>`).join("")}</div>`:""}</div>`;
+  const official = c.official==="full" ? `<div class="ok"><i>✓</i>Rozhraní a titulky</div><div class="ok"><i>✓</i>Český dabing</div>`
+    : c.official==="text" ? `<div class="ok"><i>✓</i>Rozhraní a titulky</div><div class="no"><i>✕</i>Český dabing</div>`
+    : c.official==="none" ? `<div class="no"><i>✕</i>Hra češtinu oficiálně nepodporuje</div>` : `<div class="tiny">Na Steamu se nepodařilo ověřit.</div>`;
+  const fan = c.ln || c.hp ? `${c.ln?src("lokalizace.net", c.ln.url, [c.ln.team?"tým "+esc(c.ln.team):"", c.ln.pct!=null?c.ln.pct+" % hotovo":""].filter(Boolean).join(" · "), c.ln.pct!=null?[{k:"Překlad",v:c.ln.pct}]:[]):""}
+    ${c.hp?src("hernipreklady.cz", c.hp.url, [esc(c.hp.stav||""), esc(c.hp.author||""), esc(c.hp.date||"")].filter(Boolean).join(" · "), c.hp.bars):""}`
+    : `<div class="tiny">${c.official==="text"||c.official==="full" ? "Není potřeba – hra má oficiální češtinu." : "Zatím žádná. Hlídáme lokalizace.net a hernipreklady.cz – jakmile vznikne, objeví se v Novinkách."}</div>`;
+  return `<div class="modal-overlay" data-closemodal="1"><div class="modal czm">
+    <div class="top">${imgTag(img)}<h2>${esc(c.title||t)}</h2></div>
+    <div class="bd"><div class="czsec"><h4>Oficiálně na Steamu</h4>${official}</div>
+      <div class="czsec"><h4>Fanouškovská čeština</h4>${fan}</div>
+      <div class="mrow">${c.appid?`<a class="btn" href="https://store.steampowered.com/app/${c.appid}/" target="_blank" rel="noreferrer">Steam ${icon("arrow-up-right")}</a>`:""}<button class="btn" data-closemodal="1">Zavřít</button></div></div></div></div>`;
+}
+// řada „Nové češtiny“ na Novinkách – fanouškovský překlad nově vznikl nebo se dokončil (3 dny)
+function czNewsShelf(){
+  if(!S.czMap) return "";
+  const now = new Date(); now.setHours(0,0,0,0);
+  const fresh = [];
+  for(const [k,c] of S.czMap){
+    const d = [c.doneSince, c.fanSince].filter(Boolean).map(x=>new Date(x+"T00:00:00")).sort((a,b)=>b-a)[0];
+    if(!d) continue;
+    const age = Math.round((now-d)/864e5);
+    if(age<0 || age>2) continue;
+    fresh.push({c, daysLeft:3-age});
+  }
+  if(!fresh.length) return "";
+  const inList = t => S.backlog.some(b=>(b._category||"book")==="game" && czKey(b.title)===czKey(t));
+  fresh.sort((a,b)=> (inList(b.c.title)-inList(a.c.title)) || b.daysLeft-a.daysLeft);
+  return shelf("Nové češtiny", "lokalizace.net · hernipreklady.cz", fresh.map(({c,daysLeft})=>{
+    const g = (S.games||[]).find(x=>czKey(x.name)===czKey(c.title)) || S.backlog.find(x=>czKey(x.title)===czKey(c.title));
+    const tile = g ? {...g} : {title:c.title, url: c.appid?`https://store.steampowered.com/app/${c.appid}/`:(c.ln||c.hp).url, appid:c.appid, image: c.appid?`https://cdn.cloudflare.steamstatic.com/steam/apps/${c.appid}/header.jpg`:null};
+    const name = tile.name||tile.title;
+    return wTile(tile, {tag:newTag({daysLeft}), bk: bkBtn(g&&g.name?"gbk":"newsgbk", name, inBacklog(name,"game")),
+      sub: `${esc(czState(c.title)?.line||"")}${inList(c.title)?' · <span class="inlist">V MÉM SEZNAMU</span>':""}`});
+  }).join(""));
+}
 function wTile(g, o={}){
   const name = g.name||g.title;
   const href = steamDeepLink(g.url);
@@ -1399,7 +1504,7 @@ function wTile(g, o={}){
   const sub = [ (g.tags||g.genres||[]).slice(0,2).map(esc).join(" · "),
     h?`<a class="hltb" href="${esc(h.url)}" target="_blank" rel="noreferrer" title="Doba dohrání (HowLongToBeat)">${icon("clock")} ${h.hours} h</a>`:"",
     hwMini(name), recIconsHtml(g) ].filter(Boolean).join(" ");
-  return `<div class="w ${o.cls||""}"><a class="im" href="${esc(href)}" style="background:${grad(name)}">${img}${demoRibbon(g)}${crownHtml(g.rating)}${o.tag||""}${g.gamePass?'<span class="tagr gp">GAME PASS</span>':""}${scoreBadge(g.rating, g.scoreDesc)}</a>${o.bk||""}
+  return `<div class="w ${o.cls||""}"><a class="im" href="${esc(href)}" style="background:${grad(name)}">${img}${demoRibbon(g)}${crownHtml(g.rating)}${g.gamePass?'<span class="tagr gp">GAME PASS</span>':""}${scoreBadge(g.rating, g.scoreDesc)}<span class="br">${o.tag||""}${czBadge(name)}</span></a>${o.bk||""}
     <div class="t"><span class="clip" title="${esc(name)}"><a href="${esc(href)}">${esc(name)}</a></span>${price?`<span class="pr">${price}</span>`:""}</div>
     <div class="s2">${o.sub!=null?o.sub:sub}</div>${o.below||""}</div>`;
 }
@@ -1529,7 +1634,7 @@ function viewNews(){
       blur: isBook, cover: isBook ? hero.cover : null,
       kick: `${icon(leg?"crown":"star")} ${leg?"Legendární":"Nejlépe hodnocený"} drop ${todayItems.length?"dne":"posledních dní"}`,
       title: hero.title, href: hero.link||hero.url,
-      meta: metaJoin([`<b>${hero.rating} %</b>`, typeLabel, esc(hero.author||""), hero.year?esc(hero.year):"", hero.type==="game"&&hero.reviews?`${Number(hero.reviews).toLocaleString("cs-CZ")} recenzí`:"", hero.type==="game"?hwMini(hero.title):"", hero.price?esc(String(hero.price))+(typeof hero.price==="number"?" Kč":""):""]),
+      meta: metaJoin([`<b>${hero.rating} %</b>`, typeLabel, esc(hero.author||""), hero.year?esc(hero.year):"", hero.type==="game"&&hero.reviews?`${Number(hero.reviews).toLocaleString("cs-CZ")} recenzí`:"", hero.type==="game"?hwMini(hero.title):"", hero.type==="game"?czBadge(hero.title):"", hero.price?esc(String(hero.price))+(typeof hero.price==="number"?" Kč":""):""]),
       btns: heroBkBtn(attr, hero.title, inBacklog(hero.title, cat)) + (hero.type==="game"?heroLink(steamDeepLink(hero.url), `${icon("game")} Steam`):heroLink(hero.link||hero.url, `${icon("arrow-up-right")} Detail`)),
     });
   } else {
@@ -1551,6 +1656,7 @@ function viewNews(){
   ].join("");
   if(!active.length && blocks && hero) html += `<div class="pull"></div>`;
   html += blocks || (S.newsStatus==="live" ? `<div class="empty">Žádné novinky od poslední aktualizace. Všechna data jsou aktuální.</div>` : "");
+  html += czNewsShelf();
   html += mcNewsShelves();
   return html;
 }
@@ -1584,7 +1690,7 @@ function viewComing(){
   const DOW=["neděle","pondělí","úterý","středa","čtvrtek","pátek","sobota"], MON=["led","úno","bře","dub","kvě","čvn","čvc","srp","zář","říj","lis","pro"];
   const groups=[]; dated.forEach(x=>{ const k=x.dt.toDateString(); const g=groups.find(g=>g.k===k); g?g.items.push(x):groups.push({k,dt:x.dt,items:[x]}); });
   const upCard = x => `<div class="up">${x.img?`<a href="${esc(x.cat==="game"?steamDeepLink(x.url):x.url)}" target="_blank" rel="noreferrer">${imgTag(x.img, x.k==="HRA"?'class="wide"':"")}</a>`:`<span class="ph" style="background:${grad(x.title)}"></span>`}
-    <div class="ui"><span class="kind">${x.k}</span><b class="clip" title="${esc(x.title)}"><a href="${esc(x.cat==="game"?steamDeepLink(x.url):x.url)}" target="_blank" rel="noreferrer">${esc(x.title)}</a></b><small class="clip">${esc((x.vod||[]).join(", ")||(x.genres||[]).slice(0,2).join(" · ")||x.price||"")}</small></div>
+    <div class="ui"><span class="kind">${x.k}</span><b class="clip" title="${esc(x.title)}"><a href="${esc(x.cat==="game"?steamDeepLink(x.url):x.url)}" target="_blank" rel="noreferrer">${esc(x.title)}</a></b><small class="clip">${x.cat==="game"&&czState(x.title)?czBadge(x.title,true)+" ":""}${esc((x.vod||[]).join(", ")||(x.genres||[]).slice(0,2).join(" · ")||x.price||"")}</small></div>
     ${bkBtn(x.cat==="game"?"newsgbk":"newsmbk", x.title, inBacklog(x.title,x.cat))}</div>`;
   if(groups.length || undated.length){
     html += `<div class="cal">${groups.map(g=>{const days=Math.round((g.dt-today)/864e5); return `<div class="day"><span>${DOW[g.dt.getDay()]}</span><b>${g.dt.getDate()}. ${MON[g.dt.getMonth()]}</b><em>${days===0?"dnes":days===1?"zítra":`za ${days} ${days<5?"dny":"dní"}`}</em></div><div class="items">${g.items.map(upCard).join("")}</div>`;}).join("")}
@@ -1619,12 +1725,13 @@ function viewSteam(){
   const items = steamFiltered();
   const hero = steamFilteredByWinGenre().slice().sort((a,b)=>(b.reviews||0)-(a.reviews||0))[0];
   let html = hero ? heroHtml({short:true, img:steamHero(hero.appid)||hero.image, fallback:hero.image, kick:`${icon("fire")} Nejhranější novinka`, title:hero.name, href:steamDeepLink(hero.url),
-      meta: metaJoin([`<b>${hero.rating} % Steam</b>`, hero.reviews?`${Number(hero.reviews).toLocaleString("cs-CZ")} recenzí`:"", esc((hero.tags||[]).slice(0,3).join(" · ")), hltbFor(hero.name)?`${hltbFor(hero.name).hours} h`:"", hwMini(hero.name), esc(hero.price||"")]),
+      meta: metaJoin([`<b>${hero.rating} % Steam</b>`, hero.reviews?`${Number(hero.reviews).toLocaleString("cs-CZ")} recenzí`:"", esc((hero.tags||[]).slice(0,3).join(" · ")), hltbFor(hero.name)?`${hltbFor(hero.name).hours} h`:"", hwMini(hero.name), czBadge(hero.name), esc(hero.price||"")]),
       btns: heroBkBtn("gbk", hero.name, inBacklog(hero.name,"game")) + heroLink(steamDeepLink(hero.url), `${icon("game")} Steam`)}) : `<div class="pagetop"></div>`;
   html += statusNote(S.gamesStatus, "hry");
   html += `<div class="fbar">
     <div class="seg">${[7,14,30].map(w=>`<button class="${S.gameWin===w?"on":""}" data-gwin="${w}">${w} dní</button>`).join("")}</div>
     ${filterSelect("ggenre", S.gameGenre, steamGenres(), "Všechny žánry")}
+    <div class="seg">${[["Vše","Čeština: vše"],["official","Oficiální CZ"],["any","Jakákoli CZ"]].map(([k,l])=>`<button class="${S.gameCz===k?"on":""}" data-gcz="${k}">${l}</button>`).join("")}</div>
     ${tierPills(steamFilteredByWinGenre(), S.gameRarity, "data-grarity")}
     ${sortSelect("gsort", S.gameSort, [["reviews","Nejvíc recenzí"],["released","Nejnovější"],["rating","Nejvyšší hodnocení"]])}
   </div>`;
@@ -1692,7 +1799,7 @@ function addFromMetacritic(key){
   saveBacklogAndSync(S.backlog); render();
 }
 function mcPoster(tab, year, i, x){
-  const sub = tab==="games" ? `${mcPlats(x)}${x.released?" · "+czDate(x.released):""}` : esc((x.genres||[]).join(" · "));
+  const sub = tab==="games" ? `${czBadge(x.title,true)} ${mcPlats(x)}` : esc((x.genres||[]).join(" · "));
   return `<div class="p"><a href="${esc(x.url)}" target="_blank" rel="noreferrer"><span class="im" style="background:${grad(x.title)}">${imgTag(x.image)}<span class="mcpos">${mcBadge(x.score,"sm")}</span></span></a>${mcBk(tab, year, i, x)}
     <div class="t clip" title="${esc(x.title)}"><a href="${esc(x.url)}" target="_blank" rel="noreferrer">${esc(x.title)}</a></div><div class="s2">${sub}</div></div>`;
 }
@@ -1731,7 +1838,7 @@ function viewMetacritic(){
       <a class="cimg" href="${esc(x.url)}" target="_blank" rel="noreferrer" style="background:${grad(x.title)}">${imgTag(x.image)}</a>
       <div style="min-width:0"><b class="clip" title="${esc(x.title)}"><a href="${esc(x.url)}" target="_blank" rel="noreferrer">${esc(x.title)}</a></b>
         <small class="clip">${tab==="games"&&x.platforms.length?mcPlats(x)+" · ":""}${esc((x.genres||[]).join(" · "))}${x.released?" · "+czDate(x.released):""}</small>
-        ${inList||st?`<div class="tags">${inList?'<span class="inlist">V MÉM SEZNAMU</span>':""}${st?`<span class="tag">Steam ${st.rating} %${st.price?" · "+esc(st.price):""}</span>`:""}</div>`:""}</div>
+        ${inList||st||(tab==="games"&&czState(x.title))?`<div class="tags">${inList?'<span class="inlist">V MÉM SEZNAMU</span>':""}${tab==="games"?czBadge(x.title,true):""}${st?`<span class="tag">Steam ${st.rating} %${st.price?" · "+esc(st.price):""}</span>`:""}</div>`:""}</div>
       <div class="xx"><div class="sbar" title="${x.positive} kladných · ${x.mixed} smíšených · ${x.negative} záporných"><i class="pp" style="width:${x.positive/tot*100}%"></i><i class="nn" style="width:${x.mixed/tot*100}%"></i><i class="ng" style="width:${x.negative/tot*100}%"></i></div>
         <div class="sent">${MC_SENT[x.sentiment]||esc(x.sentiment||"")} · ${x.reviews} recenzí</div></div>
       <div class="xx ext"><span>${usBadge(x.userScore)} ${tab==="games"?"hráči":"diváci"}</span></div>
@@ -1750,7 +1857,7 @@ function viewBacklog(){
   html += `<div class="stats">
     <div class="st"><span style="color:var(--violet)">${icon("book")} Čtecí</span><b>${books.length+comics.length}</b><small>knihy a komiksy</small></div>
     <div class="st"><span style="color:var(--blue)">${icon("film")} Filmové</span><b>${movies.length}</b><small>filmy a seriály</small></div>
-    <div class="st"><span style="color:var(--green)">${icon("game")} Herní</span><b>${games.length}</b><small>${hours?`${hours} h hraní celkem`:"hry"}</small></div>
+    <div class="st"><span style="color:var(--green)">${icon("game")} Herní</span><b>${games.length}</b><small>${hours?`${hours} h hraní · `:""}${games.filter(g=>{const st=czState(g.title);return st&&st.k!=="none";}).length} s češtinou</small></div>
     <div class="st"><span style="color:var(--red)">${icon("play")} Rozjeto</span><b>${activeN}</b><small>aktivních questů</small></div></div>`;
   html += `<section class="shelf"><h3>Pokračovat <small>aktivní questy – jeden na kategorii</small></h3><div class="srow">${progressWidgetHtml()}</div></section>`;
   html += `<section class="shelf" style="margin-bottom:12px"><h3>Přidat do seznamu</h3></section>` + addPanelHtml();
@@ -1795,6 +1902,7 @@ function render(){
   else if(S.view==="backlog") html = viewBacklog();
   else if(S.view==="diary") html = diaryViewHtml();
   else html = viewBooks();
+  if(S.czOpen) html += czModalHtml(S.czOpen);
   if(S.expanded){
     const b = allListItems().find(x=>x.title===S.expanded) || S.backlog.find(x=>x.title===S.expanded);
     if(b) html += bookModalHtml(b); else S.expanded=null;
@@ -2137,7 +2245,9 @@ document.getElementById("nav").onclick=e=>{ const v=e.target.closest("[data-view
 document.getElementById("brand").onclick=()=>goView("news");
 window.addEventListener("scroll",()=>document.getElementById("topnav").classList.toggle("solid", window.scrollY>30), {passive:true});
 document.getElementById("view").onclick=e=>{
-  if(e.target.dataset.closemodal){ S.expanded=null; render(); return; }
+  const czb=e.target.closest("[data-cz]"); if(czb){ e.preventDefault(); S.czOpen=czb.dataset.cz; render(); return; }
+  if(e.target.dataset.closemodal){ S.expanded=null; S.czOpen=null; render(); return; }
+  const gcz=e.target.dataset.gcz; if(gcz){ S.gameCz=gcz; render(); return; }
   const sd=e.target.dataset.sdir; if(sd){ const row=e.target.parentElement.querySelector(".srow"); row.scrollBy({left:+sd*Math.max(200,row.clientWidth*0.85), behavior:"smooth"}); return; }
   const gv=e.target.dataset.goview; if(gv){ goView(gv); return; }
   const gmc=e.target.dataset.gomc; if(gmc){ S.mcTab=gmc; S.mcYear=null; if(S.mc) S.mcYear=Math.max(...Object.keys(S.mc.years).map(Number)); goView("metacritic"); return; }
@@ -2176,9 +2286,10 @@ document.getElementById("view").onclick=e=>{
   if(setcatEl){ setBacklogCategory(setcatEl.dataset.setcattitle, setcatEl.dataset.setcatval); return; }
 };
 
-document.addEventListener("keydown",e=>{ if(e.key==="Escape" && S.expanded){ S.expanded=null; render(); } });
+document.addEventListener("keydown",e=>{ if(e.key==="Escape" && (S.expanded||S.czOpen)){ S.expanded=null; S.czOpen=null; render(); } });
 loadNews();
 loadMetacritic();
+loadCzech();
 loadGamePass();
 loadHLTB();
 loadHwCompare();
