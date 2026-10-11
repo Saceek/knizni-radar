@@ -59,6 +59,10 @@ jobs:
         run: node build-coming.js
         continue-on-error: true
 
+      - name: Metacritic → metacritic.json
+        run: node build-metacritic.js
+        continue-on-error: true       # když Metacritic zlobí, zůstanou poslední dobrá data
+
       - name: Enrichment backlogu (hodnocení + ceny)
         run: node build-enrich-backlog.js
         continue-on-error: true
@@ -76,6 +80,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add books.json crew.json gamepass.json games.json hltb.json hwcompare.json movies.json coming.json news.json news-history.json news-seen.json previous-books.json previous-crew.json previous-games.json previous-movies.json previous-gamepass.json backlog.json
+          git add books.json crew.json gamepass.json games.json hltb.json hwcompare.json movies.json coming.json news.json news-history.json news-seen.json previous-books.json previous-crew.json previous-games.json previous-movies.json previous-gamepass.json backlog.json metacritic.json
           git diff --staged --quiet || git commit -m "data: refresh"
           git push
