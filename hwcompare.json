@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-11T07:16:40.089Z",
+  "updatedAt": "2026-10-11T08:16:38.004Z",
   "games": [
     {
       "title": "RuneScape: Dragonwilds",
@@ -590,6 +590,18 @@
       "note": "Doporučená konfigurace: RTX 2060, Intel Core i7 8700"
     },
     {
+      "title": "Car Park Capital",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "OpenGL 4.2+",
+      "cpu": null,
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: OpenGL 4.2+"
+    },
+    {
       "title": "Sengoku Rance",
       "tier": "green",
       "tiers": {
@@ -612,18 +624,6 @@
       "cpu": "Intel i5 Quad-Core",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 750 Ti, Intel i5 Quad-Core"
-    },
-    {
-      "title": "Car Park Capital",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "OpenGL 4.2+",
-      "cpu": null,
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: OpenGL 4.2+"
     },
     {
       "title": "Silver Pines",
@@ -998,18 +998,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 660 or AMD Radeon R9 270, Intel Core i5"
     },
     {
-      "title": "Lucid Cats",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1060",
-      "cpu": "Intel Core i5-8400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, Intel Core i5-8400"
-    },
-    {
       "title": "Invokyr",
       "tier": "orange",
       "tiers": {
@@ -1020,6 +1008,18 @@
       "cpu": "Intel Core i5-11500 Or AMD Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 Or AMD Radeon RX 6600 XT, Intel Core i5-11500 Or AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "Lucid Cats",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1060",
+      "cpu": "Intel Core i5-8400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, Intel Core i5-8400"
     },
     {
       "title": "ShipCrafter",
@@ -1322,6 +1322,30 @@
       "note": "Doporučená konfigurace: Intel iris Xe / Geforce GTX 750 / AMD Radeon HD 7770, Intel Core i5, AMD Ryzen 5"
     },
     {
+      "title": "PAPERHEAD",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Geforce GTX 460 Or Equivalent",
+      "cpu": "2.4 GHZ Quad Core Processor Or Higher",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Geforce GTX 460 Or Equivalent, 2.4 GHZ Quad Core Processor Or Higher"
+    },
+    {
+      "title": "Duelant: Nečinná Expedice",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Graphics card with DX10",
+      "cpu": "Intel Core i5 or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Graphics card with DX10, Intel Core i5 or better"
+    },
+    {
       "title": "Mixed Spirits: Bartender",
       "tier": "green",
       "tiers": {
@@ -1356,30 +1380,6 @@
       "cpu": "2.9 GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GTX 960 or equivalent, 2.9 GHz"
-    },
-    {
-      "title": "PAPERHEAD",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Geforce GTX 460 Or Equivalent",
-      "cpu": "2.4 GHZ Quad Core Processor Or Higher",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Geforce GTX 460 Or Equivalent, 2.4 GHZ Quad Core Processor Or Higher"
-    },
-    {
-      "title": "Duelant: Nečinná Expedice",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Graphics card with DX10",
-      "cpu": "Intel Core i5 or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Graphics card with DX10, Intel Core i5 or better"
     },
     {
       "title": "Nighthawks",
@@ -1478,18 +1478,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
-      "title": "Birb",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel HD Graphics 4000",
-      "cpu": "Intel Core i5 or superior",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Intel HD Graphics 4000, Intel Core i5 or superior"
-    },
-    {
       "title": "Needle In A Haystack",
       "tier": "green",
       "tiers": {
@@ -1502,6 +1490,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 or equivalent, Intel Core i7-3770 or equivalent"
     },
     {
+      "title": "Birb",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD Graphics 4000",
+      "cpu": "Intel Core i5 or superior",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Intel HD Graphics 4000, Intel Core i5 or superior"
+    },
+    {
       "title": "Deleted Wiki: Clean Up the Lost Files",
       "tier": "green",
       "tiers": {
@@ -1512,6 +1512,18 @@
       "cpu": "64-bit quad-core",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Any modern GPU, 64-bit quad-core"
+    },
+    {
+      "title": "Hood Warfare 2",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, RTX 4060 8 GB",
+      "cpu": "Intel Core i5-12600K or AMD Ryzen 5 7600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 Ti, RTX 4060 8 GB, Intel Core i5-12600K or AMD Ryzen 5 7600"
     },
     {
       "title": "DR Dominoes",
@@ -1584,18 +1596,6 @@
       "cpu": "Intel Core2 Duo or better",
       "usedMinimum": true,
       "note": "Minimální konfigurace: DirectX 9/OpenGL 4.1 capable GPU, Intel Core2 Duo or better"
-    },
-    {
-      "title": "Hood Warfare 2",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 3060 Ti, RTX 4060 8 GB",
-      "cpu": "Intel Core i5-12600K or AMD Ryzen 5 7600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 Ti, RTX 4060 8 GB, Intel Core i5-12600K or AMD Ryzen 5 7600"
     },
     {
       "title": "Let's Tidy Up! : Treasure",
