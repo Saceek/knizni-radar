@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-11T02:16:55.437Z",
+  "updatedAt": "2026-10-11T03:16:13.519Z",
   "games": [
     {
       "title": "RuneScape: Dragonwilds",
@@ -818,18 +818,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 6 GB or AMD Radeon RX 5700 with 8 GB VRAM or more, Intel Core i5-9600K @ 3.7 GHz or AMD Ryzen 5 3600 @ 3.6 GHz"
     },
     {
-      "title": "Dawson Oaks Trailer Park",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "Nvidia Geforce GTX 1080Ti",
-      "cpu": null,
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia Geforce GTX 1080Ti"
-    },
-    {
       "title": "Rollout Inline",
       "tier": "green",
       "tiers": {
@@ -840,6 +828,18 @@
       "cpu": "Intel Core i5-6600k or AMD Ryzen 3 3300X",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce GTX 1050 Ti or Radeon RX 460 (4GB), Intel Core i5-6600k or AMD Ryzen 3 3300X"
+    },
+    {
+      "title": "Dawson Oaks Trailer Park",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "Nvidia Geforce GTX 1080Ti",
+      "cpu": null,
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia Geforce GTX 1080Ti"
     },
     {
       "title": "Tasty Chef",
@@ -1478,6 +1478,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
+      "title": "Birb",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD Graphics 4000",
+      "cpu": "Intel Core i5 or superior",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Intel HD Graphics 4000, Intel Core i5 or superior"
+    },
+    {
       "title": "Needle In A Haystack",
       "tier": "green",
       "tiers": {
@@ -1490,16 +1502,16 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 or equivalent, Intel Core i7-3770 or equivalent"
     },
     {
-      "title": "Birb",
+      "title": "Deleted Wiki: Clean Up the Lost Files",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "Intel HD Graphics 4000",
-      "cpu": "Intel Core i5 or superior",
+      "gpu": "Any modern GPU",
+      "cpu": "64-bit quad-core",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: Intel HD Graphics 4000, Intel Core i5 or superior"
+      "note": "Doporučená konfigurace: Any modern GPU, 64-bit quad-core"
     },
     {
       "title": "Duo Quest",
@@ -1524,18 +1536,6 @@
       "cpu": "Dual Core",
       "usedMinimum": true,
       "note": "Minimální konfigurace: 1 GB, Dual Core"
-    },
-    {
-      "title": "Deleted Wiki: Clean Up the Lost Files",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Any modern GPU",
-      "cpu": "64-bit quad-core",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Any modern GPU, 64-bit quad-core"
     },
     {
       "title": "Drop Command",
@@ -1634,6 +1634,18 @@
       "note": "Doporučená konfigurace: DX10, DX11, DX12 or Vulkan capable GPUs, Intel Core i7 (4th gen or newer) / AMD equivalent"
     },
     {
+      "title": "Hood Warfare 2",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, RTX 4060 8 GB",
+      "cpu": "Intel Core i5-12600K or AMD Ryzen 5 7600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 Ti, RTX 4060 8 GB, Intel Core i5-12600K or AMD Ryzen 5 7600"
+    },
+    {
       "title": "琉璃烟火-Flame in Glass-",
       "tier": "green",
       "tiers": {
@@ -1644,6 +1656,18 @@
       "cpu": "Intel Core i5-11500 or better, or equivalent AMD processor",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Intel UHD Graphics 630 or better, or equivalent AMD/NVIDIA graphics, Intel Core i5-11500 or better, or equivalent AMD processor"
+    },
+    {
+      "title": "Babel Legacy",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "1GB",
+      "cpu": "Dual Core 2.5 GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: 1GB, Dual Core 2.5 GHz"
     },
     {
       "title": "Draco and the Seven Scales",
@@ -1670,18 +1694,6 @@
       "note": "Doporučená konfigurace: 2GB RAM, Intel i5或同级别"
     },
     {
-      "title": "Babel Legacy",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "1GB",
-      "cpu": "Dual Core 2.5 GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: 1GB, Dual Core 2.5 GHz"
-    },
-    {
       "title": "DEATH PENALTY",
       "tier": "green",
       "tiers": {
@@ -1692,18 +1704,6 @@
       "cpu": "Intel Core i5-2500 / AMD Phenom II X4 965",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce GTX 750 / Radeon RX 560X, Intel Core i5-2500 / AMD Phenom II X4 965"
-    },
-    {
-      "title": "Hood Warfare 2",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 3060 Ti, RTX 4060 8 GB",
-      "cpu": "Intel Core i5-12600K or AMD Ryzen 5 7600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 Ti, RTX 4060 8 GB, Intel Core i5-12600K or AMD Ryzen 5 7600"
     },
     {
       "title": "The Incident at Galley House",
