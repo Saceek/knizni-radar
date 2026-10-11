@@ -24,6 +24,9 @@
   img{display:block}
   a{color:inherit;text-decoration:none}
   button{font-family:inherit}
+  /* iOS Safari při klepnutí kreslí přes tlačítko tmavý obdélník (ignoruje kulaté rohy) – vlastní odezva místo něj */
+  a,button,[role="button"]{-webkit-tap-highlight-color:transparent}
+  .addb:active,.qb:active,.b1:active,.b2:active,.tier:active,.seg button:active{transform:scale(.94)}
   .clip{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
   .ic{width:1em;height:1em;flex:none;display:inline-block;vertical-align:-.14em;pointer-events:none}  /* klik musí dopadnout na tlačítko (handlery čtou e.target.dataset) */
   button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
