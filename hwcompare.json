@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-11T01:16:51.679Z",
+  "updatedAt": "2026-10-11T02:16:55.437Z",
   "games": [
     {
       "title": "RuneScape: Dragonwilds",
@@ -626,6 +626,18 @@
       "note": "Doporučená konfigurace: OpenGL 4.2+"
     },
     {
+      "title": "Permafrost",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "Nvidia RTX 3070 Ti 8GB or AMD Radeon RX 6750 XT 12GB",
+      "cpu": "Intel Core i5-12400 or AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia RTX 3070 Ti 8GB or AMD Radeon RX 6750 XT 12GB, Intel Core i5-12400 or AMD Ryzen 5 5600X"
+    },
+    {
       "title": "I Know a Guy: Shady Life Simulator",
       "tier": "orange",
       "tiers": {
@@ -650,16 +662,16 @@
       "note": "Minimální konfigurace: Any GPU with 512 MB VRAM and DX10/11 feature-set (Intel HD 3000+, NVIDIA GT 710, AMD HD 6450, etc.), Dual-core CPU, 2 GHz (Intel Core i3-2100 / AMD FX-4100 or equivalent)"
     },
     {
-      "title": "Permafrost",
-      "tier": "red",
+      "title": "Silver Pines",
+      "tier": "green",
       "tiers": {
-        "allyx": "red",
+        "allyx": "green",
         "pc": "green"
       },
-      "gpu": "Nvidia RTX 3070 Ti 8GB or AMD Radeon RX 6750 XT 12GB",
-      "cpu": "Intel Core i5-12400 or AMD Ryzen 5 5600X",
+      "gpu": "NIVIDIA GeForce GTX 770, AMD Radeon R9 380",
+      "cpu": "Intel Core i5-6600 or AMD Ryzen 5 1600",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia RTX 3070 Ti 8GB or AMD Radeon RX 6750 XT 12GB, Intel Core i5-12400 or AMD Ryzen 5 5600X"
+      "note": "Doporučená konfigurace: NIVIDIA GeForce GTX 770, AMD Radeon R9 380, Intel Core i5-6600 or AMD Ryzen 5 1600"
     },
     {
       "title": "Apocalypter",
@@ -672,18 +684,6 @@
       "cpu": "+3 GHZ octa core processor",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 TI or AMD equivalent, +3 GHZ octa core processor"
-    },
-    {
-      "title": "Silver Pines",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NIVIDIA GeForce GTX 770, AMD Radeon R9 380",
-      "cpu": "Intel Core i5-6600 or AMD Ryzen 5 1600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NIVIDIA GeForce GTX 770, AMD Radeon R9 380, Intel Core i5-6600 or AMD Ryzen 5 1600"
     },
     {
       "title": "Parisian Bistro Simulator",
@@ -1082,18 +1082,6 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 or better 6GB VRAM, Intel Core i5 (recent generetion)"
     },
     {
-      "title": "Land of Glarefall",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1060(3GB) / AMD Radeon RX570(4GB)",
-      "cpu": "Intel Core i7-4770K / AMD Ryzen 5 1600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060(3GB) / AMD Radeon RX570(4GB), Intel Core i7-4770K / AMD Ryzen 5 1600"
-    },
-    {
       "title": "RADIOSOL",
       "tier": "red",
       "tiers": {
@@ -1104,6 +1092,18 @@
       "cpu": "11th Gen Intel(R) Core i7-11800H @ 2.30GHz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060, 11th Gen Intel(R) Core i7-11800H @ 2.30GHz"
+    },
+    {
+      "title": "Land of Glarefall",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1060(3GB) / AMD Radeon RX570(4GB)",
+      "cpu": "Intel Core i7-4770K / AMD Ryzen 5 1600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060(3GB) / AMD Radeon RX570(4GB), Intel Core i7-4770K / AMD Ryzen 5 1600"
     },
     {
       "title": "Duckoleon",
@@ -1178,18 +1178,6 @@
       "note": "Minimální konfigurace: 512MB, OpenGL 3+, 2.7 GHz Dual Core"
     },
     {
-      "title": "STUNTBOOST",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTS 450, 1 GB | AMD Radeon HD 5750, 1 GB",
-      "cpu": "Intel Core 2 Duo E6750, 2.66 GHz | AMD Phenom II X3 720, 2.8 GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTS 450, 1 GB | AMD Radeon HD 5750, 1 GB, Intel Core 2 Duo E6750, 2.66 GHz | AMD Phenom II X3 720, 2.8 GHz"
-    },
-    {
       "title": "Frutiger Home",
       "tier": "green",
       "tiers": {
@@ -1200,6 +1188,18 @@
       "cpu": "Intel i5-7600K / AMD Ryzen 5 3600",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GTX 1060 / Radeon RX 6600, Intel i5-7600K / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "STUNTBOOST",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTS 450, 1 GB | AMD Radeon HD 5750, 1 GB",
+      "cpu": "Intel Core 2 Duo E6750, 2.66 GHz | AMD Phenom II X3 720, 2.8 GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTS 450, 1 GB | AMD Radeon HD 5750, 1 GB, Intel Core 2 Duo E6750, 2.66 GHz | AMD Phenom II X3 720, 2.8 GHz"
     },
     {
       "title": "Motorcycle Night Ride",
@@ -1382,16 +1382,16 @@
       "note": "Doporučená konfigurace: Geforce GTX 460 Or Equivalent, 2.4 GHZ Quad Core Processor Or Higher"
     },
     {
-      "title": "Breakout Garage",
-      "tier": "orange",
+      "title": "Duelant: Nečinná Expedice",
+      "tier": "green",
       "tiers": {
-        "allyx": "orange",
+        "allyx": "green",
         "pc": "green"
       },
-      "gpu": "GeForce RTX 3060 / Radeon RX 6600 XT",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "gpu": "Graphics card with DX10",
+      "cpu": "Intel Core i5 or better",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 / Radeon RX 6600 XT, Intel Core i5-8400 / AMD Ryzen 5 2600"
+      "note": "Doporučená konfigurace: Graphics card with DX10, Intel Core i5 or better"
     },
     {
       "title": "Japanese Ramen Simulator",
@@ -1404,6 +1404,18 @@
       "cpu": "Intel Core i7",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / Radeon R9 390X (6GB+ of VRAM), Intel Core i7"
+    },
+    {
+      "title": "Breakout Garage",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "GeForce RTX 3060 / Radeon RX 6600 XT",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3060 / Radeon RX 6600 XT, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
       "title": "Nightwater",
@@ -1440,18 +1452,6 @@
       "cpu": "Intel Core i3-4340 or better processor",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Compatible OpenGL / VRAM 1GB or better, Intel Core i3-4340 or better processor"
-    },
-    {
-      "title": "Duelant: Nečinná Expedice",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Graphics card with DX10",
-      "cpu": "Intel Core i5 or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Graphics card with DX10, Intel Core i5 or better"
     },
     {
       "title": "Tank Battle Classic",
@@ -1692,6 +1692,18 @@
       "cpu": "Intel Core i5-2500 / AMD Phenom II X4 965",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce GTX 750 / Radeon RX 560X, Intel Core i5-2500 / AMD Phenom II X4 965"
+    },
+    {
+      "title": "Hood Warfare 2",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, RTX 4060 8 GB",
+      "cpu": "Intel Core i5-12600K or AMD Ryzen 5 7600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 Ti, RTX 4060 8 GB, Intel Core i5-12600K or AMD Ryzen 5 7600"
     },
     {
       "title": "The Incident at Galley House",
