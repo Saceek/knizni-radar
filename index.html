@@ -39,6 +39,7 @@
   .nav .tab:hover{color:var(--text)}
   .nav .tab.on{color:var(--text);font-weight:700}
   .nav .tab.on:after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;border-radius:2px;background:var(--amber)}
+  .nav .lbs{display:none}
   .nav .cnt{font-size:10px;font-weight:800;color:#111;background:var(--amber);border-radius:6px;padding:1px 5px;line-height:1.4}
   .navr{margin-left:auto;display:flex;gap:14px;align-items:center}
   .iconbtn{position:relative;width:36px;height:36px;border-radius:10px;border:0;background:transparent;color:var(--sub);font-size:20px;display:grid;place-items:center;cursor:pointer}
@@ -260,6 +261,33 @@
   .kind{display:inline-block;font:800 10px var(--sans);letter-spacing:.08em;padding:2px 6px;border-radius:4px;margin-bottom:6px;background:rgba(255,255,255,.08);color:var(--sub)}
   .up .addb{position:static;opacity:1;flex:none}
 
+  /* Metacritic */
+  .mc{display:inline-grid;place-items:center;min-width:30px;height:30px;padding:0 4px;border-radius:6px;font:800 14px var(--sans);line-height:1;color:#111;background:var(--mcc);font-variant-numeric:tabular-nums;flex:none}
+  .mc.lg{min-width:54px;height:54px;font-size:24px;border-radius:9px}
+  .mc.sm{min-width:26px;height:22px;font-size:12px;border-radius:5px}
+  .mc.g{--mcc:#00ce7a} .mc.y{--mcc:#ffbd3f} .mc.r{--mcc:#ff6874} .mc.tbd{--mcc:#55555c;color:#ddd}
+  .us{display:inline-grid;place-items:center;flex:none;width:30px;height:30px;border-radius:50%;font:800 12px var(--sans);line-height:1;color:#111;background:var(--mcc)}
+  .p .mcpos{position:absolute;z-index:2;left:8px;bottom:8px}
+  .chart{padding:0 var(--gut);display:flex;flex-direction:column;gap:4px}
+  .ch{display:grid;grid-template-columns:48px 64px minmax(0,1fr) 190px 150px 54px 34px;gap:16px;align-items:center;padding:10px 12px;border-radius:12px}
+  .ch:hover{background:var(--bg2)}
+  .ch .pos{font:800 32px/1 var(--serif);color:var(--mute);text-align:center}
+  .ch.top3 .pos{color:var(--gold)}
+  .ch .cimg{width:64px;height:88px;border-radius:6px;overflow:hidden;background:var(--bg3);display:block}
+  .ch .cimg img{width:100%;height:100%;object-fit:cover}
+  .ch b{font-size:16px;display:block}
+  .ch b a:hover{text-decoration:underline}
+  .ch small{color:var(--sub);font-size:12.5px;display:block;margin-top:3px}
+  .ch .tags{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap}
+  .sbar{display:flex;height:8px;border-radius:4px;overflow:hidden;background:var(--bg3)}
+  .sbar i{display:block;height:100%}
+  .sbar .pp{background:#00ce7a} .sbar .nn{background:#ffbd3f} .sbar .ng{background:#ff6874}
+  .ch .sent{font-size:12px;color:var(--sub);margin-top:6px}
+  .ch .ext > span{display:flex;gap:8px;align-items:center;font-size:12px;color:var(--sub);line-height:1}
+  .ch .addb{position:static;opacity:1}
+  .inlist{font:800 10px var(--sans);letter-spacing:.06em;color:var(--green);border:1px solid rgba(70,196,106,.5);border-radius:4px;padding:2px 5px}
+  @media (max-width:900px){ .ch{grid-template-columns:30px 52px minmax(0,1fr) 54px 34px;gap:10px;padding:8px 4px}.ch .xx{display:none}.ch .cimg{width:52px;height:72px}.ch .pos{font-size:22px} }
+
   /* Můj seznam */
   .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:0 var(--gut);margin-bottom:34px}
   .st{background:var(--bg2);border-radius:12px;padding:18px}
@@ -356,7 +384,10 @@
     .nav{position:fixed;left:0;right:0;bottom:0;z-index:45;justify-content:space-around;gap:0;padding:6px 4px calc(6px + env(safe-area-inset-bottom));background:rgba(15,15,16,.97);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line)}
     .nav .tab{flex-direction:column;gap:3px;font-size:10px;padding:6px 4px;flex:1;min-width:0}
     .nav .tab .ic{display:block;font-size:22px}
-    .nav .tab .lb{max-width:100%;overflow:hidden;text-overflow:ellipsis}
+    .nav .tab .lb{display:none}
+    .nav .tab .lbs{display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;letter-spacing:-.01em}
+    .nav{padding-left:2px;padding-right:2px}
+    .nav .tab{padding:6px 0}
     .nav .tab.on{color:var(--amber)}
     .nav .tab.on:after{display:none}
     .nav .cnt{position:absolute;top:0;left:calc(50% + 6px)}
@@ -1015,7 +1046,7 @@ const MOVIES_DEMO = [
   {title:"Rod Draka - Série 3",year:"2026",type:"seriál",rating:null,poster:null,url:"https://www.csfd.cz/film/765432",genres:["Akční","Fantasy"],country:"USA",vod:["Max"]},
 ];
 
-const VALID_VIEWS = new Set(["news","coming","list","movies","steam","backlog","diary"]);
+const VALID_VIEWS = new Set(["news","coming","list","movies","steam","metacritic","backlog","diary"]);
 const savedView = localStorage.getItem("knizniRadarView");
 let S = {view:VALID_VIEWS.has(savedView)?savedView:"news", filter:"Vše", bookGenre:"Vše", bookRarity:"Vše", sort:"readers", q:"", books:DEMO, status:"idle", updatedAt:null, expanded:null, backlog:loadBacklog(),
   addQ:"", addAuthor:"", addResults:[], addBusy:false, addMsg:"", addErr:"",
@@ -1023,6 +1054,7 @@ let S = {view:VALID_VIEWS.has(savedView)?savedView:"news", filter:"Vše", bookGe
   movies:MOVIES_DEMO, moviesStatus:"idle", moviesUpdatedAt:null, movieType:"Vše", movieGenre:"Vše", movieRarity:"Vše", movieSort:"rating", movieQ:"",
   news:null, newsStatus:"idle", newsUpdatedAt:null,
   coming:null, comingStatus:"idle", comingUpdatedAt:null,
+  mc:null, mcStatus:"idle", mcUpdatedAt:null, mcYear:null, mcTab:"games",
   comics:[], comicsBestsellers:[], comicsStatus:"idle", comicsUpdatedAt:null,
   addCat:"Vše",
   diary:loadDiary(), diaryCat:"book", diaryQ:"", diaryDate:new Date().toISOString().slice(0,10), diaryNote:"", diarySelected:null,
@@ -1202,6 +1234,19 @@ async function loadNews(){
     const d = await r.json();
     S.news = d; S.newsUpdatedAt = d.updatedAt || null; S.newsStatus="live";
   }catch(e){ S.news = null; S.newsStatus="empty"; }
+  render();
+}
+async function loadMetacritic(){
+  S.mcStatus="loading"; render();
+  try{
+    const r = await fetch("metacritic.json?t=" + Date.now(), {cache:"no-store"});
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    const d = await r.json();
+    if(!d || !d.years) throw new Error("prázdno");
+    S.mc = d; S.mcUpdatedAt = d.updatedAt || null; S.mcStatus="live";
+    const years = Object.keys(d.years).map(Number).sort((a,b)=>b-a);
+    if(!S.mcYear || !d.years[S.mcYear]) S.mcYear = years[0];
+  }catch(e){ S.mc = null; S.mcStatus="empty"; }
   render();
 }
 async function loadComing(){
@@ -1501,6 +1546,7 @@ function viewNews(){
   ].join("");
   if(!active.length && blocks && hero) html += `<div class="pull"></div>`;
   html += blocks || (S.newsStatus==="live" ? `<div class="empty">Žádné novinky od poslední aktualizace. Všechna data jsou aktuální.</div>` : "");
+  html += mcNewsShelves();
   return html;
 }
 
@@ -1610,6 +1656,85 @@ function viewBooks(){
   return html;
 }
 
+/* ---- Metacritic: nejlépe hodnocené hry, filmy a seriály (Metascore 85+) ---- */
+const mcCls = s => s==null?"tbd": s>=75?"g": s>=50?"y":"r";
+const mcBadge = (s, size="") => `<span class="mc ${size} ${mcCls(s)}" title="Metascore – hodnocení kritiků">${s??"tbd"}</span>`;
+const usBadge = u => u==null ? `<span class="us" style="--mcc:#55555c;color:#ddd" title="Uživatelské skóre zatím není">–</span>`
+  : `<span class="us" style="--mcc:${u>=7.5?"#00ce7a":u>=5?"#ffbd3f":"#ff6874"}" title="Uživatelské skóre (0–10)">${u.toFixed(1)}</span>`;
+const MC_SENT = {"Universal acclaim":"Jednoznačně skvělé","Generally favorable":"Převážně kladné","Mixed or average":"Smíšené","Generally unfavorable":"Převážně záporné","Overwhelming dislike":"Drtivě záporné"};
+const MC_PLAT = {"PlayStation 5":"PS5","PlayStation 4":"PS4","Xbox Series X":"Xbox","Xbox One":"Xbox One","Nintendo Switch 2":"Switch 2","Nintendo Switch":"Switch","PC":"PC","iOS (iPhone/iPad)":"iOS","Meta Quest":"Quest"};
+const MC_TABS = [["games","Hry"],["movies","Filmy"],["tv","Seriály"]];
+const mcCat = tab => tab==="games" ? "game" : "movie";
+const mcPlats = x => [...new Set((x.platforms||[]).map(p=>MC_PLAT[p]||p))].slice(0,4).join(" · ");
+const czDate = d => d ? new Date(d).toLocaleDateString("cs-CZ") : "";
+const mcList = (year, tab) => (S.mc && S.mc.years[year] && S.mc.years[year][tab]) || [];
+const mcSteam = x => (S.games||[]).find(g=>normalizeGameTitle(g.name)===normalizeGameTitle(x.title));
+const mcBk = (tab, year, i, x) => bkBtn("mcbk", `${year}|${tab}|${i}`, inBacklog(x.title, mcCat(tab)), x.title);
+// přidání z Metacritic do Mého seznamu – u her ze Steam žebříčku vezme plná Steam data
+function addFromMetacritic(key){
+  const [year, tab, i] = key.split("|"); const x = mcList(year, tab)[+i];
+  if(!x) return;
+  const cat = mcCat(tab);
+  const existing = S.backlog.find(b=>b.title===x.title && (b._category||"book")===cat);
+  if(existing){ removeBacklog(x.title, cat); return; }
+  if(cat==="game"){
+    const g = mcSteam(x);
+    if(g){ addGameBacklog(g.name); return; }
+    S.backlog.push({title:x.title, _category:"game", image:x.image, url:x.url, tags:x.genres||[], released:x.released, metascore:x.score});
+  } else {
+    S.backlog.push({title:x.title, _category:"movie", poster:x.image, url:x.url, type: tab==="tv"?"seriál":"film", genres:x.genres||[], year:(x.released||"").slice(0,4)||null, metascore:x.score});
+  }
+  saveBacklogAndSync(S.backlog); render();
+}
+function mcPoster(tab, year, i, x){
+  const sub = tab==="games" ? `${mcPlats(x)}${x.released?" · "+czDate(x.released):""}` : esc((x.genres||[]).join(" · "));
+  return `<div class="p"><a href="${esc(x.url)}" target="_blank" rel="noreferrer"><span class="im" style="background:${grad(x.title)}">${imgTag(x.image)}<span class="mcpos">${mcBadge(x.score,"sm")}</span></span></a>${mcBk(tab, year, i, x)}
+    <div class="t clip" title="${esc(x.title)}"><a href="${esc(x.url)}" target="_blank" rel="noreferrer">${esc(x.title)}</a></div><div class="s2">${sub}</div></div>`;
+}
+// řady pro Novinky
+function mcNewsShelves(){
+  if(!S.mc) return "";
+  const year = Math.max(...Object.keys(S.mc.years).map(Number));
+  return MC_TABS.map(([tab,label])=>{
+    const list = mcList(year, tab).slice(0,10);
+    if(!list.length) return "";
+    return `<section class="shelf"><h3>Kritici doporučují: ${label.toLowerCase()} <small>Metacritic · nejlépe hodnocené ${year}</small><button class="more" data-gomc="${tab}">Celý žebříček ›</button></h3>
+      <div class="srow">${list.map((x,i)=>`<div class="rk"><em>${i+1}</em>${mcPoster(tab, year, i, x)}</div>`).join("")}</div></section>`;
+  }).join("");
+}
+function viewMetacritic(){
+  if(!S.mc) return `<div class="pagetop"></div>${statusNote(S.mcStatus, "žebříčky Metacritic")}`;
+  const years = Object.keys(S.mc.years).map(Number).sort((a,b)=>b-a);
+  const year = S.mcYear || years[0], tab = S.mcTab;
+  const list = mcList(year, tab);
+  const top = list[0];
+  let html = top ? heroHtml({short:true, img:top.image, blur:true, cover:top.image,
+      kick:`${icon("crown")} Nejlépe hodnocené roku ${year} · ${MC_TABS.find(t=>t[0]===tab)[1].toLowerCase()}`, title:top.title, href:top.url,
+      meta: metaJoin([mcBadge(top.score), `<b>${MC_SENT[top.sentiment]||esc(top.sentiment||"")}</b>`, `${top.reviews} recenzí`, tab==="games"?mcPlats(top):esc((top.genres||[]).join(" · ")), czDate(top.released)]),
+      desc: top.desc ? esc(top.desc)+(top.desc.length>=260?"…":"") : "",
+      btns: heroBkBtn("mcbk", `${year}|${tab}|0`, inBacklog(top.title, mcCat(tab))) + heroLink(top.url, `${icon("arrow-up-right")} Metacritic`)}) : `<div class="pagetop"></div>`;
+  html += `<div class="fbar">
+    <div class="seg">${MC_TABS.map(([k,l])=>`<button class="${tab===k?"on":""}" data-mctab="${k}">${l}</button>`).join("")}</div>
+    <div class="seg">${years.map(y=>`<button class="${year===y?"on":""}" data-mcyear="${y}">${y}</button>`).join("")}</div>
+    <span class="fcount">${list.length} titulů s Metascore ${S.mc.minScore||85}+ · zdroj: metacritic.com</span></div>`;
+  if(!list.length) return html + `<div class="empty">Pro tenhle rok zatím nic s Metascore ${S.mc.minScore||85}+.</div>`;
+  html += `<div class="chart">${list.map((x,i)=>{
+    const tot = (x.positive||0)+(x.mixed||0)+(x.negative||0) || 1;
+    const st = tab==="games" ? mcSteam(x) : null;
+    const inList = inBacklog(x.title, mcCat(tab));
+    return `<div class="ch ${i<3?"top3":""}"><span class="pos">${i+1}</span>
+      <a class="cimg" href="${esc(x.url)}" target="_blank" rel="noreferrer" style="background:${grad(x.title)}">${imgTag(x.image)}</a>
+      <div style="min-width:0"><b class="clip" title="${esc(x.title)}"><a href="${esc(x.url)}" target="_blank" rel="noreferrer">${esc(x.title)}</a></b>
+        <small class="clip">${tab==="games"&&x.platforms.length?mcPlats(x)+" · ":""}${esc((x.genres||[]).join(" · "))}${x.released?" · "+czDate(x.released):""}</small>
+        ${inList||st?`<div class="tags">${inList?'<span class="inlist">V MÉM SEZNAMU</span>':""}${st?`<span class="tag">Steam ${st.rating} %${st.price?" · "+esc(st.price):""}</span>`:""}</div>`:""}</div>
+      <div class="xx"><div class="sbar" title="${x.positive} kladných · ${x.mixed} smíšených · ${x.negative} záporných"><i class="pp" style="width:${x.positive/tot*100}%"></i><i class="nn" style="width:${x.mixed/tot*100}%"></i><i class="ng" style="width:${x.negative/tot*100}%"></i></div>
+        <div class="sent">${MC_SENT[x.sentiment]||esc(x.sentiment||"")} · ${x.reviews} recenzí</div></div>
+      <div class="xx ext"><span>${usBadge(x.userScore)} ${tab==="games"?"hráči":"diváci"}</span></div>
+      ${mcBadge(x.score,"lg")}${mcBk(tab, year, i, x)}</div>`;
+  }).join("")}</div>`;
+  return html;
+}
+
 function viewBacklog(){
   const byRarity=(a,b)=>rarityRank(b.rating)-rarityRank(a.rating) || (b.rating??-1)-(a.rating??-1);
   const books=backlogByCategory("book").sort(byRarity), comics=backlogByCategory("comic").sort(byRarity), movies=backlogByCategory("movie").sort(byRarity), games=backlogByCategory("game").sort(byRarity);
@@ -1637,8 +1762,8 @@ function viewBacklog(){
 
 function render(){
   const xp=diaryTotalXP(), lvl=Math.floor(xp/500)+1, cur=xp%500;
-  const NAV=[["news","Novinky","bolt"],["movies","Filmy a seriály","film"],["steam","Hry","game"],["list","Knihy","books"],["coming","Očekávané","calendar"],["backlog","Můj seznam","sword"]];
-  document.getElementById("nav").innerHTML = NAV.map(([v,t,ic])=>`<button class="tab ${S.view===v?'on':''}" data-view="${v}" title="${t}">${icon(ic)}<span class="lb">${t}</span>${v==="backlog"&&S.backlog.length?`<span class="cnt">${S.backlog.length}</span>`:""}</button>`).join("");
+  const NAV=[["news","Novinky","bolt","Novinky"],["movies","Filmy a seriály","film","Filmy"],["steam","Hry","game","Hry"],["list","Knihy","books","Knihy"],["metacritic","Metacritic","crown","Metacritic"],["coming","Očekávané","calendar","Brzy"],["backlog","Můj seznam","sword","Seznam"]];
+  document.getElementById("nav").innerHTML = NAV.map(([v,t,ic,short])=>`<button class="tab ${S.view===v?'on':''}" data-view="${v}" title="${t}">${icon(ic)}<span class="lb">${t}</span><span class="lbs">${short}</span>${v==="backlog"&&S.backlog.length?`<span class="cnt">${S.backlog.length}</span>`:""}</button>`).join("");
   const diaryBtnEl=document.getElementById("diary-btn");
   if(diaryBtnEl){
     diaryBtnEl.classList.toggle("on", S.view==="diary");
@@ -1659,6 +1784,7 @@ function render(){
   let html;
   if(S.view==="news") html = viewNews();
   else if(S.view==="coming") html = viewComing();
+  else if(S.view==="metacritic") html = viewMetacritic();
   else if(S.view==="movies") html = viewMovies();
   else if(S.view==="steam") html = viewSteam();
   else if(S.view==="backlog") html = viewBacklog();
@@ -1693,7 +1819,7 @@ function render(){
   // zachovat fokus a kurzor ve vyhledávání při přerenderování
   if(active){ const el=document.getElementById(active.id); if(el){ el.focus(); try{ if(active.pos!=null) el.setSelectionRange(active.pos,active.pos); }catch(e){} } }
 
-  const upd = S.view==="movies"?S.moviesUpdatedAt:S.view==="steam"?S.gamesUpdatedAt:S.view==="list"?S.updatedAt:S.view==="coming"?S.comingUpdatedAt:S.newsUpdatedAt;
+  const upd = S.view==="movies"?S.moviesUpdatedAt:S.view==="steam"?S.gamesUpdatedAt:S.view==="list"?S.updatedAt:S.view==="coming"?S.comingUpdatedAt:S.view==="metacritic"?S.mcUpdatedAt:S.newsUpdatedAt;
   document.getElementById("foot").innerHTML = `<span>Data: Kosmas · Dobrovský · CREW · databazeknih.cz · ČSFD · Steam · HowLongToBeat · Můj seznam se synchronizuje přes GitHub</span>${upd?`<span>aktualizováno ${relTime(upd)}</span>`:""}`;
   enhanceRows();
   hydrateCovers();
@@ -1998,6 +2124,7 @@ function goView(v){ if(!VALID_VIEWS.has(v)) return; S.view=v; S.expanded=null; l
   else if(v==="movies" && S.moviesStatus==="idle"){ loadMovies(); }
   else if(v==="news" && S.newsStatus==="idle"){ loadNews(); }
   else if(v==="coming" && S.comingStatus==="idle"){ loadComing(); }
+  else if(v==="metacritic"){ if(S.mcStatus==="idle") loadMetacritic(); else render(); if(S.gamesStatus==="idle") loadGames(); }
   else if(v==="list"){ if(S.status==="idle") load(); else render(); if(S.comicsStatus==="idle") loadComics(); }
   else { render(); }
 }
@@ -2008,6 +2135,10 @@ document.getElementById("view").onclick=e=>{
   if(e.target.dataset.closemodal){ S.expanded=null; render(); return; }
   const sd=e.target.dataset.sdir; if(sd){ const row=e.target.parentElement.querySelector(".srow"); row.scrollBy({left:+sd*Math.max(200,row.clientWidth*0.85), behavior:"smooth"}); return; }
   const gv=e.target.dataset.goview; if(gv){ goView(gv); return; }
+  const gmc=e.target.dataset.gomc; if(gmc){ S.mcTab=gmc; S.mcYear=null; if(S.mc) S.mcYear=Math.max(...Object.keys(S.mc.years).map(Number)); goView("metacritic"); return; }
+  const mct=e.target.dataset.mctab; if(mct){ S.mcTab=mct; render(); return; }
+  const mcy=e.target.dataset.mcyear; if(mcy){ S.mcYear=+mcy; render(); return; }
+  const mcb=e.target.dataset.mcbk; if(mcb){ addFromMetacritic(mcb); return; }
   const cf=e.target.dataset.comingf; if(cf){ S.comingFilter=cf; render(); return; }
   const f=e.target.dataset.filter; if(f){S.filter=f; render(); return;}
   const bg=e.target.dataset.bgenre; if(bg){S.bookGenre=bg; render(); return;}
@@ -2042,6 +2173,7 @@ document.getElementById("view").onclick=e=>{
 
 document.addEventListener("keydown",e=>{ if(e.key==="Escape" && S.expanded){ S.expanded=null; render(); } });
 loadNews();
+loadMetacritic();
 loadGamePass();
 loadHLTB();
 loadHwCompare();
@@ -2052,6 +2184,7 @@ syncProgress();
 if(S.view==="steam") loadGames();
 else if(S.view==="movies") loadMovies();
 else if(S.view==="coming") loadComing();
+else if(S.view==="metacritic") loadGames();
 else if(S.view==="list"){ load(); loadComics(); }
 else if(S.view==="diary"){ load(); loadComics(); loadMovies(); loadGames(); }
 </script>
