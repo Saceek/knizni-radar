@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-11T03:16:13.519Z",
+  "updatedAt": "2026-10-11T04:16:43.343Z",
   "games": [
     {
       "title": "RuneScape: Dragonwilds",
@@ -84,18 +84,6 @@
       "cpu": "Intel Core i7-11800 / AMD Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Geforce RTX 2080 / Radeon RX 6600 XT, Intel Core i7-11800 / AMD Ryzen 5 5600X"
-    },
-    {
-      "title": "Gears of War: E-Day",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 5060 / NVIDIA GeForce RTX 3060ti / AMD Radeon RX 6700 XT / Radeon RX 9060 XT",
-      "cpu": "AMD Ryzen 5 5600 / Intel i5-11600K",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 5060 / NVIDIA GeForce RTX 3060ti / AMD Radeon RX 6700 XT / Radeon RX 9060 XT, AMD Ryzen 5 5600 / Intel i5-11600K"
     },
     {
       "title": "Graveyard Keeper 2",
@@ -386,18 +374,6 @@
       "note": "Minimální konfigurace: 512 MB VRAM, 2.0 GHz"
     },
     {
-      "title": "Woodo",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "AMD Radeon RX 5600 XT / NVIDIA GeForce RTX 2060",
-      "cpu": "AMD Ryzen 5 5600X / Intel Core i5-12400F",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: AMD Radeon RX 5600 XT / NVIDIA GeForce RTX 2060, AMD Ryzen 5 5600X / Intel Core i5-12400F"
-    },
-    {
       "title": "Order of the Sinking Star",
       "tier": "orange",
       "tiers": {
@@ -408,6 +384,18 @@
       "cpu": "Intel Core i5-9600K or AMD Ryzen R5 3600 processor",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 2070 Ti or AMD Radeon RX 5700 or Intel Arc B570, Intel Core i5-9600K or AMD Ryzen R5 3600 processor"
+    },
+    {
+      "title": "Woodo",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "AMD Radeon RX 5600 XT / NVIDIA GeForce RTX 2060",
+      "cpu": "AMD Ryzen 5 5600X / Intel Core i5-12400F",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: AMD Radeon RX 5600 XT / NVIDIA GeForce RTX 2060, AMD Ryzen 5 5600X / Intel Core i5-12400F"
     },
     {
       "title": "DinoBones: Tidy Up the Museum",
@@ -422,18 +410,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
     },
     {
-      "title": "OpenFront",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Graphics: DirectX 11 compatible",
-      "cpu": "Processor: Dual-core 2.0 GHz or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Graphics: DirectX 11 compatible, Processor: Dual-core 2.0 GHz or equivalent"
-    },
-    {
       "title": "CPM 2",
       "tier": "green",
       "tiers": {
@@ -446,16 +422,16 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 / RTX 3050 or better (4+ GB), Intel Core i5-13400F / AMD Ryzen 5 7500F (6+ cores)"
     },
     {
-      "title": "R.I.P. - Reincarnation Insurance Program",
-      "tier": "orange",
+      "title": "OpenFront",
+      "tier": "green",
       "tiers": {
-        "allyx": "orange",
+        "allyx": "green",
         "pc": "green"
       },
-      "gpu": "NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT",
-      "cpu": "Intel Core i7-10700 / AMD Ryzen 7 3700X",
+      "gpu": "Graphics: DirectX 11 compatible",
+      "cpu": "Processor: Dual-core 2.0 GHz or equivalent",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i7-10700 / AMD Ryzen 7 3700X"
+      "note": "Doporučená konfigurace: Graphics: DirectX 11 compatible, Processor: Dual-core 2.0 GHz or equivalent"
     },
     {
       "title": "Slow Roads",
@@ -626,6 +602,18 @@
       "note": "Doporučená konfigurace: OpenGL 4.2+"
     },
     {
+      "title": "Silver Pines",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NIVIDIA GeForce GTX 770, AMD Radeon R9 380",
+      "cpu": "Intel Core i5-6600 or AMD Ryzen 5 1600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NIVIDIA GeForce GTX 770, AMD Radeon R9 380, Intel Core i5-6600 or AMD Ryzen 5 1600"
+    },
+    {
       "title": "Permafrost",
       "tier": "red",
       "tiers": {
@@ -660,18 +648,6 @@
       "cpu": "Dual-core CPU, 2 GHz (Intel Core i3-2100 / AMD FX-4100 or equivalent)",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Any GPU with 512 MB VRAM and DX10/11 feature-set (Intel HD 3000+, NVIDIA GT 710, AMD HD 6450, etc.), Dual-core CPU, 2 GHz (Intel Core i3-2100 / AMD FX-4100 or equivalent)"
-    },
-    {
-      "title": "Silver Pines",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NIVIDIA GeForce GTX 770, AMD Radeon R9 380",
-      "cpu": "Intel Core i5-6600 or AMD Ryzen 5 1600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NIVIDIA GeForce GTX 770, AMD Radeon R9 380, Intel Core i5-6600 or AMD Ryzen 5 1600"
     },
     {
       "title": "Apocalypter",
@@ -770,18 +746,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
-      "title": "Tidy Up History",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVidia GeForce GTX 1050",
-      "cpu": "Intel i5-2500 3.3GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVidia GeForce GTX 1050, Intel i5-2500 3.3GHz"
-    },
-    {
       "title": "Wand & Order: Tidy up the magic shop!",
       "tier": "green",
       "tiers": {
@@ -792,6 +756,18 @@
       "cpu": "Intel i3 / AMD FX series or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia 1060/AMD equivalent, Intel i3 / AMD FX series or equivalent"
+    },
+    {
+      "title": "Tidy Up History",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVidia GeForce GTX 1050",
+      "cpu": "Intel i5-2500 3.3GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVidia GeForce GTX 1050, Intel i5-2500 3.3GHz"
     },
     {
       "title": "Scapewatch: Idle MMO",
@@ -1610,6 +1586,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
     },
     {
+      "title": "Hood Warfare 2",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, RTX 4060 8 GB",
+      "cpu": "Intel Core i5-12600K or AMD Ryzen 5 7600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 Ti, RTX 4060 8 GB, Intel Core i5-12600K or AMD Ryzen 5 7600"
+    },
+    {
       "title": "BuGarden",
       "tier": "green",
       "tiers": {
@@ -1634,16 +1622,16 @@
       "note": "Doporučená konfigurace: DX10, DX11, DX12 or Vulkan capable GPUs, Intel Core i7 (4th gen or newer) / AMD equivalent"
     },
     {
-      "title": "Hood Warfare 2",
-      "tier": "red",
+      "title": "Babel Legacy",
+      "tier": "green",
       "tiers": {
-        "allyx": "red",
+        "allyx": "green",
         "pc": "green"
       },
-      "gpu": "NVIDIA GeForce RTX 3060 Ti, RTX 4060 8 GB",
-      "cpu": "Intel Core i5-12600K or AMD Ryzen 5 7600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 Ti, RTX 4060 8 GB, Intel Core i5-12600K or AMD Ryzen 5 7600"
+      "gpu": "1GB",
+      "cpu": "Dual Core 2.5 GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: 1GB, Dual Core 2.5 GHz"
     },
     {
       "title": "琉璃烟火-Flame in Glass-",
@@ -1656,18 +1644,6 @@
       "cpu": "Intel Core i5-11500 or better, or equivalent AMD processor",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Intel UHD Graphics 630 or better, or equivalent AMD/NVIDIA graphics, Intel Core i5-11500 or better, or equivalent AMD processor"
-    },
-    {
-      "title": "Babel Legacy",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "1GB",
-      "cpu": "Dual Core 2.5 GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: 1GB, Dual Core 2.5 GHz"
     },
     {
       "title": "Draco and the Seven Scales",
@@ -1884,6 +1860,18 @@
       "cpu": "Intel i7-10700K | AMD Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia RTX 3080 | AMD RX 6800 XT | Intel Arc A770, Intel i7-10700K | AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "Gears of War: E-Day",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 5060 / NVIDIA GeForce RTX 3060ti / AMD Radeon RX 6700 XT / Radeon RX 9060 XT",
+      "cpu": "AMD Ryzen 5 5600 / Intel i5-11600K",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 5060 / NVIDIA GeForce RTX 3060ti / AMD Radeon RX 6700 XT / Radeon RX 9060 XT, AMD Ryzen 5 5600 / Intel i5-11600K"
     }
   ]
 }
