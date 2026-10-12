@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-12T13:16:43.926Z",
+  "updatedAt": "2026-10-12T14:17:36.664Z",
   "games": [
     {
       "title": "Aniimo",
@@ -278,18 +278,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 (VRAM 8GB) or better, AMD Radeon RX 6700XT (VRAM 12GB) or better, Intel Core i7-10700K or better, AMD Ryzen 7 3700X or better"
     },
     {
-      "title": "Well Dweller",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GT 220 (1024 MB), Radeon HD 4650 (1024 VRAM), or equivalent",
-      "cpu": "Intel Pentium E2180 (2 * 2000), AMD Athlon Dual Core 4450e (2 * 2300), or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GT 220 (1024 MB), Radeon HD 4650 (1024 VRAM), or equivalent, Intel Pentium E2180 (2 * 2000), AMD Athlon Dual Core 4450e (2 * 2300), or equivalent"
-    },
-    {
       "title": "Order of the Sinking Star",
       "tier": "orange",
       "tiers": {
@@ -300,6 +288,18 @@
       "cpu": "Intel Core i5-9600K or AMD Ryzen R5 3600 processor",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 2070 Ti or AMD Radeon RX 5700 or Intel Arc B570, Intel Core i5-9600K or AMD Ryzen R5 3600 processor"
+    },
+    {
+      "title": "Well Dweller",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GT 220 (1024 MB), Radeon HD 4650 (1024 VRAM), or equivalent",
+      "cpu": "Intel Pentium E2180 (2 * 2000), AMD Athlon Dual Core 4450e (2 * 2300), or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GT 220 (1024 MB), Radeon HD 4650 (1024 VRAM), or equivalent, Intel Pentium E2180 (2 * 2000), AMD Athlon Dual Core 4450e (2 * 2300), or equivalent"
     },
     {
       "title": "CPM 2",
@@ -446,6 +446,18 @@
       "note": "Doporučená konfigurace: NVidia GeForce GTX 1070, Intel Core i5-6400"
     },
     {
+      "title": "Permafrost",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "Nvidia RTX 3070 Ti 8GB or AMD Radeon RX 6750 XT 12GB",
+      "cpu": "Intel Core i5-12400 or AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia RTX 3070 Ti 8GB or AMD Radeon RX 6750 XT 12GB, Intel Core i5-12400 or AMD Ryzen 5 5600X"
+    },
+    {
       "title": "Denizen",
       "tier": "green",
       "tiers": {
@@ -468,18 +480,6 @@
       "cpu": "Intel Core i5-3550",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce GTX 1060, Intel Core i5-3550"
-    },
-    {
-      "title": "Permafrost",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "Nvidia RTX 3070 Ti 8GB or AMD Radeon RX 6750 XT 12GB",
-      "cpu": "Intel Core i5-12400 or AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia RTX 3070 Ti 8GB or AMD Radeon RX 6750 XT 12GB, Intel Core i5-12400 or AMD Ryzen 5 5600X"
     },
     {
       "title": "Bunker Tidy Up",
@@ -614,18 +614,6 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 TI or AMD equivalent, +3 GHZ octa core processor"
     },
     {
-      "title": "It's Fine",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Any GPU with 512 MB VRAM and DX10/11 feature-set (Intel HD 3000+, NVIDIA GT 710, AMD HD 6450, etc.)",
-      "cpu": "Dual-core CPU, 2 GHz (Intel Core i3-2100 / AMD FX-4100 or equivalent)",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Any GPU with 512 MB VRAM and DX10/11 feature-set (Intel HD 3000+, NVIDIA GT 710, AMD HD 6450, etc.), Dual-core CPU, 2 GHz (Intel Core i3-2100 / AMD FX-4100 or equivalent)"
-    },
-    {
       "title": "I Know a Guy: Shady Life Simulator",
       "tier": "orange",
       "tiers": {
@@ -636,6 +624,18 @@
       "cpu": "AMD Ryzen 5 3600 or Intel Core i5-10400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia RTX 2060 or AMD Radeon RX 6600, AMD Ryzen 5 3600 or Intel Core i5-10400"
+    },
+    {
+      "title": "It's Fine",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Any GPU with 512 MB VRAM and DX10/11 feature-set (Intel HD 3000+, NVIDIA GT 710, AMD HD 6450, etc.)",
+      "cpu": "Dual-core CPU, 2 GHz (Intel Core i3-2100 / AMD FX-4100 or equivalent)",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Any GPU with 512 MB VRAM and DX10/11 feature-set (Intel HD 3000+, NVIDIA GT 710, AMD HD 6450, etc.), Dual-core CPU, 2 GHz (Intel Core i3-2100 / AMD FX-4100 or equivalent)"
     },
     {
       "title": "Parisian Bistro Simulator",
@@ -698,18 +698,6 @@
       "note": "Minimální konfigurace: DirectX 9/OpenGL 4.1 capable GPU, Intel Core2 Duo or better"
     },
     {
-      "title": "Rivage",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA RTX 3060 12 GB / AMD RX 6700 XT",
-      "cpu": "Intel Core i5-11400F / AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 3060 12 GB / AMD RX 6700 XT, Intel Core i5-11400F / AMD Ryzen 5 5600X"
-    },
-    {
       "title": "Game Keeper: Somebody Messed Up My Shop!",
       "tier": "orange",
       "tiers": {
@@ -720,6 +708,18 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Rivage",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA RTX 3060 12 GB / AMD RX 6700 XT",
+      "cpu": "Intel Core i5-11400F / AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 3060 12 GB / AMD RX 6700 XT, Intel Core i5-11400F / AMD Ryzen 5 5600X"
     },
     {
       "title": "Wand & Order: Tidy up the magic shop!",
@@ -768,18 +768,6 @@
       "cpu": null,
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia Geforce GTX 1080Ti"
-    },
-    {
-      "title": "Train Sim World® 7 ",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 2060 6 GB or AMD Radeon RX 5700 with 8 GB VRAM or more",
-      "cpu": "Intel Core i5-9600K @ 3.7 GHz or AMD Ryzen 5 3600 @ 3.6 GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 6 GB or AMD Radeon RX 5700 with 8 GB VRAM or more, Intel Core i5-9600K @ 3.7 GHz or AMD Ryzen 5 3600 @ 3.6 GHz"
     },
     {
       "title": "Tasty Chef",
@@ -1262,18 +1250,6 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 660, Intel Core i3 3000 or later"
     },
     {
-      "title": "HOPE 01",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Most GFX Cards",
-      "cpu": "AMD Ryzen 5 5600X, Ryzen 5 7600, or Intel Core i5-12400 / 13400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Most GFX Cards, AMD Ryzen 5 5600X, Ryzen 5 7600, or Intel Core i5-12400 / 13400"
-    },
-    {
       "title": "Glider Sim Deluxe – Soaring Simulator",
       "tier": "green",
       "tiers": {
@@ -1680,6 +1656,18 @@
       "cpu": "Intel Core™ i5-10600K Processor or higher",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 (6GB VRAM) or AMD equivalent, Intel Core™ i5-10600K Processor or higher"
+    },
+    {
+      "title": "Truckful",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "3GB VRAM (GeForce GTX 1060 and above)",
+      "cpu": "Requires a 64-bit processor and operating system",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 3GB VRAM (GeForce GTX 1060 and above), Requires a 64-bit processor and operating system"
     },
     {
       "title": "The Incident at Galley House",
