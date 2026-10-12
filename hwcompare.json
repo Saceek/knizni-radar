@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-12T04:17:05.659Z",
+  "updatedAt": "2026-10-12T05:17:06.067Z",
   "games": [
     {
       "title": "Aniimo",
@@ -506,18 +506,6 @@
       "note": "Doporučená konfigurace: Nvidia RTX 3070 Ti 8GB or AMD Radeon RX 6750 XT 12GB, Intel Core i5-12400 or AMD Ryzen 5 5600X"
     },
     {
-      "title": "Kingdom Rush 6: Genesis TD",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel UHD 600",
-      "cpu": "Quad Core CPU",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel UHD 600, Quad Core CPU"
-    },
-    {
       "title": "Car Park Capital",
       "tier": "green",
       "tiers": {
@@ -528,6 +516,18 @@
       "cpu": null,
       "usedMinimum": false,
       "note": "Doporučená konfigurace: OpenGL 4.2+"
+    },
+    {
+      "title": "Kingdom Rush 6: Genesis TD",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel UHD 600",
+      "cpu": "Quad Core CPU",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel UHD 600, Quad Core CPU"
     },
     {
       "title": "The Guild 1 Remake: Europa 1410",
@@ -842,6 +842,18 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 2060, Intel Core i7-12700H"
     },
     {
+      "title": "Invokyr",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GeForce RTX 3060 Or AMD Radeon RX 6600 XT",
+      "cpu": "Intel Core i5-11500 Or AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 Or AMD Radeon RX 6600 XT, Intel Core i5-11500 Or AMD Ryzen 5 5600X"
+    },
+    {
       "title": "Paver: Tidy Up Together",
       "tier": "green",
       "tiers": {
@@ -864,18 +876,6 @@
       "cpu": "Intel i5-8500/AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia RTX 2060/AMD RX 5060 XT, Intel i5-8500/AMD Ryzen 5 2600"
-    },
-    {
-      "title": "Invokyr",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "Nvidia GeForce RTX 3060 Or AMD Radeon RX 6600 XT",
-      "cpu": "Intel Core i5-11500 Or AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 Or AMD Radeon RX 6600 XT, Intel Core i5-11500 Or AMD Ryzen 5 5600X"
     },
     {
       "title": "RetroSpace",
@@ -1070,18 +1070,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060(3GB) / AMD Radeon RX570(4GB), Intel Core i7-4770K / AMD Ryzen 5 1600"
     },
     {
-      "title": "Duckoleon",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Radeon RX 5500 XT OC 8G or Nvidia GTX 1660",
-      "cpu": "AMD Ryzen 5 3600 6-Core 3.60 GHz or Intel Core i5-9600K 6-Core 3.7 GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Radeon RX 5500 XT OC 8G or Nvidia GTX 1660, AMD Ryzen 5 3600 6-Core 3.60 GHz or Intel Core i5-9600K 6-Core 3.7 GHz"
-    },
-    {
       "title": "Songs of Glimmerwick",
       "tier": "green",
       "tiers": {
@@ -1094,16 +1082,16 @@
       "note": "Minimální konfigurace: Geforce 9600 GS, Radeon HD4000, Shader Model 3.0, 512 MB, Dual-core processor (Intel Dual Core 2.0 GHz or AMD Athlon X2 5200+ 2.6 GHz)"
     },
     {
-      "title": "Hood Warfare 2",
-      "tier": "red",
+      "title": "Duckoleon",
+      "tier": "green",
       "tiers": {
-        "allyx": "red",
+        "allyx": "green",
         "pc": "green"
       },
-      "gpu": "NVIDIA GeForce RTX 3060 Ti, RTX 4060 8 GB",
-      "cpu": "Intel Core i5-12600K or AMD Ryzen 5 7600",
+      "gpu": "Radeon RX 5500 XT OC 8G or Nvidia GTX 1660",
+      "cpu": "AMD Ryzen 5 3600 6-Core 3.60 GHz or Intel Core i5-9600K 6-Core 3.7 GHz",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 Ti, RTX 4060 8 GB, Intel Core i5-12600K or AMD Ryzen 5 7600"
+      "note": "Doporučená konfigurace: Radeon RX 5500 XT OC 8G or Nvidia GTX 1660, AMD Ryzen 5 3600 6-Core 3.60 GHz or Intel Core i5-9600K 6-Core 3.7 GHz"
     },
     {
       "title": "The Bell Echoes",
@@ -1116,6 +1104,18 @@
       "cpu": "Intel Core i5+",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 750, Intel Core i5+"
+    },
+    {
+      "title": "Hood Warfare 2",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, RTX 4060 8 GB",
+      "cpu": "Intel Core i5-12600K or AMD Ryzen 5 7600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 Ti, RTX 4060 8 GB, Intel Core i5-12600K or AMD Ryzen 5 7600"
     },
     {
       "title": "Kernel Hearts",
@@ -1418,18 +1418,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
-      "title": "Nightwater",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "Nvidia RTX 2070﻿ or RX 5700, or equivalent performance &amp; VRAM",
-      "cpu": "Ryzen 5 5600X﻿ or ﻿i5-12400 ﻿or equivalent performance, 6 physical cores minimum",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia RTX 2070﻿ or RX 5700, or equivalent performance &amp; VRAM, Ryzen 5 5600X﻿ or ﻿i5-12400 ﻿or equivalent performance, 6 physical cores minimum"
-    },
-    {
       "title": "Needle In A Haystack",
       "tier": "green",
       "tiers": {
@@ -1440,6 +1428,18 @@
       "cpu": "Intel Core i7-3770 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 or equivalent, Intel Core i7-3770 or equivalent"
+    },
+    {
+      "title": "Nightwater",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "Nvidia RTX 2070﻿ or RX 5700, or equivalent performance &amp; VRAM",
+      "cpu": "Ryzen 5 5600X﻿ or ﻿i5-12400 ﻿or equivalent performance, 6 physical cores minimum",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia RTX 2070﻿ or RX 5700, or equivalent performance &amp; VRAM, Ryzen 5 5600X﻿ or ﻿i5-12400 ﻿or equivalent performance, 6 physical cores minimum"
     },
     {
       "title": "Cyberfrags '69",
