@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-11T23:17:00.029Z",
+  "updatedAt": "2026-10-12T00:17:16.767Z",
   "games": [
     {
       "title": "Aniimo",
@@ -494,18 +494,6 @@
       "note": "Doporučená konfigurace: NIVIDIA GeForce GTX 770, AMD Radeon R9 380, Intel Core i5-6600 or AMD Ryzen 5 1600"
     },
     {
-      "title": "Kingdom Rush 6: Genesis TD",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel UHD 600",
-      "cpu": "Quad Core CPU",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel UHD 600, Quad Core CPU"
-    },
-    {
       "title": "Permafrost",
       "tier": "red",
       "tiers": {
@@ -518,16 +506,16 @@
       "note": "Doporučená konfigurace: Nvidia RTX 3070 Ti 8GB or AMD Radeon RX 6750 XT 12GB, Intel Core i5-12400 or AMD Ryzen 5 5600X"
     },
     {
-      "title": "The Guild 1 Remake: Europa 1410",
-      "tier": "red",
+      "title": "Kingdom Rush 6: Genesis TD",
+      "tier": "green",
       "tiers": {
-        "allyx": "red",
-        "pc": "orange"
+        "allyx": "green",
+        "pc": "green"
       },
-      "gpu": "NVIDIA GeForce RTX 4070 / AMD Radeon RX 7800 XT",
-      "cpu": "Intel Core i7-12700k / AMD Ryzen 7 5800X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4070 / AMD Radeon RX 7800 XT, Intel Core i7-12700k / AMD Ryzen 7 5800X"
+      "gpu": "Intel UHD 600",
+      "cpu": "Quad Core CPU",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel UHD 600, Quad Core CPU"
     },
     {
       "title": "Car Park Capital",
@@ -540,6 +528,18 @@
       "cpu": null,
       "usedMinimum": false,
       "note": "Doporučená konfigurace: OpenGL 4.2+"
+    },
+    {
+      "title": "The Guild 1 Remake: Europa 1410",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "orange"
+      },
+      "gpu": "NVIDIA GeForce RTX 4070 / AMD Radeon RX 7800 XT",
+      "cpu": "Intel Core i7-12700k / AMD Ryzen 7 5800X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4070 / AMD Radeon RX 7800 XT, Intel Core i7-12700k / AMD Ryzen 7 5800X"
     },
     {
       "title": "Toy Shire",
@@ -1394,18 +1394,6 @@
       "note": "Doporučená konfigurace: GeForce RTX 3060 / Radeon RX 6600 XT, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
-      "title": "Tidy Up the Flower Shop",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10400 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "HIROTONFA’s American Revolution Smuggler",
       "tier": "green",
       "tiers": {
@@ -1416,6 +1404,18 @@
       "cpu": "Intel Core i3-4340 or better processor",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Compatible OpenGL / VRAM 1GB or better, Intel Core i3-4340 or better processor"
+    },
+    {
+      "title": "Tidy Up the Flower Shop",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "Nightwater",
@@ -1680,6 +1680,18 @@
       "cpu": "Intel i5或同级别",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: 2GB RAM, Intel i5或同级别"
+    },
+    {
+      "title": "LOST & FOUND - Oddělení ztrát a nálezů",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 470 or AMD Radeon 6870 HD series card or higher",
+      "cpu": "Quad-core Intel or AMD, 2.5 GHz or faster",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 470 or AMD Radeon 6870 HD series card or higher, Quad-core Intel or AMD, 2.5 GHz or faster"
     },
     {
       "title": "DEATH PENALTY",
