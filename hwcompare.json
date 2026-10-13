@@ -1,6 +1,18 @@
 {
-  "updatedAt": "2026-10-13T16:09:31.842Z",
+  "updatedAt": "2026-10-13T17:09:55.339Z",
   "games": [
+    {
+      "title": "Voodoo Fishin'",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060 or AMD Radeon RX 6700 XT (8-12GB VRAM)",
+      "cpu": "Intel Core i7-9700K or AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 or AMD Radeon RX 6700 XT (8-12GB VRAM), Intel Core i7-9700K or AMD Ryzen 5 5600X"
+    },
     {
       "title": "Blockmind",
       "tier": "green",
