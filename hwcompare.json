@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-13T00:16:45.103Z",
+  "updatedAt": "2026-10-13T01:16:29.884Z",
   "games": [
     {
       "title": "Dressmaker",
@@ -158,18 +158,6 @@
       "note": "Doporučená konfigurace: AMD Radeon RX 6600 XT, NVIDIA RTX 3060, AMD Ryzen 5 5600X, Intel Core i5-12400F"
     },
     {
-      "title": "ENDLESS Legend™ 2",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA® GeForce® GTX 1070 (8 GB) / AMD® Radeon™ RX 5700 XT (8 GB)",
-      "cpu": "Intel® Core™ i7-6700 (quad-core) / AMD® Ryzen™ 5 1500X (quad-core)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 1070 (8 GB) / AMD® Radeon™ RX 5700 XT (8 GB), Intel® Core™ i7-6700 (quad-core) / AMD® Ryzen™ 5 1500X (quad-core)"
-    },
-    {
       "title": "SILENT HILL: Townfall",
       "tier": "red",
       "tiers": {
@@ -180,6 +168,18 @@
       "cpu": "AMD Ryzen 7 5700X / Intel i7-9700K",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3080 / AMD Radeon RX 7800 XT, AMD Ryzen 7 5700X / Intel i7-9700K"
+    },
+    {
+      "title": "ENDLESS Legend™ 2",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA® GeForce® GTX 1070 (8 GB) / AMD® Radeon™ RX 5700 XT (8 GB)",
+      "cpu": "Intel® Core™ i7-6700 (quad-core) / AMD® Ryzen™ 5 1500X (quad-core)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 1070 (8 GB) / AMD® Radeon™ RX 5700 XT (8 GB), Intel® Core™ i7-6700 (quad-core) / AMD® Ryzen™ 5 1500X (quad-core)"
     },
     {
       "title": "Trails in the Sky 2nd Chapter",
@@ -362,18 +362,6 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 260, ATI Radeon 4870, 1.7 GHz Dual Core CPU"
     },
     {
-      "title": "Woodo",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "AMD Radeon RX 5600 XT / NVIDIA GeForce RTX 2060",
-      "cpu": "AMD Ryzen 5 5600X / Intel Core i5-12400F",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: AMD Radeon RX 5600 XT / NVIDIA GeForce RTX 2060, AMD Ryzen 5 5600X / Intel Core i5-12400F"
-    },
-    {
       "title": "Silver Pines",
       "tier": "green",
       "tiers": {
@@ -384,6 +372,18 @@
       "cpu": "Intel Core i5-6600 or AMD Ryzen 5 1600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NIVIDIA GeForce GTX 770, AMD Radeon R9 380, Intel Core i5-6600 or AMD Ryzen 5 1600"
+    },
+    {
+      "title": "Woodo",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "AMD Radeon RX 5600 XT / NVIDIA GeForce RTX 2060",
+      "cpu": "AMD Ryzen 5 5600X / Intel Core i5-12400F",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: AMD Radeon RX 5600 XT / NVIDIA GeForce RTX 2060, AMD Ryzen 5 5600X / Intel Core i5-12400F"
     },
     {
       "title": "Permafrost",
@@ -410,18 +410,6 @@
       "note": "Doporučená konfigurace: Graphics: DirectX 11 compatible, Processor: Dual-core 2.0 GHz or equivalent"
     },
     {
-      "title": "Slow Roads",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel UHD 630, Vega 7",
-      "cpu": "Intel Core i5, 2.2Hz dual core",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel UHD 630, Vega 7, Intel Core i5, 2.2Hz dual core"
-    },
-    {
       "title": "Car Park Capital",
       "tier": "green",
       "tiers": {
@@ -432,6 +420,18 @@
       "cpu": null,
       "usedMinimum": false,
       "note": "Doporučená konfigurace: OpenGL 4.2+"
+    },
+    {
+      "title": "Slow Roads",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel UHD 630, Vega 7",
+      "cpu": "Intel Core i5, 2.2Hz dual core",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel UHD 630, Vega 7, Intel Core i5, 2.2Hz dual core"
     },
     {
       "title": "Superhero Simulator",
@@ -578,6 +578,18 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 750 Ti, Intel i5 Quad-Core"
     },
     {
+      "title": "Hood Warfare 2",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, RTX 4060 8 GB",
+      "cpu": "Intel Core i5-12600K or AMD Ryzen 5 7600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 Ti, RTX 4060 8 GB, Intel Core i5-12600K or AMD Ryzen 5 7600"
+    },
+    {
       "title": "Apocalypter",
       "tier": "orange",
       "tiers": {
@@ -612,18 +624,6 @@
       "cpu": "AMD Ryzen 5 3600 or Intel Core i5-10400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia RTX 2060 or AMD Radeon RX 6600, AMD Ryzen 5 3600 or Intel Core i5-10400"
-    },
-    {
-      "title": "Hood Warfare 2",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 3060 Ti, RTX 4060 8 GB",
-      "cpu": "Intel Core i5-12600K or AMD Ryzen 5 7600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 Ti, RTX 4060 8 GB, Intel Core i5-12600K or AMD Ryzen 5 7600"
     },
     {
       "title": "Parisian Bistro Simulator",
@@ -662,18 +662,6 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1660 SUPER 6GB / AMD Radeon RX Vega 56 8GB, Intel Core i5-8600K / AMD Ryzen 5 1600"
     },
     {
-      "title": "Woman Simulator",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "RTX 3060 / Radeon RX 6600 XT",
-      "cpu": "Intel core i5 / Ryzen 5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 3060 / Radeon RX 6600 XT, Intel core i5 / Ryzen 5"
-    },
-    {
       "title": "Invokyr",
       "tier": "orange",
       "tiers": {
@@ -684,6 +672,18 @@
       "cpu": "Intel Core i5-11500 Or AMD Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 Or AMD Radeon RX 6600 XT, Intel Core i5-11500 Or AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "Woman Simulator",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "RTX 3060 / Radeon RX 6600 XT",
+      "cpu": "Intel core i5 / Ryzen 5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 3060 / Radeon RX 6600 XT, Intel core i5 / Ryzen 5"
     },
     {
       "title": "Game Keeper: Somebody Messed Up My Shop!",
@@ -794,18 +794,6 @@
       "note": "Minimální konfigurace: GeForce GTX 950, Radeon R7 360, or Intel HD Graphics 630, Dual Core 2.4 GHz"
     },
     {
-      "title": "Paver: Tidy Up Together",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1070 | AMD Radeon RX-6600",
-      "cpu": "Intel Core i5-13400F | AMD Ryzen 5 7600x",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1070 | AMD Radeon RX-6600, Intel Core i5-13400F | AMD Ryzen 5 7600x"
-    },
-    {
       "title": "RetroSpace",
       "tier": "green",
       "tiers": {
@@ -816,6 +804,18 @@
       "cpu": "Intel Core i5-11600K or AMD Ryzen 5 5600G",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 or AMD Radeon RX 6600, Intel Core i5-11600K or AMD Ryzen 5 5600G"
+    },
+    {
+      "title": "Paver: Tidy Up Together",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1070 | AMD Radeon RX-6600",
+      "cpu": "Intel Core i5-13400F | AMD Ryzen 5 7600x",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1070 | AMD Radeon RX-6600, Intel Core i5-13400F | AMD Ryzen 5 7600x"
     },
     {
       "title": "Driving Rogue",
@@ -1250,18 +1250,6 @@
       "note": "Doporučená konfigurace: Intel iris Xe / Geforce GTX 750 / AMD Radeon HD 7770, Intel Core i5, AMD Ryzen 5"
     },
     {
-      "title": "CONCRETE BURIAL",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 960 or equivalent",
-      "cpu": "2.9 GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GTX 960 or equivalent, 2.9 GHz"
-    },
-    {
       "title": "Flamecraft",
       "tier": "green",
       "tiers": {
@@ -1272,6 +1260,18 @@
       "cpu": "Intel® Core™ i5-2430M",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 940M, Intel® Core™ i5-2430M"
+    },
+    {
+      "title": "CONCRETE BURIAL",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 960 or equivalent",
+      "cpu": "2.9 GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GTX 960 or equivalent, 2.9 GHz"
     },
     {
       "title": "Birb",
@@ -1454,6 +1454,18 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 2070 / AMD 5700 XT, i5 7600K / Ryzen 5 2600x"
     },
     {
+      "title": "Duo Quest",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1050 / AMD Radeon RX 560",
+      "cpu": "Intel Core i5",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560, Intel Core i5"
+    },
+    {
       "title": "Drop Command",
       "tier": "red",
       "tiers": {
@@ -1488,18 +1500,6 @@
       "cpu": "Intel Core2 Duo or better",
       "usedMinimum": true,
       "note": "Minimální konfigurace: DirectX 9/OpenGL 4.1 capable GPU, Intel Core2 Duo or better"
-    },
-    {
-      "title": "Duo Quest",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1050 / AMD Radeon RX 560",
-      "cpu": "Intel Core i5",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560, Intel Core i5"
     },
     {
       "title": "SiN Reloaded",
