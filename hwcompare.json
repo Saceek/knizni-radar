@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-13T19:15:46.129Z",
+  "updatedAt": "2026-10-13T20:16:51.312Z",
   "games": [
     {
       "title": "Dressmaker",
@@ -398,18 +398,6 @@
       "note": "Doporučená konfigurace: NVidia GeForce GTX 1070, Intel Core i5-6400"
     },
     {
-      "title": "Police Chief Simulator",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 1060",
-      "cpu": "Intel Core i5-3550",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 1060, Intel Core i5-3550"
-    },
-    {
       "title": "Denizen",
       "tier": "green",
       "tiers": {
@@ -782,6 +770,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 3 GB or AMD Radeon RX 580 4 GB, Intel Core i5-6600K or AMD Ryzen 5 1400"
     },
     {
+      "title": "Planet Zoo 2",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3070 (8GB VRAM) / AMD Radeon RX 6700XT (12GB VRAM) / Intel Arc A770 (16GB VRAM)",
+      "cpu": "Intel i7-10700K / AMD Ryzen 7 5800X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3070 (8GB VRAM) / AMD Radeon RX 6700XT (12GB VRAM) / Intel Arc A770 (16GB VRAM), Intel i7-10700K / AMD Ryzen 7 5800X"
+    },
+    {
       "title": "Deskrawl: Idle ARPG",
       "tier": "green",
       "tiers": {
@@ -948,18 +948,6 @@
       "cpu": "Intel Core i7",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / Radeon R9 390X (6GB+ of VRAM), Intel Core i7"
-    },
-    {
-      "title": "Planet Zoo 2",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 3070 (8GB VRAM) / AMD Radeon RX 6700XT (12GB VRAM) / Intel Arc A770 (16GB VRAM)",
-      "cpu": "Intel i7-10700K / AMD Ryzen 7 5800X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3070 (8GB VRAM) / AMD Radeon RX 6700XT (12GB VRAM) / Intel Arc A770 (16GB VRAM), Intel i7-10700K / AMD Ryzen 7 5800X"
     },
     {
       "title": "Land of Glarefall",
@@ -1202,6 +1190,18 @@
       "note": "Doporučená konfigurace: DX10, DX11, and DX12-capable GPUs, 2Ghz or better"
     },
     {
+      "title": "Airport Control 27",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "orange"
+      },
+      "gpu": "Nvidia GeForce RTX 3070, AMD Radeon RX RX 6750 GRE, Intel Arc B580 graphics card or better (min 8GB VRAM, DX12 support)",
+      "cpu": "Intel Core i7-12700, AMD Ryzen 5 9600X, or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce RTX 3070, AMD Radeon RX RX 6750 GRE, Intel Arc B580 graphics card or better (min 8GB VRAM, DX12 support), Intel Core i7-12700, AMD Ryzen 5 9600X, or better"
+    },
+    {
       "title": "Tidy Up the Flower Shop",
       "tier": "orange",
       "tiers": {
@@ -1274,6 +1274,18 @@
       "note": "Doporučená konfigurace: GeForce RTX 3060 / Radeon RX 6600 XT, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
+      "title": "塔防山贼模拟器",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Graphic card with DX10 (Shader-Model 4.0) abilities",
+      "cpu": "Intel Dual-Core 1.6GHz or faster processor",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Graphic card with DX10 (Shader-Model 4.0) abilities, Intel Dual-Core 1.6GHz or faster processor"
+    },
+    {
       "title": "HIROTONFA’s American Revolution Smuggler",
       "tier": "green",
       "tiers": {
@@ -1296,18 +1308,6 @@
       "cpu": "Ryzen 5 5600X﻿ or ﻿i5-12400 ﻿or equivalent performance, 6 physical cores minimum",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia RTX 2070﻿ or RX 5700, or equivalent performance &amp; VRAM, Ryzen 5 5600X﻿ or ﻿i5-12400 ﻿or equivalent performance, 6 physical cores minimum"
-    },
-    {
-      "title": "塔防山贼模拟器",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Graphic card with DX10 (Shader-Model 4.0) abilities",
-      "cpu": "Intel Dual-Core 1.6GHz or faster processor",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Graphic card with DX10 (Shader-Model 4.0) abilities, Intel Dual-Core 1.6GHz or faster processor"
     },
     {
       "title": "Cyberfrags '69",
