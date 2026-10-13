@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-13T21:15:43.892Z",
+  "updatedAt": "2026-10-13T22:15:45.653Z",
   "games": [
     {
       "title": "Dressmaker",
@@ -542,6 +542,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 (6 GB VRAM) / AMD RX 6600 (8 GB VRAM), Intel Core i5-11400 / AMD Ryzen 5 5600X or better"
     },
     {
+      "title": "Planet Zoo 2",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3070 (8GB VRAM) / AMD Radeon RX 6700XT (12GB VRAM) / Intel Arc A770 (16GB VRAM)",
+      "cpu": "Intel i7-10700K / AMD Ryzen 7 5800X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3070 (8GB VRAM) / AMD Radeon RX 6700XT (12GB VRAM) / Intel Arc A770 (16GB VRAM), Intel i7-10700K / AMD Ryzen 7 5800X"
+    },
+    {
       "title": "Meow Squad: Incremental Fishing",
       "tier": "green",
       "tiers": {
@@ -648,18 +660,6 @@
       "cpu": "Any dual-core 2.4 GHz from 2015 or later",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Any GPU with hardware acceleration, Any dual-core 2.4 GHz from 2015 or later"
-    },
-    {
-      "title": "Planet Zoo 2",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 3070 (8GB VRAM) / AMD Radeon RX 6700XT (12GB VRAM) / Intel Arc A770 (16GB VRAM)",
-      "cpu": "Intel i7-10700K / AMD Ryzen 7 5800X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3070 (8GB VRAM) / AMD Radeon RX 6700XT (12GB VRAM) / Intel Arc A770 (16GB VRAM), Intel i7-10700K / AMD Ryzen 7 5800X"
     },
     {
       "title": "Dawson Oaks Trailer Park",
@@ -1070,18 +1070,6 @@
       "note": "Minimální konfigurace: NVIDIA® GeForce® GT 630 (2 GB) / AMD® Radeon™ HD 6670 (2 GB), Intel® Core™ i5-750 (quad-core) / AMD® Phenom™ II X4 965 (quad-core)"
     },
     {
-      "title": "SCREENSIDE FISHER",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 460 or AMD Radeon HD 6850",
-      "cpu": "Intel Core i3 or AMD equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 460 or AMD Radeon HD 6850, Intel Core i3 or AMD equivalent"
-    },
-    {
       "title": "Motorcycle Night Ride",
       "tier": "green",
       "tiers": {
@@ -1092,6 +1080,18 @@
       "cpu": "Intel i3-5400F",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel UHD Graphics 920, Intel i3-5400F"
+    },
+    {
+      "title": "SCREENSIDE FISHER",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 460 or AMD Radeon HD 6850",
+      "cpu": "Intel Core i3 or AMD equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 460 or AMD Radeon HD 6850, Intel Core i3 or AMD equivalent"
     },
     {
       "title": "崇祯直聘：明末官场沉浮模拟器",
@@ -1454,6 +1454,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 6GB / AMD RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
+      "title": "Valor Mortis",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "orange"
+      },
+      "gpu": "RX 6800 / RTX 3070",
+      "cpu": "Ryzen 7 5800X / Core i5-13400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RX 6800 / RTX 3070, Ryzen 7 5800X / Core i5-13400"
+    },
+    {
       "title": "Starlathe",
       "tier": "green",
       "tiers": {
@@ -1490,6 +1502,18 @@
       "note": "Minimální konfigurace: NVIDIA GTX 1060 - AMD RX 580, Intel i5-2500K - AMD FX-6300"
     },
     {
+      "title": "Burn With Me",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "2GB Video Memory",
+      "cpu": "2.5Ghz or better",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: 2GB Video Memory, 2.5Ghz or better"
+    },
+    {
       "title": "琉璃烟火-Flame in Glass-",
       "tier": "green",
       "tiers": {
@@ -1500,6 +1524,18 @@
       "cpu": "Intel Core i5-11500 or better, or equivalent AMD processor",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Intel UHD Graphics 630 or better, or equivalent AMD/NVIDIA graphics, Intel Core i5-11500 or better, or equivalent AMD processor"
+    },
+    {
+      "title": "Sort The Capybaras",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "GeForce RTX 2060",
+      "cpu": "Intel i7 12700K",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 2060, Intel i7 12700K"
     },
     {
       "title": "天衍",
@@ -1538,16 +1574,16 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 (6GB VRAM) or AMD equivalent, Intel Core™ i5-10600K Processor or higher"
     },
     {
-      "title": "Sort The Capybaras",
-      "tier": "orange",
+      "title": "Immortal Dao Idle",
+      "tier": "green",
       "tiers": {
-        "allyx": "orange",
+        "allyx": "green",
         "pc": "green"
       },
-      "gpu": "GeForce RTX 2060",
-      "cpu": "Intel i7 12700K",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 2060, Intel i7 12700K"
+      "gpu": "Integrated graphics with WebGL support",
+      "cpu": "Intel Dual-Core 2.4Ghz or faster processor",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Integrated graphics with WebGL support, Intel Dual-Core 2.4Ghz or faster processor"
     },
     {
       "title": "The Incident at Galley House",
