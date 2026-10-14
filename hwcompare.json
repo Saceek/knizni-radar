@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-14T02:16:18.110Z",
+  "updatedAt": "2026-10-14T03:15:46.560Z",
   "games": [
     {
       "title": "Dressmaker",
@@ -434,18 +434,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 or AMD Radeon RX 6700 XT (8-12GB VRAM), Intel Core i7-9700K or AMD Ryzen 5 5600X"
     },
     {
-      "title": "Toy Shire",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Nvidia GeForce 1050",
-      "cpu": "Intel Core i5",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Nvidia GeForce 1050, Intel Core i5"
-    },
-    {
       "title": "Planet Zoo 2",
       "tier": "red",
       "tiers": {
@@ -456,6 +444,18 @@
       "cpu": "Intel i7-10700K / AMD Ryzen 7 5800X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3070 (8GB VRAM) / AMD Radeon RX 6700XT (12GB VRAM) / Intel Arc A770 (16GB VRAM), Intel i7-10700K / AMD Ryzen 7 5800X"
+    },
+    {
+      "title": "Toy Shire",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GeForce 1050",
+      "cpu": "Intel Core i5",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Nvidia GeForce 1050, Intel Core i5"
     },
     {
       "title": "Sengoku Rance",
@@ -506,6 +506,18 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1070 TI or AMD equivalent, +3 GHZ octa core processor"
     },
     {
+      "title": "Invokyr",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GeForce RTX 3060 Or AMD Radeon RX 6600 XT",
+      "cpu": "Intel Core i5-11500 Or AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 Or AMD Radeon RX 6600 XT, Intel Core i5-11500 Or AMD Ryzen 5 5600X"
+    },
+    {
       "title": "I Know a Guy: Shady Life Simulator",
       "tier": "orange",
       "tiers": {
@@ -528,18 +540,6 @@
       "cpu": "Dual-core CPU, 2 GHz (Intel Core i3-2100 / AMD FX-4100 or equivalent)",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Any GPU with 512 MB VRAM and DX10/11 feature-set (Intel HD 3000+, NVIDIA GT 710, AMD HD 6450, etc.), Dual-core CPU, 2 GHz (Intel Core i3-2100 / AMD FX-4100 or equivalent)"
-    },
-    {
-      "title": "Invokyr",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "Nvidia GeForce RTX 3060 Or AMD Radeon RX 6600 XT",
-      "cpu": "Intel Core i5-11500 Or AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 Or AMD Radeon RX 6600 XT, Intel Core i5-11500 Or AMD Ryzen 5 5600X"
     },
     {
       "title": "Parisian Bistro Simulator",
@@ -578,18 +578,6 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1660 SUPER 6GB / AMD Radeon RX Vega 56 8GB, Intel Core i5-8600K / AMD Ryzen 5 1600"
     },
     {
-      "title": "Game Keeper: Somebody Messed Up My Shop!",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
       "title": "Woman Simulator",
       "tier": "orange",
       "tiers": {
@@ -600,6 +588,18 @@
       "cpu": "Intel core i5 / Ryzen 5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 3060 / Radeon RX 6600 XT, Intel core i5 / Ryzen 5"
+    },
+    {
+      "title": "Game Keeper: Somebody Messed Up My Shop!",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
       "title": "Wand & Order: Tidy up the magic shop!",
@@ -1178,18 +1178,6 @@
       "note": "Doporučená konfigurace: DX10, DX11, and DX12-capable GPUs, 2Ghz or better"
     },
     {
-      "title": "Tidy Up the Flower Shop",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10400 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "Deleted Wiki: Clean Up the Lost Files",
       "tier": "green",
       "tiers": {
@@ -1200,6 +1188,18 @@
       "cpu": "64-bit quad-core",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Any modern GPU, 64-bit quad-core"
+    },
+    {
+      "title": "Tidy Up the Flower Shop",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "Airport Control 27",
@@ -1250,18 +1250,6 @@
       "note": "Minimální konfigurace: Nvidia GeForce GTX970/AMD Radeon R9 390, Intel® Core™ i5-9600/AMD Ryzen 5 2600X"
     },
     {
-      "title": "Nientum - Op.ZERO",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Nvidia GTS 450 | AMD Radeon HD 5750.",
-      "cpu": "Intel Core i3-2120 | AMD FX-4350.",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Nvidia GTS 450 | AMD Radeon HD 5750., Intel Core i3-2120 | AMD FX-4350."
-    },
-    {
       "title": "Let's Tidy Up! : Treasure",
       "tier": "orange",
       "tiers": {
@@ -1272,6 +1260,18 @@
       "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Nientum - Op.ZERO",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GTS 450 | AMD Radeon HD 5750.",
+      "cpu": "Intel Core i3-2120 | AMD FX-4350.",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Nvidia GTS 450 | AMD Radeon HD 5750., Intel Core i3-2120 | AMD FX-4350."
     },
     {
       "title": "Breakout Garage",
@@ -1584,6 +1584,18 @@
       "cpu": "Intel Core i5-6500, AMD Ryzen 3 1200 or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Intel UHD Graphics 620 or equivalent, Intel Core i5-6500, AMD Ryzen 3 1200 or better"
+    },
+    {
+      "title": "Legion Breaker",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GTX 950 | AMD R7 370",
+      "cpu": "AMD Athlon X4 | Intel Core i5 4460",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GTX 950 | AMD R7 370, AMD Athlon X4 | Intel Core i5 4460"
     },
     {
       "title": "Night Record: Thin Walls",
