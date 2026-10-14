@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-14T08:15:44.496Z",
+  "updatedAt": "2026-10-14T08:50:58.668Z",
   "games": [
     {
       "title": "Dressmaker",
@@ -314,18 +314,6 @@
       "note": "Doporučená konfigurace: OpenGL 4.2+"
     },
     {
-      "title": "Slow Roads",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel UHD 630, Vega 7",
-      "cpu": "Intel Core i5, 2.2Hz dual core",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel UHD 630, Vega 7, Intel Core i5, 2.2Hz dual core"
-    },
-    {
       "title": "Planet Zoo 2",
       "tier": "red",
       "tiers": {
@@ -336,6 +324,18 @@
       "cpu": "Intel i7-10700K / AMD Ryzen 7 5800X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3070 (8GB VRAM) / AMD Radeon RX 6700XT (12GB VRAM) / Intel Arc A770 (16GB VRAM), Intel i7-10700K / AMD Ryzen 7 5800X"
+    },
+    {
+      "title": "Slow Roads",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel UHD 630, Vega 7",
+      "cpu": "Intel Core i5, 2.2Hz dual core",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel UHD 630, Vega 7, Intel Core i5, 2.2Hz dual core"
     },
     {
       "title": "Superhero Simulator",
@@ -734,18 +734,6 @@
       "note": "Minimální konfigurace: GTX 750ti, 2-core / 4-thread CPU"
     },
     {
-      "title": "창세기전 외전: 서풍의 광시곡 리마스터",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel UHD Graphics 630",
-      "cpu": "Intel Core i3-8100",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Intel UHD Graphics 630, Intel Core i3-8100"
-    },
-    {
       "title": "Duelant: Nečinná Expedice",
       "tier": "green",
       "tiers": {
@@ -756,6 +744,18 @@
       "cpu": "Intel Core i5 or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Graphics card with DX10, Intel Core i5 or better"
+    },
+    {
+      "title": "창세기전 외전: 서풍의 광시곡 리마스터",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel UHD Graphics 630",
+      "cpu": "Intel Core i3-8100",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Intel UHD Graphics 630, Intel Core i3-8100"
     },
     {
       "title": "PAPERHEAD",
@@ -1034,18 +1034,6 @@
       "note": "Minimální konfigurace: NVIDIA® GeForce® GT 630 (2 GB) / AMD® Radeon™ HD 6670 (2 GB), Intel® Core™ i5-750 (quad-core) / AMD® Phenom™ II X4 965 (quad-core)"
     },
     {
-      "title": "SCREENSIDE FISHER",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 460 or AMD Radeon HD 6850",
-      "cpu": "Intel Core i3 or AMD equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 460 or AMD Radeon HD 6850, Intel Core i3 or AMD equivalent"
-    },
-    {
       "title": "Motorcycle Night Ride",
       "tier": "green",
       "tiers": {
@@ -1056,6 +1044,18 @@
       "cpu": "Intel i3-5400F",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel UHD Graphics 920, Intel i3-5400F"
+    },
+    {
+      "title": "SCREENSIDE FISHER",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 460 or AMD Radeon HD 6850",
+      "cpu": "Intel Core i3 or AMD equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 460 or AMD Radeon HD 6850, Intel Core i3 or AMD equivalent"
     },
     {
       "title": "崇祯直聘：明末官场沉浮模拟器",
@@ -1166,6 +1166,18 @@
       "note": "Doporučená konfigurace: Nvidia GeForce RTX 3070, AMD Radeon RX RX 6750 GRE, Intel Arc B580 graphics card or better (min 8GB VRAM, DX12 support), Intel Core i7-12700, AMD Ryzen 5 9600X, or better"
     },
     {
+      "title": "塔防山贼模拟器",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Graphic card with DX10 (Shader-Model 4.0) abilities",
+      "cpu": "Intel Dual-Core 1.6GHz or faster processor",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Graphic card with DX10 (Shader-Model 4.0) abilities, Intel Dual-Core 1.6GHz or faster processor"
+    },
+    {
       "title": "Babel Legacy",
       "tier": "green",
       "tiers": {
@@ -1178,16 +1190,16 @@
       "note": "Minimální konfigurace: 1GB, Dual Core 2.5 GHz"
     },
     {
-      "title": "塔防山贼模拟器",
-      "tier": "green",
+      "title": "Let's Tidy Up! : Treasure",
+      "tier": "orange",
       "tiers": {
-        "allyx": "green",
+        "allyx": "orange",
         "pc": "green"
       },
-      "gpu": "Graphic card with DX10 (Shader-Model 4.0) abilities",
-      "cpu": "Intel Dual-Core 1.6GHz or faster processor",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Graphic card with DX10 (Shader-Model 4.0) abilities, Intel Dual-Core 1.6GHz or faster processor"
+      "gpu": "NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT",
+      "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
     },
     {
       "title": "Needle In A Haystack",
@@ -1212,18 +1224,6 @@
       "cpu": "Intel® Core™ i5-9600/AMD Ryzen 5 2600X",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Nvidia GeForce GTX970/AMD Radeon R9 390, Intel® Core™ i5-9600/AMD Ryzen 5 2600X"
-    },
-    {
-      "title": "Let's Tidy Up! : Treasure",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT",
-      "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
     },
     {
       "title": "Nientum - Op.ZERO",
@@ -1394,18 +1394,6 @@
       "note": "Doporučená konfigurace: Dedicated graphics with OpenGL 3.3 support, Intel Core i5-6600K, AMD Ryzen 5 1600"
     },
     {
-      "title": "Truckful",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "3GB VRAM (GeForce GTX 1060 and above)",
-      "cpu": "Requires a 64-bit processor and operating system",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: 3GB VRAM (GeForce GTX 1060 and above), Requires a 64-bit processor and operating system"
-    },
-    {
       "title": "Burn With Me",
       "tier": "green",
       "tiers": {
@@ -1416,6 +1404,18 @@
       "cpu": "2.5Ghz or better",
       "usedMinimum": true,
       "note": "Minimální konfigurace: 2GB Video Memory, 2.5Ghz or better"
+    },
+    {
+      "title": "Truckful",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "3GB VRAM (GeForce GTX 1060 and above)",
+      "cpu": "Requires a 64-bit processor and operating system",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 3GB VRAM (GeForce GTX 1060 and above), Requires a 64-bit processor and operating system"
     },
     {
       "title": "Monastery: Ora et Labora",
@@ -1550,6 +1550,18 @@
       "note": "Doporučená konfigurace: 2GB RAM, Intel i5或同级别"
     },
     {
+      "title": "Horns of Deliverance",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1050 Ti or AMD Radeon RX 470",
+      "cpu": "Intel Core i7-4790K or AMD Ryzen 5 1500X",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 1050 Ti or AMD Radeon RX 470, Intel Core i7-4790K or AMD Ryzen 5 1500X"
+    },
+    {
       "title": "高三最后300天",
       "tier": "green",
       "tiers": {
@@ -1572,18 +1584,6 @@
       "cpu": "Intel Core™ i5-10600K Processor or higher",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 (6GB VRAM) or AMD equivalent, Intel Core™ i5-10600K Processor or higher"
-    },
-    {
-      "title": "Horns of Deliverance",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1050 Ti or AMD Radeon RX 470",
-      "cpu": "Intel Core i7-4790K or AMD Ryzen 5 1500X",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 1050 Ti or AMD Radeon RX 470, Intel Core i7-4790K or AMD Ryzen 5 1500X"
     },
     {
       "title": "Immortal Dao Idle",
