@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T10:15:08.172Z",
+  "updatedAt": "2026-10-15T11:15:49.430Z",
   "games": [
     {
       "title": "Dressmaker",
@@ -470,18 +470,6 @@
       "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 Or AMD Radeon RX 6600 XT, Intel Core i5-11500 Or AMD Ryzen 5 5600X"
     },
     {
-      "title": "CPM 2",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1650 / RTX 3050 or better (4+ GB)",
-      "cpu": "Intel Core i5-13400F / AMD Ryzen 5 7500F (6+ cores)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 / RTX 3050 or better (4+ GB), Intel Core i5-13400F / AMD Ryzen 5 7500F (6+ cores)"
-    },
-    {
       "title": "over the hill",
       "tier": "green",
       "tiers": {
@@ -504,6 +492,18 @@
       "cpu": "Ryzen 7 5800X / Core i5-13400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RX 6800 / RTX 3070, Ryzen 7 5800X / Core i5-13400"
+    },
+    {
+      "title": "CPM 2",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1650 / RTX 3050 or better (4+ GB)",
+      "cpu": "Intel Core i5-13400F / AMD Ryzen 5 7500F (6+ cores)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 / RTX 3050 or better (4+ GB), Intel Core i5-13400F / AMD Ryzen 5 7500F (6+ cores)"
     },
     {
       "title": "Apocalypter",
@@ -1058,18 +1058,6 @@
       "note": "Minimální konfigurace: Intel UHD Graphics 920, Intel i3-5400F"
     },
     {
-      "title": "Forever Ago",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1060, 3 GB or AMD Radeon RX 590, 8 GB or Intel Arc A580, 6 GB",
-      "cpu": "Intel Core i5-8400 or AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, 3 GB or AMD Radeon RX 590, 8 GB or Intel Arc A580, 6 GB, Intel Core i5-8400 or AMD Ryzen 5 2600"
-    },
-    {
       "title": "塔防山贼模拟器",
       "tier": "green",
       "tiers": {
@@ -1080,6 +1068,18 @@
       "cpu": "Intel Dual-Core 1.6GHz or faster processor",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Graphic card with DX10 (Shader-Model 4.0) abilities, Intel Dual-Core 1.6GHz or faster processor"
+    },
+    {
+      "title": "Forever Ago",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1060, 3 GB or AMD Radeon RX 590, 8 GB or Intel Arc A580, 6 GB",
+      "cpu": "Intel Core i5-8400 or AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, 3 GB or AMD Radeon RX 590, 8 GB or Intel Arc A580, 6 GB, Intel Core i5-8400 or AMD Ryzen 5 2600"
     },
     {
       "title": "Birb",
@@ -1130,6 +1130,18 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1070, Core i5"
     },
     {
+      "title": "Warhammer 40,000: Boltgun 2",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 1650 (4096 MB) / Radeon RX 570 (4096 MB)",
+      "cpu": "Intel Core i7-7700K / AMD Ryzen 5 1500X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1650 (4096 MB) / Radeon RX 570 (4096 MB), Intel Core i7-7700K / AMD Ryzen 5 1500X"
+    },
+    {
       "title": "Trash Day",
       "tier": "orange",
       "tiers": {
@@ -1152,18 +1164,6 @@
       "cpu": "Intel Core i5, AMD Ryzen 5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Intel iris Xe / Geforce GTX 750 / AMD Radeon HD 7770, Intel Core i5, AMD Ryzen 5"
-    },
-    {
-      "title": "Warhammer 40,000: Boltgun 2",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 1650 (4096 MB) / Radeon RX 570 (4096 MB)",
-      "cpu": "Intel Core i7-7700K / AMD Ryzen 5 1500X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1650 (4096 MB) / Radeon RX 570 (4096 MB), Intel Core i7-7700K / AMD Ryzen 5 1500X"
     },
     {
       "title": "Nighthawks",
@@ -1394,6 +1394,18 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3080, Intel Core i7-6700K/AMD Ryzen 7 1700"
     },
     {
+      "title": "Glory To The Heroes™",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "AMD Radeon RX 7600 XT / NVIDIA GeForce RTX 5070 / 4070 TI",
+      "cpu": "AMD Ryzen 7 3700X / Intel Core i5-9600K",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: AMD Radeon RX 7600 XT / NVIDIA GeForce RTX 5070 / 4070 TI, AMD Ryzen 7 3700X / Intel Core i5-9600K"
+    },
+    {
       "title": "SiN Reloaded",
       "tier": "green",
       "tiers": {
@@ -1538,6 +1550,18 @@
       "note": "Doporučená konfigurace: Intel UHD Graphics 620 or equivalent, Intel Core i5-6500, AMD Ryzen 3 1200 or better"
     },
     {
+      "title": "Life, the Universe, and Restaurants",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA® GeForce® GTX 750 or AMD Radeon™ R7 265",
+      "cpu": "Intel® Core™ i5-6xxx, AMD FX™-6300",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA® GeForce® GTX 750 or AMD Radeon™ R7 265, Intel® Core™ i5-6xxx, AMD FX™-6300"
+    },
+    {
       "title": "CELESTAY Craft&Slowlife",
       "tier": "green",
       "tiers": {
@@ -1572,18 +1596,6 @@
       "cpu": "Intel Core™ i5-10600K Processor or higher",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 (6GB VRAM) or AMD equivalent, Intel Core™ i5-10600K Processor or higher"
-    },
-    {
-      "title": "Life, the Universe, and Restaurants",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA® GeForce® GTX 750 or AMD Radeon™ R7 265",
-      "cpu": "Intel® Core™ i5-6xxx, AMD FX™-6300",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA® GeForce® GTX 750 or AMD Radeon™ R7 265, Intel® Core™ i5-6xxx, AMD FX™-6300"
     },
     {
       "title": "Do Disciplinary Committee Members Dream of Succubi?",
