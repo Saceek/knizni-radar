@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-16T10:15:10.469Z",
+  "updatedAt": "2026-10-16T11:15:40.053Z",
   "games": [
     {
       "title": "Enshrouded",
@@ -302,18 +302,6 @@
       "note": "Doporučená konfigurace: nVidia Geforce RTX3060, Intel Core i5 10400"
     },
     {
-      "title": "Car Park Capital",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "OpenGL 4.2+",
-      "cpu": null,
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: OpenGL 4.2+"
-    },
-    {
       "title": "over the hill",
       "tier": "green",
       "tiers": {
@@ -324,6 +312,18 @@
       "cpu": "Intel Core i5-7400 / AMD Ryzen 5 2600",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Nvidia GTX 1070 / AMD Radeon RX 5600, Intel Core i5-7400 / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Car Park Capital",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "OpenGL 4.2+",
+      "cpu": null,
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: OpenGL 4.2+"
     },
     {
       "title": "Silver Pines",
@@ -398,6 +398,18 @@
       "note": "Doporučená konfigurace: GTX 1060 / RX 480, i5 7600 / Ryzen 5 2600X"
     },
     {
+      "title": "Valor Mortis",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "orange"
+      },
+      "gpu": "RX 6800 / RTX 3070",
+      "cpu": "Ryzen 7 5800X / Core i5-13400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RX 6800 / RTX 3070, Ryzen 7 5800X / Core i5-13400"
+    },
+    {
       "title": "Frosthaven",
       "tier": "orange",
       "tiers": {
@@ -422,18 +434,6 @@
       "note": "Minimální konfigurace: Intel UHD 600, Quad Core CPU"
     },
     {
-      "title": "Valor Mortis",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "orange"
-      },
-      "gpu": "RX 6800 / RTX 3070",
-      "cpu": "Ryzen 7 5800X / Core i5-13400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RX 6800 / RTX 3070, Ryzen 7 5800X / Core i5-13400"
-    },
-    {
       "title": "Voodoo Fishin'",
       "tier": "red",
       "tiers": {
@@ -444,6 +444,18 @@
       "cpu": "Intel Core i7-9700K or AMD Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 or AMD Radeon RX 6700 XT (8-12GB VRAM), Intel Core i7-9700K or AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "Scam With Your Friends",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 1060 (6 GB) / AMD RX 580",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GTX 1060 (6 GB) / AMD RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
       "title": "Toy Shire",
@@ -470,16 +482,16 @@
       "note": "Doporučená konfigurace: OpenGL ES 2.0 hardware driver support required for WebGL acceleration. (AMD Catalyst 10.9, nVidia 358.50), 2+ GHz Processor"
     },
     {
-      "title": "Scam With Your Friends",
-      "tier": "green",
+      "title": "Invokyr",
+      "tier": "orange",
       "tiers": {
-        "allyx": "green",
+        "allyx": "orange",
         "pc": "green"
       },
-      "gpu": "NVIDIA GTX 1060 (6 GB) / AMD RX 580",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GTX 1060 (6 GB) / AMD RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
+      "gpu": "Nvidia GeForce RTX 3060 Or AMD Radeon RX 6600 XT",
+      "cpu": "Intel Core i5-11500 Or AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 Or AMD Radeon RX 6600 XT, Intel Core i5-11500 Or AMD Ryzen 5 5600X"
     },
     {
       "title": "The Piper of Dawn",
@@ -492,18 +504,6 @@
       "cpu": "Intel i5 Quad-Core",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 750 Ti, Intel i5 Quad-Core"
-    },
-    {
-      "title": "Invokyr",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "Nvidia GeForce RTX 3060 Or AMD Radeon RX 6600 XT",
-      "cpu": "Intel Core i5-11500 Or AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce RTX 3060 Or AMD Radeon RX 6600 XT, Intel Core i5-11500 Or AMD Ryzen 5 5600X"
     },
     {
       "title": "CPM 2",
@@ -902,18 +902,6 @@
       "note": "Doporučená konfigurace: GeForce GTX 1650 (4096 MB) / Radeon RX 570 (4096 MB), Intel Core i7-7700K / AMD Ryzen 5 1500X"
     },
     {
-      "title": "Duckoleon",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Radeon RX 5500 XT OC 8G or Nvidia GTX 1660",
-      "cpu": "AMD Ryzen 5 3600 6-Core 3.60 GHz or Intel Core i5-9600K 6-Core 3.7 GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Radeon RX 5500 XT OC 8G or Nvidia GTX 1660, AMD Ryzen 5 3600 6-Core 3.60 GHz or Intel Core i5-9600K 6-Core 3.7 GHz"
-    },
-    {
       "title": "Land of Glarefall",
       "tier": "green",
       "tiers": {
@@ -924,6 +912,18 @@
       "cpu": "Intel Core i7-4770K / AMD Ryzen 5 1600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060(3GB) / AMD Radeon RX570(4GB), Intel Core i7-4770K / AMD Ryzen 5 1600"
+    },
+    {
+      "title": "Duckoleon",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Radeon RX 5500 XT OC 8G or Nvidia GTX 1660",
+      "cpu": "AMD Ryzen 5 3600 6-Core 3.60 GHz or Intel Core i5-9600K 6-Core 3.7 GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Radeon RX 5500 XT OC 8G or Nvidia GTX 1660, AMD Ryzen 5 3600 6-Core 3.60 GHz or Intel Core i5-9600K 6-Core 3.7 GHz"
     },
     {
       "title": "Calculate It",
@@ -1130,18 +1130,6 @@
       "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 1060 (6 GB) / AMD® Radeon™ RX 580 (8 GB) / Intel® Arc™ A580 (8 GB), Intel® Core™ i5-7600 (quad-core) / AMD® Ryzen™ 3 2200G (quad-core)"
     },
     {
-      "title": "Burn With Me",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "2GB Video Memory",
-      "cpu": "2.5Ghz or better",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: 2GB Video Memory, 2.5Ghz or better"
-    },
-    {
       "title": "Let's Tidy Up! : Treasure",
       "tier": "orange",
       "tiers": {
@@ -1152,6 +1140,18 @@
       "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Burn With Me",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "2GB Video Memory",
+      "cpu": "2.5Ghz or better",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: 2GB Video Memory, 2.5Ghz or better"
     },
     {
       "title": "Glider Sim Deluxe – Soaring Simulator",
@@ -1382,18 +1382,6 @@
       "note": "Doporučená konfigurace: AMD Radeon RX 7600 XT / NVIDIA GeForce RTX 5070 / 4070 TI, AMD Ryzen 7 3700X / Intel Core i5-9600K"
     },
     {
-      "title": "Tunnel Escape Fates Entwined",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DirectX 9/OpenGL 4.1 capable GPU",
-      "cpu": "Intel Core2 Duo or better",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: DirectX 9/OpenGL 4.1 capable GPU, Intel Core2 Duo or better"
-    },
-    {
       "title": "Witch Cabin Cleanup",
       "tier": "green",
       "tiers": {
@@ -1404,6 +1392,18 @@
       "cpu": "2.5 GHz Quad-core Intel or AMD processor",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 1050 | AMD Radeon RX-580, 2.5 GHz Quad-core Intel or AMD processor"
+    },
+    {
+      "title": "Tunnel Escape Fates Entwined",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DirectX 9/OpenGL 4.1 capable GPU",
+      "cpu": "Intel Core2 Duo or better",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: DirectX 9/OpenGL 4.1 capable GPU, Intel Core2 Duo or better"
     },
     {
       "title": "Minibus Simulator",
@@ -1454,18 +1454,6 @@
       "note": "Doporučená konfigurace: GPU with DirectX 11 or Vulkan 1.1 support, Intel Core i5-2300 2.8 GHz/AMD Phenom II X4 945 3.0 GHz or equivalent"
     },
     {
-      "title": "Chained Beasts",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 1050, AMD RX 460 or equivalent",
-      "cpu": "Intel Core i5-5257U, AMD Ryzen 3 1200 or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 1050, AMD RX 460 or equivalent, Intel Core i5-5257U, AMD Ryzen 3 1200 or equivalent"
-    },
-    {
       "title": "大荒",
       "tier": "green",
       "tiers": {
@@ -1476,6 +1464,18 @@
       "cpu": "Intel Core i5-6600K, AMD Ryzen 5 1600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Dedicated graphics with OpenGL 3.3 support, Intel Core i5-6600K, AMD Ryzen 5 1600"
+    },
+    {
+      "title": "Chained Beasts",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 1050, AMD RX 460 or equivalent",
+      "cpu": "Intel Core i5-5257U, AMD Ryzen 3 1200 or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 1050, AMD RX 460 or equivalent, Intel Core i5-5257U, AMD Ryzen 3 1200 or equivalent"
     },
     {
       "title": "Sort The Capybaras",
@@ -1526,18 +1526,6 @@
       "note": "Doporučená konfigurace: Any dedicated DirectX 11 GPU, 2 GB VRAM, 6-core / 12-thread, 3.5 GHz or better"
     },
     {
-      "title": "CELESTAY Craft&Slowlife",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel® UHD Graphics",
-      "cpu": null,
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel® UHD Graphics"
-    },
-    {
       "title": "驱灵天师",
       "tier": "red",
       "tiers": {
@@ -1548,6 +1536,18 @@
       "cpu": "Intel I5 12600 /AMD Ryzen7  5700XT",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVDIA GTX 3070  / AMD RX 9060XT, Intel I5 12600 /AMD Ryzen7  5700XT"
+    },
+    {
+      "title": "CELESTAY Craft&Slowlife",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel® UHD Graphics",
+      "cpu": null,
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel® UHD Graphics"
     },
     {
       "title": "VESSELS: Noiret Mansion",
@@ -1598,18 +1598,6 @@
       "note": "Doporučená konfigurace: Intel UHD Graphics 630 or better, or equivalent AMD/NVIDIA graphics, Intel Core i5-11500 or better, or equivalent AMD processor"
     },
     {
-      "title": "Do Disciplinary Committee Members Dream of Succubi?",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "OpenGL ES 2.0 hardware driver support required for WebGL acceleration. (AMD Catalyst 10.9, nVidia 358.50)",
-      "cpu": "2+ GHz Processor",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: OpenGL ES 2.0 hardware driver support required for WebGL acceleration. (AMD Catalyst 10.9, nVidia 358.50), 2+ GHz Processor"
-    },
-    {
       "title": "FIRE AND ASHES",
       "tier": "red",
       "tiers": {
@@ -1620,6 +1608,18 @@
       "cpu": "Intel Core i7-4770k or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 3060 or equivalent, Intel Core i7-4770k or equivalent"
+    },
+    {
+      "title": "Do Disciplinary Committee Members Dream of Succubi?",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "OpenGL ES 2.0 hardware driver support required for WebGL acceleration. (AMD Catalyst 10.9, nVidia 358.50)",
+      "cpu": "2+ GHz Processor",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: OpenGL ES 2.0 hardware driver support required for WebGL acceleration. (AMD Catalyst 10.9, nVidia 358.50), 2+ GHz Processor"
     },
     {
       "title": "The Witch's Bakery",
