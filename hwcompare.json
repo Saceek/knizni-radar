@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-17T15:16:49.636Z",
+  "updatedAt": "2026-10-17T16:15:42.207Z",
   "games": [
     {
       "title": "Enshrouded",
@@ -926,18 +926,6 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 750, Intel Core i5+"
     },
     {
-      "title": "Remote Reaper: FPV Combat Drone Simulator",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA RTX 3060",
-      "cpu": "Intel Core i7-6600K / AMD Ryzen 5 5600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 3060, Intel Core i7-6600K / AMD Ryzen 5 5600"
-    },
-    {
       "title": "塔防山贼模拟器",
       "tier": "green",
       "tiers": {
@@ -950,16 +938,16 @@
       "note": "Minimální konfigurace: Graphic card with DX10 (Shader-Model 4.0) abilities, Intel Dual-Core 1.6GHz or faster processor"
     },
     {
-      "title": "Frutiger Home",
-      "tier": "green",
+      "title": "Remote Reaper: FPV Combat Drone Simulator",
+      "tier": "red",
       "tiers": {
-        "allyx": "green",
+        "allyx": "red",
         "pc": "green"
       },
-      "gpu": "NVIDIA GTX 1060 / Radeon RX 6600",
-      "cpu": "Intel i5-7600K / AMD Ryzen 5 3600",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GTX 1060 / Radeon RX 6600, Intel i5-7600K / AMD Ryzen 5 3600"
+      "gpu": "NVIDIA RTX 3060",
+      "cpu": "Intel Core i7-6600K / AMD Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 3060, Intel Core i7-6600K / AMD Ryzen 5 5600"
     },
     {
       "title": "Forever Ago",
@@ -974,6 +962,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, 3 GB or AMD Radeon RX 590, 8 GB or Intel Arc A580, 6 GB, Intel Core i5-8400 or AMD Ryzen 5 2600"
     },
     {
+      "title": "Frutiger Home",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 1060 / Radeon RX 6600",
+      "cpu": "Intel i5-7600K / AMD Ryzen 5 3600",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GTX 1060 / Radeon RX 6600, Intel i5-7600K / AMD Ryzen 5 3600"
+    },
+    {
       "title": "Disney/Pixar Toy Story 3 Complete Edition",
       "tier": "green",
       "tiers": {
@@ -986,18 +986,6 @@
       "note": "Doporučená konfigurace: GeForce GTX 1050Ti / Radeon RX 460, Ryzen 3 3100 / Core i5-4690K"
     },
     {
-      "title": "Deleted Wiki: Clean Up the Lost Files",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Any modern GPU",
-      "cpu": "64-bit quad-core",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Any modern GPU, 64-bit quad-core"
-    },
-    {
       "title": "Shipping Store Simulator 2037",
       "tier": "orange",
       "tiers": {
@@ -1008,6 +996,18 @@
       "cpu": "Intel i5 7600K / AMD Ryzen 5 2600x",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 2070 / AMD 5700 XT, Intel i5 7600K / AMD Ryzen 5 2600x"
+    },
+    {
+      "title": "Deleted Wiki: Clean Up the Lost Files",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Any modern GPU",
+      "cpu": "64-bit quad-core",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Any modern GPU, 64-bit quad-core"
     },
     {
       "title": "Feed the Cups",
@@ -1334,18 +1334,6 @@
       "note": "Minimální konfigurace: DirectX 9/OpenGL 4.1 capable GPU, Intel Core2 Duo or better"
     },
     {
-      "title": "Drop Command",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "orange"
-      },
-      "gpu": "NVIDIA RTX 3080",
-      "cpu": "Intel Core i7-6700K/AMD Ryzen 7 1700",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 3080, Intel Core i7-6700K/AMD Ryzen 7 1700"
-    },
-    {
       "title": "Sort The Capybaras",
       "tier": "orange",
       "tiers": {
@@ -1356,6 +1344,18 @@
       "cpu": "Intel i7 12700K",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 2060, Intel i7 12700K"
+    },
+    {
+      "title": "Drop Command",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "orange"
+      },
+      "gpu": "NVIDIA RTX 3080",
+      "cpu": "Intel Core i7-6700K/AMD Ryzen 7 1700",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 3080, Intel Core i7-6700K/AMD Ryzen 7 1700"
     },
     {
       "title": "FIRE AND ASHES",
@@ -1536,6 +1536,18 @@
       "cpu": "Intel Core i5 4460",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GTX 780, Intel Core i5 4460"
+    },
+    {
+      "title": "Brick by Brick: Tidy Up the Small Town!",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT",
+      "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
     },
     {
       "title": "The Incident at Galley House",
