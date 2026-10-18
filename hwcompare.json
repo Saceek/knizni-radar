@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-18T06:15:32.504Z",
+  "updatedAt": "2026-10-18T07:16:35.581Z",
   "games": [
     {
       "title": "Enshrouded",
@@ -590,18 +590,6 @@
       "note": "Doporučená konfigurace: Geforce GTX 460 Or Equivalent, 2.4 GHZ Quad Core Processor Or Higher"
     },
     {
-      "title": "Tasty Chef",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "GeForce RTX 2060 / Radeon RX 5700",
-      "cpu": "Intel Core i7-11700K @ 3.60GHz / AMD Ryzen 7 5700",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 2060 / Radeon RX 5700, Intel Core i7-11700K @ 3.60GHz / AMD Ryzen 7 5700"
-    },
-    {
       "title": "Legion Breaker",
       "tier": "green",
       "tiers": {
@@ -612,6 +600,18 @@
       "cpu": "AMD Athlon X4 | Intel Core i5 4460",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GTX 950 | AMD R7 370, AMD Athlon X4 | Intel Core i5 4460"
+    },
+    {
+      "title": "Tasty Chef",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "GeForce RTX 2060 / Radeon RX 5700",
+      "cpu": "Intel Core i7-11700K @ 3.60GHz / AMD Ryzen 7 5700",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 2060 / Radeon RX 5700, Intel Core i7-11700K @ 3.60GHz / AMD Ryzen 7 5700"
     },
     {
       "title": "RetroSpace",
@@ -734,6 +734,18 @@
       "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 1060 (6 GB) / AMD® Radeon™ RX 580 (8 GB) / Intel® Arc™ A580 (8 GB), Intel® Core™ i5-7600 (quad-core) / AMD® Ryzen™ 3 2200G (quad-core)"
     },
     {
+      "title": "Trash Day",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 2060 or AMD Radeon RX 5600 XT, 6 GB VRAM",
+      "cpu": "Intel Core i5-10400 or AMD Ryzen 5 3600 (6 cores / 12 threads)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 or AMD Radeon RX 5600 XT, 6 GB VRAM, Intel Core i5-10400 or AMD Ryzen 5 3600 (6 cores / 12 threads)"
+    },
+    {
       "title": "ShipCrafter",
       "tier": "orange",
       "tiers": {
@@ -756,18 +768,6 @@
       "cpu": "Intel Core i5-8400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, Intel Core i5-8400"
-    },
-    {
-      "title": "Trash Day",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 2060 or AMD Radeon RX 5600 XT, 6 GB VRAM",
-      "cpu": "Intel Core i5-10400 or AMD Ryzen 5 3600 (6 cores / 12 threads)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 or AMD Radeon RX 5600 XT, 6 GB VRAM, Intel Core i5-10400 or AMD Ryzen 5 3600 (6 cores / 12 threads)"
     },
     {
       "title": "Songs of Glimmerwick",
@@ -902,18 +902,6 @@
       "note": "Doporučená konfigurace: OpenGL 2.1 compatible graphics card, integrated graphics, Intel Core i3"
     },
     {
-      "title": "Stream Racer",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Nvidia 1070 (or better) or Radeon RX 580 (or better)",
-      "cpu": "Intel i7 3.6 GHz (or better) (or AMD equivalent)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia 1070 (or better) or Radeon RX 580 (or better), Intel i7 3.6 GHz (or better) (or AMD equivalent)"
-    },
-    {
       "title": "Forever Ago",
       "tier": "green",
       "tiers": {
@@ -924,6 +912,18 @@
       "cpu": "Intel Core i5-8400 or AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, 3 GB or AMD Radeon RX 590, 8 GB or Intel Arc A580, 6 GB, Intel Core i5-8400 or AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Stream Racer",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Nvidia 1070 (or better) or Radeon RX 580 (or better)",
+      "cpu": "Intel i7 3.6 GHz (or better) (or AMD equivalent)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia 1070 (or better) or Radeon RX 580 (or better), Intel i7 3.6 GHz (or better) (or AMD equivalent)"
     },
     {
       "title": "The Bell Echoes",
@@ -1406,6 +1406,18 @@
       "note": "Doporučená konfigurace: Dedicated graphics with OpenGL 3.3 support, Intel Core i5-6600K, AMD Ryzen 5 1600"
     },
     {
+      "title": "One Million Coins",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA RTX 2060 / AMD RX 6600",
+      "cpu": "Intel Core i7-9700K or AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD RX 6600, Intel Core i7-9700K or AMD Ryzen 5 3600"
+    },
+    {
       "title": "Blockmind",
       "tier": "green",
       "tiers": {
@@ -1428,18 +1440,6 @@
       "cpu": "AMD Ryzen 5 7535U/Ryzen 5 3600; Intel Core i7-1165G7/i5-10400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: AMD Radeon 780M, Nvidia GTX 1650, Intel Arc A380/Arc 140V, AMD Ryzen 5 7535U/Ryzen 5 3600; Intel Core i7-1165G7/i5-10400"
-    },
-    {
-      "title": "One Million Coins",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA RTX 2060 / AMD RX 6600",
-      "cpu": "Intel Core i7-9700K or AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD RX 6600, Intel Core i7-9700K or AMD Ryzen 5 3600"
     },
     {
       "title": "Monastery: Ora et Labora",
@@ -1562,6 +1562,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 / Intel UHD 730 or equivalent, Intel Core i5"
     },
     {
+      "title": "Disney/Pixar Toy Story: Retro Roundup!",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GeForce GTX 460, AMD Radeon R7 250X",
+      "cpu": "Intel Core i3-4100, AMD A8-6600K",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Nvidia GeForce GTX 460, AMD Radeon R7 250X, Intel Core i3-4100, AMD A8-6600K"
+    },
+    {
       "title": "HR: Human Remains",
       "tier": "green",
       "tiers": {
@@ -1584,18 +1596,6 @@
       "cpu": "Intel Core i5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i5"
-    },
-    {
-      "title": "Disney/Pixar Toy Story: Retro Roundup!",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Nvidia GeForce GTX 460, AMD Radeon R7 250X",
-      "cpu": "Intel Core i3-4100, AMD A8-6600K",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Nvidia GeForce GTX 460, AMD Radeon R7 250X, Intel Core i3-4100, AMD A8-6600K"
     },
     {
       "title": "The Incident at Galley House",
