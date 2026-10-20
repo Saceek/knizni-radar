@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19T23:13:10.272Z",
+  "updatedAt": "2026-10-20T00:13:02.771Z",
   "games": [
     {
       "title": "Enshrouded",
@@ -230,18 +230,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 2070 Ti or AMD Radeon RX 5700 or Intel Arc B570, Intel Core i5-9600K or AMD Ryzen R5 3600 processor"
     },
     {
-      "title": "Car Park Capital",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "OpenGL 4.2+",
-      "cpu": null,
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: OpenGL 4.2+"
-    },
-    {
       "title": "Silver Pines",
       "tier": "green",
       "tiers": {
@@ -252,6 +240,18 @@
       "cpu": "Intel Core i5-6600 or AMD Ryzen 5 1600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NIVIDIA GeForce GTX 770, AMD Radeon R9 380, Intel Core i5-6600 or AMD Ryzen 5 1600"
+    },
+    {
+      "title": "Car Park Capital",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "OpenGL 4.2+",
+      "cpu": null,
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: OpenGL 4.2+"
     },
     {
       "title": "DinoBones: Tidy Up the Museum",
@@ -854,6 +854,18 @@
       "note": "Doporučená konfigurace: Radeon RX 5500 XT OC 8G or Nvidia GTX 1660, AMD Ryzen 5 3600 6-Core 3.60 GHz or Intel Core i5-9600K 6-Core 3.7 GHz"
     },
     {
+      "title": "One Million Coins",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA RTX 2060 / AMD RX 6600",
+      "cpu": "Intel Core i7-9700K or AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD RX 6600, Intel Core i7-9700K or AMD Ryzen 5 3600"
+    },
+    {
       "title": "Land of Glarefall",
       "tier": "green",
       "tiers": {
@@ -888,18 +900,6 @@
       "cpu": "64-bit quad-core",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Any modern GPU, 64-bit quad-core"
-    },
-    {
-      "title": "One Million Coins",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA RTX 2060 / AMD RX 6600",
-      "cpu": "Intel Core i7-9700K or AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD RX 6600, Intel Core i7-9700K or AMD Ryzen 5 3600"
     },
     {
       "title": "Stream Racer",
@@ -1010,6 +1010,18 @@
       "note": "Doporučená konfigurace: Dedicated or modern integrated graphics with OpenGL 3.3 support, Intel Core i5 or equivalent"
     },
     {
+      "title": "Brick by Brick: Tidy Up the Small Town!",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT",
+      "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
+    },
+    {
       "title": "Feed the Cups",
       "tier": "green",
       "tiers": {
@@ -1044,18 +1056,6 @@
       "cpu": "Intel® Core™ i5-750 (quad-core) / AMD® Phenom™ II X4 965 (quad-core)",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA® GeForce® GT 630 (2 GB) / AMD® Radeon™ HD 6670 (2 GB), Intel® Core™ i5-750 (quad-core) / AMD® Phenom™ II X4 965 (quad-core)"
-    },
-    {
-      "title": "Brick by Brick: Tidy Up the Small Town!",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT",
-      "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
     },
     {
       "title": "Barfender: CO-OP Bar Simulator",
@@ -1166,18 +1166,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 or equivalent, Intel Core i7-3770 or equivalent"
     },
     {
-      "title": "驱灵天师",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "orange"
-      },
-      "gpu": "NVDIA GTX 3070  / AMD RX 9060XT",
-      "cpu": "Intel I5 12600 /AMD Ryzen7  5700XT",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVDIA GTX 3070  / AMD RX 9060XT, Intel I5 12600 /AMD Ryzen7  5700XT"
-    },
-    {
       "title": "Heartfall — A Tale in Three Lives",
       "tier": "green",
       "tiers": {
@@ -1188,6 +1176,18 @@
       "cpu": "AMD Ryzen 5 7535U/Ryzen 5 3600; Intel Core i7-1165G7/i5-10400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: AMD Radeon 780M, Nvidia GTX 1650, Intel Arc A380/Arc 140V, AMD Ryzen 5 7535U/Ryzen 5 3600; Intel Core i7-1165G7/i5-10400"
+    },
+    {
+      "title": "驱灵天师",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "orange"
+      },
+      "gpu": "NVDIA GTX 3070  / AMD RX 9060XT",
+      "cpu": "Intel I5 12600 /AMD Ryzen7  5700XT",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVDIA GTX 3070  / AMD RX 9060XT, Intel I5 12600 /AMD Ryzen7  5700XT"
     },
     {
       "title": "Glider Sim Deluxe – Soaring Simulator",
@@ -1298,18 +1298,6 @@
       "note": "Doporučená konfigurace: GeForce RTX 2060, Intel i7 12700K"
     },
     {
-      "title": "Tank Battle Classic",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX3060 6GB",
-      "cpu": "Intel Core i5-12400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX3060 6GB, Intel Core i5-12400"
-    },
-    {
       "title": "Tales of Eternia Remastered",
       "tier": "green",
       "tiers": {
@@ -1320,6 +1308,18 @@
       "cpu": "Intel Core i3-8100 / AMD Ryzen 3 3100",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 650Ti [1 GB] / AMD Radeon HD 7770 [2 GB] / Intel Arc A310 [4 GB], Intel Core i3-8100 / AMD Ryzen 3 3100"
+    },
+    {
+      "title": "Tank Battle Classic",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX3060 6GB",
+      "cpu": "Intel Core i5-12400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX3060 6GB, Intel Core i5-12400"
     },
     {
       "title": "Tunnel Escape Fates Entwined",
@@ -1406,6 +1406,18 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1060 / AMD Radeon RX 580, VRAM: 4 GB, Intel Core i7-7700K / AMD Ryzen 5 1600"
     },
     {
+      "title": "Penguin Colony",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "GTX 1080",
+      "cpu": "i7",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GTX 1080, i7"
+    },
+    {
       "title": "Blockmind",
       "tier": "green",
       "tiers": {
@@ -1452,18 +1464,6 @@
       "cpu": "Intel® Core™ i5-9600 (hexa-core) / AMD® Ryzen™ 5 2600X (hexa-core)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA® GeForce® RTX 2070 (8 GB) / AMD® Radeon™ RX 6600 XT (8 GB), Intel® Core™ i5-9600 (hexa-core) / AMD® Ryzen™ 5 2600X (hexa-core)"
-    },
-    {
-      "title": "Penguin Colony",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "GTX 1080",
-      "cpu": "i7",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GTX 1080, i7"
     },
     {
       "title": "VESSELS: Noiret Mansion",
