@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-20T04:14:54.259Z",
+  "updatedAt": "2026-10-20T05:15:47.130Z",
   "games": [
     {
       "title": "Enshrouded",
@@ -74,6 +74,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 Ti, RTX 4060 8 GB, Intel Core i5-12600K or AMD Ryzen 5 7600"
     },
     {
+      "title": "Castlevania: Belmont's Curse",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "nVidia Geforce RTX3060",
+      "cpu": "Intel Core i5 10400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: nVidia Geforce RTX3060, Intel Core i5 10400"
+    },
+    {
       "title": "Transport Fever 3",
       "tier": "red",
       "tiers": {
@@ -96,18 +108,6 @@
       "cpu": "Intel Core i5-13600K / AMD Ryzen 5 7600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4070 / AMD Radeon RX 7800 XT (12 GB VRAM or more), Intel Core i5-13600K / AMD Ryzen 5 7600"
-    },
-    {
-      "title": "Castlevania: Belmont's Curse",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "nVidia Geforce RTX3060",
-      "cpu": "Intel Core i5 10400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: nVidia Geforce RTX3060, Intel Core i5 10400"
     },
     {
       "title": "Way of the Hunter 2",
@@ -566,18 +566,6 @@
       "note": "Minimální konfigurace: Nvidia GTX 950 | AMD R7 370, AMD Athlon X4 | Intel Core i5 4460"
     },
     {
-      "title": "Scapewatch: Idle MMO",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Any GPU with hardware acceleration",
-      "cpu": "Any dual-core 2.4 GHz from 2015 or later",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Any GPU with hardware acceleration, Any dual-core 2.4 GHz from 2015 or later"
-    },
-    {
       "title": "Deep Dish Dungeon",
       "tier": "green",
       "tiers": {
@@ -588,6 +576,18 @@
       "cpu": "Intel® Core™ i5 or superior",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GTX 580 / AMD HD 7870 or newer, Intel® Core™ i5 or superior"
+    },
+    {
+      "title": "Scapewatch: Idle MMO",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Any GPU with hardware acceleration",
+      "cpu": "Any dual-core 2.4 GHz from 2015 or later",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Any GPU with hardware acceleration, Any dual-core 2.4 GHz from 2015 or later"
     },
     {
       "title": "Japanese Ramen Simulator",
@@ -710,18 +710,6 @@
       "note": "Doporučená konfigurace: RTX2060, 8 cores - 3.5GHz"
     },
     {
-      "title": "Lucid Cats",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1060",
-      "cpu": "Intel Core i5-8400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, Intel Core i5-8400"
-    },
-    {
       "title": "Disney/Pixar Toy Story 3 Complete Edition",
       "tier": "green",
       "tiers": {
@@ -732,6 +720,18 @@
       "cpu": "Ryzen 3 3100 / Core i5-4690K",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1050Ti / Radeon RX 460, Ryzen 3 3100 / Core i5-4690K"
+    },
+    {
+      "title": "Lucid Cats",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1060",
+      "cpu": "Intel Core i5-8400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, Intel Core i5-8400"
     },
     {
       "title": "塔防山贼模拟器",
@@ -768,6 +768,18 @@
       "cpu": "Intel Core i5-8600K / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Ti / AMD Radeon RX 590 (6 GB VRAM), Intel Core i5-8600K / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "One Million Coins",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA RTX 2060 / AMD RX 6600",
+      "cpu": "Intel Core i7-9700K or AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD RX 6600, Intel Core i7-9700K or AMD Ryzen 5 3600"
     },
     {
       "title": "Forever Ago",
@@ -816,18 +828,6 @@
       "cpu": "Intel Core i5-9600K or AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / RTX 2060 or AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-9600K or AMD Ryzen 5 3600"
-    },
-    {
-      "title": "One Million Coins",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA RTX 2060 / AMD RX 6600",
-      "cpu": "Intel Core i7-9700K or AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD RX 6600, Intel Core i7-9700K or AMD Ryzen 5 3600"
     },
     {
       "title": "Duckoleon",
@@ -974,18 +974,6 @@
       "note": "Doporučená konfigurace: Nvidia Geforce GTX 1040 3 GB (Legacy: Nvidia Geforce GTX 780), AMD Radeon RX 580 (Legacy: AMD Radeon R9 290X), 4 cores Intel | AMD CPU (Intel i3-8100, AMD Ryzen 3 1200)"
     },
     {
-      "title": "崇祯直聘：明末官场沉浮模拟器",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Dedicated or modern integrated graphics with OpenGL 3.3 support",
-      "cpu": "Intel Core i5 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Dedicated or modern integrated graphics with OpenGL 3.3 support, Intel Core i5 or equivalent"
-    },
-    {
       "title": "Brick by Brick: Tidy Up the Small Town!",
       "tier": "orange",
       "tiers": {
@@ -996,6 +984,18 @@
       "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "崇祯直聘：明末官场沉浮模拟器",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Dedicated or modern integrated graphics with OpenGL 3.3 support",
+      "cpu": "Intel Core i5 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Dedicated or modern integrated graphics with OpenGL 3.3 support, Intel Core i5 or equivalent"
     },
     {
       "title": "Nientum - Op.ZERO",
@@ -1478,18 +1478,6 @@
       "note": "Doporučená konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i5"
     },
     {
-      "title": "Haunted Heist",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1660 Super / RTX 2060 / AMD Radeon RX 5600 XT (6 GB VRAM)",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600 (6 cores)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / RTX 2060 / AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-8400 / AMD Ryzen 5 2600 (6 cores)"
-    },
-    {
       "title": "Folded Fables: Tidy Up The Dragon Hoard",
       "tier": "orange",
       "tiers": {
@@ -1500,6 +1488,18 @@
       "cpu": "Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent"
+    },
+    {
+      "title": "Haunted Heist",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1660 Super / RTX 2060 / AMD Radeon RX 5600 XT (6 GB VRAM)",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600 (6 cores)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / RTX 2060 / AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-8400 / AMD Ryzen 5 2600 (6 cores)"
     },
     {
       "title": "Dreadline Express",
@@ -1572,6 +1572,18 @@
       "cpu": "Core i5-4460 (3.2 GHz)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 660 / AMD Radeon HD 7850, Core i5-4460 (3.2 GHz)"
+    },
+    {
+      "title": "War Footing",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Integrated Graphics",
+      "cpu": "Dual-Core 2.0 GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Integrated Graphics, Dual-Core 2.0 GHz"
     },
     {
       "title": "The Incident at Galley House",
