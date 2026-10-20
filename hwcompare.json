@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-20T05:15:47.130Z",
+  "updatedAt": "2026-10-20T06:14:47.228Z",
   "games": [
     {
       "title": "Enshrouded",
@@ -146,18 +146,6 @@
       "note": "Doporučená konfigurace: GTX 1080, Intel Core i5"
     },
     {
-      "title": "Afterbeat (Project Arrhythmia)",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1650 or AMD Radeon RX 6500 XT",
-      "cpu": "Intel Core i5-10400F @ 2.90GHz or AMD Ryzen 5 5600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 or AMD Radeon RX 6500 XT, Intel Core i5-10400F @ 2.90GHz or AMD Ryzen 5 5600"
-    },
-    {
       "title": "over the hill",
       "tier": "green",
       "tiers": {
@@ -168,6 +156,18 @@
       "cpu": "Intel Core i5-7400 / AMD Ryzen 5 2600",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Nvidia GTX 1070 / AMD Radeon RX 5600, Intel Core i5-7400 / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Afterbeat (Project Arrhythmia)",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1650 or AMD Radeon RX 6500 XT",
+      "cpu": "Intel Core i5-10400F @ 2.90GHz or AMD Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 or AMD Radeon RX 6500 XT, Intel Core i5-10400F @ 2.90GHz or AMD Ryzen 5 5600"
     },
     {
       "title": "Scam With Your Friends",
@@ -758,18 +758,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060, 11th Gen Intel(R) Core i7-11800H @ 2.30GHz"
     },
     {
-      "title": "Dragon Shelter",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1660 Ti / AMD Radeon RX 590 (6 GB VRAM)",
-      "cpu": "Intel Core i5-8600K / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Ti / AMD Radeon RX 590 (6 GB VRAM), Intel Core i5-8600K / AMD Ryzen 5 2600"
-    },
-    {
       "title": "One Million Coins",
       "tier": "orange",
       "tiers": {
@@ -780,6 +768,18 @@
       "cpu": "Intel Core i7-9700K or AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD RX 6600, Intel Core i7-9700K or AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Dragon Shelter",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1660 Ti / AMD Radeon RX 590 (6 GB VRAM)",
+      "cpu": "Intel Core i5-8600K / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Ti / AMD Radeon RX 590 (6 GB VRAM), Intel Core i5-8600K / AMD Ryzen 5 2600"
     },
     {
       "title": "Forever Ago",
@@ -1406,16 +1406,16 @@
       "note": "Doporučená konfigurace: GTX 1060 6GB / RX 580, Intel Core i5-10400 / Ryzen 5 3600"
     },
     {
-      "title": "Do Disciplinary Committee Members Dream of Succubi?",
-      "tier": "green",
+      "title": "Beyond These Stars",
+      "tier": "orange",
       "tiers": {
-        "allyx": "green",
+        "allyx": "orange",
         "pc": "green"
       },
-      "gpu": "OpenGL ES 2.0 hardware driver support required for WebGL acceleration. (AMD Catalyst 10.9, nVidia 358.50)",
-      "cpu": "2+ GHz Processor",
+      "gpu": "NVIDIA® GeForce® RTX 2070 (8 GB) / AMD® Radeon™ RX 6600 XT (8 GB)",
+      "cpu": "Intel® Core™ i5-9600 (hexa-core) / AMD® Ryzen™ 5 2600X (hexa-core)",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: OpenGL ES 2.0 hardware driver support required for WebGL acceleration. (AMD Catalyst 10.9, nVidia 358.50), 2+ GHz Processor"
+      "note": "Doporučená konfigurace: NVIDIA® GeForce® RTX 2070 (8 GB) / AMD® Radeon™ RX 6600 XT (8 GB), Intel® Core™ i5-9600 (hexa-core) / AMD® Ryzen™ 5 2600X (hexa-core)"
     },
     {
       "title": "Poly Fighter",
@@ -1430,16 +1430,16 @@
       "note": "Minimální konfigurace: NVIDIA GTX 2060 / AMD Radeon RX 5700, Intel i5 12th gen / AMD equivalent"
     },
     {
-      "title": "Beyond These Stars",
-      "tier": "orange",
+      "title": "Do Disciplinary Committee Members Dream of Succubi?",
+      "tier": "green",
       "tiers": {
-        "allyx": "orange",
+        "allyx": "green",
         "pc": "green"
       },
-      "gpu": "NVIDIA® GeForce® RTX 2070 (8 GB) / AMD® Radeon™ RX 6600 XT (8 GB)",
-      "cpu": "Intel® Core™ i5-9600 (hexa-core) / AMD® Ryzen™ 5 2600X (hexa-core)",
+      "gpu": "OpenGL ES 2.0 hardware driver support required for WebGL acceleration. (AMD Catalyst 10.9, nVidia 358.50)",
+      "cpu": "2+ GHz Processor",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA® GeForce® RTX 2070 (8 GB) / AMD® Radeon™ RX 6600 XT (8 GB), Intel® Core™ i5-9600 (hexa-core) / AMD® Ryzen™ 5 2600X (hexa-core)"
+      "note": "Doporučená konfigurace: OpenGL ES 2.0 hardware driver support required for WebGL acceleration. (AMD Catalyst 10.9, nVidia 358.50), 2+ GHz Processor"
     },
     {
       "title": "VESSELS: Noiret Mansion",
@@ -1502,18 +1502,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / RTX 2060 / AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-8400 / AMD Ryzen 5 2600 (6 cores)"
     },
     {
-      "title": "Dreadline Express",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 1060 or Equivalent",
-      "cpu": "2.4 GHZ Quad Core Processor",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1060 or Equivalent, 2.4 GHZ Quad Core Processor"
-    },
-    {
       "title": "NekoTrak",
       "tier": "green",
       "tiers": {
@@ -1524,6 +1512,18 @@
       "cpu": "Intel Core i5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 / Intel UHD 730 or equivalent, Intel Core i5"
+    },
+    {
+      "title": "Dreadline Express",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 1060 or Equivalent",
+      "cpu": "2.4 GHZ Quad Core Processor",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1060 or Equivalent, 2.4 GHZ Quad Core Processor"
     },
     {
       "title": "Demon General Kirsten",
