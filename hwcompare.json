@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-21T19:15:40.379Z",
+  "updatedAt": "2026-10-21T20:15:43.326Z",
   "games": [
     {
       "title": "Enshrouded",
@@ -794,18 +794,6 @@
       "note": "Doporučená konfigurace: Any modern GPU, 64-bit quad-core"
     },
     {
-      "title": "Crack the Pack",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "512MB, OpenGL 3+",
-      "cpu": "2.7 GHz Dual Core",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: 512MB, OpenGL 3+, 2.7 GHz Dual Core"
-    },
-    {
       "title": "Brick by Brick: Tidy Up the Small Town!",
       "tier": "orange",
       "tiers": {
@@ -816,6 +804,18 @@
       "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Crack the Pack",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "512MB, OpenGL 3+",
+      "cpu": "2.7 GHz Dual Core",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: 512MB, OpenGL 3+, 2.7 GHz Dual Core"
     },
     {
       "title": "Museologist: Tidy Up the Museum!",
@@ -998,6 +998,18 @@
       "note": "Doporučená konfigurace: AMD Radeon 780M, Nvidia GTX 1650, Intel Arc A380/Arc 140V, AMD Ryzen 5 7535U/Ryzen 5 3600; Intel Core i7-1165G7/i5-10400"
     },
     {
+      "title": "Big Dig",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GPU with at least 2 GB of VRAM",
+      "cpu": "i3 or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GPU with at least 2 GB of VRAM, i3 or equivalent"
+    },
+    {
       "title": "崇祯直聘：明末官场沉浮模拟器",
       "tier": "green",
       "tiers": {
@@ -1008,18 +1020,6 @@
       "cpu": "Intel Core i5 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Dedicated or modern integrated graphics with OpenGL 3.3 support, Intel Core i5 or equivalent"
-    },
-    {
-      "title": "Let's Tidy Up! : Treasure",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT",
-      "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
     },
     {
       "title": "The Witch's Bakery",
@@ -1034,6 +1034,18 @@
       "note": "Doporučená konfigurace: Nvidia GTX 970 | AMD RX 570, AMD Ryzen 3 | Intel i5 Skylake"
     },
     {
+      "title": "Let's Tidy Up! : Treasure",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT",
+      "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
+    },
+    {
       "title": "Feed the Cups",
       "tier": "green",
       "tiers": {
@@ -1044,18 +1056,6 @@
       "cpu": "2 Ghz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: 128MB, OpenGL 3+, 2 Ghz"
-    },
-    {
-      "title": "Big Dig",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GPU with at least 2 GB of VRAM",
-      "cpu": "i3 or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GPU with at least 2 GB of VRAM, i3 or equivalent"
     },
     {
       "title": "Hungry Horrors",
@@ -1370,18 +1370,6 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3080, Intel Core i7-6700K/AMD Ryzen 7 1700"
     },
     {
-      "title": "大荒",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Dedicated graphics with OpenGL 3.3 support",
-      "cpu": "Intel Core i5-6600K, AMD Ryzen 5 1600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Dedicated graphics with OpenGL 3.3 support, Intel Core i5-6600K, AMD Ryzen 5 1600"
-    },
-    {
       "title": "Cucina Stellata",
       "tier": "green",
       "tiers": {
@@ -1392,6 +1380,18 @@
       "cpu": "Dual-core 2.0 GHz or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: DirectX 10 compatible GPU, Dual-core 2.0 GHz or equivalent"
+    },
+    {
+      "title": "大荒",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Dedicated graphics with OpenGL 3.3 support",
+      "cpu": "Intel Core i5-6600K, AMD Ryzen 5 1600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Dedicated graphics with OpenGL 3.3 support, Intel Core i5-6600K, AMD Ryzen 5 1600"
     },
     {
       "title": "Poly Fighter",
@@ -1574,18 +1574,6 @@
       "note": "Doporučená konfigurace: DX10, DX11, and DX12-capable GPUs, X64 architecture with SSE2 instruction set support"
     },
     {
-      "title": "Echo Weaver",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 660, AMD R7 260X",
-      "cpu": "Core i3-9300T, AMD FX 8350",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GTX 660, AMD R7 260X, Core i3-9300T, AMD FX 8350"
-    },
-    {
       "title": "Five Nights with Maids",
       "tier": "green",
       "tiers": {
@@ -1596,6 +1584,18 @@
       "cpu": "Intel Core2 Duo or better",
       "usedMinimum": true,
       "note": "Minimální konfigurace: DirectX 9/OpenGL 4.1 capable GPU, Intel Core2 Duo or better"
+    },
+    {
+      "title": "Echo Weaver",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 660, AMD R7 260X",
+      "cpu": "Core i3-9300T, AMD FX 8350",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GTX 660, AMD R7 260X, Core i3-9300T, AMD FX 8350"
     },
     {
       "title": "Train Station Tycoon",
