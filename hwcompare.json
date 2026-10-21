@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-21T01:14:57.757Z",
+  "updatedAt": "2026-10-21T02:15:40.830Z",
   "games": [
     {
       "title": "Enshrouded",
@@ -1022,6 +1022,18 @@
       "note": "Doporučená konfigurace: Dedicated or modern integrated graphics with OpenGL 3.3 support, Intel Core i5 or equivalent"
     },
     {
+      "title": "Let's Tidy Up! : Treasure",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT",
+      "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
+    },
+    {
       "title": "Feed the Cups",
       "tier": "green",
       "tiers": {
@@ -1044,18 +1056,6 @@
       "cpu": "Intel® Core™ i5-750 (quad-core) / AMD® Phenom™ II X4 965 (quad-core)",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA® GeForce® GT 630 (2 GB) / AMD® Radeon™ HD 6670 (2 GB), Intel® Core™ i5-750 (quad-core) / AMD® Phenom™ II X4 965 (quad-core)"
-    },
-    {
-      "title": "Let's Tidy Up! : Treasure",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT",
-      "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
     },
     {
       "title": "驱灵天师",
@@ -1202,16 +1202,16 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 1050 Ti or AMD Radeon RX 470, Intel Core i7-4790K or AMD Ryzen 5 1500X"
     },
     {
-      "title": "Tales of Eternia Remastered",
+      "title": "Big Dig",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "Nvidia GeForce GTX 650Ti [1 GB] / AMD Radeon HD 7770 [2 GB] / Intel Arc A310 [4 GB]",
-      "cpu": "Intel Core i3-8100 / AMD Ryzen 3 3100",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 650Ti [1 GB] / AMD Radeon HD 7770 [2 GB] / Intel Arc A310 [4 GB], Intel Core i3-8100 / AMD Ryzen 3 3100"
+      "gpu": "GPU with at least 2 GB of VRAM",
+      "cpu": "i3 or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GPU with at least 2 GB of VRAM, i3 or equivalent"
     },
     {
       "title": "Glory To The Heroes™",
@@ -1226,6 +1226,18 @@
       "note": "Doporučená konfigurace: AMD Radeon RX 7600 XT / NVIDIA GeForce RTX 5070 / 4070 TI, AMD Ryzen 7 3700X / Intel Core i5-9600K"
     },
     {
+      "title": "Tales of Eternia Remastered",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GeForce GTX 650Ti [1 GB] / AMD Radeon HD 7770 [2 GB] / Intel Arc A310 [4 GB]",
+      "cpu": "Intel Core i3-8100 / AMD Ryzen 3 3100",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 650Ti [1 GB] / AMD Radeon HD 7770 [2 GB] / Intel Arc A310 [4 GB], Intel Core i3-8100 / AMD Ryzen 3 3100"
+    },
+    {
       "title": "Truckful",
       "tier": "green",
       "tiers": {
@@ -1236,18 +1248,6 @@
       "cpu": "Requires a 64-bit processor and operating system",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: 3GB VRAM (GeForce GTX 1060 and above), Requires a 64-bit processor and operating system"
-    },
-    {
-      "title": "Big Dig",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GPU with at least 2 GB of VRAM",
-      "cpu": "i3 or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GPU with at least 2 GB of VRAM, i3 or equivalent"
     },
     {
       "title": "AI Olympius",
@@ -1502,18 +1502,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / RTX 2060 / AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-8400 / AMD Ryzen 5 2600 (6 cores)"
     },
     {
-      "title": "Demon General Kirsten",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "OpenGL ES 2.0 hardware driver support required for WebGL acceleration. (AMD Catalyst 10.9, nVidia 358.50)",
-      "cpu": "2+ GHz Processor",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: OpenGL ES 2.0 hardware driver support required for WebGL acceleration. (AMD Catalyst 10.9, nVidia 358.50), 2+ GHz Processor"
-    },
-    {
       "title": "Stella Sora",
       "tier": "green",
       "tiers": {
@@ -1524,6 +1512,18 @@
       "cpu": "Intel® Core™ i5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 or above, Intel® Core™ i5"
+    },
+    {
+      "title": "Demon General Kirsten",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "OpenGL ES 2.0 hardware driver support required for WebGL acceleration. (AMD Catalyst 10.9, nVidia 358.50)",
+      "cpu": "2+ GHz Processor",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: OpenGL ES 2.0 hardware driver support required for WebGL acceleration. (AMD Catalyst 10.9, nVidia 358.50), 2+ GHz Processor"
     },
     {
       "title": "Dimenshot",
@@ -1562,18 +1562,6 @@
       "note": "Doporučená konfigurace: Intel UHD Graphics 620 or equivalent, Intel Core i5-6500, AMD Ryzen 3 1200 or better"
     },
     {
-      "title": "War Footing",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Integrated Graphics",
-      "cpu": "Dual-Core 2.0 GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Integrated Graphics, Dual-Core 2.0 GHz"
-    },
-    {
       "title": "Flipping is Hard",
       "tier": "green",
       "tiers": {
@@ -1584,6 +1572,18 @@
       "cpu": "Intel Core i7-4770K / AMD Ryzen 5 1500X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, AMD Radeon RX 470, or better, Intel Core i7-4770K / AMD Ryzen 5 1500X"
+    },
+    {
+      "title": "War Footing",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Integrated Graphics",
+      "cpu": "Dual-Core 2.0 GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Integrated Graphics, Dual-Core 2.0 GHz"
     },
     {
       "title": "Echo Weaver",
@@ -1610,6 +1610,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB or AMD Radeon RX 6700 XT 12 GB, Intel Core i5-12400F or AMD Ryzen 5 5600"
     },
     {
+      "title": "Five Nights with Maids",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DirectX 9/OpenGL 4.1 capable GPU",
+      "cpu": "Intel Core2 Duo or better",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: DirectX 9/OpenGL 4.1 capable GPU, Intel Core2 Duo or better"
+    },
+    {
       "title": "星光田野 / Starlit Fields",
       "tier": "green",
       "tiers": {
@@ -1632,18 +1644,6 @@
       "cpu": "Dual core 2.0 GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: DirectX 11 compatible, 1 GB VRAM, Dual core 2.0 GHz"
-    },
-    {
-      "title": "Five Nights with Maids",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DirectX 9/OpenGL 4.1 capable GPU",
-      "cpu": "Intel Core2 Duo or better",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: DirectX 9/OpenGL 4.1 capable GPU, Intel Core2 Duo or better"
     },
     {
       "title": "Cozy Farm: Tidy Up!",
