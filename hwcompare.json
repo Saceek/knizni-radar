@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-21T10:16:16.785Z",
+  "updatedAt": "2026-10-21T11:16:37.638Z",
   "games": [
     {
       "title": "Enshrouded",
@@ -746,18 +746,6 @@
       "note": "Minimální konfigurace: Geforce 9600 GS, Radeon HD4000, Shader Model 3.0, 512 MB, Dual-core processor (Intel Dual Core 2.0 GHz or AMD Athlon X2 5200+ 2.6 GHz)"
     },
     {
-      "title": "ShipCrafter",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "RTX2060",
-      "cpu": "8 cores - 3.5GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX2060, 8 cores - 3.5GHz"
-    },
-    {
       "title": "塔防山贼模拟器",
       "tier": "green",
       "tiers": {
@@ -768,6 +756,18 @@
       "cpu": "Intel Dual-Core 1.6GHz or faster processor",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Graphic card with DX10 (Shader-Model 4.0) abilities, Intel Dual-Core 1.6GHz or faster processor"
+    },
+    {
+      "title": "ShipCrafter",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "RTX2060",
+      "cpu": "8 cores - 3.5GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX2060, 8 cores - 3.5GHz"
     },
     {
       "title": "Lucid Cats",
@@ -1154,18 +1154,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
-      "title": "Big Dig",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GPU with at least 2 GB of VRAM",
-      "cpu": "i3 or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GPU with at least 2 GB of VRAM, i3 or equivalent"
-    },
-    {
       "title": "Needle In A Haystack",
       "tier": "green",
       "tiers": {
@@ -1176,6 +1164,18 @@
       "cpu": "Intel Core i7-3770 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 or equivalent, Intel Core i7-3770 or equivalent"
+    },
+    {
+      "title": "Big Dig",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GPU with at least 2 GB of VRAM",
+      "cpu": "i3 or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GPU with at least 2 GB of VRAM, i3 or equivalent"
     },
     {
       "title": "LOST & FOUND - Oddělení ztrát a nálezů",
@@ -1238,18 +1238,6 @@
       "note": "Doporučená konfigurace: AMD Radeon RX 7600 XT / NVIDIA GeForce RTX 5070 / 4070 TI, AMD Ryzen 7 3700X / Intel Core i5-9600K"
     },
     {
-      "title": "Truckful",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "3GB VRAM (GeForce GTX 1060 and above)",
-      "cpu": "Requires a 64-bit processor and operating system",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: 3GB VRAM (GeForce GTX 1060 and above), Requires a 64-bit processor and operating system"
-    },
-    {
       "title": "AI Olympius",
       "tier": "orange",
       "tiers": {
@@ -1260,6 +1248,18 @@
       "cpu": "4 core / 8 threads | Intel Core i7-7700 | Ryzen 5 1400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: 8GB VRAM | RTX2070 | RX 6700 XT, 4 core / 8 threads | Intel Core i7-7700 | Ryzen 5 1400"
+    },
+    {
+      "title": "Truckful",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "3GB VRAM (GeForce GTX 1060 and above)",
+      "cpu": "Requires a 64-bit processor and operating system",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 3GB VRAM (GeForce GTX 1060 and above), Requires a 64-bit processor and operating system"
     },
     {
       "title": "Sort The Capybaras",
@@ -1358,18 +1358,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 or above, Intel® Core™ i5"
     },
     {
-      "title": "Drop Command",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "orange"
-      },
-      "gpu": "NVIDIA RTX 3080",
-      "cpu": "Intel Core i7-6700K/AMD Ryzen 7 1700",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 3080, Intel Core i7-6700K/AMD Ryzen 7 1700"
-    },
-    {
       "title": "Starlathe",
       "tier": "green",
       "tiers": {
@@ -1380,6 +1368,18 @@
       "cpu": "6-core / 12-thread, 3.5 GHz or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Any dedicated DirectX 11 GPU, 2 GB VRAM, 6-core / 12-thread, 3.5 GHz or better"
+    },
+    {
+      "title": "Drop Command",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "orange"
+      },
+      "gpu": "NVIDIA RTX 3080",
+      "cpu": "Intel Core i7-6700K/AMD Ryzen 7 1700",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 3080, Intel Core i7-6700K/AMD Ryzen 7 1700"
     },
     {
       "title": "Thank You Bus Driver",
