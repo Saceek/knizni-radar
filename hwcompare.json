@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T11:15:24.762Z",
+  "updatedAt": "2026-10-22T12:15:37.074Z",
   "games": [
     {
       "title": "Enshrouded",
@@ -818,6 +818,18 @@
       "note": "Doporučená konfigurace: Radeon RX 5500 XT OC 8G or Nvidia GTX 1660, AMD Ryzen 5 3600 6-Core 3.60 GHz or Intel Core i5-9600K 6-Core 3.7 GHz"
     },
     {
+      "title": "Big Dig",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GPU with at least 2 GB of VRAM",
+      "cpu": "i3 or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GPU with at least 2 GB of VRAM, i3 or equivalent"
+    },
+    {
       "title": "Nientum - Op.ZERO",
       "tier": "green",
       "tiers": {
@@ -840,18 +852,6 @@
       "cpu": "Intel Core i3",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: OpenGL 2.1 compatible graphics card, integrated graphics, Intel Core i3"
-    },
-    {
-      "title": "Big Dig",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GPU with at least 2 GB of VRAM",
-      "cpu": "i3 or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GPU with at least 2 GB of VRAM, i3 or equivalent"
     },
     {
       "title": "Birb",
@@ -1466,18 +1466,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / RTX 2060 / AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-8400 / AMD Ryzen 5 2600 (6 cores)"
     },
     {
-      "title": "Dimenshot",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Geforce GTX 970 Or Equivalent",
-      "cpu": "2.5 GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Geforce GTX 970 Or Equivalent, 2.5 GHz"
-    },
-    {
       "title": "War Footing",
       "tier": "green",
       "tiers": {
@@ -1488,6 +1476,18 @@
       "cpu": "Dual-Core 2.0 GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Integrated Graphics, Dual-Core 2.0 GHz"
+    },
+    {
+      "title": "Dimenshot",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Geforce GTX 970 Or Equivalent",
+      "cpu": "2.5 GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Geforce GTX 970 Or Equivalent, 2.5 GHz"
     },
     {
       "title": "Bruisers 2D Boxing",
