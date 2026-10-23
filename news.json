@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-23T03:26:35.228Z",
+  "updatedAt": "2026-10-23T04:26:15.827Z",
   "items": [
     {
       "type": "movie",
@@ -39,6 +39,44 @@
       "released": "2026-10-22T00:00:00.000Z",
       "gamePass": false,
       "demoAppid": null,
+      "firstSeen": "2026-10-23",
+      "daysLeft": 3
+    },
+    {
+      "type": "book",
+      "title": "Provinilé matky",
+      "author": "Angela Marsonsová",
+      "cover": "https://www.knihydobrovsky.cz/thumbs/og-image/mod_eshop/produkty/p/provinile-matky-20260929105725-9788028416652.jpg",
+      "rating": null,
+      "ratingSource": "databazeknih.cz",
+      "link": "https://www.databazeknih.cz/prehled-knihy/pripady-kim-stoneove-d-i-kim-stone-provinile-matky-607706",
+      "price": 399,
+      "priceShop": "Dobrovský",
+      "cat": [
+        "Dobrovský"
+      ],
+      "palmknihy": null,
+      "firstSeen": "2026-10-23",
+      "daysLeft": 3
+    },
+    {
+      "type": "game",
+      "title": "The Last Camp : Dawn",
+      "appid": 4198430,
+      "rating": 98,
+      "reviews": 158,
+      "scoreDesc": "Very Positive",
+      "price": "22,05€",
+      "image": "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/4198430/690f9b7936498c71bcf87f9b5eb080b5c4861a79/header.jpg?t=1792670664",
+      "url": "https://store.steampowered.com/app/4198430/",
+      "tags": [
+        "Akční",
+        "Dobrodružné",
+        "RPG"
+      ],
+      "released": "2026-10-22T00:00:00.000Z",
+      "gamePass": false,
+      "demoAppid": 4598480,
       "firstSeen": "2026-10-23",
       "daysLeft": 3
     },
@@ -350,10 +388,10 @@
     }
   ],
   "counts": {
-    "books": 0,
+    "books": 1,
     "comics": 3,
     "movies": 5,
     "series": 2,
-    "games": 8
+    "games": 9
   }
 }
