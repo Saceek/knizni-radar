@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-23T09:16:03.729Z",
+  "updatedAt": "2026-10-23T10:15:32.715Z",
   "games": [
     {
       "title": "Enshrouded",
@@ -494,6 +494,18 @@
       "note": "Doporučená konfigurace: Nvidia GTX 950 | AMD R7 370, AMD Athlon X4 | Intel Core i5 4460"
     },
     {
+      "title": "FINAL FANTASY RESONANCE",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "AMD Radeon™ RX 5500 XT / Intel® Arc™ A580 / NVIDIA® GeForce® GTX 1650",
+      "cpu": "AMD Ryzen™ 5 2500X / Intel® Core™ i3-8100",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: AMD Radeon™ RX 5500 XT / Intel® Arc™ A580 / NVIDIA® GeForce® GTX 1650, AMD Ryzen™ 5 2500X / Intel® Core™ i3-8100"
+    },
+    {
       "title": "Dungeon Inn",
       "tier": "green",
       "tiers": {
@@ -516,18 +528,6 @@
       "cpu": "Intel Core i5",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560, Intel Core i5"
-    },
-    {
-      "title": "FINAL FANTASY RESONANCE",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "AMD Radeon™ RX 5500 XT / Intel® Arc™ A580 / NVIDIA® GeForce® GTX 1650",
-      "cpu": "AMD Ryzen™ 5 2500X / Intel® Core™ i3-8100",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: AMD Radeon™ RX 5500 XT / Intel® Arc™ A580 / NVIDIA® GeForce® GTX 1650, AMD Ryzen™ 5 2500X / Intel® Core™ i3-8100"
     },
     {
       "title": "Trash Day",
@@ -602,18 +602,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
-      "title": "RetroSpace",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1650 or AMD Radeon RX 6600",
-      "cpu": "Intel Core i5-11600K or AMD Ryzen 5 5600G",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 or AMD Radeon RX 6600, Intel Core i5-11600K or AMD Ryzen 5 5600G"
-    },
-    {
       "title": "One Million Coins",
       "tier": "orange",
       "tiers": {
@@ -624,6 +612,18 @@
       "cpu": "Intel Core i7-9700K or AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD RX 6600, Intel Core i7-9700K or AMD Ryzen 5 3600"
+    },
+    {
+      "title": "RetroSpace",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1650 or AMD Radeon RX 6600",
+      "cpu": "Intel Core i5-11600K or AMD Ryzen 5 5600G",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 or AMD Radeon RX 6600, Intel Core i5-11600K or AMD Ryzen 5 5600G"
     },
     {
       "title": "Neon Abyss 2",
@@ -914,18 +914,6 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060, Intel Core i7-6600K / AMD Ryzen 5 5600"
     },
     {
-      "title": "Barfender: CO-OP Bar Simulator",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 1060 - AMD RX 580",
-      "cpu": "Intel i5-2500K - AMD FX-6300",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GTX 1060 - AMD RX 580, Intel i5-2500K - AMD FX-6300"
-    },
-    {
       "title": "Cucina Stellata",
       "tier": "green",
       "tiers": {
@@ -936,6 +924,18 @@
       "cpu": "Dual-core 2.0 GHz or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: DirectX 10 compatible GPU, Dual-core 2.0 GHz or equivalent"
+    },
+    {
+      "title": "Barfender: CO-OP Bar Simulator",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 1060 - AMD RX 580",
+      "cpu": "Intel i5-2500K - AMD FX-6300",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GTX 1060 - AMD RX 580, Intel i5-2500K - AMD FX-6300"
     },
     {
       "title": "Frutiger Home",
@@ -1118,6 +1118,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 or above, Intel® Core™ i5"
     },
     {
+      "title": "The Last Camp : Dawn",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT or Intel Arc B570",
+      "cpu": "Intel Core i7-12700 / AMD Ryzen 7 5800X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT or Intel Arc B570, Intel Core i7-12700 / AMD Ryzen 7 5800X"
+    },
+    {
       "title": "LOST & FOUND - Oddělení ztrát a nálezů",
       "tier": "green",
       "tiers": {
@@ -1140,18 +1152,6 @@
       "cpu": "Intel Core i3-8100 / AMD Ryzen 3 3100",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 650Ti [1 GB] / AMD Radeon HD 7770 [2 GB] / Intel Arc A310 [4 GB], Intel Core i3-8100 / AMD Ryzen 3 3100"
-    },
-    {
-      "title": "The Last Camp : Dawn",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT or Intel Arc B570",
-      "cpu": "Intel Core i7-12700 / AMD Ryzen 7 5800X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT or Intel Arc B570, Intel Core i7-12700 / AMD Ryzen 7 5800X"
     },
     {
       "title": "Horns of Deliverance",
@@ -1226,18 +1226,6 @@
       "note": "Doporučená konfigurace: GeForce RTX 2060, Intel i7 12700K"
     },
     {
-      "title": "Truckful",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "3GB VRAM (GeForce GTX 1060 and above)",
-      "cpu": "Requires a 64-bit processor and operating system",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: 3GB VRAM (GeForce GTX 1060 and above), Requires a 64-bit processor and operating system"
-    },
-    {
       "title": "Bruisers 2D Boxing",
       "tier": "green",
       "tiers": {
@@ -1248,6 +1236,18 @@
       "cpu": "Quad-core 2.5 GHz or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: DirectX 11 compatible, 2 GB VRAM, Quad-core 2.5 GHz or better"
+    },
+    {
+      "title": "Truckful",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "3GB VRAM (GeForce GTX 1060 and above)",
+      "cpu": "Requires a 64-bit processor and operating system",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 3GB VRAM (GeForce GTX 1060 and above), Requires a 64-bit processor and operating system"
     },
     {
       "title": "Glory To The Heroes™",
@@ -1356,6 +1356,18 @@
       "cpu": null,
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel® UHD Graphics"
+    },
+    {
+      "title": "再再启程 One Way Tickets",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA Geforce GTS 450/ AMD Radeon HD 5570",
+      "cpu": "Intel Core i3 Dual Core",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA Geforce GTS 450/ AMD Radeon HD 5570, Intel Core i3 Dual Core"
     },
     {
       "title": "Starlathe",
@@ -1598,18 +1610,6 @@
       "note": "Minimální konfigurace: DX10, DX11, DX12 capable, Intel Core i5-6500/Core i7-4770 or AMD Ryzen 5 1500X"
     },
     {
-      "title": "星光田野 / Starlit Fields",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 660 / AMD Radeon HD 7850",
-      "cpu": "Core i5-4460 (3.2 GHz)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 660 / AMD Radeon HD 7850, Core i5-4460 (3.2 GHz)"
-    },
-    {
       "title": "My Beautiful Faraway, Please Don't Be Cruel To Me",
       "tier": "green",
       "tiers": {
@@ -1620,6 +1620,18 @@
       "cpu": "AMD Ryzen 5 3600 / Intel Core i5-10400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 1060 6GB / RX 580, AMD Ryzen 5 3600 / Intel Core i5-10400"
+    },
+    {
+      "title": "星光田野 / Starlit Fields",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 660 / AMD Radeon HD 7850",
+      "cpu": "Core i5-4460 (3.2 GHz)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 660 / AMD Radeon HD 7850, Core i5-4460 (3.2 GHz)"
     },
     {
       "title": "The Incident at Galley House",
