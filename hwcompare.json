@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-23T17:17:19.908Z",
+  "updatedAt": "2026-10-23T18:15:58.328Z",
   "games": [
     {
       "title": "Enshrouded",
@@ -86,18 +86,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 Ti, RTX 4060 8 GB, Intel Core i5-12600K or AMD Ryzen 5 7600"
     },
     {
-      "title": "Mycopunk",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "Geforce RTX 2080 / Radeon RX 5700 XT / Arc A750",
-      "cpu": "Intel Core i7-6700K / AMD Ryzen 5 1500X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Geforce RTX 2080 / Radeon RX 5700 XT / Arc A750, Intel Core i7-6700K / AMD Ryzen 5 1500X"
-    },
-    {
       "title": "Call of Duty®: Modern Warfare® 4",
       "tier": "orange",
       "tiers": {
@@ -108,6 +96,18 @@
       "cpu": "AMD Ryzen™ 5 3600 or Intel® Core™ i7-8700K",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: AMD Radeon™ RX 6600XT, NVIDIA® GeForce® RTX 3060 or Intel® Arc™ B580, AMD Ryzen™ 5 3600 or Intel® Core™ i7-8700K"
+    },
+    {
+      "title": "Mycopunk",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "Geforce RTX 2080 / Radeon RX 5700 XT / Arc A750",
+      "cpu": "Intel Core i7-6700K / AMD Ryzen 5 1500X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Geforce RTX 2080 / Radeon RX 5700 XT / Arc A750, Intel Core i7-6700K / AMD Ryzen 5 1500X"
     },
     {
       "title": "Tape to Tape",
@@ -386,18 +386,6 @@
       "note": "Doporučená konfigurace: RX 6800 / RTX 3070, Ryzen 7 5800X / Core i5-13400"
     },
     {
-      "title": "Denizen",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 1060 / RX 480",
-      "cpu": "i5 7600 / Ryzen 5 2600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1060 / RX 480, i5 7600 / Ryzen 5 2600X"
-    },
-    {
       "title": "FINAL FANTASY RESONANCE",
       "tier": "green",
       "tiers": {
@@ -408,6 +396,18 @@
       "cpu": "AMD Ryzen™ 5 2500X / Intel® Core™ i3-8100",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: AMD Radeon™ RX 5500 XT / Intel® Arc™ A580 / NVIDIA® GeForce® GTX 1650, AMD Ryzen™ 5 2500X / Intel® Core™ i3-8100"
+    },
+    {
+      "title": "Denizen",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 1060 / RX 480",
+      "cpu": "i5 7600 / Ryzen 5 2600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1060 / RX 480, i5 7600 / Ryzen 5 2600X"
     },
     {
       "title": "NightClub Simulator",
@@ -446,18 +446,6 @@
       "note": "Doporučená konfigurace: OpenGL ES 2.0 hardware driver support required for WebGL acceleration. (AMD Catalyst 10.9, nVidia 358.50), 2+ GHz Processor"
     },
     {
-      "title": "Toy Shire",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Nvidia GeForce 1050",
-      "cpu": "Intel Core i5",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Nvidia GeForce 1050, Intel Core i5"
-    },
-    {
       "title": "Chained Beasts",
       "tier": "green",
       "tiers": {
@@ -468,6 +456,18 @@
       "cpu": "Intel Core i5-5257U, AMD Ryzen 3 1200 or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce GTX 1050, AMD RX 460 or equivalent, Intel Core i5-5257U, AMD Ryzen 3 1200 or equivalent"
+    },
+    {
+      "title": "Toy Shire",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GeForce 1050",
+      "cpu": "Intel Core i5",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Nvidia GeForce 1050, Intel Core i5"
     },
     {
       "title": "Warhammer 40,000: Boltgun 2",
@@ -530,6 +530,18 @@
       "note": "Minimální konfigurace: Radeon RX 580, AMD Ryzen 5 3600X 6-Core Processor 3.79 GHz"
     },
     {
+      "title": "再再启程 One Way Tickets",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA Geforce GTS 450/ AMD Radeon HD 5570",
+      "cpu": "Intel Core i3 Dual Core",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA Geforce GTS 450/ AMD Radeon HD 5570, Intel Core i3 Dual Core"
+    },
+    {
       "title": "守护我的大火箭",
       "tier": "green",
       "tiers": {
@@ -578,18 +590,6 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 2070 / AMD 5700 XT, Intel i5 7600K / AMD Ryzen 5 2600x"
     },
     {
-      "title": "再再启程 One Way Tickets",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA Geforce GTS 450/ AMD Radeon HD 5570",
-      "cpu": "Intel Core i3 Dual Core",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA Geforce GTS 450/ AMD Radeon HD 5570, Intel Core i3 Dual Core"
-    },
-    {
       "title": "Japanese Ramen Simulator",
       "tier": "green",
       "tiers": {
@@ -602,18 +602,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / Radeon R9 390X (6GB+ of VRAM), Intel Core i7"
     },
     {
-      "title": "Blightstone",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Nvidia GTX 950 | AMD R7 370",
-      "cpu": "AMD Athlon X4 | Intel Core i5 4460",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Nvidia GTX 950 | AMD R7 370, AMD Athlon X4 | Intel Core i5 4460"
-    },
-    {
       "title": "One Million Coins",
       "tier": "orange",
       "tiers": {
@@ -624,6 +612,18 @@
       "cpu": "Intel Core i7-9700K or AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD RX 6600, Intel Core i7-9700K or AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Blightstone",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GTX 950 | AMD R7 370",
+      "cpu": "AMD Athlon X4 | Intel Core i5 4460",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Nvidia GTX 950 | AMD R7 370, AMD Athlon X4 | Intel Core i5 4460"
     },
     {
       "title": "Game Keeper: Somebody Messed Up My Shop!",
@@ -672,6 +672,18 @@
       "cpu": "Intel® Core™ i5-7600 (quad-core) / AMD® Ryzen™ 3 2200G (quad-core)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 1060 (6 GB) / AMD® Radeon™ RX 580 (8 GB) / Intel® Arc™ A580 (8 GB), Intel® Core™ i5-7600 (quad-core) / AMD® Ryzen™ 3 2200G (quad-core)"
+    },
+    {
+      "title": "FlatOut 4: Total Insanity VR",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "orange"
+      },
+      "gpu": "NVIDIA 3070 or equivalent",
+      "cpu": null,
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA 3070 or equivalent"
     },
     {
       "title": "Disney/Pixar Toy Story 3 Complete Edition",
@@ -1154,18 +1166,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 470 or AMD Radeon 6870 HD series card or higher, Quad-core Intel or AMD, 2.5 GHz or faster"
     },
     {
-      "title": "Tales of Eternia Remastered",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Nvidia GeForce GTX 650Ti [1 GB] / AMD Radeon HD 7770 [2 GB] / Intel Arc A310 [4 GB]",
-      "cpu": "Intel Core i3-8100 / AMD Ryzen 3 3100",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 650Ti [1 GB] / AMD Radeon HD 7770 [2 GB] / Intel Arc A310 [4 GB], Intel Core i3-8100 / AMD Ryzen 3 3100"
-    },
-    {
       "title": "Bruisers 2D Boxing",
       "tier": "green",
       "tiers": {
@@ -1176,6 +1176,18 @@
       "cpu": "Quad-core 2.5 GHz or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: DirectX 11 compatible, 2 GB VRAM, Quad-core 2.5 GHz or better"
+    },
+    {
+      "title": "Tales of Eternia Remastered",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GeForce GTX 650Ti [1 GB] / AMD Radeon HD 7770 [2 GB] / Intel Arc A310 [4 GB]",
+      "cpu": "Intel Core i3-8100 / AMD Ryzen 3 3100",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 650Ti [1 GB] / AMD Radeon HD 7770 [2 GB] / Intel Arc A310 [4 GB], Intel Core i3-8100 / AMD Ryzen 3 3100"
     },
     {
       "title": "AI Olympius",
@@ -1538,6 +1550,18 @@
       "note": "Doporučená konfigurace: Intel HD Graphics 520 or better, or any dedicated GPU, Quad-core 2.5 GHz (Intel Core i5 / AMD Ryzen 5) or equivalent"
     },
     {
+      "title": "Five Nights with Maids",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DirectX 9/OpenGL 4.1 capable GPU",
+      "cpu": "Intel Core2 Duo or better",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: DirectX 9/OpenGL 4.1 capable GPU, Intel Core2 Duo or better"
+    },
+    {
       "title": "Demon General Kirsten",
       "tier": "green",
       "tiers": {
@@ -1586,18 +1610,6 @@
       "note": "Minimální konfigurace: DX10, DX11, DX12 capable, Intel Core i5-6500/Core i7-4770 or AMD Ryzen 5 1500X"
     },
     {
-      "title": "Train Station Tycoon",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 3060 12 GB or AMD Radeon RX 6700 XT 12 GB",
-      "cpu": "Intel Core i5-12400F or AMD Ryzen 5 5600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB or AMD Radeon RX 6700 XT 12 GB, Intel Core i5-12400F or AMD Ryzen 5 5600"
-    },
-    {
       "title": "伊莉亚娜公主的坠落之夜~她已不再属于你~",
       "tier": "green",
       "tiers": {
@@ -1608,6 +1620,18 @@
       "cpu": "Intel Core i3",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GTX750TI, Intel Core i3"
+    },
+    {
+      "title": "Train Station Tycoon",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060 12 GB or AMD Radeon RX 6700 XT 12 GB",
+      "cpu": "Intel Core i5-12400F or AMD Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB or AMD Radeon RX 6700 XT 12 GB, Intel Core i5-12400F or AMD Ryzen 5 5600"
     },
     {
       "title": "My Beautiful Faraway, Please Don't Be Cruel To Me",
