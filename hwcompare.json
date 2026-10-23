@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-23T01:16:21.354Z",
+  "updatedAt": "2026-10-23T02:16:33.474Z",
   "games": [
     {
       "title": "Enshrouded",
@@ -158,18 +158,6 @@
       "note": "Minimální konfigurace: NVIDIA GTX 1060 (6 GB) / AMD RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
-      "title": "Way of the Hunter 2",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "GeForce RTX 4060 Ti / Radeon RX 7600 XT",
-      "cpu": "Ryzen 5 7600X / Core i5-14600K",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 4060 Ti / Radeon RX 7600 XT, Ryzen 5 7600X / Core i5-14600K"
-    },
-    {
       "title": "Valor Mortis",
       "tier": "red",
       "tiers": {
@@ -180,6 +168,18 @@
       "cpu": "Ryzen 7 5800X / Core i5-13400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RX 6800 / RTX 3070, Ryzen 7 5800X / Core i5-13400"
+    },
+    {
+      "title": "Way of the Hunter 2",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "GeForce RTX 4060 Ti / Radeon RX 7600 XT",
+      "cpu": "Ryzen 5 7600X / Core i5-14600K",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 4060 Ti / Radeon RX 7600 XT, Ryzen 5 7600X / Core i5-14600K"
     },
     {
       "title": "DYNASTY WARRIORS 3: Complete Edition Remastered",
@@ -890,6 +890,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 5500 XT, or better, Intel Core i5-10400 / AMD Ryzen 5 3600, or better"
     },
     {
+      "title": "FINAL FANTASY RESONANCE",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "AMD Radeon™ RX 5500 XT / Intel® Arc™ A580 / NVIDIA® GeForce® GTX 1650",
+      "cpu": "AMD Ryzen™ 5 2500X / Intel® Core™ i3-8100",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: AMD Radeon™ RX 5500 XT / Intel® Arc™ A580 / NVIDIA® GeForce® GTX 1650, AMD Ryzen™ 5 2500X / Intel® Core™ i3-8100"
+    },
+    {
       "title": "Remote Reaper: FPV Combat Drone Simulator",
       "tier": "red",
       "tiers": {
@@ -962,18 +974,6 @@
       "note": "Doporučená konfigurace: Nvidia GTX 970 | AMD RX 570, AMD Ryzen 3 | Intel i5 Skylake"
     },
     {
-      "title": "Let's Tidy Up! : Treasure",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT",
-      "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "崇祯直聘：明末官场沉浮模拟器",
       "tier": "green",
       "tiers": {
@@ -986,16 +986,16 @@
       "note": "Doporučená konfigurace: Dedicated or modern integrated graphics with OpenGL 3.3 support, Intel Core i5 or equivalent"
     },
     {
-      "title": "FINAL FANTASY RESONANCE",
-      "tier": "green",
+      "title": "Let's Tidy Up! : Treasure",
+      "tier": "orange",
       "tiers": {
-        "allyx": "green",
+        "allyx": "orange",
         "pc": "green"
       },
-      "gpu": "AMD Radeon™ RX 5500 XT / Intel® Arc™ A580 / NVIDIA® GeForce® GTX 1650",
-      "cpu": "AMD Ryzen™ 5 2500X / Intel® Core™ i3-8100",
+      "gpu": "NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT",
+      "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: AMD Radeon™ RX 5500 XT / Intel® Arc™ A580 / NVIDIA® GeForce® GTX 1650, AMD Ryzen™ 5 2500X / Intel® Core™ i3-8100"
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
     },
     {
       "title": "Cucina Stellata",
@@ -1238,18 +1238,6 @@
       "note": "Minimální konfigurace: GTX 1080, i7"
     },
     {
-      "title": "FIRE AND ASHES",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "GeForce RTX 3060 or equivalent",
-      "cpu": "Intel Core i7-4770k or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 or equivalent, Intel Core i7-4770k or equivalent"
-    },
-    {
       "title": "Bruisers 2D Boxing",
       "tier": "green",
       "tiers": {
@@ -1260,6 +1248,18 @@
       "cpu": "Quad-core 2.5 GHz or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: DirectX 11 compatible, 2 GB VRAM, Quad-core 2.5 GHz or better"
+    },
+    {
+      "title": "FIRE AND ASHES",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "GeForce RTX 3060 or equivalent",
+      "cpu": "Intel Core i7-4770k or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3060 or equivalent, Intel Core i7-4770k or equivalent"
     },
     {
       "title": "Cyberfrags '69",
@@ -1418,6 +1418,18 @@
       "note": "Doporučená konfigurace: GTX 1060 6GB / RX 580, Intel Core i5-10400 / Ryzen 5 3600"
     },
     {
+      "title": "AKIBA LOST - アキバロスト",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DirectX 11 or later",
+      "cpu": "Intel® Core i5",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: DirectX 11 or later, Intel® Core i5"
+    },
+    {
       "title": "Dreadline Express",
       "tier": "green",
       "tiers": {
@@ -1440,18 +1452,6 @@
       "cpu": "Intel Core i3-4100, AMD A8-6600K",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Nvidia GeForce GTX 460, AMD Radeon R7 250X, Intel Core i3-4100, AMD A8-6600K"
-    },
-    {
-      "title": "AKIBA LOST - アキバロスト",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DirectX 11 or later",
-      "cpu": "Intel® Core i5",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: DirectX 11 or later, Intel® Core i5"
     },
     {
       "title": "冒险者公会",
