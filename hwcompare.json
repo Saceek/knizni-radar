@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-24T22:15:53.325Z",
+  "updatedAt": "2026-10-24T23:16:45.319Z",
   "games": [
     {
       "title": "Enshrouded",
@@ -638,6 +638,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
     },
     {
+      "title": "Moon Sweepers",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1660 Super / AMD Radeon RX 5600 XT",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
+    },
+    {
       "title": "FlatOut 4: Total Insanity VR",
       "tier": "red",
       "tiers": {
@@ -660,18 +672,6 @@
       "cpu": "Ryzen 3 3100 / Core i5-4690K",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1050Ti / Radeon RX 460, Ryzen 3 3100 / Core i5-4690K"
-    },
-    {
-      "title": "Moon Sweepers",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1660 Super / AMD Radeon RX 5600 XT",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "Cucina Stellata",
@@ -830,18 +830,6 @@
       "note": "Minimální konfigurace: 2GB Video Memory, 2.5Ghz or better"
     },
     {
-      "title": "Crack the Pack",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "512MB, OpenGL 3+",
-      "cpu": "2.7 GHz Dual Core",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: 512MB, OpenGL 3+, 2.7 GHz Dual Core"
-    },
-    {
       "title": "Heartfall — A Tale in Three Lives",
       "tier": "green",
       "tiers": {
@@ -852,6 +840,18 @@
       "cpu": "AMD Ryzen 3 7320U/Ryzen 3 1200; Intel Core i3-1215U/i3-8100",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: AMD Radeon 680M; Nvidia GTX 1050 Ti, Intel Arc A310/Xe 96EU, AMD Ryzen 3 7320U/Ryzen 3 1200; Intel Core i3-1215U/i3-8100"
+    },
+    {
+      "title": "Crack the Pack",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "512MB, OpenGL 3+",
+      "cpu": "2.7 GHz Dual Core",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: 512MB, OpenGL 3+, 2.7 GHz Dual Core"
     },
     {
       "title": "Birb",
@@ -962,6 +962,18 @@
       "note": "Doporučená konfigurace: DirectX 11 compatible, 2 GB VRAM, Quad-core 2.5 GHz or better"
     },
     {
+      "title": "ONE PIECE: Grand Gourmet",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1070 Ti [8 GB] / AMD Radeon RX 5600 XT [6 GB] / Intel Arc A580 [8 GB]",
+      "cpu": "Intel Core i7-8700 / AMD Ryzen 5 4500",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1070 Ti [8 GB] / AMD Radeon RX 5600 XT [6 GB] / Intel Arc A580 [8 GB], Intel Core i7-8700 / AMD Ryzen 5 4500"
+    },
+    {
       "title": "Battleplan",
       "tier": "green",
       "tiers": {
@@ -984,18 +996,6 @@
       "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
-    },
-    {
-      "title": "ONE PIECE: Grand Gourmet",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1070 Ti [8 GB] / AMD Radeon RX 5600 XT [6 GB] / Intel Arc A580 [8 GB]",
-      "cpu": "Intel Core i7-8700 / AMD Ryzen 5 4500",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1070 Ti [8 GB] / AMD Radeon RX 5600 XT [6 GB] / Intel Arc A580 [8 GB], Intel Core i7-8700 / AMD Ryzen 5 4500"
     },
     {
       "title": "Babel Legacy",
@@ -1118,18 +1118,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT or Intel Arc B570, Intel Core i7-12700 / AMD Ryzen 7 5800X"
     },
     {
-      "title": "LOST & FOUND - Oddělení ztrát a nálezů",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 470 or AMD Radeon 6870 HD series card or higher",
-      "cpu": "Quad-core Intel or AMD, 2.5 GHz or faster",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 470 or AMD Radeon 6870 HD series card or higher, Quad-core Intel or AMD, 2.5 GHz or faster"
-    },
-    {
       "title": "Tales of Eternia Remastered",
       "tier": "green",
       "tiers": {
@@ -1140,6 +1128,18 @@
       "cpu": "Intel Core i3-8100 / AMD Ryzen 3 3100",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 650Ti [1 GB] / AMD Radeon HD 7770 [2 GB] / Intel Arc A310 [4 GB], Intel Core i3-8100 / AMD Ryzen 3 3100"
+    },
+    {
+      "title": "LOST & FOUND - Oddělení ztrát a nálezů",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 470 or AMD Radeon 6870 HD series card or higher",
+      "cpu": "Quad-core Intel or AMD, 2.5 GHz or faster",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 470 or AMD Radeon 6870 HD series card or higher, Quad-core Intel or AMD, 2.5 GHz or faster"
     },
     {
       "title": "AI Olympius",
@@ -1430,6 +1430,18 @@
       "note": "Doporučená konfigurace: GTX 1060 6GB / RX 580, Intel Core i5-10400 / Ryzen 5 3600"
     },
     {
+      "title": "FrontWars",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD Graphics 520 or better, or any dedicated GPU",
+      "cpu": "Quad-core 2.5 GHz (Intel Core i5 / AMD Ryzen 5) or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Intel HD Graphics 520 or better, or any dedicated GPU, Quad-core 2.5 GHz (Intel Core i5 / AMD Ryzen 5) or equivalent"
+    },
+    {
       "title": "Stream Train",
       "tier": "orange",
       "tiers": {
@@ -1464,18 +1476,6 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 6GB / AMD RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
-      "title": "FrontWars",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel HD Graphics 520 or better, or any dedicated GPU",
-      "cpu": "Quad-core 2.5 GHz (Intel Core i5 / AMD Ryzen 5) or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Intel HD Graphics 520 or better, or any dedicated GPU, Quad-core 2.5 GHz (Intel Core i5 / AMD Ryzen 5) or equivalent"
     },
     {
       "title": "冒险者公会",
@@ -1598,18 +1598,6 @@
       "note": "Minimální konfigurace: GTX750TI, Intel Core i3"
     },
     {
-      "title": "파멸의 오타쿠",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel UHD Graphics 620",
-      "cpu": "Intel Core i5-6500",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Intel UHD Graphics 620, Intel Core i5-6500"
-    },
-    {
       "title": "Train Station Tycoon",
       "tier": "red",
       "tiers": {
@@ -1632,6 +1620,18 @@
       "cpu": "Intel Core i5-6500/Core i7-4770 or AMD Ryzen 5 1500X",
       "usedMinimum": true,
       "note": "Minimální konfigurace: DX10, DX11, DX12 capable, Intel Core i5-6500/Core i7-4770 or AMD Ryzen 5 1500X"
+    },
+    {
+      "title": "파멸의 오타쿠",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel UHD Graphics 620",
+      "cpu": "Intel Core i5-6500",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Intel UHD Graphics 620, Intel Core i5-6500"
     },
     {
       "title": "星光田野 / Starlit Fields",
