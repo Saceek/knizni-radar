@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-24T03:24:08.941Z",
+  "updatedAt": "2026-10-24T04:23:42.278Z",
   "items": [
     {
       "type": "movie",
@@ -57,6 +57,45 @@
       "released": "2026-10-22T00:00:00.000Z",
       "gamePass": false,
       "demoAppid": null,
+      "firstSeen": "2026-10-24",
+      "daysLeft": 3
+    },
+    {
+      "type": "movie",
+      "title": "Sladký život",
+      "year": "2024",
+      "rating": 56,
+      "poster": "https://image.pmgstatic.com/cache/resized/w936/files/images/film/photos/168/513/168513321_5a479m.jpg",
+      "url": "https://www.csfd.cz/film/1473660-sladky-zivot/prehled/",
+      "genres": [
+        "Komedie"
+      ],
+      "country": "Česko",
+      "vod": [
+        "Kino"
+      ],
+      "csfdType": "film",
+      "firstSeen": "2026-10-24",
+      "daysLeft": 3
+    },
+    {
+      "type": "game",
+      "title": "Stupid Never Dies",
+      "appid": 3486530,
+      "rating": 78,
+      "reviews": 100,
+      "scoreDesc": "Mostly Positive",
+      "price": "49,99€",
+      "image": "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/3486530/06dd6216ce7739d9d5be7479c748b93c027cfb7c/header.jpg?t=1792722824",
+      "url": "https://store.steampowered.com/app/3486530/",
+      "tags": [
+        "Akční",
+        "Dobrodružné",
+        "RPG"
+      ],
+      "released": "2026-10-21T00:00:00.000Z",
+      "gamePass": false,
+      "demoAppid": 4880100,
       "firstSeen": "2026-10-24",
       "daysLeft": 3
     },
@@ -476,8 +515,8 @@
   "counts": {
     "books": 1,
     "comics": 3,
-    "movies": 4,
+    "movies": 5,
     "series": 2,
-    "games": 14
+    "games": 15
   }
 }

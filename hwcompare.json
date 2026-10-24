@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-24T03:16:50.993Z",
+  "updatedAt": "2026-10-24T04:16:16.586Z",
   "games": [
     {
       "title": "Enshrouded",
@@ -194,18 +194,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 or AMD Radeon RX 6500 XT, Intel Core i5-10400F @ 2.90GHz or AMD Ryzen 5 5600"
     },
     {
-      "title": "Permafrost",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "Nvidia RTX 3070 Ti 8GB or AMD Radeon RX 6750 XT 12GB",
-      "cpu": "Intel Core i5-12400 or AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia RTX 3070 Ti 8GB or AMD Radeon RX 6750 XT 12GB, Intel Core i5-12400 or AMD Ryzen 5 5600X"
-    },
-    {
       "title": "Silver Pines",
       "tier": "green",
       "tiers": {
@@ -216,6 +204,18 @@
       "cpu": "Intel Core i5-6600 or AMD Ryzen 5 1600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NIVIDIA GeForce GTX 770, AMD Radeon R9 380, Intel Core i5-6600 or AMD Ryzen 5 1600"
+    },
+    {
+      "title": "Permafrost",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "Nvidia RTX 3070 Ti 8GB or AMD Radeon RX 6750 XT 12GB",
+      "cpu": "Intel Core i5-12400 or AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia RTX 3070 Ti 8GB or AMD Radeon RX 6750 XT 12GB, Intel Core i5-12400 or AMD Ryzen 5 5600X"
     },
     {
       "title": "Order of the Sinking Star",
@@ -410,18 +410,6 @@
       "note": "Minimální konfigurace: GeForce GTX 1050, AMD RX 460 or equivalent, Intel Core i5-5257U, AMD Ryzen 3 1200 or equivalent"
     },
     {
-      "title": "Toy Shire",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Nvidia GeForce 1050",
-      "cpu": "Intel Core i5",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Nvidia GeForce 1050, Intel Core i5"
-    },
-    {
       "title": "Warhammer 40,000: Boltgun 2",
       "tier": "green",
       "tiers": {
@@ -432,6 +420,18 @@
       "cpu": "Intel Core i7-7700K / AMD Ryzen 5 1500X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1650 (4096 MB) / Radeon RX 570 (4096 MB), Intel Core i7-7700K / AMD Ryzen 5 1500X"
+    },
+    {
+      "title": "Toy Shire",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GeForce 1050",
+      "cpu": "Intel Core i5",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Nvidia GeForce 1050, Intel Core i5"
     },
     {
       "title": "再再启程 One Way Tickets",
@@ -734,18 +734,6 @@
       "note": "Minimální konfigurace: Geforce 9600 GS, Radeon HD4000, Shader Model 3.0, 512 MB, Dual-core processor (Intel Dual Core 2.0 GHz or AMD Athlon X2 5200+ 2.6 GHz)"
     },
     {
-      "title": "ShipCrafter",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "RTX2060",
-      "cpu": "8 cores - 3.5GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX2060, 8 cores - 3.5GHz"
-    },
-    {
       "title": "Deleted Wiki: Clean Up the Lost Files",
       "tier": "green",
       "tiers": {
@@ -756,6 +744,18 @@
       "cpu": "64-bit quad-core",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Any modern GPU, 64-bit quad-core"
+    },
+    {
+      "title": "ShipCrafter",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "RTX2060",
+      "cpu": "8 cores - 3.5GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX2060, 8 cores - 3.5GHz"
     },
     {
       "title": "Cucina Stellata",
@@ -998,6 +998,18 @@
       "note": "Minimální konfigurace: 1GB, Dual Core 2.5 GHz"
     },
     {
+      "title": "Bruisers 2D Boxing",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DirectX 11 compatible, 2 GB VRAM",
+      "cpu": "Quad-core 2.5 GHz or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: DirectX 11 compatible, 2 GB VRAM, Quad-core 2.5 GHz or better"
+    },
+    {
       "title": "Feed the Cups",
       "tier": "green",
       "tiers": {
@@ -1020,18 +1032,6 @@
       "cpu": "Intel® Core™ i5-750 (quad-core) / AMD® Phenom™ II X4 965 (quad-core)",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA® GeForce® GT 630 (2 GB) / AMD® Radeon™ HD 6670 (2 GB), Intel® Core™ i5-750 (quad-core) / AMD® Phenom™ II X4 965 (quad-core)"
-    },
-    {
-      "title": "Bruisers 2D Boxing",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DirectX 11 compatible, 2 GB VRAM",
-      "cpu": "Quad-core 2.5 GHz or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: DirectX 11 compatible, 2 GB VRAM, Quad-core 2.5 GHz or better"
     },
     {
       "title": "Cult of the Yellow King",
@@ -1620,6 +1620,18 @@
       "cpu": "Core i5-4460 (3.2 GHz)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 660 / AMD Radeon HD 7850, Core i5-4460 (3.2 GHz)"
+    },
+    {
+      "title": "Stupid Never Dies",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "Geforce RTX 3060 8GB | Radeon RX 6600 8GB",
+      "cpu": "6 core / 12 threads (Intel Core i5 11600K | Ryzen 5 5600X)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Geforce RTX 3060 8GB | Radeon RX 6600 8GB, 6 core / 12 threads (Intel Core i5 11600K | Ryzen 5 5600X)"
     },
     {
       "title": "The Incident at Galley House",
