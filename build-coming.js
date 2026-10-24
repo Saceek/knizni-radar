@@ -204,7 +204,7 @@ const SZ_SKIP_GENRES = /animovan|anime|reality|dokument|talk|soutěž|zábavn|po
 const decodeHtml = (s) => (s || "").replace(/&amp;/g, "&").replace(/&#0?39;/g, "'").replace(/&quot;/g, '"').replace(/&nbsp;/g, " ").trim();
 async function szShow(slug, cache) {
   const c = cache[slug];
-  if (c && (Date.now() - c.fetchedAt) / 864e5 < 7) return c;
+  if (c && "orig" in c && (Date.now() - c.fetchedAt) / 864e5 < 7) return c;
   const res = await fetch(`https://www.serialzone.cz/serial/${slug}/`, { headers: { "User-Agent": SZ_UA, "Accept-Language": "cs" } });
   if (!res.ok) throw new Error("HTTP " + res.status);
   const t = await res.text();
@@ -216,7 +216,8 @@ async function szShow(slug, cache) {
   const rating = (t.match(/itemprop="ratingValue">(\d+)</) || [])[1];
   const poster = (t.match(/https:\/\/www\.serialzone\.cz\/obrazky\/plakaty\/[^"' ]+\.jpg/) || [])[0] || null;
   const desc = decodeHtml((t.match(/property="og:description" content="([^"]*)"/) || [])[1] || "");
-  const entry = { stanice, genres, country: country.join(" / ") || null, votes, rating: rating ? +rating : null, poster, desc, fetchedAt: Date.now() };
+  const orig = decodeHtml((t.match(/<h1>[^<]*<\/h1>\s*<h2>\(([^<]+)\)<\/h2>/) || [])[1] || "") || null;  // původní název
+  const entry = { orig, stanice, genres, country: country.join(" / ") || null, votes, rating: rating ? +rating : null, poster, desc, fetchedAt: Date.now() };
   cache[slug] = entry;
   await sleep(500);
   return entry;
@@ -255,7 +256,7 @@ async function scrapeSerialZone(months = 3) {
       if (!ok) continue;
       cnt++;
       out.push({
-        id: "sz-" + slug, title: decodeHtml(m[4]), type: "seriál", season,
+        id: "sz-" + slug, title: decodeHtml(m[4]), origTitle: s.orig, type: "seriál", season,
         year: String(y), url: `https://www.serialzone.cz/serial/${slug}/`, poster: s.poster,
         genres: s.genres.slice(0, 3), country: s.country,
         premiereDate: `${String(day).padStart(2, "0")}.${String(mo).padStart(2, "0")}.${y}`,
@@ -268,6 +269,71 @@ async function scrapeSerialZone(months = 3) {
   for (const k of Object.keys(cache)) if ((Date.now() - cache[k].fetchedAt) / 864e5 > 30) delete cache[k];
   fs.writeFileSync(SZ_CACHE, JSON.stringify(cache));
   return out;
+}
+
+// JustWatch – připravované tituly na VOD v Česku (GraphQL, stejný dotaz jako stránka /cz/novinky).
+// Dává české datum vydání na konkrétní službě: VOD filmy i nové řady seriálů.
+const JW_GENRES = { act: "Akční", ani: "Animovaný", cmy: "Komedie", crm: "Krimi", doc: "Dokumentární", drm: "Drama", fnt: "Fantasy",
+  hst: "Historický", hrr: "Horor", fml: "Rodinný", msc: "Hudební", trl: "Thriller", rma: "Romantický", scf: "Sci-Fi",
+  spt: "Sportovní", war: "Válečný", wsn: "Western", rly: "Reality", eur: "Evropský" };
+const JW_PKG = { "Disney Plus": "Disney+", "Amazon Prime Video": "Prime Video", "Apple TV": "Apple TV+", "HBO Max": "HBO Max" };
+const JW_SKIP_SEASON = new Set(["ani", "rly", "doc", "fml"]);
+async function scrapeJustWatchUpcoming() {
+  const q = `query U($country: Country!, $first: Int!, $after: String) {
+    newTitles(country: $country, first: $first, after: $after, pageType: UPCOMING) {
+      pageInfo { endCursor hasNextPage }
+      edges { node {
+        ... on MovieOrShowOrSeason { id objectType
+          content(country: $country, language: "cs") { title fullPath posterUrl originalReleaseYear genres { shortName }
+            upcomingReleases { releaseDate releaseType package { clearName } } } }
+        ... on Season { content(country: $country, language: "cs") { seasonNumber }
+          show { content(country: $country, language: "cs") { title originalTitle fullPath posterUrl genres { shortName } } } }
+      } }
+    }
+  }`;
+  const nodes = [];
+  let after = null;
+  for (let i = 0; i < 10; i++) {
+    const r = await fetch("https://apis.justwatch.com/graphql", {
+      method: "POST", headers: { "Content-Type": "application/json", "User-Agent": SZ_UA },
+      body: JSON.stringify({ query: q, variables: { country: "CZ", first: 40, after } }),
+    });
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    const j = await r.json();
+    if (j.errors) throw new Error(j.errors[0].message);
+    const nt = j.data.newTitles;
+    nodes.push(...nt.edges.map((e) => e.node));
+    if (!nt.pageInfo.hasNextPage) break;
+    after = nt.pageInfo.endCursor;
+    await sleep(400);
+  }
+  const poster = (p) => p ? "https://images.justwatch.com" + p.replace("{profile}", "s332").replace("{format}", "jpg") : null;
+  const czDate = (iso) => { const [y, m, d] = iso.split("-"); return `${d}.${m}.${y}`; };
+  const films = [], series = [];
+  for (const n of nodes) {
+    const rel = (n.content?.upcomingReleases || []).find((u) => u.releaseType === "DIGITAL");
+    if (!rel || !rel.releaseDate) continue;
+    const pkg = rel.package?.clearName ? (JW_PKG[rel.package.clearName] || rel.package.clearName) : null;
+    if (n.objectType === "MOVIE") {
+      const c = n.content;
+      films.push({ id: "jw-" + n.id, title: c.title, type: "film", year: String(c.originalReleaseYear || rel.releaseDate.slice(0, 4)),
+        url: "https://www.justwatch.com" + c.fullPath, poster: poster(c.posterUrl),
+        genres: (c.genres || []).map((g) => JW_GENRES[g.shortName]).filter(Boolean).slice(0, 3),
+        premiereDate: czDate(rel.releaseDate), vod: pkg ? [pkg] : [], source: "justwatch" });
+    } else if (n.objectType === "SHOW_SEASON" && n.show?.content) {
+      const sc = n.show.content;
+      const codes = (sc.genres || []).map((g) => g.shortName);
+      if (codes.some((c) => JW_SKIP_SEASON.has(c))) continue;
+      series.push({ id: "jw-" + n.id, title: sc.title, origTitle: sc.originalTitle || null, type: "seriál", season: n.content?.seasonNumber || null,
+        year: rel.releaseDate.slice(0, 4), url: "https://www.justwatch.com" + sc.fullPath, poster: poster(sc.posterUrl || n.content?.posterUrl),
+        genres: codes.map((c) => JW_GENRES[c]).filter(Boolean).slice(0, 3),
+        premiereDate: czDate(rel.releaseDate), vod: pkg ? [pkg] : [], source: "justwatch" });
+    }
+  }
+  // stejná řada na víc službách / víc řad naráz (Kouzelníci 2 a 3) → nechat jednu, nejvyšší řadu
+  const best = new Map();
+  for (const s of series) { const k = normTitle(s.title); const b = best.get(k); if (!b || (s.season || 0) > (b.season || 0)) best.set(k, s); }
+  return { films, series: [...best.values()] };
 }
 
 const normTitle = (s) => (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/\(\d{4}\)/g, "").replace(/[^a-z0-9]+/g, " ").trim();
@@ -396,8 +462,14 @@ async function main() {
   await enrichCSFDItems(page, antNew);
   // obnovené premiéry starých filmů (Anton Špelec 1932, Pina 2011…) do Očekávaných nepatří
   const minYear = new Date().getFullYear() - 1;
-  const films = [...premieres.filter((f) => !f.year || +f.year >= minYear), ...antNew];
-  console.log(`[coming] ${films.length} filmů (${premieres.length} z kalendáře premiér)`);
+  // VOD premiéry (Netflix, Prime Video, Disney+…) z JustWatch – ČSFD kalendář pokrývá jen kina
+  console.log("[coming] JustWatch VOD premiéry…");
+  let jw = { films: [], series: [] };
+  try { jw = await scrapeJustWatchUpcoming(); } catch (e) { console.warn("  [justwatch]", e.message); }
+  const csfdFilms = [...premieres.filter((f) => !f.year || +f.year >= minYear), ...antNew];
+  const filmKeys = new Set(csfdFilms.map((f) => normTitle(f.title)));
+  const films = [...csfdFilms, ...jw.films.filter((f) => !filmKeys.has(normTitle(f.title)))];
+  console.log(`[coming] ${films.length} filmů (${premieres.length} kino z ČSFD, ${jw.films.length} VOD z JustWatch)`);
 
   // Seriály: žebříček „nejvíce se těšíme“ + premiéry řad ze SerialZone
   console.log("[coming] ČSFD seriály…");
@@ -405,9 +477,22 @@ async function main() {
   await enrichCSFDItems(page, csfdSeries);
   console.log("[coming] SerialZone premiéry řad…");
   const szSeries = await scrapeSerialZone(3);
-  const csfdKeys = new Set(csfdSeries.map((s) => normTitle(s.title)));
-  const series = [...csfdSeries, ...szSeries.filter((s) => !csfdKeys.has(normTitle(s.title)))];
-  console.log(`[coming] ${series.length} seriálů (${szSeries.length} ze SerialZone)`);
+  // pořadí důležitosti: ČSFD žebříček → JustWatch (české datum na službě) → SerialZone (zámořské datum)
+  // Stejný seriál může mít v JustWatch anglický a na SerialZone český název („Minimum Wage“ /
+  // „Minimální mzda“) → páruje se i přes původní název ze SerialZone. U shody zůstane české jméno.
+  const series = [];
+  const byTitle = new Map();
+  for (const s of [...csfdSeries, ...jw.series, ...szSeries]) {
+    const keys = [normTitle(s.title), s.origTitle ? normTitle(s.origTitle) : null].filter(Boolean);
+    const dup = keys.map((k) => byTitle.get(k)).find(Boolean);
+    if (dup) {
+      if (s.source === "serialzone" && dup.source === "justwatch") { dup.title = s.title; if (!dup.poster) dup.poster = s.poster; }
+      continue;
+    }
+    keys.forEach((k) => byTitle.set(k, s));
+    series.push(s);
+  }
+  console.log(`[coming] ${series.length} seriálů (${jw.series.length} z JustWatch, ${szSeries.length} ze SerialZone)`);
 
   // Steam
   console.log("[coming] Steam…");
@@ -449,12 +534,12 @@ async function main() {
 
   const coming = {
     updatedAt: new Date().toISOString(),
-    films: films.filter(isFuture).sort(sortByDate).slice(0, 120).map((f) => ({
+    films: films.filter(isFuture).sort(sortByDate).slice(0, 250).map((f) => ({
       title: f.title, year: f.year, type: "film",
       poster: f.poster, url: f.url, genres: f.genres || [],
       country: f.country || null, premiereDate: f.premiereDate || null, vod: f.vod || [],
     })),
-    series: series.filter(isFuture).sort(sortByDate).slice(0, 80).map((s) => ({
+    series: series.filter(isFuture).sort(sortByDate).slice(0, 200).map((s) => ({
       title: s.title, year: s.year, type: "seriál", season: s.season || null,
       poster: s.poster, url: s.url, genres: s.genres || [],
       country: s.country || null, premiereDate: s.premiereDate || null, vod: s.vod || [],
