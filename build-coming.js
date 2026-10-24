@@ -138,6 +138,140 @@ async function enrichCSFDItems(page, items) {
   }
 }
 
+// ČSFD kalendář kinopremiér po měsících (/kino/premiery/?month=&year=) – datum je v nadpisu
+// skupiny („v kinech od 29.10.2026“), plakát/rok/země/žánr přímo u filmu, bez návštěvy detailu.
+async function scrapeCSFDPremieres(page, months = 3) {
+  const out = [], seen = new Set();
+  const now = new Date();
+  for (let i = 0; i < months; i++) {
+    const d = new Date(now.getFullYear(), now.getMonth() + i, 1);
+    const url = `https://www.csfd.cz/kino/premiery/?month=${d.getMonth() + 1}&year=${d.getFullYear()}`;
+    try {
+      await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
+      await sleep(4000);
+      const items = await page.evaluate(() => {
+        // nadpisy skupin: elementy bez filmů uvnitř, jejichž vlastní text obsahuje datum
+        const heads = [...document.querySelectorAll("body *")].filter((el) => {
+          if (el.querySelector("article")) return false;
+          const own = [...el.childNodes].filter((n) => n.nodeType === 3).map((n) => n.textContent).join(" ");
+          return /v kinech od\s*\d{1,2}\.\d{1,2}\.\d{4}/i.test(own);
+        }).map((el) => ({ el, date: el.textContent.match(/(\d{1,2}\.\d{1,2}\.\d{4})/)[1] }));
+        const before = (a, b) => !!(a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING);
+        return [...document.querySelectorAll("article")].map((el) => {
+          const a = el.querySelector("a.film-title-name");
+          if (!a) return null;
+          const m = (a.getAttribute("href") || "").match(/\/film\/(\d+)-/);
+          const img = el.querySelector("img");
+          const srcset = img ? (img.getAttribute("srcset") || "") : "";
+          const big = (srcset.match(/(\S+)\s+2x/) || [])[1] || (img && img.getAttribute("src")) || "";
+          const genresTxt = (el.querySelector(".film-origins-genres .info") || {}).textContent || "";
+          const country = ((el.querySelector(".info-country") || {}).textContent || "").trim();
+          const head = heads.filter((h) => before(h.el, el)).pop();
+          return {
+            id: m ? m[1] : null, title: a.textContent.trim(), url: "https://www.csfd.cz" + a.getAttribute("href"),
+            year: ((el.querySelector(".film-title-info .info") || {}).textContent || "").trim(),
+            poster: big ? (big.startsWith("//") ? "https:" + big : big) : null,
+            country: country || null,
+            genres: genresTxt.replace(country, "").split(",").map((g) => g.trim()).filter((g) => g.length > 1),
+            premiereDate: head ? head.date : null,
+          };
+        }).filter(Boolean);
+      });
+      let added = 0;
+      for (const it of items) {
+        if (!it.id || seen.has(it.id)) continue;
+        seen.add(it.id);
+        out.push({ ...it, type: "film", vod: ["Kino"], source: "premiery" });
+        added++;
+      }
+      console.log(`  [premiéry] ${d.getMonth() + 1}/${d.getFullYear()}: ${added} filmů`);
+    } catch (e) {
+      console.warn(`  [premiéry] ${url}: ${e.message}`);
+    }
+  }
+  return out;
+}
+
+// SerialZone – premiéry řad seriálů (díly E01) z kalendáře zahraničních seriálů. Kalendář
+// obsahuje i stovky lokálních pořadů, takže se filtruje: další řady známých seriálů podle počtu
+// hodnocení, úplně nové seriály podle velké streamovací platformy a žánru. Údaje o seriálech
+// se cachují na týden (coming hraje každou hodinu, SerialZone nechceme zatěžovat).
+const SZ_CACHE = path.join(__dirname, "serialzone-cache.json");
+const SZ_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36";
+const SZ_MIN_VOTES = 80;
+const SZ_BIG = /Netflix|HBO|Max|Disney|Prime Video|Apple TV|SkyShowtime|Paramount|Peacock|Hulu|FX|AMC|BBC|ITV|Showtime|Starz|Canal|Sky/i;
+const SZ_SKIP_GENRES = /animovan|anime|reality|dokument|talk|soutěž|zábavn|pořad|kuchař|vaření|zpravodaj|sport/i;
+const decodeHtml = (s) => (s || "").replace(/&amp;/g, "&").replace(/&#0?39;/g, "'").replace(/&quot;/g, '"').replace(/&nbsp;/g, " ").trim();
+async function szShow(slug, cache) {
+  const c = cache[slug];
+  if (c && (Date.now() - c.fetchedAt) / 864e5 < 7) return c;
+  const res = await fetch(`https://www.serialzone.cz/serial/${slug}/`, { headers: { "User-Agent": SZ_UA, "Accept-Language": "cs" } });
+  if (!res.ok) throw new Error("HTTP " + res.status);
+  const t = await res.text();
+  const info = (t.match(/<div class="mb-sz-basic-info-line">([\s\S]*?)<\/div>/) || [])[1] || "";
+  const stanice = [...info.matchAll(/stanice=[^"]*">([^<]+)</g)].map((m) => decodeHtml(m[1]));
+  const genres = [...info.matchAll(/zanr\[\]=[^"]*">([^<]+)</g)].map((m) => decodeHtml(m[1]));
+  const country = [...info.matchAll(/zeme=[^"]*">([^<]+)</g)].map((m) => decodeHtml(m[1]));
+  const votes = +((t.match(/itemprop="ratingCount">(\d+)</) || [])[1] || 0);
+  const rating = (t.match(/itemprop="ratingValue">(\d+)</) || [])[1];
+  const poster = (t.match(/https:\/\/www\.serialzone\.cz\/obrazky\/plakaty\/[^"' ]+\.jpg/) || [])[0] || null;
+  const desc = decodeHtml((t.match(/property="og:description" content="([^"]*)"/) || [])[1] || "");
+  const entry = { stanice, genres, country: country.join(" / ") || null, votes, rating: rating ? +rating : null, poster, desc, fetchedAt: Date.now() };
+  cache[slug] = entry;
+  await sleep(500);
+  return entry;
+}
+async function scrapeSerialZone(months = 3) {
+  let cache = {};
+  try { cache = JSON.parse(fs.readFileSync(SZ_CACHE, "utf-8")); } catch { /* první běh */ }
+  const out = [], seen = new Set();
+  const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  for (let i = 0; i < months; i++) {
+    const d = new Date(now.getFullYear(), now.getMonth() + i, 1);
+    const y = d.getFullYear(), mo = d.getMonth() + 1;
+    let html;
+    try {
+      const r = await fetch(`https://www.serialzone.cz/kalendar/zahranicni/${y}/${mo}/`, { headers: { "User-Agent": SZ_UA, "Accept-Language": "cs" } });
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      html = await r.text();
+    } catch (e) { console.warn(`  [serialzone] ${mo}/${y}: ${e.message}`); continue; }
+    // den v měsíci = poslední <div class="date"> před záznamem
+    const re = /<div class="date"[^>]*><a[^>]*>(\d{1,2})<\/a><\/div>|<div data-sid="\d+" class="([^"]+)">[\s\S]{0,200}?href="https:\/\/www\.serialzone\.cz\/serial\/([^/]+)\/" title="[^"]*" class="cef-text">([^<]+)<br \/><span class="font10">S(\d+)E01<\/span>/g;
+    let day = null, cnt = 0;
+    for (const m of html.matchAll(re)) {
+      if (m[1]) { day = +m[1]; continue; }
+      const slug = m[3];
+      if (!day || seen.has(slug)) continue;
+      const date = new Date(y, mo - 1, day);
+      if (date < today) continue;
+      seen.add(slug);
+      const season = +m[5];
+      let s;
+      try { s = await szShow(slug, cache); } catch (e) { console.warn(`  [serialzone] ${slug}: ${e.message}`); continue; }
+      if (s.genres.some((g) => SZ_SKIP_GENRES.test(g))) continue;
+      const big = s.stanice.some((st) => SZ_BIG.test(st));
+      const ok = season > 1 ? s.votes >= SZ_MIN_VOTES : big;
+      if (!ok) continue;
+      cnt++;
+      out.push({
+        id: "sz-" + slug, title: decodeHtml(m[4]), type: "seriál", season,
+        year: String(y), url: `https://www.serialzone.cz/serial/${slug}/`, poster: s.poster,
+        genres: s.genres.slice(0, 3), country: s.country,
+        premiereDate: `${String(day).padStart(2, "0")}.${String(mo).padStart(2, "0")}.${y}`,
+        vod: s.stanice.slice(0, 1), votes: s.votes, source: "serialzone",
+      });
+    }
+    console.log(`  [serialzone] ${mo}/${y}: ${cnt} premiér řad po filtru`);
+  }
+  // cache nezvětšovat donekonečna – staré záznamy pryč
+  for (const k of Object.keys(cache)) if ((Date.now() - cache[k].fetchedAt) / 864e5 > 30) delete cache[k];
+  fs.writeFileSync(SZ_CACHE, JSON.stringify(cache));
+  return out;
+}
+
+const normTitle = (s) => (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/\(\d{4}\)/g, "").replace(/[^a-z0-9]+/g, " ").trim();
+
 async function scrapeSteamComing(page) {
   await page.goto("https://store.steampowered.com/search/?filter=popularcomingsoon&ndl=1", {
     waitUntil: "networkidle", timeout: 30000,
@@ -252,17 +386,28 @@ async function main() {
   });
   const page = await context.newPage();
 
-  // CSFD films
-  console.log("[coming] ČSFD filmy…");
-  const films = await scrapeCSFDList(page, "https://www.csfd.cz/seznamy/filmy/?detail=1", "film");
-  console.log(`[coming] ${films.length} filmů`);
-  await enrichCSFDItems(page, films);
+  // Filmy: kalendář kinopremiér (3 měsíce) + žebříček „nejvíce se těšíme“ (velké filmy dál dopředu)
+  console.log("[coming] ČSFD kinopremiéry…");
+  const premieres = await scrapeCSFDPremieres(page, 3);
+  console.log("[coming] ČSFD filmy, na které se těšíme…");
+  const anticipated = await scrapeCSFDList(page, "https://www.csfd.cz/seznamy/filmy/?detail=1", "film");
+  const premIds = new Set(premieres.map((f) => f.id));
+  const antNew = anticipated.filter((f) => !premIds.has(f.id));
+  await enrichCSFDItems(page, antNew);
+  // obnovené premiéry starých filmů (Anton Špelec 1932, Pina 2011…) do Očekávaných nepatří
+  const minYear = new Date().getFullYear() - 1;
+  const films = [...premieres.filter((f) => !f.year || +f.year >= minYear), ...antNew];
+  console.log(`[coming] ${films.length} filmů (${premieres.length} z kalendáře premiér)`);
 
-  // CSFD series
+  // Seriály: žebříček „nejvíce se těšíme“ + premiéry řad ze SerialZone
   console.log("[coming] ČSFD seriály…");
-  const series = await scrapeCSFDList(page, "https://www.csfd.cz/seznamy/serialy/?detail=21", "seriál");
-  console.log(`[coming] ${series.length} seriálů`);
-  await enrichCSFDItems(page, series);
+  const csfdSeries = await scrapeCSFDList(page, "https://www.csfd.cz/seznamy/serialy/?detail=21", "seriál");
+  await enrichCSFDItems(page, csfdSeries);
+  console.log("[coming] SerialZone premiéry řad…");
+  const szSeries = await scrapeSerialZone(3);
+  const csfdKeys = new Set(csfdSeries.map((s) => normTitle(s.title)));
+  const series = [...csfdSeries, ...szSeries.filter((s) => !csfdKeys.has(normTitle(s.title)))];
+  console.log(`[coming] ${series.length} seriálů (${szSeries.length} ze SerialZone)`);
 
   // Steam
   console.log("[coming] Steam…");
@@ -304,13 +449,13 @@ async function main() {
 
   const coming = {
     updatedAt: new Date().toISOString(),
-    films: films.filter(isFuture).sort(sortByDate).slice(0, 15).map((f) => ({
+    films: films.filter(isFuture).sort(sortByDate).slice(0, 120).map((f) => ({
       title: f.title, year: f.year, type: "film",
       poster: f.poster, url: f.url, genres: f.genres || [],
       country: f.country || null, premiereDate: f.premiereDate || null, vod: f.vod || [],
     })),
-    series: series.filter(isFuture).sort(sortByDate).slice(0, 15).map((s) => ({
-      title: s.title, year: s.year, type: "seriál",
+    series: series.filter(isFuture).sort(sortByDate).slice(0, 80).map((s) => ({
+      title: s.title, year: s.year, type: "seriál", season: s.season || null,
       poster: s.poster, url: s.url, genres: s.genres || [],
       country: s.country || null, premiereDate: s.premiereDate || null, vod: s.vod || [],
     })),
