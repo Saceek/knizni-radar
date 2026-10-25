@@ -417,7 +417,9 @@ async function scrapeSteamComing(page) {
 async function scrapeKosmasPreorders() {
   const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36";
   try {
-    const res = await fetch("https://www.kosmas.cz/predprodej/?sort=trending", {
+    // Kosmas přesunul předprodej na /knihy/predprodej/ (stará /predprodej/ vrací 404); řazení
+    // přes URL stránka ignoruje, takže výchozí pořadí = nejnověji přidané do předprodeje
+    const res = await fetch("https://www.kosmas.cz/knihy/predprodej/", {
       headers: { "User-Agent": UA, "Accept-Language": "cs" },
     });
     if (!res.ok) throw new Error("HTTP " + res.status);
@@ -426,48 +428,30 @@ async function scrapeKosmasPreorders() {
 
     const items = [];
     const seen = new Set();
-    $("a[href]").each((_, a) => {
-      const href = $(a).attr("href") || "";
-      const m = /\/knihy\/(\d+)\/([^/?#]+)/.exec(href);
-      if (!m) return;
-      const id = m[1];
-      if (seen.has(id)) return;
-      seen.add(id);
-
-      const scope = (() => {
-        const sc = $(a).closest(".grid-item, li, article, [class*='product']");
-        return sc.length ? sc : $(a).parent().parent().parent();
-      })();
-
-      const title = scope.find("a[href*='/knihy/']").filter((_, el) => $(el).text().trim().length > 2).first().text().trim();
-      if (!title || title.length < 2) return;
-
-      let author = null;
-      scope.find("a[href*='/autor/']").each((__, x) => {
-        if (author) return;
-        const t = $(x).text().replace(/\s+/g, " ").trim();
-        if (t) author = t;
-      });
-
-      const prices = [...scope.text().matchAll(/(\d[\d\s]*)\s*Kč/g)].map((x) => parseInt(x[1].replace(/\s/g, ""), 10)).filter((n) => n >= 20 && n < 5000);
-      const price = prices.length ? Math.min(...prices) : null;
-
-      const img = scope.find("img").first();
-      let cover = img.attr("src") || img.attr("data-src") || null;
-      if (cover && /placeholder|spacer/i.test(cover)) cover = null;
-
-      const dateMatch = scope.text().match(/(\d{1,2}\.\s*\d{1,2}\.\s*\d{4})/);
-
+    // dlaždice předprodeje: .grid-items > .grid-item (obálka, název, autor, cena)
+    $(".grid-items .grid-item").each((_, el) => {
+      const $el = $(el);
+      const a = $el.find("h3.g-item__title a").first();
+      const href = a.attr("href") || "";
+      const m = /\/knihy\/(\d+)\//.exec(href);
+      if (!m || seen.has(m[1])) return;
+      seen.add(m[1]);
+      const title = a.text().replace(/\s+/g, " ").trim();
+      if (!title) return;
+      const author = $el.find(".g-item__authors a").map((__, x) => $(x).text().trim()).get().filter(Boolean).join(", ") || null;
+      if (!author) return;  // křížovky, omalovánky a podobné zboží bez autora
+      const priceTxt = $el.find(".price__default").first().text();
+      const pm = priceTxt.match(/(\d[\d\s]*)\s*Kč/);
+      let cover = $el.find("img.img__cover").attr("src") || $el.find("img").first().attr("src") || null;
+      if (cover && /placeholder|spacer|nocover/i.test(cover)) cover = null;
       items.push({
-        title,
-        author: author || null,
+        title, author,
         cover: cover ? (cover.startsWith("http") ? cover : "https://www.kosmas.cz" + cover) : null,
-        price,
+        price: pm ? parseInt(pm[1].replace(/\s/g, ""), 10) : null,
         url: "https://www.kosmas.cz" + href,
-        releaseDate: dateMatch ? dateMatch[1].replace(/\s/g, "") : null,
+        releaseDate: null,   // seznam ani detail přesné datum vydání neuvádí
       });
     });
-
     return items.slice(0, 15);
   } catch (e) {
     console.warn("[kosmas preorders]", e.message);
