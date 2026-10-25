@@ -1306,15 +1306,18 @@ function playtimeFor(title, url){
   const src = [st&&{...st, src:"Steam"}, xb&&{...xb, src:"Xbox"}].filter(Boolean);
   if(!src.length) return null;
   const best = src.slice().sort((a,b)=>(b.min||0)-(a.min||0))[0];
-  const ach = (best.ach && best.ach.total) ? best.ach : (src.find(e=>e.ach&&e.ach.total)||{}).ach || null;
+  const hasAch = e => e.ach && (e.ach.total || e.ach.pct!=null);
+  const ach = hasAch(best) ? best.ach : (src.find(hasAch)||{}).ach || null;
   return { min: best.min||0, src: best.src, last: best.last||null, ach };
 }
 const fmtHours = m => (m/60).toLocaleString("cs-CZ",{maximumFractionDigits:1}) + " h";
 function ptBadge(title, url){
   const p = playtimeFor(title, url);
-  if(!p || (!p.min && !(p.ach&&p.ach.done))) return "";
-  const achPct = p.ach ? Math.round(p.ach.done/p.ach.total*100) : null;
-  const tip = `Odehráno ${fmtHours(p.min)} (${p.src})${p.ach?` · achievementy ${p.ach.done}/${p.ach.total}`:""}${p.last?` · naposledy ${p.last}`:""}`;
+  if(!p) return "";
+  // Steam dává počty (done/total), Xbox někdy jen procenta (pct)
+  const achPct = !p.ach ? null : p.ach.total ? Math.round(p.ach.done/p.ach.total*100) : p.ach.pct;
+  if(!p.min && !achPct) return "";
+  const tip = `${p.src}${p.min?` · odehráno ${fmtHours(p.min)}`:""}${p.ach?` · achievementy${p.ach.total?`${p.ach.done}/${p.ach.total}`:`${p.ach.pct} %`}`:""}${p.last?` · naposledy ${p.last}`:""}`;
   return `<span class="ptb" title="${esc(tip)}">${p.min?`${icon("clock")} ${fmtHours(p.min)}`:""}${achPct!=null?` ${icon("trophy")} ${achPct} %`:""}</span>`;
 }
 // Aktivní quest na PC se posune podle reálně odehraných hodin (jen nahoru, nikdy nesníží ruční zápis)

@@ -22,7 +22,6 @@ const { normalizeGameTitle } = require("./gamepass-match");
 const DIR = __dirname;
 const OUT = path.join(DIR, "playtime.json");
 const MAX_ACH_CALLS = 40;      // achievementy jen pro sledované hry
-const MAX_XBL_STATS = 15;      // OpenXBL free tier ~150 dotazů / h
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const loadJson = (f) => { try { return JSON.parse(fs.readFileSync(path.join(DIR, f), "utf-8")); } catch { return null; } };
 const appidFromUrl = (u) => ((u || "").match(/store\.steampowered\.com\/app\/(\d+)/) || [])[1] || null;
@@ -73,54 +72,65 @@ async function steam(prev, tracked) {
   return out;
 }
 
-// najde v libovolném JSONu statistiku MinutesPlayed (tvar odpovědi OpenXBL se liší podle endpointu)
-function findMinutes(o, d = 0) {
-  if (!o || typeof o !== "object" || d > 8) return null;
-  if (/^minutesplayed$/i.test(o.name || "") && o.value != null && !isNaN(+o.value)) return +o.value;
-  for (const k in o) { const v = findMinutes(o[k], d + 1); if (v != null) return v; }
-  return null;
+// OpenXBL vrací data obalená { content: …, code } – starší endpointy bez obálky
+const unwrap = (j) => (j && j.content && typeof j.content === "object" ? j.content : j);
+
+// všechny statistiky MinutesPlayed v odpovědi (Xbox userstats: statlistscollection[].stats[] s titleid)
+function collectMinutes(o, acc = [], d = 0) {
+  if (!o || typeof o !== "object" || d > 10) return acc;
+  if (/^minutesplayed$/i.test(o.name || "") && o.value != null && !isNaN(+o.value)) acc.push({ titleId: o.titleid != null ? String(o.titleid) : null, min: +o.value });
+  for (const k in o) collectMinutes(o[k], acc, d + 1);
+  return acc;
 }
 
 async function xbox(prev, tracked) {
   const apiKey = process.env.XBL_API_KEY;
-  if (!apiKey) { console.log("[playtime] Xbox: chybí XBL_API_KEY – ponechávám data z minula"); return prev; }
+  if (!apiKey) { console.log("[playtime] Xbox: chybí XBL_API_KEY – ponechávám data z minula"); return { out: prev, info: "bez klíče" }; }
   const H = { "X-Authorization": apiKey, Accept: "application/json", "Accept-Language": "cs-CZ" };
-  const j = await getJson("https://api.xbl.io/v2/achievements", H);
-  const titles = j.titles || [];
+  // historie titulů (i Game Pass) s achievementy a posledním hraním
+  const th = unwrap(await getJson("https://api.xbl.io/v2/titles", H));
+  const titles = th.titles || [];
+  const xuid = th.xuid || null;
   const out = {};
   for (const t of titles) {
+    if (!t.name) continue;
     const a = t.achievement || {};
     const p = prev[key(t.name)] || {};
     out[key(t.name)] = { titleId: String(t.titleId), title: t.name,
       last: (t.titleHistory?.lastTimePlayed || "").slice(0, 10) || null,
-      ach: a.totalAchievements ? { done: a.currentAchievements || 0, total: a.totalAchievements } : null,
+      ach: a.totalAchievements ? { done: a.currentAchievements || 0, total: a.totalAchievements }
+        : a.progressPercentage != null && a.totalGamerscore ? { pct: a.progressPercentage } : null,
       min: p.min ?? null };
   }
-  // odehraný čas jen u sledovaných her (každý titul = 1 dotaz)
-  const want = tracked.map((t) => out[key(t.title)]).filter(Boolean);
-  let n = 0;
-  for (const e of [...new Set(want)]) {
-    if (n++ >= MAX_XBL_STATS) break;
+  // odehraný čas sledovaných her – jeden hromadný dotaz na statistiku MinutesPlayed
+  const want = [...new Set(tracked.map((t) => out[key(t.title)]).filter(Boolean))];
+  let note = "";
+  if (want.length && xuid) {
     try {
-      const s = await getJson(`https://api.xbl.io/v2/achievements/stats/${e.titleId}`, H);
-      const m = findMinutes(s);
-      if (m != null) e.min = m;
-      else if (n === 1) console.log("[playtime] Xbox: MinutesPlayed nenalezeno, ukázka odpovědi:", JSON.stringify(s).slice(0, 400));
-    } catch (err) { console.warn("  ! Xbox stats", e.title, err.message); }
-    await sleep(500);
+      const r = await fetch("https://api.xbl.io/v2/player/stats", { method: "POST", headers: { ...H, "Content-Type": "application/json" },
+        body: JSON.stringify({ xuids: [xuid], stats: want.map((e) => ({ name: "MinutesPlayed", titleId: e.titleId })) }) });
+      const body = await r.json().catch(() => null);
+      const mins = collectMinutes(body);
+      for (const m of mins) {
+        const e = m.titleId ? want.find((w) => w.titleId === m.titleId) : want.length === 1 ? want[0] : null;
+        if (e) e.min = m.min;
+      }
+      if (!mins.length) { note = ` · stats HTTP ${r.status}: ${JSON.stringify(body).slice(0, 200)}`; console.log("[playtime] Xbox: MinutesPlayed nenalezeno:", JSON.stringify(body).slice(0, 600)); }
+    } catch (err) { note = " · stats chyba: " + err.message; console.warn("  ! Xbox stats", err.message); }
   }
-  console.log(`[playtime] Xbox: ${titles.length} titulů, čas u ${want.filter((e) => e.min != null).length} sledovaných`);
-  return out;
+  const info = `${titles.length} titulů · sledované ${want.map((e) => `${e.title}: ${e.min != null ? e.min + " min" : "?"}`).join(", ") || "žádné"}${note}`;
+  console.log("[playtime] Xbox:", info);
+  return { out, info };
 }
 
 async function main() {
   console.log("[playtime] start", new Date().toISOString());
   const prev = loadJson("playtime.json") || {};
   const tracked = trackedGames();
-  let s = prev.steam || {}, x = prev.xbox || {};
+  let s = prev.steam || {}, x = prev.xbox || {}, xboxInfo = prev.xboxInfo || null;
   try { s = await steam(s, tracked); } catch (e) { console.warn("[playtime] Steam selhal:", e.message); }
-  try { x = await xbox(x, tracked); } catch (e) { console.warn("[playtime] Xbox selhal:", e.message); }
-  fs.writeFileSync(OUT, JSON.stringify({ updatedAt: new Date().toISOString(), steam: s, xbox: x }, null, 2));
+  try { const r = await xbox(x, tracked); x = r.out; xboxInfo = r.info; } catch (e) { console.warn("[playtime] Xbox selhal:", e.message); xboxInfo = "chyba: " + e.message; }
+  fs.writeFileSync(OUT, JSON.stringify({ updatedAt: new Date().toISOString(), steam: s, xbox: x, xboxInfo }, null, 2));
   console.log("[playtime] hotovo → playtime.json");
 }
 
