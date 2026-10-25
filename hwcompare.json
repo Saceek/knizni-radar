@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T16:18:04.201Z",
+  "updatedAt": "2026-10-25T17:16:34.062Z",
   "games": [
     {
       "title": "Enshrouded",
@@ -458,6 +458,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 or AMD Radeon RX 5600 XT, 6 GB VRAM, Intel Core i5-10400 or AMD Ryzen 5 3600 (6 cores / 12 threads)"
     },
     {
+      "title": "One Million Coins",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA RTX 2060 / AMD RX 6600",
+      "cpu": "Intel Core i7-9700K or AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD RX 6600, Intel Core i7-9700K or AMD Ryzen 5 3600"
+    },
+    {
       "title": "Duelant: Nečinná Expedice",
       "tier": "green",
       "tiers": {
@@ -492,18 +504,6 @@
       "cpu": "AMD Ryzen 5 3600X 6-Core Processor 3.79 GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Radeon RX 580, AMD Ryzen 5 3600X 6-Core Processor 3.79 GHz"
-    },
-    {
-      "title": "One Million Coins",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA RTX 2060 / AMD RX 6600",
-      "cpu": "Intel Core i7-9700K or AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD RX 6600, Intel Core i7-9700K or AMD Ryzen 5 3600"
     },
     {
       "title": "Moon Sweepers",
@@ -590,18 +590,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
-      "title": "Big Dig",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GPU with at least 2 GB of VRAM",
-      "cpu": "i3 or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GPU with at least 2 GB of VRAM, i3 or equivalent"
-    },
-    {
       "title": "Cucina Stellata",
       "tier": "green",
       "tiers": {
@@ -612,6 +600,18 @@
       "cpu": "Dual-core 2.0 GHz or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: DirectX 10 compatible GPU, Dual-core 2.0 GHz or equivalent"
+    },
+    {
+      "title": "Big Dig",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GPU with at least 2 GB of VRAM",
+      "cpu": "i3 or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GPU with at least 2 GB of VRAM, i3 or equivalent"
     },
     {
       "title": "Realm of Taiwu",
@@ -794,18 +794,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060, 11th Gen Intel(R) Core i7-11800H @ 2.30GHz"
     },
     {
-      "title": "Heartfall — A Tale in Three Lives",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "AMD Radeon 680M; Nvidia GTX 1050 Ti, Intel Arc A310/Xe 96EU",
-      "cpu": "AMD Ryzen 3 7320U/Ryzen 3 1200; Intel Core i3-1215U/i3-8100",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: AMD Radeon 680M; Nvidia GTX 1050 Ti, Intel Arc A310/Xe 96EU, AMD Ryzen 3 7320U/Ryzen 3 1200; Intel Core i3-1215U/i3-8100"
-    },
-    {
       "title": "Burn With Me",
       "tier": "green",
       "tiers": {
@@ -816,6 +804,18 @@
       "cpu": "2.5Ghz or better",
       "usedMinimum": true,
       "note": "Minimální konfigurace: 2GB Video Memory, 2.5Ghz or better"
+    },
+    {
+      "title": "Heartfall — A Tale in Three Lives",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "AMD Radeon 680M; Nvidia GTX 1050 Ti, Intel Arc A310/Xe 96EU",
+      "cpu": "AMD Ryzen 3 7320U/Ryzen 3 1200; Intel Core i3-1215U/i3-8100",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: AMD Radeon 680M; Nvidia GTX 1050 Ti, Intel Arc A310/Xe 96EU, AMD Ryzen 3 7320U/Ryzen 3 1200; Intel Core i3-1215U/i3-8100"
     },
     {
       "title": "Crack the Pack",
@@ -1334,6 +1334,18 @@
       "note": "Doporučená konfigurace: Any dedicated DirectX 11 GPU, 2 GB VRAM, 6-core / 12-thread, 3.5 GHz or better"
     },
     {
+      "title": "Tidy Up the Halloween Shop",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600, Intel Core i5-10400 / AMD Ryzen 5 3600"
+    },
+    {
       "title": "NekoTrak",
       "tier": "green",
       "tiers": {
@@ -1368,18 +1380,6 @@
       "cpu": "2.4 GHZ Quad Core Processor",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 1060 or Equivalent, 2.4 GHZ Quad Core Processor"
-    },
-    {
-      "title": "Tidy Up the Halloween Shop",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "Dimenshot",
@@ -1668,6 +1668,18 @@
       "cpu": "Core i5-4460 (3.2 GHz)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 660 / AMD Radeon HD 7850, Core i5-4460 (3.2 GHz)"
+    },
+    {
+      "title": "if you stay",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "OpenGL 3.0 or DirectX 11",
+      "cpu": "2.0 Ghz 64-bit Intel-compatible",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: OpenGL 3.0 or DirectX 11, 2.0 Ghz 64-bit Intel-compatible"
     },
     {
       "title": "The Incident at Galley House",
