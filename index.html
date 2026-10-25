@@ -156,6 +156,9 @@
   .hw.green{--hc:var(--green)} .hw.orange{--hc:var(--amber)} .hw.red{--hc:var(--red)}
   .hltb{display:inline-flex;align-items:center;gap:3px;white-space:nowrap}
   .hltb:hover{color:var(--text)}
+  .ptb{display:inline-flex;align-items:center;gap:4px;white-space:nowrap;font-size:11px;color:var(--amber)}
+  .ptb .ic{width:12px;height:12px}
+  .cont .ptl{font-size:11px;color:var(--sub);padding:0 12px 6px;display:flex;gap:10px;flex-wrap:wrap}
   .rec-icon{font-size:12px;line-height:1;cursor:default}
   .rec-icon.wishlist{color:var(--coral)} .rec-icon.recommended{color:var(--violet)}
   .rec-icons{display:inline-flex;gap:5px}
@@ -733,6 +736,7 @@ function progressSlotHtml(cat){
     <div class="cim">${item.url?`<a href="${esc(item.url)}" target="_blank" rel="noreferrer">${img}</a>`:img}</div>
     <div class="pb"><i style="width:${pct}%"></i></div>
     <div class="cb"><div class="ttl"><b class="clip" title="${esc(item.title)}">${esc(item.title)}</b><small>${item.current} / ${item.total} ${cfg.unit} · ${pct} %</small></div><span class="pl"><span class="prog-ic-c">${cfg.icon}</span>${PROG_SHORT[cat]}</span></div>
+    ${isGame && ptBadge(item.title, item.url) ? `<div class="ptl">${ptBadge(item.title, item.url)}</div>` : ""}
     <div class="ctl"><button class="qb ico" data-progdelta="${cat}:-1" title="−${cfg.step} ${cfg.unit}">${icon("minus")}</button><button class="qb go" data-progdelta="${cat}:1" title="+${cfg.step} ${cfg.unit}">${icon("plus")} ${cfg.step} ${cfg.unit}</button><span class="sp"></span>
       <button class="qb ico" data-progedit="${cat}" title="Upravit">${icon("pencil")}</button><button class="qb ico rm" data-progremove="${cat}" title="Zrušit sledování">${icon("x")}</button></div>
   </div>`;
@@ -1281,6 +1285,47 @@ async function loadCzech(){
   }catch(e){ S.czMap = new Map(); }
   render();
 }
+/* ---- odehraný čas (playtime.json: Steam GetOwnedGames + Xbox přes OpenXBL) ---- */
+async function loadPlaytime(){
+  try{
+    const r = await fetch("playtime.json?t=" + Date.now(), {cache:"no-store"});
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    const d = await r.json();
+    const steam = Object.values(d.steam||{}), xbox = Object.values(d.xbox||{});
+    S.pt = { steamById:new Map(steam.map(e=>[e.appid,e])), steam:new Map(steam.map(e=>[czKey(e.title),e])), xbox:new Map(xbox.map(e=>[czKey(e.title),e])) };
+  }catch(e){ S.pt = null; }
+  render();
+}
+// odehraný čas hry ze všech zdrojů – vyhrává ten s víc minutami, achievementy z toho, kde jsou
+function playtimeFor(title, url){
+  if(!S.pt) return null;
+  const appid = ((url||"").match(/store\.steampowered\.com\/app\/(\d+)/)||[])[1];
+  const st = (appid && S.pt.steamById.get(appid)) || S.pt.steam.get(czKey(title));
+  const xb = S.pt.xbox.get(czKey(title));
+  const src = [st&&{...st, src:"Steam"}, xb&&{...xb, src:"Xbox"}].filter(Boolean);
+  if(!src.length) return null;
+  const best = src.slice().sort((a,b)=>(b.min||0)-(a.min||0))[0];
+  const ach = (best.ach && best.ach.total) ? best.ach : (src.find(e=>e.ach&&e.ach.total)||{}).ach || null;
+  return { min: best.min||0, src: best.src, last: best.last||null, ach };
+}
+const fmtHours = m => (m/60).toLocaleString("cs-CZ",{maximumFractionDigits:1}) + " h";
+function ptBadge(title, url){
+  const p = playtimeFor(title, url);
+  if(!p || (!p.min && !(p.ach&&p.ach.done))) return "";
+  const achPct = p.ach ? Math.round(p.ach.done/p.ach.total*100) : null;
+  const tip = `Odehráno ${fmtHours(p.min)} (${p.src})${p.ach?` · achievementy ${p.ach.done}/${p.ach.total}`:""}${p.last?` · naposledy ${p.last}`:""}`;
+  return `<span class="ptb" title="${esc(tip)}">${p.min?`${icon("clock")} ${fmtHours(p.min)}`:""}${achPct!=null?` ${icon("trophy")} ${achPct} %`:""}</span>`;
+}
+// Aktivní quest na PC se posune podle reálně odehraných hodin (jen nahoru, nikdy nesníží ruční zápis)
+function applyPlaytime(){
+  const item = S.progress && S.progress.game_pc;
+  if(!item) return;
+  const p = playtimeFor(item.title, item.url);
+  if(!p || !p.min) return;
+  const h = Math.floor(p.min/60);
+  const next = item.total ? Math.min(h, item.total) : h;
+  if(next > item.current){ item.current = next; saveProgressAndSync(S.progress); }
+}
 async function loadMetacritic(){
   S.mcStatus="loading"; render();
   try{
@@ -1610,7 +1655,8 @@ function backlogMovieTile(m){
     below:`<div class="qa">${questPlatBtn("movie_solo",m.title,icon("film"),"Začít sám")}${questPlatBtn("movie_duo",m.title,icon("heart"),"Začít s manželkou")}${rmBtn(m.title,"movie")}${xpTag(50)}</div>`});
 }
 function backlogGameTile(g){
-  return wTile(g, {below:`<div class="qa">${questPlatBtn("game_pc",g.title,icon("monitor"),"Začít na PC")}${questPlatBtn("game_ps5",g.title,icon("game"),"Začít na PS5")}${questPlatBtn("game_nsw2",g.title,icon("joystick"),"Začít na Switch 2")}${rmBtn(g.title,"game")}${xpTag(120)}</div>`});
+  const pt = ptBadge(g.title, g.url);
+  return wTile(g, {below:`${pt?`<div class="ptl" style="padding:2px 0 4px">${pt}</div>`:""}<div class="qa">${questPlatBtn("game_pc",g.title,icon("monitor"),"Začít na PC")}${questPlatBtn("game_ps5",g.title,icon("game"),"Začít na PS5")}${questPlatBtn("game_nsw2",g.title,icon("joystick"),"Začít na Switch 2")}${rmBtn(g.title,"game")}${xpTag(120)}</div>`});
 }
 
 /* ---- jednotlivé stránky ---- */
@@ -2302,7 +2348,7 @@ loadHLTB();
 loadHwCompare();
 syncBacklog();
 syncDiary();
-syncProgress();
+Promise.all([syncProgress(), loadPlaytime()]).then(applyPlaytime);
 // Obnova poslední otevřené stránky po refreshi - dotáhnout i její data, ne jen Novinky
 if(S.view==="steam") loadGames();
 else if(S.view==="movies") loadMovies();

@@ -40,6 +40,14 @@ jobs:
           STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
           STEAM_ID64: ${{ secrets.STEAM_ID64 }}
 
+      - name: Odehraný čas (Steam + Xbox) → playtime.json
+        run: node build-playtime.js
+        continue-on-error: true       # bez STEAM_API_KEY / XBL_API_KEY se daná část přeskočí
+        env:
+          STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
+          STEAM_ID64: ${{ secrets.STEAM_ID64 }}
+          XBL_API_KEY: ${{ secrets.XBL_API_KEY }}
+
       - name: HowLongToBeat → hltb.json
         run: node build-hltb.js
         continue-on-error: true       # když HLTB zlobí (mění endpoint), hry se prostě zobrazí bez odznaku
@@ -84,6 +92,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add books.json crew.json gamepass.json games.json hltb.json hwcompare.json movies.json coming.json news.json news-history.json news-seen.json previous-books.json previous-crew.json previous-games.json previous-movies.json previous-gamepass.json backlog.json metacritic.json czech.json serialzone-cache.json
+          git add books.json crew.json gamepass.json games.json hltb.json hwcompare.json movies.json coming.json news.json news-history.json news-seen.json previous-books.json previous-crew.json previous-games.json previous-movies.json previous-gamepass.json backlog.json metacritic.json czech.json serialzone-cache.json playtime.json
           git diff --staged --quiet || git commit -m "data: refresh"
           git push
