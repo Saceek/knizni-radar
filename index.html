@@ -1686,18 +1686,24 @@ function viewComing(){
       btns: heroBkBtn(next.cat==="game"?"newsgbk":"newsmbk", next.title, inBacklog(next.title,next.cat)) });
   } else html += `<div class="pagetop"></div>`;
   html += statusNote(S.comingStatus, "očekávané tituly");
-  html += `<div class="fbar"><div class="seg">${["Vše","Filmy","Seriály","Hry"].map(x=>`<button class="${f===x?"on":""}" data-comingf="${x}">${x}</button>`).join("")}</div><span class="fcount">${shown.length} titulů v kalendáři</span></div>`;
+  const books = c.books || [];
+  html += `<div class="fbar"><div class="seg">${["Vše","Filmy","Seriály","Hry","Knihy"].map(x=>`<button class="${f===x?"on":""}" data-comingf="${x}">${x}</button>`).join("")}</div><span class="fcount">${f==="Knihy" ? `${books.length} knih v předprodeji` : `${shown.length} titulů v kalendáři`}</span></div>`;
   const DOW=["neděle","pondělí","úterý","středa","čtvrtek","pátek","sobota"], MON=["led","úno","bře","dub","kvě","čvn","čvc","srp","zář","říj","lis","pro"];
   const groups=[]; dated.forEach(x=>{ const k=x.dt.toDateString(); const g=groups.find(g=>g.k===k); g?g.items.push(x):groups.push({k,dt:x.dt,items:[x]}); });
   const upCard = x => `<div class="up">${x.img?`<a href="${esc(x.cat==="game"?steamDeepLink(x.url):x.url)}" target="_blank" rel="noreferrer">${imgTag(x.img, x.k==="HRA"?'class="wide"':"")}</a>`:`<span class="ph" style="background:${grad(x.title)}"></span>`}
     <div class="ui"><span class="kind">${x.k}${x.season>1?` · ${x.season}. ŘADA`:x.season===1?" · NOVÝ":""}</span><b class="clip" title="${esc(x.title)}"><a href="${esc(x.cat==="game"?steamDeepLink(x.url):x.url)}" target="_blank" rel="noreferrer">${esc(x.title)}</a></b><small class="clip">${x.cat==="game"&&czState(x.title)?czBadge(x.title,true)+" ":""}${esc((x.vod||[]).join(", ")||(x.genres||[]).slice(0,2).join(" · ")||x.price||"")}</small></div>
     ${bkBtn(x.cat==="game"?"newsgbk":"newsmbk", x.title, inBacklog(x.title,x.cat))}</div>`;
+  // předprodej knih (Kosmas) – bez přesného data vydání, proto mřížka místo kalendáře
+  const bookTilePre = b => pTile({title:b.title, img:b.cover, href:b.url, sub:`${esc(b.author||"")}${b.price?` · ${b.price} Kč`:""}`, bk:bkBtn("prebk", b.title, inBacklog(b.title,"book"))});
+  if(f==="Knihy"){
+    return html + (books.length ? `<div class="pgrid">${books.map(bookTilePre).join("")}</div>` : `<div class="empty">V předprodeji teď nic není.</div>`);
+  }
   if(groups.length || undated.length){
     html += `<div class="cal">${groups.map(g=>{const days=Math.round((g.dt-today)/864e5); return `<div class="day"><span>${DOW[g.dt.getDay()]}</span><b>${g.dt.getDate()}. ${MON[g.dt.getMonth()]}</b><em>${days===0?"dnes":days===1?"zítra":`za ${days} ${days<5?"dny":"dní"}`}</em></div><div class="items">${g.items.map(upCard).join("")}</div>`;}).join("")}
       ${undated.length?`<div class="day"><span>bez přesného data</span><b>Brzy</b></div><div class="items">${undated.map(upCard).join("")}</div>`:""}</div>`;
   } else if(S.comingStatus==="live") html += `<div class="empty">Žádné očekávané tituly.</div>`;
-  if((c.books||[]).length && (f==="Vše")){
-    html += shelf("Předobjednávky knih", "", c.books.map(b=>pTile({title:b.title, img:b.cover, href:b.url, sub:`${esc(b.author||"")}${b.releaseDate?` · ${esc(b.releaseDate)}`:""}`})).join(""));
+  if(books.length && f==="Vše"){
+    html += shelf("Předobjednávky knih", "Kosmas", books.map(bookTilePre).join(""), `<button class="more" data-comingf="Knihy">Všechny ›</button>`);
   }
   return html;
 }
@@ -2254,7 +2260,8 @@ document.getElementById("view").onclick=e=>{
   const mct=e.target.dataset.mctab; if(mct){ S.mcTab=mct; render(); return; }
   const mcy=e.target.dataset.mcyear; if(mcy){ S.mcYear=+mcy; render(); return; }
   const mcb=e.target.dataset.mcbk; if(mcb){ addFromMetacritic(mcb); return; }
-  const cf=e.target.dataset.comingf; if(cf){ S.comingFilter=cf; render(); return; }
+  const cf=e.target.dataset.comingf; if(cf){ S.comingFilter=cf; render(); if(e.target.classList.contains("more")) window.scrollTo(0,0); return; }
+  const pre=e.target.dataset.prebk; if(pre){ if(inBacklog(pre,"book")){ removeBacklog(pre,"book"); return; } const b=(S.coming?.books||[]).find(x=>x.title===pre); if(b){ S.backlog.push({title:b.title, author:b.author||null, cover:b.cover||null, link:null, cat:["Kosmas"], prices:b.price?[{shop:"Kosmas", price:b.price, url:b.url}]:[], _category:"book"}); saveBacklogAndSync(S.backlog); render(); } return; }
   const f=e.target.dataset.filter; if(f){S.filter=f; render(); return;}
   const bg=e.target.dataset.bgenre; if(bg){S.bookGenre=bg; render(); return;}
   const br=e.target.dataset.brarity; if(br){S.bookRarity=br; render(); return;}
