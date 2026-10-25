@@ -94,6 +94,7 @@ jobs:
           git config user.email "actions@github.com"
           git add books.json crew.json gamepass.json games.json hltb.json hwcompare.json movies.json coming.json news.json news-history.json news-seen.json previous-books.json previous-crew.json previous-games.json previous-movies.json previous-gamepass.json backlog.json metacritic.json czech.json serialzone-cache.json playtime.json
           git diff --staged --quiet || git commit -m "data: refresh"
+          git checkout -- .   # zbytky mimo commit (např. package-lock.json po npm i) by zablokovaly pull --rebase
           # během ~25 min běhu mohl do main přibýt commit (kód, sync z webu) – stáhnout a zkusit znovu;
           # při konfliktu v datových JSONech vyhrává čerstvě vygenerovaná verze z tohoto běhu
           for i in 1 2 3; do
