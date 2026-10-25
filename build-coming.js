@@ -559,10 +559,10 @@ async function main() {
     // Old year + no future premiere date = already released, skip
     return false;
   }
-  // tituly bez plakátu bývají okrajové věci – do Očekávaných nepatří. Výjimka: žebříček ČSFD
-  // „nejvíce se těšíme“ – velké filmy na roky dopředu, které plakát ještě nemají (The Batman II…)
+  // tituly bez plakátu se nezobrazují – okrajové věci vypadnou a velké filmy na roky dopředu
+  // (Hon na Gluma…) se objeví samy, jakmile plakát dostanou na ČSFD nebo v JustWatch
   const realPoster = (x) => !!x.poster && !x.poster.startsWith("data:") && !/logo-social|placeholder|poster-free/i.test(x.poster);
-  const hasPoster = (x) => realPoster(x) || x.source === "anticipated";
+  const hasPoster = realPoster;
   function sortByDate(a, b) {
     const da = parseDate(a.premiereDate), db = parseDate(b.premiereDate);
     if (da && db) return da - db;
