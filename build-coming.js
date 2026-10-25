@@ -62,7 +62,10 @@ async function scrapeCSFDList(page, url, type) {
       if (year && parseInt(year) < currentYear) return;
 
       const img = container ? container.querySelector("img") : null;
-      let poster = img ? (img.getAttribute("src") || img.getAttribute("data-src") || "") : "";
+      // src bývá jen průhledný zástupný gif (líné načítání) – skutečný plakát je v srcset / data-src
+      const pick = (v) => v && !v.startsWith("data:") ? v : "";
+      const fromSet = (v) => ((v || "").match(/(\S+)\s+2x/) || (v || "").match(/^(\S+)/) || [])[1] || "";
+      let poster = img ? (pick(fromSet(img.getAttribute("srcset"))) || pick(fromSet(img.getAttribute("data-srcset"))) || pick(img.getAttribute("data-src")) || pick(img.getAttribute("src"))) : "";
       if (poster.startsWith("//")) poster = "https:" + poster;
       if (/placeholder|spacer|1px/i.test(poster)) poster = "";
 
@@ -336,6 +339,36 @@ async function scrapeJustWatchUpcoming() {
   return { films, series: [...best.values()] };
 }
 
+// Chybějící plakát (ČSFD ho u vzdálených premiér často ještě nemá – The Batman: Part II, Avatar 4…)
+// se dohledá v JustWatch podle názvu, typu a roku (±1). Co nemá plakát ani tam, se pak vyřadí.
+async function jwFillPosters(items) {
+  const q = `query S($c: Country!, $q: String!) { popularTitles(country: $c, first: 5, filter: { searchQuery: $q }) {
+    edges { node { objectType content(country: $c, language: "cs") { title originalTitle originalReleaseYear posterUrl } } } } }`;
+  let filled = 0;
+  for (const it of items) {
+    if (it.poster && !it.poster.startsWith("data:")) continue;
+    const title = (it.title || "").replace(/\s*\(\d{4}\)\s*$/, "").trim();
+    if (!title) continue;
+    try {
+      const r = await fetch("https://apis.justwatch.com/graphql", { method: "POST", headers: { "Content-Type": "application/json", "User-Agent": SZ_UA },
+        body: JSON.stringify({ query: q, variables: { c: "CZ", q: title } }) });
+      const j = await r.json();
+      const want = it.type === "seriál" ? "SHOW" : "MOVIE";
+      const y = parseInt(it.year) || null;
+      const hit = (j.data?.popularTitles?.edges || []).map((e) => e.node).find((n) => {
+        const c = n.content || {};
+        if (n.objectType !== want || !c.posterUrl) return false;
+        const sameName = [c.title, c.originalTitle].some((t) => normTitle(t) === normTitle(title));
+        const sameYear = !y || !c.originalReleaseYear || Math.abs(c.originalReleaseYear - y) <= 1;
+        return sameName && sameYear;
+      });
+      if (hit) { it.poster = "https://images.justwatch.com" + hit.content.posterUrl.replace("{profile}", "s332").replace("{format}", "jpg"); filled++; }
+    } catch (e) { /* bez plakátu se titul vyřadí */ }
+    await sleep(300);
+  }
+  return filled;
+}
+
 const normTitle = (s) => (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/\(\d{4}\)/g, "").replace(/[^a-z0-9]+/g, " ").trim();
 
 async function scrapeSteamComing(page) {
@@ -460,6 +493,7 @@ async function main() {
   const premIds = new Set(premieres.map((f) => f.id));
   const antNew = anticipated.filter((f) => !premIds.has(f.id));
   await enrichCSFDItems(page, antNew);
+  antNew.forEach((f) => { f.source = "anticipated"; });
   // obnovené premiéry starých filmů (Anton Špelec 1932, Pina 2011…) do Očekávaných nepatří
   const minYear = new Date().getFullYear() - 1;
   // VOD premiéry (Netflix, Prime Video, Disney+…) z JustWatch – ČSFD kalendář pokrývá jen kina
@@ -475,6 +509,7 @@ async function main() {
   console.log("[coming] ČSFD seriály…");
   const csfdSeries = await scrapeCSFDList(page, "https://www.csfd.cz/seznamy/serialy/?detail=21", "seriál");
   await enrichCSFDItems(page, csfdSeries);
+  csfdSeries.forEach((s) => { s.source = "anticipated"; });
   console.log("[coming] SerialZone premiéry řad…");
   const szSeries = await scrapeSerialZone(3);
   // pořadí důležitosti: ČSFD žebříček → JustWatch (české datum na službě) → SerialZone (zámořské datum)
@@ -524,6 +559,10 @@ async function main() {
     // Old year + no future premiere date = already released, skip
     return false;
   }
+  // tituly bez plakátu bývají okrajové věci – do Očekávaných nepatří. Výjimka: žebříček ČSFD
+  // „nejvíce se těšíme“ – velké filmy na roky dopředu, které plakát ještě nemají (The Batman II…)
+  const realPoster = (x) => !!x.poster && !x.poster.startsWith("data:") && !/logo-social|placeholder|poster-free/i.test(x.poster);
+  const hasPoster = (x) => realPoster(x) || x.source === "anticipated";
   function sortByDate(a, b) {
     const da = parseDate(a.premiereDate), db = parseDate(b.premiereDate);
     if (da && db) return da - db;
@@ -532,16 +571,21 @@ async function main() {
     return (parseInt(a.year) || 9999) - (parseInt(b.year) || 9999);
   }
 
+  // jen budoucí tituly bez plakátu – dohledat v JustWatch, než je filtr hasPoster vyřadí
+  const missing = [...films, ...series].filter((x) => isFuture(x) && !realPoster(x));
+  const filled = await jwFillPosters(missing);
+  console.log(`[coming] plakáty z JustWatch: ${filled} z ${missing.length} chybějících, zbytek se vyřadí`);
+
   const coming = {
     updatedAt: new Date().toISOString(),
-    films: films.filter(isFuture).sort(sortByDate).slice(0, 250).map((f) => ({
+    films: films.filter(isFuture).filter(hasPoster).sort(sortByDate).slice(0, 250).map((f) => ({
       title: f.title, year: f.year, type: "film",
-      poster: f.poster, url: f.url, genres: f.genres || [],
+      poster: realPoster(f) ? f.poster : null, url: f.url, genres: f.genres || [],
       country: f.country || null, premiereDate: f.premiereDate || null, vod: f.vod || [],
     })),
-    series: series.filter(isFuture).sort(sortByDate).slice(0, 200).map((s) => ({
+    series: series.filter(isFuture).filter(hasPoster).sort(sortByDate).slice(0, 200).map((s) => ({
       title: s.title, year: s.year, type: "seriál", season: s.season || null,
-      poster: s.poster, url: s.url, genres: s.genres || [],
+      poster: realPoster(s) ? s.poster : null, url: s.url, genres: s.genres || [],
       country: s.country || null, premiereDate: s.premiereDate || null, vod: s.vod || [],
     })),
     games: games.sort((a, b) => {
