@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-24T23:16:45.319Z",
+  "updatedAt": "2026-10-25T00:16:50.157Z",
   "games": [
     {
       "title": "Enshrouded",
@@ -218,18 +218,6 @@
       "note": "Doporučená konfigurace: Nvidia RTX 3070 Ti 8GB or AMD Radeon RX 6750 XT 12GB, Intel Core i5-12400 or AMD Ryzen 5 5600X"
     },
     {
-      "title": "Order of the Sinking Star",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 2070 Ti or AMD Radeon RX 5700 or Intel Arc B570",
-      "cpu": "Intel Core i5-9600K or AMD Ryzen R5 3600 processor",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 2070 Ti or AMD Radeon RX 5700 or Intel Arc B570, Intel Core i5-9600K or AMD Ryzen R5 3600 processor"
-    },
-    {
       "title": "FINAL FANTASY RESONANCE",
       "tier": "green",
       "tiers": {
@@ -240,6 +228,18 @@
       "cpu": "AMD Ryzen™ 5 2500X / Intel® Core™ i3-8100",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: AMD Radeon™ RX 5500 XT / Intel® Arc™ A580 / NVIDIA® GeForce® GTX 1650, AMD Ryzen™ 5 2500X / Intel® Core™ i3-8100"
+    },
+    {
+      "title": "Order of the Sinking Star",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 2070 Ti or AMD Radeon RX 5700 or Intel Arc B570",
+      "cpu": "Intel Core i5-9600K or AMD Ryzen R5 3600 processor",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 2070 Ti or AMD Radeon RX 5700 or Intel Arc B570, Intel Core i5-9600K or AMD Ryzen R5 3600 processor"
     },
     {
       "title": "Car Park Capital",
@@ -614,6 +614,18 @@
       "note": "Minimální konfigurace: GeForce GTX 950, Radeon R7 360, or Intel HD Graphics 630, Dual Core 2.4 GHz"
     },
     {
+      "title": "Moon Sweepers",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1660 Super / AMD Radeon RX 5600 XT",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
+    },
+    {
       "title": "Big Dig",
       "tier": "green",
       "tiers": {
@@ -638,28 +650,16 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
     },
     {
-      "title": "Moon Sweepers",
+      "title": "Cucina Stellata",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "NVIDIA GeForce GTX 1660 Super / AMD Radeon RX 5600 XT",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
-    },
-    {
-      "title": "FlatOut 4: Total Insanity VR",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "orange"
-      },
-      "gpu": "NVIDIA 3070 or equivalent",
-      "cpu": null,
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA 3070 or equivalent"
+      "gpu": "DirectX 10 compatible GPU",
+      "cpu": "Dual-core 2.0 GHz or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: DirectX 10 compatible GPU, Dual-core 2.0 GHz or equivalent"
     },
     {
       "title": "Disney/Pixar Toy Story 3 Complete Edition",
@@ -674,16 +674,16 @@
       "note": "Doporučená konfigurace: GeForce GTX 1050Ti / Radeon RX 460, Ryzen 3 3100 / Core i5-4690K"
     },
     {
-      "title": "Cucina Stellata",
-      "tier": "green",
+      "title": "FlatOut 4: Total Insanity VR",
+      "tier": "red",
       "tiers": {
-        "allyx": "green",
-        "pc": "green"
+        "allyx": "red",
+        "pc": "orange"
       },
-      "gpu": "DirectX 10 compatible GPU",
-      "cpu": "Dual-core 2.0 GHz or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: DirectX 10 compatible GPU, Dual-core 2.0 GHz or equivalent"
+      "gpu": "NVIDIA 3070 or equivalent",
+      "cpu": null,
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA 3070 or equivalent"
     },
     {
       "title": "Intravenous 3: Borderline",
@@ -758,18 +758,6 @@
       "note": "Doporučená konfigurace: Any modern GPU, 64-bit quad-core"
     },
     {
-      "title": "ShipCrafter",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "RTX2060",
-      "cpu": "8 cores - 3.5GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX2060, 8 cores - 3.5GHz"
-    },
-    {
       "title": "Forever Ago",
       "tier": "green",
       "tiers": {
@@ -780,6 +768,18 @@
       "cpu": "Intel Core i5-8400 or AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, 3 GB or AMD Radeon RX 590, 8 GB or Intel Arc A580, 6 GB, Intel Core i5-8400 or AMD Ryzen 5 2600"
+    },
+    {
+      "title": "ShipCrafter",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "RTX2060",
+      "cpu": "8 cores - 3.5GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX2060, 8 cores - 3.5GHz"
     },
     {
       "title": "Nientum - Op.ZERO",
@@ -878,18 +878,6 @@
       "note": "Doporučená konfigurace: Radeon RX 5500 XT OC 8G or Nvidia GTX 1660, AMD Ryzen 5 3600 6-Core 3.60 GHz or Intel Core i5-9600K 6-Core 3.7 GHz"
     },
     {
-      "title": "Calculate It",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "OpenGL 2.1 compatible graphics card, integrated graphics",
-      "cpu": "Intel Core i3",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: OpenGL 2.1 compatible graphics card, integrated graphics, Intel Core i3"
-    },
-    {
       "title": "The Witch's Bakery",
       "tier": "green",
       "tiers": {
@@ -900,6 +888,18 @@
       "cpu": "AMD Ryzen 3 | Intel i5 Skylake",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GTX 970 | AMD RX 570, AMD Ryzen 3 | Intel i5 Skylake"
+    },
+    {
+      "title": "Calculate It",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "OpenGL 2.1 compatible graphics card, integrated graphics",
+      "cpu": "Intel Core i3",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: OpenGL 2.1 compatible graphics card, integrated graphics, Intel Core i3"
     },
     {
       "title": "Barfender: CO-OP Bar Simulator",
@@ -938,18 +938,6 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060, Intel Core i7-6600K / AMD Ryzen 5 5600"
     },
     {
-      "title": "Stream Racer",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1660 / AMD Radeon RX 5500 XT, or better",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600, or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 5500 XT, or better, Intel Core i5-10400 / AMD Ryzen 5 3600, or better"
-    },
-    {
       "title": "Bruisers 2D Boxing",
       "tier": "green",
       "tiers": {
@@ -960,6 +948,18 @@
       "cpu": "Quad-core 2.5 GHz or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: DirectX 11 compatible, 2 GB VRAM, Quad-core 2.5 GHz or better"
+    },
+    {
+      "title": "Stream Racer",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1660 / AMD Radeon RX 5500 XT, or better",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600, or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 5500 XT, or better, Intel Core i5-10400 / AMD Ryzen 5 3600, or better"
     },
     {
       "title": "ONE PIECE: Grand Gourmet",
@@ -974,18 +974,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1070 Ti [8 GB] / AMD Radeon RX 5600 XT [6 GB] / Intel Arc A580 [8 GB], Intel Core i7-8700 / AMD Ryzen 5 4500"
     },
     {
-      "title": "Battleplan",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Nvidia Geforce GTX 1040 3 GB (Legacy: Nvidia Geforce GTX 780), AMD Radeon RX 580 (Legacy: AMD Radeon R9 290X)",
-      "cpu": "4 cores Intel | AMD CPU (Intel i3-8100, AMD Ryzen 3 1200)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia Geforce GTX 1040 3 GB (Legacy: Nvidia Geforce GTX 780), AMD Radeon RX 580 (Legacy: AMD Radeon R9 290X), 4 cores Intel | AMD CPU (Intel i3-8100, AMD Ryzen 3 1200)"
-    },
-    {
       "title": "Let's Tidy Up! : Treasure",
       "tier": "orange",
       "tiers": {
@@ -996,6 +984,18 @@
       "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Battleplan",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Nvidia Geforce GTX 1040 3 GB (Legacy: Nvidia Geforce GTX 780), AMD Radeon RX 580 (Legacy: AMD Radeon R9 290X)",
+      "cpu": "4 cores Intel | AMD CPU (Intel i3-8100, AMD Ryzen 3 1200)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia Geforce GTX 1040 3 GB (Legacy: Nvidia Geforce GTX 780), AMD Radeon RX 580 (Legacy: AMD Radeon R9 290X), 4 cores Intel | AMD CPU (Intel i3-8100, AMD Ryzen 3 1200)"
     },
     {
       "title": "Babel Legacy",
@@ -1250,18 +1250,6 @@
       "note": "Minimální konfigurace: NVIDIA® GeForce® GTX 750 or AMD Radeon™ R7 265, Intel® Core™ i5-6xxx, AMD FX™-6300"
     },
     {
-      "title": "Cyberfrags '69",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 1650",
-      "cpu": "Intel i5",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GTX 1650, Intel i5"
-    },
-    {
       "title": "Thank You Bus Driver",
       "tier": "green",
       "tiers": {
@@ -1272,6 +1260,18 @@
       "cpu": "Intel Core i7-7700K / AMD Ryzen 5 1600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1060 / AMD Radeon RX 580, VRAM: 4 GB, Intel Core i7-7700K / AMD Ryzen 5 1600"
+    },
+    {
+      "title": "Cyberfrags '69",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 1650",
+      "cpu": "Intel i5",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GTX 1650, Intel i5"
     },
     {
       "title": "FIRE AND ASHES",
@@ -1430,18 +1430,6 @@
       "note": "Doporučená konfigurace: GTX 1060 6GB / RX 580, Intel Core i5-10400 / Ryzen 5 3600"
     },
     {
-      "title": "FrontWars",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel HD Graphics 520 or better, or any dedicated GPU",
-      "cpu": "Quad-core 2.5 GHz (Intel Core i5 / AMD Ryzen 5) or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Intel HD Graphics 520 or better, or any dedicated GPU, Quad-core 2.5 GHz (Intel Core i5 / AMD Ryzen 5) or equivalent"
-    },
-    {
       "title": "Stream Train",
       "tier": "orange",
       "tiers": {
@@ -1452,6 +1440,18 @@
       "cpu": "Intel Core i5 @ 3.0 GHz or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 2060 or equivalent, Intel Core i5 @ 3.0 GHz or equivalent"
+    },
+    {
+      "title": "FrontWars",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD Graphics 520 or better, or any dedicated GPU",
+      "cpu": "Quad-core 2.5 GHz (Intel Core i5 / AMD Ryzen 5) or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Intel HD Graphics 520 or better, or any dedicated GPU, Quad-core 2.5 GHz (Intel Core i5 / AMD Ryzen 5) or equivalent"
     },
     {
       "title": "Echo Weaver",
