@@ -780,9 +780,10 @@ function progressFinish(cat){
 }
 // Přímý start questu z karty v Backlogu - obchází ruční hledání, položka se dohledá podle názvu
 function startQuestFromBacklog(cat, title){
-  const b = S.backlog.find(x=>x.title===title);
-  if(!b) return;
+  // i podle kategorie – stejný název může mít kniha i film (Osamělý vlk)
   const baseCat = PROG_CFG[cat].source || "game";
+  const b = S.backlog.find(x=>x.title===title && (x._category||"book")===baseCat) || S.backlog.find(x=>x.title===title);
+  if(!b) return;
   const item = (baseCat==="book"||baseCat==="comic")
     ? {title:b.title, image:b.cover||null, url:b.link||null, sub:b.author||null, suggestedTotal:b.pages||null}
     : baseCat==="movie"
