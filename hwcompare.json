@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T21:16:57.226Z",
+  "updatedAt": "2026-10-25T22:16:50.420Z",
   "games": [
     {
       "title": "Enshrouded",
@@ -422,18 +422,6 @@
       "note": "Doporučená konfigurace: GeForce GTX 1650 (4096 MB) / Radeon RX 570 (4096 MB), Intel Core i7-7700K / AMD Ryzen 5 1500X"
     },
     {
-      "title": "Toy Shire",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Nvidia GeForce 1050",
-      "cpu": "Intel Core i5",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Nvidia GeForce 1050, Intel Core i5"
-    },
-    {
       "title": "Moon Sweepers",
       "tier": "green",
       "tiers": {
@@ -444,6 +432,18 @@
       "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Toy Shire",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GeForce 1050",
+      "cpu": "Intel Core i5",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Nvidia GeForce 1050, Intel Core i5"
     },
     {
       "title": "Deep Dish Dungeon",
@@ -566,18 +566,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / Radeon R9 390X (6GB+ of VRAM), Intel Core i7"
     },
     {
-      "title": "RetroSpace",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1650 or AMD Radeon RX 6600",
-      "cpu": "Intel Core i5-11600K or AMD Ryzen 5 5600G",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 or AMD Radeon RX 6600, Intel Core i5-11600K or AMD Ryzen 5 5600G"
-    },
-    {
       "title": "Cucina Stellata",
       "tier": "green",
       "tiers": {
@@ -588,6 +576,18 @@
       "cpu": "Dual-core 2.0 GHz or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: DirectX 10 compatible GPU, Dual-core 2.0 GHz or equivalent"
+    },
+    {
+      "title": "RetroSpace",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1650 or AMD Radeon RX 6600",
+      "cpu": "Intel Core i5-11600K or AMD Ryzen 5 5600G",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 or AMD Radeon RX 6600, Intel Core i5-11600K or AMD Ryzen 5 5600G"
     },
     {
       "title": "Game Keeper: Somebody Messed Up My Shop!",
@@ -902,18 +902,6 @@
       "note": "Doporučená konfigurace: NVDIA GTX 3070  / AMD RX 9060XT, Intel I5 12600 /AMD Ryzen7  5700XT"
     },
     {
-      "title": "Calculate It",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "OpenGL 2.1 compatible graphics card, integrated graphics",
-      "cpu": "Intel Core i3",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: OpenGL 2.1 compatible graphics card, integrated graphics, Intel Core i3"
-    },
-    {
       "title": "Barfender: CO-OP Bar Simulator",
       "tier": "green",
       "tiers": {
@@ -924,6 +912,18 @@
       "cpu": "Intel i5-2500K - AMD FX-6300",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GTX 1060 - AMD RX 580, Intel i5-2500K - AMD FX-6300"
+    },
+    {
+      "title": "Calculate It",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "OpenGL 2.1 compatible graphics card, integrated graphics",
+      "cpu": "Intel Core i3",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: OpenGL 2.1 compatible graphics card, integrated graphics, Intel Core i3"
     },
     {
       "title": "Remote Reaper: FPV Combat Drone Simulator",
@@ -1286,18 +1286,6 @@
       "note": "Minimální konfigurace: DirectX 9/OpenGL 4.1 capable GPU, Intel Core2 Duo or better"
     },
     {
-      "title": "Tidy Up the Halloween Shop",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600, Intel Core i5-10400 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "Poly Fighter",
       "tier": "orange",
       "tiers": {
@@ -1308,6 +1296,18 @@
       "cpu": "Intel i5 12th gen / AMD equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GTX 2060 / AMD Radeon RX 5700, Intel i5 12th gen / AMD equivalent"
+    },
+    {
+      "title": "Tidy Up the Halloween Shop",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "CELESTAY Craft&Slowlife",
@@ -1406,6 +1406,18 @@
       "note": "Minimální konfigurace: Integrated Graphics, Dual-Core 2.0 GHz"
     },
     {
+      "title": "Stupid Never Dies",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "Geforce RTX 3060 8GB | Radeon RX 6600 8GB",
+      "cpu": "6 core / 12 threads (Intel Core i5 11600K | Ryzen 5 5600X)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Geforce RTX 3060 8GB | Radeon RX 6600 8GB, 6 core / 12 threads (Intel Core i5 11600K | Ryzen 5 5600X)"
+    },
+    {
       "title": "Stream Train",
       "tier": "orange",
       "tiers": {
@@ -1428,18 +1440,6 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD Radeon RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
-      "title": "Stupid Never Dies",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "Geforce RTX 3060 8GB | Radeon RX 6600 8GB",
-      "cpu": "6 core / 12 threads (Intel Core i5 11600K | Ryzen 5 5600X)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Geforce RTX 3060 8GB | Radeon RX 6600 8GB, 6 core / 12 threads (Intel Core i5 11600K | Ryzen 5 5600X)"
     },
     {
       "title": "Blockmind",
@@ -1490,18 +1490,6 @@
       "note": "Minimální konfigurace: NVIDIA GTX 660, AMD R7 260X, Core i3-9300T, AMD FX 8350"
     },
     {
-      "title": "Haunted Heist",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1660 Super / RTX 2060 / AMD Radeon RX 5600 XT (6 GB VRAM)",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600 (6 cores)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / RTX 2060 / AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-8400 / AMD Ryzen 5 2600 (6 cores)"
-    },
-    {
       "title": "My Beautiful Faraway, Please Don't Be Cruel To Me",
       "tier": "green",
       "tiers": {
@@ -1512,6 +1500,18 @@
       "cpu": "AMD Ryzen 5 3600 / Intel Core i5-10400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 1060 6GB / RX 580, AMD Ryzen 5 3600 / Intel Core i5-10400"
+    },
+    {
+      "title": "Haunted Heist",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1660 Super / RTX 2060 / AMD Radeon RX 5600 XT (6 GB VRAM)",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600 (6 cores)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / RTX 2060 / AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-8400 / AMD Ryzen 5 2600 (6 cores)"
     },
     {
       "title": "冒险者公会",
@@ -1658,18 +1658,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 970 4GB or similar, Intel Core i3-8100 or similar"
     },
     {
-      "title": "if you stay",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "OpenGL 3.0 or DirectX 11",
-      "cpu": "2.0 Ghz 64-bit Intel-compatible",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: OpenGL 3.0 or DirectX 11, 2.0 Ghz 64-bit Intel-compatible"
-    },
-    {
       "title": "ASPIS",
       "tier": "orange",
       "tiers": {
@@ -1680,6 +1668,18 @@
       "cpu": "AMD Ryzen 5 5600 / Intel Core i5-12600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 2060 / AMD Radeon RX 6600 (6GB video memory or more), AMD Ryzen 5 5600 / Intel Core i5-12600"
+    },
+    {
+      "title": "if you stay",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "OpenGL 3.0 or DirectX 11",
+      "cpu": "2.0 Ghz 64-bit Intel-compatible",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: OpenGL 3.0 or DirectX 11, 2.0 Ghz 64-bit Intel-compatible"
     },
     {
       "title": "星光田野 / Starlit Fields",
