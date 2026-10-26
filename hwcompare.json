@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-26T03:16:23.822Z",
+  "updatedAt": "2026-10-26T04:16:35.223Z",
   "games": [
     {
       "title": "Enshrouded",
@@ -362,18 +362,6 @@
       "note": "Doporučená konfigurace: GTX 1060 / RX 480, i5 7600 / Ryzen 5 2600X"
     },
     {
-      "title": "NightClub Simulator",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA RTX 2060 / AMD Radeon RX 5700",
-      "cpu": "Intel Core i5-10600 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10600 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "Moon Sweepers",
       "tier": "green",
       "tiers": {
@@ -384,6 +372,18 @@
       "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "NightClub Simulator",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA RTX 2060 / AMD Radeon RX 5700",
+      "cpu": "Intel Core i5-10600 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10600 / AMD Ryzen 5 3600"
     },
     {
       "title": "Voodoo Fishin'",
@@ -398,18 +398,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 or AMD Radeon RX 6700 XT (8-12GB VRAM), Intel Core i7-9700K or AMD Ryzen 5 5600X"
     },
     {
-      "title": "Sengoku Rance",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "OpenGL ES 2.0 hardware driver support required for WebGL acceleration. (AMD Catalyst 10.9, nVidia 358.50)",
-      "cpu": "2+ GHz Processor",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: OpenGL ES 2.0 hardware driver support required for WebGL acceleration. (AMD Catalyst 10.9, nVidia 358.50), 2+ GHz Processor"
-    },
-    {
       "title": "Chained Beasts",
       "tier": "green",
       "tiers": {
@@ -420,6 +408,18 @@
       "cpu": "Intel Core i5-5257U, AMD Ryzen 3 1200 or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce GTX 1050, AMD RX 460 or equivalent, Intel Core i5-5257U, AMD Ryzen 3 1200 or equivalent"
+    },
+    {
+      "title": "Sengoku Rance",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "OpenGL ES 2.0 hardware driver support required for WebGL acceleration. (AMD Catalyst 10.9, nVidia 358.50)",
+      "cpu": "2+ GHz Processor",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: OpenGL ES 2.0 hardware driver support required for WebGL acceleration. (AMD Catalyst 10.9, nVidia 358.50), 2+ GHz Processor"
     },
     {
       "title": "Warhammer 40,000: Boltgun 2",
@@ -720,18 +720,6 @@
       "cpu": "Intel® Core™ i5-6600 (quad-core) / AMD® Ryzen™ 3 2200G (quad-core)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 1660 (6 GB) / AMD® Radeon™ RX 5600 (6 GB), Intel® Core™ i5-6600 (quad-core) / AMD® Ryzen™ 3 2200G (quad-core)"
-    },
-    {
-      "title": "Deleted Wiki: Clean Up the Lost Files",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Any modern GPU",
-      "cpu": "64-bit quad-core",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Any modern GPU, 64-bit quad-core"
     },
     {
       "title": "Nientum - Op.ZERO",
@@ -1394,18 +1382,6 @@
       "note": "Doporučená konfigurace: GTX 1060 or Equivalent, 2.4 GHZ Quad Core Processor"
     },
     {
-      "title": "War Footing",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Integrated Graphics",
-      "cpu": "Dual-Core 2.0 GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Integrated Graphics, Dual-Core 2.0 GHz"
-    },
-    {
       "title": "Stupid Never Dies",
       "tier": "orange",
       "tiers": {
@@ -1416,6 +1392,18 @@
       "cpu": "6 core / 12 threads (Intel Core i5 11600K | Ryzen 5 5600X)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Geforce RTX 3060 8GB | Radeon RX 6600 8GB, 6 core / 12 threads (Intel Core i5 11600K | Ryzen 5 5600X)"
+    },
+    {
+      "title": "War Footing",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Integrated Graphics",
+      "cpu": "Dual-Core 2.0 GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Integrated Graphics, Dual-Core 2.0 GHz"
     },
     {
       "title": "Stream Train",
@@ -1538,30 +1526,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 970 4GB or similar, Intel Core i3-8100 or similar"
     },
     {
-      "title": "伊莉亚娜公主的坠落之夜~她已不再属于你~",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX750TI",
-      "cpu": "Intel Core i3",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GTX750TI, Intel Core i3"
-    },
-    {
-      "title": "Demon General Kirsten",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "OpenGL ES 2.0 hardware driver support required for WebGL acceleration. (AMD Catalyst 10.9, nVidia 358.50)",
-      "cpu": "2+ GHz Processor",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: OpenGL ES 2.0 hardware driver support required for WebGL acceleration. (AMD Catalyst 10.9, nVidia 358.50), 2+ GHz Processor"
-    },
-    {
       "title": "三国义",
       "tier": "green",
       "tiers": {
@@ -1584,6 +1548,30 @@
       "cpu": "2.4 GHz Quad Core",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 Ti or AMD Radeon HD 7850 (1GB VRAM), 2.4 GHz Quad Core"
+    },
+    {
+      "title": "伊莉亚娜公主的坠落之夜~她已不再属于你~",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX750TI",
+      "cpu": "Intel Core i3",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GTX750TI, Intel Core i3"
+    },
+    {
+      "title": "Demon General Kirsten",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "OpenGL ES 2.0 hardware driver support required for WebGL acceleration. (AMD Catalyst 10.9, nVidia 358.50)",
+      "cpu": "2+ GHz Processor",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: OpenGL ES 2.0 hardware driver support required for WebGL acceleration. (AMD Catalyst 10.9, nVidia 358.50), 2+ GHz Processor"
     },
     {
       "title": "Only Fans",
