@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-26T10:16:26.391Z",
+  "updatedAt": "2026-10-26T11:16:20.989Z",
   "games": [
     {
       "title": "Enshrouded",
@@ -156,6 +156,18 @@
       "cpu": "Intel Core i7-12400 / AMD Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6700 XT, Intel Core i7-12400 / AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "REKA",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GeForce RTX 2060 Or AMD Radeon RX 5700 XT",
+      "cpu": "Intel Core i5-8400 Or AMD Ryzen 5 3600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce RTX 2060 Or AMD Radeon RX 5700 XT, Intel Core i5-8400 Or AMD Ryzen 5 3600X"
     },
     {
       "title": "Silver Pines",
@@ -722,18 +734,6 @@
       "note": "Minimální konfigurace: Nvidia GTS 450 | AMD Radeon HD 5750., Intel Core i3-2120 | AMD FX-4350."
     },
     {
-      "title": "Witch Cabin Cleanup",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1050 | AMD Radeon RX-580",
-      "cpu": "2.5 GHz Quad-core Intel or AMD processor",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 1050 | AMD Radeon RX-580, 2.5 GHz Quad-core Intel or AMD processor"
-    },
-    {
       "title": "Forever Ago",
       "tier": "green",
       "tiers": {
@@ -744,6 +744,18 @@
       "cpu": "Intel Core i5-8400 or AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, 3 GB or AMD Radeon RX 590, 8 GB or Intel Arc A580, 6 GB, Intel Core i5-8400 or AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Witch Cabin Cleanup",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1050 | AMD Radeon RX-580",
+      "cpu": "2.5 GHz Quad-core Intel or AMD processor",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 1050 | AMD Radeon RX-580, 2.5 GHz Quad-core Intel or AMD processor"
     },
     {
       "title": "ONE PIECE: Grand Gourmet",
@@ -1046,18 +1058,6 @@
       "note": "Minimální konfigurace: GTX 1080, i7"
     },
     {
-      "title": "Folded Fables: Tidy Up The Dragon Hoard",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "RTX 2060 or RX 7600xt or equivalent",
-      "cpu": "Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent"
-    },
-    {
       "title": "Tales of Eternia Remastered",
       "tier": "green",
       "tiers": {
@@ -1068,6 +1068,18 @@
       "cpu": "Intel Core i3-8100 / AMD Ryzen 3 3100",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 650Ti [1 GB] / AMD Radeon HD 7770 [2 GB] / Intel Arc A310 [4 GB], Intel Core i3-8100 / AMD Ryzen 3 3100"
+    },
+    {
+      "title": "Folded Fables: Tidy Up The Dragon Hoard",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "RTX 2060 or RX 7600xt or equivalent",
+      "cpu": "Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent"
     },
     {
       "title": "Motorcycle Night Ride",
@@ -1466,18 +1478,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / RTX 2060 / AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-8400 / AMD Ryzen 5 2600 (6 cores)"
     },
     {
-      "title": "冒险者公会",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
-      "cpu": "Intel Core i5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i5"
-    },
-    {
       "title": "三国义",
       "tier": "green",
       "tiers": {
@@ -1488,6 +1488,18 @@
       "cpu": "Intel Core i5 / AMD Ryzen 5 equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Dedicated GPU with 2GB VRAM or higher, Intel Core i5 / AMD Ryzen 5 equivalent"
+    },
+    {
+      "title": "冒险者公会",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630",
+      "cpu": "Intel Core i5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i5"
     },
     {
       "title": "Moadra",
@@ -1644,6 +1656,18 @@
       "cpu": "Core i5-4460 (3.2 GHz)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 660 / AMD Radeon HD 7850, Core i5-4460 (3.2 GHz)"
+    },
+    {
+      "title": "Jono",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Almost any",
+      "cpu": "Almost any",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Almost any, Almost any"
     },
     {
       "title": "The Incident at Galley House",
