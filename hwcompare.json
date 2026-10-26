@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-26T06:16:41.528Z",
+  "updatedAt": "2026-10-26T07:16:27.921Z",
   "games": [
     {
       "title": "Enshrouded",
@@ -578,18 +578,6 @@
       "note": "Minimální konfigurace: DirectX 10 compatible GPU, Dual-core 2.0 GHz or equivalent"
     },
     {
-      "title": "RetroSpace",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1650 or AMD Radeon RX 6600",
-      "cpu": "Intel Core i5-11600K or AMD Ryzen 5 5600G",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 or AMD Radeon RX 6600, Intel Core i5-11600K or AMD Ryzen 5 5600G"
-    },
-    {
       "title": "Big Dig",
       "tier": "green",
       "tiers": {
@@ -600,6 +588,18 @@
       "cpu": "i3 or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GPU with at least 2 GB of VRAM, i3 or equivalent"
+    },
+    {
+      "title": "RetroSpace",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1650 or AMD Radeon RX 6600",
+      "cpu": "Intel Core i5-11600K or AMD Ryzen 5 5600G",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 or AMD Radeon RX 6600, Intel Core i5-11600K or AMD Ryzen 5 5600G"
     },
     {
       "title": "Game Keeper: Somebody Messed Up My Shop!",
