@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-26T00:16:11.221Z",
+  "updatedAt": "2026-10-26T01:16:21.106Z",
   "games": [
     {
       "title": "Enshrouded",
@@ -794,18 +794,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060, 11th Gen Intel(R) Core i7-11800H @ 2.30GHz"
     },
     {
-      "title": "Burn With Me",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "2GB Video Memory",
-      "cpu": "2.5Ghz or better",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: 2GB Video Memory, 2.5Ghz or better"
-    },
-    {
       "title": "Heartfall — A Tale in Three Lives",
       "tier": "green",
       "tiers": {
@@ -816,6 +804,18 @@
       "cpu": "AMD Ryzen 3 7320U/Ryzen 3 1200; Intel Core i3-1215U/i3-8100",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: AMD Radeon 680M; Nvidia GTX 1050 Ti, Intel Arc A310/Xe 96EU, AMD Ryzen 3 7320U/Ryzen 3 1200; Intel Core i3-1215U/i3-8100"
+    },
+    {
+      "title": "Burn With Me",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "2GB Video Memory",
+      "cpu": "2.5Ghz or better",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: 2GB Video Memory, 2.5Ghz or better"
     },
     {
       "title": "ONE PIECE: Grand Gourmet",
@@ -1118,18 +1118,6 @@
       "note": "Minimální konfigurace: GTX 1080, i7"
     },
     {
-      "title": "Folded Fables: Tidy Up The Dragon Hoard",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "RTX 2060 or RX 7600xt or equivalent",
-      "cpu": "Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent"
-    },
-    {
       "title": "AI Olympius",
       "tier": "orange",
       "tiers": {
@@ -1140,6 +1128,18 @@
       "cpu": "4 core / 8 threads | Intel Core i7-7700 | Ryzen 5 1400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: 8GB VRAM | RTX2070 | RX 6700 XT, 4 core / 8 threads | Intel Core i7-7700 | Ryzen 5 1400"
+    },
+    {
+      "title": "Folded Fables: Tidy Up The Dragon Hoard",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "RTX 2060 or RX 7600xt or equivalent",
+      "cpu": "Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent"
     },
     {
       "title": "LOST & FOUND - Oddělení ztrát a nálezů",
@@ -1250,6 +1250,18 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1060 / AMD Radeon RX 580, VRAM: 4 GB, Intel Core i7-7700K / AMD Ryzen 5 1600"
     },
     {
+      "title": "Flipping is Hard",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1060, AMD Radeon RX 470, or better",
+      "cpu": "Intel Core i7-4770K / AMD Ryzen 5 1500X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, AMD Radeon RX 470, or better, Intel Core i7-4770K / AMD Ryzen 5 1500X"
+    },
+    {
       "title": "FIRE AND ASHES",
       "tier": "red",
       "tiers": {
@@ -1272,18 +1284,6 @@
       "cpu": "Intel i5",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GTX 1650, Intel i5"
-    },
-    {
-      "title": "Flipping is Hard",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1060, AMD Radeon RX 470, or better",
-      "cpu": "Intel Core i7-4770K / AMD Ryzen 5 1500X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, AMD Radeon RX 470, or better, Intel Core i7-4770K / AMD Ryzen 5 1500X"
     },
     {
       "title": "Tunnel Escape Fates Entwined",
@@ -1526,6 +1526,18 @@
       "note": "Doporučená konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i5"
     },
     {
+      "title": "伊莉亚娜公主的坠落之夜~她已不再属于你~",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX750TI",
+      "cpu": "Intel Core i3",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GTX750TI, Intel Core i3"
+    },
+    {
       "title": "Demon General Kirsten",
       "tier": "green",
       "tiers": {
@@ -1538,16 +1550,28 @@
       "note": "Doporučená konfigurace: OpenGL ES 2.0 hardware driver support required for WebGL acceleration. (AMD Catalyst 10.9, nVidia 358.50), 2+ GHz Processor"
     },
     {
-      "title": "伊莉亚娜公主的坠落之夜~她已不再属于你~",
+      "title": "GemCraft - Legacy Collection",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "GTX750TI",
-      "cpu": "Intel Core i3",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GTX750TI, Intel Core i3"
+      "gpu": "NVIDIA GeForce GTX 750 Ti or AMD Radeon HD 7850 (1GB VRAM)",
+      "cpu": "2.4 GHz Quad Core",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 Ti or AMD Radeon HD 7850 (1GB VRAM), 2.4 GHz Quad Core"
+    },
+    {
+      "title": "Moadra",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 970 4GB or similar",
+      "cpu": "Intel Core i3-8100 or similar",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 970 4GB or similar, Intel Core i3-8100 or similar"
     },
     {
       "title": "PixelBoss: Shattered Depths",
@@ -1598,18 +1622,6 @@
       "note": "Doporučená konfigurace: Dedicated GPU with 2GB VRAM or higher, Intel Core i5 / AMD Ryzen 5 equivalent"
     },
     {
-      "title": "GemCraft - Legacy Collection",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 750 Ti or AMD Radeon HD 7850 (1GB VRAM)",
-      "cpu": "2.4 GHz Quad Core",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 Ti or AMD Radeon HD 7850 (1GB VRAM), 2.4 GHz Quad Core"
-    },
-    {
       "title": "Only Fans",
       "tier": "green",
       "tiers": {
@@ -1620,42 +1632,6 @@
       "cpu": "i3",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 4400, i3"
-    },
-    {
-      "title": "Moadra",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 970 4GB or similar",
-      "cpu": "Intel Core i3-8100 or similar",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 970 4GB or similar, Intel Core i3-8100 or similar"
-    },
-    {
-      "title": "Gridlords",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DX10, DX11, DX12 capable",
-      "cpu": "Intel Core i5-6500/Core i7-4770 or AMD Ryzen 5 1500X",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: DX10, DX11, DX12 capable, Intel Core i5-6500/Core i7-4770 or AMD Ryzen 5 1500X"
-    },
-    {
-      "title": "Train Station Tycoon",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 3060 12 GB or AMD Radeon RX 6700 XT 12 GB",
-      "cpu": "Intel Core i5-12400F or AMD Ryzen 5 5600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB or AMD Radeon RX 6700 XT 12 GB, Intel Core i5-12400F or AMD Ryzen 5 5600"
     },
     {
       "title": "if you stay",
@@ -1680,6 +1656,30 @@
       "cpu": "AMD Ryzen 5 5600 / Intel Core i5-12600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 2060 / AMD Radeon RX 6600 (6GB video memory or more), AMD Ryzen 5 5600 / Intel Core i5-12600"
+    },
+    {
+      "title": "Gridlords",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DX10, DX11, DX12 capable",
+      "cpu": "Intel Core i5-6500/Core i7-4770 or AMD Ryzen 5 1500X",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: DX10, DX11, DX12 capable, Intel Core i5-6500/Core i7-4770 or AMD Ryzen 5 1500X"
+    },
+    {
+      "title": "Train Station Tycoon",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060 12 GB or AMD Radeon RX 6700 XT 12 GB",
+      "cpu": "Intel Core i5-12400F or AMD Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB or AMD Radeon RX 6700 XT 12 GB, Intel Core i5-12400F or AMD Ryzen 5 5600"
     },
     {
       "title": "星光田野 / Starlit Fields",
