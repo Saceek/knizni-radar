@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-28T09:47:58.470Z",
+  "updatedAt": "2026-10-28T10:15:54.813Z",
   "games": [
     {
       "title": "Enshrouded",
@@ -782,18 +782,6 @@
       "note": "Minimální konfigurace: NVIDIA GTX 1060 - AMD RX 580, Intel i5-2500K - AMD FX-6300"
     },
     {
-      "title": "Calculate It",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "OpenGL 2.1 compatible graphics card, integrated graphics",
-      "cpu": "Intel Core i3",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: OpenGL 2.1 compatible graphics card, integrated graphics, Intel Core i3"
-    },
-    {
       "title": "Stella Sora",
       "tier": "green",
       "tiers": {
@@ -804,6 +792,18 @@
       "cpu": "Intel® Core™ i5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 or above, Intel® Core™ i5"
+    },
+    {
+      "title": "Calculate It",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "OpenGL 2.1 compatible graphics card, integrated graphics",
+      "cpu": "Intel Core i3",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: OpenGL 2.1 compatible graphics card, integrated graphics, Intel Core i3"
     },
     {
       "title": "Remote Reaper: FPV Combat Drone Simulator",
@@ -1082,18 +1082,6 @@
       "note": "Minimální konfigurace: DirectX 11 compatible video card, Intel Core 2 Duo 2.40 GHz / AMD Athlon 2.40 GHz"
     },
     {
-      "title": "Life, the Universe, and Restaurants",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA® GeForce® GTX 750 or AMD Radeon™ R7 265",
-      "cpu": "Intel® Core™ i5-6xxx, AMD FX™-6300",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA® GeForce® GTX 750 or AMD Radeon™ R7 265, Intel® Core™ i5-6xxx, AMD FX™-6300"
-    },
-    {
       "title": "You Are Empty: Absolute Edition",
       "tier": "green",
       "tiers": {
@@ -1104,6 +1092,18 @@
       "cpu": "Intel or AMD with at least 2 cores",
       "usedMinimum": true,
       "note": "Minimální konfigurace: 1GB VRAM GPU, Intel or AMD with at least 2 cores"
+    },
+    {
+      "title": "Life, the Universe, and Restaurants",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA® GeForce® GTX 750 or AMD Radeon™ R7 265",
+      "cpu": "Intel® Core™ i5-6xxx, AMD FX™-6300",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA® GeForce® GTX 750 or AMD Radeon™ R7 265, Intel® Core™ i5-6xxx, AMD FX™-6300"
     },
     {
       "title": "Thank You Bus Driver",
@@ -1262,16 +1262,16 @@
       "note": "Minimální konfigurace: NVIDIA GeForce 450 or higher with 1GB Memory, 64 Bit Processor: Intel Core i3 2.00 GHZ or AMD equivalent"
     },
     {
-      "title": "PAO PAO",
-      "tier": "red",
+      "title": "Moadra",
+      "tier": "green",
       "tiers": {
-        "allyx": "red",
+        "allyx": "green",
         "pc": "green"
       },
-      "gpu": "NVIDIA GeForce RTX 3060",
-      "cpu": "Intel Core i5-12400",
+      "gpu": "NVIDIA GeForce GTX 970 4GB or similar",
+      "cpu": "Intel Core i3-8100 or similar",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060, Intel Core i5-12400"
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 970 4GB or similar, Intel Core i3-8100 or similar"
     },
     {
       "title": "Keyboard Chaos",
@@ -1286,16 +1286,16 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD Radeon RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
-      "title": "Moadra",
-      "tier": "green",
+      "title": "PAO PAO",
+      "tier": "red",
       "tiers": {
-        "allyx": "green",
+        "allyx": "red",
         "pc": "green"
       },
-      "gpu": "NVIDIA GeForce GTX 970 4GB or similar",
-      "cpu": "Intel Core i3-8100 or similar",
+      "gpu": "NVIDIA GeForce RTX 3060",
+      "cpu": "Intel Core i5-12400",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 970 4GB or similar, Intel Core i3-8100 or similar"
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060, Intel Core i5-12400"
     },
     {
       "title": "ELbab",
@@ -1346,18 +1346,6 @@
       "note": "Minimální konfigurace: Integrated Graphics, Dual-Core 2.0 GHz"
     },
     {
-      "title": "Stream Train",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 2060 or equivalent",
-      "cpu": "Intel Core i5 @ 3.0 GHz or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 2060 or equivalent, Intel Core i5 @ 3.0 GHz or equivalent"
-    },
-    {
       "title": "Selkie's Salvage&Co.",
       "tier": "green",
       "tiers": {
@@ -1368,6 +1356,18 @@
       "cpu": "Intel i5 or Higher",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Most dedicated GPUs should work., Intel i5 or Higher"
+    },
+    {
+      "title": "Stream Train",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 2060 or equivalent",
+      "cpu": "Intel Core i5 @ 3.0 GHz or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 2060 or equivalent, Intel Core i5 @ 3.0 GHz or equivalent"
     },
     {
       "title": "PixelBoss: Shattered Depths",
