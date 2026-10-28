@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-28T06:16:43.811Z",
+  "updatedAt": "2026-10-28T07:17:01.319Z",
   "games": [
     {
       "title": "Enshrouded",
@@ -782,18 +782,6 @@
       "note": "Minimální konfigurace: NVIDIA GTX 1060 - AMD RX 580, Intel i5-2500K - AMD FX-6300"
     },
     {
-      "title": "Calculate It",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "OpenGL 2.1 compatible graphics card, integrated graphics",
-      "cpu": "Intel Core i3",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: OpenGL 2.1 compatible graphics card, integrated graphics, Intel Core i3"
-    },
-    {
       "title": "CRACK",
       "tier": "green",
       "tiers": {
@@ -804,6 +792,18 @@
       "cpu": "Intel i5-10400 / Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 1660 Super / RTX 2060 / RX 5600 XT, 6 GB, Intel i5-10400 / Ryzen 5 3600"
+    },
+    {
+      "title": "Calculate It",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "OpenGL 2.1 compatible graphics card, integrated graphics",
+      "cpu": "Intel Core i3",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: OpenGL 2.1 compatible graphics card, integrated graphics, Intel Core i3"
     },
     {
       "title": "Stella Sora",
@@ -1094,6 +1094,18 @@
       "note": "Minimální konfigurace: NVIDIA® GeForce® GTX 750 or AMD Radeon™ R7 265, Intel® Core™ i5-6xxx, AMD FX™-6300"
     },
     {
+      "title": "ShredDead",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DirectX 11 compatible video card",
+      "cpu": "Intel Core 2 Duo 2.40 GHz / AMD Athlon 2.40 GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: DirectX 11 compatible video card, Intel Core 2 Duo 2.40 GHz / AMD Athlon 2.40 GHz"
+    },
+    {
       "title": "Thank You Bus Driver",
       "tier": "green",
       "tiers": {
@@ -1118,16 +1130,16 @@
       "note": "Doporučená konfigurace: GeForce RTX 3060 or equivalent, Intel Core i7-4770k or equivalent"
     },
     {
-      "title": "ShredDead",
+      "title": "You Are Empty: Absolute Edition",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "DirectX 11 compatible video card",
-      "cpu": "Intel Core 2 Duo 2.40 GHz / AMD Athlon 2.40 GHz",
+      "gpu": "1GB VRAM GPU",
+      "cpu": "Intel or AMD with at least 2 cores",
       "usedMinimum": true,
-      "note": "Minimální konfigurace: DirectX 11 compatible video card, Intel Core 2 Duo 2.40 GHz / AMD Athlon 2.40 GHz"
+      "note": "Minimální konfigurace: 1GB VRAM GPU, Intel or AMD with at least 2 cores"
     },
     {
       "title": "Cyberfrags '69",
@@ -1140,18 +1152,6 @@
       "cpu": "Intel i5",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GTX 1650, Intel i5"
-    },
-    {
-      "title": "You Are Empty: Absolute Edition",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "1GB VRAM GPU",
-      "cpu": "Intel or AMD with at least 2 cores",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: 1GB VRAM GPU, Intel or AMD with at least 2 cores"
     },
     {
       "title": "Do Disciplinary Committee Members Dream of Succubi?",
@@ -1238,18 +1238,6 @@
       "note": "Doporučená konfigurace: Geforce RTX 3060 8GB | Radeon RX 6600 8GB, 6 core / 12 threads (Intel Core i5 11600K | Ryzen 5 5600X)"
     },
     {
-      "title": "Disney/Pixar Toy Story: Retro Roundup!",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Nvidia GeForce GTX 460, AMD Radeon R7 250X",
-      "cpu": "Intel Core i3-4100, AMD A8-6600K",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Nvidia GeForce GTX 460, AMD Radeon R7 250X, Intel Core i3-4100, AMD A8-6600K"
-    },
-    {
       "title": "NekoTrak",
       "tier": "green",
       "tiers": {
@@ -1260,6 +1248,18 @@
       "cpu": "Intel Core i5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 / Intel UHD 730 or equivalent, Intel Core i5"
+    },
+    {
+      "title": "Disney/Pixar Toy Story: Retro Roundup!",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GeForce GTX 460, AMD Radeon R7 250X",
+      "cpu": "Intel Core i3-4100, AMD A8-6600K",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Nvidia GeForce GTX 460, AMD Radeon R7 250X, Intel Core i3-4100, AMD A8-6600K"
     },
     {
       "title": "Keyboard Chaos",
@@ -1286,18 +1286,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 970 4GB or similar, Intel Core i3-8100 or similar"
     },
     {
-      "title": "ELbab",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel HD Graphics 5000 or better",
-      "cpu": "Intel Core i5 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Intel HD Graphics 5000 or better, Intel Core i5 or equivalent"
-    },
-    {
       "title": "The Onion Voting Simulator 3D",
       "tier": "green",
       "tiers": {
@@ -1308,6 +1296,18 @@
       "cpu": "64 Bit Processor: Intel Core i3 2.00 GHZ or AMD equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce 450 or higher with 1GB Memory, 64 Bit Processor: Intel Core i3 2.00 GHZ or AMD equivalent"
+    },
+    {
+      "title": "ELbab",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD Graphics 5000 or better",
+      "cpu": "Intel Core i5 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Intel HD Graphics 5000 or better, Intel Core i5 or equivalent"
     },
     {
       "title": "Dreadline Express",
@@ -1346,18 +1346,6 @@
       "note": "Minimální konfigurace: Integrated Graphics, Dual-Core 2.0 GHz"
     },
     {
-      "title": "Stream Train",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 2060 or equivalent",
-      "cpu": "Intel Core i5 @ 3.0 GHz or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 2060 or equivalent, Intel Core i5 @ 3.0 GHz or equivalent"
-    },
-    {
       "title": "PAO PAO",
       "tier": "red",
       "tiers": {
@@ -1368,6 +1356,18 @@
       "cpu": "Intel Core i5-12400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060, Intel Core i5-12400"
+    },
+    {
+      "title": "Stream Train",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 2060 or equivalent",
+      "cpu": "Intel Core i5 @ 3.0 GHz or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 2060 or equivalent, Intel Core i5 @ 3.0 GHz or equivalent"
     },
     {
       "title": "PixelBoss: Shattered Depths",
@@ -1454,16 +1454,16 @@
       "note": "Doporučená konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i5"
     },
     {
-      "title": "파멸의 오타쿠",
+      "title": "Selkie's Salvage&Co.",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "Intel UHD Graphics 620",
-      "cpu": "Intel Core i5-6500",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Intel UHD Graphics 620, Intel Core i5-6500"
+      "gpu": "Most dedicated GPUs should work.",
+      "cpu": "Intel i5 or Higher",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Most dedicated GPUs should work., Intel i5 or Higher"
     },
     {
       "title": "Only Fans",
@@ -1478,16 +1478,16 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4400, i3"
     },
     {
-      "title": "Selkie's Salvage&Co.",
+      "title": "파멸의 오타쿠",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "Most dedicated GPUs should work.",
-      "cpu": "Intel i5 or Higher",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Most dedicated GPUs should work., Intel i5 or Higher"
+      "gpu": "Intel UHD Graphics 620",
+      "cpu": "Intel Core i5-6500",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Intel UHD Graphics 620, Intel Core i5-6500"
     },
     {
       "title": "Demon General Kirsten",
@@ -1514,18 +1514,6 @@
       "note": "Minimální konfigurace: GTX750TI, Intel Core i3"
     },
     {
-      "title": "Divine Frequency",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "OpenGL 4.0 or Vulkan Compatible",
-      "cpu": "Quad Core 2.4 GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: OpenGL 4.0 or Vulkan Compatible, Quad Core 2.4 GHz"
-    },
-    {
       "title": "Soul Mates",
       "tier": "green",
       "tiers": {
@@ -1548,6 +1536,18 @@
       "cpu": "Intel Core i5-6500/Core i7-4770 or AMD Ryzen 5 1500X",
       "usedMinimum": true,
       "note": "Minimální konfigurace: DX10, DX11, DX12 capable, Intel Core i5-6500/Core i7-4770 or AMD Ryzen 5 1500X"
+    },
+    {
+      "title": "Divine Frequency",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "OpenGL 4.0 or Vulkan Compatible",
+      "cpu": "Quad Core 2.4 GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: OpenGL 4.0 or Vulkan Compatible, Quad Core 2.4 GHz"
     },
     {
       "title": "Allogloom",
