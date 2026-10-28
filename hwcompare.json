@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-28T04:16:38.680Z",
+  "updatedAt": "2026-10-28T05:16:12.276Z",
   "games": [
     {
       "title": "Enshrouded",
@@ -782,6 +782,18 @@
       "note": "Doporučená konfigurace: OpenGL 2.1 compatible graphics card, integrated graphics, Intel Core i3"
     },
     {
+      "title": "CRACK",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 1660 Super / RTX 2060 / RX 5600 XT, 6 GB",
+      "cpu": "Intel i5-10400 / Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1660 Super / RTX 2060 / RX 5600 XT, 6 GB, Intel i5-10400 / Ryzen 5 3600"
+    },
+    {
       "title": "Stella Sora",
       "tier": "green",
       "tiers": {
@@ -804,18 +816,6 @@
       "cpu": "Intel Core i7-6600K / AMD Ryzen 5 5600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 3060, Intel Core i7-6600K / AMD Ryzen 5 5600"
-    },
-    {
-      "title": "CRACK",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 1660 Super / RTX 2060 / RX 5600 XT, 6 GB",
-      "cpu": "Intel i5-10400 / Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1660 Super / RTX 2060 / RX 5600 XT, 6 GB, Intel i5-10400 / Ryzen 5 3600"
     },
     {
       "title": "Stream Racer",
@@ -1058,18 +1058,6 @@
       "note": "Doporučená konfigurace: AMD Radeon RX 7600 XT / NVIDIA GeForce RTX 5070 / 4070 TI, AMD Ryzen 7 3700X / Intel Core i5-9600K"
     },
     {
-      "title": "Truckful",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "3GB VRAM (GeForce GTX 1060 and above)",
-      "cpu": "Requires a 64-bit processor and operating system",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: 3GB VRAM (GeForce GTX 1060 and above), Requires a 64-bit processor and operating system"
-    },
-    {
       "title": "Flipping is Hard",
       "tier": "green",
       "tiers": {
@@ -1080,6 +1068,18 @@
       "cpu": "Intel Core i7-4770K / AMD Ryzen 5 1500X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, AMD Radeon RX 470, or better, Intel Core i7-4770K / AMD Ryzen 5 1500X"
+    },
+    {
+      "title": "Truckful",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "3GB VRAM (GeForce GTX 1060 and above)",
+      "cpu": "Requires a 64-bit processor and operating system",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 3GB VRAM (GeForce GTX 1060 and above), Requires a 64-bit processor and operating system"
     },
     {
       "title": "Life, the Universe, and Restaurants",
@@ -1142,6 +1142,18 @@
       "note": "Minimální konfigurace: 1GB VRAM GPU, Intel or AMD with at least 2 cores"
     },
     {
+      "title": "ShredDead",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DirectX 11 compatible video card",
+      "cpu": "Intel Core 2 Duo 2.40 GHz / AMD Athlon 2.40 GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: DirectX 11 compatible video card, Intel Core 2 Duo 2.40 GHz / AMD Athlon 2.40 GHz"
+    },
+    {
       "title": "Do Disciplinary Committee Members Dream of Succubi?",
       "tier": "green",
       "tiers": {
@@ -1164,18 +1176,6 @@
       "cpu": "Intel i5 12th gen / AMD equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GTX 2060 / AMD Radeon RX 5700, Intel i5 12th gen / AMD equivalent"
-    },
-    {
-      "title": "ShredDead",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DirectX 11 compatible video card",
-      "cpu": "Intel Core 2 Duo 2.40 GHz / AMD Athlon 2.40 GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: DirectX 11 compatible video card, Intel Core 2 Duo 2.40 GHz / AMD Athlon 2.40 GHz"
     },
     {
       "title": "ASPIS",
@@ -1298,6 +1298,18 @@
       "note": "Doporučená konfigurace: Intel HD Graphics 5000 or better, Intel Core i5 or equivalent"
     },
     {
+      "title": "The Onion Voting Simulator 3D",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce 450 or higher with 1GB Memory",
+      "cpu": "64 Bit Processor: Intel Core i3 2.00 GHZ or AMD equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce 450 or higher with 1GB Memory, 64 Bit Processor: Intel Core i3 2.00 GHZ or AMD equivalent"
+    },
+    {
       "title": "Dreadline Express",
       "tier": "green",
       "tiers": {
@@ -1344,18 +1356,6 @@
       "cpu": "Intel Core i5 @ 3.0 GHz or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 2060 or equivalent, Intel Core i5 @ 3.0 GHz or equivalent"
-    },
-    {
-      "title": "The Onion Voting Simulator 3D",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce 450 or higher with 1GB Memory",
-      "cpu": "64 Bit Processor: Intel Core i3 2.00 GHZ or AMD equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce 450 or higher with 1GB Memory, 64 Bit Processor: Intel Core i3 2.00 GHZ or AMD equivalent"
     },
     {
       "title": "PAO PAO",
@@ -1502,6 +1502,18 @@
       "note": "Minimální konfigurace: GTX750TI, Intel Core i3"
     },
     {
+      "title": "Divine Frequency",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "OpenGL 4.0 or Vulkan Compatible",
+      "cpu": "Quad Core 2.4 GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: OpenGL 4.0 or Vulkan Compatible, Quad Core 2.4 GHz"
+    },
+    {
       "title": "Soul Mates",
       "tier": "green",
       "tiers": {
@@ -1524,18 +1536,6 @@
       "cpu": "Intel Core i5-6500/Core i7-4770 or AMD Ryzen 5 1500X",
       "usedMinimum": true,
       "note": "Minimální konfigurace: DX10, DX11, DX12 capable, Intel Core i5-6500/Core i7-4770 or AMD Ryzen 5 1500X"
-    },
-    {
-      "title": "Divine Frequency",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "OpenGL 4.0 or Vulkan Compatible",
-      "cpu": "Quad Core 2.4 GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: OpenGL 4.0 or Vulkan Compatible, Quad Core 2.4 GHz"
     },
     {
       "title": "Selkie's Salvage&Co.",
@@ -1596,6 +1596,18 @@
       "cpu": null,
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel iRIS Xe or better"
+    },
+    {
+      "title": "不良婚姻惩罚师",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GT 630",
+      "cpu": "Intel Core i5-3470",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GT 630, Intel Core i5-3470"
     },
     {
       "title": "The Incident at Galley House",
