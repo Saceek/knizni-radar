@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-28T12:16:11.428Z",
+  "updatedAt": "2026-10-28T13:16:33.065Z",
   "games": [
     {
       "title": "Enshrouded",
@@ -12,6 +12,18 @@
       "cpu": "Intel i7-8700 (3.7 GHz 6 Core) / AMD Ryzen 7 2700X (3.7 GHz 8 Core) or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 2070 Super (req. 6GB VRAM) / AMD Radeon RX 6700 XT (req. 6GB VRAM) / Intel ARC A770, Intel i7-8700 (3.7 GHz 6 Core) / AMD Ryzen 7 2700X (3.7 GHz 8 Core) or equivalent"
+    },
+    {
+      "title": "SULFUR",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "GTX 1080 or equivalent",
+      "cpu": "2.4 GHZ Quad Core Processor",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1080 or equivalent, 2.4 GHZ Quad Core Processor"
     },
     {
       "title": "Call of Duty®: Modern Warfare® 4",
@@ -434,18 +446,6 @@
       "note": "Minimální konfigurace: Radeon RX 580, AMD Ryzen 5 3600X 6-Core Processor 3.79 GHz"
     },
     {
-      "title": "Duelant: Nečinná Expedice",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Graphics card with DX10",
-      "cpu": "Intel Core i5 or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Graphics card with DX10, Intel Core i5 or better"
-    },
-    {
       "title": "Cucina Stellata",
       "tier": "green",
       "tiers": {
@@ -456,6 +456,18 @@
       "cpu": "Dual-core 2.0 GHz or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: DirectX 10 compatible GPU, Dual-core 2.0 GHz or equivalent"
+    },
+    {
+      "title": "Duelant: Nečinná Expedice",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Graphics card with DX10",
+      "cpu": "Intel Core i5 or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Graphics card with DX10, Intel Core i5 or better"
     },
     {
       "title": "Shipping Store Simulator 2037",
@@ -540,18 +552,6 @@
       "cpu": "Intel i7-10700K / AMD Ryzen 7 5700X3D",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3080 / AMD Radeon RX 6800 XT (10GB+ VRAM), Intel i7-10700K / AMD Ryzen 7 5700X3D"
-    },
-    {
-      "title": "Neon Abyss 2",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 950, Radeon R7 360, or Intel HD Graphics 630",
-      "cpu": "Dual Core 2.4 GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 950, Radeon R7 360, or Intel HD Graphics 630, Dual Core 2.4 GHz"
     },
     {
       "title": "The Boss Gangster: Criminal Empire",
@@ -1058,18 +1058,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, AMD Radeon RX 470, or better, Intel Core i7-4770K / AMD Ryzen 5 1500X"
     },
     {
-      "title": "Truckful",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "3GB VRAM (GeForce GTX 1060 and above)",
-      "cpu": "Requires a 64-bit processor and operating system",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: 3GB VRAM (GeForce GTX 1060 and above), Requires a 64-bit processor and operating system"
-    },
-    {
       "title": "You Are Empty: Absolute Edition",
       "tier": "green",
       "tiers": {
@@ -1080,6 +1068,18 @@
       "cpu": "Intel or AMD with at least 2 cores",
       "usedMinimum": true,
       "note": "Minimální konfigurace: 1GB VRAM GPU, Intel or AMD with at least 2 cores"
+    },
+    {
+      "title": "Truckful",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "3GB VRAM (GeForce GTX 1060 and above)",
+      "cpu": "Requires a 64-bit processor and operating system",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 3GB VRAM (GeForce GTX 1060 and above), Requires a 64-bit processor and operating system"
     },
     {
       "title": "ShredDead",
@@ -1202,6 +1202,30 @@
       "note": "Doporučená konfigurace: Geforce RTX 3060 8GB | Radeon RX 6600 8GB, 6 core / 12 threads (Intel Core i5 11600K | Ryzen 5 5600X)"
     },
     {
+      "title": "Selkie's Salvage&Co.",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Most dedicated GPUs should work.",
+      "cpu": "Intel i5 or Higher",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Most dedicated GPUs should work., Intel i5 or Higher"
+    },
+    {
+      "title": "PAO PAO",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060",
+      "cpu": "Intel Core i5-12400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060, Intel Core i5-12400"
+    },
+    {
       "title": "CELESTAY Craft&Slowlife",
       "tier": "green",
       "tiers": {
@@ -1250,18 +1274,6 @@
       "note": "Minimální konfigurace: Nvidia GeForce GTX 460, AMD Radeon R7 250X, Intel Core i3-4100, AMD A8-6600K"
     },
     {
-      "title": "PAO PAO",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 3060",
-      "cpu": "Intel Core i5-12400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060, Intel Core i5-12400"
-    },
-    {
       "title": "Keyboard Chaos",
       "tier": "green",
       "tiers": {
@@ -1298,18 +1310,6 @@
       "note": "Doporučená konfigurace: Intel HD Graphics 5000 or better, Intel Core i5 or equivalent"
     },
     {
-      "title": "Selkie's Salvage&Co.",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Most dedicated GPUs should work.",
-      "cpu": "Intel i5 or Higher",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Most dedicated GPUs should work., Intel i5 or Higher"
-    },
-    {
       "title": "Dreadline Express",
       "tier": "green",
       "tiers": {
@@ -1322,16 +1322,16 @@
       "note": "Doporučená konfigurace: GTX 1060 or Equivalent, 2.4 GHZ Quad Core Processor"
     },
     {
-      "title": "War Footing",
+      "title": "Five Nights with Maids",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "Integrated Graphics",
-      "cpu": "Dual-Core 2.0 GHz",
+      "gpu": "DirectX 9/OpenGL 4.1 capable GPU",
+      "cpu": "Intel Core2 Duo or better",
       "usedMinimum": true,
-      "note": "Minimální konfigurace: Integrated Graphics, Dual-Core 2.0 GHz"
+      "note": "Minimální konfigurace: DirectX 9/OpenGL 4.1 capable GPU, Intel Core2 Duo or better"
     },
     {
       "title": "GemCraft - Legacy Collection",
@@ -1344,6 +1344,18 @@
       "cpu": "2.4 GHz Quad Core",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 Ti or AMD Radeon HD 7850 (1GB VRAM), 2.4 GHz Quad Core"
+    },
+    {
+      "title": "War Footing",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Integrated Graphics",
+      "cpu": "Dual-Core 2.0 GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Integrated Graphics, Dual-Core 2.0 GHz"
     },
     {
       "title": "Stream Train",
@@ -1526,6 +1538,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GT 630, Intel Core i5-3470"
     },
     {
+      "title": "Life & Shadow: Celestial Call",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA RTX 3060 (12 GB) / AMD RX 6700 XT or equivalent — DX11 compatible",
+      "cpu": "AMD Ryzen 5 3600 / Intel Core i5-9600K or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 3060 (12 GB) / AMD RX 6700 XT or equivalent — DX11 compatible, AMD Ryzen 5 3600 / Intel Core i5-9600K or better"
+    },
+    {
       "title": "Allogloom",
       "tier": "green",
       "tiers": {
@@ -1548,18 +1572,6 @@
       "cpu": null,
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel iRIS Xe or better"
-    },
-    {
-      "title": "Life & Shadow: Celestial Call",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA RTX 3060 (12 GB) / AMD RX 6700 XT or equivalent — DX11 compatible",
-      "cpu": "AMD Ryzen 5 3600 / Intel Core i5-9600K or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 3060 (12 GB) / AMD RX 6700 XT or equivalent — DX11 compatible, AMD Ryzen 5 3600 / Intel Core i5-9600K or better"
     },
     {
       "title": "The Incident at Galley House",
