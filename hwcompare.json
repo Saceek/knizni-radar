@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-29T08:15:59.985Z",
+  "updatedAt": "2026-10-29T09:16:43.508Z",
   "games": [
     {
       "title": "Enshrouded",
@@ -242,18 +242,6 @@
       "note": "Doporučená konfigurace: GeForce GTX 1650 (4096 MB) / Radeon RX 570 (4096 MB), Intel Core i7-7700K / AMD Ryzen 5 1500X"
     },
     {
-      "title": "Denizen",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 1060 / RX 480",
-      "cpu": "i5 7600 / Ryzen 5 2600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1060 / RX 480, i5 7600 / Ryzen 5 2600X"
-    },
-    {
       "title": "One Million Coins",
       "tier": "orange",
       "tiers": {
@@ -264,6 +252,18 @@
       "cpu": "Intel Core i7-9700K or AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD RX 6600, Intel Core i7-9700K or AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Denizen",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 1060 / RX 480",
+      "cpu": "i5 7600 / Ryzen 5 2600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1060 / RX 480, i5 7600 / Ryzen 5 2600X"
     },
     {
       "title": "NightClub Simulator",
@@ -422,6 +422,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3080 / AMD Radeon RX 6800 XT (10GB+ VRAM), Intel i7-10700K / AMD Ryzen 7 5700X3D"
     },
     {
+      "title": "Phantom Blade Zero",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060 Ti 8GB / AMD Radeon RX 6700 XT 12GB",
+      "cpu": "Intel Core i5-10600K / AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 Ti 8GB / AMD Radeon RX 6700 XT 12GB, Intel Core i5-10600K / AMD Ryzen 5 5600X"
+    },
+    {
       "title": "CRACK",
       "tier": "green",
       "tiers": {
@@ -456,18 +468,6 @@
       "cpu": "Intel Core i7-8700 / AMD Ryzen 5 4500",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1070 Ti [8 GB] / AMD Radeon RX 5600 XT [6 GB] / Intel Arc A580 [8 GB], Intel Core i7-8700 / AMD Ryzen 5 4500"
-    },
-    {
-      "title": "Phantom Blade Zero",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 3060 Ti 8GB / AMD Radeon RX 6700 XT 12GB",
-      "cpu": "Intel Core i5-10600K / AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 Ti 8GB / AMD Radeon RX 6700 XT 12GB, Intel Core i5-10600K / AMD Ryzen 5 5600X"
     },
     {
       "title": "Disney/Pixar Toy Story 3 Complete Edition",
@@ -1418,6 +1418,18 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GT 640, Intel Core i5"
     },
     {
+      "title": "MemeticBox",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 960 / Radeon RX 470 or better",
+      "cpu": "Quad-core 3.0 GHz (Intel Core i5)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 960 / Radeon RX 470 or better, Quad-core 3.0 GHz (Intel Core i5)"
+    },
+    {
       "title": "Virtue and a Sledgehammer",
       "tier": "orange",
       "tiers": {
@@ -1442,16 +1454,16 @@
       "note": "Minimální konfigurace: Intel iRIS Xe or better"
     },
     {
-      "title": "MemeticBox",
+      "title": "Outcast Tales",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "GeForce GTX 960 / Radeon RX 470 or better",
-      "cpu": "Quad-core 3.0 GHz (Intel Core i5)",
+      "gpu": "NVIDIA GeForce GTX 760, AMD Radeon R9 280X",
+      "cpu": "Intel Core i5 3.0 GHz",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 960 / Radeon RX 470 or better, Quad-core 3.0 GHz (Intel Core i5)"
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 760, AMD Radeon R9 280X, Intel Core i5 3.0 GHz"
     },
     {
       "title": "The Incident at Galley House",
