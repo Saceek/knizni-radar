@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-30T00:16:11.637Z",
+  "updatedAt": "2026-10-30T01:15:43.903Z",
   "games": [
     {
       "title": "Enshrouded",
@@ -374,18 +374,6 @@
       "note": "Minimální konfigurace: GPU with at least 2 GB of VRAM, i3 or equivalent"
     },
     {
-      "title": "Deadly Days: Roadtrip",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "dedicated graphics card, e.g. NVIDIA GeForce GTX 1050 Ti or AMD RX 570",
-      "cpu": "Intel(R) Core(TM) i5-6600K or AMD Ryzen 5 3600",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: dedicated graphics card, e.g. NVIDIA GeForce GTX 1050 Ti or AMD RX 570, Intel(R) Core(TM) i5-6600K or AMD Ryzen 5 3600"
-    },
-    {
       "title": "CRACK",
       "tier": "green",
       "tiers": {
@@ -398,18 +386,6 @@
       "note": "Doporučená konfigurace: GTX 1660 Super / RTX 2060 / RX 5600 XT, 6 GB, Intel i5-10400 / Ryzen 5 3600"
     },
     {
-      "title": "Brick by Brick: Tidy Up the Small Town!",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT",
-      "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "Probably Stolen - Cyberpunk Shopkeeper Sim",
       "tier": "green",
       "tiers": {
@@ -420,6 +396,30 @@
       "cpu": "Intel Core i3 or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GTX 650ti equivalent or higher, Intel Core i3 or equivalent"
+    },
+    {
+      "title": "Deadly Days: Roadtrip",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "dedicated graphics card, e.g. NVIDIA GeForce GTX 1050 Ti or AMD RX 570",
+      "cpu": "Intel(R) Core(TM) i5-6600K or AMD Ryzen 5 3600",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: dedicated graphics card, e.g. NVIDIA GeForce GTX 1050 Ti or AMD RX 570, Intel(R) Core(TM) i5-6600K or AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Brick by Brick: Tidy Up the Small Town!",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT",
+      "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
     },
     {
       "title": "守护我的大火箭",
@@ -638,6 +638,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
+      "title": "Origins Trading Card Game",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1060 / AMD Radeon RX 580",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 / AMD Radeon RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
       "title": "Stella Sora",
       "tier": "green",
       "tiers": {
@@ -660,18 +672,6 @@
       "cpu": "Intel Core 2 Duo 2.40 GHz / AMD Athlon 2.40 GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: DirectX 11 compatible video card, Intel Core 2 Duo 2.40 GHz / AMD Athlon 2.40 GHz"
-    },
-    {
-      "title": "Origins Trading Card Game",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1060 / AMD Radeon RX 580",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 / AMD Radeon RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
       "title": "Calculate It",
@@ -698,18 +698,6 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060, Intel Core i7-6600K / AMD Ryzen 5 5600"
     },
     {
-      "title": "Stream Racer",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1660 / AMD Radeon RX 5500 XT, or better",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600, or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 5500 XT, or better, Intel Core i5-10400 / AMD Ryzen 5 3600, or better"
-    },
-    {
       "title": "Penguin Colony",
       "tier": "orange",
       "tiers": {
@@ -720,6 +708,18 @@
       "cpu": "i7",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GTX 1080, i7"
+    },
+    {
+      "title": "Stream Racer",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1660 / AMD Radeon RX 5500 XT, or better",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600, or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 5500 XT, or better, Intel Core i5-10400 / AMD Ryzen 5 3600, or better"
     },
     {
       "title": "Folded Fables: Tidy Up The Dragon Hoard",
@@ -854,6 +854,18 @@
       "note": "Doporučená konfigurace: NVidia GeForce GTX 1060, Intel Core i5-6500 @ 3,2 GHz (4 CPUs)"
     },
     {
+      "title": "Divine Frequency",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "OpenGL 4.0 or Vulkan Compatible",
+      "cpu": "Quad Core 2.4 GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: OpenGL 4.0 or Vulkan Compatible, Quad Core 2.4 GHz"
+    },
+    {
       "title": "Horns of Deliverance",
       "tier": "green",
       "tiers": {
@@ -878,16 +890,16 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, AMD Radeon RX 470, or better, Intel Core i7-4770K / AMD Ryzen 5 1500X"
     },
     {
-      "title": "Divine Frequency",
+      "title": "Playable Archive",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "OpenGL 4.0 or Vulkan Compatible",
-      "cpu": "Quad Core 2.4 GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: OpenGL 4.0 or Vulkan Compatible, Quad Core 2.4 GHz"
+      "gpu": "Geforce GTX 960 or Higher",
+      "cpu": "2.4 GHz Dual Core Processor Or Higher",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Geforce GTX 960 or Higher, 2.4 GHz Dual Core Processor Or Higher"
     },
     {
       "title": "The Onion Voting Simulator 3D",
@@ -900,18 +912,6 @@
       "cpu": "64 Bit Processor: Intel Core i3 2.00 GHZ or AMD equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce 450 or higher with 1GB Memory, 64 Bit Processor: Intel Core i3 2.00 GHZ or AMD equivalent"
-    },
-    {
-      "title": "Playable Archive",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Geforce GTX 960 or Higher",
-      "cpu": "2.4 GHz Dual Core Processor Or Higher",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Geforce GTX 960 or Higher, 2.4 GHz Dual Core Processor Or Higher"
     },
     {
       "title": "Geoplanetical",
@@ -998,6 +998,18 @@
       "note": "Doporučená konfigurace: Geforce RTX 3060 8GB | Radeon RX 6600 8GB, 6 core / 12 threads (Intel Core i5 11600K | Ryzen 5 5600X)"
     },
     {
+      "title": "GemCraft - Legacy Collection",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 750 Ti or AMD Radeon HD 7850 (1GB VRAM)",
+      "cpu": "2.4 GHz Quad Core",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 Ti or AMD Radeon HD 7850 (1GB VRAM), 2.4 GHz Quad Core"
+    },
+    {
       "title": "Dimenshot",
       "tier": "green",
       "tiers": {
@@ -1032,18 +1044,6 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD Radeon RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
-      "title": "GemCraft - Legacy Collection",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 750 Ti or AMD Radeon HD 7850 (1GB VRAM)",
-      "cpu": "2.4 GHz Quad Core",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 Ti or AMD Radeon HD 7850 (1GB VRAM), 2.4 GHz Quad Core"
     },
     {
       "title": "Disney/Pixar Toy Story: Retro Roundup!",
@@ -1190,18 +1190,6 @@
       "note": "Doporučená konfigurace: GTX 1060 6GB / RX 580, Intel Core i5-10400 / Ryzen 5 3600"
     },
     {
-      "title": "Only Fans",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel HD Graphics 4400",
-      "cpu": "i3",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 4400, i3"
-    },
-    {
       "title": "不良婚姻惩罚师",
       "tier": "green",
       "tiers": {
@@ -1226,6 +1214,30 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 760, AMD Radeon R9 280X, Intel Core i5 3.0 GHz"
     },
     {
+      "title": "The Wolf Among Us Remastered",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1050 TI, 4GB or AMD Radeon RX 6400, 4GB",
+      "cpu": "Intel Core i3-8100 or AMD Ryzen 3 2300X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 TI, 4GB or AMD Radeon RX 6400, 4GB, Intel Core i3-8100 or AMD Ryzen 3 2300X"
+    },
+    {
+      "title": "Only Fans",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD Graphics 4400",
+      "cpu": "i3",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics 4400, i3"
+    },
+    {
       "title": "Haunted Heist",
       "tier": "green",
       "tiers": {
@@ -1236,6 +1248,30 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600 (6 cores)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / RTX 2060 / AMD Radeon RX 5600 XT (6 GB VRAM), Intel Core i5-8400 / AMD Ryzen 5 2600 (6 cores)"
+    },
+    {
+      "title": "Hubble Bubble",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (6 GB)",
+      "cpu": "Intel Core i5-9600K / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-9600K / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "アノマリス／ANOMALITH",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700 XT",
+      "cpu": "Intel i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700 XT, Intel i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "MemeticBox",
@@ -1260,42 +1296,6 @@
       "cpu": "Intel Core i5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: AMD Radeon RX 550 2GB&amp;Intel UHD Graphics 630, Intel Core i5"
-    },
-    {
-      "title": "Hubble Bubble",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (6 GB)",
-      "cpu": "Intel Core i5-9600K / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-9600K / AMD Ryzen 5 3600"
-    },
-    {
-      "title": "The Wolf Among Us Remastered",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1050 TI, 4GB or AMD Radeon RX 6400, 4GB",
-      "cpu": "Intel Core i3-8100 or AMD Ryzen 3 2300X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 TI, 4GB or AMD Radeon RX 6400, 4GB, Intel Core i3-8100 or AMD Ryzen 3 2300X"
-    },
-    {
-      "title": "アノマリス／ANOMALITH",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700 XT",
-      "cpu": "Intel i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700 XT, Intel i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "Life & Shadow: Celestial Call",
