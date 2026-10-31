@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T02:13:40.775Z",
+  "updatedAt": "2026-10-31T03:14:34.854Z",
   "games": [
     {
       "title": "SULFUR",
@@ -518,18 +518,6 @@
       "note": "Doporučená konfigurace: OpenGL 4.0 or Vulkan Compatible, Quad Core 2.4 GHz"
     },
     {
-      "title": "AI Olympius",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "8GB VRAM | RTX2070 | RX 6700 XT",
-      "cpu": "4 core / 8 threads | Intel Core i7-7700 | Ryzen 5 1400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: 8GB VRAM | RTX2070 | RX 6700 XT, 4 core / 8 threads | Intel Core i7-7700 | Ryzen 5 1400"
-    },
-    {
       "title": "Playable Archive",
       "tier": "green",
       "tiers": {
@@ -540,6 +528,18 @@
       "cpu": "2.4 GHz Dual Core Processor Or Higher",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Geforce GTX 960 or Higher, 2.4 GHz Dual Core Processor Or Higher"
+    },
+    {
+      "title": "AI Olympius",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "8GB VRAM | RTX2070 | RX 6700 XT",
+      "cpu": "4 core / 8 threads | Intel Core i7-7700 | Ryzen 5 1400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 8GB VRAM | RTX2070 | RX 6700 XT, 4 core / 8 threads | Intel Core i7-7700 | Ryzen 5 1400"
     },
     {
       "title": "The Wolf Among Us Remastered",
@@ -602,18 +602,6 @@
       "note": "Doporučená konfigurace: RTX 2060 6 Go / RX 6600 8 Go, i5-10400 / Ryzen 5 3600"
     },
     {
-      "title": "ASPIS",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "GeForce RTX 2060 / AMD Radeon RX 6600 (6GB video memory or more)",
-      "cpu": "AMD Ryzen 5 5600 / Intel Core i5-12600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 2060 / AMD Radeon RX 6600 (6GB video memory or more), AMD Ryzen 5 5600 / Intel Core i5-12600"
-    },
-    {
       "title": "Terrible Lizards",
       "tier": "red",
       "tiers": {
@@ -624,6 +612,18 @@
       "cpu": "Intel® Core™ i3-10100F / AMD Ryzen™ 3 3100",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA® GeForce® RTX 2080 / AMD Radeon™ RX 6800XT, Intel® Core™ i3-10100F / AMD Ryzen™ 3 3100"
+    },
+    {
+      "title": "ASPIS",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "GeForce RTX 2060 / AMD Radeon RX 6600 (6GB video memory or more)",
+      "cpu": "AMD Ryzen 5 5600 / Intel Core i5-12600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 2060 / AMD Radeon RX 6600 (6GB video memory or more), AMD Ryzen 5 5600 / Intel Core i5-12600"
     },
     {
       "title": "Moadra",
@@ -722,6 +722,18 @@
       "note": "Doporučená konfigurace: GeForce GTX 1080 / Radeon RX 5700, Intel Core i7-6950 / AMD Ryzen 7 2700X"
     },
     {
+      "title": "Queen's Domain",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 1060 / AMD RX 580",
+      "cpu": "Intel Core i5 quad core, 3.5ghz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1060 / AMD RX 580, Intel Core i5 quad core, 3.5ghz"
+    },
+    {
       "title": "Outcast Tales",
       "tier": "green",
       "tiers": {
@@ -794,16 +806,16 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 2060 or equivalent, Intel Core i5 @ 3.0 GHz or equivalent"
     },
     {
-      "title": "Queen's Domain",
+      "title": "Hubble Bubble",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "GTX 1060 / AMD RX 580",
-      "cpu": "Intel Core i5 quad core, 3.5ghz",
+      "gpu": "NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (6 GB)",
+      "cpu": "Intel Core i5-9600K / AMD Ryzen 5 3600",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1060 / AMD RX 580, Intel Core i5 quad core, 3.5ghz"
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-9600K / AMD Ryzen 5 3600"
     },
     {
       "title": "不良婚姻惩罚师",
@@ -816,18 +828,6 @@
       "cpu": "Intel Core i5-3470",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GT 630, Intel Core i5-3470"
-    },
-    {
-      "title": "Hubble Bubble",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (6 GB)",
-      "cpu": "Intel Core i5-9600K / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-9600K / AMD Ryzen 5 3600"
     },
     {
       "title": "Only Fans",
@@ -962,6 +962,18 @@
       "note": "Minimální konfigurace: Intel iRIS Xe or better"
     },
     {
+      "title": "A Place for Every Potion",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1660 / RX 5600 XT (6 GB)",
+      "cpu": "Intel Core i5-10400 / Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / RX 5600 XT (6 GB), Intel Core i5-10400 / Ryzen 5 3600"
+    },
+    {
       "title": "The Incident at Galley House",
       "tier": "green",
       "tiers": {
@@ -996,30 +1008,6 @@
       "cpu": "Intel Core i5 4690 @ 3.5 GHz | AMD Ryzen 5 1600x @ 3.6 GHz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 1050 / RX VEGA-56, Intel Core i5 4690 @ 3.5 GHz | AMD Ryzen 5 1600x @ 3.6 GHz"
-    },
-    {
-      "title": "Scarlet Deer Inn",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DirectX 11-compatible GPU",
-      "cpu": "2 GHz Intel i5 or better",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: DirectX 11-compatible GPU, 2 GHz Intel i5 or better"
-    },
-    {
-      "title": "Kill The Shadow",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 3060 / AMD RX 6600 XT",
-      "cpu": "Intel Core i5-12600K / AMD Ryzen 5 7600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD RX 6600 XT, Intel Core i5-12600K / AMD Ryzen 5 7600X"
     }
   ]
 }
