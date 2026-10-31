@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T09:14:09.353Z",
+  "updatedAt": "2026-10-31T09:43:32.219Z",
   "games": [
     {
       "title": "SULFUR",
@@ -482,6 +482,18 @@
       "note": "Doporučená konfigurace: OpenGL 4.0 or Vulkan Compatible, Quad Core 2.4 GHz"
     },
     {
+      "title": "The Wolf Among Us Remastered",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1050 TI, 4GB or AMD Radeon RX 6400, 4GB",
+      "cpu": "Intel Core i3-8100 or AMD Ryzen 3 2300X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 TI, 4GB or AMD Radeon RX 6400, 4GB, Intel Core i3-8100 or AMD Ryzen 3 2300X"
+    },
+    {
       "title": "Terrible Lizards",
       "tier": "red",
       "tiers": {
@@ -504,18 +516,6 @@
       "cpu": "2.4 GHz Dual Core Processor Or Higher",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Geforce GTX 960 or Higher, 2.4 GHz Dual Core Processor Or Higher"
-    },
-    {
-      "title": "The Wolf Among Us Remastered",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1050 TI, 4GB or AMD Radeon RX 6400, 4GB",
-      "cpu": "Intel Core i3-8100 or AMD Ryzen 3 2300X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 TI, 4GB or AMD Radeon RX 6400, 4GB, Intel Core i3-8100 or AMD Ryzen 3 2300X"
     },
     {
       "title": "The Last Camp : Dawn",
@@ -614,18 +614,6 @@
       "note": "Doporučená konfigurace: GeForce RTX 2060 / AMD Radeon RX 6600 (6GB video memory or more), AMD Ryzen 5 5600 / Intel Core i5-12600"
     },
     {
-      "title": "アノマリス／ANOMALITH",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700 XT",
-      "cpu": "Intel i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700 XT, Intel i5-10400 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "Moadra",
       "tier": "green",
       "tiers": {
@@ -636,6 +624,18 @@
       "cpu": "Intel Core i3-8100 or similar",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 970 4GB or similar, Intel Core i3-8100 or similar"
+    },
+    {
+      "title": "アノマリス／ANOMALITH",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700 XT",
+      "cpu": "Intel i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700 XT, Intel i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "三国义",
@@ -806,6 +806,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GT 630, Intel Core i5-3470"
     },
     {
+      "title": "Usagi Shima: Bunny Island",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD Graphics 620",
+      "cpu": "2.0 GHz Dual-Core (e.g. Intel Core i5-7200U or equivalent)",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics 620, 2.0 GHz Dual-Core (e.g. Intel Core i5-7200U or equivalent)"
+    },
+    {
       "title": "Only Fans",
       "tier": "green",
       "tiers": {
@@ -816,6 +828,18 @@
       "cpu": "i3",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 4400, i3"
+    },
+    {
+      "title": "Magical Girl ER",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DirectX 11 compatible graphics card",
+      "cpu": "Intel Core i5 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: DirectX 11 compatible graphics card, Intel Core i5 or equivalent"
     },
     {
       "title": "PixelBoss: Shattered Depths",
@@ -830,18 +854,6 @@
       "note": "Doporučená konfigurace: GTX 1060 6GB / RX 580, Intel Core i5-10400 / Ryzen 5 3600"
     },
     {
-      "title": "Usagi Shima: Bunny Island",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel HD Graphics 620",
-      "cpu": "2.0 GHz Dual-Core (e.g. Intel Core i5-7200U or equivalent)",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 620, 2.0 GHz Dual-Core (e.g. Intel Core i5-7200U or equivalent)"
-    },
-    {
       "title": "파멸의 오타쿠",
       "tier": "green",
       "tiers": {
@@ -852,18 +864,6 @@
       "cpu": "Intel Core i5-6500",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Intel UHD Graphics 620, Intel Core i5-6500"
-    },
-    {
-      "title": "Magical Girl ER",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DirectX 11 compatible graphics card",
-      "cpu": "Intel Core i5 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: DirectX 11 compatible graphics card, Intel Core i5 or equivalent"
     },
     {
       "title": "S.O.N.A.R. - Submarine Operators Not Actually Ready",
@@ -926,6 +926,18 @@
       "note": "Minimální konfigurace: GTX750TI, Intel Core i3"
     },
     {
+      "title": "Can 'Em All",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "AMD Radeon RX 460 / NVIDIA GTX 950",
+      "cpu": "AMD Ryzen 3 1200 / Intel Core i3-7100",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: AMD Radeon RX 460 / NVIDIA GTX 950, AMD Ryzen 3 1200 / Intel Core i3-7100"
+    },
+    {
       "title": "COP BASTARD",
       "tier": "green",
       "tiers": {
@@ -936,30 +948,6 @@
       "cpu": "Dual Core 3.0 Ghz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: 2 Gb Video Memory, capable of Shader Model 2.0+, Dual Core 3.0 Ghz"
-    },
-    {
-      "title": "Milo",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 3060 12 GB",
-      "cpu": "Intel Core i5-12400F or AMD Ryzen 5 5600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB, Intel Core i5-12400F or AMD Ryzen 5 5600"
-    },
-    {
-      "title": "A Place for Every Potion",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1660 / RX 5600 XT (6 GB)",
-      "cpu": "Intel Core i5-10400 / Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / RX 5600 XT (6 GB), Intel Core i5-10400 / Ryzen 5 3600"
     },
     {
       "title": "Tidy Farm",
@@ -974,6 +962,30 @@
       "note": "Minimální konfigurace: GeForce GTX 1060, Intel Core 7"
     },
     {
+      "title": "A Place for Every Potion",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1660 / RX 5600 XT (6 GB)",
+      "cpu": "Intel Core i5-10400 / Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / RX 5600 XT (6 GB), Intel Core i5-10400 / Ryzen 5 3600"
+    },
+    {
+      "title": "Milo",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060 12 GB",
+      "cpu": "Intel Core i5-12400F or AMD Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB, Intel Core i5-12400F or AMD Ryzen 5 5600"
+    },
+    {
       "title": "Elsewhere",
       "tier": "green",
       "tiers": {
@@ -986,18 +998,6 @@
       "note": "Minimální konfigurace: Intel iRIS Xe or better"
     },
     {
-      "title": "Can 'Em All",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "AMD Radeon RX 460 / NVIDIA GTX 950",
-      "cpu": "AMD Ryzen 3 1200 / Intel Core i3-7100",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: AMD Radeon RX 460 / NVIDIA GTX 950, AMD Ryzen 3 1200 / Intel Core i3-7100"
-    },
-    {
       "title": "The Incident at Galley House",
       "tier": "green",
       "tiers": {
@@ -1008,6 +1008,54 @@
       "cpu": "2.0Ghz Dual Core",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 510, 2.0Ghz Dual Core"
+    },
+    {
+      "title": "Gurei",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "2GB VRAM / DirectX 10+ support",
+      "cpu": "Dual Core 3.0 GHz+",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 2GB VRAM / DirectX 10+ support, Dual Core 3.0 GHz+"
+    },
+    {
+      "title": "DIVE or DIE - Children of Rain",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 1050 / RX VEGA-56",
+      "cpu": "Intel Core i5 4690 @ 3.5 GHz | AMD Ryzen 5 1600x @ 3.6 GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1050 / RX VEGA-56, Intel Core i5 4690 @ 3.5 GHz | AMD Ryzen 5 1600x @ 3.6 GHz"
+    },
+    {
+      "title": "Scarlet Deer Inn",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DirectX 11-compatible GPU",
+      "cpu": "2 GHz Intel i5 or better",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: DirectX 11-compatible GPU, 2 GHz Intel i5 or better"
+    },
+    {
+      "title": "Kill The Shadow",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060 / AMD RX 6600 XT",
+      "cpu": "Intel Core i5-12600K / AMD Ryzen 5 7600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD RX 6600 XT, Intel Core i5-12600K / AMD Ryzen 5 7600X"
     }
   ]
 }
