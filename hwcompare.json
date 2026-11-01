@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-01T00:13:06.327Z",
+  "updatedAt": "2026-11-01T01:12:56.442Z",
   "games": [
     {
       "title": "SULFUR",
@@ -242,6 +242,18 @@
       "note": "Doporučená konfigurace: NVidia GeForce GTX 1060 4GB, Intel Core i5-6500 @ 3,2 GHz (4 CPUs)"
     },
     {
+      "title": "Queen's Domain",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 1060 / AMD RX 580",
+      "cpu": "Intel Core i5 quad core, 3.5ghz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1060 / AMD RX 580, Intel Core i5 quad core, 3.5ghz"
+    },
+    {
       "title": "Stygian: Outer Gods",
       "tier": "red",
       "tiers": {
@@ -278,18 +290,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1070 Ti [8 GB] / AMD Radeon RX 5600 XT [6 GB] / Intel Arc A580 [8 GB], Intel Core i7-8700 / AMD Ryzen 5 4500"
     },
     {
-      "title": "The Boss Gangster: Criminal Empire",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA Geforce RTX 2060",
-      "cpu": "Intel i7 AMD Ryzen 7",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA Geforce RTX 2060, Intel i7 AMD Ryzen 7"
-    },
-    {
       "title": "Selkie's Salvage&Co.",
       "tier": "green",
       "tiers": {
@@ -302,16 +302,16 @@
       "note": "Minimální konfigurace: Most dedicated GPUs should work., Intel i5 or Higher"
     },
     {
-      "title": "Queen's Domain",
-      "tier": "green",
+      "title": "The Boss Gangster: Criminal Empire",
+      "tier": "orange",
       "tiers": {
-        "allyx": "green",
+        "allyx": "orange",
         "pc": "green"
       },
-      "gpu": "GTX 1060 / AMD RX 580",
-      "cpu": "Intel Core i5 quad core, 3.5ghz",
+      "gpu": "NVIDIA Geforce RTX 2060",
+      "cpu": "Intel i7 AMD Ryzen 7",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1060 / AMD RX 580, Intel Core i5 quad core, 3.5ghz"
+      "note": "Doporučená konfigurace: NVIDIA Geforce RTX 2060, Intel i7 AMD Ryzen 7"
     },
     {
       "title": "SEVERANCE",
@@ -422,6 +422,18 @@
       "note": "Minimální konfigurace: AMD RX 570 / Nvidia GTX 1060, Ryzen 3 2200G / Intel i5-7400"
     },
     {
+      "title": "Can 'Em All",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "AMD Radeon RX 460 / NVIDIA GTX 950",
+      "cpu": "AMD Ryzen 3 1200 / Intel Core i3-7100",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: AMD Radeon RX 460 / NVIDIA GTX 950, AMD Ryzen 3 1200 / Intel Core i3-7100"
+    },
+    {
       "title": "ShredDead",
       "tier": "green",
       "tiers": {
@@ -444,18 +456,6 @@
       "cpu": "Intel Core i5-12400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060, Intel Core i5-12400"
-    },
-    {
-      "title": "Can 'Em All",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "AMD Radeon RX 460 / NVIDIA GTX 950",
-      "cpu": "AMD Ryzen 3 1200 / Intel Core i3-7100",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: AMD Radeon RX 460 / NVIDIA GTX 950, AMD Ryzen 3 1200 / Intel Core i3-7100"
     },
     {
       "title": "Terrible Lizards",
@@ -662,18 +662,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 970 4GB or similar, Intel Core i3-8100 or similar"
     },
     {
-      "title": "三国义",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Dedicated GPU with 2GB VRAM or higher",
-      "cpu": "Intel Core i5 / AMD Ryzen 5 equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Dedicated GPU with 2GB VRAM or higher, Intel Core i5 / AMD Ryzen 5 equivalent"
-    },
-    {
       "title": "Outcast Tales",
       "tier": "green",
       "tiers": {
@@ -686,16 +674,16 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 760, AMD Radeon R9 280X, Intel Core i5 3.0 GHz"
     },
     {
-      "title": "Stupid Never Dies",
-      "tier": "orange",
+      "title": "三国义",
+      "tier": "green",
       "tiers": {
-        "allyx": "orange",
+        "allyx": "green",
         "pc": "green"
       },
-      "gpu": "Geforce RTX 3060 8GB | Radeon RX 6600 8GB",
-      "cpu": "6 core / 12 threads (Intel Core i5 11600K | Ryzen 5 5600X)",
+      "gpu": "Dedicated GPU with 2GB VRAM or higher",
+      "cpu": "Intel Core i5 / AMD Ryzen 5 equivalent",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: Geforce RTX 3060 8GB | Radeon RX 6600 8GB, 6 core / 12 threads (Intel Core i5 11600K | Ryzen 5 5600X)"
+      "note": "Doporučená konfigurace: Dedicated GPU with 2GB VRAM or higher, Intel Core i5 / AMD Ryzen 5 equivalent"
     },
     {
       "title": "GemCraft - Legacy Collection",
@@ -720,6 +708,18 @@
       "cpu": "Quad-core 3.0 GHz (Intel Core i5)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 960 / Radeon RX 470 or better, Quad-core 3.0 GHz (Intel Core i5)"
+    },
+    {
+      "title": "Stupid Never Dies",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "Geforce RTX 3060 8GB | Radeon RX 6600 8GB",
+      "cpu": "6 core / 12 threads (Intel Core i5 11600K | Ryzen 5 5600X)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Geforce RTX 3060 8GB | Radeon RX 6600 8GB, 6 core / 12 threads (Intel Core i5 11600K | Ryzen 5 5600X)"
     },
     {
       "title": "Dimenshot",
@@ -950,18 +950,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB, Intel Core i5-12400F or AMD Ryzen 5 5600"
     },
     {
-      "title": "Tidy Farm",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 1060",
-      "cpu": "Intel Core 7",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 1060, Intel Core 7"
-    },
-    {
       "title": "Finals Week ✍🏻",
       "tier": "red",
       "tiers": {
@@ -972,6 +960,18 @@
       "cpu": "Ryzen 9 3900XT or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
+    },
+    {
+      "title": "Tidy Farm",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 1060",
+      "cpu": "Intel Core 7",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 1060, Intel Core 7"
     },
     {
       "title": "CH13: Rest Stop",
