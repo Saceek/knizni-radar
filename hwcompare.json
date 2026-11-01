@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-01T19:12:53.450Z",
+  "updatedAt": "2026-11-01T20:12:26.693Z",
   "games": [
     {
       "title": "SULFUR",
@@ -182,18 +182,6 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 — 8 GB / AMD RX 6600 — 8 GB, Intel Core i5-12400 / AMD Ryzen 5 5600"
     },
     {
-      "title": "NightClub Simulator",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA RTX 2060 / AMD Radeon RX 5700",
-      "cpu": "Intel Core i5-10600 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10600 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "Queen's Domain",
       "tier": "green",
       "tiers": {
@@ -204,6 +192,18 @@
       "cpu": "Intel Core i5 quad core, 3.5ghz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 1060 / AMD RX 580, Intel Core i5 quad core, 3.5ghz"
+    },
+    {
+      "title": "NightClub Simulator",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA RTX 2060 / AMD Radeon RX 5700",
+      "cpu": "Intel Core i5-10600 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10600 / AMD Ryzen 5 3600"
     },
     {
       "title": "Big Dig",
@@ -218,18 +218,6 @@
       "note": "Minimální konfigurace: GPU with at least 2 GB of VRAM, i3 or equivalent"
     },
     {
-      "title": "Dungeon Inn",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Radeon RX 580",
-      "cpu": "AMD Ryzen 5 3600X 6-Core Processor 3.79 GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Radeon RX 580, AMD Ryzen 5 3600X 6-Core Processor 3.79 GHz"
-    },
-    {
       "title": "Deadly Days: Roadtrip",
       "tier": "green",
       "tiers": {
@@ -242,16 +230,16 @@
       "note": "Minimální konfigurace: dedicated graphics card, e.g. NVIDIA GeForce GTX 1050 Ti or AMD RX 570, Intel(R) Core(TM) i5-6600K or AMD Ryzen 5 3600"
     },
     {
-      "title": "Metal Thunder",
+      "title": "Dungeon Inn",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "NVidia GeForce GTX 1060 4GB",
-      "cpu": "Intel Core i5-6500 @ 3,2 GHz (4 CPUs)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVidia GeForce GTX 1060 4GB, Intel Core i5-6500 @ 3,2 GHz (4 CPUs)"
+      "gpu": "Radeon RX 580",
+      "cpu": "AMD Ryzen 5 3600X 6-Core Processor 3.79 GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Radeon RX 580, AMD Ryzen 5 3600X 6-Core Processor 3.79 GHz"
     },
     {
       "title": "Can 'Em All",
@@ -264,6 +252,18 @@
       "cpu": "AMD Ryzen 3 1200 / Intel Core i3-7100",
       "usedMinimum": true,
       "note": "Minimální konfigurace: AMD Radeon RX 460 / NVIDIA GTX 950, AMD Ryzen 3 1200 / Intel Core i3-7100"
+    },
+    {
+      "title": "Metal Thunder",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVidia GeForce GTX 1060 4GB",
+      "cpu": "Intel Core i5-6500 @ 3,2 GHz (4 CPUs)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVidia GeForce GTX 1060 4GB, Intel Core i5-6500 @ 3,2 GHz (4 CPUs)"
     },
     {
       "title": "Origins Trading Card Game",
@@ -350,6 +350,18 @@
       "note": "Minimální konfigurace: 1GB VRAM GPU, Intel or AMD with at least 2 cores"
     },
     {
+      "title": "Rip It! Card Collector",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "AMD RX 570 / Nvidia GTX 1060",
+      "cpu": "Ryzen 3 2200G / Intel i5-7400",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: AMD RX 570 / Nvidia GTX 1060, Ryzen 3 2200G / Intel i5-7400"
+    },
+    {
       "title": "Bruisers 2D Boxing",
       "tier": "green",
       "tiers": {
@@ -372,18 +384,6 @@
       "cpu": "Intel Core i5-9400F or AMD Ryzen 5 3500",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 or AMD Radeon RX 5700, Intel Core i5-9400F or AMD Ryzen 5 3500"
-    },
-    {
-      "title": "Rip It! Card Collector",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "AMD RX 570 / Nvidia GTX 1060",
-      "cpu": "Ryzen 3 2200G / Intel i5-7400",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: AMD RX 570 / Nvidia GTX 1060, Ryzen 3 2200G / Intel i5-7400"
     },
     {
       "title": "Terrible Lizards",
@@ -674,18 +674,6 @@
       "note": "Minimální konfigurace: Intel HD Graphics 620, 2.0 GHz Dual-Core (e.g. Intel Core i5-7200U or equivalent)"
     },
     {
-      "title": "三国义",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Dedicated GPU with 2GB VRAM or higher",
-      "cpu": "Intel Core i5 / AMD Ryzen 5 equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Dedicated GPU with 2GB VRAM or higher, Intel Core i5 / AMD Ryzen 5 equivalent"
-    },
-    {
       "title": "MemeticBox",
       "tier": "green",
       "tiers": {
@@ -696,6 +684,18 @@
       "cpu": "Quad-core 3.0 GHz (Intel Core i5)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 960 / Radeon RX 470 or better, Quad-core 3.0 GHz (Intel Core i5)"
+    },
+    {
+      "title": "三国义",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Dedicated GPU with 2GB VRAM or higher",
+      "cpu": "Intel Core i5 / AMD Ryzen 5 equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Dedicated GPU with 2GB VRAM or higher, Intel Core i5 / AMD Ryzen 5 equivalent"
     },
     {
       "title": "Stupid Never Dies",
