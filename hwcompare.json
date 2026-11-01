@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-01T01:12:56.442Z",
+  "updatedAt": "2026-11-01T02:12:34.354Z",
   "games": [
     {
       "title": "SULFUR",
@@ -170,18 +170,6 @@
       "note": "Minimální konfigurace: DirectX 10 compatible GPU, Dual-core 2.0 GHz or equivalent"
     },
     {
-      "title": "NightClub Simulator",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA RTX 2060 / AMD Radeon RX 5700",
-      "cpu": "Intel Core i5-10600 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10600 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "Groundwork Simulator",
       "tier": "orange",
       "tiers": {
@@ -192,6 +180,18 @@
       "cpu": "Intel Core i5-12400 / AMD Ryzen 5 5600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 — 8 GB / AMD RX 6600 — 8 GB, Intel Core i5-12400 / AMD Ryzen 5 5600"
+    },
+    {
+      "title": "NightClub Simulator",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA RTX 2060 / AMD Radeon RX 5700",
+      "cpu": "Intel Core i5-10600 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10600 / AMD Ryzen 5 3600"
     },
     {
       "title": "Big Dig",
@@ -278,18 +278,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 / AMD Radeon RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
-      "title": "ONE PIECE: Grand Gourmet",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1070 Ti [8 GB] / AMD Radeon RX 5600 XT [6 GB] / Intel Arc A580 [8 GB]",
-      "cpu": "Intel Core i7-8700 / AMD Ryzen 5 4500",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1070 Ti [8 GB] / AMD Radeon RX 5600 XT [6 GB] / Intel Arc A580 [8 GB], Intel Core i7-8700 / AMD Ryzen 5 4500"
-    },
-    {
       "title": "Selkie's Salvage&Co.",
       "tier": "green",
       "tiers": {
@@ -300,6 +288,18 @@
       "cpu": "Intel i5 or Higher",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Most dedicated GPUs should work., Intel i5 or Higher"
+    },
+    {
+      "title": "ONE PIECE: Grand Gourmet",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1070 Ti [8 GB] / AMD Radeon RX 5600 XT [6 GB] / Intel Arc A580 [8 GB]",
+      "cpu": "Intel Core i7-8700 / AMD Ryzen 5 4500",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1070 Ti [8 GB] / AMD Radeon RX 5600 XT [6 GB] / Intel Arc A580 [8 GB], Intel Core i7-8700 / AMD Ryzen 5 4500"
     },
     {
       "title": "The Boss Gangster: Criminal Empire",
@@ -398,18 +398,6 @@
       "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 1660 (6 GB) / AMD® Radeon™ RX 5600 (6 GB), Intel® Core™ i5-6600 (quad-core) / AMD® Ryzen™ 3 2200G (quad-core)"
     },
     {
-      "title": "Tidy Up the Halloween Shop",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600, Intel Core i5-10400 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "Rip It! Card Collector",
       "tier": "green",
       "tiers": {
@@ -420,6 +408,18 @@
       "cpu": "Ryzen 3 2200G / Intel i5-7400",
       "usedMinimum": true,
       "note": "Minimální konfigurace: AMD RX 570 / Nvidia GTX 1060, Ryzen 3 2200G / Intel i5-7400"
+    },
+    {
+      "title": "Tidy Up the Halloween Shop",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "Can 'Em All",
@@ -590,18 +590,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, AMD Radeon RX 470, or better, Intel Core i7-4770K / AMD Ryzen 5 1500X"
     },
     {
-      "title": "Football Pitch Simulator",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVidia GeForce GTX 1060",
-      "cpu": "Intel Core i5-6500 @ 3,2 GHz (4 CPUs)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVidia GeForce GTX 1060, Intel Core i5-6500 @ 3,2 GHz (4 CPUs)"
-    },
-    {
       "title": "The Onion Voting Simulator 3D",
       "tier": "green",
       "tiers": {
@@ -612,6 +600,18 @@
       "cpu": "64 Bit Processor: Intel Core i3 2.00 GHZ or AMD equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce 450 or higher with 1GB Memory, 64 Bit Processor: Intel Core i3 2.00 GHZ or AMD equivalent"
+    },
+    {
+      "title": "Football Pitch Simulator",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVidia GeForce GTX 1060",
+      "cpu": "Intel Core i5-6500 @ 3,2 GHz (4 CPUs)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVidia GeForce GTX 1060, Intel Core i5-6500 @ 3,2 GHz (4 CPUs)"
     },
     {
       "title": "アノマリス／ANOMALITH",
@@ -686,6 +686,18 @@
       "note": "Doporučená konfigurace: Dedicated GPU with 2GB VRAM or higher, Intel Core i5 / AMD Ryzen 5 equivalent"
     },
     {
+      "title": "Stupid Never Dies",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "Geforce RTX 3060 8GB | Radeon RX 6600 8GB",
+      "cpu": "6 core / 12 threads (Intel Core i5 11600K | Ryzen 5 5600X)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Geforce RTX 3060 8GB | Radeon RX 6600 8GB, 6 core / 12 threads (Intel Core i5 11600K | Ryzen 5 5600X)"
+    },
+    {
       "title": "GemCraft - Legacy Collection",
       "tier": "green",
       "tiers": {
@@ -708,18 +720,6 @@
       "cpu": "Quad-core 3.0 GHz (Intel Core i5)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 960 / Radeon RX 470 or better, Quad-core 3.0 GHz (Intel Core i5)"
-    },
-    {
-      "title": "Stupid Never Dies",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "Geforce RTX 3060 8GB | Radeon RX 6600 8GB",
-      "cpu": "6 core / 12 threads (Intel Core i5 11600K | Ryzen 5 5600X)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Geforce RTX 3060 8GB | Radeon RX 6600 8GB, 6 core / 12 threads (Intel Core i5 11600K | Ryzen 5 5600X)"
     },
     {
       "title": "Dimenshot",
@@ -794,6 +794,18 @@
       "note": "Minimální konfigurace: OpenGL 3.0 or DirectX 11, 2.0 Ghz 64-bit Intel-compatible"
     },
     {
+      "title": "COP BASTARD",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "2 Gb Video Memory, capable of Shader Model 2.0+",
+      "cpu": "Dual Core 3.0 Ghz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 2 Gb Video Memory, capable of Shader Model 2.0+, Dual Core 3.0 Ghz"
+    },
+    {
       "title": "Stream Train",
       "tier": "orange",
       "tiers": {
@@ -816,18 +828,6 @@
       "cpu": "Intel Core i5-9600K / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-9600K / AMD Ryzen 5 3600"
-    },
-    {
-      "title": "COP BASTARD",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "2 Gb Video Memory, capable of Shader Model 2.0+",
-      "cpu": "Dual Core 3.0 Ghz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: 2 Gb Video Memory, capable of Shader Model 2.0+, Dual Core 3.0 Ghz"
     },
     {
       "title": "Magical Girl ER",
@@ -854,6 +854,18 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4400, i3"
     },
     {
+      "title": "A Place for Every Potion",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1660 / RX 5600 XT (6 GB)",
+      "cpu": "Intel Core i5-10400 / Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / RX 5600 XT (6 GB), Intel Core i5-10400 / Ryzen 5 3600"
+    },
+    {
       "title": "不良婚姻惩罚师",
       "tier": "green",
       "tiers": {
@@ -876,18 +888,6 @@
       "cpu": "Intel Core i5-10400 / Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 1060 6GB / RX 580, Intel Core i5-10400 / Ryzen 5 3600"
-    },
-    {
-      "title": "A Place for Every Potion",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1660 / RX 5600 XT (6 GB)",
-      "cpu": "Intel Core i5-10400 / Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / RX 5600 XT (6 GB), Intel Core i5-10400 / Ryzen 5 3600"
     },
     {
       "title": "Hunting Simulator 3",
@@ -914,6 +914,18 @@
       "note": "Doporučená konfigurace: DX10, DX11, and DX12-capable GPUs, X64 architecture with SSE2 instruction set support"
     },
     {
+      "title": "Milo",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060 12 GB",
+      "cpu": "Intel Core i5-12400F or AMD Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB, Intel Core i5-12400F or AMD Ryzen 5 5600"
+    },
+    {
       "title": "Life & Shadow: Celestial Call",
       "tier": "red",
       "tiers": {
@@ -938,16 +950,16 @@
       "note": "Minimální konfigurace: GTX750TI, Intel Core i3"
     },
     {
-      "title": "Milo",
-      "tier": "red",
+      "title": "Tidy Farm",
+      "tier": "green",
       "tiers": {
-        "allyx": "red",
+        "allyx": "green",
         "pc": "green"
       },
-      "gpu": "NVIDIA GeForce RTX 3060 12 GB",
-      "cpu": "Intel Core i5-12400F or AMD Ryzen 5 5600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB, Intel Core i5-12400F or AMD Ryzen 5 5600"
+      "gpu": "GeForce GTX 1060",
+      "cpu": "Intel Core 7",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 1060, Intel Core 7"
     },
     {
       "title": "Finals Week ✍🏻",
@@ -960,18 +972,6 @@
       "cpu": "Ryzen 9 3900XT or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
-    },
-    {
-      "title": "Tidy Farm",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 1060",
-      "cpu": "Intel Core 7",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 1060, Intel Core 7"
     },
     {
       "title": "CH13: Rest Stop",
