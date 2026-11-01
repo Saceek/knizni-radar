@@ -735,7 +735,7 @@ function progressSlotHtml(cat){
   return `<div class="cont">
     <div class="cim">${item.url?`<a href="${esc(item.url)}" target="_blank" rel="noreferrer">${img}</a>`:img}</div>
     <div class="pb"><i style="width:${pct}%"></i></div>
-    <div class="cb"><div class="ttl"><b class="clip" title="${esc(item.title)}">${esc(item.title)}</b><small>${item.current} / ${item.total} ${cfg.unit} · ${pct} %</small></div><span class="pl"><span class="prog-ic-c">${cfg.icon}</span>${PROG_SHORT[cat]}</span></div>
+    <div class="cb"><div class="ttl"><b class="clip" title="${esc(item.title)}">${esc(item.title)}</b><small>${fmtNum(item.current)} / ${item.total} ${cfg.unit} · ${pct} %</small></div><span class="pl"><span class="prog-ic-c">${cfg.icon}</span>${PROG_SHORT[cat]}</span></div>
     ${isGame && ptBadge(item.title, item.url) ? `<div class="ptl">${ptBadge(item.title, item.url)}</div>` : ""}
     <div class="ctl"><button class="qb ico" data-progdelta="${cat}:-1" title="−${cfg.step} ${cfg.unit}">${icon("minus")}</button><button class="qb go" data-progdelta="${cat}:1" title="+${cfg.step} ${cfg.unit}">${icon("plus")} ${cfg.step} ${cfg.unit}</button><span class="sp"></span>
       <button class="qb ico" data-progedit="${cat}" title="Upravit">${icon("pencil")}</button><button class="qb ico rm" data-progremove="${cat}" title="Zrušit sledování">${icon("x")}</button></div>
@@ -1321,15 +1321,22 @@ function ptBadge(title, url){
   return `<span class="ptb" title="${esc(tip)}">${p.min?`${icon("clock")} ${fmtHours(p.min)}`:""}${achPct!=null?` ${icon("trophy")} ${achPct} %`:""}</span>`;
 }
 // Aktivní quest na PC se posune podle reálně odehraných hodin (jen nahoru, nikdy nesníží ruční zápis)
+// Platí pro všechny herní sloty (Game Pass hra může být zařazená i jako PS5), přesně na desetinu hodiny.
 function applyPlaytime(){
-  const item = S.progress && S.progress.game_pc;
-  if(!item) return;
-  const p = playtimeFor(item.title, item.url);
-  if(!p || !p.min) return;
-  const h = Math.floor(p.min/60);
-  const next = item.total ? Math.min(h, item.total) : h;
-  if(next > item.current){ item.current = next; saveProgressAndSync(S.progress); }
+  if(!S.progress) return;
+  let changed = false;
+  for(const cat of ["game_pc","game_ps5","game_nsw2"]){
+    const item = S.progress[cat];
+    if(!item) continue;
+    const p = playtimeFor(item.title, item.url);
+    if(!p || !p.min) continue;
+    const h = Math.round(p.min/6)/10;
+    const next = item.total ? Math.min(h, item.total) : h;
+    if(next > item.current){ item.current = next; changed = true; }
+  }
+  if(changed) saveProgressAndSync(S.progress);
 }
+const fmtNum = n => Number(n).toLocaleString("cs-CZ",{maximumFractionDigits:1});
 async function loadMetacritic(){
   S.mcStatus="loading"; render();
   try{
