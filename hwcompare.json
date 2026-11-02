@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-02T15:14:21.514Z",
+  "updatedAt": "2026-11-02T16:14:04.052Z",
   "games": [
     {
       "title": "SULFUR",
@@ -614,6 +614,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 970 4GB or similar, Intel Core i3-8100 or similar"
     },
     {
+      "title": "A Place for Every Potion",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1660 / RX 5600 XT (6 GB)",
+      "cpu": "Intel Core i5-10400 / Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / RX 5600 XT (6 GB), Intel Core i5-10400 / Ryzen 5 3600"
+    },
+    {
       "title": "Outcast Tales",
       "tier": "green",
       "tiers": {
@@ -636,18 +648,6 @@
       "cpu": "2.0 GHz Dual-Core (e.g. Intel Core i5-7200U or equivalent)",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 620, 2.0 GHz Dual-Core (e.g. Intel Core i5-7200U or equivalent)"
-    },
-    {
-      "title": "A Place for Every Potion",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1660 / RX 5600 XT (6 GB)",
-      "cpu": "Intel Core i5-10400 / Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / RX 5600 XT (6 GB), Intel Core i5-10400 / Ryzen 5 3600"
     },
     {
       "title": "MemeticBox",
@@ -758,18 +758,6 @@
       "note": "Minimální konfigurace: OpenGL 3.0 or DirectX 11, 2.0 Ghz 64-bit Intel-compatible"
     },
     {
-      "title": "ELbab",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel HD Graphics 5000 or better",
-      "cpu": "Intel Core i5 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Intel HD Graphics 5000 or better, Intel Core i5 or equivalent"
-    },
-    {
       "title": "Finals Week ✍🏻",
       "tier": "red",
       "tiers": {
@@ -780,6 +768,18 @@
       "cpu": "Ryzen 9 3900XT or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
+    },
+    {
+      "title": "ELbab",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD Graphics 5000 or better",
+      "cpu": "Intel Core i5 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Intel HD Graphics 5000 or better, Intel Core i5 or equivalent"
     },
     {
       "title": "Only Fans",
@@ -878,18 +878,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GT 630, Intel Core i5-3470"
     },
     {
-      "title": "PixelBoss: Shattered Depths",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 1060 6GB / RX 580",
-      "cpu": "Intel Core i5-10400 / Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1060 6GB / RX 580, Intel Core i5-10400 / Ryzen 5 3600"
-    },
-    {
       "title": "Farm to Fortune",
       "tier": "green",
       "tiers": {
@@ -900,6 +888,18 @@
       "cpu": "Intel i5",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX970, Intel i5"
+    },
+    {
+      "title": "PixelBoss: Shattered Depths",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 1060 6GB / RX 580",
+      "cpu": "Intel Core i5-10400 / Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1060 6GB / RX 580, Intel Core i5-10400 / Ryzen 5 3600"
     },
     {
       "title": "Soul Mates",
@@ -938,16 +938,16 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 (12 GB) / AMD RX 6700 XT or equivalent — DX11 compatible, AMD Ryzen 5 3600 / Intel Core i5-9600K or better"
     },
     {
-      "title": "Remothered: Red Nun's Legacy",
-      "tier": "red",
+      "title": "Deadzoned",
+      "tier": "green",
       "tiers": {
-        "allyx": "red",
-        "pc": "orange"
+        "allyx": "green",
+        "pc": "green"
       },
-      "gpu": "Nvidia 3080ti / Amd RX 6900 XT - 3840x2160, 60fps, DLSS/FSR Performance, Preset HIGH, Hardware Ray Tracing OFF or 3840x2160, 30fps, DLSS/FSR Performance, Preset HIGH, Hardware Ray Tracing ON",
-      "cpu": "Ryzen 7 5800X / Core i5-12600K",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia 3080ti / Amd RX 6900 XT - 3840x2160, 60fps, DLSS/FSR Performance, Preset HIGH, Hardware Ray Tracing OFF or 3840x2160, 30fps, DLSS/FSR Performance, Preset HIGH, Hardware Ray Tracing ON, Ryzen 7 5800X / Core i5-12600K"
+      "gpu": "1 GB VRAM",
+      "cpu": "2 GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: 1 GB VRAM, 2 GHz"
     },
     {
       "title": "HYPNOS",
@@ -962,16 +962,16 @@
       "note": "Minimální konfigurace: Nvidia GeForce RTX 3060 Ti, AMD Ryzen 7 5008X 8-Core Processor"
     },
     {
-      "title": "Silberheim Evolving Card Game",
-      "tier": "green",
+      "title": "Remothered: Red Nun's Legacy",
+      "tier": "red",
       "tiers": {
-        "allyx": "green",
-        "pc": "green"
+        "allyx": "red",
+        "pc": "orange"
       },
-      "gpu": "1GB VRAM / DirectX 10+ Support",
-      "cpu": "Dual Core 2.4 GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: 1GB VRAM / DirectX 10+ Support, Dual Core 2.4 GHz"
+      "gpu": "Nvidia 3080ti / Amd RX 6900 XT - 3840x2160, 60fps, DLSS/FSR Performance, Preset HIGH, Hardware Ray Tracing OFF or 3840x2160, 30fps, DLSS/FSR Performance, Preset HIGH, Hardware Ray Tracing ON",
+      "cpu": "Ryzen 7 5800X / Core i5-12600K",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia 3080ti / Amd RX 6900 XT - 3840x2160, 60fps, DLSS/FSR Performance, Preset HIGH, Hardware Ray Tracing OFF or 3840x2160, 30fps, DLSS/FSR Performance, Preset HIGH, Hardware Ray Tracing ON, Ryzen 7 5800X / Core i5-12600K"
     },
     {
       "title": "Дорога Жизни",
@@ -984,6 +984,18 @@
       "cpu": "Intel/AMD, 8-core, 3.5 GHz или выше",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4070 (12 GB) или эквивалентная, Intel/AMD, 8-core, 3.5 GHz или выше"
+    },
+    {
+      "title": "Silberheim Evolving Card Game",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "1GB VRAM / DirectX 10+ Support",
+      "cpu": "Dual Core 2.4 GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: 1GB VRAM / DirectX 10+ Support, Dual Core 2.4 GHz"
     },
     {
       "title": "The Incident at Galley House",
