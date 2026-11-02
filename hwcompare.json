@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-02T01:13:22.035Z",
+  "updatedAt": "2026-11-02T02:12:37.978Z",
   "games": [
     {
       "title": "SULFUR",
@@ -314,6 +314,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1070 Ti [8 GB] / AMD Radeon RX 5600 XT [6 GB] / Intel Arc A580 [8 GB], Intel Core i7-8700 / AMD Ryzen 5 4500"
     },
     {
+      "title": "Nomad Drive",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA RTX 3060 Ti / AMD RX 6700 XT (8 GB+ VRAM)",
+      "cpu": "Intel Core i5-12400F / AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 3060 Ti / AMD RX 6700 XT (8 GB+ VRAM), Intel Core i5-12400F / AMD Ryzen 5 5600X"
+    },
+    {
       "title": "The Boss Gangster: Criminal Empire",
       "tier": "orange",
       "tiers": {
@@ -326,16 +338,16 @@
       "note": "Doporučená konfigurace: NVIDIA Geforce RTX 2060, Intel i7 AMD Ryzen 7"
     },
     {
-      "title": "Nomad Drive",
+      "title": "Terrible Lizards",
       "tier": "red",
       "tiers": {
         "allyx": "red",
         "pc": "green"
       },
-      "gpu": "NVIDIA RTX 3060 Ti / AMD RX 6700 XT (8 GB+ VRAM)",
-      "cpu": "Intel Core i5-12400F / AMD Ryzen 5 5600X",
+      "gpu": "NVIDIA® GeForce® RTX 2080 / AMD Radeon™ RX 6800XT",
+      "cpu": "Intel® Core™ i3-10100F / AMD Ryzen™ 3 3100",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 3060 Ti / AMD RX 6700 XT (8 GB+ VRAM), Intel Core i5-12400F / AMD Ryzen 5 5600X"
+      "note": "Doporučená konfigurace: NVIDIA® GeForce® RTX 2080 / AMD Radeon™ RX 6800XT, Intel® Core™ i3-10100F / AMD Ryzen™ 3 3100"
     },
     {
       "title": "Rip It! Card Collector",
@@ -360,18 +372,6 @@
       "cpu": "Intel or AMD with at least 2 cores",
       "usedMinimum": true,
       "note": "Minimální konfigurace: 1GB VRAM GPU, Intel or AMD with at least 2 cores"
-    },
-    {
-      "title": "Terrible Lizards",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA® GeForce® RTX 2080 / AMD Radeon™ RX 6800XT",
-      "cpu": "Intel® Core™ i3-10100F / AMD Ryzen™ 3 3100",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA® GeForce® RTX 2080 / AMD Radeon™ RX 6800XT, Intel® Core™ i3-10100F / AMD Ryzen™ 3 3100"
     },
     {
       "title": "Bruisers 2D Boxing",
@@ -722,18 +722,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 Ti or AMD Radeon HD 7850 (1GB VRAM), 2.4 GHz Quad Core"
     },
     {
-      "title": "Screen Stocks",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "AMD Radeon™ R7 260X (2GB VRAM) / NVIDIA® GeForce® GTX 750(2GB VRAM)",
-      "cpu": "AMD FX-4350 / Intel® Core™ i3-3210",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: AMD Radeon™ R7 260X (2GB VRAM) / NVIDIA® GeForce® GTX 750(2GB VRAM), AMD FX-4350 / Intel® Core™ i3-3210"
-    },
-    {
       "title": "A Place for Every Potion",
       "tier": "green",
       "tiers": {
@@ -744,6 +732,18 @@
       "cpu": "Intel Core i5-10400 / Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / RX 5600 XT (6 GB), Intel Core i5-10400 / Ryzen 5 3600"
+    },
+    {
+      "title": "Screen Stocks",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "AMD Radeon™ R7 260X (2GB VRAM) / NVIDIA® GeForce® GTX 750(2GB VRAM)",
+      "cpu": "AMD FX-4350 / Intel® Core™ i3-3210",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: AMD Radeon™ R7 260X (2GB VRAM) / NVIDIA® GeForce® GTX 750(2GB VRAM), AMD FX-4350 / Intel® Core™ i3-3210"
     },
     {
       "title": "Hunting Simulator 3",
