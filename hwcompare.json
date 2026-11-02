@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-02T00:13:34.819Z",
+  "updatedAt": "2026-11-02T01:13:22.035Z",
   "games": [
     {
       "title": "SULFUR",
@@ -218,6 +218,18 @@
       "note": "Minimální konfigurace: GPU with at least 2 GB of VRAM, i3 or equivalent"
     },
     {
+      "title": "Can 'Em All",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "AMD Radeon RX 460 / NVIDIA GTX 950",
+      "cpu": "AMD Ryzen 3 1200 / Intel Core i3-7100",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: AMD Radeon RX 460 / NVIDIA GTX 950, AMD Ryzen 3 1200 / Intel Core i3-7100"
+    },
+    {
       "title": "Deadly Days: Roadtrip",
       "tier": "green",
       "tiers": {
@@ -240,18 +252,6 @@
       "cpu": "AMD Ryzen 5 3600X 6-Core Processor 3.79 GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Radeon RX 580, AMD Ryzen 5 3600X 6-Core Processor 3.79 GHz"
-    },
-    {
-      "title": "Can 'Em All",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "AMD Radeon RX 460 / NVIDIA GTX 950",
-      "cpu": "AMD Ryzen 3 1200 / Intel Core i3-7100",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: AMD Radeon RX 460 / NVIDIA GTX 950, AMD Ryzen 3 1200 / Intel Core i3-7100"
     },
     {
       "title": "Metal Thunder",
@@ -350,18 +350,6 @@
       "note": "Minimální konfigurace: AMD RX 570 / Nvidia GTX 1060, Ryzen 3 2200G / Intel i5-7400"
     },
     {
-      "title": "Terrible Lizards",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA® GeForce® RTX 2080 / AMD Radeon™ RX 6800XT",
-      "cpu": "Intel® Core™ i3-10100F / AMD Ryzen™ 3 3100",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA® GeForce® RTX 2080 / AMD Radeon™ RX 6800XT, Intel® Core™ i3-10100F / AMD Ryzen™ 3 3100"
-    },
-    {
       "title": "You Are Empty: Absolute Edition",
       "tier": "green",
       "tiers": {
@@ -372,6 +360,18 @@
       "cpu": "Intel or AMD with at least 2 cores",
       "usedMinimum": true,
       "note": "Minimální konfigurace: 1GB VRAM GPU, Intel or AMD with at least 2 cores"
+    },
+    {
+      "title": "Terrible Lizards",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA® GeForce® RTX 2080 / AMD Radeon™ RX 6800XT",
+      "cpu": "Intel® Core™ i3-10100F / AMD Ryzen™ 3 3100",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA® GeForce® RTX 2080 / AMD Radeon™ RX 6800XT, Intel® Core™ i3-10100F / AMD Ryzen™ 3 3100"
     },
     {
       "title": "Bruisers 2D Boxing",
@@ -494,18 +494,6 @@
       "note": "Minimální konfigurace: Geforce GTX 960 or Higher, 2.4 GHz Dual Core Processor Or Higher"
     },
     {
-      "title": "Divine Frequency",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "OpenGL 4.0 or Vulkan Compatible",
-      "cpu": "Quad Core 2.4 GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: OpenGL 4.0 or Vulkan Compatible, Quad Core 2.4 GHz"
-    },
-    {
       "title": "Stella Sora",
       "tier": "green",
       "tiers": {
@@ -516,6 +504,18 @@
       "cpu": "Intel® Core™ i5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 or above, Intel® Core™ i5"
+    },
+    {
+      "title": "Divine Frequency",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "OpenGL 4.0 or Vulkan Compatible",
+      "cpu": "Quad Core 2.4 GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: OpenGL 4.0 or Vulkan Compatible, Quad Core 2.4 GHz"
     },
     {
       "title": "AKIBA LOST",
@@ -722,18 +722,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 Ti or AMD Radeon HD 7850 (1GB VRAM), 2.4 GHz Quad Core"
     },
     {
-      "title": "A Place for Every Potion",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1660 / RX 5600 XT (6 GB)",
-      "cpu": "Intel Core i5-10400 / Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / RX 5600 XT (6 GB), Intel Core i5-10400 / Ryzen 5 3600"
-    },
-    {
       "title": "Screen Stocks",
       "tier": "green",
       "tiers": {
@@ -744,6 +732,18 @@
       "cpu": "AMD FX-4350 / Intel® Core™ i3-3210",
       "usedMinimum": true,
       "note": "Minimální konfigurace: AMD Radeon™ R7 260X (2GB VRAM) / NVIDIA® GeForce® GTX 750(2GB VRAM), AMD FX-4350 / Intel® Core™ i3-3210"
+    },
+    {
+      "title": "A Place for Every Potion",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1660 / RX 5600 XT (6 GB)",
+      "cpu": "Intel Core i5-10400 / Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / RX 5600 XT (6 GB), Intel Core i5-10400 / Ryzen 5 3600"
     },
     {
       "title": "Hunting Simulator 3",
@@ -830,18 +830,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB, Intel Core i5-12400F or AMD Ryzen 5 5600"
     },
     {
-      "title": "Finals Week ✍🏻",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "Nvidia 3060 or equivalent",
-      "cpu": "Ryzen 9 3900XT or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
-    },
-    {
       "title": "Tidy Farm",
       "tier": "green",
       "tiers": {
@@ -852,6 +840,18 @@
       "cpu": "Intel Core 7",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce GTX 1060, Intel Core 7"
+    },
+    {
+      "title": "Finals Week ✍🏻",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "Nvidia 3060 or equivalent",
+      "cpu": "Ryzen 9 3900XT or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
     },
     {
       "title": "不良婚姻惩罚师",
