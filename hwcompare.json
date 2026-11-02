@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-02T03:12:33.406Z",
+  "updatedAt": "2026-11-02T04:12:19.550Z",
   "games": [
     {
       "title": "SULFUR",
@@ -206,18 +206,6 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10600 / AMD Ryzen 5 3600"
     },
     {
-      "title": "Big Dig",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GPU with at least 2 GB of VRAM",
-      "cpu": "i3 or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GPU with at least 2 GB of VRAM, i3 or equivalent"
-    },
-    {
       "title": "Can 'Em All",
       "tier": "green",
       "tiers": {
@@ -228,6 +216,18 @@
       "cpu": "AMD Ryzen 3 1200 / Intel Core i3-7100",
       "usedMinimum": true,
       "note": "Minimální konfigurace: AMD Radeon RX 460 / NVIDIA GTX 950, AMD Ryzen 3 1200 / Intel Core i3-7100"
+    },
+    {
+      "title": "Big Dig",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GPU with at least 2 GB of VRAM",
+      "cpu": "i3 or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GPU with at least 2 GB of VRAM, i3 or equivalent"
     },
     {
       "title": "Deadly Days: Roadtrip",
@@ -698,6 +698,18 @@
       "note": "Doporučená konfigurace: Dedicated GPU with 2GB VRAM or higher, Intel Core i5 / AMD Ryzen 5 equivalent"
     },
     {
+      "title": "GemCraft - Legacy Collection",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 750 Ti or AMD Radeon HD 7850 (1GB VRAM)",
+      "cpu": "2.4 GHz Quad Core",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 Ti or AMD Radeon HD 7850 (1GB VRAM), 2.4 GHz Quad Core"
+    },
+    {
       "title": "A Place for Every Potion",
       "tier": "green",
       "tiers": {
@@ -720,18 +732,6 @@
       "cpu": "6 core / 12 threads (Intel Core i5 11600K | Ryzen 5 5600X)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Geforce RTX 3060 8GB | Radeon RX 6600 8GB, 6 core / 12 threads (Intel Core i5 11600K | Ryzen 5 5600X)"
-    },
-    {
-      "title": "GemCraft - Legacy Collection",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 750 Ti or AMD Radeon HD 7850 (1GB VRAM)",
-      "cpu": "2.4 GHz Quad Core",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 Ti or AMD Radeon HD 7850 (1GB VRAM), 2.4 GHz Quad Core"
     },
     {
       "title": "Screen Stocks",
@@ -806,18 +806,6 @@
       "note": "Doporučená konfigurace: DirectX 11 compatible graphics card, Intel Core i5 or equivalent"
     },
     {
-      "title": "Only Fans",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel HD Graphics 4400",
-      "cpu": "i3",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 4400, i3"
-    },
-    {
       "title": "Milo",
       "tier": "red",
       "tiers": {
@@ -830,16 +818,28 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB, Intel Core i5-12400F or AMD Ryzen 5 5600"
     },
     {
-      "title": "Tidy Farm",
+      "title": "Only Fans",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "GeForce GTX 1060",
-      "cpu": "Intel Core 7",
+      "gpu": "Intel HD Graphics 4400",
+      "cpu": "i3",
       "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 1060, Intel Core 7"
+      "note": "Minimální konfigurace: Intel HD Graphics 4400, i3"
+    },
+    {
+      "title": "CH13: Rest Stop",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "RTX 2060 / RX 5600 XT",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 2060 / RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "Finals Week ✍🏻",
@@ -854,6 +854,18 @@
       "note": "Doporučená konfigurace: Nvidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
     },
     {
+      "title": "Tidy Farm",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 1060",
+      "cpu": "Intel Core 7",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 1060, Intel Core 7"
+    },
+    {
       "title": "不良婚姻惩罚师",
       "tier": "green",
       "tiers": {
@@ -864,18 +876,6 @@
       "cpu": "Intel Core i5-3470",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GT 630, Intel Core i5-3470"
-    },
-    {
-      "title": "CH13: Rest Stop",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "RTX 2060 / RX 5600 XT",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 2060 / RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "PixelBoss: Shattered Depths",
