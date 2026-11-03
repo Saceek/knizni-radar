@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-03T11:14:15.299Z",
+  "updatedAt": "2026-11-03T12:13:15.173Z",
   "games": [
     {
       "title": "SULFUR",
@@ -494,18 +494,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 8GB or equivalent, Intel i7-4770/AMD FX-8350"
     },
     {
-      "title": "ASPIS",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "GeForce RTX 2060 / AMD Radeon RX 6600 (6GB video memory or more)",
-      "cpu": "AMD Ryzen 5 5600 / Intel Core i5-12600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 2060 / AMD Radeon RX 6600 (6GB video memory or more), AMD Ryzen 5 5600 / Intel Core i5-12600"
-    },
-    {
       "title": "A Place for Every Potion",
       "tier": "green",
       "tiers": {
@@ -516,6 +504,18 @@
       "cpu": "Intel Core i5-10400 / Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / RX 5600 XT (6 GB), Intel Core i5-10400 / Ryzen 5 3600"
+    },
+    {
+      "title": "ASPIS",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "GeForce RTX 2060 / AMD Radeon RX 6600 (6GB video memory or more)",
+      "cpu": "AMD Ryzen 5 5600 / Intel Core i5-12600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 2060 / AMD Radeon RX 6600 (6GB video memory or more), AMD Ryzen 5 5600 / Intel Core i5-12600"
     },
     {
       "title": "Football Pitch Simulator",
@@ -530,18 +530,6 @@
       "note": "Doporučená konfigurace: NVidia GeForce GTX 1060, Intel Core i5-6500 @ 3,2 GHz (4 CPUs)"
     },
     {
-      "title": "Moadra",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 970 4GB or similar",
-      "cpu": "Intel Core i3-8100 or similar",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 970 4GB or similar, Intel Core i3-8100 or similar"
-    },
-    {
       "title": "Usagi Shima: Bunny Island",
       "tier": "green",
       "tiers": {
@@ -552,6 +540,18 @@
       "cpu": "2.0 GHz Dual-Core (e.g. Intel Core i5-7200U or equivalent)",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 620, 2.0 GHz Dual-Core (e.g. Intel Core i5-7200U or equivalent)"
+    },
+    {
+      "title": "Moadra",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 970 4GB or similar",
+      "cpu": "Intel Core i3-8100 or similar",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 970 4GB or similar, Intel Core i3-8100 or similar"
     },
     {
       "title": "Outcast Tales",
@@ -662,6 +662,18 @@
       "note": "Doporučená konfigurace: DirectX 11 compatible graphics card, Intel Core i5 or equivalent"
     },
     {
+      "title": "Rat Game",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DirectX11 compatible with at least 1GB of memory",
+      "cpu": "Dual Core 2 GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: DirectX11 compatible with at least 1GB of memory, Dual Core 2 GHz"
+    },
+    {
       "title": "HAPPY PROPAGANDA",
       "tier": "green",
       "tiers": {
@@ -686,16 +698,16 @@
       "note": "Minimální konfigurace: OpenGL 3.0 or DirectX 11, 2.0 Ghz 64-bit Intel-compatible"
     },
     {
-      "title": "Rat Game",
+      "title": "Farm to Fortune",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "DirectX11 compatible with at least 1GB of memory",
-      "cpu": "Dual Core 2 GHz",
+      "gpu": "NVIDIA GeForce GTX970",
+      "cpu": "Intel i5",
       "usedMinimum": true,
-      "note": "Minimální konfigurace: DirectX11 compatible with at least 1GB of memory, Dual Core 2 GHz"
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX970, Intel i5"
     },
     {
       "title": "Tidy Farm",
@@ -708,18 +720,6 @@
       "cpu": "Intel Core 7",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce GTX 1060, Intel Core 7"
-    },
-    {
-      "title": "Farm to Fortune",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX970",
-      "cpu": "Intel i5",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX970, Intel i5"
     },
     {
       "title": "CH13: Rest Stop",
@@ -842,16 +842,16 @@
       "note": "Minimální konfigurace: 1 GB VRAM, 2 GHz"
     },
     {
-      "title": "Дорога Жизни",
-      "tier": "red",
+      "title": "PC Cafe Simulator",
+      "tier": "orange",
       "tiers": {
-        "allyx": "red",
-        "pc": "orange"
+        "allyx": "orange",
+        "pc": "green"
       },
-      "gpu": "NVIDIA GeForce RTX 4070 (12 GB) или эквивалентная",
-      "cpu": "Intel/AMD, 8-core, 3.5 GHz или выше",
+      "gpu": "NVIDIA RTX 2070 / AMD RX 6700 XT",
+      "cpu": "Intel Core i7-10700 / AMD Ryzen 5 5600X",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4070 (12 GB) или эквивалентная, Intel/AMD, 8-core, 3.5 GHz или выше"
+      "note": "Doporučená konfigurace: NVIDIA RTX 2070 / AMD RX 6700 XT, Intel Core i7-10700 / AMD Ryzen 5 5600X"
     },
     {
       "title": "Silberheim Evolving Card Game",
@@ -866,16 +866,16 @@
       "note": "Minimální konfigurace: 1GB VRAM / DirectX 10+ Support, Dual Core 2.4 GHz"
     },
     {
-      "title": "PC Cafe Simulator",
-      "tier": "orange",
+      "title": "Дорога Жизни",
+      "tier": "red",
       "tiers": {
-        "allyx": "orange",
-        "pc": "green"
+        "allyx": "red",
+        "pc": "orange"
       },
-      "gpu": "NVIDIA RTX 2070 / AMD RX 6700 XT",
-      "cpu": "Intel Core i7-10700 / AMD Ryzen 5 5600X",
+      "gpu": "NVIDIA GeForce RTX 4070 (12 GB) или эквивалентная",
+      "cpu": "Intel/AMD, 8-core, 3.5 GHz или выше",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 2070 / AMD RX 6700 XT, Intel Core i7-10700 / AMD Ryzen 5 5600X"
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4070 (12 GB) или эквивалентная, Intel/AMD, 8-core, 3.5 GHz или выше"
     },
     {
       "title": "Remothered: Red Nun's Legacy",
