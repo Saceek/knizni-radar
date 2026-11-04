@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-04T15:12:55.266Z",
+  "updatedAt": "2026-11-04T16:13:39.050Z",
   "games": [
     {
       "title": "SULFUR",
@@ -254,18 +254,6 @@
       "note": "Doporučená konfigurace: NVIDIA Geforce RTX 2060, Intel i7 AMD Ryzen 7"
     },
     {
-      "title": "PAO PAO",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 3060",
-      "cpu": "Intel Core i5-12400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060, Intel Core i5-12400"
-    },
-    {
       "title": "Godzilla: Destroy All Monsters Melee Remastered",
       "tier": "green",
       "tiers": {
@@ -276,6 +264,18 @@
       "cpu": "Intel Core i7-10700K or AMD Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1070 / GTX 1080 (8 GB VRAM), Intel Core i7-10700K or AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "PAO PAO",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060",
+      "cpu": "Intel Core i5-12400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060, Intel Core i5-12400"
     },
     {
       "title": "SEVERANCE",
@@ -362,6 +362,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700 XT, Intel i5-10400 / AMD Ryzen 5 3600"
     },
     {
+      "title": "Loftia",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (or equivalent)",
+      "cpu": "Intel Core i5-12600K / AMD Ryzen 5 5600 (or equivalent)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (or equivalent), Intel Core i5-12600K / AMD Ryzen 5 5600 (or equivalent)"
+    },
+    {
       "title": "Virtue and a Sledgehammer",
       "tier": "orange",
       "tiers": {
@@ -410,16 +422,16 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / RX 5600 XT (6 GB), Intel Core i5-10400 / Ryzen 5 3600"
     },
     {
-      "title": "Loftia",
+      "title": "Legend of Defenders",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (or equivalent)",
-      "cpu": "Intel Core i5-12600K / AMD Ryzen 5 5600 (or equivalent)",
+      "gpu": "NVIDIA GeForce GTX 1060 / AMD Radeon RX 580 or better",
+      "cpu": "Intel Core i5 or AMD equivalent",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (or equivalent), Intel Core i5-12600K / AMD Ryzen 5 5600 (or equivalent)"
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 / AMD Radeon RX 580 or better, Intel Core i5 or AMD equivalent"
     },
     {
       "title": "S.O.N.A.R. - Submarine Operators Not Actually Ready",
@@ -432,18 +444,6 @@
       "cpu": "Intel i7-4770/AMD FX-8350",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 8GB or equivalent, Intel i7-4770/AMD FX-8350"
-    },
-    {
-      "title": "Legend of Defenders",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1060 / AMD Radeon RX 580 or better",
-      "cpu": "Intel Core i5 or AMD equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 / AMD Radeon RX 580 or better, Intel Core i5 or AMD equivalent"
     },
     {
       "title": "Usagi Shima: Bunny Island",
@@ -482,18 +482,6 @@
       "note": "Doporučená konfigurace: GeForce RTX 4060, 8 GB or Radeon RX 6800 XT, 16 GB, Intel Core i5-14600K, 3.5 GHz or AMD Ryzen 9 7900X, 4.7 GHz"
     },
     {
-      "title": "MemeticBox",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 960 / Radeon RX 470 or better",
-      "cpu": "Quad-core 3.0 GHz (Intel Core i5)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 960 / Radeon RX 470 or better, Quad-core 3.0 GHz (Intel Core i5)"
-    },
-    {
       "title": "Mycelarium",
       "tier": "green",
       "tiers": {
@@ -506,6 +494,18 @@
       "note": "Doporučená konfigurace: NVidia Geforce GTX 750 Ti, AMD Radeon R7 260X, Intel Core i5 3.0 GHz"
     },
     {
+      "title": "MemeticBox",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 960 / Radeon RX 470 or better",
+      "cpu": "Quad-core 3.0 GHz (Intel Core i5)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 960 / Radeon RX 470 or better, Quad-core 3.0 GHz (Intel Core i5)"
+    },
+    {
       "title": "Screen Stocks",
       "tier": "green",
       "tiers": {
@@ -516,6 +516,18 @@
       "cpu": "AMD FX-4350 / Intel® Core™ i3-3210",
       "usedMinimum": true,
       "note": "Minimální konfigurace: AMD Radeon™ R7 260X (2GB VRAM) / NVIDIA® GeForce® GTX 750(2GB VRAM), AMD FX-4350 / Intel® Core™ i3-3210"
+    },
+    {
+      "title": "Finals Week ✍🏻",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "Nvidia 3060 or equivalent",
+      "cpu": "Ryzen 9 3900XT or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
     },
     {
       "title": "HAPPY PROPAGANDA",
@@ -542,18 +554,6 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX970, Intel i5"
     },
     {
-      "title": "Finals Week ✍🏻",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "Nvidia 3060 or equivalent",
-      "cpu": "Ryzen 9 3900XT or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
-    },
-    {
       "title": "Rat Game",
       "tier": "green",
       "tiers": {
@@ -566,18 +566,6 @@
       "note": "Minimální konfigurace: DirectX11 compatible with at least 1GB of memory, Dual Core 2 GHz"
     },
     {
-      "title": "CH13: Rest Stop",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "RTX 2060 / RX 5600 XT",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 2060 / RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "Magical Girl ER",
       "tier": "green",
       "tiers": {
@@ -588,6 +576,18 @@
       "cpu": "Intel Core i5 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: DirectX 11 compatible graphics card, Intel Core i5 or equivalent"
+    },
+    {
+      "title": "CH13: Rest Stop",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "RTX 2060 / RX 5600 XT",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 2060 / RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "Tidy Farm",
@@ -698,18 +698,6 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 2070 / AMD RX 6700 XT, Intel Core i7-10700 / AMD Ryzen 5 5600X"
     },
     {
-      "title": "Life & Shadow: Celestial Call",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA RTX 3060 (12 GB) / AMD RX 6700 XT or equivalent — DX11 compatible",
-      "cpu": "AMD Ryzen 5 3600 / Intel Core i5-9600K or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 3060 (12 GB) / AMD RX 6700 XT or equivalent — DX11 compatible, AMD Ryzen 5 3600 / Intel Core i5-9600K or better"
-    },
-    {
       "title": "Death at Fleming Manor",
       "tier": "green",
       "tiers": {
@@ -720,6 +708,18 @@
       "cpu": "Intel Core i5 3.0 GHz or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 530 or equivalent, Intel Core i5 3.0 GHz or equivalent"
+    },
+    {
+      "title": "Life & Shadow: Celestial Call",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA RTX 3060 (12 GB) / AMD RX 6700 XT or equivalent — DX11 compatible",
+      "cpu": "AMD Ryzen 5 3600 / Intel Core i5-9600K or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 3060 (12 GB) / AMD RX 6700 XT or equivalent — DX11 compatible, AMD Ryzen 5 3600 / Intel Core i5-9600K or better"
     },
     {
       "title": "Deadzoned",
