@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-04T01:15:54.635Z",
+  "updatedAt": "2026-11-04T02:14:02.620Z",
   "games": [
     {
       "title": "SULFUR",
@@ -374,18 +374,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700 XT, Intel i5-10400 / AMD Ryzen 5 3600"
     },
     {
-      "title": "Virtue and a Sledgehammer",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 1080 / Radeon RX 5700",
-      "cpu": "Intel Core i7-6950 / AMD Ryzen 7 2700X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1080 / Radeon RX 5700, Intel Core i7-6950 / AMD Ryzen 7 2700X"
-    },
-    {
       "title": "Godzilla: Destroy All Monsters Melee Remastered",
       "tier": "green",
       "tiers": {
@@ -398,16 +386,16 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1070 / GTX 1080 (8 GB VRAM), Intel Core i7-10700K or AMD Ryzen 5 5600X"
     },
     {
-      "title": "COP BASTARD",
-      "tier": "green",
+      "title": "Virtue and a Sledgehammer",
+      "tier": "orange",
       "tiers": {
-        "allyx": "green",
+        "allyx": "orange",
         "pc": "green"
       },
-      "gpu": "2 Gb Video Memory, capable of Shader Model 2.0+",
-      "cpu": "Dual Core 3.0 Ghz",
+      "gpu": "GeForce GTX 1080 / Radeon RX 5700",
+      "cpu": "Intel Core i7-6950 / AMD Ryzen 7 2700X",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: 2 Gb Video Memory, capable of Shader Model 2.0+, Dual Core 3.0 Ghz"
+      "note": "Doporučená konfigurace: GeForce GTX 1080 / Radeon RX 5700, Intel Core i7-6950 / AMD Ryzen 7 2700X"
     },
     {
       "title": "The Onion Voting Simulator 3D",
@@ -420,6 +408,18 @@
       "cpu": "64 Bit Processor: Intel Core i3 2.00 GHZ or AMD equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce 450 or higher with 1GB Memory, 64 Bit Processor: Intel Core i3 2.00 GHZ or AMD equivalent"
+    },
+    {
+      "title": "COP BASTARD",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "2 Gb Video Memory, capable of Shader Model 2.0+",
+      "cpu": "Dual Core 3.0 Ghz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 2 Gb Video Memory, capable of Shader Model 2.0+, Dual Core 3.0 Ghz"
     },
     {
       "title": "A Place for Every Potion",
@@ -590,6 +590,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-9600K / AMD Ryzen 5 3600"
     },
     {
+      "title": "CH13: Rest Stop",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "RTX 2060 / RX 5600 XT",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 2060 / RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
+    },
+    {
       "title": "Magical Girl ER",
       "tier": "green",
       "tiers": {
@@ -602,16 +614,16 @@
       "note": "Doporučená konfigurace: DirectX 11 compatible graphics card, Intel Core i5 or equivalent"
     },
     {
-      "title": "CH13: Rest Stop",
+      "title": "Potato Please",
       "tier": "orange",
       "tiers": {
         "allyx": "orange",
         "pc": "green"
       },
-      "gpu": "RTX 2060 / RX 5600 XT",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "gpu": "NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT",
+      "cpu": "Intel Core i5-10400 or AMD Ryzen 5 3600",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 2060 / RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT, Intel Core i5-10400 or AMD Ryzen 5 3600"
     },
     {
       "title": "Tidy Farm",
@@ -674,16 +686,16 @@
       "note": "Doporučená konfigurace: GeForce RTX 3060 / Radeon RX 6700, AMD Ryzen 7 3700X /  Intel® Core i7-6700K"
     },
     {
-      "title": "Potato Please",
-      "tier": "orange",
+      "title": "GRAVHOUNDS",
+      "tier": "green",
       "tiers": {
-        "allyx": "orange",
+        "allyx": "green",
         "pc": "green"
       },
-      "gpu": "NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT",
-      "cpu": "Intel Core i5-10400 or AMD Ryzen 5 3600",
+      "gpu": "Nvidia GeForce RTX 2060 or AMD Radeon RX 5600X",
+      "cpu": "Intel Core i5-10600KF or AMD Ryzen 5 3600X",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT, Intel Core i5-10400 or AMD Ryzen 5 3600"
+      "note": "Doporučená konfigurace: Nvidia GeForce RTX 2060 or AMD Radeon RX 5600X, Intel Core i5-10600KF or AMD Ryzen 5 3600X"
     },
     {
       "title": "不良婚姻惩罚师",
@@ -696,18 +708,6 @@
       "cpu": "Intel Core i5-3470",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GT 630, Intel Core i5-3470"
-    },
-    {
-      "title": "GRAVHOUNDS",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Nvidia GeForce RTX 2060 or AMD Radeon RX 5600X",
-      "cpu": "Intel Core i5-10600KF or AMD Ryzen 5 3600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce RTX 2060 or AMD Radeon RX 5600X, Intel Core i5-10600KF or AMD Ryzen 5 3600X"
     },
     {
       "title": "PixelBoss: Shattered Depths",
@@ -794,6 +794,18 @@
       "note": "Doporučená konfigurace: Nvidia 3080ti / Amd RX 6900 XT - 3840x2160, 60fps, DLSS/FSR Performance, Preset HIGH, Hardware Ray Tracing OFF or 3840x2160, 30fps, DLSS/FSR Performance, Preset HIGH, Hardware Ray Tracing ON, Ryzen 7 5800X / Core i5-12600K"
     },
     {
+      "title": "Loftia",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (or equivalent)",
+      "cpu": "Intel Core i5-12600K / AMD Ryzen 5 5600 (or equivalent)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (or equivalent), Intel Core i5-12600K / AMD Ryzen 5 5600 (or equivalent)"
+    },
+    {
       "title": "HYPNOS",
       "tier": "red",
       "tiers": {
@@ -818,18 +830,6 @@
       "note": "Minimální konfigurace: GTX 970, Core i5 6600"
     },
     {
-      "title": "Rise of the Merchants",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce 970 GTX or AMD Radeon RX 480 (4 GB of VRAM, Shader Model 5.1)",
-      "cpu": "Intel i5 4690k, AMD Ryzen 5 1400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce 970 GTX or AMD Radeon RX 480 (4 GB of VRAM, Shader Model 5.1), Intel i5 4690k, AMD Ryzen 5 1400"
-    },
-    {
       "title": "Ghost in the SQL Data",
       "tier": "green",
       "tiers": {
@@ -840,6 +840,18 @@
       "cpu": "Quad Core 2,5 GHz or more",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GPU (Intel Iris Xe / AMD Vega 8), Quad Core 2,5 GHz or more"
+    },
+    {
+      "title": "Rise of the Merchants",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce 970 GTX or AMD Radeon RX 480 (4 GB of VRAM, Shader Model 5.1)",
+      "cpu": "Intel i5 4690k, AMD Ryzen 5 1400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce 970 GTX or AMD Radeon RX 480 (4 GB of VRAM, Shader Model 5.1), Intel i5 4690k, AMD Ryzen 5 1400"
     },
     {
       "title": "Fantasy World Manager",
@@ -864,18 +876,6 @@
       "cpu": "Intel Core i5-6600 or AMD Ryzen 5 1600",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 660 or AMD Radeon HD 7850, Intel Core i5-6600 or AMD Ryzen 5 1600"
-    },
-    {
-      "title": "Loftia",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (or equivalent)",
-      "cpu": "Intel Core i5-12600K / AMD Ryzen 5 5600 (or equivalent)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (or equivalent), Intel Core i5-12600K / AMD Ryzen 5 5600 (or equivalent)"
     },
     {
       "title": "The Incident at Galley House",
