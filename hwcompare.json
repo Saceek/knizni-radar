@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-04T12:13:53.631Z",
+  "updatedAt": "2026-11-04T13:13:46.910Z",
   "games": [
     {
       "title": "SULFUR",
@@ -24,18 +24,6 @@
       "cpu": "Intel Core i5-10600K / AMD Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 Ti 8GB / AMD Radeon RX 6700 XT 12GB, Intel Core i5-10600K / AMD Ryzen 5 5600X"
-    },
-    {
-      "title": "Tape to Tape",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GT 750M, 2 GB Memory",
-      "cpu": "2.6 GHz Intel Quad Core",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GT 750M, 2 GB Memory, 2.6 GHz Intel Quad Core"
     },
     {
       "title": "Silica",
@@ -74,18 +62,6 @@
       "note": "Doporučená konfigurace: Nvidia GeForce RTX 2060 Or AMD Radeon RX 5700 XT, Intel Core i5-8400 Or AMD Ryzen 5 3600X"
     },
     {
-      "title": "Queen's Domain",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 1060 / AMD RX 580",
-      "cpu": "Intel Core i5 quad core, 3.5ghz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1060 / AMD RX 580, Intel Core i5 quad core, 3.5ghz"
-    },
-    {
       "title": "CRACK",
       "tier": "green",
       "tiers": {
@@ -96,6 +72,18 @@
       "cpu": "Intel i5-10400 / Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 1660 Super / RTX 2060 / RX 5600 XT, 6 GB, Intel i5-10400 / Ryzen 5 3600"
+    },
+    {
+      "title": "Queen's Domain",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 1060 / AMD RX 580",
+      "cpu": "Intel Core i5 quad core, 3.5ghz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1060 / AMD RX 580, Intel Core i5 quad core, 3.5ghz"
     },
     {
       "title": "Can 'Em All",
@@ -134,18 +122,6 @@
       "note": "Minimální konfigurace: NVIDIA GForce GTX 1050, Intel Core i5-7400 CPU @ 3.00GHz"
     },
     {
-      "title": "Terrible Lizards",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA® GeForce® RTX 2080 / AMD Radeon™ RX 6800XT",
-      "cpu": "Intel® Core™ i3-10100F / AMD Ryzen™ 3 3100",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA® GeForce® RTX 2080 / AMD Radeon™ RX 6800XT, Intel® Core™ i3-10100F / AMD Ryzen™ 3 3100"
-    },
-    {
       "title": "Nomad Drive",
       "tier": "red",
       "tiers": {
@@ -156,6 +132,18 @@
       "cpu": "Intel Core i5-12400F / AMD Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 Ti / AMD RX 6700 XT (8 GB+ VRAM), Intel Core i5-12400F / AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "Terrible Lizards",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA® GeForce® RTX 2080 / AMD Radeon™ RX 6800XT",
+      "cpu": "Intel® Core™ i3-10100F / AMD Ryzen™ 3 3100",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA® GeForce® RTX 2080 / AMD Radeon™ RX 6800XT, Intel® Core™ i3-10100F / AMD Ryzen™ 3 3100"
     },
     {
       "title": "Deadly Days: Roadtrip",
@@ -242,18 +230,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3080 / AMD Radeon RX 6800 XT (10GB+ VRAM), Intel i7-10700K / AMD Ryzen 7 5700X3D"
     },
     {
-      "title": "The Boss Gangster: Criminal Empire",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA Geforce RTX 2060",
-      "cpu": "Intel i7 AMD Ryzen 7",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA Geforce RTX 2060, Intel i7 AMD Ryzen 7"
-    },
-    {
       "title": "The Wolf Among Us Remastered",
       "tier": "green",
       "tiers": {
@@ -264,6 +240,18 @@
       "cpu": "Intel Core i3-8100 or AMD Ryzen 3 2300X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 TI, 4GB or AMD Radeon RX 6400, 4GB, Intel Core i3-8100 or AMD Ryzen 3 2300X"
+    },
+    {
+      "title": "The Boss Gangster: Criminal Empire",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA Geforce RTX 2060",
+      "cpu": "Intel i7 AMD Ryzen 7",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA Geforce RTX 2060, Intel i7 AMD Ryzen 7"
     },
     {
       "title": "PAO PAO",
@@ -278,18 +266,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060, Intel Core i5-12400"
     },
     {
-      "title": "SEVERANCE",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 2060 or AMD Radeon RX 5700",
-      "cpu": "Intel Core i5-9400F or AMD Ryzen 5 3500",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 or AMD Radeon RX 5700, Intel Core i5-9400F or AMD Ryzen 5 3500"
-    },
-    {
       "title": "Godzilla: Destroy All Monsters Melee Remastered",
       "tier": "green",
       "tiers": {
@@ -300,6 +276,18 @@
       "cpu": "Intel Core i7-10700K or AMD Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1070 / GTX 1080 (8 GB VRAM), Intel Core i7-10700K or AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "SEVERANCE",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 2060 or AMD Radeon RX 5700",
+      "cpu": "Intel Core i5-9400F or AMD Ryzen 5 3500",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 or AMD Radeon RX 5700, Intel Core i5-9400F or AMD Ryzen 5 3500"
     },
     {
       "title": "Tidy Up the Halloween Shop",
@@ -506,18 +494,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 760, AMD Radeon R9 280X, Intel Core i5 3.0 GHz"
     },
     {
-      "title": "MemeticBox",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 960 / Radeon RX 470 or better",
-      "cpu": "Quad-core 3.0 GHz (Intel Core i5)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 960 / Radeon RX 470 or better, Quad-core 3.0 GHz (Intel Core i5)"
-    },
-    {
       "title": "Hunting Simulator 3",
       "tier": "red",
       "tiers": {
@@ -528,6 +504,18 @@
       "cpu": "Intel Core i5-14600K, 3.5 GHz or AMD Ryzen 9 7900X, 4.7 GHz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 4060, 8 GB or Radeon RX 6800 XT, 16 GB, Intel Core i5-14600K, 3.5 GHz or AMD Ryzen 9 7900X, 4.7 GHz"
+    },
+    {
+      "title": "MemeticBox",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 960 / Radeon RX 470 or better",
+      "cpu": "Quad-core 3.0 GHz (Intel Core i5)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 960 / Radeon RX 470 or better, Quad-core 3.0 GHz (Intel Core i5)"
     },
     {
       "title": "Screen Stocks",
@@ -554,6 +542,18 @@
       "note": "Doporučená konfigurace: Intel UHD 620 or dedicated GPU, Intel Core i5 or equivalent"
     },
     {
+      "title": "Farm to Fortune",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX970",
+      "cpu": "Intel i5",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX970, Intel i5"
+    },
+    {
       "title": "Finals Week ✍🏻",
       "tier": "red",
       "tiers": {
@@ -576,18 +576,6 @@
       "cpu": "Dual Core 2 GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: DirectX11 compatible with at least 1GB of memory, Dual Core 2 GHz"
-    },
-    {
-      "title": "Farm to Fortune",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX970",
-      "cpu": "Intel i5",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX970, Intel i5"
     },
     {
       "title": "Magical Girl ER",
@@ -626,18 +614,6 @@
       "note": "Doporučená konfigurace: RTX 2060 / RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
-      "title": "Tidy Farm",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 1060",
-      "cpu": "Intel Core 7",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 1060, Intel Core 7"
-    },
-    {
       "title": "Mycelarium",
       "tier": "green",
       "tiers": {
@@ -648,6 +624,18 @@
       "cpu": "Intel Core i5 3.0 GHz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVidia Geforce GTX 750 Ti, AMD Radeon R7 260X, Intel Core i5 3.0 GHz"
+    },
+    {
+      "title": "Tidy Farm",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 1060",
+      "cpu": "Intel Core 7",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 1060, Intel Core 7"
     },
     {
       "title": "Milo",
