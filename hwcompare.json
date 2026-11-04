@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-04T17:13:21.059Z",
+  "updatedAt": "2026-11-04T18:13:20.480Z",
   "games": [
     {
       "title": "SULFUR",
@@ -122,6 +122,18 @@
       "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 1050 (2 GB) / AMD® Radeon™ RX-460 (4 GB) / Intel® Arc™ A380 (6 GB), Intel® Core™ i5-7600 (quad-core) / AMD® Ryzen™ 3 2200G (quad-core)"
     },
     {
+      "title": "PIT OF GOBLIN",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GForce GTX 1050",
+      "cpu": "Intel Core i5-7400 CPU @ 3.00GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GForce GTX 1050, Intel Core i5-7400 CPU @ 3.00GHz"
+    },
+    {
       "title": "Nomad Drive",
       "tier": "red",
       "tiers": {
@@ -170,18 +182,6 @@
       "note": "Minimální konfigurace: Most dedicated GPUs should work., Intel i5 or Higher"
     },
     {
-      "title": "Rip It! Card Collector",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "AMD RX 570 / Nvidia GTX 1060",
-      "cpu": "Ryzen 3 2200G / Intel i5-7400",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: AMD RX 570 / Nvidia GTX 1060, Ryzen 3 2200G / Intel i5-7400"
-    },
-    {
       "title": "Origins Trading Card Game",
       "tier": "green",
       "tiers": {
@@ -192,6 +192,18 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 / AMD Radeon RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Rip It! Card Collector",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "AMD RX 570 / Nvidia GTX 1060",
+      "cpu": "Ryzen 3 2200G / Intel i5-7400",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: AMD RX 570 / Nvidia GTX 1060, Ryzen 3 2200G / Intel i5-7400"
     },
     {
       "title": "Metal Thunder",
@@ -218,18 +230,6 @@
       "note": "Minimální konfigurace: 1GB VRAM GPU, Intel or AMD with at least 2 cores"
     },
     {
-      "title": "Stygian: Outer Gods",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "orange"
-      },
-      "gpu": "NVIDIA GeForce RTX 3080 / AMD Radeon RX 6800 XT (10GB+ VRAM)",
-      "cpu": "Intel i7-10700K / AMD Ryzen 7 5700X3D",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3080 / AMD Radeon RX 6800 XT (10GB+ VRAM), Intel i7-10700K / AMD Ryzen 7 5700X3D"
-    },
-    {
       "title": "The Wolf Among Us Remastered",
       "tier": "green",
       "tiers": {
@@ -240,6 +240,18 @@
       "cpu": "Intel Core i3-8100 or AMD Ryzen 3 2300X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 TI, 4GB or AMD Radeon RX 6400, 4GB, Intel Core i3-8100 or AMD Ryzen 3 2300X"
+    },
+    {
+      "title": "Stygian: Outer Gods",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "orange"
+      },
+      "gpu": "NVIDIA GeForce RTX 3080 / AMD Radeon RX 6800 XT (10GB+ VRAM)",
+      "cpu": "Intel i7-10700K / AMD Ryzen 7 5700X3D",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3080 / AMD Radeon RX 6800 XT (10GB+ VRAM), Intel i7-10700K / AMD Ryzen 7 5700X3D"
     },
     {
       "title": "The Boss Gangster: Criminal Empire",
@@ -314,18 +326,6 @@
       "note": "Doporučená konfigurace: RTX 2060 6 Go / RX 6600 8 Go, i5-10400 / Ryzen 5 3600"
     },
     {
-      "title": "Playable Archive",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Geforce GTX 960 or Higher",
-      "cpu": "2.4 GHz Dual Core Processor Or Higher",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Geforce GTX 960 or Higher, 2.4 GHz Dual Core Processor Or Higher"
-    },
-    {
       "title": "Potato Please",
       "tier": "orange",
       "tiers": {
@@ -336,6 +336,18 @@
       "cpu": "Intel Core i5-10400 or AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT, Intel Core i5-10400 or AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Playable Archive",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Geforce GTX 960 or Higher",
+      "cpu": "2.4 GHz Dual Core Processor Or Higher",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Geforce GTX 960 or Higher, 2.4 GHz Dual Core Processor Or Higher"
     },
     {
       "title": "Divine Frequency",
@@ -456,18 +468,6 @@
       "cpu": "2.0 GHz Dual-Core (e.g. Intel Core i5-7200U or equivalent)",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 620, 2.0 GHz Dual-Core (e.g. Intel Core i5-7200U or equivalent)"
-    },
-    {
-      "title": "Outcast Tales",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 760, AMD Radeon R9 280X",
-      "cpu": "Intel Core i5 3.0 GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 760, AMD Radeon R9 280X, Intel Core i5 3.0 GHz"
     },
     {
       "title": "Mycelarium",
@@ -602,18 +602,6 @@
       "note": "Minimální konfigurace: GeForce GTX 1060, Intel Core 7"
     },
     {
-      "title": "Milo",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 3060 12 GB",
-      "cpu": "Intel Core i5-12400F or AMD Ryzen 5 5600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB, Intel Core i5-12400F or AMD Ryzen 5 5600"
-    },
-    {
       "title": "GRAVHOUNDS",
       "tier": "green",
       "tiers": {
@@ -624,6 +612,18 @@
       "cpu": "Intel Core i5-10600KF or AMD Ryzen 5 3600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce RTX 2060 or AMD Radeon RX 5600X, Intel Core i5-10600KF or AMD Ryzen 5 3600X"
+    },
+    {
+      "title": "Milo",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060 12 GB",
+      "cpu": "Intel Core i5-12400F or AMD Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB, Intel Core i5-12400F or AMD Ryzen 5 5600"
     },
     {
       "title": "Everlast: Undying Tale",
@@ -662,6 +662,18 @@
       "note": "Doporučená konfigurace: GeForce RTX 3060 / Radeon RX 6700, AMD Ryzen 7 3700X /  Intel® Core i7-6700K"
     },
     {
+      "title": "Snow Resort Simulator",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1070 8GB or AMD RX 5700",
+      "cpu": "Intel Core i5-10400 or AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1070 8GB or AMD RX 5700, Intel Core i5-10400 or AMD Ryzen 5 3600"
+    },
+    {
       "title": "不良婚姻惩罚师",
       "tier": "green",
       "tiers": {
@@ -686,18 +698,6 @@
       "note": "Doporučená konfigurace: GTX 1060 6GB / RX 580, Intel Core i5-10400 / Ryzen 5 3600"
     },
     {
-      "title": "PC Cafe Simulator",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA RTX 2070 / AMD RX 6700 XT",
-      "cpu": "Intel Core i7-10700 / AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 2070 / AMD RX 6700 XT, Intel Core i7-10700 / AMD Ryzen 5 5600X"
-    },
-    {
       "title": "Death at Fleming Manor",
       "tier": "green",
       "tiers": {
@@ -708,6 +708,18 @@
       "cpu": "Intel Core i5 3.0 GHz or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 530 or equivalent, Intel Core i5 3.0 GHz or equivalent"
+    },
+    {
+      "title": "PC Cafe Simulator",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA RTX 2070 / AMD RX 6700 XT",
+      "cpu": "Intel Core i7-10700 / AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 2070 / AMD RX 6700 XT, Intel Core i7-10700 / AMD Ryzen 5 5600X"
     },
     {
       "title": "Life & Shadow: Celestial Call",
