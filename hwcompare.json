@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-05T15:13:00.345Z",
+  "updatedAt": "2026-11-05T16:13:17.957Z",
   "games": [
     {
       "title": "SULFUR",
@@ -158,18 +158,6 @@
       "note": "Minimální konfigurace: Most dedicated GPUs should work., Intel i5 or Higher"
     },
     {
-      "title": "Deadly Days: Roadtrip",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "dedicated graphics card, e.g. NVIDIA GeForce GTX 1050 Ti or AMD RX 570",
-      "cpu": "Intel(R) Core(TM) i5-6600K or AMD Ryzen 5 3600",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: dedicated graphics card, e.g. NVIDIA GeForce GTX 1050 Ti or AMD RX 570, Intel(R) Core(TM) i5-6600K or AMD Ryzen 5 3600"
-    },
-    {
       "title": "Godzilla: Destroy All Monsters Melee Remastered",
       "tier": "green",
       "tiers": {
@@ -180,6 +168,18 @@
       "cpu": "Intel Core i7-10700K or AMD Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1070 / GTX 1080 (8 GB VRAM), Intel Core i7-10700K or AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "Deadly Days: Roadtrip",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "dedicated graphics card, e.g. NVIDIA GeForce GTX 1050 Ti or AMD RX 570",
+      "cpu": "Intel(R) Core(TM) i5-6600K or AMD Ryzen 5 3600",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: dedicated graphics card, e.g. NVIDIA GeForce GTX 1050 Ti or AMD RX 570, Intel(R) Core(TM) i5-6600K or AMD Ryzen 5 3600"
     },
     {
       "title": "Rip It! Card Collector",
@@ -422,6 +422,18 @@
       "note": "Doporučená konfigurace: GeForce RTX 4060, 8 GB or Radeon RX 6800 XT, 16 GB, Intel Core i5-14600K, 3.5 GHz or AMD Ryzen 9 7900X, 4.7 GHz"
     },
     {
+      "title": "Farm to Fortune",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX970",
+      "cpu": "Intel i5",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX970, Intel i5"
+    },
+    {
       "title": "Finals Week ✍🏻",
       "tier": "red",
       "tiers": {
@@ -444,18 +456,6 @@
       "cpu": "Intel Core i5 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Intel UHD 620 or dedicated GPU, Intel Core i5 or equivalent"
-    },
-    {
-      "title": "Farm to Fortune",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX970",
-      "cpu": "Intel i5",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX970, Intel i5"
     },
     {
       "title": "GRAVHOUNDS",
@@ -492,18 +492,6 @@
       "cpu": "Dual Core 2 GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: DirectX11 compatible with at least 1GB of memory, Dual Core 2 GHz"
-    },
-    {
-      "title": "Tidy Farm",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 1060",
-      "cpu": "Intel Core 7",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 1060, Intel Core 7"
     },
     {
       "title": "CH13: Rest Stop",
@@ -602,18 +590,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1070 8GB or AMD RX 5700, Intel Core i5-10400 or AMD Ryzen 5 3600"
     },
     {
-      "title": "PC Cafe Simulator",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA RTX 2070 / AMD RX 6700 XT",
-      "cpu": "Intel Core i7-10700 / AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 2070 / AMD RX 6700 XT, Intel Core i7-10700 / AMD Ryzen 5 5600X"
-    },
-    {
       "title": "Incremental Traffic",
       "tier": "green",
       "tiers": {
@@ -624,6 +600,18 @@
       "cpu": "Quad-core 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 / Intel Iris Xe, Quad-core 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600)"
+    },
+    {
+      "title": "PC Cafe Simulator",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA RTX 2070 / AMD RX 6700 XT",
+      "cpu": "Intel Core i7-10700 / AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 2070 / AMD RX 6700 XT, Intel Core i7-10700 / AMD Ryzen 5 5600X"
     },
     {
       "title": "Kingdom Inc.",
@@ -710,18 +698,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce 970 GTX or AMD Radeon RX 480 (4 GB of VRAM, Shader Model 5.1), Intel i5 4690k, AMD Ryzen 5 1400"
     },
     {
-      "title": "Dungeons & Dynasties",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Integrated Graphics",
-      "cpu": "Windows 11 (64-bit)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Integrated Graphics, Windows 11 (64-bit)"
-    },
-    {
       "title": "Ghost in the SQL Data",
       "tier": "green",
       "tiers": {
@@ -732,6 +708,18 @@
       "cpu": "Quad Core 2,5 GHz or more",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GPU (Intel Iris Xe / AMD Vega 8), Quad Core 2,5 GHz or more"
+    },
+    {
+      "title": "Dungeons & Dynasties",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Integrated Graphics",
+      "cpu": "Windows 11 (64-bit)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Integrated Graphics, Windows 11 (64-bit)"
     },
     {
       "title": "Desktop Duck",
@@ -770,16 +758,16 @@
       "note": "Minimální konfigurace: Intel HD Graphics 530 or equivalent, with a Vulkan 1.0-compatible driver, Intel Core i3-6100 or equivalent"
     },
     {
-      "title": "Benny's Backrooms",
+      "title": "Playrooms",
       "tier": "orange",
       "tiers": {
         "allyx": "orange",
         "pc": "green"
       },
-      "gpu": "NVIDIA GeForce RTX 2060 Super",
-      "cpu": "Intel® Core™ i5-1240U",
+      "gpu": "NVIDIA RTX 2060 (6 GB) or AMD RX 5700",
+      "cpu": "Intel Core i5-10400 or AMD Ryzen 5 3600",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 Super, Intel® Core™ i5-1240U"
+      "note": "Doporučená konfigurace: NVIDIA RTX 2060 (6 GB) or AMD RX 5700, Intel Core i5-10400 or AMD Ryzen 5 3600"
     },
     {
       "title": "Sabado",
@@ -792,6 +780,18 @@
       "cpu": "Intel Core i5 @ 3.0 GHz or AMD",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD"
+    },
+    {
+      "title": "Benny's Backrooms",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 2060 Super",
+      "cpu": "Intel® Core™ i5-1240U",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 Super, Intel® Core™ i5-1240U"
     },
     {
       "title": "Stick A Fork",
