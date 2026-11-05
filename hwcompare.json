@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-05T16:13:17.957Z",
+  "updatedAt": "2026-11-05T17:12:52.206Z",
   "games": [
     {
       "title": "SULFUR",
@@ -266,18 +266,6 @@
       "note": "Doporučená konfigurace: NVIDIA Geforce RTX 2060, Intel i7 AMD Ryzen 7"
     },
     {
-      "title": "ATMOSFAR",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "orange"
-      },
-      "gpu": "Nvidia GeForce RTX 4070 or AMD Radeon RX 7800 XT",
-      "cpu": "Intel Core i7-14700K (5.6 GHz 8 Core) or AMD Ryzen 7 7800X3D (4.2 GHz 8 Core)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce RTX 4070 or AMD Radeon RX 7800 XT, Intel Core i7-14700K (5.6 GHz 8 Core) or AMD Ryzen 7 7800X3D (4.2 GHz 8 Core)"
-    },
-    {
       "title": "Geoplanetical",
       "tier": "orange",
       "tiers": {
@@ -434,18 +422,6 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX970, Intel i5"
     },
     {
-      "title": "Finals Week ✍🏻",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "Nvidia 3060 or equivalent",
-      "cpu": "Ryzen 9 3900XT or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
-    },
-    {
       "title": "HAPPY PROPAGANDA",
       "tier": "green",
       "tiers": {
@@ -456,6 +432,18 @@
       "cpu": "Intel Core i5 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Intel UHD 620 or dedicated GPU, Intel Core i5 or equivalent"
+    },
+    {
+      "title": "Finals Week ✍🏻",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "Nvidia 3060 or equivalent",
+      "cpu": "Ryzen 9 3900XT or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
     },
     {
       "title": "GRAVHOUNDS",
@@ -470,18 +458,6 @@
       "note": "Doporučená konfigurace: Nvidia GeForce RTX 2060 or AMD Radeon RX 5600X, Intel Core i5-10600KF or AMD Ryzen 5 3600X"
     },
     {
-      "title": "Screen Stocks",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "AMD Radeon™ R7 260X (2GB VRAM) / NVIDIA® GeForce® GTX 750(2GB VRAM)",
-      "cpu": "AMD FX-4350 / Intel® Core™ i3-3210",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: AMD Radeon™ R7 260X (2GB VRAM) / NVIDIA® GeForce® GTX 750(2GB VRAM), AMD FX-4350 / Intel® Core™ i3-3210"
-    },
-    {
       "title": "Rat Game",
       "tier": "green",
       "tiers": {
@@ -494,16 +470,16 @@
       "note": "Minimální konfigurace: DirectX11 compatible with at least 1GB of memory, Dual Core 2 GHz"
     },
     {
-      "title": "CH13: Rest Stop",
-      "tier": "orange",
+      "title": "Screen Stocks",
+      "tier": "green",
       "tiers": {
-        "allyx": "orange",
+        "allyx": "green",
         "pc": "green"
       },
-      "gpu": "RTX 2060 / RX 5600 XT",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 2060 / RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
+      "gpu": "AMD Radeon™ R7 260X (2GB VRAM) / NVIDIA® GeForce® GTX 750(2GB VRAM)",
+      "cpu": "AMD FX-4350 / Intel® Core™ i3-3210",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: AMD Radeon™ R7 260X (2GB VRAM) / NVIDIA® GeForce® GTX 750(2GB VRAM), AMD FX-4350 / Intel® Core™ i3-3210"
     },
     {
       "title": "Death at Fleming Manor",
@@ -516,6 +492,18 @@
       "cpu": "Intel Core i5 3.0 GHz or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 530 or equivalent, Intel Core i5 3.0 GHz or equivalent"
+    },
+    {
+      "title": "CH13: Rest Stop",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "RTX 2060 / RX 5600 XT",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 2060 / RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "Milo",
@@ -650,16 +638,16 @@
       "note": "Minimální konfigurace: 1 GB VRAM, 2 GHz"
     },
     {
-      "title": "Catch Meow If You Can",
+      "title": "Dungeons & Dynasties",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "GTX 970",
-      "cpu": "Core i5 6600",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GTX 970, Core i5 6600"
+      "gpu": "Integrated Graphics",
+      "cpu": "Windows 11 (64-bit)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Integrated Graphics, Windows 11 (64-bit)"
     },
     {
       "title": "Feed The Forest",
@@ -686,6 +674,18 @@
       "note": "Doporučená konfigurace: Nvidia 3080ti / Amd RX 6900 XT - 3840x2160, 60fps, DLSS/FSR Performance, Preset HIGH, Hardware Ray Tracing OFF or 3840x2160, 30fps, DLSS/FSR Performance, Preset HIGH, Hardware Ray Tracing ON, Ryzen 7 5800X / Core i5-12600K"
     },
     {
+      "title": "Catch Meow If You Can",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 970",
+      "cpu": "Core i5 6600",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GTX 970, Core i5 6600"
+    },
+    {
       "title": "Rise of the Merchants",
       "tier": "green",
       "tiers": {
@@ -710,18 +710,6 @@
       "note": "Doporučená konfigurace: GPU (Intel Iris Xe / AMD Vega 8), Quad Core 2,5 GHz or more"
     },
     {
-      "title": "Dungeons & Dynasties",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Integrated Graphics",
-      "cpu": "Windows 11 (64-bit)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Integrated Graphics, Windows 11 (64-bit)"
-    },
-    {
       "title": "Desktop Duck",
       "tier": "green",
       "tiers": {
@@ -732,6 +720,18 @@
       "cpu": "Any modern quad-core x64",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Any dedicated or modern integrated GPU, Any modern quad-core x64"
+    },
+    {
+      "title": "Playrooms",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA RTX 2060 (6 GB) or AMD RX 5700",
+      "cpu": "Intel Core i5-10400 or AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 2060 (6 GB) or AMD RX 5700, Intel Core i5-10400 or AMD Ryzen 5 3600"
     },
     {
       "title": "HYPNOS",
@@ -756,18 +756,6 @@
       "cpu": "Intel Core i3-6100 or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 530 or equivalent, with a Vulkan 1.0-compatible driver, Intel Core i3-6100 or equivalent"
-    },
-    {
-      "title": "Playrooms",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA RTX 2060 (6 GB) or AMD RX 5700",
-      "cpu": "Intel Core i5-10400 or AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 2060 (6 GB) or AMD RX 5700, Intel Core i5-10400 or AMD Ryzen 5 3600"
     },
     {
       "title": "Sabado",
