@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-06T03:13:37.900Z",
+  "updatedAt": "2026-11-06T04:13:34.135Z",
   "games": [
     {
       "title": "Phantom Blade Zero",
@@ -554,18 +554,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1070 8GB or AMD RX 5700, Intel Core i5-10400 or AMD Ryzen 5 3600"
     },
     {
-      "title": "PC Cafe Simulator",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA RTX 2070 / AMD RX 6700 XT",
-      "cpu": "Intel Core i7-10700 / AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 2070 / AMD RX 6700 XT, Intel Core i7-10700 / AMD Ryzen 5 5600X"
-    },
-    {
       "title": "Dungeons & Dynasties",
       "tier": "green",
       "tiers": {
@@ -576,6 +564,18 @@
       "cpu": "Windows 11 (64-bit)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Integrated Graphics, Windows 11 (64-bit)"
+    },
+    {
+      "title": "PC Cafe Simulator",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA RTX 2070 / AMD RX 6700 XT",
+      "cpu": "Intel Core i7-10700 / AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 2070 / AMD RX 6700 XT, Intel Core i7-10700 / AMD Ryzen 5 5600X"
     },
     {
       "title": "Feed The Forest",
@@ -674,6 +674,18 @@
       "note": "Doporučená konfigurace: Nvidia 3080ti / Amd RX 6900 XT - 3840x2160, 60fps, DLSS/FSR Performance, Preset HIGH, Hardware Ray Tracing OFF or 3840x2160, 30fps, DLSS/FSR Performance, Preset HIGH, Hardware Ray Tracing ON, Ryzen 7 5800X / Core i5-12600K"
     },
     {
+      "title": "Rise of the Merchants",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce 970 GTX or AMD Radeon RX 480 (4 GB of VRAM, Shader Model 5.1)",
+      "cpu": "Intel i5 4690k, AMD Ryzen 5 1400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce 970 GTX or AMD Radeon RX 480 (4 GB of VRAM, Shader Model 5.1), Intel i5 4690k, AMD Ryzen 5 1400"
+    },
+    {
       "title": "Ghost in the SQL Data",
       "tier": "green",
       "tiers": {
@@ -708,18 +720,6 @@
       "cpu": "Intel Core i5 @ 3.0 GHz or AMD",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD"
-    },
-    {
-      "title": "Rise of the Merchants",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce 970 GTX or AMD Radeon RX 480 (4 GB of VRAM, Shader Model 5.1)",
-      "cpu": "Intel i5 4690k, AMD Ryzen 5 1400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce 970 GTX or AMD Radeon RX 480 (4 GB of VRAM, Shader Model 5.1), Intel i5 4690k, AMD Ryzen 5 1400"
     },
     {
       "title": "HYPNOS",
@@ -792,6 +792,30 @@
       "cpu": "6-core CPU (Intel Core i5-10400 / AMD Ryzen 5 3600)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1650 / Radeon RX 570, 6-core CPU (Intel Core i5-10400 / AMD Ryzen 5 3600)"
+    },
+    {
+      "title": "Cozy Game Restoration",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1050 / AMD RX 570",
+      "cpu": "X64 architecture",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD RX 570, X64 architecture"
+    },
+    {
+      "title": "HELENA : Cloud District",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 960 or AMD Radeon R7 370",
+      "cpu": "Intel Core i5-4460 or AMD Ryzen 3 1200",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 or AMD Radeon R7 370, Intel Core i5-4460 or AMD Ryzen 3 1200"
     },
     {
       "title": "The Incident at Galley House",
