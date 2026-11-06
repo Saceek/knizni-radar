@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-06T11:13:05.754Z",
+  "updatedAt": "2026-11-06T12:13:12.049Z",
   "games": [
     {
       "title": "Phantom Blade Zero",
@@ -350,6 +350,18 @@
       "note": "Doporučená konfigurace: Nvidia GeForce RTX 2060 or AMD Radeon RX 5600X, Intel Core i5-10600KF or AMD Ryzen 5 3600X"
     },
     {
+      "title": "Road Rash™",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Any dedicated or modern integrated GPU with DirectX 9+ support",
+      "cpu": "Intel Core i3 / AMD Ryzen 3 (or any modern 2.0 GHz+ CPU)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Any dedicated or modern integrated GPU with DirectX 9+ support, Intel Core i3 / AMD Ryzen 3 (or any modern 2.0 GHz+ CPU)"
+    },
+    {
       "title": "Hunting Simulator 3",
       "tier": "red",
       "tiers": {
@@ -360,6 +372,18 @@
       "cpu": "Intel Core i5-14600K, 3.5 GHz or AMD Ryzen 9 7900X, 4.7 GHz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 4060, 8 GB or Radeon RX 6800 XT, 16 GB, Intel Core i5-14600K, 3.5 GHz or AMD Ryzen 9 7900X, 4.7 GHz"
+    },
+    {
+      "title": "Playrooms",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA RTX 2060 (6 GB) or AMD RX 5700",
+      "cpu": "Intel Core i5-10400 or AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 2060 (6 GB) or AMD RX 5700, Intel Core i5-10400 or AMD Ryzen 5 3600"
     },
     {
       "title": "Farm to Fortune",
@@ -386,18 +410,6 @@
       "note": "Doporučená konfigurace: Nvidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
     },
     {
-      "title": "Playrooms",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA RTX 2060 (6 GB) or AMD RX 5700",
-      "cpu": "Intel Core i5-10400 or AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 2060 (6 GB) or AMD RX 5700, Intel Core i5-10400 or AMD Ryzen 5 3600"
-    },
-    {
       "title": "Death at Fleming Manor",
       "tier": "green",
       "tiers": {
@@ -420,18 +432,6 @@
       "cpu": "Dual Core 2 GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: DirectX11 compatible with at least 1GB of memory, Dual Core 2 GHz"
-    },
-    {
-      "title": "Road Rash™",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Any dedicated or modern integrated GPU with DirectX 9+ support",
-      "cpu": "Intel Core i3 / AMD Ryzen 3 (or any modern 2.0 GHz+ CPU)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Any dedicated or modern integrated GPU with DirectX 9+ support, Intel Core i3 / AMD Ryzen 3 (or any modern 2.0 GHz+ CPU)"
     },
     {
       "title": "CH13: Rest Stop",
@@ -470,6 +470,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB, Intel Core i5-12400F or AMD Ryzen 5 5600"
     },
     {
+      "title": "Underkeep",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "OpenGL 3.2 compatible",
+      "cpu": null,
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: OpenGL 3.2 compatible"
+    },
+    {
       "title": "Everlast: Undying Tale",
       "tier": "green",
       "tiers": {
@@ -504,18 +516,6 @@
       "cpu": "AMD Ryzen 7 3700X /  Intel® Core i7-6700K",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 3060 / Radeon RX 6700, AMD Ryzen 7 3700X /  Intel® Core i7-6700K"
-    },
-    {
-      "title": "Underkeep",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "OpenGL 3.2 compatible",
-      "cpu": null,
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: OpenGL 3.2 compatible"
     },
     {
       "title": "Snow Resort Simulator",
@@ -554,18 +554,6 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 1650, AMD Ryzen 5 2600"
     },
     {
-      "title": "Kingdom Inc.",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DX11, DX12 capable graphics card",
-      "cpu": "x64 architecture with SSE2 instruction set support",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: DX11, DX12 capable graphics card, x64 architecture with SSE2 instruction set support"
-    },
-    {
       "title": "Hull Rupture",
       "tier": "green",
       "tiers": {
@@ -576,6 +564,18 @@
       "cpu": "Intel i7-8700, Ryzen 1600",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce GTX 670 / Radeon HD 7970, Intel i7-8700, Ryzen 1600"
+    },
+    {
+      "title": "Kingdom Inc.",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DX11, DX12 capable graphics card",
+      "cpu": "x64 architecture with SSE2 instruction set support",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: DX11, DX12 capable graphics card, x64 architecture with SSE2 instruction set support"
     },
     {
       "title": "Silberheim Evolving Card Game",
@@ -638,18 +638,6 @@
       "note": "Minimální konfigurace: GTX 970, Core i5 6600"
     },
     {
-      "title": "Rise of the Merchants",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce 970 GTX or AMD Radeon RX 480 (4 GB of VRAM, Shader Model 5.1)",
-      "cpu": "Intel i5 4690k, AMD Ryzen 5 1400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce 970 GTX or AMD Radeon RX 480 (4 GB of VRAM, Shader Model 5.1), Intel i5 4690k, AMD Ryzen 5 1400"
-    },
-    {
       "title": "Cozy Game Restoration",
       "tier": "green",
       "tiers": {
@@ -660,6 +648,18 @@
       "cpu": "X64 architecture",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD RX 570, X64 architecture"
+    },
+    {
+      "title": "Rise of the Merchants",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce 970 GTX or AMD Radeon RX 480 (4 GB of VRAM, Shader Model 5.1)",
+      "cpu": "Intel i5 4690k, AMD Ryzen 5 1400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce 970 GTX or AMD Radeon RX 480 (4 GB of VRAM, Shader Model 5.1), Intel i5 4690k, AMD Ryzen 5 1400"
     },
     {
       "title": "Ghost in the SQL Data",
@@ -698,18 +698,6 @@
       "note": "Minimální konfigurace: Nvidia GeForce RTX 3060 Ti, AMD Ryzen 7 5008X 8-Core Processor"
     },
     {
-      "title": "Stick A Fork",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 1650 / Radeon RX 570",
-      "cpu": "6-core CPU (Intel Core i5-10400 / AMD Ryzen 5 3600)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1650 / Radeon RX 570, 6-core CPU (Intel Core i5-10400 / AMD Ryzen 5 3600)"
-    },
-    {
       "title": "女神养成：放置型",
       "tier": "green",
       "tiers": {
@@ -720,6 +708,18 @@
       "cpu": "Intel i5或同级别",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: 2GB RAM, Intel i5或同级别"
+    },
+    {
+      "title": "Stick A Fork",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 1650 / Radeon RX 570",
+      "cpu": "6-core CPU (Intel Core i5-10400 / AMD Ryzen 5 3600)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1650 / Radeon RX 570, 6-core CPU (Intel Core i5-10400 / AMD Ryzen 5 3600)"
     },
     {
       "title": "HELENA : Cloud District",
