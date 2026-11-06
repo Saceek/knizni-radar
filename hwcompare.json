@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-06T10:57:15.771Z",
+  "updatedAt": "2026-11-06T11:13:05.754Z",
   "games": [
     {
       "title": "Phantom Blade Zero",
@@ -120,18 +120,6 @@
       "cpu": "Intel Core i5-7400 CPU @ 3.00GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GForce GTX 1050, Intel Core i5-7400 CPU @ 3.00GHz"
-    },
-    {
-      "title": "Nomad Drive",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA RTX 3060 Ti / AMD RX 6700 XT (8 GB+ VRAM)",
-      "cpu": "Intel Core i5-12400F / AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 3060 Ti / AMD RX 6700 XT (8 GB+ VRAM), Intel Core i5-12400F / AMD Ryzen 5 5600X"
     },
     {
       "title": "Terrible Lizards",
@@ -374,18 +362,6 @@
       "note": "Doporučená konfigurace: GeForce RTX 4060, 8 GB or Radeon RX 6800 XT, 16 GB, Intel Core i5-14600K, 3.5 GHz or AMD Ryzen 9 7900X, 4.7 GHz"
     },
     {
-      "title": "Finals Week ✍🏻",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "Nvidia 3060 or equivalent",
-      "cpu": "Ryzen 9 3900XT or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
-    },
-    {
       "title": "Farm to Fortune",
       "tier": "green",
       "tiers": {
@@ -396,6 +372,18 @@
       "cpu": "Intel i5",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX970, Intel i5"
+    },
+    {
+      "title": "Finals Week ✍🏻",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "Nvidia 3060 or equivalent",
+      "cpu": "Ryzen 9 3900XT or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
     },
     {
       "title": "Playrooms",
