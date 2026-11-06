@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-06T14:19:12.513Z",
+  "updatedAt": "2026-11-06T15:18:51.963Z",
   "films": [
     {
       "title": "Godzilla Minus Zero",
@@ -546,9 +546,9 @@
       "poster": "https://images.justwatch.com/poster/354705133/s332/steps.jpg",
       "url": "https://www.justwatch.com/cz/film/steps",
       "genres": [
-        "Akční",
         "Animovaný",
-        "Komedie"
+        "Komedie",
+        "Fantasy"
       ],
       "country": null,
       "premiereDate": "20.11.2026",
@@ -863,7 +863,8 @@
       "poster": "https://images.justwatch.com/poster/354961214/s332/the-hunchback-soul-of-paris.jpg",
       "url": "https://www.justwatch.com/cz/film/the-hunchback-soul-of-paris",
       "genres": [
-        "Drama"
+        "Drama",
+        "Romantický"
       ],
       "country": null,
       "premiereDate": "27.11.2026",
@@ -1212,21 +1213,6 @@
       ]
     },
     {
-      "title": "Proxies",
-      "year": "2026",
-      "type": "film",
-      "poster": "https://images.justwatch.com/poster/355557932/s332/proxies.jpg",
-      "url": "https://www.justwatch.com/cz/film/proxies",
-      "genres": [
-        "Thriller"
-      ],
-      "country": null,
-      "premiereDate": "11.12.2026",
-      "vod": [
-        "Netflix"
-      ]
-    },
-    {
       "title": "In Waves",
       "year": "2026",
       "type": "film",
@@ -1236,6 +1222,21 @@
         "Animovaný",
         "Drama",
         "Romantický"
+      ],
+      "country": null,
+      "premiereDate": "11.12.2026",
+      "vod": [
+        "Netflix"
+      ]
+    },
+    {
+      "title": "Proxies",
+      "year": "2026",
+      "type": "film",
+      "poster": "https://images.justwatch.com/poster/355557932/s332/proxies.jpg",
+      "url": "https://www.justwatch.com/cz/film/proxies",
+      "genres": [
+        "Thriller"
       ],
       "country": null,
       "premiereDate": "11.12.2026",
@@ -3497,6 +3498,14 @@
   ],
   "books": [
     {
+      "title": "Domácí strašidla",
+      "author": "Eva Přikrylová, Vladimír Přikryl",
+      "cover": "https://obalky.kosmas.cz/ArticleCovers/574/824_base.jpg",
+      "price": 159,
+      "url": "https://www.kosmas.cz/knihy/574824/domaci-strasidla/",
+      "releaseDate": null
+    },
+    {
       "title": "Marvel - 100 příběhů o superhrdinech",
       "author": "kolektiv",
       "cover": "https://obalky.kosmas.cz/ArticleCovers/574/916_base.jpg",
@@ -3505,27 +3514,11 @@
       "releaseDate": null
     },
     {
-      "title": "Semínek",
-      "author": "Aneta Gibbs",
-      "cover": "https://obalky.kosmas.cz/ArticleCovers/575/333_base.jpg",
-      "price": 251,
-      "url": "https://www.kosmas.cz/knihy/575333/seminek/",
-      "releaseDate": null
-    },
-    {
-      "title": "Alex Ferguson: Zápasy mého života",
-      "author": "Alex Ferguson",
-      "cover": "https://obalky.kosmas.cz/ArticleCovers/575/418_base.jpg",
-      "price": 584,
-      "url": "https://www.kosmas.cz/knihy/575418/alex-ferguson-zapasy-meho-zivota/",
-      "releaseDate": null
-    },
-    {
-      "title": "Dvůr křídel a zmaru",
-      "author": "Sarah J. Maas",
-      "cover": "https://obalky.kosmas.cz/ArticleCovers/575/445_base.jpg",
-      "price": 584,
-      "url": "https://www.kosmas.cz/knihy/575445/dvur-kridel-a-zmaru/",
+      "title": "Nejen české tradice Bavorovské hospodyňky",
+      "author": "Veronika Králíková",
+      "cover": "https://obalky.kosmas.cz/ArticleCovers/575/416_base.jpg",
+      "price": 449,
+      "url": "https://www.kosmas.cz/knihy/575416/nejen-ceske-tradice-bavorovske-hospodynky/",
       "releaseDate": null
     },
     {
@@ -3537,6 +3530,30 @@
       "releaseDate": null
     },
     {
+      "title": "Vianoce s pocitkami",
+      "author": "Ellie Šedivá",
+      "cover": "https://obalky.kosmas.cz/ArticleCovers/575/632_base.jpg",
+      "price": 404,
+      "url": "https://www.kosmas.cz/knihy/575632/vianoce-s-pocitkami/",
+      "releaseDate": null
+    },
+    {
+      "title": "Milan Rastislav Štefánik",
+      "author": "Břetislav Ditrych",
+      "cover": "https://obalky.kosmas.cz/ArticleCovers/575/789_base.jpg",
+      "price": 305,
+      "url": "https://www.kosmas.cz/knihy/575789/milan-rastislav-stefanik/",
+      "releaseDate": null
+    },
+    {
+      "title": "Tajemství Guvernantky",
+      "author": "Sussane Craig",
+      "cover": "https://obalky.kosmas.cz/ArticleCovers/575/826_base.jpg",
+      "price": 311,
+      "url": "https://www.kosmas.cz/knihy/575826/tajemstvi-guvernantky/",
+      "releaseDate": null
+    },
+    {
       "title": "Lékaři pod pěti kruhy: Rozhodnutí bez aplausu",
       "author": "Jiří Neumann, Patrik Vacek",
       "cover": "https://obalky.kosmas.cz/ArticleCovers/575/844_base.jpg",
@@ -3545,35 +3562,19 @@
       "releaseDate": null
     },
     {
-      "title": "Nadaní",
-      "author": "Jennifer Lynn Barnes",
-      "cover": "https://obalky.kosmas.cz/ArticleCovers/575/622_base.jpg",
-      "price": 359,
-      "url": "https://www.kosmas.cz/knihy/575622/nadani/",
+      "title": "Rabín, kněz a černovláska",
+      "author": "Kristina Cysařová, David Maxa, Marek Orko Vácha",
+      "cover": "https://obalky.kosmas.cz/ArticleCovers/576/000_base.jpg",
+      "price": 333,
+      "url": "https://www.kosmas.cz/knihy/576000/rabin-knez-a-cernovlaska/",
       "releaseDate": null
     },
     {
-      "title": "Divergence - exkluzivní vydání",
-      "author": "Veronica Roth",
-      "cover": "https://obalky.kosmas.cz/ArticleCovers/576/274_base.jpg",
-      "price": 449,
-      "url": "https://www.kosmas.cz/knihy/576274/divergence-exkluzivni-vydani/",
-      "releaseDate": null
-    },
-    {
-      "title": "Ach, ti muži",
-      "author": "Zdena Baronová",
-      "cover": "https://obalky.kosmas.cz/ArticleCovers/574/602_base.jpg",
-      "price": 161,
-      "url": "https://www.kosmas.cz/knihy/574602/ach-ti-muzi/",
-      "releaseDate": null
-    },
-    {
-      "title": "Staromilcova panská kuchařka",
-      "author": "Vítězslav Ivičič",
-      "cover": "https://obalky.kosmas.cz/ArticleCovers/575/414_base.jpg",
-      "price": 449,
-      "url": "https://www.kosmas.cz/knihy/575414/staromilcova-panska-kucharka/",
+      "title": "Jak se narodila moje sestřička",
+      "author": "Milena Jeřábková",
+      "cover": "https://obalky.kosmas.cz/ArticleCovers/576/006_base.jpg",
+      "price": 269,
+      "url": "https://www.kosmas.cz/knihy/576006/jak-se-narodila-moje-sestricka/",
       "releaseDate": null
     }
   ]
