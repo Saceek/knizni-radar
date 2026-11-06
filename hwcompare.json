@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-06T15:13:50.892Z",
+  "updatedAt": "2026-11-06T16:13:37.379Z",
   "games": [
     {
       "title": "Phantom Blade Zero",
@@ -386,18 +386,6 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX970, Intel i5"
     },
     {
-      "title": "Finals Week ✍🏻",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "Nvidia 3060 or equivalent",
-      "cpu": "Ryzen 9 3900XT or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
-    },
-    {
       "title": "Death at Fleming Manor",
       "tier": "green",
       "tiers": {
@@ -408,6 +396,18 @@
       "cpu": "Intel Core i5 3.0 GHz or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 530 or equivalent, Intel Core i5 3.0 GHz or equivalent"
+    },
+    {
+      "title": "Finals Week ✍🏻",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "Nvidia 3060 or equivalent",
+      "cpu": "Ryzen 9 3900XT or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
     },
     {
       "title": "Rat Game",
@@ -422,18 +422,6 @@
       "note": "Minimální konfigurace: DirectX11 compatible with at least 1GB of memory, Dual Core 2 GHz"
     },
     {
-      "title": "Underkeep",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "OpenGL 3.2 compatible",
-      "cpu": null,
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: OpenGL 3.2 compatible"
-    },
-    {
       "title": "CH13: Rest Stop",
       "tier": "orange",
       "tiers": {
@@ -446,6 +434,18 @@
       "note": "Doporučená konfigurace: RTX 2060 / RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
+      "title": "Underkeep",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "OpenGL 3.2 compatible",
+      "cpu": null,
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: OpenGL 3.2 compatible"
+    },
+    {
       "title": "Incremental Traffic",
       "tier": "green",
       "tiers": {
@@ -456,6 +456,18 @@
       "cpu": "Quad-core 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 / Intel Iris Xe, Quad-core 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600)"
+    },
+    {
+      "title": "Дорога Жизни",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "orange"
+      },
+      "gpu": "NVIDIA GeForce RTX 4070 (12 GB) или эквивалентная",
+      "cpu": "Intel/AMD, 8-core, 3.5 GHz или выше",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4070 (12 GB) или эквивалентная, Intel/AMD, 8-core, 3.5 GHz или выше"
     },
     {
       "title": "Milo",
@@ -530,18 +542,6 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 2070 / AMD RX 6700 XT, Intel Core i7-10700 / AMD Ryzen 5 5600X"
     },
     {
-      "title": "Hull Rupture",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 670 / Radeon HD 7970",
-      "cpu": "Intel i7-8700, Ryzen 1600",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 670 / Radeon HD 7970, Intel i7-8700, Ryzen 1600"
-    },
-    {
       "title": "Feed The Forest",
       "tier": "green",
       "tiers": {
@@ -552,6 +552,18 @@
       "cpu": "AMD Ryzen 5 2600",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 1650, AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Hull Rupture",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 670 / Radeon HD 7970",
+      "cpu": "Intel i7-8700, Ryzen 1600",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 670 / Radeon HD 7970, Intel i7-8700, Ryzen 1600"
     },
     {
       "title": "Kingdom Inc.",
@@ -590,18 +602,6 @@
       "note": "Minimální konfigurace: 1 GB VRAM, 2 GHz"
     },
     {
-      "title": "Sabado",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "RTX 2060 or RX 7600xt or equivalent",
-      "cpu": "Intel Core i5 @ 3.0 GHz or AMD",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD"
-    },
-    {
       "title": "Desktop Duck",
       "tier": "green",
       "tiers": {
@@ -612,6 +612,18 @@
       "cpu": "Any modern quad-core x64",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Any dedicated or modern integrated GPU, Any modern quad-core x64"
+    },
+    {
+      "title": "Sabado",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "RTX 2060 or RX 7600xt or equivalent",
+      "cpu": "Intel Core i5 @ 3.0 GHz or AMD",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD"
     },
     {
       "title": "Cozy Game Restoration",
