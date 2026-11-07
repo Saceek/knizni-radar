@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07T10:11:50.700Z",
+  "updatedAt": "2026-11-07T11:12:43.417Z",
   "games": [
     {
       "title": "Phantom Blade Zero",
@@ -266,18 +266,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 / AMD Radeon RX 580 or better, Intel Core i5 or AMD equivalent"
     },
     {
-      "title": "Underkeep",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "OpenGL 3.2 compatible",
-      "cpu": null,
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: OpenGL 3.2 compatible"
-    },
-    {
       "title": "Playrooms",
       "tier": "orange",
       "tiers": {
@@ -288,6 +276,18 @@
       "cpu": "Intel Core i5-10400 or AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 2060 (6 GB) or AMD RX 5700, Intel Core i5-10400 or AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Underkeep",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "OpenGL 3.2 compatible",
+      "cpu": null,
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: OpenGL 3.2 compatible"
     },
     {
       "title": "COP BASTARD",
@@ -434,18 +434,6 @@
       "note": "Doporučená konfigurace: RTX 2060 / RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
-      "title": "Дорога Жизни",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "orange"
-      },
-      "gpu": "NVIDIA GeForce RTX 4070 (12 GB) или эквивалентная",
-      "cpu": "Intel/AMD, 8-core, 3.5 GHz или выше",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4070 (12 GB) или эквивалентная, Intel/AMD, 8-core, 3.5 GHz или выше"
-    },
-    {
       "title": "Dungeons & Dynasties",
       "tier": "green",
       "tiers": {
@@ -458,16 +446,16 @@
       "note": "Doporučená konfigurace: Integrated Graphics, Windows 11 (64-bit)"
     },
     {
-      "title": "Milo",
+      "title": "Дорога Жизни",
       "tier": "red",
       "tiers": {
         "allyx": "red",
-        "pc": "green"
+        "pc": "orange"
       },
-      "gpu": "NVIDIA GeForce RTX 3060 12 GB",
-      "cpu": "Intel Core i5-12400F or AMD Ryzen 5 5600",
+      "gpu": "NVIDIA GeForce RTX 4070 (12 GB) или эквивалентная",
+      "cpu": "Intel/AMD, 8-core, 3.5 GHz или выше",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB, Intel Core i5-12400F or AMD Ryzen 5 5600"
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4070 (12 GB) или эквивалентная, Intel/AMD, 8-core, 3.5 GHz или выше"
     },
     {
       "title": "Wielders of the Essence",
@@ -480,6 +468,18 @@
       "cpu": null,
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 970, RX 570 or similar"
+    },
+    {
+      "title": "Milo",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060 12 GB",
+      "cpu": "Intel Core i5-12400F or AMD Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB, Intel Core i5-12400F or AMD Ryzen 5 5600"
     },
     {
       "title": "Hull Rupture",
@@ -602,6 +602,18 @@
       "note": "Doporučená konfigurace: Any dedicated or modern integrated GPU, Any modern quad-core x64"
     },
     {
+      "title": "Clean Start",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 1060 or Radeon RX 560",
+      "cpu": "Intel i5-12600K or AMD Ryzen 7 5700X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1060 or Radeon RX 560, Intel i5-12600K or AMD Ryzen 7 5700X"
+    },
+    {
       "title": "Deadzoned",
       "tier": "green",
       "tiers": {
@@ -650,18 +662,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce 970 GTX or AMD Radeon RX 480 (4 GB of VRAM, Shader Model 5.1), Intel i5 4690k, AMD Ryzen 5 1400"
     },
     {
-      "title": "Clean Start",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 1060 or Radeon RX 560",
-      "cpu": "Intel i5-12600K or AMD Ryzen 7 5700X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1060 or Radeon RX 560, Intel i5-12600K or AMD Ryzen 7 5700X"
-    },
-    {
       "title": "Ghost in the SQL Data",
       "tier": "green",
       "tiers": {
@@ -684,18 +684,6 @@
       "cpu": "Intel i5或同级别",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: 2GB RAM, Intel i5或同级别"
-    },
-    {
-      "title": "Fantasy World Manager",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel HD Graphics 530 or equivalent, with a Vulkan 1.0-compatible driver",
-      "cpu": "Intel Core i3-6100 or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 530 or equivalent, with a Vulkan 1.0-compatible driver, Intel Core i3-6100 or equivalent"
     },
     {
       "title": "Beat For Speed",
