@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07T22:13:24.096Z",
+  "updatedAt": "2026-11-07T23:13:32.413Z",
   "games": [
     {
       "title": "Phantom Blade Zero",
@@ -554,6 +554,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
+      "title": "Desktop Duck",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Any dedicated or modern integrated GPU",
+      "cpu": "Any modern quad-core x64",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Any dedicated or modern integrated GPU, Any modern quad-core x64"
+    },
+    {
       "title": "Sabado",
       "tier": "orange",
       "tiers": {
@@ -576,18 +588,6 @@
       "cpu": "Dual Core 2.4 GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: 1GB VRAM / DirectX 10+ Support, Dual Core 2.4 GHz"
-    },
-    {
-      "title": "Desktop Duck",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Any dedicated or modern integrated GPU",
-      "cpu": "Any modern quad-core x64",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Any dedicated or modern integrated GPU, Any modern quad-core x64"
     },
     {
       "title": "Kingdom Inc.",
@@ -650,18 +650,6 @@
       "note": "Minimální konfigurace: GTX 970, Core i5 6600"
     },
     {
-      "title": "Ghost in the SQL Data",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GPU (Intel Iris Xe / AMD Vega 8)",
-      "cpu": "Quad Core 2,5 GHz or more",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GPU (Intel Iris Xe / AMD Vega 8), Quad Core 2,5 GHz or more"
-    },
-    {
       "title": "女神养成：放置型",
       "tier": "green",
       "tiers": {
@@ -672,6 +660,18 @@
       "cpu": "Intel i5或同级别",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: 2GB RAM, Intel i5或同级别"
+    },
+    {
+      "title": "Ghost in the SQL Data",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GPU (Intel Iris Xe / AMD Vega 8)",
+      "cpu": "Quad Core 2,5 GHz or more",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GPU (Intel Iris Xe / AMD Vega 8), Quad Core 2,5 GHz or more"
     },
     {
       "title": "HYPNOS",
@@ -686,18 +686,6 @@
       "note": "Minimální konfigurace: Nvidia GeForce RTX 3060 Ti, AMD Ryzen 7 5008X 8-Core Processor"
     },
     {
-      "title": "HELENA : Cloud District",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 960 or AMD Radeon R7 370",
-      "cpu": "Intel Core i5-4460 or AMD Ryzen 3 1200",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 or AMD Radeon R7 370, Intel Core i5-4460 or AMD Ryzen 3 1200"
-    },
-    {
       "title": "Mayday: The Survival Island",
       "tier": "green",
       "tiers": {
@@ -708,6 +696,18 @@
       "cpu": "Intel Core2 Duo E6400 or AMD Phenom X2 Dual-Core GP-7730 or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 460 (1GB) or AMD Radeon R7 240 (1GB) or better, Intel Core2 Duo E6400 or AMD Phenom X2 Dual-Core GP-7730 or equivalent"
+    },
+    {
+      "title": "HELENA : Cloud District",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 960 or AMD Radeon R7 370",
+      "cpu": "Intel Core i5-4460 or AMD Ryzen 3 1200",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 or AMD Radeon R7 370, Intel Core i5-4460 or AMD Ryzen 3 1200"
     },
     {
       "title": "HEART ABYSS",
@@ -722,18 +722,6 @@
       "note": "Minimální konfigurace: GeForce 7600 GT (512 MB), Intel Core i3-3240 (2*3400) or equivalent"
     },
     {
-      "title": "Traffic Architect",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Dedicated GPU, GeForce GTX 1050 / Radeon RX 560 or better",
-      "cpu": "Quad-core 3.0 GHz (Intel Core i5 or equivalent)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Dedicated GPU, GeForce GTX 1050 / Radeon RX 560 or better, Quad-core 3.0 GHz (Intel Core i5 or equivalent)"
-    },
-    {
       "title": "Eternal Palace Sakura",
       "tier": "green",
       "tiers": {
@@ -744,6 +732,18 @@
       "cpu": "Intel Core i7-4790 or AMD Ryzen 3 3200G",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX1050 Ti, Intel Core i7-4790 or AMD Ryzen 3 3200G"
+    },
+    {
+      "title": "Traffic Architect",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Dedicated GPU, GeForce GTX 1050 / Radeon RX 560 or better",
+      "cpu": "Quad-core 3.0 GHz (Intel Core i5 or equivalent)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Dedicated GPU, GeForce GTX 1050 / Radeon RX 560 or better, Quad-core 3.0 GHz (Intel Core i5 or equivalent)"
     },
     {
       "title": "Caravan Carnage: Fruity Road",
