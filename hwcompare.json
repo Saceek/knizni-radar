@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07T06:13:45.626Z",
+  "updatedAt": "2026-11-07T07:13:16.352Z",
   "games": [
     {
       "title": "Phantom Blade Zero",
@@ -266,16 +266,16 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 / AMD Radeon RX 580 or better, Intel Core i5 or AMD equivalent"
     },
     {
-      "title": "アノマリス／ANOMALITH",
+      "title": "Playrooms",
       "tier": "orange",
       "tiers": {
         "allyx": "orange",
         "pc": "green"
       },
-      "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700 XT",
-      "cpu": "Intel i5-10400 / AMD Ryzen 5 3600",
+      "gpu": "NVIDIA RTX 2060 (6 GB) or AMD RX 5700",
+      "cpu": "Intel Core i5-10400 or AMD Ryzen 5 3600",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700 XT, Intel i5-10400 / AMD Ryzen 5 3600"
+      "note": "Doporučená konfigurace: NVIDIA RTX 2060 (6 GB) or AMD RX 5700, Intel Core i5-10400 or AMD Ryzen 5 3600"
     },
     {
       "title": "COP BASTARD",
@@ -288,18 +288,6 @@
       "cpu": "Dual Core 3.0 Ghz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: 2 Gb Video Memory, capable of Shader Model 2.0+, Dual Core 3.0 Ghz"
-    },
-    {
-      "title": "Playrooms",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA RTX 2060 (6 GB) or AMD RX 5700",
-      "cpu": "Intel Core i5-10400 or AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 2060 (6 GB) or AMD RX 5700, Intel Core i5-10400 or AMD Ryzen 5 3600"
     },
     {
       "title": "Underkeep",
@@ -494,6 +482,18 @@
       "note": "Minimální konfigurace: GeForce GTX 670 / Radeon HD 7970, Intel i7-8700, Ryzen 1600"
     },
     {
+      "title": "Wielders of the Essence",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 970, RX 570 or similar",
+      "cpu": null,
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 970, RX 570 or similar"
+    },
+    {
       "title": "Everlast: Undying Tale",
       "tier": "green",
       "tiers": {
@@ -516,18 +516,6 @@
       "cpu": "X64 architecture",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD RX 570, X64 architecture"
-    },
-    {
-      "title": "Wielders of the Essence",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 970, RX 570 or similar",
-      "cpu": null,
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 970, RX 570 or similar"
     },
     {
       "title": "Moonshiner Simulator",
@@ -662,6 +650,18 @@
       "note": "Doporučená konfigurace: GPU (Intel Iris Xe / AMD Vega 8), Quad Core 2,5 GHz or more"
     },
     {
+      "title": "Clean Start",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 1060 or Radeon RX 560",
+      "cpu": "Intel i5-12600K or AMD Ryzen 7 5700X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1060 or Radeon RX 560, Intel i5-12600K or AMD Ryzen 7 5700X"
+    },
+    {
       "title": "Gildoria - Organize a Dragon's Hoard",
       "tier": "orange",
       "tiers": {
@@ -698,16 +698,16 @@
       "note": "Minimální konfigurace: Intel HD Graphics 530 or equivalent, with a Vulkan 1.0-compatible driver, Intel Core i3-6100 or equivalent"
     },
     {
-      "title": "Clean Start",
-      "tier": "green",
+      "title": "Beat For Speed",
+      "tier": "orange",
       "tiers": {
-        "allyx": "green",
+        "allyx": "orange",
         "pc": "green"
       },
-      "gpu": "GeForce GTX 1060 or Radeon RX 560",
-      "cpu": "Intel i5-12600K or AMD Ryzen 7 5700X",
+      "gpu": "NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT",
+      "cpu": "Intel Core i5-9600K or AMD Ryzen R5 3600 processor",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1060 or Radeon RX 560, Intel i5-12600K or AMD Ryzen 7 5700X"
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT, Intel Core i5-9600K or AMD Ryzen R5 3600 processor"
     },
     {
       "title": "HYPNOS",
@@ -720,18 +720,6 @@
       "cpu": "AMD Ryzen 7 5008X 8-Core Processor",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Nvidia GeForce RTX 3060 Ti, AMD Ryzen 7 5008X 8-Core Processor"
-    },
-    {
-      "title": "Beat For Speed",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT",
-      "cpu": "Intel Core i5-9600K or AMD Ryzen R5 3600 processor",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT, Intel Core i5-9600K or AMD Ryzen R5 3600 processor"
     },
     {
       "title": "Mayday: The Survival Island",
