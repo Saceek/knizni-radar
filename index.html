@@ -854,8 +854,7 @@ function mountProgressWidget(){
     render();
   };
   document.querySelectorAll("[data-progremove]").forEach(el=>el.onclick=()=>{
-    S.progress[el.dataset.progremove]=null;
-    saveProgressAndSync(S.progress);
+    S.questAsk=el.dataset.progremove;
     render();
   });
   document.querySelectorAll("[data-progdelta]").forEach(el=>el.onclick=()=>{
@@ -1975,6 +1974,7 @@ function render(){
   else html = viewBooks();
   if(S.czOpen) html += czModalHtml(S.czOpen);
   if(S.rmAsk) html += rmModalHtml(S.rmAsk);
+  if(S.questAsk) html += questRmModalHtml(S.questAsk);
   if(S.expanded){
     const b = allListItems().find(x=>x.title===S.expanded) || S.backlog.find(x=>x.title===S.expanded);
     if(b) html += bookModalHtml(b); else S.expanded=null;
@@ -2300,6 +2300,17 @@ function rmModalHtml(a){
     <div class="mrow"><button class="btn" data-closemodal="1">Nechat</button><button class="btn danger" data-rmyes="1">Odebrat</button></div>
   </div></div>`;
 }
+function questRmModalHtml(cat){
+  const item = S.progress[cat], cfg = PROG_CFG[cat];
+  if(!item) return "";
+  const pct = item.total ? Math.min(100, Math.round(item.current/item.total*100)) : null;
+  return `<div class="modal-overlay" data-closemodal="1"><div class="modal rmm">
+    <div class="hd">${item.image?imgTag(item.image,'class="cv"'):`<div class="cv" style="background:${grad(item.title)}"></div>`}<div><h2>Zrušit sledování?</h2><div class="tiny">${esc(item.title)} · ${PROG_SHORT[cat]}</div></div></div>
+    <div class="wrn">${icon("bolt")} Přijdeš o zapsaný progres: ${fmtNum(item.current)}${item.total?` / ${item.total}`:""} ${cfg.unit}${pct!=null&&cfg.unit!=="%"?` (${pct} %)`:""}</div>
+    <div class="tiny" style="margin-top:10px">V Mém seznamu titul zůstane.</div>
+    <div class="mrow"><button class="btn" data-closemodal="1">Nechat</button><button class="btn danger" data-questyes="1">Zrušit sledování</button></div>
+  </div></div>`;
+}
 function removeBacklog(t,cat){ S.backlog=S.backlog.filter(x=>!(x.title===t && (cat===undefined || (x._category||"book")===cat))); saveBacklogAndSync(S.backlog); render(); }
 // Kniha/komiks se rozlišuje jen podle zdroje přidání (obecné hledání vs. CREW žebříček), ne
 // podle obsahu - appka to nepozná sama, proto jde kategorii ručně přeřadit.
@@ -2334,7 +2345,8 @@ document.getElementById("brand").onclick=()=>goView("news");
 window.addEventListener("scroll",()=>document.getElementById("topnav").classList.toggle("solid", window.scrollY>30), {passive:true});
 document.getElementById("view").onclick=e=>{
   const czb=e.target.closest("[data-cz]"); if(czb){ e.preventDefault(); S.czOpen=czb.dataset.cz; render(); return; }
-  if(e.target.dataset.closemodal){ S.expanded=null; S.czOpen=null; S.rmAsk=null; render(); return; }
+  if(e.target.dataset.closemodal){ S.expanded=null; S.czOpen=null; S.rmAsk=null; S.questAsk=null; render(); return; }
+  if(e.target.dataset.questyes){ const c=S.questAsk; S.questAsk=null; if(c){ S.progress[c]=null; saveProgressAndSync(S.progress); } render(); return; }
   if(e.target.dataset.rmyes){ const a=S.rmAsk; S.rmAsk=null; if(a) removeBacklog(a.title, a.cat); else render(); return; }
   const gcz=e.target.dataset.gcz; if(gcz){ S.gameCz=gcz; render(); return; }
   const sd=e.target.dataset.sdir; if(sd){ const row=e.target.parentElement.querySelector(".srow"); row.scrollBy({left:+sd*Math.max(200,row.clientWidth*0.85), behavior:"smooth"}); return; }
@@ -2376,7 +2388,7 @@ document.getElementById("view").onclick=e=>{
   if(setcatEl){ setBacklogCategory(setcatEl.dataset.setcattitle, setcatEl.dataset.setcatval); return; }
 };
 
-document.addEventListener("keydown",e=>{ if(e.key==="Escape" && (S.expanded||S.czOpen||S.rmAsk)){ S.expanded=null; S.czOpen=null; S.rmAsk=null; render(); } });
+document.addEventListener("keydown",e=>{ if(e.key==="Escape" && (S.expanded||S.czOpen||S.rmAsk||S.questAsk)){ S.expanded=null; S.czOpen=null; S.rmAsk=null; S.questAsk=null; render(); } });
 loadNews();
 loadMetacritic();
 loadCzech();
