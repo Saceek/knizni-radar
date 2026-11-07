@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07T00:13:25.897Z",
+  "updatedAt": "2026-11-07T01:12:50.870Z",
   "games": [
     {
       "title": "Phantom Blade Zero",
@@ -110,18 +110,6 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1070 / GTX 1080 (8 GB VRAM), Intel Core i7-10700K or AMD Ryzen 5 5600X"
     },
     {
-      "title": "PIT OF GOBLIN",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GForce GTX 1050",
-      "cpu": "Intel Core i5-7400 CPU @ 3.00GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GForce GTX 1050, Intel Core i5-7400 CPU @ 3.00GHz"
-    },
-    {
       "title": "Terrible Lizards",
       "tier": "red",
       "tiers": {
@@ -132,6 +120,18 @@
       "cpu": "Intel® Core™ i3-10100F / AMD Ryzen™ 3 3100",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA® GeForce® RTX 2080 / AMD Radeon™ RX 6800XT, Intel® Core™ i3-10100F / AMD Ryzen™ 3 3100"
+    },
+    {
+      "title": "PIT OF GOBLIN",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GForce GTX 1050",
+      "cpu": "Intel Core i5-7400 CPU @ 3.00GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GForce GTX 1050, Intel Core i5-7400 CPU @ 3.00GHz"
     },
     {
       "title": "Saloon Simulator",
@@ -314,18 +314,6 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 2060 (6 GB) or AMD RX 5700, Intel Core i5-10400 or AMD Ryzen 5 3600"
     },
     {
-      "title": "S.O.N.A.R. - Submarine Operators Not Actually Ready",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 3060 8GB or equivalent",
-      "cpu": "Intel i7-4770/AMD FX-8350",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 8GB or equivalent, Intel i7-4770/AMD FX-8350"
-    },
-    {
       "title": "Underkeep",
       "tier": "green",
       "tiers": {
@@ -336,6 +324,18 @@
       "cpu": null,
       "usedMinimum": true,
       "note": "Minimální konfigurace: OpenGL 3.2 compatible"
+    },
+    {
+      "title": "S.O.N.A.R. - Submarine Operators Not Actually Ready",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060 8GB or equivalent",
+      "cpu": "Intel i7-4770/AMD FX-8350",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 8GB or equivalent, Intel i7-4770/AMD FX-8350"
     },
     {
       "title": "Usagi Shima: Bunny Island",
@@ -566,18 +566,6 @@
       "note": "Doporučená konfigurace: GTX 970, RX 570 or similar"
     },
     {
-      "title": "Kingdom Inc.",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DX11, DX12 capable graphics card",
-      "cpu": "x64 architecture with SSE2 instruction set support",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: DX11, DX12 capable graphics card, x64 architecture with SSE2 instruction set support"
-    },
-    {
       "title": "Silberheim Evolving Card Game",
       "tier": "green",
       "tiers": {
@@ -588,6 +576,18 @@
       "cpu": "Dual Core 2.4 GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: 1GB VRAM / DirectX 10+ Support, Dual Core 2.4 GHz"
+    },
+    {
+      "title": "Kingdom Inc.",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DX11, DX12 capable graphics card",
+      "cpu": "x64 architecture with SSE2 instruction set support",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: DX11, DX12 capable graphics card, x64 architecture with SSE2 instruction set support"
     },
     {
       "title": "Desktop Duck",
@@ -614,18 +614,6 @@
       "note": "Minimální konfigurace: 1 GB VRAM, 2 GHz"
     },
     {
-      "title": "Sabado",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "RTX 2060 or RX 7600xt or equivalent",
-      "cpu": "Intel Core i5 @ 3.0 GHz or AMD",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD"
-    },
-    {
       "title": "Catch Meow If You Can",
       "tier": "green",
       "tiers": {
@@ -636,6 +624,18 @@
       "cpu": "Core i5 6600",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GTX 970, Core i5 6600"
+    },
+    {
+      "title": "Sabado",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "RTX 2060 or RX 7600xt or equivalent",
+      "cpu": "Intel Core i5 @ 3.0 GHz or AMD",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD"
     },
     {
       "title": "Rise of the Merchants",
@@ -686,16 +686,16 @@
       "note": "Minimální konfigurace: Nvidia GeForce RTX 3060 Ti, AMD Ryzen 7 5008X 8-Core Processor"
     },
     {
-      "title": "Fantasy World Manager",
+      "title": "Mayday: The Survival Island",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "Intel HD Graphics 530 or equivalent, with a Vulkan 1.0-compatible driver",
-      "cpu": "Intel Core i3-6100 or equivalent",
+      "gpu": "NVIDIA GeForce GTX 460 (1GB) or AMD Radeon R7 240 (1GB) or better",
+      "cpu": "Intel Core2 Duo E6400 or AMD Phenom X2 Dual-Core GP-7730 or equivalent",
       "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 530 or equivalent, with a Vulkan 1.0-compatible driver, Intel Core i3-6100 or equivalent"
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 460 (1GB) or AMD Radeon R7 240 (1GB) or better, Intel Core2 Duo E6400 or AMD Phenom X2 Dual-Core GP-7730 or equivalent"
     },
     {
       "title": "Gildoria - Organize a Dragon's Hoard",
@@ -708,18 +708,6 @@
       "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
-    },
-    {
-      "title": "Mayday: The Survival Island",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 460 (1GB) or AMD Radeon R7 240 (1GB) or better",
-      "cpu": "Intel Core2 Duo E6400 or AMD Phenom X2 Dual-Core GP-7730 or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 460 (1GB) or AMD Radeon R7 240 (1GB) or better, Intel Core2 Duo E6400 or AMD Phenom X2 Dual-Core GP-7730 or equivalent"
     },
     {
       "title": "Beat For Speed",
@@ -756,6 +744,18 @@
       "cpu": "Intel Core i3-3240 (2*3400) or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce 7600 GT (512 MB), Intel Core i3-3240 (2*3400) or equivalent"
+    },
+    {
+      "title": "Clean Start",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 1060 or Radeon RX 560",
+      "cpu": "Intel i5-12600K or AMD Ryzen 7 5700X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1060 or Radeon RX 560, Intel i5-12600K or AMD Ryzen 7 5700X"
     },
     {
       "title": "The Incident at Galley House",
