@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07T13:13:22.562Z",
+  "updatedAt": "2026-11-07T14:13:42.950Z",
   "games": [
     {
       "title": "Phantom Blade Zero",
@@ -72,6 +72,18 @@
       "cpu": "AMD Ryzen 3 1200 / Intel Core i3-7100",
       "usedMinimum": true,
       "note": "Minimální konfigurace: AMD Radeon RX 460 / NVIDIA GTX 950, AMD Ryzen 3 1200 / Intel Core i3-7100"
+    },
+    {
+      "title": "ArcheAge Chronicles",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 4060 Ti 16GB / AMD Radeon RX 7700 XT (VRAM 12GB)",
+      "cpu": "Intel Core i7-12700/AMd Ryzen 7 5700X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4060 Ti 16GB / AMD Radeon RX 7700 XT (VRAM 12GB), Intel Core i7-12700/AMd Ryzen 7 5700X"
     },
     {
       "title": "Scam Line",
@@ -266,18 +278,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 / AMD Radeon RX 580 or better, Intel Core i5 or AMD equivalent"
     },
     {
-      "title": "Playrooms",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA RTX 2060 (6 GB) or AMD RX 5700",
-      "cpu": "Intel Core i5-10400 or AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 2060 (6 GB) or AMD RX 5700, Intel Core i5-10400 or AMD Ryzen 5 3600"
-    },
-    {
       "title": "Underkeep",
       "tier": "green",
       "tiers": {
@@ -288,6 +288,18 @@
       "cpu": null,
       "usedMinimum": true,
       "note": "Minimální konfigurace: OpenGL 3.2 compatible"
+    },
+    {
+      "title": "Playrooms",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA RTX 2060 (6 GB) or AMD RX 5700",
+      "cpu": "Intel Core i5-10400 or AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 2060 (6 GB) or AMD RX 5700, Intel Core i5-10400 or AMD Ryzen 5 3600"
     },
     {
       "title": "COP BASTARD",
@@ -434,16 +446,16 @@
       "note": "Doporučená konfigurace: RTX 2060 / RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
-      "title": "Dungeons & Dynasties",
+      "title": "Wielders of the Essence",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "Integrated Graphics",
-      "cpu": "Windows 11 (64-bit)",
+      "gpu": "GTX 970, RX 570 or similar",
+      "cpu": null,
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: Integrated Graphics, Windows 11 (64-bit)"
+      "note": "Doporučená konfigurace: GTX 970, RX 570 or similar"
     },
     {
       "title": "Дорога Жизни",
@@ -458,16 +470,16 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4070 (12 GB) или эквивалентная, Intel/AMD, 8-core, 3.5 GHz или выше"
     },
     {
-      "title": "Wielders of the Essence",
+      "title": "Dungeons & Dynasties",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "GTX 970, RX 570 or similar",
-      "cpu": null,
+      "gpu": "Integrated Graphics",
+      "cpu": "Windows 11 (64-bit)",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 970, RX 570 or similar"
+      "note": "Doporučená konfigurace: Integrated Graphics, Windows 11 (64-bit)"
     },
     {
       "title": "Hull Rupture",
@@ -590,18 +602,6 @@
       "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD"
     },
     {
-      "title": "Desktop Duck",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Any dedicated or modern integrated GPU",
-      "cpu": "Any modern quad-core x64",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Any dedicated or modern integrated GPU, Any modern quad-core x64"
-    },
-    {
       "title": "Gildoria - Organize a Dragon's Hoard",
       "tier": "orange",
       "tiers": {
@@ -612,6 +612,18 @@
       "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Desktop Duck",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Any dedicated or modern integrated GPU",
+      "cpu": "Any modern quad-core x64",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Any dedicated or modern integrated GPU, Any modern quad-core x64"
     },
     {
       "title": "Clean Start",
@@ -746,6 +758,18 @@
       "note": "Minimální konfigurace: GeForce 7600 GT (512 MB), Intel Core i3-3240 (2*3400) or equivalent"
     },
     {
+      "title": "组长！怨念请查收！",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Compatible OpenGL",
+      "cpu": null,
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Compatible OpenGL"
+    },
+    {
       "title": "Caravan Carnage: Fruity Road",
       "tier": "green",
       "tiers": {
@@ -780,18 +804,6 @@
       "cpu": "Quad-core 3.0 GHz (Intel Core i5 or equivalent)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Dedicated GPU, GeForce GTX 1050 / Radeon RX 560 or better, Quad-core 3.0 GHz (Intel Core i5 or equivalent)"
-    },
-    {
-      "title": "Neuron Activation",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 1050, RX 560",
-      "cpu": "Ryzen 5 3600, Core i5-10400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1050, RX 560, Ryzen 5 3600, Core i5-10400"
     },
     {
       "title": "The Incident at Galley House",
