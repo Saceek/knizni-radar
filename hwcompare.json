@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07T01:12:50.870Z",
+  "updatedAt": "2026-11-07T02:13:04.113Z",
   "games": [
     {
       "title": "Phantom Blade Zero",
@@ -290,18 +290,6 @@
       "note": "Doporučená konfigurace: 2 Gb Video Memory, capable of Shader Model 2.0+, Dual Core 3.0 Ghz"
     },
     {
-      "title": "A Place for Every Potion",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1660 / RX 5600 XT (6 GB)",
-      "cpu": "Intel Core i5-10400 / Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / RX 5600 XT (6 GB), Intel Core i5-10400 / Ryzen 5 3600"
-    },
-    {
       "title": "Playrooms",
       "tier": "orange",
       "tiers": {
@@ -312,6 +300,18 @@
       "cpu": "Intel Core i5-10400 or AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 2060 (6 GB) or AMD RX 5700, Intel Core i5-10400 or AMD Ryzen 5 3600"
+    },
+    {
+      "title": "A Place for Every Potion",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1660 / RX 5600 XT (6 GB)",
+      "cpu": "Intel Core i5-10400 / Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / RX 5600 XT (6 GB), Intel Core i5-10400 / Ryzen 5 3600"
     },
     {
       "title": "Underkeep",
@@ -482,6 +482,18 @@
       "note": "Doporučená konfigurace: Integrated Graphics, Windows 11 (64-bit)"
     },
     {
+      "title": "Hull Rupture",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 670 / Radeon HD 7970",
+      "cpu": "Intel i7-8700, Ryzen 1600",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 670 / Radeon HD 7970, Intel i7-8700, Ryzen 1600"
+    },
+    {
       "title": "Everlast: Undying Tale",
       "tier": "green",
       "tiers": {
@@ -506,16 +518,16 @@
       "note": "Doporučená konfigurace: GeForce RTX 3060 / Radeon RX 6700, AMD Ryzen 7 3700X /  Intel® Core i7-6700K"
     },
     {
-      "title": "Hull Rupture",
+      "title": "Feed The Forest",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "GeForce GTX 670 / Radeon HD 7970",
-      "cpu": "Intel i7-8700, Ryzen 1600",
+      "gpu": "NVIDIA GeForce GTX 1650",
+      "cpu": "AMD Ryzen 5 2600",
       "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 670 / Radeon HD 7970, Intel i7-8700, Ryzen 1600"
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 1650, AMD Ryzen 5 2600"
     },
     {
       "title": "Snow Resort Simulator",
@@ -528,18 +540,6 @@
       "cpu": "Intel Core i5-10400 or AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1070 8GB or AMD RX 5700, Intel Core i5-10400 or AMD Ryzen 5 3600"
-    },
-    {
-      "title": "Feed The Forest",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1650",
-      "cpu": "AMD Ryzen 5 2600",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 1650, AMD Ryzen 5 2600"
     },
     {
       "title": "Cozy Game Restoration",
@@ -614,18 +614,6 @@
       "note": "Minimální konfigurace: 1 GB VRAM, 2 GHz"
     },
     {
-      "title": "Catch Meow If You Can",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 970",
-      "cpu": "Core i5 6600",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GTX 970, Core i5 6600"
-    },
-    {
       "title": "Sabado",
       "tier": "orange",
       "tiers": {
@@ -636,6 +624,18 @@
       "cpu": "Intel Core i5 @ 3.0 GHz or AMD",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD"
+    },
+    {
+      "title": "Catch Meow If You Can",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 970",
+      "cpu": "Core i5 6600",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GTX 970, Core i5 6600"
     },
     {
       "title": "Rise of the Merchants",
@@ -674,6 +674,18 @@
       "note": "Doporučená konfigurace: 2GB RAM, Intel i5或同级别"
     },
     {
+      "title": "Fantasy World Manager",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD Graphics 530 or equivalent, with a Vulkan 1.0-compatible driver",
+      "cpu": "Intel Core i3-6100 or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics 530 or equivalent, with a Vulkan 1.0-compatible driver, Intel Core i3-6100 or equivalent"
+    },
+    {
       "title": "HYPNOS",
       "tier": "red",
       "tiers": {
@@ -686,18 +698,6 @@
       "note": "Minimální konfigurace: Nvidia GeForce RTX 3060 Ti, AMD Ryzen 7 5008X 8-Core Processor"
     },
     {
-      "title": "Mayday: The Survival Island",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 460 (1GB) or AMD Radeon R7 240 (1GB) or better",
-      "cpu": "Intel Core2 Duo E6400 or AMD Phenom X2 Dual-Core GP-7730 or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 460 (1GB) or AMD Radeon R7 240 (1GB) or better, Intel Core2 Duo E6400 or AMD Phenom X2 Dual-Core GP-7730 or equivalent"
-    },
-    {
       "title": "Gildoria - Organize a Dragon's Hoard",
       "tier": "orange",
       "tiers": {
@@ -708,6 +708,18 @@
       "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Mayday: The Survival Island",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 460 (1GB) or AMD Radeon R7 240 (1GB) or better",
+      "cpu": "Intel Core2 Duo E6400 or AMD Phenom X2 Dual-Core GP-7730 or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 460 (1GB) or AMD Radeon R7 240 (1GB) or better, Intel Core2 Duo E6400 or AMD Phenom X2 Dual-Core GP-7730 or equivalent"
     },
     {
       "title": "Beat For Speed",
