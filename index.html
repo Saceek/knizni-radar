@@ -279,6 +279,14 @@
   .cz.sm{height:18px;font-size:10px;padding:0 5px 0 3px} .cz.sm .fl{width:13px;height:9px} .cz.sm .fl:before{border-width:4.5px 0 4.5px 6.5px}
   .w .im .br{position:absolute;z-index:2;right:8px;bottom:8px;display:flex;gap:6px;align-items:center}
   .w .im .br .life{position:static}
+  .rmm{max-width:400px}
+  .rmm .hd{display:flex;gap:14px;align-items:center}
+  .rmm .cv{width:60px;height:88px;border-radius:8px;object-fit:cover;background:var(--bg3);flex:none}
+  .rmm h2{font-size:22px;margin:0 0 6px;line-height:1.2}
+  .rmm .wrn{display:flex;gap:8px;align-items:center;font-size:13px;color:var(--amber);background:rgba(245,165,36,.1);border-radius:8px;padding:8px 10px;margin-top:14px}
+  .rmm .mrow{display:flex;gap:8px;justify-content:flex-end}
+  .btn.danger{background:var(--red);color:#fff}
+  .btn.danger:hover{background:#f2636a}
   .czm{max-width:560px;padding:0;overflow:hidden}
   .czm .top{position:relative;height:150px;background:var(--bg3)}
   .czm .top img{width:100%;height:100%;object-fit:cover;opacity:.55}
@@ -1851,7 +1859,7 @@ function addFromMetacritic(key){
   if(!x) return;
   const cat = mcCat(tab);
   const existing = S.backlog.find(b=>b.title===x.title && (b._category||"book")===cat);
-  if(existing){ removeBacklog(x.title, cat); return; }
+  if(existing){ askRemove(x.title, cat); return; }
   if(cat==="game"){
     const g = mcSteam(x);
     if(g){ addGameBacklog(g.name); return; }
@@ -1966,6 +1974,7 @@ function render(){
   else if(S.view==="diary") html = diaryViewHtml();
   else html = viewBooks();
   if(S.czOpen) html += czModalHtml(S.czOpen);
+  if(S.rmAsk) html += rmModalHtml(S.rmAsk);
   if(S.expanded){
     const b = allListItems().find(x=>x.title===S.expanded) || S.backlog.find(x=>x.title===S.expanded);
     if(b) html += bookModalHtml(b); else S.expanded=null;
@@ -2275,6 +2284,22 @@ function addGameBacklog(t){ const g=S.games.find(x=>x.name===t); if(g && !inBack
 function addComicBacklog(t){ const c=S.comics.find(x=>x.title===t)||S.comicsBestsellers.find(x=>x.title===t); if(c && !inBacklog(t,"comic")){ S.backlog.push({...c,_category:"comic"}); saveBacklogAndSync(S.backlog); render(); } }
 // Bez cat smaže VŠECHNY položky s tím názvem bez ohledu na kategorii - používat jen tam,
 // kde je kategorie po ruce (skoro všude), holé volání beze jen jako poslední záchrana.
+// Odebrání kliknutím jde přes potvrzovací okno (removeBacklog samotný je i pro automatiku po zápisu do deníku)
+function askRemove(t,cat){ S.rmAsk={title:t, cat:cat||"book"}; render(); }
+function rmModalHtml(a){
+  const b = S.backlog.find(x=>x.title===a.title && (x._category||"book")===a.cat);
+  if(!b) return "";
+  const label = {book:"Kniha", comic:"Komiks", game:"Hra", movie:b.type==="seriál"?"Seriál":"Film"}[a.cat];
+  const slots = Object.keys(PROG_CFG).filter(k=>(PROG_CFG[k].source||"game")===a.cat);
+  const live = slots.map(k=>S.progress[k]).find(p=>p && p.title===a.title);
+  const pct = live && live.total ? Math.round(live.current/live.total*100) : null;
+  const cover = b.cover||b.poster||b.image;
+  return `<div class="modal-overlay" data-closemodal="1"><div class="modal rmm">
+    <div class="hd">${cover?imgTag(cover,'class="cv"'):`<div class="cv" style="background:${grad(b.title)}"></div>`}<div><h2>Odebrat z Mého seznamu?</h2><div class="tiny">${esc(b.title)} · ${label}</div></div></div>
+    ${live?`<div class="wrn">${icon("bolt")} ${pct!=null?`Máš to rozjeté na ${pct} %`:"Máš to rozjeté"}</div>`:""}
+    <div class="mrow"><button class="btn" data-closemodal="1">Nechat</button><button class="btn danger" data-rmyes="1">Odebrat</button></div>
+  </div></div>`;
+}
 function removeBacklog(t,cat){ S.backlog=S.backlog.filter(x=>!(x.title===t && (cat===undefined || (x._category||"book")===cat))); saveBacklogAndSync(S.backlog); render(); }
 // Kniha/komiks se rozlišuje jen podle zdroje přidání (obecné hledání vs. CREW žebříček), ne
 // podle obsahu - appka to nepozná sama, proto jde kategorii ručně přeřadit.
@@ -2287,10 +2312,10 @@ function setBacklogCategory(title, cat){
 }
 // Dívá se na skutečně uloženou kategorii (ne na hádanou) - "Osamělý vlk" v backlogu jako
 // film se tak nikdy neplete s "Osamělý vlk" jako kniha, ať už se tlačítko zmáčkne kdekoliv.
-function toggleBacklog(t){ const x=S.backlog.find(b=>b.title===t); x?removeBacklog(t,x._category||"book"):addBacklog(t); }
-function toggleMovieBacklog(t){ const x=S.backlog.find(b=>b.title===t&&(b._category||"book")==="movie"); x?removeBacklog(t,"movie"):addMovieBacklog(t); }
-function toggleGameBacklog(t){ const x=S.backlog.find(b=>b.title===t&&(b._category||"book")==="game"); x?removeBacklog(t,"game"):addGameBacklog(t); }
-function toggleComicBacklog(t){ const x=S.backlog.find(b=>b.title===t&&(b._category||"book")==="comic"); x?removeBacklog(t,"comic"):addComicBacklog(t); }
+function toggleBacklog(t){ const x=S.backlog.find(b=>b.title===t && !["movie","game"].includes(b._category)); x?askRemove(t,x._category||"book"):addBacklog(t); }
+function toggleMovieBacklog(t){ const x=S.backlog.find(b=>b.title===t&&(b._category||"book")==="movie"); x?askRemove(t,"movie"):addMovieBacklog(t); }
+function toggleGameBacklog(t){ const x=S.backlog.find(b=>b.title===t&&(b._category||"book")==="game"); x?askRemove(t,"game"):addGameBacklog(t); }
+function toggleComicBacklog(t){ const x=S.backlog.find(b=>b.title===t&&(b._category||"book")==="comic"); x?askRemove(t,"comic"):addComicBacklog(t); }
 
 document.getElementById("sync-btn").onclick=showSyncSettings;
 document.getElementById("diary-btn").onclick=()=>goView("diary");
@@ -2309,7 +2334,8 @@ document.getElementById("brand").onclick=()=>goView("news");
 window.addEventListener("scroll",()=>document.getElementById("topnav").classList.toggle("solid", window.scrollY>30), {passive:true});
 document.getElementById("view").onclick=e=>{
   const czb=e.target.closest("[data-cz]"); if(czb){ e.preventDefault(); S.czOpen=czb.dataset.cz; render(); return; }
-  if(e.target.dataset.closemodal){ S.expanded=null; S.czOpen=null; render(); return; }
+  if(e.target.dataset.closemodal){ S.expanded=null; S.czOpen=null; S.rmAsk=null; render(); return; }
+  if(e.target.dataset.rmyes){ const a=S.rmAsk; S.rmAsk=null; if(a) removeBacklog(a.title, a.cat); else render(); return; }
   const gcz=e.target.dataset.gcz; if(gcz){ S.gameCz=gcz; render(); return; }
   const sd=e.target.dataset.sdir; if(sd){ const row=e.target.parentElement.querySelector(".srow"); row.scrollBy({left:+sd*Math.max(200,row.clientWidth*0.85), behavior:"smooth"}); return; }
   const gv=e.target.dataset.goview; if(gv){ goView(gv); return; }
@@ -2318,13 +2344,13 @@ document.getElementById("view").onclick=e=>{
   const mcy=e.target.dataset.mcyear; if(mcy){ S.mcYear=+mcy; render(); return; }
   const mcb=e.target.dataset.mcbk; if(mcb){ addFromMetacritic(mcb); return; }
   const cf=e.target.dataset.comingf; if(cf){ S.comingFilter=cf; render(); if(e.target.classList.contains("more")) window.scrollTo(0,0); return; }
-  const pre=e.target.dataset.prebk; if(pre){ if(inBacklog(pre,"book")){ removeBacklog(pre,"book"); return; } const b=(S.coming?.books||[]).find(x=>x.title===pre); if(b){ S.backlog.push({title:b.title, author:b.author||null, cover:b.cover||null, link:null, cat:["Kosmas"], prices:b.price?[{shop:"Kosmas", price:b.price, url:b.url}]:[], _category:"book"}); saveBacklogAndSync(S.backlog); render(); } return; }
+  const pre=e.target.dataset.prebk; if(pre){ if(inBacklog(pre,"book")){ askRemove(pre,"book"); return; } const b=(S.coming?.books||[]).find(x=>x.title===pre); if(b){ S.backlog.push({title:b.title, author:b.author||null, cover:b.cover||null, link:null, cat:["Kosmas"], prices:b.price?[{shop:"Kosmas", price:b.price, url:b.url}]:[], _category:"book"}); saveBacklogAndSync(S.backlog); render(); } return; }
   const f=e.target.dataset.filter; if(f){S.filter=f; render(); return;}
   const bg=e.target.dataset.bgenre; if(bg){S.bookGenre=bg; render(); return;}
   const br=e.target.dataset.brarity; if(br){S.bookRarity=br; render(); return;}
   const m=e.target.dataset.more; if(m){S.expanded=S.expanded===m?null:m; render(); return;}
   const bk=e.target.dataset.bk; if(bk){toggleBacklog(bk); return;}
-  const rm=e.target.dataset.rm; if(rm){removeBacklog(rm, e.target.dataset.rmcat); return;}
+  const rm=e.target.dataset.rm; if(rm){askRemove(rm, e.target.dataset.rmcat); return;}
   const mt=e.target.dataset.mtype; if(mt){S.movieType=mt; render(); return;}
   const mg=e.target.dataset.mgenre; if(mg){S.movieGenre=mg; render(); return;}
   const mr=e.target.dataset.mrarity; if(mr){S.movieRarity=mr; render(); return;}
@@ -2350,7 +2376,7 @@ document.getElementById("view").onclick=e=>{
   if(setcatEl){ setBacklogCategory(setcatEl.dataset.setcattitle, setcatEl.dataset.setcatval); return; }
 };
 
-document.addEventListener("keydown",e=>{ if(e.key==="Escape" && (S.expanded||S.czOpen)){ S.expanded=null; S.czOpen=null; render(); } });
+document.addEventListener("keydown",e=>{ if(e.key==="Escape" && (S.expanded||S.czOpen||S.rmAsk)){ S.expanded=null; S.czOpen=null; S.rmAsk=null; render(); } });
 loadNews();
 loadMetacritic();
 loadCzech();
