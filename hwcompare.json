@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07T10:09:57.981Z",
+  "updatedAt": "2026-11-07T10:11:50.700Z",
   "games": [
     {
       "title": "Phantom Blade Zero",
@@ -266,18 +266,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 / AMD Radeon RX 580 or better, Intel Core i5 or AMD equivalent"
     },
     {
-      "title": "Playrooms",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA RTX 2060 (6 GB) or AMD RX 5700",
-      "cpu": "Intel Core i5-10400 or AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 2060 (6 GB) or AMD RX 5700, Intel Core i5-10400 or AMD Ryzen 5 3600"
-    },
-    {
       "title": "Underkeep",
       "tier": "green",
       "tiers": {
@@ -288,6 +276,18 @@
       "cpu": null,
       "usedMinimum": true,
       "note": "Minimální konfigurace: OpenGL 3.2 compatible"
+    },
+    {
+      "title": "Playrooms",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA RTX 2060 (6 GB) or AMD RX 5700",
+      "cpu": "Intel Core i5-10400 or AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 2060 (6 GB) or AMD RX 5700, Intel Core i5-10400 or AMD Ryzen 5 3600"
     },
     {
       "title": "COP BASTARD",
