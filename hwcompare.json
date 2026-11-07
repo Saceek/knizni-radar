@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07T15:13:25.601Z",
+  "updatedAt": "2026-11-07T16:12:51.912Z",
   "games": [
     {
       "title": "Phantom Blade Zero",
@@ -26,18 +26,6 @@
       "note": "Doporučená konfigurace: GeForce GTX 1080 or AMD Radeon RX 5700, Intel Core i5-10400 or AMD equivalent"
     },
     {
-      "title": "Queen's Domain",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 1060 / AMD RX 580",
-      "cpu": "Intel Core i5 quad core, 3.5ghz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1060 / AMD RX 580, Intel Core i5 quad core, 3.5ghz"
-    },
-    {
       "title": "Lightyear Frontier",
       "tier": "green",
       "tiers": {
@@ -48,6 +36,18 @@
       "cpu": "Intel Core i7-4790K / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: AMD Radeon RX 6600 / NVIDIA Geforce GTX 1660 Ti, Intel Core i7-4790K / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Queen's Domain",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 1060 / AMD RX 580",
+      "cpu": "Intel Core i5 quad core, 3.5ghz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1060 / AMD RX 580, Intel Core i5 quad core, 3.5ghz"
     },
     {
       "title": "VOID/BREAKER",
@@ -578,18 +578,6 @@
       "note": "Doporučená konfigurace: DX11, DX12 capable graphics card, x64 architecture with SSE2 instruction set support"
     },
     {
-      "title": "Sabado",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "RTX 2060 or RX 7600xt or equivalent",
-      "cpu": "Intel Core i5 @ 3.0 GHz or AMD",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD"
-    },
-    {
       "title": "Gildoria - Organize a Dragon's Hoard",
       "tier": "orange",
       "tiers": {
@@ -602,16 +590,16 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
-      "title": "Clean Start",
-      "tier": "green",
+      "title": "Sabado",
+      "tier": "orange",
       "tiers": {
-        "allyx": "green",
+        "allyx": "orange",
         "pc": "green"
       },
-      "gpu": "GeForce GTX 1060 or Radeon RX 560",
-      "cpu": "Intel i5-12600K or AMD Ryzen 7 5700X",
+      "gpu": "RTX 2060 or RX 7600xt or equivalent",
+      "cpu": "Intel Core i5 @ 3.0 GHz or AMD",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1060 or Radeon RX 560, Intel i5-12600K or AMD Ryzen 7 5700X"
+      "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD"
     },
     {
       "title": "Desktop Duck",
@@ -624,6 +612,18 @@
       "cpu": "Any modern quad-core x64",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Any dedicated or modern integrated GPU, Any modern quad-core x64"
+    },
+    {
+      "title": "Clean Start",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 1060 or Radeon RX 560",
+      "cpu": "Intel i5-12600K or AMD Ryzen 7 5700X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1060 or Radeon RX 560, Intel i5-12600K or AMD Ryzen 7 5700X"
     },
     {
       "title": "Deadzoned",
@@ -648,6 +648,18 @@
       "cpu": "Intel i5 4690k, AMD Ryzen 5 1400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce 970 GTX or AMD Radeon RX 480 (4 GB of VRAM, Shader Model 5.1), Intel i5 4690k, AMD Ryzen 5 1400"
+    },
+    {
+      "title": "组长！怨念请查收！",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Compatible OpenGL",
+      "cpu": null,
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Compatible OpenGL"
     },
     {
       "title": "Catch Meow If You Can",
@@ -780,6 +792,18 @@
       "cpu": "Quad-core 3.0 GHz (Intel Core i5 or equivalent)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Dedicated GPU, GeForce GTX 1050 / Radeon RX 560 or better, Quad-core 3.0 GHz (Intel Core i5 or equivalent)"
+    },
+    {
+      "title": "Eternal Palace Sakura",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX1050 Ti",
+      "cpu": "Intel Core i7-4790 or AMD Ryzen 3 3200G",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX1050 Ti, Intel Core i7-4790 or AMD Ryzen 3 3200G"
     },
     {
       "title": "The Incident at Galley House",
