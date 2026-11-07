@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07T21:12:53.810Z",
+  "updatedAt": "2026-11-07T22:13:24.096Z",
   "games": [
     {
       "title": "Phantom Blade Zero",
@@ -434,18 +434,6 @@
       "note": "Doporučená konfigurace: Integrated Graphics, Windows 11 (64-bit)"
     },
     {
-      "title": "Дорога Жизни",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "orange"
-      },
-      "gpu": "NVIDIA GeForce RTX 4070 (12 GB) или эквивалентная",
-      "cpu": "Intel/AMD, 8-core, 3.5 GHz или выше",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4070 (12 GB) или эквивалентная, Intel/AMD, 8-core, 3.5 GHz или выше"
-    },
-    {
       "title": "Hull Rupture",
       "tier": "green",
       "tiers": {
@@ -566,6 +554,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
+      "title": "Sabado",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "RTX 2060 or RX 7600xt or equivalent",
+      "cpu": "Intel Core i5 @ 3.0 GHz or AMD",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD"
+    },
+    {
       "title": "Silberheim Evolving Card Game",
       "tier": "green",
       "tiers": {
@@ -576,18 +576,6 @@
       "cpu": "Dual Core 2.4 GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: 1GB VRAM / DirectX 10+ Support, Dual Core 2.4 GHz"
-    },
-    {
-      "title": "Kingdom Inc.",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DX11, DX12 capable graphics card",
-      "cpu": "x64 architecture with SSE2 instruction set support",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: DX11, DX12 capable graphics card, x64 architecture with SSE2 instruction set support"
     },
     {
       "title": "Desktop Duck",
@@ -602,16 +590,16 @@
       "note": "Doporučená konfigurace: Any dedicated or modern integrated GPU, Any modern quad-core x64"
     },
     {
-      "title": "Sabado",
-      "tier": "orange",
+      "title": "Kingdom Inc.",
+      "tier": "green",
       "tiers": {
-        "allyx": "orange",
+        "allyx": "green",
         "pc": "green"
       },
-      "gpu": "RTX 2060 or RX 7600xt or equivalent",
-      "cpu": "Intel Core i5 @ 3.0 GHz or AMD",
+      "gpu": "DX11, DX12 capable graphics card",
+      "cpu": "x64 architecture with SSE2 instruction set support",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD"
+      "note": "Doporučená konfigurace: DX11, DX12 capable graphics card, x64 architecture with SSE2 instruction set support"
     },
     {
       "title": "Deadzoned",
@@ -780,6 +768,18 @@
       "cpu": "Intel Core 2 Duo 2.0 GHz or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: OpenGL 2.1 compatible graphics card, Intel Core 2 Duo 2.0 GHz or equivalent"
+    },
+    {
+      "title": "ALTEREDBLOOD+ [AB+]",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 3060 or better",
+      "cpu": "AMD Ryzen 5 5600 or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 3060 or better, AMD Ryzen 5 5600 or better"
     },
     {
       "title": "The Incident at Galley House",
