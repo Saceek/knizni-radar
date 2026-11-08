@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08T09:13:56.968Z",
+  "updatedAt": "2026-11-08T10:13:05.756Z",
   "games": [
     {
       "title": "Phantom Blade Zero",
@@ -338,18 +338,6 @@
       "note": "Doporučená konfigurace: Nvidia GeForce RTX 2060 or AMD Radeon RX 5600X, Intel Core i5-10600KF or AMD Ryzen 5 3600X"
     },
     {
-      "title": "Find The Needle",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 1660 Super, RTX 2060 with 6 GB VRAM",
-      "cpu": "6+ cores, Ryzen 5 5600 or Intel i5-12400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1660 Super, RTX 2060 with 6 GB VRAM, 6+ cores, Ryzen 5 5600 or Intel i5-12400"
-    },
-    {
       "title": "Incremental Traffic",
       "tier": "green",
       "tiers": {
@@ -362,16 +350,16 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 / Intel Iris Xe, Quad-core 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600)"
     },
     {
-      "title": "Finals Week ✍🏻",
-      "tier": "red",
+      "title": "Find The Needle",
+      "tier": "green",
       "tiers": {
-        "allyx": "red",
+        "allyx": "green",
         "pc": "green"
       },
-      "gpu": "Nvidia 3060 or equivalent",
-      "cpu": "Ryzen 9 3900XT or equivalent",
+      "gpu": "GTX 1660 Super, RTX 2060 with 6 GB VRAM",
+      "cpu": "6+ cores, Ryzen 5 5600 or Intel i5-12400",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
+      "note": "Doporučená konfigurace: GTX 1660 Super, RTX 2060 with 6 GB VRAM, 6+ cores, Ryzen 5 5600 or Intel i5-12400"
     },
     {
       "title": "Wielders of the Essence",
@@ -384,6 +372,18 @@
       "cpu": null,
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 970, RX 570 or similar"
+    },
+    {
+      "title": "Finals Week ✍🏻",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "Nvidia 3060 or equivalent",
+      "cpu": "Ryzen 9 3900XT or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
     },
     {
       "title": "Usagi Shima: Bunny Island",
@@ -470,6 +470,18 @@
       "note": "Minimální konfigurace: GeForce GTX 670 / Radeon HD 7970, Intel i7-8700, Ryzen 1600"
     },
     {
+      "title": "组长！怨念请查收！",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Compatible OpenGL",
+      "cpu": null,
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Compatible OpenGL"
+    },
+    {
       "title": "Feed The Forest",
       "tier": "green",
       "tiers": {
@@ -504,18 +516,6 @@
       "cpu": "Intel Core i5-12400F or AMD Ryzen 5 5600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB, Intel Core i5-12400F or AMD Ryzen 5 5600"
-    },
-    {
-      "title": "组长！怨念请查收！",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Compatible OpenGL",
-      "cpu": null,
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Compatible OpenGL"
     },
     {
       "title": "Moonshiner Simulator",
@@ -662,18 +662,6 @@
       "note": "Minimální konfigurace: GTX 970, Core i5 6600"
     },
     {
-      "title": "Ghost in the SQL Data",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GPU (Intel Iris Xe / AMD Vega 8)",
-      "cpu": "Quad Core 2,5 GHz or more",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GPU (Intel Iris Xe / AMD Vega 8), Quad Core 2,5 GHz or more"
-    },
-    {
       "title": "Mayday: The Survival Island",
       "tier": "green",
       "tiers": {
@@ -684,6 +672,18 @@
       "cpu": "Intel Core2 Duo E6400 or AMD Phenom X2 Dual-Core GP-7730 or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 460 (1GB) or AMD Radeon R7 240 (1GB) or better, Intel Core2 Duo E6400 or AMD Phenom X2 Dual-Core GP-7730 or equivalent"
+    },
+    {
+      "title": "Ghost in the SQL Data",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GPU (Intel Iris Xe / AMD Vega 8)",
+      "cpu": "Quad Core 2,5 GHz or more",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GPU (Intel Iris Xe / AMD Vega 8), Quad Core 2,5 GHz or more"
     },
     {
       "title": "HELENA : Cloud District",
@@ -792,6 +792,18 @@
       "cpu": "Intel Core 2 Duo 2.0 GHz or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: OpenGL 2.1 compatible graphics card, Intel Core 2 Duo 2.0 GHz or equivalent"
+    },
+    {
+      "title": "Replay Value: Second Hand Games",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce 840M",
+      "cpu": "Intel Pentium CPU G860",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce 840M, Intel Pentium CPU G860"
     },
     {
       "title": "The Incident at Galley House",
