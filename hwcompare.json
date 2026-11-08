@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08T07:12:57.778Z",
+  "updatedAt": "2026-11-08T08:13:16.186Z",
   "games": [
     {
       "title": "Phantom Blade Zero",
@@ -338,6 +338,18 @@
       "note": "Doporučená konfigurace: Nvidia GeForce RTX 2060 or AMD Radeon RX 5600X, Intel Core i5-10600KF or AMD Ryzen 5 3600X"
     },
     {
+      "title": "Find The Needle",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 1660 Super, RTX 2060 with 6 GB VRAM",
+      "cpu": "6+ cores, Ryzen 5 5600 or Intel i5-12400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1660 Super, RTX 2060 with 6 GB VRAM, 6+ cores, Ryzen 5 5600 or Intel i5-12400"
+    },
+    {
       "title": "Incremental Traffic",
       "tier": "green",
       "tiers": {
@@ -362,16 +374,16 @@
       "note": "Doporučená konfigurace: Nvidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
     },
     {
-      "title": "Find The Needle",
+      "title": "Wielders of the Essence",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "GTX 1660 Super, RTX 2060 with 6 GB VRAM",
-      "cpu": "6+ cores, Ryzen 5 5600 or Intel i5-12400",
+      "gpu": "GTX 970, RX 570 or similar",
+      "cpu": null,
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1660 Super, RTX 2060 with 6 GB VRAM, 6+ cores, Ryzen 5 5600 or Intel i5-12400"
+      "note": "Doporučená konfigurace: GTX 970, RX 570 or similar"
     },
     {
       "title": "Usagi Shima: Bunny Island",
@@ -384,18 +396,6 @@
       "cpu": "2.0 GHz Dual-Core (e.g. Intel Core i5-7200U or equivalent)",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 620, 2.0 GHz Dual-Core (e.g. Intel Core i5-7200U or equivalent)"
-    },
-    {
-      "title": "Wielders of the Essence",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 970, RX 570 or similar",
-      "cpu": null,
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 970, RX 570 or similar"
     },
     {
       "title": "Farm to Fortune",
@@ -686,18 +686,6 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 460 (1GB) or AMD Radeon R7 240 (1GB) or better, Intel Core2 Duo E6400 or AMD Phenom X2 Dual-Core GP-7730 or equivalent"
     },
     {
-      "title": "HYPNOS",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "Nvidia GeForce RTX 3060 Ti",
-      "cpu": "AMD Ryzen 7 5008X 8-Core Processor",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Nvidia GeForce RTX 3060 Ti, AMD Ryzen 7 5008X 8-Core Processor"
-    },
-    {
       "title": "HELENA : Cloud District",
       "tier": "green",
       "tiers": {
@@ -708,6 +696,18 @@
       "cpu": "Intel Core i5-4460 or AMD Ryzen 3 1200",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 or AMD Radeon R7 370, Intel Core i5-4460 or AMD Ryzen 3 1200"
+    },
+    {
+      "title": "HYPNOS",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GeForce RTX 3060 Ti",
+      "cpu": "AMD Ryzen 7 5008X 8-Core Processor",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Nvidia GeForce RTX 3060 Ti, AMD Ryzen 7 5008X 8-Core Processor"
     },
     {
       "title": "Eternal Palace Sakura",
@@ -746,18 +746,6 @@
       "note": "Doporučená konfigurace: DirectX 11 compatible dedicated graphics, Quad-core 2.5 GHz or better"
     },
     {
-      "title": "HEART ABYSS",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce 7600 GT (512 MB)",
-      "cpu": "Intel Core i3-3240 (2*3400) or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce 7600 GT (512 MB), Intel Core i3-3240 (2*3400) or equivalent"
-    },
-    {
       "title": "Traffic Architect",
       "tier": "green",
       "tiers": {
@@ -768,6 +756,18 @@
       "cpu": "Quad-core 3.0 GHz (Intel Core i5 or equivalent)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Dedicated GPU, GeForce GTX 1050 / Radeon RX 560 or better, Quad-core 3.0 GHz (Intel Core i5 or equivalent)"
+    },
+    {
+      "title": "HEART ABYSS",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce 7600 GT (512 MB)",
+      "cpu": "Intel Core i3-3240 (2*3400) or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce 7600 GT (512 MB), Intel Core i3-3240 (2*3400) or equivalent"
     },
     {
       "title": "RoboGAL: Gaga Delta Lady",
