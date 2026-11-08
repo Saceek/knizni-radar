@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07T23:13:32.413Z",
+  "updatedAt": "2026-11-08T00:13:23.216Z",
   "games": [
     {
       "title": "Phantom Blade Zero",
@@ -206,18 +206,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 TI, 4GB or AMD Radeon RX 6400, 4GB, Intel Core i3-8100 or AMD Ryzen 3 2300X"
     },
     {
-      "title": "Metal Thunder",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVidia GeForce GTX 1060 4GB",
-      "cpu": "Intel Core i5-6500 @ 3,2 GHz (4 CPUs)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVidia GeForce GTX 1060 4GB, Intel Core i5-6500 @ 3,2 GHz (4 CPUs)"
-    },
-    {
       "title": "Loftia",
       "tier": "green",
       "tiers": {
@@ -228,6 +216,18 @@
       "cpu": "Intel Core i5-12600K / AMD Ryzen 5 5600 (or equivalent)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (or equivalent), Intel Core i5-12600K / AMD Ryzen 5 5600 (or equivalent)"
+    },
+    {
+      "title": "Metal Thunder",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVidia GeForce GTX 1060 4GB",
+      "cpu": "Intel Core i5-6500 @ 3,2 GHz (4 CPUs)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVidia GeForce GTX 1060 4GB, Intel Core i5-6500 @ 3,2 GHz (4 CPUs)"
     },
     {
       "title": "Road Rash™",
@@ -350,18 +350,6 @@
       "note": "Doporučená konfigurace: Nvidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
     },
     {
-      "title": "Usagi Shima: Bunny Island",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel HD Graphics 620",
-      "cpu": "2.0 GHz Dual-Core (e.g. Intel Core i5-7200U or equivalent)",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 620, 2.0 GHz Dual-Core (e.g. Intel Core i5-7200U or equivalent)"
-    },
-    {
       "title": "Incremental Traffic",
       "tier": "green",
       "tiers": {
@@ -372,6 +360,18 @@
       "cpu": "Quad-core 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 / Intel Iris Xe, Quad-core 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600)"
+    },
+    {
+      "title": "Usagi Shima: Bunny Island",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD Graphics 620",
+      "cpu": "2.0 GHz Dual-Core (e.g. Intel Core i5-7200U or equivalent)",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics 620, 2.0 GHz Dual-Core (e.g. Intel Core i5-7200U or equivalent)"
     },
     {
       "title": "Farm to Fortune",
@@ -458,18 +458,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD RX 570, X64 architecture"
     },
     {
-      "title": "Milo",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 3060 12 GB",
-      "cpu": "Intel Core i5-12400F or AMD Ryzen 5 5600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB, Intel Core i5-12400F or AMD Ryzen 5 5600"
-    },
-    {
       "title": "Feed The Forest",
       "tier": "green",
       "tiers": {
@@ -482,28 +470,16 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 1650, AMD Ryzen 5 2600"
     },
     {
-      "title": "Everlast: Undying Tale",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1060 (req. 6GB VRAM) / AMD Radeon RX 580 (req. 6GB VRAM) / Intel ARC A380",
-      "cpu": "Processor: Intel Core i5-6400 (2.7 GHz 4 Core) / AMD Ryzen 5 1500X (3.5 GHz 4 Core) or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 1060 (req. 6GB VRAM) / AMD Radeon RX 580 (req. 6GB VRAM) / Intel ARC A380, Processor: Intel Core i5-6400 (2.7 GHz 4 Core) / AMD Ryzen 5 1500X (3.5 GHz 4 Core) or equivalent"
-    },
-    {
-      "title": "Moonshiner Simulator",
+      "title": "Milo",
       "tier": "red",
       "tiers": {
         "allyx": "red",
         "pc": "green"
       },
-      "gpu": "GeForce RTX 3060 / Radeon RX 6700",
-      "cpu": "AMD Ryzen 7 3700X /  Intel® Core i7-6700K",
+      "gpu": "NVIDIA GeForce RTX 3060 12 GB",
+      "cpu": "Intel Core i5-12400F or AMD Ryzen 5 5600",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 / Radeon RX 6700, AMD Ryzen 7 3700X /  Intel® Core i7-6700K"
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 12 GB, Intel Core i5-12400F or AMD Ryzen 5 5600"
     },
     {
       "title": "组长！怨念请查收！",
@@ -516,6 +492,18 @@
       "cpu": null,
       "usedMinimum": true,
       "note": "Minimální konfigurace: Compatible OpenGL"
+    },
+    {
+      "title": "Moonshiner Simulator",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "GeForce RTX 3060 / Radeon RX 6700",
+      "cpu": "AMD Ryzen 7 3700X /  Intel® Core i7-6700K",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3060 / Radeon RX 6700, AMD Ryzen 7 3700X /  Intel® Core i7-6700K"
     },
     {
       "title": "Clean Start",
@@ -674,18 +662,6 @@
       "note": "Doporučená konfigurace: GPU (Intel Iris Xe / AMD Vega 8), Quad Core 2,5 GHz or more"
     },
     {
-      "title": "HYPNOS",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "Nvidia GeForce RTX 3060 Ti",
-      "cpu": "AMD Ryzen 7 5008X 8-Core Processor",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Nvidia GeForce RTX 3060 Ti, AMD Ryzen 7 5008X 8-Core Processor"
-    },
-    {
       "title": "Mayday: The Survival Island",
       "tier": "green",
       "tiers": {
@@ -696,6 +672,18 @@
       "cpu": "Intel Core2 Duo E6400 or AMD Phenom X2 Dual-Core GP-7730 or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 460 (1GB) or AMD Radeon R7 240 (1GB) or better, Intel Core2 Duo E6400 or AMD Phenom X2 Dual-Core GP-7730 or equivalent"
+    },
+    {
+      "title": "HYPNOS",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GeForce RTX 3060 Ti",
+      "cpu": "AMD Ryzen 7 5008X 8-Core Processor",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Nvidia GeForce RTX 3060 Ti, AMD Ryzen 7 5008X 8-Core Processor"
     },
     {
       "title": "HELENA : Cloud District",
@@ -746,6 +734,18 @@
       "note": "Doporučená konfigurace: Dedicated GPU, GeForce GTX 1050 / Radeon RX 560 or better, Quad-core 3.0 GHz (Intel Core i5 or equivalent)"
     },
     {
+      "title": "ALTEREDBLOOD+ [AB+]",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 3060 or better",
+      "cpu": "AMD Ryzen 5 5600 or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 3060 or better, AMD Ryzen 5 5600 or better"
+    },
+    {
       "title": "Caravan Carnage: Fruity Road",
       "tier": "green",
       "tiers": {
@@ -768,18 +768,6 @@
       "cpu": "Intel Core 2 Duo 2.0 GHz or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: OpenGL 2.1 compatible graphics card, Intel Core 2 Duo 2.0 GHz or equivalent"
-    },
-    {
-      "title": "ALTEREDBLOOD+ [AB+]",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 3060 or better",
-      "cpu": "AMD Ryzen 5 5600 or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 3060 or better, AMD Ryzen 5 5600 or better"
     },
     {
       "title": "The Incident at Galley House",
