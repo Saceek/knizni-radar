@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08T17:13:31.325Z",
+  "updatedAt": "2026-11-08T18:13:47.952Z",
   "games": [
     {
       "title": "Phantom Blade Zero",
@@ -458,18 +458,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD RX 570, X64 architecture"
     },
     {
-      "title": "Hull Rupture",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 670 / Radeon HD 7970",
-      "cpu": "Intel i7-8700, Ryzen 1600",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 670 / Radeon HD 7970, Intel i7-8700, Ryzen 1600"
-    },
-    {
       "title": "组长！怨念请查收！",
       "tier": "green",
       "tiers": {
@@ -482,16 +470,16 @@
       "note": "Minimální konfigurace: Compatible OpenGL"
     },
     {
-      "title": "Дорога Жизни",
-      "tier": "red",
+      "title": "Hull Rupture",
+      "tier": "green",
       "tiers": {
-        "allyx": "red",
-        "pc": "orange"
+        "allyx": "green",
+        "pc": "green"
       },
-      "gpu": "NVIDIA GeForce RTX 4070 (12 GB) или эквивалентная",
-      "cpu": "Intel/AMD, 8-core, 3.5 GHz или выше",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4070 (12 GB) или эквивалентная, Intel/AMD, 8-core, 3.5 GHz или выше"
+      "gpu": "GeForce GTX 670 / Radeon HD 7970",
+      "cpu": "Intel i7-8700, Ryzen 1600",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 670 / Radeon HD 7970, Intel i7-8700, Ryzen 1600"
     },
     {
       "title": "Clean Start",
@@ -554,18 +542,6 @@
       "note": "Doporučená konfigurace: GeForce RTX 3060 / Radeon RX 6700, AMD Ryzen 7 3700X /  Intel® Core i7-6700K"
     },
     {
-      "title": "Snow Resort Simulator",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1070 8GB or AMD RX 5700",
-      "cpu": "Intel Core i5-10400 or AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1070 8GB or AMD RX 5700, Intel Core i5-10400 or AMD Ryzen 5 3600"
-    },
-    {
       "title": "Desktop Duck",
       "tier": "green",
       "tiers": {
@@ -576,6 +552,18 @@
       "cpu": "Any modern quad-core x64",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Any dedicated or modern integrated GPU, Any modern quad-core x64"
+    },
+    {
+      "title": "Snow Resort Simulator",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1070 8GB or AMD RX 5700",
+      "cpu": "Intel Core i5-10400 or AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1070 8GB or AMD RX 5700, Intel Core i5-10400 or AMD Ryzen 5 3600"
     },
     {
       "title": "Sabado",
@@ -794,18 +782,6 @@
       "note": "Minimální konfigurace: GeForce 7600 GT (512 MB), Intel Core i3-3240 (2*3400) or equivalent"
     },
     {
-      "title": "RoboGAL: Gaga Delta Lady",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "OpenGL 2.1 compatible graphics card",
-      "cpu": "Intel Core 2 Duo 2.0 GHz or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: OpenGL 2.1 compatible graphics card, Intel Core 2 Duo 2.0 GHz or equivalent"
-    },
-    {
       "title": "Cinderwake",
       "tier": "green",
       "tiers": {
@@ -816,6 +792,18 @@
       "cpu": "6 cores, 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1660 / Radeon RX 5600 or better, 6 cores, 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600)"
+    },
+    {
+      "title": "RoboGAL: Gaga Delta Lady",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "OpenGL 2.1 compatible graphics card",
+      "cpu": "Intel Core 2 Duo 2.0 GHz or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: OpenGL 2.1 compatible graphics card, Intel Core 2 Duo 2.0 GHz or equivalent"
     },
     {
       "title": "GloveUp!",
@@ -1020,54 +1008,6 @@
       "cpu": "Intel Core i5-11600K / AMD Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1650 / AMD Radeon RX 580, Intel Core i5-11600K / AMD Ryzen 5 5600X"
-    },
-    {
-      "title": "REPLACED",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 1060 (6GB) or equivalent",
-      "cpu": "Intel® Core™ i5-8400 Processor",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
-    },
-    {
-      "title": "MOUSE: P.I. For Hire",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600",
-      "cpu": "Intel Core i5 9600 / Ryzen 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600, Intel Core i5 9600 / Ryzen 3600"
-    },
-    {
-      "title": "Hellblade II: Senua’s Saga",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "orange"
-      },
-      "gpu": "Nvidia RTX 3080 | AMD RX 6800 XT | Intel Arc A770",
-      "cpu": "Intel i7-10700K | AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia RTX 3080 | AMD RX 6800 XT | Intel Arc A770, Intel i7-10700K | AMD Ryzen 5 5600X"
-    },
-    {
-      "title": "Gears of War: E-Day",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 5060 / NVIDIA GeForce RTX 3060ti / AMD Radeon RX 6700 XT / Radeon RX 9060 XT",
-      "cpu": "AMD Ryzen 5 5600 / Intel i5-11600K",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 5060 / NVIDIA GeForce RTX 3060ti / AMD Radeon RX 6700 XT / Radeon RX 9060 XT, AMD Ryzen 5 5600 / Intel i5-11600K"
     }
   ]
 }
