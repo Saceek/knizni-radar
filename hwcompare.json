@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08T13:13:28.087Z",
+  "updatedAt": "2026-11-08T14:12:52.204Z",
   "games": [
     {
       "title": "Phantom Blade Zero",
@@ -470,6 +470,30 @@
       "note": "Minimální konfigurace: GeForce GTX 670 / Radeon HD 7970, Intel i7-8700, Ryzen 1600"
     },
     {
+      "title": "Дорога Жизни",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "orange"
+      },
+      "gpu": "NVIDIA GeForce RTX 4070 (12 GB) или эквивалентная",
+      "cpu": "Intel/AMD, 8-core, 3.5 GHz или выше",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4070 (12 GB) или эквивалентная, Intel/AMD, 8-core, 3.5 GHz или выше"
+    },
+    {
+      "title": "组长！怨念请查收！",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Compatible OpenGL",
+      "cpu": null,
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Compatible OpenGL"
+    },
+    {
       "title": "Clean Start",
       "tier": "green",
       "tiers": {
@@ -492,18 +516,6 @@
       "cpu": "AMD Ryzen 5 2600",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 1650, AMD Ryzen 5 2600"
-    },
-    {
-      "title": "组长！怨念请查收！",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Compatible OpenGL",
-      "cpu": null,
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Compatible OpenGL"
     },
     {
       "title": "Milo",
@@ -578,18 +590,6 @@
       "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD"
     },
     {
-      "title": "Kingdom Inc.",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DX11, DX12 capable graphics card",
-      "cpu": "x64 architecture with SSE2 instruction set support",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: DX11, DX12 capable graphics card, x64 architecture with SSE2 instruction set support"
-    },
-    {
       "title": "女神养成：放置型",
       "tier": "green",
       "tiers": {
@@ -602,18 +602,6 @@
       "note": "Doporučená konfigurace: 2GB RAM, Intel i5或同级别"
     },
     {
-      "title": "Silberheim Evolving Card Game",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "1GB VRAM / DirectX 10+ Support",
-      "cpu": "Dual Core 2.4 GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: 1GB VRAM / DirectX 10+ Support, Dual Core 2.4 GHz"
-    },
-    {
       "title": "Beat For Speed",
       "tier": "orange",
       "tiers": {
@@ -624,6 +612,30 @@
       "cpu": "Intel Core i5-9600K or AMD Ryzen R5 3600 processor",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT, Intel Core i5-9600K or AMD Ryzen R5 3600 processor"
+    },
+    {
+      "title": "Kingdom Inc.",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DX11, DX12 capable graphics card",
+      "cpu": "x64 architecture with SSE2 instruction set support",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: DX11, DX12 capable graphics card, x64 architecture with SSE2 instruction set support"
+    },
+    {
+      "title": "Silberheim Evolving Card Game",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "1GB VRAM / DirectX 10+ Support",
+      "cpu": "Dual Core 2.4 GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: 1GB VRAM / DirectX 10+ Support, Dual Core 2.4 GHz"
     },
     {
       "title": "Deadzoned",
@@ -686,18 +698,6 @@
       "note": "Doporučená konfigurace: GPU (Intel Iris Xe / AMD Vega 8), Quad Core 2,5 GHz or more"
     },
     {
-      "title": "HELENA : Cloud District",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 960 or AMD Radeon R7 370",
-      "cpu": "Intel Core i5-4460 or AMD Ryzen 3 1200",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 or AMD Radeon R7 370, Intel Core i5-4460 or AMD Ryzen 3 1200"
-    },
-    {
       "title": "ALTEREDBLOOD+ [AB+]",
       "tier": "red",
       "tiers": {
@@ -708,6 +708,18 @@
       "cpu": "AMD Ryzen 5 5600 or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 3060 or better, AMD Ryzen 5 5600 or better"
+    },
+    {
+      "title": "HELENA : Cloud District",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 960 or AMD Radeon R7 370",
+      "cpu": "Intel Core i5-4460 or AMD Ryzen 3 1200",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 or AMD Radeon R7 370, Intel Core i5-4460 or AMD Ryzen 3 1200"
     },
     {
       "title": "HYPNOS",
@@ -746,6 +758,18 @@
       "note": "Doporučená konfigurace: Dedicated GPU, GeForce GTX 1050 / Radeon RX 560 or better, Quad-core 3.0 GHz (Intel Core i5 or equivalent)"
     },
     {
+      "title": "County of Fortune",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce 970 / AMD R9 390",
+      "cpu": "Intel i5+ and equivalents",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce 970 / AMD R9 390, Intel i5+ and equivalents"
+    },
+    {
       "title": "Caravan Carnage: Fruity Road",
       "tier": "green",
       "tiers": {
@@ -770,18 +794,6 @@
       "note": "Minimální konfigurace: GeForce 7600 GT (512 MB), Intel Core i3-3240 (2*3400) or equivalent"
     },
     {
-      "title": "County of Fortune",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce 970 / AMD R9 390",
-      "cpu": "Intel i5+ and equivalents",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce 970 / AMD R9 390, Intel i5+ and equivalents"
-    },
-    {
       "title": "RoboGAL: Gaga Delta Lady",
       "tier": "green",
       "tiers": {
@@ -792,6 +804,30 @@
       "cpu": "Intel Core 2 Duo 2.0 GHz or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: OpenGL 2.1 compatible graphics card, Intel Core 2 Duo 2.0 GHz or equivalent"
+    },
+    {
+      "title": "Mortal Path: Mighty Senior Brother",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 (4GB VRAM)",
+      "cpu": null,
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 (4GB VRAM)"
+    },
+    {
+      "title": "GloveUp!",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA RTX 3060 / AMD RX 6600 XT (8 GB VRAM)",
+      "cpu": "Intel Core i5-12400 / AMD Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 3060 / AMD RX 6600 XT (8 GB VRAM), Intel Core i5-12400 / AMD Ryzen 5 5600"
     },
     {
       "title": "Replay Value: Second Hand Games",
