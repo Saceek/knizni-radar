@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T20:13:22.464Z",
+  "updatedAt": "2026-11-09T21:13:28.662Z",
   "games": [
     {
       "title": "Silica",
@@ -108,18 +108,6 @@
       "cpu": "Intel® Core™ i5-7600 (quad-core) / AMD® Ryzen™ 3 2200G (quad-core)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 1050 (2 GB) / AMD® Radeon™ RX-460 (4 GB) / Intel® Arc™ A380 (6 GB), Intel® Core™ i5-7600 (quad-core) / AMD® Ryzen™ 3 2200G (quad-core)"
-    },
-    {
-      "title": "Terrible Lizards",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA® GeForce® RTX 2080 / AMD Radeon™ RX 6800XT",
-      "cpu": "Intel® Core™ i3-10100F / AMD Ryzen™ 3 3100",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA® GeForce® RTX 2080 / AMD Radeon™ RX 6800XT, Intel® Core™ i3-10100F / AMD Ryzen™ 3 3100"
     },
     {
       "title": "PIT OF GOBLIN",
@@ -338,6 +326,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 / Intel Iris Xe, Quad-core 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600)"
     },
     {
+      "title": "Farm to Fortune",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX970",
+      "cpu": "Intel i5",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX970, Intel i5"
+    },
+    {
       "title": "组长！怨念请查收！",
       "tier": "green",
       "tiers": {
@@ -350,16 +350,16 @@
       "note": "Minimální konfigurace: Compatible OpenGL"
     },
     {
-      "title": "Farm to Fortune",
-      "tier": "green",
+      "title": "DREADMOOR",
+      "tier": "orange",
       "tiers": {
-        "allyx": "green",
+        "allyx": "orange",
         "pc": "green"
       },
-      "gpu": "NVIDIA GeForce GTX970",
-      "cpu": "Intel i5",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX970, Intel i5"
+      "gpu": "Nvidia RTX 4060 / AMD Radeon RX 7600",
+      "cpu": "Intel Core i5-12400F / AMD Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia RTX 4060 / AMD Radeon RX 7600, Intel Core i5-12400F / AMD Ryzen 5 5600"
     },
     {
       "title": "Dungeons & Dynasties",
@@ -422,18 +422,6 @@
       "note": "Doporučená konfigurace: GeForce GTX 1060 or Radeon RX 560, Intel i5-12600K or AMD Ryzen 7 5700X"
     },
     {
-      "title": "DREADMOOR",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "Nvidia RTX 4060 / AMD Radeon RX 7600",
-      "cpu": "Intel Core i5-12400F / AMD Ryzen 5 5600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia RTX 4060 / AMD Radeon RX 7600, Intel Core i5-12400F / AMD Ryzen 5 5600"
-    },
-    {
       "title": "Feed The Forest",
       "tier": "green",
       "tiers": {
@@ -494,18 +482,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT, Intel Core i5-9600K or AMD Ryzen R5 3600 processor"
     },
     {
-      "title": "女神养成：放置型",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "2GB RAM",
-      "cpu": "Intel i5或同级别",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: 2GB RAM, Intel i5或同级别"
-    },
-    {
       "title": "County of Fortune",
       "tier": "green",
       "tiers": {
@@ -516,6 +492,18 @@
       "cpu": "Intel i5+ and equivalents",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce 970 / AMD R9 390, Intel i5+ and equivalents"
+    },
+    {
+      "title": "女神养成：放置型",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "2GB RAM",
+      "cpu": "Intel i5或同级别",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 2GB RAM, Intel i5或同级别"
     },
     {
       "title": "Snow Resort Simulator",
@@ -710,6 +698,18 @@
       "note": "Minimální konfigurace: GeForce 7600 GT (512 MB), Intel Core i3-3240 (2*3400) or equivalent"
     },
     {
+      "title": "Elven Huntress: Sunveil",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 970/1650 / AMD Radeon R9 290X",
+      "cpu": "Intel Core i7-8700K or AMD Ryzen 5 1600X",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GTX 970/1650 / AMD Radeon R9 290X, Intel Core i7-8700K or AMD Ryzen 5 1600X"
+    },
+    {
       "title": "Pionero Capital",
       "tier": "orange",
       "tiers": {
@@ -732,18 +732,6 @@
       "cpu": "Intel Core i5-12400 / AMD Ryzen 5 5600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 / AMD RX 6600 XT (8 GB VRAM), Intel Core i5-12400 / AMD Ryzen 5 5600"
-    },
-    {
-      "title": "Elven Huntress: Sunveil",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 970/1650 / AMD Radeon R9 290X",
-      "cpu": "Intel Core i7-8700K or AMD Ryzen 5 1600X",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GTX 970/1650 / AMD Radeon R9 290X, Intel Core i7-8700K or AMD Ryzen 5 1600X"
     },
     {
       "title": "Mortal Path: Mighty Senior Brother",
