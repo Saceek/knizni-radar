@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08T23:14:30.094Z",
+  "updatedAt": "2026-11-09T00:13:32.485Z",
   "games": [
     {
       "title": "Phantom Blade Zero",
@@ -422,6 +422,18 @@
       "note": "Doporučená konfigurace: GeForce RTX 4060, 8 GB or Radeon RX 6800 XT, 16 GB, Intel Core i5-14600K, 3.5 GHz or AMD Ryzen 9 7900X, 4.7 GHz"
     },
     {
+      "title": "Dungeons & Dynasties",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Integrated Graphics",
+      "cpu": "Windows 11 (64-bit)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Integrated Graphics, Windows 11 (64-bit)"
+    },
+    {
       "title": "Cozy Game Restoration",
       "tier": "green",
       "tiers": {
@@ -444,18 +456,6 @@
       "cpu": "Dual Core 2 GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: DirectX11 compatible with at least 1GB of memory, Dual Core 2 GHz"
-    },
-    {
-      "title": "Dungeons & Dynasties",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Integrated Graphics",
-      "cpu": "Windows 11 (64-bit)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Integrated Graphics, Windows 11 (64-bit)"
     },
     {
       "title": "组长！怨念请查收！",
@@ -578,18 +578,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1070 8GB or AMD RX 5700, Intel Core i5-10400 or AMD Ryzen 5 3600"
     },
     {
-      "title": "女神养成：放置型",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "2GB RAM",
-      "cpu": "Intel i5或同级别",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: 2GB RAM, Intel i5或同级别"
-    },
-    {
       "title": "Beat For Speed",
       "tier": "orange",
       "tiers": {
@@ -600,6 +588,18 @@
       "cpu": "Intel Core i5-9600K or AMD Ryzen R5 3600 processor",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT, Intel Core i5-9600K or AMD Ryzen R5 3600 processor"
+    },
+    {
+      "title": "女神养成：放置型",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "2GB RAM",
+      "cpu": "Intel i5或同级别",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 2GB RAM, Intel i5或同级别"
     },
     {
       "title": "Kingdom Inc.",
@@ -626,18 +626,6 @@
       "note": "Minimální konfigurace: 1GB VRAM / DirectX 10+ Support, Dual Core 2.4 GHz"
     },
     {
-      "title": "Mayday: The Survival Island",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 460 (1GB) or AMD Radeon R7 240 (1GB) or better",
-      "cpu": "Intel Core2 Duo E6400 or AMD Phenom X2 Dual-Core GP-7730 or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 460 (1GB) or AMD Radeon R7 240 (1GB) or better, Intel Core2 Duo E6400 or AMD Phenom X2 Dual-Core GP-7730 or equivalent"
-    },
-    {
       "title": "Catch Meow If You Can",
       "tier": "green",
       "tiers": {
@@ -648,6 +636,18 @@
       "cpu": "Core i5 6600",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GTX 970, Core i5 6600"
+    },
+    {
+      "title": "Mayday: The Survival Island",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 460 (1GB) or AMD Radeon R7 240 (1GB) or better",
+      "cpu": "Intel Core2 Duo E6400 or AMD Phenom X2 Dual-Core GP-7730 or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 460 (1GB) or AMD Radeon R7 240 (1GB) or better, Intel Core2 Duo E6400 or AMD Phenom X2 Dual-Core GP-7730 or equivalent"
     },
     {
       "title": "Deadzoned",
@@ -818,6 +818,18 @@
       "note": "Doporučená konfigurace: OpenGL 2.1 compatible graphics card, Intel Core 2 Duo 2.0 GHz or equivalent"
     },
     {
+      "title": "GloveUp!",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA RTX 3060 / AMD RX 6600 XT (8 GB VRAM)",
+      "cpu": "Intel Core i5-12400 / AMD Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 3060 / AMD RX 6600 XT (8 GB VRAM), Intel Core i5-12400 / AMD Ryzen 5 5600"
+    },
+    {
       "title": "Mortal Path: Mighty Senior Brother",
       "tier": "green",
       "tiers": {
@@ -830,16 +842,28 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 (4GB VRAM)"
     },
     {
-      "title": "GloveUp!",
+      "title": "Theme Hospital™",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "3D graphics card compatible with DirectX 9.0c",
+      "cpu": "1.8 GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 3D graphics card compatible with DirectX 9.0c, 1.8 GHz"
+    },
+    {
+      "title": "Agent of Strange: Arrival",
       "tier": "orange",
       "tiers": {
         "allyx": "orange",
         "pc": "green"
       },
-      "gpu": "NVIDIA RTX 3060 / AMD RX 6600 XT (8 GB VRAM)",
-      "cpu": "Intel Core i5-12400 / AMD Ryzen 5 5600",
+      "gpu": "GeForce RTX 2060 or better",
+      "cpu": "i5-11th Gen CPU or similar",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 3060 / AMD RX 6600 XT (8 GB VRAM), Intel Core i5-12400 / AMD Ryzen 5 5600"
+      "note": "Doporučená konfigurace: GeForce RTX 2060 or better, i5-11th Gen CPU or similar"
     },
     {
       "title": "Replay Value: Second Hand Games",
