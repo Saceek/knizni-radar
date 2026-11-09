@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T19:14:10.985Z",
+  "updatedAt": "2026-11-09T20:13:22.464Z",
   "games": [
     {
       "title": "Silica",
@@ -422,6 +422,18 @@
       "note": "Doporučená konfigurace: GeForce GTX 1060 or Radeon RX 560, Intel i5-12600K or AMD Ryzen 7 5700X"
     },
     {
+      "title": "DREADMOOR",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "Nvidia RTX 4060 / AMD Radeon RX 7600",
+      "cpu": "Intel Core i5-12400F / AMD Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia RTX 4060 / AMD Radeon RX 7600, Intel Core i5-12400F / AMD Ryzen 5 5600"
+    },
+    {
       "title": "Feed The Forest",
       "tier": "green",
       "tiers": {
@@ -444,18 +456,6 @@
       "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
-    },
-    {
-      "title": "DREADMOOR",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "Nvidia RTX 4060 / AMD Radeon RX 7600",
-      "cpu": "Intel Core i5-12400F / AMD Ryzen 5 5600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia RTX 4060 / AMD Radeon RX 7600, Intel Core i5-12400F / AMD Ryzen 5 5600"
     },
     {
       "title": "Moonshiner Simulator",
@@ -506,6 +506,18 @@
       "note": "Doporučená konfigurace: 2GB RAM, Intel i5或同级别"
     },
     {
+      "title": "County of Fortune",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce 970 / AMD R9 390",
+      "cpu": "Intel i5+ and equivalents",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce 970 / AMD R9 390, Intel i5+ and equivalents"
+    },
+    {
       "title": "Snow Resort Simulator",
       "tier": "green",
       "tiers": {
@@ -540,18 +552,6 @@
       "cpu": "x64 architecture with SSE2 instruction set support",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: DX11, DX12 capable graphics card, x64 architecture with SSE2 instruction set support"
-    },
-    {
-      "title": "County of Fortune",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce 970 / AMD R9 390",
-      "cpu": "Intel i5+ and equivalents",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce 970 / AMD R9 390, Intel i5+ and equivalents"
     },
     {
       "title": "Silberheim Evolving Card Game",
@@ -612,18 +612,6 @@
       "cpu": "2 GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: 1 GB VRAM, 2 GHz"
-    },
-    {
-      "title": "Rise of the Merchants",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce 970 GTX or AMD Radeon RX 480 (4 GB of VRAM, Shader Model 5.1)",
-      "cpu": "Intel i5 4690k, AMD Ryzen 5 1400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce 970 GTX or AMD Radeon RX 480 (4 GB of VRAM, Shader Model 5.1), Intel i5 4690k, AMD Ryzen 5 1400"
     },
     {
       "title": "Traffic Architect",
@@ -698,18 +686,6 @@
       "note": "Doporučená konfigurace: 3D graphics card compatible with DirectX 9.0c, 1.8 GHz"
     },
     {
-      "title": "HEART ABYSS",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce 7600 GT (512 MB)",
-      "cpu": "Intel Core i3-3240 (2*3400) or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce 7600 GT (512 MB), Intel Core i3-3240 (2*3400) or equivalent"
-    },
-    {
       "title": "DESKTOP BUG KILLER",
       "tier": "green",
       "tiers": {
@@ -720,6 +696,18 @@
       "cpu": "3.0Ghz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 680,AMD R9 280X, 3.0Ghz"
+    },
+    {
+      "title": "HEART ABYSS",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce 7600 GT (512 MB)",
+      "cpu": "Intel Core i3-3240 (2*3400) or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce 7600 GT (512 MB), Intel Core i3-3240 (2*3400) or equivalent"
     },
     {
       "title": "Pionero Capital",
