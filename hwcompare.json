@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T05:13:52.874Z",
+  "updatedAt": "2026-11-09T06:14:03.208Z",
   "games": [
     {
       "title": "Silica",
@@ -218,18 +218,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (or equivalent), Intel Core i5-12600K / AMD Ryzen 5 5600 (or equivalent)"
     },
     {
-      "title": "Mycelarium",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVidia Geforce GTX 750 Ti, AMD Radeon R7 260X",
-      "cpu": "Intel Core i5 3.0 GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVidia Geforce GTX 750 Ti, AMD Radeon R7 260X, Intel Core i5 3.0 GHz"
-    },
-    {
       "title": "Playrooms",
       "tier": "orange",
       "tiers": {
@@ -240,6 +228,18 @@
       "cpu": "Intel Core i5-10400 or AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 2060 (6 GB) or AMD RX 5700, Intel Core i5-10400 or AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Mycelarium",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVidia Geforce GTX 750 Ti, AMD Radeon R7 260X",
+      "cpu": "Intel Core i5 3.0 GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVidia Geforce GTX 750 Ti, AMD Radeon R7 260X, Intel Core i5 3.0 GHz"
     },
     {
       "title": "Metal Thunder",
@@ -434,18 +434,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD RX 570, X64 architecture"
     },
     {
-      "title": "Rat Game",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DirectX11 compatible with at least 1GB of memory",
-      "cpu": "Dual Core 2 GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: DirectX11 compatible with at least 1GB of memory, Dual Core 2 GHz"
-    },
-    {
       "title": "组长！怨念请查收！",
       "tier": "green",
       "tiers": {
@@ -456,6 +444,18 @@
       "cpu": null,
       "usedMinimum": true,
       "note": "Minimální konfigurace: Compatible OpenGL"
+    },
+    {
+      "title": "Rat Game",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DirectX11 compatible with at least 1GB of memory",
+      "cpu": "Dual Core 2 GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: DirectX11 compatible with at least 1GB of memory, Dual Core 2 GHz"
     },
     {
       "title": "Hull Rupture",
@@ -530,18 +530,6 @@
       "note": "Doporučená konfigurace: GeForce RTX 3060 / Radeon RX 6700, AMD Ryzen 7 3700X /  Intel® Core i7-6700K"
     },
     {
-      "title": "Desktop Duck",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Any dedicated or modern integrated GPU",
-      "cpu": "Any modern quad-core x64",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Any dedicated or modern integrated GPU, Any modern quad-core x64"
-    },
-    {
       "title": "Sabado",
       "tier": "orange",
       "tiers": {
@@ -552,6 +540,18 @@
       "cpu": "Intel Core i5 @ 3.0 GHz or AMD",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD"
+    },
+    {
+      "title": "Desktop Duck",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Any dedicated or modern integrated GPU",
+      "cpu": "Any modern quad-core x64",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Any dedicated or modern integrated GPU, Any modern quad-core x64"
     },
     {
       "title": "Snow Resort Simulator",
@@ -566,18 +566,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1070 8GB or AMD RX 5700, Intel Core i5-10400 or AMD Ryzen 5 3600"
     },
     {
-      "title": "女神养成：放置型",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "2GB RAM",
-      "cpu": "Intel i5或同级别",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: 2GB RAM, Intel i5或同级别"
-    },
-    {
       "title": "Beat For Speed",
       "tier": "orange",
       "tiers": {
@@ -588,6 +576,18 @@
       "cpu": "Intel Core i5-9600K or AMD Ryzen R5 3600 processor",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT, Intel Core i5-9600K or AMD Ryzen R5 3600 processor"
+    },
+    {
+      "title": "女神养成：放置型",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "2GB RAM",
+      "cpu": "Intel i5或同级别",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 2GB RAM, Intel i5或同级别"
     },
     {
       "title": "Kingdom Inc.",
@@ -626,18 +626,6 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 460 (1GB) or AMD Radeon R7 240 (1GB) or better, Intel Core2 Duo E6400 or AMD Phenom X2 Dual-Core GP-7730 or equivalent"
     },
     {
-      "title": "Catch Meow If You Can",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 970",
-      "cpu": "Core i5 6600",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GTX 970, Core i5 6600"
-    },
-    {
       "title": "County of Fortune",
       "tier": "green",
       "tiers": {
@@ -648,6 +636,18 @@
       "cpu": "Intel i5+ and equivalents",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce 970 / AMD R9 390, Intel i5+ and equivalents"
+    },
+    {
+      "title": "Catch Meow If You Can",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 970",
+      "cpu": "Core i5 6600",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GTX 970, Core i5 6600"
     },
     {
       "title": "Deadzoned",
@@ -686,18 +686,6 @@
       "note": "Doporučená konfigurace: GPU (Intel Iris Xe / AMD Vega 8), Quad Core 2,5 GHz or more"
     },
     {
-      "title": "ALTEREDBLOOD+ [AB+]",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 3060 or better",
-      "cpu": "AMD Ryzen 5 5600 or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 3060 or better, AMD Ryzen 5 5600 or better"
-    },
-    {
       "title": "Eternal Palace Sakura",
       "tier": "green",
       "tiers": {
@@ -708,6 +696,18 @@
       "cpu": "Intel Core i7-4790 or AMD Ryzen 3 3200G",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX1050 Ti, Intel Core i7-4790 or AMD Ryzen 3 3200G"
+    },
+    {
+      "title": "ALTEREDBLOOD+ [AB+]",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 3060 or better",
+      "cpu": "AMD Ryzen 5 5600 or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 3060 or better, AMD Ryzen 5 5600 or better"
     },
     {
       "title": "HELENA : Cloud District",
@@ -746,18 +746,6 @@
       "note": "Minimální konfigurace: Nvidia GeForce RTX 3060 Ti, AMD Ryzen 7 5008X 8-Core Processor"
     },
     {
-      "title": "Caravan Carnage: Fruity Road",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DirectX 11 compatible dedicated graphics",
-      "cpu": "Quad-core 2.5 GHz or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: DirectX 11 compatible dedicated graphics, Quad-core 2.5 GHz or better"
-    },
-    {
       "title": "WORKS: Motorsport Factory",
       "tier": "green",
       "tiers": {
@@ -768,6 +756,18 @@
       "cpu": "Dual-core 2.0 GHz (Intel Core i3 / AMD Ryzen 3 or better)",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Integrated graphics with OpenGL 3.3 / WebGL 2 support (Intel HD 4000 or better), Dual-core 2.0 GHz (Intel Core i3 / AMD Ryzen 3 or better)"
+    },
+    {
+      "title": "Caravan Carnage: Fruity Road",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DirectX 11 compatible dedicated graphics",
+      "cpu": "Quad-core 2.5 GHz or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: DirectX 11 compatible dedicated graphics, Quad-core 2.5 GHz or better"
     },
     {
       "title": "HEART ABYSS",
@@ -830,18 +830,6 @@
       "note": "Doporučená konfigurace: 3D graphics card compatible with DirectX 9.0c, 1.8 GHz"
     },
     {
-      "title": "Mortal Path: Mighty Senior Brother",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 (4GB VRAM)",
-      "cpu": null,
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 (4GB VRAM)"
-    },
-    {
       "title": "Agent of Strange: Arrival",
       "tier": "orange",
       "tiers": {
@@ -852,6 +840,18 @@
       "cpu": "i5-11th Gen CPU or similar",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 2060 or better, i5-11th Gen CPU or similar"
+    },
+    {
+      "title": "Mortal Path: Mighty Senior Brother",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 (4GB VRAM)",
+      "cpu": null,
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 (4GB VRAM)"
     },
     {
       "title": "Replay Value: Second Hand Games",
