@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T11:12:46.998Z",
+  "updatedAt": "2026-11-10T12:12:35.466Z",
   "games": [
     {
       "title": "Silica",
@@ -50,18 +50,6 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 2070 or AMD Radeon RX 5700 XT, Intel Core i5 8400 or AMD Ryzen 5 2600"
     },
     {
-      "title": "Can 'Em All",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "AMD Radeon RX 460 / NVIDIA GTX 950",
-      "cpu": "AMD Ryzen 3 1200 / Intel Core i3-7100",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: AMD Radeon RX 460 / NVIDIA GTX 950, AMD Ryzen 3 1200 / Intel Core i3-7100"
-    },
-    {
       "title": "Potato Please",
       "tier": "orange",
       "tiers": {
@@ -74,6 +62,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT, Intel Core i5-10400 or AMD Ryzen 5 3600"
     },
     {
+      "title": "Can 'Em All",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "AMD Radeon RX 460 / NVIDIA GTX 950",
+      "cpu": "AMD Ryzen 3 1200 / Intel Core i3-7100",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: AMD Radeon RX 460 / NVIDIA GTX 950, AMD Ryzen 3 1200 / Intel Core i3-7100"
+    },
+    {
       "title": "ArcheAge Chronicles",
       "tier": "red",
       "tiers": {
@@ -84,6 +84,18 @@
       "cpu": "Intel Core i7-12700/AMd Ryzen 7 5700X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4060 Ti 16GB / AMD Radeon RX 7700 XT (VRAM 12GB), Intel Core i7-12700/AMd Ryzen 7 5700X"
+    },
+    {
+      "title": "Football Life Simulator",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1060 / AMD Radeon RX 570",
+      "cpu": "Intel Core i5-7500 / AMD Ryzen 5 1600",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 1060 / AMD Radeon RX 570, Intel Core i5-7500 / AMD Ryzen 5 1600"
     },
     {
       "title": "Godzilla: Destroy All Monsters Melee Remastered",
@@ -314,18 +326,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 / Intel Iris Xe, Quad-core 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600)"
     },
     {
-      "title": "组长！怨念请查收！",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Compatible OpenGL",
-      "cpu": null,
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Compatible OpenGL"
-    },
-    {
       "title": "Farm to Fortune",
       "tier": "green",
       "tiers": {
@@ -336,6 +336,18 @@
       "cpu": "Intel i5",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX970, Intel i5"
+    },
+    {
+      "title": "组长！怨念请查收！",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Compatible OpenGL",
+      "cpu": null,
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Compatible OpenGL"
     },
     {
       "title": "Cozy Game Restoration",
