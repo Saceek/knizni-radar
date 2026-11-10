@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T21:13:11.247Z",
+  "updatedAt": "2026-11-10T22:12:55.629Z",
   "games": [
     {
       "title": "Silica",
@@ -422,18 +422,6 @@
       "note": "Doporučená konfigurace: GeForce GTX 1060 or Radeon RX 560, Intel i5-12600K or AMD Ryzen 7 5700X"
     },
     {
-      "title": "Rat Game",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DirectX11 compatible with at least 1GB of memory",
-      "cpu": "Dual Core 2 GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: DirectX11 compatible with at least 1GB of memory, Dual Core 2 GHz"
-    },
-    {
       "title": "Feed The Forest",
       "tier": "green",
       "tiers": {
@@ -506,6 +494,18 @@
       "note": "Doporučená konfigurace: GeForce RTX 3060 / Radeon RX 6700, AMD Ryzen 7 3700X /  Intel® Core i7-6700K"
     },
     {
+      "title": "Annihilated",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "AMD Radeon Graphics (integrated) or equivalent",
+      "cpu": "AMD Ryzen 5 5625U or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: AMD Radeon Graphics (integrated) or equivalent, AMD Ryzen 5 5625U or equivalent"
+    },
+    {
       "title": "Mayday: The Survival Island",
       "tier": "green",
       "tiers": {
@@ -516,18 +516,6 @@
       "cpu": "Intel Core2 Duo E6400 or AMD Phenom X2 Dual-Core GP-7730 or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 460 (1GB) or AMD Radeon R7 240 (1GB) or better, Intel Core2 Duo E6400 or AMD Phenom X2 Dual-Core GP-7730 or equivalent"
-    },
-    {
-      "title": "Beat For Speed",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT",
-      "cpu": "Intel Core i5-9600K or AMD Ryzen R5 3600 processor",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT, Intel Core i5-9600K or AMD Ryzen R5 3600 processor"
     },
     {
       "title": "女神养成：放置型",
@@ -542,16 +530,16 @@
       "note": "Doporučená konfigurace: 2GB RAM, Intel i5或同级别"
     },
     {
-      "title": "Annihilated",
-      "tier": "green",
+      "title": "Beat For Speed",
+      "tier": "orange",
       "tiers": {
-        "allyx": "green",
+        "allyx": "orange",
         "pc": "green"
       },
-      "gpu": "AMD Radeon Graphics (integrated) or equivalent",
-      "cpu": "AMD Ryzen 5 5625U or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: AMD Radeon Graphics (integrated) or equivalent, AMD Ryzen 5 5625U or equivalent"
+      "gpu": "NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT",
+      "cpu": "Intel Core i5-9600K or AMD Ryzen R5 3600 processor",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT, Intel Core i5-9600K or AMD Ryzen R5 3600 processor"
     },
     {
       "title": "Snow Resort Simulator",
@@ -564,6 +552,18 @@
       "cpu": "Intel Core i5-10400 or AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1070 8GB or AMD RX 5700, Intel Core i5-10400 or AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Safari-TV",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "RTX 2060 or RX 7600xt or equivalent",
+      "cpu": "Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent"
     },
     {
       "title": "Eternal Palace Sakura",
@@ -600,18 +600,6 @@
       "cpu": "Dual-core 2.0 GHz (Intel Core i3 / AMD Ryzen 3 or better)",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Integrated graphics with OpenGL 3.3 / WebGL 2 support (Intel HD 4000 or better), Dual-core 2.0 GHz (Intel Core i3 / AMD Ryzen 3 or better)"
-    },
-    {
-      "title": "Safari-TV",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "RTX 2060 or RX 7600xt or equivalent",
-      "cpu": "Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent"
     },
     {
       "title": "ALTEREDBLOOD+ [AB+]",
@@ -758,6 +746,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 (4GB VRAM)"
     },
     {
+      "title": "What the Buck?!",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 750 Ti, Radeon R7 360 or Intel UHD Graphics 730",
+      "cpu": "Quad core 2Ghz+",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 750 Ti, Radeon R7 360 or Intel UHD Graphics 730, Quad core 2Ghz+"
+    },
+    {
       "title": "Agent of Strange: Arrival",
       "tier": "orange",
       "tiers": {
@@ -770,16 +770,16 @@
       "note": "Doporučená konfigurace: GeForce RTX 2060 or better, i5-11th Gen CPU or similar"
     },
     {
-      "title": "What the Buck?!",
+      "title": "Sushiamo",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "GeForce GTX 750 Ti, Radeon R7 360 or Intel UHD Graphics 730",
-      "cpu": "Quad core 2Ghz+",
+      "gpu": "DirectX 12 or Vulkan compatible, 1 GB VRAM",
+      "cpu": "Dual-core 2.0 GHz",
       "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 750 Ti, Radeon R7 360 or Intel UHD Graphics 730, Quad core 2Ghz+"
+      "note": "Minimální konfigurace: DirectX 12 or Vulkan compatible, 1 GB VRAM, Dual-core 2.0 GHz"
     },
     {
       "title": "降临之地 Realm of Advent",
@@ -816,18 +816,6 @@
       "cpu": "Core i5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 980 Ti, Core i5"
-    },
-    {
-      "title": "Sushiamo",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DirectX 12 or Vulkan compatible, 1 GB VRAM",
-      "cpu": "Dual-core 2.0 GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: DirectX 12 or Vulkan compatible, 1 GB VRAM, Dual-core 2.0 GHz"
     },
     {
       "title": "Livin' the Cream: Ice Cream Simulator",
