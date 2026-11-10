@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T22:12:55.629Z",
+  "updatedAt": "2026-11-10T23:14:43.117Z",
   "games": [
     {
       "title": "Silica",
@@ -746,6 +746,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 (4GB VRAM)"
     },
     {
+      "title": "Sushiamo",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DirectX 12 or Vulkan compatible, 1 GB VRAM",
+      "cpu": "Dual-core 2.0 GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: DirectX 12 or Vulkan compatible, 1 GB VRAM, Dual-core 2.0 GHz"
+    },
+    {
       "title": "What the Buck?!",
       "tier": "green",
       "tiers": {
@@ -768,18 +780,6 @@
       "cpu": "i5-11th Gen CPU or similar",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 2060 or better, i5-11th Gen CPU or similar"
-    },
-    {
-      "title": "Sushiamo",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DirectX 12 or Vulkan compatible, 1 GB VRAM",
-      "cpu": "Dual-core 2.0 GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: DirectX 12 or Vulkan compatible, 1 GB VRAM, Dual-core 2.0 GHz"
     },
     {
       "title": "降临之地 Realm of Advent",
@@ -816,6 +816,30 @@
       "cpu": "Core i5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 980 Ti, Core i5"
+    },
+    {
+      "title": "ASTERIS",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT",
+      "cpu": "Intel Core i5-11400 / AMD Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i5-11400 / AMD Ryzen 5 5600"
+    },
+    {
+      "title": "Icy Tower",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "1GB",
+      "cpu": "i3 2GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: 1GB, i3 2GHz"
     },
     {
       "title": "Livin' the Cream: Ice Cream Simulator",
