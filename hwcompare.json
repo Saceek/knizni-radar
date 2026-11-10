@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T05:13:09.770Z",
+  "updatedAt": "2026-11-10T06:13:04.591Z",
   "games": [
     {
       "title": "Silica",
@@ -62,18 +62,6 @@
       "note": "Minimální konfigurace: AMD Radeon RX 460 / NVIDIA GTX 950, AMD Ryzen 3 1200 / Intel Core i3-7100"
     },
     {
-      "title": "Potato Please",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT",
-      "cpu": "Intel Core i5-10400 or AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT, Intel Core i5-10400 or AMD Ryzen 5 3600"
-    },
-    {
       "title": "ArcheAge Chronicles",
       "tier": "red",
       "tiers": {
@@ -84,6 +72,18 @@
       "cpu": "Intel Core i7-12700/AMd Ryzen 7 5700X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4060 Ti 16GB / AMD Radeon RX 7700 XT (VRAM 12GB), Intel Core i7-12700/AMd Ryzen 7 5700X"
+    },
+    {
+      "title": "Potato Please",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT",
+      "cpu": "Intel Core i5-10400 or AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT, Intel Core i5-10400 or AMD Ryzen 5 3600"
     },
     {
       "title": "Godzilla: Destroy All Monsters Melee Remastered",
@@ -170,18 +170,6 @@
       "note": "Doporučená konfigurace: Any dedicated or modern integrated GPU with DirectX 9+ support, Intel Core i3 / AMD Ryzen 3 (or any modern 2.0 GHz+ CPU)"
     },
     {
-      "title": "ZED ZONE",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Nvidia GTX 1060",
-      "cpu": "INTEL i7/ AMD R7",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GTX 1060, INTEL i7/ AMD R7"
-    },
-    {
       "title": "Loftia",
       "tier": "green",
       "tiers": {
@@ -192,6 +180,18 @@
       "cpu": "Intel Core i5-12600K / AMD Ryzen 5 5600 (or equivalent)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (or equivalent), Intel Core i5-12600K / AMD Ryzen 5 5600 (or equivalent)"
+    },
+    {
+      "title": "ZED ZONE",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GTX 1060",
+      "cpu": "INTEL i7/ AMD R7",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GTX 1060, INTEL i7/ AMD R7"
     },
     {
       "title": "Mycelarium",
@@ -278,18 +278,6 @@
       "note": "Doporučená konfigurace: Nvidia RTX 4060 / AMD Radeon RX 7600, Intel Core i5-12400F / AMD Ryzen 5 5600"
     },
     {
-      "title": "Death at Fleming Manor",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel HD Graphics 530 or equivalent",
-      "cpu": "Intel Core i5 3.0 GHz or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 530 or equivalent, Intel Core i5 3.0 GHz or equivalent"
-    },
-    {
       "title": "Wielders of the Essence",
       "tier": "green",
       "tiers": {
@@ -300,6 +288,18 @@
       "cpu": null,
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 970, RX 570 or similar"
+    },
+    {
+      "title": "Death at Fleming Manor",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD Graphics 530 or equivalent",
+      "cpu": "Intel Core i5 3.0 GHz or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics 530 or equivalent, Intel Core i5 3.0 GHz or equivalent"
     },
     {
       "title": "GRAVHOUNDS",
@@ -614,18 +614,6 @@
       "note": "Doporučená konfigurace: DirectX 11 compatible dedicated graphics, Quad-core 2.5 GHz or better"
     },
     {
-      "title": "Cinderwake",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 1660 / Radeon RX 5600 or better",
-      "cpu": "6 cores, 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1660 / Radeon RX 5600 or better, 6 cores, 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600)"
-    },
-    {
       "title": "DESKTOP BUG KILLER",
       "tier": "green",
       "tiers": {
@@ -636,6 +624,18 @@
       "cpu": "3.0Ghz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 680,AMD R9 280X, 3.0Ghz"
+    },
+    {
+      "title": "Cinderwake",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 1660 / Radeon RX 5600 or better",
+      "cpu": "6 cores, 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1660 / Radeon RX 5600 or better, 6 cores, 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600)"
     },
     {
       "title": "Theme Hospital™",
@@ -722,18 +722,6 @@
       "note": "Doporučená konfigurace: GeForce RTX 2060 or better, i5-11th Gen CPU or similar"
     },
     {
-      "title": "Replay Value: Second Hand Games",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce 840M",
-      "cpu": "Intel Pentium CPU G860",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce 840M, Intel Pentium CPU G860"
-    },
-    {
       "title": "降临之地 Realm of Advent",
       "tier": "green",
       "tiers": {
@@ -744,6 +732,18 @@
       "cpu": "x64 architecture with SSE2 instruction set",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 4 GB, x64 architecture with SSE2 instruction set"
+    },
+    {
+      "title": "Replay Value: Second Hand Games",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce 840M",
+      "cpu": "Intel Pentium CPU G860",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce 840M, Intel Pentium CPU G860"
     },
     {
       "title": "Sushiamo",
