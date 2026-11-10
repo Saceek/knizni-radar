@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T15:13:02.874Z",
+  "updatedAt": "2026-11-10T16:13:20.798Z",
   "games": [
     {
       "title": "Silica",
@@ -326,6 +326,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 / Intel Iris Xe, Quad-core 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600)"
     },
     {
+      "title": "BOXROOM",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVidia GeForce 1080 GTX /AMD RX 5700",
+      "cpu": "Intel Core i5 4690K / AMD Ryzen 5 1500x",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVidia GeForce 1080 GTX /AMD RX 5700, Intel Core i5 4690K / AMD Ryzen 5 1500x"
+    },
+    {
       "title": "组长！怨念请查收！",
       "tier": "green",
       "tiers": {
@@ -386,6 +398,18 @@
       "note": "Minimální konfigurace: GeForce GTX 670 / Radeon HD 7970, Intel i7-8700, Ryzen 1600"
     },
     {
+      "title": "Clean Start",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 1060 or Radeon RX 560",
+      "cpu": "Intel i5-12600K or AMD Ryzen 7 5700X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1060 or Radeon RX 560, Intel i5-12600K or AMD Ryzen 7 5700X"
+    },
+    {
       "title": "Rat Game",
       "tier": "green",
       "tiers": {
@@ -398,16 +422,16 @@
       "note": "Minimální konfigurace: DirectX11 compatible with at least 1GB of memory, Dual Core 2 GHz"
     },
     {
-      "title": "Clean Start",
+      "title": "Warhammer Survivors",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "GeForce GTX 1060 or Radeon RX 560",
-      "cpu": "Intel i5-12600K or AMD Ryzen 7 5700X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1060 or Radeon RX 560, Intel i5-12600K or AMD Ryzen 7 5700X"
+      "gpu": "GTX 750 or equivalent graphics card",
+      "cpu": "Dual Core 2.4 Ghz x86-64",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GTX 750 or equivalent graphics card, Dual Core 2.4 Ghz x86-64"
     },
     {
       "title": "Feed The Forest",
@@ -434,18 +458,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
-      "title": "Moonshiner Simulator",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "GeForce RTX 3060 / Radeon RX 6700",
-      "cpu": "AMD Ryzen 7 3700X /  Intel® Core i7-6700K",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 / Radeon RX 6700, AMD Ryzen 7 3700X /  Intel® Core i7-6700K"
-    },
-    {
       "title": "Sabado",
       "tier": "orange",
       "tiers": {
@@ -458,6 +470,18 @@
       "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD"
     },
     {
+      "title": "Moonshiner Simulator",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "GeForce RTX 3060 / Radeon RX 6700",
+      "cpu": "AMD Ryzen 7 3700X /  Intel® Core i7-6700K",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3060 / Radeon RX 6700, AMD Ryzen 7 3700X /  Intel® Core i7-6700K"
+    },
+    {
       "title": "County of Fortune",
       "tier": "green",
       "tiers": {
@@ -468,6 +492,18 @@
       "cpu": "Intel i5+ and equivalents",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce 970 / AMD R9 390, Intel i5+ and equivalents"
+    },
+    {
+      "title": "Punch The Walls",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 1060 / AMD RX 580",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
       "title": "Mayday: The Survival Island",
@@ -566,6 +602,18 @@
       "note": "Minimální konfigurace: Integrated graphics with OpenGL 3.3 / WebGL 2 support (Intel HD 4000 or better), Dual-core 2.0 GHz (Intel Core i3 / AMD Ryzen 3 or better)"
     },
     {
+      "title": "Cinderwake",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 1660 / Radeon RX 5600 or better",
+      "cpu": "6 cores, 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1660 / Radeon RX 5600 or better, 6 cores, 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600)"
+    },
+    {
       "title": "Deadzoned",
       "tier": "green",
       "tiers": {
@@ -588,18 +636,6 @@
       "cpu": "Quad-core 3.0 GHz (Intel Core i5 or equivalent)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Dedicated GPU, GeForce GTX 1050 / Radeon RX 560 or better, Quad-core 3.0 GHz (Intel Core i5 or equivalent)"
-    },
-    {
-      "title": "Cinderwake",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 1660 / Radeon RX 5600 or better",
-      "cpu": "6 cores, 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1660 / Radeon RX 5600 or better, 6 cores, 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600)"
     },
     {
       "title": "Caravan Carnage: Fruity Road",
@@ -650,18 +686,6 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 / AMD RX 6600 XT, Intel Core i5-11400 / AMD Ryzen 5 3600"
     },
     {
-      "title": "HEART ABYSS",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce 7600 GT (512 MB)",
-      "cpu": "Intel Core i3-3240 (2*3400) or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce 7600 GT (512 MB), Intel Core i3-3240 (2*3400) or equivalent"
-    },
-    {
       "title": "Elven Huntress: Sunveil",
       "tier": "green",
       "tiers": {
@@ -672,6 +696,18 @@
       "cpu": "Intel Core i7-8700K or AMD Ryzen 5 1600X",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GTX 970/1650 / AMD Radeon R9 290X, Intel Core i7-8700K or AMD Ryzen 5 1600X"
+    },
+    {
+      "title": "HEART ABYSS",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce 7600 GT (512 MB)",
+      "cpu": "Intel Core i3-3240 (2*3400) or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce 7600 GT (512 MB), Intel Core i3-3240 (2*3400) or equivalent"
     },
     {
       "title": "Mortal Path: Mighty Senior Brother",
