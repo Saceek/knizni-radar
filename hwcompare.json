@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T13:12:37.832Z",
+  "updatedAt": "2026-11-10T14:12:27.157Z",
   "games": [
     {
       "title": "Silica",
@@ -590,6 +590,18 @@
       "note": "Doporučená konfigurace: Dedicated GPU, GeForce GTX 1050 / Radeon RX 560 or better, Quad-core 3.0 GHz (Intel Core i5 or equivalent)"
     },
     {
+      "title": "Cinderwake",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 1660 / Radeon RX 5600 or better",
+      "cpu": "6 cores, 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1660 / Radeon RX 5600 or better, 6 cores, 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600)"
+    },
+    {
       "title": "Caravan Carnage: Fruity Road",
       "tier": "green",
       "tiers": {
@@ -602,16 +614,16 @@
       "note": "Doporučená konfigurace: DirectX 11 compatible dedicated graphics, Quad-core 2.5 GHz or better"
     },
     {
-      "title": "Cinderwake",
+      "title": "Warhammer Survivors",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "GeForce GTX 1660 / Radeon RX 5600 or better",
-      "cpu": "6 cores, 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1660 / Radeon RX 5600 or better, 6 cores, 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600)"
+      "gpu": "GTX 750 or equivalent graphics card",
+      "cpu": "Dual Core 2.4 Ghz x86-64",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GTX 750 or equivalent graphics card, Dual Core 2.4 Ghz x86-64"
     },
     {
       "title": "Theme Hospital™",
@@ -686,18 +698,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 (4GB VRAM)"
     },
     {
-      "title": "Agent of Strange: Arrival",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "GeForce RTX 2060 or better",
-      "cpu": "i5-11th Gen CPU or similar",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 2060 or better, i5-11th Gen CPU or similar"
-    },
-    {
       "title": "降临之地 Realm of Advent",
       "tier": "green",
       "tiers": {
@@ -708,6 +708,18 @@
       "cpu": "x64 architecture with SSE2 instruction set",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 4 GB, x64 architecture with SSE2 instruction set"
+    },
+    {
+      "title": "Agent of Strange: Arrival",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "GeForce RTX 2060 or better",
+      "cpu": "i5-11th Gen CPU or similar",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 2060 or better, i5-11th Gen CPU or similar"
     },
     {
       "title": "Replay Value: Second Hand Games",
