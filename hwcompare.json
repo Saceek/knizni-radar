@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T08:12:57.137Z",
+  "updatedAt": "2026-11-10T09:13:09.848Z",
   "games": [
     {
       "title": "Silica",
@@ -50,6 +50,18 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 2070 or AMD Radeon RX 5700 XT, Intel Core i5 8400 or AMD Ryzen 5 2600"
     },
     {
+      "title": "Potato Please",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT",
+      "cpu": "Intel Core i5-10400 or AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT, Intel Core i5-10400 or AMD Ryzen 5 3600"
+    },
+    {
       "title": "Can 'Em All",
       "tier": "green",
       "tiers": {
@@ -72,18 +84,6 @@
       "cpu": "Intel Core i7-12700/AMd Ryzen 7 5700X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4060 Ti 16GB / AMD Radeon RX 7700 XT (VRAM 12GB), Intel Core i7-12700/AMd Ryzen 7 5700X"
-    },
-    {
-      "title": "Potato Please",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT",
-      "cpu": "Intel Core i5-10400 or AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT, Intel Core i5-10400 or AMD Ryzen 5 3600"
     },
     {
       "title": "Godzilla: Destroy All Monsters Melee Remastered",
@@ -360,6 +360,18 @@
       "cpu": "Windows 11 (64-bit)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Integrated Graphics, Windows 11 (64-bit)"
+    },
+    {
+      "title": "Hull Rupture",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 670 / Radeon HD 7970",
+      "cpu": "Intel i7-8700, Ryzen 1600",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 670 / Radeon HD 7970, Intel i7-8700, Ryzen 1600"
     },
     {
       "title": "Rat Game",
@@ -660,18 +672,6 @@
       "cpu": "Intel Core i7-8700K or AMD Ryzen 5 1600X",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GTX 970/1650 / AMD Radeon R9 290X, Intel Core i7-8700K or AMD Ryzen 5 1600X"
-    },
-    {
-      "title": "GloveUp!",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA RTX 3060 / AMD RX 6600 XT (8 GB VRAM)",
-      "cpu": "Intel Core i5-12400 / AMD Ryzen 5 5600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 3060 / AMD RX 6600 XT (8 GB VRAM), Intel Core i5-12400 / AMD Ryzen 5 5600"
     },
     {
       "title": "Mortal Path: Mighty Senior Brother",
