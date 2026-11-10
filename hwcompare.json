@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T04:13:04.093Z",
+  "updatedAt": "2026-11-10T05:13:09.770Z",
   "games": [
     {
       "title": "Silica",
@@ -62,18 +62,6 @@
       "note": "Minimální konfigurace: AMD Radeon RX 460 / NVIDIA GTX 950, AMD Ryzen 3 1200 / Intel Core i3-7100"
     },
     {
-      "title": "ArcheAge Chronicles",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 4060 Ti 16GB / AMD Radeon RX 7700 XT (VRAM 12GB)",
-      "cpu": "Intel Core i7-12700/AMd Ryzen 7 5700X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4060 Ti 16GB / AMD Radeon RX 7700 XT (VRAM 12GB), Intel Core i7-12700/AMd Ryzen 7 5700X"
-    },
-    {
       "title": "Potato Please",
       "tier": "orange",
       "tiers": {
@@ -84,6 +72,18 @@
       "cpu": "Intel Core i5-10400 or AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT, Intel Core i5-10400 or AMD Ryzen 5 3600"
+    },
+    {
+      "title": "ArcheAge Chronicles",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 4060 Ti 16GB / AMD Radeon RX 7700 XT (VRAM 12GB)",
+      "cpu": "Intel Core i7-12700/AMd Ryzen 7 5700X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4060 Ti 16GB / AMD Radeon RX 7700 XT (VRAM 12GB), Intel Core i7-12700/AMd Ryzen 7 5700X"
     },
     {
       "title": "Godzilla: Destroy All Monsters Melee Remastered",
@@ -278,18 +278,6 @@
       "note": "Doporučená konfigurace: Nvidia RTX 4060 / AMD Radeon RX 7600, Intel Core i5-12400F / AMD Ryzen 5 5600"
     },
     {
-      "title": "Wielders of the Essence",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 970, RX 570 or similar",
-      "cpu": null,
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 970, RX 570 or similar"
-    },
-    {
       "title": "Death at Fleming Manor",
       "tier": "green",
       "tiers": {
@@ -300,6 +288,18 @@
       "cpu": "Intel Core i5 3.0 GHz or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 530 or equivalent, Intel Core i5 3.0 GHz or equivalent"
+    },
+    {
+      "title": "Wielders of the Essence",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 970, RX 570 or similar",
+      "cpu": null,
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 970, RX 570 or similar"
     },
     {
       "title": "GRAVHOUNDS",
@@ -744,6 +744,18 @@
       "cpu": "x64 architecture with SSE2 instruction set",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 4 GB, x64 architecture with SSE2 instruction set"
+    },
+    {
+      "title": "Sushiamo",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DirectX 12 or Vulkan compatible, 1 GB VRAM",
+      "cpu": "Dual-core 2.0 GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: DirectX 12 or Vulkan compatible, 1 GB VRAM, Dual-core 2.0 GHz"
     },
     {
       "title": "Slowly Sliding Ducks",
