@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-11T18:13:34.707Z",
+  "updatedAt": "2026-11-11T19:13:20.264Z",
   "games": [
     {
       "title": "Silica",
@@ -110,18 +110,6 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 2060 (6 GB) or AMD RX 5700, Intel Core i5-10400 or AMD Ryzen 5 3600"
     },
     {
-      "title": "PIT OF GOBLIN",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GForce GTX 1050",
-      "cpu": "Intel Core i5-7400 CPU @ 3.00GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GForce GTX 1050, Intel Core i5-7400 CPU @ 3.00GHz"
-    },
-    {
       "title": "Football Manager 27",
       "tier": "orange",
       "tiers": {
@@ -132,6 +120,18 @@
       "cpu": "Desktop: Intel Core i5-9600 or AMD Ryzen 5 2600 Laptop: Intel Core i5-1035G7 or AMD Ryzen 7 3750H",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Desktop: NVIDIA GeForce RTX 2060 or AMD Radeon RX 5600 XT Laptop: NVIDIA GeForce RTX 2060 Mobile or AMD Radeon RX 6600M 2 GiB VRAM, Desktop: Intel Core i5-9600 or AMD Ryzen 5 2600 Laptop: Intel Core i5-1035G7 or AMD Ryzen 7 3750H"
+    },
+    {
+      "title": "PIT OF GOBLIN",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GForce GTX 1050",
+      "cpu": "Intel Core i5-7400 CPU @ 3.00GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GForce GTX 1050, Intel Core i5-7400 CPU @ 3.00GHz"
     },
     {
       "title": "Road Rash™",
@@ -470,6 +470,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce 970 / AMD R9 390, Intel i5+ and equivalents"
     },
     {
+      "title": "MycoRelic",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DirectX 11 or DirectX 12 compatible graphics card",
+      "cpu": "Quad-core Intel or AMD, 2.5 GHz or faster",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: DirectX 11 or DirectX 12 compatible graphics card, Quad-core Intel or AMD, 2.5 GHz or faster"
+    },
+    {
       "title": "Sabado",
       "tier": "orange",
       "tiers": {
@@ -482,18 +494,6 @@
       "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD"
     },
     {
-      "title": "Moonshiner Simulator",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "GeForce RTX 3060 / Radeon RX 6700",
-      "cpu": "AMD Ryzen 7 3700X /  Intel® Core i7-6700K",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 / Radeon RX 6700, AMD Ryzen 7 3700X /  Intel® Core i7-6700K"
-    },
-    {
       "title": "Safari-TV",
       "tier": "orange",
       "tiers": {
@@ -504,6 +504,18 @@
       "cpu": "Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent"
+    },
+    {
+      "title": "Moonshiner Simulator",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "GeForce RTX 3060 / Radeon RX 6700",
+      "cpu": "AMD Ryzen 7 3700X /  Intel® Core i7-6700K",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3060 / Radeon RX 6700, AMD Ryzen 7 3700X /  Intel® Core i7-6700K"
     },
     {
       "title": "Icy Tower",
@@ -530,6 +542,18 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 460 (1GB) or AMD Radeon R7 240 (1GB) or better, Intel Core2 Duo E6400 or AMD Phenom X2 Dual-Core GP-7730 or equivalent"
     },
     {
+      "title": "What the Buck?!",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 750 Ti, Radeon R7 360 or Intel UHD Graphics 730",
+      "cpu": "Quad core 2Ghz+",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 750 Ti, Radeon R7 360 or Intel UHD Graphics 730, Quad core 2Ghz+"
+    },
+    {
       "title": "女神养成：放置型",
       "tier": "green",
       "tiers": {
@@ -542,16 +566,16 @@
       "note": "Doporučená konfigurace: 2GB RAM, Intel i5或同级别"
     },
     {
-      "title": "What the Buck?!",
-      "tier": "green",
+      "title": "Revenge of the Mage",
+      "tier": "red",
       "tiers": {
-        "allyx": "green",
+        "allyx": "red",
         "pc": "green"
       },
-      "gpu": "GeForce GTX 750 Ti, Radeon R7 360 or Intel UHD Graphics 730",
-      "cpu": "Quad core 2Ghz+",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 750 Ti, Radeon R7 360 or Intel UHD Graphics 730, Quad core 2Ghz+"
+      "gpu": "NVIDIA GeForce RTX 3060",
+      "cpu": "Intel Core i7-11700",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060, Intel Core i7-11700"
     },
     {
       "title": "Beat For Speed",
@@ -626,18 +650,6 @@
       "note": "Doporučená konfigurace: Dedicated GPU, GeForce GTX 1050 / Radeon RX 560 or better, Quad-core 3.0 GHz (Intel Core i5 or equivalent)"
     },
     {
-      "title": "Deadzoned",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "1 GB VRAM",
-      "cpu": "2 GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: 1 GB VRAM, 2 GHz"
-    },
-    {
       "title": "We Steal From Old People: The Game",
       "tier": "green",
       "tiers": {
@@ -648,6 +660,18 @@
       "cpu": "Intel Core i5-6600K / AMD Ryzen 5 1600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: VIDIA GeForce GTX 1050 / AMD Radeon RX 460 (Vulkan 1.2), Intel Core i5-6600K / AMD Ryzen 5 1600"
+    },
+    {
+      "title": "Deadzoned",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "1 GB VRAM",
+      "cpu": "2 GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: 1 GB VRAM, 2 GHz"
     },
     {
       "title": "Caravan Carnage: Fruity Road",
@@ -770,6 +794,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 4 GB, x64 architecture with SSE2 instruction set"
     },
     {
+      "title": "Livin' the Cream: Ice Cream Simulator",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA RTX 2070 / AMD RX 5700 XT (8 GB)",
+      "cpu": "Intel i5-8600K / Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA RTX 2070 / AMD RX 5700 XT (8 GB), Intel i5-8600K / Ryzen 5 3600"
+    },
+    {
       "title": "Go Next!",
       "tier": "green",
       "tiers": {
@@ -794,16 +830,16 @@
       "note": "Doporučená konfigurace: GeForce RTX 2060 or better, i5-11th Gen CPU or similar"
     },
     {
-      "title": "Livin' the Cream: Ice Cream Simulator",
-      "tier": "orange",
+      "title": "Leviathan: Rhino",
+      "tier": "green",
       "tiers": {
-        "allyx": "orange",
+        "allyx": "green",
         "pc": "green"
       },
-      "gpu": "NVIDIA RTX 2070 / AMD RX 5700 XT (8 GB)",
-      "cpu": "Intel i5-8600K / Ryzen 5 3600",
+      "gpu": "GTX 980 Ti",
+      "cpu": "Core i5",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 2070 / AMD RX 5700 XT (8 GB), Intel i5-8600K / Ryzen 5 3600"
+      "note": "Doporučená konfigurace: GTX 980 Ti, Core i5"
     },
     {
       "title": "Brick Buddies",
@@ -818,18 +854,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 Ti / AMD Radeon, Intel Core i5-4460 or AMD FX-8350 or equivalent"
     },
     {
-      "title": "Leviathan: Rhino",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 980 Ti",
-      "cpu": "Core i5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 980 Ti, Core i5"
-    },
-    {
       "title": "Replay Value: Second Hand Games",
       "tier": "green",
       "tiers": {
@@ -840,6 +864,18 @@
       "cpu": "Intel Pentium CPU G860",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce 840M, Intel Pentium CPU G860"
+    },
+    {
+      "title": "Dashoot: ABYA's Adventure",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 760 / Radeon R7 260X / Iris Xe Graphics",
+      "cpu": "Intel Core i5-4430 / AMD FX-4350",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 760 / Radeon R7 260X / Iris Xe Graphics, Intel Core i5-4430 / AMD FX-4350"
     },
     {
       "title": "Escape Academy 2: Back 2 School",
@@ -876,18 +912,6 @@
       "cpu": "Intel Core i5 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Dedicated GPU (NVIDIA GTX 1050 or equivalent), Intel Core i5 or equivalent"
-    },
-    {
-      "title": "Dashoot: ABYA's Adventure",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 760 / Radeon R7 260X / Iris Xe Graphics",
-      "cpu": "Intel Core i5-4430 / AMD FX-4350",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 760 / Radeon R7 260X / Iris Xe Graphics, Intel Core i5-4430 / AMD FX-4350"
     },
     {
       "title": "DARK PGT 2: The Red Death",
