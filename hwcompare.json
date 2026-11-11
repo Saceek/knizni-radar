@@ -1,18 +1,6 @@
 {
-  "updatedAt": "2026-11-11T06:13:09.014Z",
+  "updatedAt": "2026-11-11T07:13:12.215Z",
   "games": [
-    {
-      "title": "Silica",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 1080 or AMD Radeon RX 5700",
-      "cpu": "Intel Core i5-10400 or AMD equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1080 or AMD Radeon RX 5700, Intel Core i5-10400 or AMD equivalent"
-    },
     {
       "title": "Queen's Domain",
       "tier": "green",
@@ -24,6 +12,18 @@
       "cpu": "Intel Core i5 quad core, 3.5ghz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 1060 / AMD RX 580, Intel Core i5 quad core, 3.5ghz"
+    },
+    {
+      "title": "Silica",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 1080 or AMD Radeon RX 5700",
+      "cpu": "Intel Core i5-10400 or AMD equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1080 or AMD Radeon RX 5700, Intel Core i5-10400 or AMD equivalent"
     },
     {
       "title": "Lightyear Frontier",
@@ -122,18 +122,6 @@
       "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 1050 (2 GB) / AMD® Radeon™ RX-460 (4 GB) / Intel® Arc™ A380 (6 GB), Intel® Core™ i5-7600 (quad-core) / AMD® Ryzen™ 3 2200G (quad-core)"
     },
     {
-      "title": "PIT OF GOBLIN",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GForce GTX 1050",
-      "cpu": "Intel Core i5-7400 CPU @ 3.00GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GForce GTX 1050, Intel Core i5-7400 CPU @ 3.00GHz"
-    },
-    {
       "title": "Playrooms",
       "tier": "orange",
       "tiers": {
@@ -144,6 +132,18 @@
       "cpu": "Intel Core i5-10400 or AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 2060 (6 GB) or AMD RX 5700, Intel Core i5-10400 or AMD Ryzen 5 3600"
+    },
+    {
+      "title": "PIT OF GOBLIN",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GForce GTX 1050",
+      "cpu": "Intel Core i5-7400 CPU @ 3.00GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GForce GTX 1050, Intel Core i5-7400 CPU @ 3.00GHz"
     },
     {
       "title": "Saloon Simulator",
@@ -362,18 +362,6 @@
       "note": "Minimální konfigurace: Compatible OpenGL"
     },
     {
-      "title": "Cozy Game Restoration",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1050 / AMD RX 570",
-      "cpu": "X64 architecture",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD RX 570, X64 architecture"
-    },
-    {
       "title": "Dungeons & Dynasties",
       "tier": "green",
       "tiers": {
@@ -384,6 +372,18 @@
       "cpu": "Windows 11 (64-bit)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Integrated Graphics, Windows 11 (64-bit)"
+    },
+    {
+      "title": "Cozy Game Restoration",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1050 / AMD RX 570",
+      "cpu": "X64 architecture",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 / AMD RX 570, X64 architecture"
     },
     {
       "title": "Hull Rupture",
@@ -422,18 +422,6 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 1650, AMD Ryzen 5 2600"
     },
     {
-      "title": "Gildoria - Organize a Dragon's Hoard",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 5600 XT",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "Annihilated",
       "tier": "green",
       "tiers": {
@@ -444,6 +432,18 @@
       "cpu": "AMD Ryzen 5 5625U or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: AMD Radeon Graphics (integrated) or equivalent, AMD Ryzen 5 5625U or equivalent"
+    },
+    {
+      "title": "Gildoria - Organize a Dragon's Hoard",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 2060 / AMD Radeon RX 5600 XT",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "Booster Pack Heroes",
@@ -602,6 +602,18 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 3060 or better, AMD Ryzen 5 5600 or better"
     },
     {
+      "title": "Worst Class Ever",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 1050 6GB",
+      "cpu": "Intel Core i5-3470",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1050 6GB, Intel Core i5-3470"
+    },
+    {
       "title": "Traffic Architect",
       "tier": "green",
       "tiers": {
@@ -648,18 +660,6 @@
       "cpu": "Quad core 2Ghz+",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce GTX 750 Ti, Radeon R7 360 or Intel UHD Graphics 730, Quad core 2Ghz+"
-    },
-    {
-      "title": "Worst Class Ever",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 1050 6GB",
-      "cpu": "Intel Core i5-3470",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1050 6GB, Intel Core i5-3470"
     },
     {
       "title": "Caravan Carnage: Fruity Road",
