@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-11T00:13:39.687Z",
+  "updatedAt": "2026-11-11T01:13:18.791Z",
   "games": [
     {
       "title": "Silica",
@@ -62,18 +62,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT, Intel Core i5-10400 or AMD Ryzen 5 3600"
     },
     {
-      "title": "Can 'Em All",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "AMD Radeon RX 460 / NVIDIA GTX 950",
-      "cpu": "AMD Ryzen 3 1200 / Intel Core i3-7100",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: AMD Radeon RX 460 / NVIDIA GTX 950, AMD Ryzen 3 1200 / Intel Core i3-7100"
-    },
-    {
       "title": "ArcheAge Chronicles",
       "tier": "red",
       "tiers": {
@@ -84,6 +72,18 @@
       "cpu": "Intel Core i7-12700/AMd Ryzen 7 5700X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4060 Ti 16GB / AMD Radeon RX 7700 XT (VRAM 12GB), Intel Core i7-12700/AMd Ryzen 7 5700X"
+    },
+    {
+      "title": "Can 'Em All",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "AMD Radeon RX 460 / NVIDIA GTX 950",
+      "cpu": "AMD Ryzen 3 1200 / Intel Core i3-7100",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: AMD Radeon RX 460 / NVIDIA GTX 950, AMD Ryzen 3 1200 / Intel Core i3-7100"
     },
     {
       "title": "Football Life Simulator",
@@ -446,6 +446,18 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
+      "title": "Annihilated",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "AMD Radeon Graphics (integrated) or equivalent",
+      "cpu": "AMD Ryzen 5 5625U or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: AMD Radeon Graphics (integrated) or equivalent, AMD Ryzen 5 5625U or equivalent"
+    },
+    {
       "title": "County of Fortune",
       "tier": "green",
       "tiers": {
@@ -482,16 +494,16 @@
       "note": "Doporučená konfigurace: GeForce RTX 3060 / Radeon RX 6700, AMD Ryzen 7 3700X /  Intel® Core i7-6700K"
     },
     {
-      "title": "Annihilated",
+      "title": "女神养成：放置型",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "AMD Radeon Graphics (integrated) or equivalent",
-      "cpu": "AMD Ryzen 5 5625U or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: AMD Radeon Graphics (integrated) or equivalent, AMD Ryzen 5 5625U or equivalent"
+      "gpu": "2GB RAM",
+      "cpu": "Intel i5或同级别",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 2GB RAM, Intel i5或同级别"
     },
     {
       "title": "Mayday: The Survival Island",
@@ -504,18 +516,6 @@
       "cpu": "Intel Core2 Duo E6400 or AMD Phenom X2 Dual-Core GP-7730 or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 460 (1GB) or AMD Radeon R7 240 (1GB) or better, Intel Core2 Duo E6400 or AMD Phenom X2 Dual-Core GP-7730 or equivalent"
-    },
-    {
-      "title": "女神养成：放置型",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "2GB RAM",
-      "cpu": "Intel i5或同级别",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: 2GB RAM, Intel i5或同级别"
     },
     {
       "title": "Beat For Speed",
@@ -552,18 +552,6 @@
       "cpu": "Intel Core i5-10400 or AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1070 8GB or AMD RX 5700, Intel Core i5-10400 or AMD Ryzen 5 3600"
-    },
-    {
-      "title": "Silberheim Evolving Card Game",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "1GB VRAM / DirectX 10+ Support",
-      "cpu": "Dual Core 2.4 GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: 1GB VRAM / DirectX 10+ Support, Dual Core 2.4 GHz"
     },
     {
       "title": "Eternal Palace Sakura",
@@ -614,18 +602,6 @@
       "note": "Doporučená konfigurace: GeForce GTX 1660 / Radeon RX 5600 or better, 6 cores, 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600)"
     },
     {
-      "title": "Deadzoned",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "1 GB VRAM",
-      "cpu": "2 GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: 1 GB VRAM, 2 GHz"
-    },
-    {
       "title": "Traffic Architect",
       "tier": "green",
       "tiers": {
@@ -636,6 +612,18 @@
       "cpu": "Quad-core 3.0 GHz (Intel Core i5 or equivalent)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Dedicated GPU, GeForce GTX 1050 / Radeon RX 560 or better, Quad-core 3.0 GHz (Intel Core i5 or equivalent)"
+    },
+    {
+      "title": "Deadzoned",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "1 GB VRAM",
+      "cpu": "2 GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: 1 GB VRAM, 2 GHz"
     },
     {
       "title": "Caravan Carnage: Fruity Road",
@@ -710,6 +698,18 @@
       "note": "Minimální konfigurace: NVIDIA GTX 970/1650 / AMD Radeon R9 290X, Intel Core i7-8700K or AMD Ryzen 5 1600X"
     },
     {
+      "title": "What the Buck?!",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 750 Ti, Radeon R7 360 or Intel UHD Graphics 730",
+      "cpu": "Quad core 2Ghz+",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 750 Ti, Radeon R7 360 or Intel UHD Graphics 730, Quad core 2Ghz+"
+    },
+    {
       "title": "HEART ABYSS",
       "tier": "green",
       "tiers": {
@@ -722,6 +722,18 @@
       "note": "Minimální konfigurace: GeForce 7600 GT (512 MB), Intel Core i3-3240 (2*3400) or equivalent"
     },
     {
+      "title": "Icy Tower",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "1GB",
+      "cpu": "i3 2GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: 1GB, i3 2GHz"
+    },
+    {
       "title": "Mortal Path: Mighty Senior Brother",
       "tier": "green",
       "tiers": {
@@ -732,18 +744,6 @@
       "cpu": null,
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 (4GB VRAM)"
-    },
-    {
-      "title": "What the Buck?!",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 750 Ti, Radeon R7 360 or Intel UHD Graphics 730",
-      "cpu": "Quad core 2Ghz+",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 750 Ti, Radeon R7 360 or Intel UHD Graphics 730, Quad core 2Ghz+"
     },
     {
       "title": "Booster Pack Heroes",
@@ -782,6 +782,18 @@
       "note": "Doporučená konfigurace: GeForce RTX 2060 or better, i5-11th Gen CPU or similar"
     },
     {
+      "title": "ASTERIS",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT",
+      "cpu": "Intel Core i5-11400 / AMD Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i5-11400 / AMD Ryzen 5 5600"
+    },
+    {
       "title": "降临之地 Realm of Advent",
       "tier": "green",
       "tiers": {
@@ -816,30 +828,6 @@
       "cpu": "Core i5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 980 Ti, Core i5"
-    },
-    {
-      "title": "ASTERIS",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT",
-      "cpu": "Intel Core i5-11400 / AMD Ryzen 5 5600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i5-11400 / AMD Ryzen 5 5600"
-    },
-    {
-      "title": "Icy Tower",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "1GB",
-      "cpu": "i3 2GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: 1GB, i3 2GHz"
     },
     {
       "title": "Livin' the Cream: Ice Cream Simulator",
