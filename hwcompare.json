@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-12T12:13:14.952Z",
+  "updatedAt": "2026-11-12T13:13:55.262Z",
   "games": [
     {
       "title": "Silica",
@@ -122,6 +122,18 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 2060 (6 GB) or AMD RX 5700, Intel Core i5-10400 or AMD Ryzen 5 3600"
     },
     {
+      "title": "DREADMOOR",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "Nvidia RTX 4060 / AMD Radeon RX 7600",
+      "cpu": "Intel Core i5-12400F / AMD Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia RTX 4060 / AMD Radeon RX 7600, Intel Core i5-12400F / AMD Ryzen 5 5600"
+    },
+    {
       "title": "PIT OF GOBLIN",
       "tier": "green",
       "tiers": {
@@ -144,18 +156,6 @@
       "cpu": "Intel Core i3 / AMD Ryzen 3 (or any modern 2.0 GHz+ CPU)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Any dedicated or modern integrated GPU with DirectX 9+ support, Intel Core i3 / AMD Ryzen 3 (or any modern 2.0 GHz+ CPU)"
-    },
-    {
-      "title": "DREADMOOR",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "Nvidia RTX 4060 / AMD Radeon RX 7600",
-      "cpu": "Intel Core i5-12400F / AMD Ryzen 5 5600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia RTX 4060 / AMD Radeon RX 7600, Intel Core i5-12400F / AMD Ryzen 5 5600"
     },
     {
       "title": "Loftia",
@@ -410,6 +410,18 @@
       "note": "Minimální konfigurace: GeForce GTX 670 / Radeon HD 7970, Intel i7-8700, Ryzen 1600"
     },
     {
+      "title": "Worst Class Ever",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 1050 6GB",
+      "cpu": "Intel Core i5-3470",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1050 6GB, Intel Core i5-3470"
+    },
+    {
       "title": "Punch The Walls",
       "tier": "green",
       "tiers": {
@@ -432,18 +444,6 @@
       "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
-    },
-    {
-      "title": "Worst Class Ever",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 1050 6GB",
-      "cpu": "Intel Core i5-3470",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1050 6GB, Intel Core i5-3470"
     },
     {
       "title": "Feed The Forest",
@@ -494,18 +494,6 @@
       "note": "Minimální konfigurace: DirectX 11 or DirectX 12 compatible graphics card, Quad-core Intel or AMD, 2.5 GHz or faster"
     },
     {
-      "title": "Safari-TV",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "RTX 2060 or RX 7600xt or equivalent",
-      "cpu": "Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent"
-    },
-    {
       "title": "County of Fortune",
       "tier": "green",
       "tiers": {
@@ -516,6 +504,18 @@
       "cpu": "Intel i5+ and equivalents",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce 970 / AMD R9 390, Intel i5+ and equivalents"
+    },
+    {
+      "title": "Safari-TV",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "RTX 2060 or RX 7600xt or equivalent",
+      "cpu": "Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent"
     },
     {
       "title": "We Steal From Old People: The Game",
@@ -540,18 +540,6 @@
       "cpu": "Intel Core i5 @ 3.0 GHz or AMD",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD"
-    },
-    {
-      "title": "DPS: Desktop Pension Squad",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1060 (6GB) / AMD",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 (6GB) / AMD, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
       "title": "Moonshiner Simulator",
@@ -758,18 +746,6 @@
       "note": "Doporučená konfigurace: 3D graphics card compatible with DirectX 9.0c, 1.8 GHz"
     },
     {
-      "title": "DAWN AEROWAR",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel HD Graphics 4000 or equivalent",
-      "cpu": "Intel Core i3-2100 / AMD FX-6300 or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 4000 or equivalent, Intel Core i3-2100 / AMD FX-6300 or equivalent"
-    },
-    {
       "title": "Brick Buddies",
       "tier": "green",
       "tiers": {
@@ -780,6 +756,18 @@
       "cpu": "Intel Core i5-4460 or AMD FX-8350 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 Ti / AMD Radeon, Intel Core i5-4460 or AMD FX-8350 or equivalent"
+    },
+    {
+      "title": "DAWN AEROWAR",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD Graphics 4000 or equivalent",
+      "cpu": "Intel Core i3-2100 / AMD FX-6300 or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics 4000 or equivalent, Intel Core i3-2100 / AMD FX-6300 or equivalent"
     },
     {
       "title": "Go Next!",
@@ -794,18 +782,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 6 GB / AMD Radeon RX 580 or superior, Intel Core i5-9600K / AMD Ryzen 5 3600 or superior"
     },
     {
-      "title": "DESKTOP BUG KILLER",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 680,AMD R9 280X",
-      "cpu": "3.0Ghz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 680,AMD R9 280X, 3.0Ghz"
-    },
-    {
       "title": "Never Sort By Color",
       "tier": "green",
       "tiers": {
@@ -816,6 +792,18 @@
       "cpu": "Quad-core x64 with SSE4.2 (Intel Core i3-6100 / AMD Ryzen 3 1200)",
       "usedMinimum": true,
       "note": "Minimální konfigurace: DirectX 12-capable GPU with compute shader support, 2 GB VRAM (NVIDIA GeForce GTX 960 / AMD Radeon RX 460 / Intel UHD 620), Quad-core x64 with SSE4.2 (Intel Core i3-6100 / AMD Ryzen 3 1200)"
+    },
+    {
+      "title": "DESKTOP BUG KILLER",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 680,AMD R9 280X",
+      "cpu": "3.0Ghz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 680,AMD R9 280X, 3.0Ghz"
     },
     {
       "title": "ASTERIS",
@@ -854,18 +842,6 @@
       "note": "Minimální konfigurace: GeForce 7600 GT (512 MB), Intel Core i3-3240 (2*3400) or equivalent"
     },
     {
-      "title": "Mortal Path: Mighty Senior Brother",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 (4GB VRAM)",
-      "cpu": null,
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 (4GB VRAM)"
-    },
-    {
       "title": "JOHN GLEEP",
       "tier": "green",
       "tiers": {
@@ -878,6 +854,18 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1660 Super / AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
+      "title": "Mortal Path: Mighty Senior Brother",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 (4GB VRAM)",
+      "cpu": null,
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 (4GB VRAM)"
+    },
+    {
       "title": "Leviathan: Rhino",
       "tier": "green",
       "tiers": {
@@ -888,30 +876,6 @@
       "cpu": "Core i5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 980 Ti, Core i5"
-    },
-    {
-      "title": "Livin' the Cream: Ice Cream Simulator",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA RTX 2070 / AMD RX 5700 XT (8 GB)",
-      "cpu": "Intel i5-8600K / Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA RTX 2070 / AMD RX 5700 XT (8 GB), Intel i5-8600K / Ryzen 5 3600"
-    },
-    {
-      "title": "降临之地 Realm of Advent",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1650 4 GB",
-      "cpu": "x64 architecture with SSE2 instruction set",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 4 GB, x64 architecture with SSE2 instruction set"
     }
   ]
 }
