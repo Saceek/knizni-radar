@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-12T17:13:56.200Z",
+  "updatedAt": "2026-11-12T18:14:54.424Z",
   "games": [
     {
       "title": "Aviassembly",
@@ -170,18 +170,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (or equivalent), Intel Core i5-12600K / AMD Ryzen 5 5600 (or equivalent)"
     },
     {
-      "title": "Saloon Simulator",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "Nvidia RTX2070 8GB / AMD Radeon RX 5700XT 8GB",
-      "cpu": "Intel Core i7-8700K / AMD Ryzen 7 2700X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia RTX2070 8GB / AMD Radeon RX 5700XT 8GB, Intel Core i7-8700K / AMD Ryzen 7 2700X"
-    },
-    {
       "title": "Underkeep",
       "tier": "green",
       "tiers": {
@@ -192,6 +180,18 @@
       "cpu": null,
       "usedMinimum": true,
       "note": "Minimální konfigurace: OpenGL 3.2 compatible"
+    },
+    {
+      "title": "Saloon Simulator",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "Nvidia RTX2070 8GB / AMD Radeon RX 5700XT 8GB",
+      "cpu": "Intel Core i7-8700K / AMD Ryzen 7 2700X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia RTX2070 8GB / AMD Radeon RX 5700XT 8GB, Intel Core i7-8700K / AMD Ryzen 7 2700X"
     },
     {
       "title": "Mycelarium",
@@ -252,18 +252,6 @@
       "cpu": "Dual-core @ 2.0 Ghz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Any graphics card, Dual-core @ 2.0 Ghz"
-    },
-    {
-      "title": "Legend of Defenders",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1060 / AMD Radeon RX 580 or better",
-      "cpu": "Intel Core i5 or AMD equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 / AMD Radeon RX 580 or better, Intel Core i5 or AMD equivalent"
     },
     {
       "title": "Find The Needle",
@@ -444,18 +432,6 @@
       "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
-    },
-    {
-      "title": "Feed The Forest",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1650",
-      "cpu": "AMD Ryzen 5 2600",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 1650, AMD Ryzen 5 2600"
     },
     {
       "title": "What the Buck?!",
@@ -674,6 +650,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX1050 Ti, Intel Core i7-4790 or AMD Ryzen 3 3200G"
     },
     {
+      "title": "DAWN AEROWAR",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD Graphics 4000 or equivalent",
+      "cpu": "Intel Core i3-2100 / AMD FX-6300 or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics 4000 or equivalent, Intel Core i3-2100 / AMD FX-6300 or equivalent"
+    },
+    {
       "title": "Traffic Architect",
       "tier": "green",
       "tiers": {
@@ -710,16 +698,16 @@
       "note": "Minimální konfigurace: 1 GB VRAM, 2 GHz"
     },
     {
-      "title": "DAWN AEROWAR",
+      "title": "JOHN GLEEP",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "Intel HD Graphics 4000 or equivalent",
-      "cpu": "Intel Core i3-2100 / AMD FX-6300 or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 4000 or equivalent, Intel Core i3-2100 / AMD FX-6300 or equivalent"
+      "gpu": "NVIDIA GTX 1660 Super / AMD Radeon RX 5600 XT",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1660 Super / AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "Never Sort By Color",
@@ -744,18 +732,6 @@
       "cpu": "Intel Core i7-8700K or AMD Ryzen 5 1600X",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GTX 970/1650 / AMD Radeon R9 290X, Intel Core i7-8700K or AMD Ryzen 5 1600X"
-    },
-    {
-      "title": "JOHN GLEEP",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 1660 Super / AMD Radeon RX 5600 XT",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1660 Super / AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "Theme Hospital™",
@@ -818,6 +794,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i5-11400 / AMD Ryzen 5 5600"
     },
     {
+      "title": "Mortal Path: Mighty Senior Brother",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 (4GB VRAM)",
+      "cpu": null,
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 (4GB VRAM)"
+    },
+    {
       "title": "Sushiamo",
       "tier": "green",
       "tiers": {
@@ -840,18 +828,6 @@
       "cpu": "Intel Core i3-3240 (2*3400) or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce 7600 GT (512 MB), Intel Core i3-3240 (2*3400) or equivalent"
-    },
-    {
-      "title": "Mortal Path: Mighty Senior Brother",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 (4GB VRAM)",
-      "cpu": null,
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 (4GB VRAM)"
     },
     {
       "title": "Farm & Feast",
@@ -914,18 +890,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 4 GB, x64 architecture with SSE2 instruction set"
     },
     {
-      "title": "Oboro no Ichi",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 660 / AMD Radeon HD 7850 with 2GB VRAM",
-      "cpu": "Intel Core i3-2100 or AMD FX-6300",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 660 / AMD Radeon HD 7850 with 2GB VRAM, Intel Core i3-2100 or AMD FX-6300"
-    },
-    {
       "title": "Escape Academy 2: Back 2 School",
       "tier": "red",
       "tiers": {
@@ -936,6 +900,18 @@
       "cpu": "AMD Ryzen 7 2700 Eight- Core Processor",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 (4 GB), AMD Ryzen 7 2700 Eight- Core Processor"
+    },
+    {
+      "title": "Oboro no Ichi",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 660 / AMD Radeon HD 7850 with 2GB VRAM",
+      "cpu": "Intel Core i3-2100 or AMD FX-6300",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 660 / AMD Radeon HD 7850 with 2GB VRAM, Intel Core i3-2100 or AMD FX-6300"
     },
     {
       "title": "Agent of Strange: Arrival",
@@ -950,16 +926,16 @@
       "note": "Doporučená konfigurace: GeForce RTX 2060 or better, i5-11th Gen CPU or similar"
     },
     {
-      "title": "Replay Value: Second Hand Games",
+      "title": "《爱，死亡，我的女儿》",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "NVIDIA GeForce 840M",
-      "cpu": "Intel Pentium CPU G860",
+      "gpu": "Nvidia GeForce GTX 570",
+      "cpu": "Intel Core i5-2300 | AMD FX-4350",
       "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce 840M, Intel Pentium CPU G860"
+      "note": "Minimální konfigurace: Nvidia GeForce GTX 570, Intel Core i5-2300 | AMD FX-4350"
     },
     {
       "title": "Takeover 2",
