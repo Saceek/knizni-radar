@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-12T00:13:25.895Z",
+  "updatedAt": "2026-11-12T01:12:51.622Z",
   "games": [
     {
       "title": "Silica",
@@ -386,18 +386,6 @@
       "note": "Doporučená konfigurace: Integrated Graphics, Windows 11 (64-bit)"
     },
     {
-      "title": "Hull Rupture",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 670 / Radeon HD 7970",
-      "cpu": "Intel i7-8700, Ryzen 1600",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 670 / Radeon HD 7970, Intel i7-8700, Ryzen 1600"
-    },
-    {
       "title": "Clean Start",
       "tier": "green",
       "tiers": {
@@ -408,6 +396,18 @@
       "cpu": "Intel i5-12600K or AMD Ryzen 7 5700X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1060 or Radeon RX 560, Intel i5-12600K or AMD Ryzen 7 5700X"
+    },
+    {
+      "title": "Hull Rupture",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 670 / Radeon HD 7970",
+      "cpu": "Intel i7-8700, Ryzen 1600",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 670 / Radeon HD 7970, Intel i7-8700, Ryzen 1600"
     },
     {
       "title": "Gildoria - Organize a Dragon's Hoard",
@@ -518,18 +518,6 @@
       "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD"
     },
     {
-      "title": "Moonshiner Simulator",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "GeForce RTX 3060 / Radeon RX 6700",
-      "cpu": "AMD Ryzen 7 3700X /  Intel® Core i7-6700K",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 / Radeon RX 6700, AMD Ryzen 7 3700X /  Intel® Core i7-6700K"
-    },
-    {
       "title": "What the Buck?!",
       "tier": "green",
       "tiers": {
@@ -540,6 +528,18 @@
       "cpu": "Quad core 2Ghz+",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce GTX 750 Ti, Radeon R7 360 or Intel UHD Graphics 730, Quad core 2Ghz+"
+    },
+    {
+      "title": "Moonshiner Simulator",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "GeForce RTX 3060 / Radeon RX 6700",
+      "cpu": "AMD Ryzen 7 3700X /  Intel® Core i7-6700K",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3060 / Radeon RX 6700, AMD Ryzen 7 3700X /  Intel® Core i7-6700K"
     },
     {
       "title": "Mayday: The Survival Island",
@@ -722,6 +722,18 @@
       "note": "Minimální konfigurace: NVIDIA GTX 970/1650 / AMD Radeon R9 290X, Intel Core i7-8700K or AMD Ryzen 5 1600X"
     },
     {
+      "title": "Funeral for the Sun",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Dedicated GPU (NVIDIA GTX 1050 or equivalent)",
+      "cpu": "Intel Core i5 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Dedicated GPU (NVIDIA GTX 1050 or equivalent), Intel Core i5 or equivalent"
+    },
+    {
       "title": "DESKTOP BUG KILLER",
       "tier": "green",
       "tiers": {
@@ -782,16 +794,16 @@
       "note": "Minimální konfigurace: DirectX 12 or Vulkan compatible, 1 GB VRAM, Dual-core 2.0 GHz"
     },
     {
-      "title": "Funeral for the Sun",
+      "title": "Dashoot: ABYA's Adventure",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "Dedicated GPU (NVIDIA GTX 1050 or equivalent)",
-      "cpu": "Intel Core i5 or equivalent",
+      "gpu": "GeForce GTX 760 / Radeon R7 260X / Iris Xe Graphics",
+      "cpu": "Intel Core i5-4430 / AMD FX-4350",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: Dedicated GPU (NVIDIA GTX 1050 or equivalent), Intel Core i5 or equivalent"
+      "note": "Doporučená konfigurace: GeForce GTX 760 / Radeon R7 260X / Iris Xe Graphics, Intel Core i5-4430 / AMD FX-4350"
     },
     {
       "title": "Go Next!",
@@ -818,18 +830,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 Ti / AMD Radeon, Intel Core i5-4460 or AMD FX-8350 or equivalent"
     },
     {
-      "title": "Dashoot: ABYA's Adventure",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 760 / Radeon R7 260X / Iris Xe Graphics",
-      "cpu": "Intel Core i5-4430 / AMD FX-4350",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 760 / Radeon R7 260X / Iris Xe Graphics, Intel Core i5-4430 / AMD FX-4350"
-    },
-    {
       "title": "Leviathan: Rhino",
       "tier": "green",
       "tiers": {
@@ -840,6 +840,18 @@
       "cpu": "Core i5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 980 Ti, Core i5"
+    },
+    {
+      "title": "DAWN AEROWAR",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD Graphics 4000 or equivalent",
+      "cpu": "Intel Core i3-2100 / AMD FX-6300 or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics 4000 or equivalent, Intel Core i3-2100 / AMD FX-6300 or equivalent"
     },
     {
       "title": "降临之地 Realm of Advent",
@@ -864,18 +876,6 @@
       "cpu": "Intel i5-8600K / Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 2070 / AMD RX 5700 XT (8 GB), Intel i5-8600K / Ryzen 5 3600"
-    },
-    {
-      "title": "DAWN AEROWAR",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel HD Graphics 4000 or equivalent",
-      "cpu": "Intel Core i3-2100 / AMD FX-6300 or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 4000 or equivalent, Intel Core i3-2100 / AMD FX-6300 or equivalent"
     },
     {
       "title": "Agent of Strange: Arrival",
