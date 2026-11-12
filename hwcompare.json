@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-12T14:13:54.388Z",
+  "updatedAt": "2026-11-12T15:14:31.071Z",
   "games": [
     {
       "title": "Aviassembly",
@@ -602,18 +602,6 @@
       "note": "Doporučená konfigurace: 2GB RAM, Intel i5或同级别"
     },
     {
-      "title": "Beat For Speed",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT",
-      "cpu": "Intel Core i5-9600K or AMD Ryzen R5 3600 processor",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT, Intel Core i5-9600K or AMD Ryzen R5 3600 processor"
-    },
-    {
       "title": "Revenge of the Mage",
       "tier": "red",
       "tiers": {
@@ -624,6 +612,18 @@
       "cpu": "Intel Core i7-11700",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060, Intel Core i7-11700"
+    },
+    {
+      "title": "Beat For Speed",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT",
+      "cpu": "Intel Core i5-9600K or AMD Ryzen R5 3600 processor",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2070 or AMD Radeon RX 5700 XT, Intel Core i5-9600K or AMD Ryzen R5 3600 processor"
     },
     {
       "title": "Dashoot: ABYA's Adventure",
@@ -650,6 +650,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1070 8GB or AMD RX 5700, Intel Core i5-10400 or AMD Ryzen 5 3600"
     },
     {
+      "title": "Funeral for the Sun",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Dedicated GPU (NVIDIA GTX 1050 or equivalent)",
+      "cpu": "Intel Core i5 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Dedicated GPU (NVIDIA GTX 1050 or equivalent), Intel Core i5 or equivalent"
+    },
+    {
       "title": "Eternal Palace Sakura",
       "tier": "green",
       "tiers": {
@@ -672,18 +684,6 @@
       "cpu": "AMD Ryzen 5 5600 or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 3060 or better, AMD Ryzen 5 5600 or better"
-    },
-    {
-      "title": "Funeral for the Sun",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Dedicated GPU (NVIDIA GTX 1050 or equivalent)",
-      "cpu": "Intel Core i5 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Dedicated GPU (NVIDIA GTX 1050 or equivalent), Intel Core i5 or equivalent"
     },
     {
       "title": "Traffic Architect",
@@ -722,6 +722,30 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 / AMD RX 6600 XT, Intel Core i5-11400 / AMD Ryzen 5 3600"
     },
     {
+      "title": "DAWN AEROWAR",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD Graphics 4000 or equivalent",
+      "cpu": "Intel Core i3-2100 / AMD FX-6300 or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics 4000 or equivalent, Intel Core i3-2100 / AMD FX-6300 or equivalent"
+    },
+    {
+      "title": "Theme Hospital™",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "3D graphics card compatible with DirectX 9.0c",
+      "cpu": "1.8 GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 3D graphics card compatible with DirectX 9.0c, 1.8 GHz"
+    },
+    {
       "title": "Elven Huntress: Sunveil",
       "tier": "green",
       "tiers": {
@@ -746,16 +770,16 @@
       "note": "Doporučená konfigurace: DirectX 11 compatible dedicated graphics, Quad-core 2.5 GHz or better"
     },
     {
-      "title": "Theme Hospital™",
+      "title": "JOHN GLEEP",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "3D graphics card compatible with DirectX 9.0c",
-      "cpu": "1.8 GHz",
+      "gpu": "NVIDIA GTX 1660 Super / AMD Radeon RX 5600 XT",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: 3D graphics card compatible with DirectX 9.0c, 1.8 GHz"
+      "note": "Doporučená konfigurace: NVIDIA GTX 1660 Super / AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "Brick Buddies",
@@ -768,18 +792,6 @@
       "cpu": "Intel Core i5-4460 or AMD FX-8350 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 Ti / AMD Radeon, Intel Core i5-4460 or AMD FX-8350 or equivalent"
-    },
-    {
-      "title": "DAWN AEROWAR",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel HD Graphics 4000 or equivalent",
-      "cpu": "Intel Core i3-2100 / AMD FX-6300 or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 4000 or equivalent, Intel Core i3-2100 / AMD FX-6300 or equivalent"
     },
     {
       "title": "Go Next!",
@@ -852,30 +864,6 @@
       "cpu": "Intel Core i3-3240 (2*3400) or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce 7600 GT (512 MB), Intel Core i3-3240 (2*3400) or equivalent"
-    },
-    {
-      "title": "JOHN GLEEP",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 1660 Super / AMD Radeon RX 5600 XT",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1660 Super / AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
-    },
-    {
-      "title": "Mortal Path: Mighty Senior Brother",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 (4GB VRAM)",
-      "cpu": null,
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 Ti / AMD Radeon RX 570 (4GB VRAM)"
     }
   ]
 }
