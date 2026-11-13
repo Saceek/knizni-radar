@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T11:04:48.136Z",
+  "updatedAt": "2026-11-13T11:13:33.666Z",
   "games": [
     {
       "title": "9 Kings",
@@ -818,6 +818,18 @@
       "note": "Minimální konfigurace: Intel HD 4600 (AMD or NVIDIA equivalent), AMD Ryzen 5 1600 / Intel Core i5-8400"
     },
     {
+      "title": "Apotheosis Engine",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Integrated graphics (Intel HD 4000 or newer)",
+      "cpu": "2.5 GHz quad-core",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Integrated graphics (Intel HD 4000 or newer), 2.5 GHz quad-core"
+    },
+    {
       "title": "DESKTOP BUG KILLER",
       "tier": "green",
       "tiers": {
@@ -852,18 +864,6 @@
       "cpu": "Intel Core i3-3240 (2*3400) or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce 7600 GT (512 MB), Intel Core i3-3240 (2*3400) or equivalent"
-    },
-    {
-      "title": "Apotheosis Engine",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Integrated graphics (Intel HD 4000 or newer)",
-      "cpu": "2.5 GHz quad-core",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Integrated graphics (Intel HD 4000 or newer), 2.5 GHz quad-core"
     },
     {
       "title": "ASTERIS",
@@ -986,18 +986,6 @@
       "note": "Doporučená konfigurace: Radeon RX 6700 XT, Geforce RTX 2070 or better, Ryzen 5 5600X,Core i5 11600K or better"
     },
     {
-      "title": "BATTLE BEARS GOLD",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 1050 Ti / AMD RX 580",
-      "cpu": "Intel Core i5-6600K / AMD Ryzen R5 1600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1050 Ti / AMD RX 580, Intel Core i5-6600K / AMD Ryzen R5 1600"
-    },
-    {
       "title": "Stormforge",
       "tier": "orange",
       "tiers": {
@@ -1008,6 +996,18 @@
       "cpu": "Intel Core i5-11500 / AMD Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA Geforce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i5-11500 / AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "BATTLE BEARS GOLD",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 1050 Ti / AMD RX 580",
+      "cpu": "Intel Core i5-6600K / AMD Ryzen R5 1600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1050 Ti / AMD RX 580, Intel Core i5-6600K / AMD Ryzen R5 1600"
     },
     {
       "title": "The Incident at Galley House",
