@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-16T04:15:59.157Z",
+  "updatedAt": "2026-11-16T05:14:12.748Z",
   "games": [
     {
       "title": "9 Kings",
@@ -86,18 +86,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 (6GB) / AMD, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
-      "title": "Road Rash™",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Any dedicated or modern integrated GPU with DirectX 9+ support",
-      "cpu": "Intel Core i3 / AMD Ryzen 3 (or any modern 2.0 GHz+ CPU)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Any dedicated or modern integrated GPU with DirectX 9+ support, Intel Core i3 / AMD Ryzen 3 (or any modern 2.0 GHz+ CPU)"
-    },
-    {
       "title": "Underkeep",
       "tier": "green",
       "tiers": {
@@ -108,6 +96,18 @@
       "cpu": null,
       "usedMinimum": true,
       "note": "Minimální konfigurace: OpenGL 3.2 compatible"
+    },
+    {
+      "title": "Road Rash™",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Any dedicated or modern integrated GPU with DirectX 9+ support",
+      "cpu": "Intel Core i3 / AMD Ryzen 3 (or any modern 2.0 GHz+ CPU)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Any dedicated or modern integrated GPU with DirectX 9+ support, Intel Core i3 / AMD Ryzen 3 (or any modern 2.0 GHz+ CPU)"
     },
     {
       "title": "Annihilated",
@@ -614,6 +614,18 @@
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 950 / AMD Radeon RX 570, Dual Core 2.4 GHz"
     },
     {
+      "title": "How They Built the Pyramids",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GeForce GTX 960",
+      "cpu": "Intel Core i3 3.0 GHz or Ryzen 3xxx",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Nvidia GeForce GTX 960, Intel Core i3 3.0 GHz or Ryzen 3xxx"
+    },
+    {
       "title": "女神养成：放置型",
       "tier": "green",
       "tiers": {
@@ -636,18 +648,6 @@
       "cpu": "Intel Core i5-9600K / AMD Ryzen 5 3600 or superior",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 6 GB / AMD Radeon RX 580 or superior, Intel Core i5-9600K / AMD Ryzen 5 3600 or superior"
-    },
-    {
-      "title": "How They Built the Pyramids",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Nvidia GeForce GTX 960",
-      "cpu": "Intel Core i3 3.0 GHz or Ryzen 3xxx",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Nvidia GeForce GTX 960, Intel Core i3 3.0 GHz or Ryzen 3xxx"
     },
     {
       "title": "Frontier Tale",
@@ -722,6 +722,18 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 / AMD RX 6600 XT, Intel Core i5-11400 / AMD Ryzen 5 3600"
     },
     {
+      "title": "BOOM! Buster",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD Graphics",
+      "cpu": "Intel or AMD Dual Core CPU",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics, Intel or AMD Dual Core CPU"
+    },
+    {
       "title": "Lestvitsa",
       "tier": "orange",
       "tiers": {
@@ -746,16 +758,16 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD Radeon RX550, Intel® Core™ i5-6402p CPU / AMD Ryzen 5 1600 or higher"
     },
     {
-      "title": "BOOM! Buster",
+      "title": "We March as One",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "Intel HD Graphics",
-      "cpu": "Intel or AMD Dual Core CPU",
+      "gpu": "Any DirectX 11 capable GPU with 1 GB VRAM (GeForce GTX 750 / Radeon R7 260 / Intel UHD 630)",
+      "cpu": "Quad-core CPU — Intel Core i5-6400 / AMD Ryzen 3 1200",
       "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics, Intel or AMD Dual Core CPU"
+      "note": "Minimální konfigurace: Any DirectX 11 capable GPU with 1 GB VRAM (GeForce GTX 750 / Radeon R7 260 / Intel UHD 630), Quad-core CPU — Intel Core i5-6400 / AMD Ryzen 3 1200"
     },
     {
       "title": "Rejected Draft",
@@ -770,28 +782,16 @@
       "note": "Minimální konfigurace: Any integrated graphics card with WebGL support, 1.1GHz"
     },
     {
-      "title": "We March as One",
+      "title": "HANDS OVER",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "Any DirectX 11 capable GPU with 1 GB VRAM (GeForce GTX 750 / Radeon R7 260 / Intel UHD 630)",
-      "cpu": "Quad-core CPU — Intel Core i5-6400 / AMD Ryzen 3 1200",
+      "gpu": "NVIDIA GeForce GTX 960 / AMD Radeon R9 280",
+      "cpu": "Intel Core i5-4460 / AMD FX-8350",
       "usedMinimum": true,
-      "note": "Minimální konfigurace: Any DirectX 11 capable GPU with 1 GB VRAM (GeForce GTX 750 / Radeon R7 260 / Intel UHD 630), Quad-core CPU — Intel Core i5-6400 / AMD Ryzen 3 1200"
-    },
-    {
-      "title": "Theme Hospital™",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "3D graphics card compatible with DirectX 9.0c",
-      "cpu": "1.8 GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: 3D graphics card compatible with DirectX 9.0c, 1.8 GHz"
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD Radeon R9 280, Intel Core i5-4460 / AMD FX-8350"
     },
     {
       "title": "Elven Huntress: Sunveil",
@@ -818,28 +818,16 @@
       "note": "Minimální konfigurace: DirectX 11 compatible GPU, integrated graphics supported, Intel Core i3 or equivalent"
     },
     {
-      "title": "HANDS OVER",
+      "title": "Theme Hospital™",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "NVIDIA GeForce GTX 960 / AMD Radeon R9 280",
-      "cpu": "Intel Core i5-4460 / AMD FX-8350",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD Radeon R9 280, Intel Core i5-4460 / AMD FX-8350"
-    },
-    {
-      "title": "GroundInFlames",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 1650 / RX 6400 (4 ГБ)",
-      "cpu": "i5-10400",
+      "gpu": "3D graphics card compatible with DirectX 9.0c",
+      "cpu": "1.8 GHz",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1650 / RX 6400 (4 ГБ), i5-10400"
+      "note": "Doporučená konfigurace: 3D graphics card compatible with DirectX 9.0c, 1.8 GHz"
     },
     {
       "title": "Takeover 2",
@@ -852,6 +840,18 @@
       "cpu": "AMD Ryzen 5 3600 / Intel Core i5-10400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: MD Radeon RX 6600 / NVIDIA RTX 2060, AMD Ryzen 5 3600 / Intel Core i5-10400"
+    },
+    {
+      "title": "GroundInFlames",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 1650 / RX 6400 (4 ГБ)",
+      "cpu": "i5-10400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1650 / RX 6400 (4 ГБ), i5-10400"
     },
     {
       "title": "BATTLE BEARS GOLD",
@@ -962,18 +962,6 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 680,AMD R9 280X, 3.0Ghz"
     },
     {
-      "title": "ASTERIS",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT",
-      "cpu": "Intel Core i5-11400 / AMD Ryzen 5 5600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i5-11400 / AMD Ryzen 5 5600"
-    },
-    {
       "title": "降临之地 Realm of Advent",
       "tier": "green",
       "tiers": {
@@ -984,6 +972,18 @@
       "cpu": "x64 architecture with SSE2 instruction set",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1650 4 GB, x64 architecture with SSE2 instruction set"
+    },
+    {
+      "title": "ASTERIS",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT",
+      "cpu": "Intel Core i5-11400 / AMD Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i5-11400 / AMD Ryzen 5 5600"
     },
     {
       "title": "Astral Hunter: Homebound",
@@ -1010,6 +1010,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060, AMD Radeon RX 6600 XT, Intel i5-series Quadcore, AMD Ryzen-series"
     },
     {
+      "title": "Waifu Curator",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Radeon HD 7770, GeForce GTX 460 or better",
+      "cpu": "Intel Core i5 4570",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Radeon HD 7770, GeForce GTX 460 or better, Intel Core i5 4570"
+    },
+    {
       "title": "Nocturnal 2",
       "tier": "green",
       "tiers": {
@@ -1032,18 +1044,6 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 6GB / AMD RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
-      "title": "Waifu Curator",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Radeon HD 7770, GeForce GTX 460 or better",
-      "cpu": "Intel Core i5 4570",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Radeon HD 7770, GeForce GTX 460 or better, Intel Core i5 4570"
     },
     {
       "title": "500 FINGER FILLET",
@@ -1248,42 +1248,6 @@
       "cpu": "Intel® Core™ i5-8400 Processor",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
-    },
-    {
-      "title": "MOUSE: P.I. For Hire",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600",
-      "cpu": "Intel Core i5 9600 / Ryzen 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600, Intel Core i5 9600 / Ryzen 3600"
-    },
-    {
-      "title": "Hellblade II: Senua’s Saga",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "orange"
-      },
-      "gpu": "Nvidia RTX 3080 | AMD RX 6800 XT | Intel Arc A770",
-      "cpu": "Intel i7-10700K | AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia RTX 3080 | AMD RX 6800 XT | Intel Arc A770, Intel i7-10700K | AMD Ryzen 5 5600X"
-    },
-    {
-      "title": "Gears of War: E-Day",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 5060 / NVIDIA GeForce RTX 3060ti / AMD Radeon RX 6700 XT / Radeon RX 9060 XT",
-      "cpu": "AMD Ryzen 5 5600 / Intel i5-11600K",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 5060 / NVIDIA GeForce RTX 3060ti / AMD Radeon RX 6700 XT / Radeon RX 9060 XT, AMD Ryzen 5 5600 / Intel i5-11600K"
     }
   ]
 }
