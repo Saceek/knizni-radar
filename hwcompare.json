@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-16T07:13:59.297Z",
+  "updatedAt": "2026-11-16T08:13:58.442Z",
   "games": [
     {
       "title": "9 Kings",
@@ -374,18 +374,6 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 (DLSS) / AMD RX 6600 / 6650 XT (FSR), Intel Core i5-12400 / AMD Ryzen 5 5600X (6-core)"
     },
     {
-      "title": "Drawquarium",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 1060 / AMD RX 580 (6 GB VRAM)",
-      "cpu": "Quad-core Intel i5-8400 / AMD Ryzen 5 1600 (or equivalent)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580 (6 GB VRAM), Quad-core Intel i5-8400 / AMD Ryzen 5 1600 (or equivalent)"
-    },
-    {
       "title": "Apotheosis Engine",
       "tier": "green",
       "tiers": {
@@ -396,6 +384,18 @@
       "cpu": "2.5 GHz quad-core",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Integrated graphics (Intel HD 4000 or newer), 2.5 GHz quad-core"
+    },
+    {
+      "title": "Drawquarium",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 1060 / AMD RX 580 (6 GB VRAM)",
+      "cpu": "Quad-core Intel i5-8400 / AMD Ryzen 5 1600 (or equivalent)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580 (6 GB VRAM), Quad-core Intel i5-8400 / AMD Ryzen 5 1600 (or equivalent)"
     },
     {
       "title": "Safari-TV",
@@ -734,18 +734,6 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD Radeon RX550, Intel® Core™ i5-6402p CPU / AMD Ryzen 5 1600 or higher"
     },
     {
-      "title": "Rejected Draft",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Any integrated graphics card with WebGL support",
-      "cpu": "1.1GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Any integrated graphics card with WebGL support, 1.1GHz"
-    },
-    {
       "title": "We March as One",
       "tier": "green",
       "tiers": {
@@ -756,6 +744,18 @@
       "cpu": "Quad-core CPU — Intel Core i5-6400 / AMD Ryzen 3 1200",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Any DirectX 11 capable GPU with 1 GB VRAM (GeForce GTX 750 / Radeon R7 260 / Intel UHD 630), Quad-core CPU — Intel Core i5-6400 / AMD Ryzen 3 1200"
+    },
+    {
+      "title": "Rejected Draft",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Any integrated graphics card with WebGL support",
+      "cpu": "1.1GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Any integrated graphics card with WebGL support, 1.1GHz"
     },
     {
       "title": "Towers of Babble",
@@ -770,18 +770,6 @@
       "note": "Minimální konfigurace: DirectX 11 compatible GPU, integrated graphics supported, Intel Core i3 or equivalent"
     },
     {
-      "title": "Theme Hospital™",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "3D graphics card compatible with DirectX 9.0c",
-      "cpu": "1.8 GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: 3D graphics card compatible with DirectX 9.0c, 1.8 GHz"
-    },
-    {
       "title": "HANDS OVER",
       "tier": "green",
       "tiers": {
@@ -792,6 +780,18 @@
       "cpu": "Intel Core i5-4460 / AMD FX-8350",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD Radeon R9 280, Intel Core i5-4460 / AMD FX-8350"
+    },
+    {
+      "title": "Theme Hospital™",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "3D graphics card compatible with DirectX 9.0c",
+      "cpu": "1.8 GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 3D graphics card compatible with DirectX 9.0c, 1.8 GHz"
     },
     {
       "title": "Takeover 2",
@@ -842,18 +842,6 @@
       "note": "Doporučená konfigurace: GTX 1650 / RX 6400 (4 ГБ), i5-10400"
     },
     {
-      "title": "Leviathan: Rhino",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 980 Ti",
-      "cpu": "Core i5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 980 Ti, Core i5"
-    },
-    {
       "title": "Scawy Game",
       "tier": "red",
       "tiers": {
@@ -864,6 +852,18 @@
       "cpu": "Ryzen 9 3900XT or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
+    },
+    {
+      "title": "Leviathan: Rhino",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 980 Ti",
+      "cpu": "Core i5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 980 Ti, Core i5"
     },
     {
       "title": "Neo Junk City",
@@ -986,6 +986,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060, AMD Radeon RX 6600 XT, Intel i5-series Quadcore, AMD Ryzen-series"
     },
     {
+      "title": "Waifu Curator",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Radeon HD 7770, GeForce GTX 460 or better",
+      "cpu": "Intel Core i5 4570",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Radeon HD 7770, GeForce GTX 460 or better, Intel Core i5 4570"
+    },
+    {
       "title": "Metro Anomaly",
       "tier": "green",
       "tiers": {
@@ -1008,18 +1020,6 @@
       "cpu": "Intel Core i5-6600 / AMD Ryzen 3 1200",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1050 / AMD Radeon RX 560X (2 GB VRAM), Intel Core i5-6600 / AMD Ryzen 3 1200"
-    },
-    {
-      "title": "Waifu Curator",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Radeon HD 7770, GeForce GTX 460 or better",
-      "cpu": "Intel Core i5 4570",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Radeon HD 7770, GeForce GTX 460 or better, Intel Core i5 4570"
     },
     {
       "title": "500 FINGER FILLET",
