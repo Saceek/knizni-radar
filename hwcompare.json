@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17T11:13:21.925Z",
+  "updatedAt": "2026-11-17T11:55:41.032Z",
   "games": [
     {
       "title": "9 Kings",
@@ -314,18 +314,6 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580 (6 GB VRAM), Quad-core Intel i5-8400 / AMD Ryzen 5 1600 (or equivalent)"
     },
     {
-      "title": "Trakonius",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1660 Super (6 GB VRAM) AMD Radeon RX 5600 XT (6 GB VRAM) Intel Arc A750",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super (6 GB VRAM) AMD Radeon RX 5600 XT (6 GB VRAM) Intel Arc A750, Intel Core i5-10400 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "Apotheosis Engine",
       "tier": "green",
       "tiers": {
@@ -336,6 +324,18 @@
       "cpu": "2.5 GHz quad-core",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Integrated graphics (Intel HD 4000 or newer), 2.5 GHz quad-core"
+    },
+    {
+      "title": "Trakonius",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1660 Super (6 GB VRAM) AMD Radeon RX 5600 XT (6 GB VRAM) Intel Arc A750",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super (6 GB VRAM) AMD Radeon RX 5600 XT (6 GB VRAM) Intel Arc A750, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "What the Buck?!",
@@ -494,6 +494,18 @@
       "note": "Minimální konfigurace: Integrated graphics (e.g., Intel HD Graphics) or equivalent; dedicated GPU not necessary, Dual-core 2.0 GHz or higher"
     },
     {
+      "title": "Here Comes the Horde",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 1050 / Radeon RX 560, 2 GB VRAM",
+      "cpu": "Intel Core i5-4590 / AMD Ryzen 3 1200",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 1050 / Radeon RX 560, 2 GB VRAM, Intel Core i5-4590 / AMD Ryzen 3 1200"
+    },
+    {
       "title": "Dashoot: ABYA's Adventure",
       "tier": "green",
       "tiers": {
@@ -540,18 +552,6 @@
       "cpu": "Quad-core CPU — Intel Core i5-6400 / AMD Ryzen 3 1200",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Any DirectX 11 capable GPU with 1 GB VRAM (GeForce GTX 750 / Radeon R7 260 / Intel UHD 630), Quad-core CPU — Intel Core i5-6400 / AMD Ryzen 3 1200"
-    },
-    {
-      "title": "Here Comes the Horde",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 1050 / Radeon RX 560, 2 GB VRAM",
-      "cpu": "Intel Core i5-4590 / AMD Ryzen 3 1200",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 1050 / Radeon RX 560, 2 GB VRAM, Intel Core i5-4590 / AMD Ryzen 3 1200"
     },
     {
       "title": "Oboro no Ichi",
@@ -602,6 +602,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 Ti / AMD Radeon, Intel Core i5-4460 or AMD FX-8350 or equivalent"
     },
     {
+      "title": "Stormforge",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA Geforce RTX 3060 / AMD Radeon RX 6600 XT",
+      "cpu": "Intel Core i5-11500 / AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA Geforce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i5-11500 / AMD Ryzen 5 5600X"
+    },
+    {
       "title": "女神养成：放置型",
       "tier": "green",
       "tiers": {
@@ -624,18 +636,6 @@
       "cpu": "Intel or AMD Dual Core CPU",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics, Intel or AMD Dual Core CPU"
-    },
-    {
-      "title": "Stormforge",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA Geforce RTX 3060 / AMD Radeon RX 6600 XT",
-      "cpu": "Intel Core i5-11500 / AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA Geforce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i5-11500 / AMD Ryzen 5 5600X"
     },
     {
       "title": "HANDS OVER",
@@ -938,18 +938,6 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1660 or equivalent, Intel Core i5-10400 or equivalent"
     },
     {
-      "title": "500 FINGER FILLET",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "128MB",
-      "cpu": "Intel core i7",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: 128MB, Intel core i7"
-    },
-    {
       "title": "Engagement",
       "tier": "green",
       "tiers": {
@@ -960,6 +948,18 @@
       "cpu": "Any quad-core x64: Intel Core i5-8400 / AMD Ryzen 5 2600 or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Any discrete GPU or modern integrated: NVIDIA GTX 1050 / AMD RX 560 / Intel Iris Xe or better, Any quad-core x64: Intel Core i5-8400 / AMD Ryzen 5 2600 or better"
+    },
+    {
+      "title": "500 FINGER FILLET",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "128MB",
+      "cpu": "Intel core i7",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: 128MB, Intel core i7"
     },
     {
       "title": "Backseat Champions",
