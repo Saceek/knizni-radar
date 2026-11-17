@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17T19:12:59.530Z",
+  "updatedAt": "2026-11-17T20:13:01.498Z",
   "games": [
     {
       "title": "9 Kings",
@@ -86,18 +86,6 @@
       "note": "Doporučená konfigurace: GeForce GTX 1050 Ti / Radeon RX 570, 6-core CPU at 3.5 GHz (Intel Core i5-10400 / AMD Ryzen 5 3600)"
     },
     {
-      "title": "Slotbound",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 1060 / AMD RX 580",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
       "title": "just volleyball",
       "tier": "green",
       "tiers": {
@@ -108,6 +96,18 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1050 Ti / AMD RX 570 or equivalent, Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent"
+    },
+    {
+      "title": "Slotbound",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 1060 / AMD RX 580",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
       "title": "Saloon Simulator",
@@ -350,18 +350,6 @@
       "note": "Minimální konfigurace: GeForce GTX 750 Ti, Radeon R7 360 or Intel UHD Graphics 730, Quad core 2Ghz+"
     },
     {
-      "title": "Safari-TV",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "RTX 2060 or RX 7600xt or equivalent",
-      "cpu": "Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent"
-    },
-    {
       "title": "Here Comes the Horde",
       "tier": "green",
       "tiers": {
@@ -374,16 +362,16 @@
       "note": "Minimální konfigurace: GeForce GTX 1050 / Radeon RX 560, 2 GB VRAM, Intel Core i5-4590 / AMD Ryzen 3 1200"
     },
     {
-      "title": "We Steal From Old People: The Game",
-      "tier": "green",
+      "title": "Safari-TV",
+      "tier": "orange",
       "tiers": {
-        "allyx": "green",
+        "allyx": "orange",
         "pc": "green"
       },
-      "gpu": "VIDIA GeForce GTX 1050 / AMD Radeon RX 460 (Vulkan 1.2)",
-      "cpu": "Intel Core i5-6600K / AMD Ryzen 5 1600",
+      "gpu": "RTX 2060 or RX 7600xt or equivalent",
+      "cpu": "Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: VIDIA GeForce GTX 1050 / AMD Radeon RX 460 (Vulkan 1.2), Intel Core i5-6600K / AMD Ryzen 5 1600"
+      "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent"
     },
     {
       "title": "How They Built the Pyramids",
@@ -398,16 +386,16 @@
       "note": "Minimální konfigurace: Nvidia GeForce GTX 960, Intel Core i3 3.0 GHz or Ryzen 3xxx"
     },
     {
-      "title": "Main Sequence",
-      "tier": "red",
+      "title": "We Steal From Old People: The Game",
+      "tier": "green",
       "tiers": {
-        "allyx": "red",
+        "allyx": "green",
         "pc": "green"
       },
-      "gpu": "NVIDIA GeForce RTX 3060 Ti",
-      "cpu": "Intel Core i7-11700K or equivalent",
+      "gpu": "VIDIA GeForce GTX 1050 / AMD Radeon RX 460 (Vulkan 1.2)",
+      "cpu": "Intel Core i5-6600K / AMD Ryzen 5 1600",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 Ti, Intel Core i7-11700K or equivalent"
+      "note": "Doporučená konfigurace: VIDIA GeForce GTX 1050 / AMD Radeon RX 460 (Vulkan 1.2), Intel Core i5-6600K / AMD Ryzen 5 1600"
     },
     {
       "title": "Never Sort By Color",
@@ -422,16 +410,16 @@
       "note": "Minimální konfigurace: DirectX 12-capable GPU with compute shader support, 2 GB VRAM (NVIDIA GeForce GTX 960 / AMD Radeon RX 460 / Intel UHD 620), Quad-core x64 with SSE4.2 (Intel Core i3-6100 / AMD Ryzen 3 1200)"
     },
     {
-      "title": "《爱，死亡，我的女儿》",
-      "tier": "green",
+      "title": "Main Sequence",
+      "tier": "red",
       "tiers": {
-        "allyx": "green",
+        "allyx": "red",
         "pc": "green"
       },
-      "gpu": "Nvidia GeForce GTX 570",
-      "cpu": "Intel Core i5-2300 | AMD FX-4350",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Nvidia GeForce GTX 570, Intel Core i5-2300 | AMD FX-4350"
+      "gpu": "NVIDIA GeForce RTX 3060 Ti",
+      "cpu": "Intel Core i7-11700K or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 Ti, Intel Core i7-11700K or equivalent"
     },
     {
       "title": "Dungeonbound",
@@ -444,6 +432,18 @@
       "cpu": "Dual-core 2.0 GHz or higher",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Integrated graphics (e.g., Intel HD Graphics) or equivalent; dedicated GPU not necessary, Dual-core 2.0 GHz or higher"
+    },
+    {
+      "title": "《爱，死亡，我的女儿》",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GeForce GTX 570",
+      "cpu": "Intel Core i5-2300 | AMD FX-4350",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Nvidia GeForce GTX 570, Intel Core i5-2300 | AMD FX-4350"
     },
     {
       "title": "Icy Tower",
@@ -638,6 +638,18 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD Radeon R9 280, Intel Core i5-4460 / AMD FX-8350"
     },
     {
+      "title": "Melvor Idle 2: A RuneScape Adventure",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Integrated Graphics",
+      "cpu": "An Intel Pentium 4 processor or later that's SSE2 capable",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Integrated Graphics, An Intel Pentium 4 processor or later that's SSE2 capable"
+    },
+    {
       "title": "Revenge of the Mage",
       "tier": "red",
       "tiers": {
@@ -648,30 +660,6 @@
       "cpu": "Intel Core i7-11700",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060, Intel Core i7-11700"
-    },
-    {
-      "title": "Wall World Strategy",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 960 / AMD Radeon RX550",
-      "cpu": "Intel® Core™ i5-6402p CPU / AMD Ryzen 5 1600 or higher",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD Radeon RX550, Intel® Core™ i5-6402p CPU / AMD Ryzen 5 1600 or higher"
-    },
-    {
-      "title": "Scawy Game",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVidia 3060 or equivalent",
-      "cpu": "Ryzen 9 3900XT or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
     },
     {
       "title": "Lestvitsa",
@@ -686,6 +674,30 @@
       "note": "Doporučená konfigurace: Nvidia GTX 2070 8GB GDDR6, Intel Core i5-10400"
     },
     {
+      "title": "Scawy Game",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVidia 3060 or equivalent",
+      "cpu": "Ryzen 9 3900XT or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
+    },
+    {
+      "title": "Wall World Strategy",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 960 / AMD Radeon RX550",
+      "cpu": "Intel® Core™ i5-6402p CPU / AMD Ryzen 5 1600 or higher",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD Radeon RX550, Intel® Core™ i5-6402p CPU / AMD Ryzen 5 1600 or higher"
+    },
+    {
       "title": "DERELIKT",
       "tier": "green",
       "tiers": {
@@ -696,18 +708,6 @@
       "cpu": "AMD Ryzen 5 1600 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 or equivalent, AMD Ryzen 5 1600 or equivalent"
-    },
-    {
-      "title": "Melvor Idle 2: A RuneScape Adventure",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Integrated Graphics",
-      "cpu": "An Intel Pentium 4 processor or later that's SSE2 capable",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Integrated Graphics, An Intel Pentium 4 processor or later that's SSE2 capable"
     },
     {
       "title": "Rejected Draft",
@@ -902,18 +902,6 @@
       "note": "Doporučená konfigurace: Radeon HD 7770, GeForce GTX 460 or better, Intel Core i5 4570"
     },
     {
-      "title": "Fat Goblins",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 1660 or equivalent",
-      "cpu": "Intel Core i5-10400 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1660 or equivalent, Intel Core i5-10400 or equivalent"
-    },
-    {
       "title": "Engagement",
       "tier": "green",
       "tiers": {
@@ -924,6 +912,18 @@
       "cpu": "Any quad-core x64: Intel Core i5-8400 / AMD Ryzen 5 2600 or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Any discrete GPU or modern integrated: NVIDIA GTX 1050 / AMD RX 560 / Intel Iris Xe or better, Any quad-core x64: Intel Core i5-8400 / AMD Ryzen 5 2600 or better"
+    },
+    {
+      "title": "Fat Goblins",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 1660 or equivalent",
+      "cpu": "Intel Core i5-10400 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1660 or equivalent, Intel Core i5-10400 or equivalent"
     },
     {
       "title": "500 FINGER FILLET",
