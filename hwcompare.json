@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17T11:55:41.032Z",
+  "updatedAt": "2026-11-17T12:13:21.391Z",
   "games": [
     {
       "title": "9 Kings",
@@ -458,6 +458,18 @@
       "note": "Doporučená konfigurace: 1Gb Video Memory, Capable of OpenGL 3.0+ Support, Intel(R) Core(TM) i5-3470"
     },
     {
+      "title": "Here Comes the Horde",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 1050 / Radeon RX 560, 2 GB VRAM",
+      "cpu": "Intel Core i5-4590 / AMD Ryzen 3 1200",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 1050 / Radeon RX 560, 2 GB VRAM, Intel Core i5-4590 / AMD Ryzen 3 1200"
+    },
+    {
       "title": "MycoRelic",
       "tier": "green",
       "tiers": {
@@ -686,18 +698,6 @@
       "note": "Doporučená konfigurace: Nvidia GTX 2070 8GB GDDR6, Intel Core i5-10400"
     },
     {
-      "title": "Scawy Game",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVidia 3060 or equivalent",
-      "cpu": "Ryzen 9 3900XT or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
-    },
-    {
       "title": "Rejected Draft",
       "tier": "green",
       "tiers": {
@@ -708,6 +708,18 @@
       "cpu": "1.1GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Any integrated graphics card with WebGL support, 1.1GHz"
+    },
+    {
+      "title": "Scawy Game",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVidia 3060 or equivalent",
+      "cpu": "Ryzen 9 3900XT or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
     },
     {
       "title": "Neo Junk City",
@@ -842,18 +854,6 @@
       "note": "Doporučená konfigurace: nVidia GeForce 8600/9600GT, ATI/AMD Radeon HD2600/3600, Intel® Core™ i5 Processors"
     },
     {
-      "title": "DESKTOP BUG KILLER",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 680,AMD R9 280X",
-      "cpu": "3.0Ghz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 680,AMD R9 280X, 3.0Ghz"
-    },
-    {
       "title": "Spirit Crossing",
       "tier": "red",
       "tiers": {
@@ -864,6 +864,18 @@
       "cpu": "Core i5-12400 / Ryzen 5 5600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 3070 / RX 6700 XT, Core i5-12400 / Ryzen 5 5600"
+    },
+    {
+      "title": "DESKTOP BUG KILLER",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 680,AMD R9 280X",
+      "cpu": "3.0Ghz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 680,AMD R9 280X, 3.0Ghz"
     },
     {
       "title": "MATE, This Place is a MESS!",
