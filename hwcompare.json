@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17T00:14:11.003Z",
+  "updatedAt": "2026-11-17T01:13:48.806Z",
   "games": [
     {
       "title": "9 Kings",
@@ -242,6 +242,18 @@
       "note": "Minimální konfigurace: Compatible OpenGL"
     },
     {
+      "title": "just volleyball",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 1050 Ti / AMD RX 570 or equivalent",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1050 Ti / AMD RX 570 or equivalent, Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent"
+    },
+    {
       "title": "Funeral for the Sun",
       "tier": "green",
       "tiers": {
@@ -264,18 +276,6 @@
       "cpu": "AMD Ryzen 5600G",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GTX 1060 or better, AMD Ryzen 5600G"
-    },
-    {
-      "title": "just volleyball",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 1050 Ti / AMD RX 570 or equivalent",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1050 Ti / AMD RX 570 or equivalent, Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent"
     },
     {
       "title": "Punch The Walls",
@@ -302,18 +302,6 @@
       "note": "Doporučená konfigurace: NVidia GeForce 1080 GTX /AMD RX 5700, Intel Core i5 4690K / AMD Ryzen 5 1500x"
     },
     {
-      "title": "Trakonius",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1660 Super (6 GB VRAM) AMD Radeon RX 5600 XT (6 GB VRAM) Intel Arc A750",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super (6 GB VRAM) AMD Radeon RX 5600 XT (6 GB VRAM) Intel Arc A750, Intel Core i5-10400 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "Ski-E-O! Ski Resort Tycoon",
       "tier": "orange",
       "tiers": {
@@ -324,6 +312,18 @@
       "cpu": "Intel Core i5-12400 / AMD Ryzen 5 5600X (6-core)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 (DLSS) / AMD RX 6600 / 6650 XT (FSR), Intel Core i5-12400 / AMD Ryzen 5 5600X (6-core)"
+    },
+    {
+      "title": "Trakonius",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1660 Super (6 GB VRAM) AMD Radeon RX 5600 XT (6 GB VRAM) Intel Arc A750",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super (6 GB VRAM) AMD Radeon RX 5600 XT (6 GB VRAM) Intel Arc A750, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "Drawquarium",
@@ -614,18 +614,6 @@
       "note": "Doporučená konfigurace: NVIDIA Geforce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i5-11500 / AMD Ryzen 5 5600X"
     },
     {
-      "title": "Revenge of the Mage",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 3060",
-      "cpu": "Intel Core i7-11700",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060, Intel Core i7-11700"
-    },
-    {
       "title": "BOOM! Buster",
       "tier": "green",
       "tiers": {
@@ -636,6 +624,18 @@
       "cpu": "Intel or AMD Dual Core CPU",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics, Intel or AMD Dual Core CPU"
+    },
+    {
+      "title": "Revenge of the Mage",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060",
+      "cpu": "Intel Core i7-11700",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060, Intel Core i7-11700"
     },
     {
       "title": "HANDS OVER",
@@ -698,18 +698,6 @@
       "note": "Doporučená konfigurace: MD Radeon RX 6600 / NVIDIA RTX 2060, AMD Ryzen 5 3600 / Intel Core i5-10400"
     },
     {
-      "title": "Neo Junk City",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 750 Ti / AMD Radeon R7 260X (2 GB VRAM)",
-      "cpu": "Intel Core i3-4130 / AMD FX-4300",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 750 Ti / AMD Radeon R7 260X (2 GB VRAM), Intel Core i3-4130 / AMD FX-4300"
-    },
-    {
       "title": "Towers of Babble",
       "tier": "green",
       "tiers": {
@@ -720,6 +708,18 @@
       "cpu": "Intel Core i3 or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: DirectX 11 compatible GPU, integrated graphics supported, Intel Core i3 or equivalent"
+    },
+    {
+      "title": "Neo Junk City",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 750 Ti / AMD Radeon R7 260X (2 GB VRAM)",
+      "cpu": "Intel Core i3-4130 / AMD FX-4300",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 750 Ti / AMD Radeon R7 260X (2 GB VRAM), Intel Core i3-4130 / AMD FX-4300"
     },
     {
       "title": "Scawy Game",
@@ -830,18 +830,6 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1050 / AMD RX 560 / Intel Iris Xe, 2 GB VRAM, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
-      "title": "Escape Academy 2: Back 2 School",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 3060 (4 GB)",
-      "cpu": "AMD Ryzen 7 2700 Eight- Core Processor",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 (4 GB), AMD Ryzen 7 2700 Eight- Core Processor"
-    },
-    {
       "title": "Dungeonbound",
       "tier": "green",
       "tiers": {
@@ -938,18 +926,6 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 6GB / AMD RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
-      "title": "Fat Goblins",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 1660 or equivalent",
-      "cpu": "Intel Core i5-10400 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1660 or equivalent, Intel Core i5-10400 or equivalent"
-    },
-    {
       "title": "MATE, This Place is a MESS!",
       "tier": "green",
       "tiers": {
@@ -960,6 +936,18 @@
       "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 (6 GB) / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-10400 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Fat Goblins",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 1660 or equivalent",
+      "cpu": "Intel Core i5-10400 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1660 or equivalent, Intel Core i5-10400 or equivalent"
     },
     {
       "title": "500 FINGER FILLET",
