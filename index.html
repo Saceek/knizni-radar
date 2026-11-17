@@ -1329,6 +1329,29 @@ function ptBadge(title, url){
 }
 // Aktivní quest na PC se posune podle reálně odehraných hodin (jen nahoru, nikdy nesníží ruční zápis)
 // Platí pro všechny herní sloty (Game Pass hra může být zařazená i jako PS5), přesně na desetinu hodiny.
+// Quest drží vlastní kopii názvu a obrázku z chvíle spuštění. Titul přidaný odkazem a hned rozjetý
+// tak zůstal s názvem z adresy a bez plakátu, i když je obohacení později doplní do Mého seznamu.
+// Spáruje se podle odkazu (ČSFD / Steam / databazeknih ID) a chybějící údaje se převezmou.
+const urlKey = u => { u=String(u||""); const m=u.match(/csfd\.cz\/(?:film|serial)\/(\d+)/)||u.match(/store\.steampowered\.com\/app\/(\d+)/)||u.match(/databazeknih\.cz\/(?:prehled-knihy|knihy)\/[^?#]*?-(\d+)\/?(?:[?#]|$)/); return m ? m[0].replace(/\/$/,"") : u.replace(/[?#].*$/,"").replace(/\/(prehled\/?)?$/,""); };
+function healQuests(){
+  if(!S.progress) return;
+  let changed = false;
+  for(const cat of Object.keys(PROG_CFG)){
+    const item = S.progress[cat];
+    if(!item) continue;
+    const k = item.url ? urlKey(item.url) : null;
+    const base = PROG_CFG[cat].source || "game";
+    const pool = S.backlog.filter(x=>(x._category||"book")===base);
+    const b = (k && pool.find(x=>urlKey(x.link||x.url)===k)) || pool.find(x=>x.title===item.title);
+    if(!b) continue;
+    const img = b.cover||b.poster||b.image||null;
+    const sub = b.author||b.year||null;
+    if(!item.image && img){ item.image = img; changed = true; }
+    if(!item.sub && sub){ item.sub = sub; changed = true; }
+    if(k && b.title && item.title!==b.title){ item.title = b.title; changed = true; }  // jen při shodě odkazu
+  }
+  if(changed){ saveProgressAndSync(S.progress); render(); }
+}
 function applyPlaytime(){
   if(!S.progress) return;
   let changed = false;
@@ -2395,9 +2418,8 @@ loadCzech();
 loadGamePass();
 loadHLTB();
 loadHwCompare();
-syncBacklog();
 syncDiary();
-Promise.all([syncProgress(), loadPlaytime()]).then(applyPlaytime);
+Promise.all([syncBacklog(), syncProgress(), loadPlaytime()]).then(()=>{ healQuests(); applyPlaytime(); });
 // Obnova poslední otevřené stránky po refreshi - dotáhnout i její data, ne jen Novinky
 if(S.view==="steam") loadGames();
 else if(S.view==="movies") loadMovies();
