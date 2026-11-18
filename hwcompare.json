@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T08:13:21.101Z",
+  "updatedAt": "2026-11-18T09:13:08.462Z",
   "games": [
     {
       "title": "9 Kings",
@@ -386,18 +386,6 @@
       "note": "Minimální konfigurace: Nvidia GeForce GTX 960, Intel Core i3 3.0 GHz or Ryzen 3xxx"
     },
     {
-      "title": "Safari-TV",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "RTX 2060 or RX 7600xt or equivalent",
-      "cpu": "Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent"
-    },
-    {
       "title": "Melvor Idle 2: A RuneScape Adventure",
       "tier": "green",
       "tiers": {
@@ -408,6 +396,18 @@
       "cpu": "An Intel Pentium 4 processor or later that's SSE2 capable",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Integrated Graphics, An Intel Pentium 4 processor or later that's SSE2 capable"
+    },
+    {
+      "title": "Safari-TV",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "RTX 2060 or RX 7600xt or equivalent",
+      "cpu": "Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 2060 or RX 7600xt or equivalent, Intel Core i5 @ 3.0 GHz or AMD Ryzen 5 or equivalent"
     },
     {
       "title": "We Steal From Old People: The Game",
@@ -686,18 +686,6 @@
       "note": "Doporučená konfigurace: NVidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
     },
     {
-      "title": "Lestvitsa",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "Nvidia GTX 2070 8GB GDDR6",
-      "cpu": "Intel Core i5-10400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GTX 2070 8GB GDDR6, Intel Core i5-10400"
-    },
-    {
       "title": "Wall World Strategy",
       "tier": "green",
       "tiers": {
@@ -708,6 +696,18 @@
       "cpu": "Intel® Core™ i5-6402p CPU / AMD Ryzen 5 1600 or higher",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD Radeon RX550, Intel® Core™ i5-6402p CPU / AMD Ryzen 5 1600 or higher"
+    },
+    {
+      "title": "Lestvitsa",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GTX 2070 8GB GDDR6",
+      "cpu": "Intel Core i5-10400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GTX 2070 8GB GDDR6, Intel Core i5-10400"
     },
     {
       "title": "Neo Junk City",
@@ -974,6 +974,18 @@
       "note": "Doporučená konfigurace: GeForce RTX 3060 Ti / Radeon RX 6700 XT or better, 8 GB VRAM, Any 64-bit quad core"
     },
     {
+      "title": "Milki Delivery",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Integrated graphics should be enough",
+      "cpu": "x86, x64 architecture",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Integrated graphics should be enough, x86, x64 architecture"
+    },
+    {
       "title": "Car Flipper",
       "tier": "red",
       "tiers": {
@@ -1020,6 +1032,18 @@
       "cpu": "Intel® Core™ i5-6600K | AMD® Ryzen™ 5 2600X (AVX support required)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia® GeForce™ GTX 1660 (6GB) | AMD® Radeon™ RX 5600 XT (6GB) | Intel® Arc™ A580 (8GB), Intel® Core™ i5-6600K | AMD® Ryzen™ 5 2600X (AVX support required)"
+    },
+    {
+      "title": "TANUKI: Pon's Summer",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GeForce GTX 950 or AMD Radeon HD 7970 with at least 2 GB VRAM",
+      "cpu": "Intel Core i5 3GHz or AMD Ryzen 5 3GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 950 or AMD Radeon HD 7970 with at least 2 GB VRAM, Intel Core i5 3GHz or AMD Ryzen 5 3GHz"
     },
     {
       "title": "归墟行：人界篇",
