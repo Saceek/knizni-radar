@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T22:13:59.344Z",
+  "updatedAt": "2026-11-18T23:13:36.841Z",
   "games": [
     {
       "title": "9 Kings",
@@ -446,18 +446,6 @@
       "note": "Minimální konfigurace: GeForce® GTX 1050 Ti 4GB, Core™ i5-9400"
     },
     {
-      "title": "We March as One",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Any DirectX 11 capable GPU with 1 GB VRAM (GeForce GTX 750 / Radeon R7 260 / Intel UHD 630)",
-      "cpu": "Quad-core CPU — Intel Core i5-6400 / AMD Ryzen 3 1200",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Any DirectX 11 capable GPU with 1 GB VRAM (GeForce GTX 750 / Radeon R7 260 / Intel UHD 630), Quad-core CPU — Intel Core i5-6400 / AMD Ryzen 3 1200"
-    },
-    {
       "title": "Icy Tower",
       "tier": "green",
       "tiers": {
@@ -468,6 +456,18 @@
       "cpu": "i3 2GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: 1GB, i3 2GHz"
+    },
+    {
+      "title": "We March as One",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Any DirectX 11 capable GPU with 1 GB VRAM (GeForce GTX 750 / Radeon R7 260 / Intel UHD 630)",
+      "cpu": "Quad-core CPU — Intel Core i5-6400 / AMD Ryzen 3 1200",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Any DirectX 11 capable GPU with 1 GB VRAM (GeForce GTX 750 / Radeon R7 260 / Intel UHD 630), Quad-core CPU — Intel Core i5-6400 / AMD Ryzen 3 1200"
     },
     {
       "title": "MycoRelic",
@@ -686,18 +686,6 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD Radeon RX550, Intel® Core™ i5-6402p CPU / AMD Ryzen 5 1600 or higher"
     },
     {
-      "title": "Lestvitsa",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "Nvidia GTX 2070 8GB GDDR6",
-      "cpu": "Intel Core i5-10400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GTX 2070 8GB GDDR6, Intel Core i5-10400"
-    },
-    {
       "title": "Milki Delivery",
       "tier": "green",
       "tiers": {
@@ -708,6 +696,18 @@
       "cpu": "x86, x64 architecture",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Integrated graphics should be enough, x86, x64 architecture"
+    },
+    {
+      "title": "Lestvitsa",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GTX 2070 8GB GDDR6",
+      "cpu": "Intel Core i5-10400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GTX 2070 8GB GDDR6, Intel Core i5-10400"
     },
     {
       "title": "Revenge of the Mage",
@@ -972,6 +972,54 @@
       "cpu": "Intel Core i5-12400 / AMD Ryzen 5 5600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 or equivalent, with Vulkan 1.2 support, Intel Core i5-12400 / AMD Ryzen 5 5600"
+    },
+    {
+      "title": "ScopeCreep",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "OpenGL 3.3+",
+      "cpu": "2.5 GHz Dual Core",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: OpenGL 3.3+, 2.5 GHz Dual Core"
+    },
+    {
+      "title": "TANUKI: Pon's Summer",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GeForce GTX 950 or AMD Radeon HD 7970 with at least 2 GB VRAM",
+      "cpu": "Intel Core i5 3GHz or AMD Ryzen 5 3GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 950 or AMD Radeon HD 7970 with at least 2 GB VRAM, Intel Core i5 3GHz or AMD Ryzen 5 3GHz"
+    },
+    {
+      "title": "Sol One",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "orange"
+      },
+      "gpu": "AMD 6700XT / Nvidia RTX 3070",
+      "cpu": "AMD Ryzen 5 5600 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: AMD 6700XT / Nvidia RTX 3070, AMD Ryzen 5 5600 or equivalent"
+    },
+    {
+      "title": "Gears of War: E-Day",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 5060 / NVIDIA GeForce RTX 3060ti / AMD Radeon RX 6700 XT / Radeon RX 9060 XT",
+      "cpu": "AMD Ryzen 5 5600 / Intel i5-11600K",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 5060 / NVIDIA GeForce RTX 3060ti / AMD Radeon RX 6700 XT / Radeon RX 9060 XT, AMD Ryzen 5 5600 / Intel i5-11600K"
     }
   ]
 }
