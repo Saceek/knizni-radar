@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-19T09:13:58.606Z",
+  "updatedAt": "2026-11-19T10:14:02.564Z",
   "games": [
     {
       "title": "9 Kings",
@@ -26,18 +26,6 @@
       "note": "Minimální konfigurace: Nvidia GeForce GTX 970 or equivalent, Intel Core I5 4460 3.20 Ghz or equivalent"
     },
     {
-      "title": "DREADMOOR",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "Nvidia RTX 4060 / AMD Radeon RX 7600",
-      "cpu": "Intel Core i5-12400F / AMD Ryzen 5 5600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia RTX 4060 / AMD Radeon RX 7600, Intel Core i5-12400F / AMD Ryzen 5 5600"
-    },
-    {
       "title": "just volleyball",
       "tier": "green",
       "tiers": {
@@ -48,6 +36,18 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1050 Ti / AMD RX 570 or equivalent, Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent"
+    },
+    {
+      "title": "DREADMOOR",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "Nvidia RTX 4060 / AMD Radeon RX 7600",
+      "cpu": "Intel Core i5-12400F / AMD Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia RTX 4060 / AMD Radeon RX 7600, Intel Core i5-12400F / AMD Ryzen 5 5600"
     },
     {
       "title": "Zombies Aren't Real",
@@ -278,18 +278,6 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 (DLSS) / AMD RX 6600 / 6650 XT (FSR), Intel Core i5-12400 / AMD Ryzen 5 5600X (6-core)"
     },
     {
-      "title": "Below the Stone",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce 7600 GS (512 MB) or equivalent",
-      "cpu": "Intel Core 2 Duo E6320 (2*1866) or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce 7600 GS (512 MB) or equivalent, Intel Core 2 Duo E6320 (2*1866) or equivalent"
-    },
-    {
       "title": "Apotheosis Engine",
       "tier": "green",
       "tiers": {
@@ -300,6 +288,18 @@
       "cpu": "2.5 GHz quad-core",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Integrated graphics (Intel HD 4000 or newer), 2.5 GHz quad-core"
+    },
+    {
+      "title": "Below the Stone",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce 7600 GS (512 MB) or equivalent",
+      "cpu": "Intel Core 2 Duo E6320 (2*1866) or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce 7600 GS (512 MB) or equivalent, Intel Core 2 Duo E6320 (2*1866) or equivalent"
     },
     {
       "title": "Drawquarium",
@@ -494,18 +494,6 @@
       "note": "Minimální konfigurace: DirectX 11 or DirectX 12 compatible graphics card, Quad-core Intel or AMD, 2.5 GHz or faster"
     },
     {
-      "title": "Spirit Crossing",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "RTX 3070 / RX 6700 XT",
-      "cpu": "Core i5-12400 / Ryzen 5 5600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 3070 / RX 6700 XT, Core i5-12400 / Ryzen 5 5600"
-    },
-    {
       "title": "Milki Delivery",
       "tier": "green",
       "tiers": {
@@ -518,16 +506,16 @@
       "note": "Minimální konfigurace: Integrated graphics should be enough, x86, x64 architecture"
     },
     {
-      "title": "Project Tomorrow",
-      "tier": "green",
+      "title": "Spirit Crossing",
+      "tier": "red",
       "tiers": {
-        "allyx": "green",
+        "allyx": "red",
         "pc": "green"
       },
-      "gpu": "Intel HD 4600 (AMD or NVIDIA equivalent)",
-      "cpu": "AMD Ryzen 5 1600 / Intel Core i5-8400",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD 4600 (AMD or NVIDIA equivalent), AMD Ryzen 5 1600 / Intel Core i5-8400"
+      "gpu": "RTX 3070 / RX 6700 XT",
+      "cpu": "Core i5-12400 / Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 3070 / RX 6700 XT, Core i5-12400 / Ryzen 5 5600"
     },
     {
       "title": "Dashoot: ABYA's Adventure",
@@ -540,6 +528,18 @@
       "cpu": "Intel Core i5-4430 / AMD FX-4350",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 760 / Radeon R7 260X / Iris Xe Graphics, Intel Core i5-4430 / AMD FX-4350"
+    },
+    {
+      "title": "Project Tomorrow",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD 4600 (AMD or NVIDIA equivalent)",
+      "cpu": "AMD Ryzen 5 1600 / Intel Core i5-8400",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD 4600 (AMD or NVIDIA equivalent), AMD Ryzen 5 1600 / Intel Core i5-8400"
     },
     {
       "title": "MoSimulator",
@@ -578,18 +578,6 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4000 or equivalent, Intel Core i3-2100 / AMD FX-6300 or equivalent"
     },
     {
-      "title": "Hillthorn",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Nvidia GeForce GTX 950 / AMD Radeon RX 570",
-      "cpu": "Dual Core 2.4 GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 950 / AMD Radeon RX 570, Dual Core 2.4 GHz"
-    },
-    {
       "title": "BOOM! Buster",
       "tier": "green",
       "tiers": {
@@ -600,6 +588,18 @@
       "cpu": "Intel or AMD Dual Core CPU",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics, Intel or AMD Dual Core CPU"
+    },
+    {
+      "title": "Hillthorn",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GeForce GTX 950 / AMD Radeon RX 570",
+      "cpu": "Dual Core 2.4 GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 950 / AMD Radeon RX 570, Dual Core 2.4 GHz"
     },
     {
       "title": "Go Next!",
@@ -614,18 +614,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 6 GB / AMD Radeon RX 580 or superior, Intel Core i5-9600K / AMD Ryzen 5 3600 or superior"
     },
     {
-      "title": "Stormforge",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA Geforce RTX 3060 / AMD Radeon RX 6600 XT",
-      "cpu": "Intel Core i5-11500 / AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA Geforce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i5-11500 / AMD Ryzen 5 5600X"
-    },
-    {
       "title": "Brick Buddies",
       "tier": "green",
       "tiers": {
@@ -636,6 +624,18 @@
       "cpu": "Intel Core i5-4460 or AMD FX-8350 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 Ti / AMD Radeon, Intel Core i5-4460 or AMD FX-8350 or equivalent"
+    },
+    {
+      "title": "Stormforge",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA Geforce RTX 3060 / AMD Radeon RX 6600 XT",
+      "cpu": "Intel Core i5-11500 / AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA Geforce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i5-11500 / AMD Ryzen 5 5600X"
     },
     {
       "title": "DERELIKT",
@@ -830,18 +830,6 @@
       "note": "Doporučená konfigurace: Any discrete GPU or modern integrated: NVIDIA GTX 1050 / AMD RX 560 / Intel Iris Xe or better, Any quad-core x64: Intel Core i5-8400 / AMD Ryzen 5 2600 or better"
     },
     {
-      "title": "Astral Hunter: Homebound",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "nVidia GeForce 8600/9600GT, ATI/AMD Radeon HD2600/3600",
-      "cpu": "Intel® Core™ i5 Processors",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: nVidia GeForce 8600/9600GT, ATI/AMD Radeon HD2600/3600, Intel® Core™ i5 Processors"
-    },
-    {
       "title": "底色",
       "tier": "green",
       "tiers": {
@@ -852,6 +840,18 @@
       "cpu": "Intel Core IS或AMD equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 630 2GB / AMD Radeon R5 430  2GB, Intel Core IS或AMD equivalent"
+    },
+    {
+      "title": "Astral Hunter: Homebound",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "nVidia GeForce 8600/9600GT, ATI/AMD Radeon HD2600/3600",
+      "cpu": "Intel® Core™ i5 Processors",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: nVidia GeForce 8600/9600GT, ATI/AMD Radeon HD2600/3600, Intel® Core™ i5 Processors"
     },
     {
       "title": "Nocturnal 2",
@@ -890,18 +890,6 @@
       "note": "Doporučená konfigurace: Radeon HD 7770, GeForce GTX 460 or better, Intel Core i5 4570"
     },
     {
-      "title": "500 FINGER FILLET",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "128MB",
-      "cpu": "Intel core i7",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: 128MB, Intel core i7"
-    },
-    {
       "title": "Dawn of Defense",
       "tier": "red",
       "tiers": {
@@ -912,6 +900,18 @@
       "cpu": "i5-10400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 3060, i5-10400"
+    },
+    {
+      "title": "500 FINGER FILLET",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "128MB",
+      "cpu": "Intel core i7",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: 128MB, Intel core i7"
     },
     {
       "title": "Armory Keeper",
