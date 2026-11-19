@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T23:13:36.841Z",
+  "updatedAt": "2026-11-19T00:13:47.694Z",
   "games": [
     {
       "title": "9 Kings",
@@ -38,18 +38,6 @@
       "note": "Doporučená konfigurace: Nvidia RTX 4060 / AMD Radeon RX 7600, Intel Core i5-12400F / AMD Ryzen 5 5600"
     },
     {
-      "title": "DPS: Desktop Pension Squad",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1060 (6GB) / AMD",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 (6GB) / AMD, Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
       "title": "just volleyball",
       "tier": "green",
       "tiers": {
@@ -60,6 +48,18 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1050 Ti / AMD RX 570 or equivalent, Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent"
+    },
+    {
+      "title": "DPS: Desktop Pension Squad",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1060 (6GB) / AMD",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 (6GB) / AMD, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
       "title": "Zombies Aren't Real",
@@ -242,18 +242,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4070 (12GB) or AMD Radeon RX 7000 (16GB), AMD Ryzen 9 7900 (12 Core) or Intel equivalent"
     },
     {
-      "title": "Dungeonbound",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Integrated graphics (e.g., Intel HD Graphics) or equivalent; dedicated GPU not necessary",
-      "cpu": "Dual-core 2.0 GHz or higher",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Integrated graphics (e.g., Intel HD Graphics) or equivalent; dedicated GPU not necessary, Dual-core 2.0 GHz or higher"
-    },
-    {
       "title": "Melvor Idle 2: A RuneScape Adventure",
       "tier": "green",
       "tiers": {
@@ -264,6 +252,18 @@
       "cpu": "An Intel Pentium 4 processor or later that's SSE2 capable",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Integrated Graphics, An Intel Pentium 4 processor or later that's SSE2 capable"
+    },
+    {
+      "title": "Dungeonbound",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Integrated graphics (e.g., Intel HD Graphics) or equivalent; dedicated GPU not necessary",
+      "cpu": "Dual-core 2.0 GHz or higher",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Integrated graphics (e.g., Intel HD Graphics) or equivalent; dedicated GPU not necessary, Dual-core 2.0 GHz or higher"
     },
     {
       "title": "Ski-E-O! Ski Resort Tycoon",
@@ -602,18 +602,6 @@
       "note": "Doporučená konfigurace: NVIDIA Geforce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i5-11500 / AMD Ryzen 5 5600X"
     },
     {
-      "title": "Brick Buddies",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1050 Ti / AMD Radeon",
-      "cpu": "Intel Core i5-4460 or AMD FX-8350 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 Ti / AMD Radeon, Intel Core i5-4460 or AMD FX-8350 or equivalent"
-    },
-    {
       "title": "HANDS OVER",
       "tier": "green",
       "tiers": {
@@ -626,6 +614,18 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD Radeon R9 280, Intel Core i5-4460 / AMD FX-8350"
     },
     {
+      "title": "Brick Buddies",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1050 Ti / AMD Radeon",
+      "cpu": "Intel Core i5-4460 or AMD FX-8350 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1050 Ti / AMD Radeon, Intel Core i5-4460 or AMD FX-8350 or equivalent"
+    },
+    {
       "title": "DERELIKT",
       "tier": "green",
       "tiers": {
@@ -636,6 +636,18 @@
       "cpu": "AMD Ryzen 5 1600 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 or equivalent, AMD Ryzen 5 1600 or equivalent"
+    },
+    {
+      "title": "Milki Delivery",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Integrated graphics should be enough",
+      "cpu": "x86, x64 architecture",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Integrated graphics should be enough, x86, x64 architecture"
     },
     {
       "title": "Scawy Game",
@@ -686,18 +698,6 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD Radeon RX550, Intel® Core™ i5-6402p CPU / AMD Ryzen 5 1600 or higher"
     },
     {
-      "title": "Milki Delivery",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Integrated graphics should be enough",
-      "cpu": "x86, x64 architecture",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Integrated graphics should be enough, x86, x64 architecture"
-    },
-    {
       "title": "Lestvitsa",
       "tier": "orange",
       "tiers": {
@@ -710,18 +710,6 @@
       "note": "Doporučená konfigurace: Nvidia GTX 2070 8GB GDDR6, Intel Core i5-10400"
     },
     {
-      "title": "Revenge of the Mage",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 3060",
-      "cpu": "Intel Core i7-11700",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060, Intel Core i7-11700"
-    },
-    {
       "title": "Towers of Babble",
       "tier": "green",
       "tiers": {
@@ -732,6 +720,18 @@
       "cpu": "Intel Core i3 or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: DirectX 11 compatible GPU, integrated graphics supported, Intel Core i3 or equivalent"
+    },
+    {
+      "title": "Revenge of the Mage",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060",
+      "cpu": "Intel Core i7-11700",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060, Intel Core i7-11700"
     },
     {
       "title": "Takeover 2",
@@ -972,54 +972,6 @@
       "cpu": "Intel Core i5-12400 / AMD Ryzen 5 5600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 or equivalent, with Vulkan 1.2 support, Intel Core i5-12400 / AMD Ryzen 5 5600"
-    },
-    {
-      "title": "ScopeCreep",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "OpenGL 3.3+",
-      "cpu": "2.5 GHz Dual Core",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: OpenGL 3.3+, 2.5 GHz Dual Core"
-    },
-    {
-      "title": "TANUKI: Pon's Summer",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Nvidia GeForce GTX 950 or AMD Radeon HD 7970 with at least 2 GB VRAM",
-      "cpu": "Intel Core i5 3GHz or AMD Ryzen 5 3GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 950 or AMD Radeon HD 7970 with at least 2 GB VRAM, Intel Core i5 3GHz or AMD Ryzen 5 3GHz"
-    },
-    {
-      "title": "Sol One",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "orange"
-      },
-      "gpu": "AMD 6700XT / Nvidia RTX 3070",
-      "cpu": "AMD Ryzen 5 5600 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: AMD 6700XT / Nvidia RTX 3070, AMD Ryzen 5 5600 or equivalent"
-    },
-    {
-      "title": "Gears of War: E-Day",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 5060 / NVIDIA GeForce RTX 3060ti / AMD Radeon RX 6700 XT / Radeon RX 9060 XT",
-      "cpu": "AMD Ryzen 5 5600 / Intel i5-11600K",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 5060 / NVIDIA GeForce RTX 3060ti / AMD Radeon RX 6700 XT / Radeon RX 9060 XT, AMD Ryzen 5 5600 / Intel i5-11600K"
     }
   ]
 }
