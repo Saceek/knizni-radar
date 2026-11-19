@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-19T11:42:45.659Z",
+  "updatedAt": "2026-11-19T13:14:11.018Z",
   "games": [
     {
       "title": "9 Kings",
@@ -218,18 +218,6 @@
       "note": "Doporučená konfigurace: Dedicated GPU (NVIDIA GTX 1050 or equivalent), Intel Core i5 or equivalent"
     },
     {
-      "title": "Farm & Feast",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 1060 or better",
-      "cpu": "AMD Ryzen 5600G",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1060 or better, AMD Ryzen 5600G"
-    },
-    {
       "title": "Melvor Idle 2: A RuneScape Adventure",
       "tier": "green",
       "tiers": {
@@ -240,6 +228,18 @@
       "cpu": "An Intel Pentium 4 processor or later that's SSE2 capable",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Integrated Graphics, An Intel Pentium 4 processor or later that's SSE2 capable"
+    },
+    {
+      "title": "Farm & Feast",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 1060 or better",
+      "cpu": "AMD Ryzen 5600G",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1060 or better, AMD Ryzen 5600G"
     },
     {
       "title": "Dungeonbound",
@@ -470,18 +470,6 @@
       "note": "Minimální konfigurace: 1GB, i3 2GHz"
     },
     {
-      "title": "FailRooms",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 3060 or AMD Radeon RX 6700 XT or newer",
-      "cpu": "Intel i5 or AMD Ryzen 7 from 2018 or later",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 or AMD Radeon RX 6700 XT or newer, Intel i5 or AMD Ryzen 7 from 2018 or later"
-    },
-    {
       "title": "Milki Delivery",
       "tier": "green",
       "tiers": {
@@ -492,6 +480,18 @@
       "cpu": "x86, x64 architecture",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Integrated graphics should be enough, x86, x64 architecture"
+    },
+    {
+      "title": "FailRooms",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060 or AMD Radeon RX 6700 XT or newer",
+      "cpu": "Intel i5 or AMD Ryzen 7 from 2018 or later",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 or AMD Radeon RX 6700 XT or newer, Intel i5 or AMD Ryzen 7 from 2018 or later"
     },
     {
       "title": "MycoRelic",
@@ -542,18 +542,6 @@
       "note": "Minimální konfigurace: Intel HD 4600 (AMD or NVIDIA equivalent), AMD Ryzen 5 1600 / Intel Core i5-8400"
     },
     {
-      "title": "MoSimulator",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "4GB VRAM, RTX 2060 or better",
-      "cpu": "Modern multi-core processor",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: 4GB VRAM, RTX 2060 or better, Modern multi-core processor"
-    },
-    {
       "title": "Oboro no Ichi",
       "tier": "green",
       "tiers": {
@@ -564,6 +552,18 @@
       "cpu": "Intel Core i3-2100 or AMD FX-6300",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 660 / AMD Radeon HD 7850 with 2GB VRAM, Intel Core i3-2100 or AMD FX-6300"
+    },
+    {
+      "title": "MoSimulator",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "4GB VRAM, RTX 2060 or better",
+      "cpu": "Modern multi-core processor",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 4GB VRAM, RTX 2060 or better, Modern multi-core processor"
     },
     {
       "title": "DAWN AEROWAR",
@@ -770,18 +770,6 @@
       "note": "Doporučená konfigurace: GTX 1650 / RX 6400 (4 ГБ), i5-10400"
     },
     {
-      "title": "MATE, This Place is a MESS!",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1660 (6 GB) / AMD Radeon RX 5600 XT (6 GB)",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 (6 GB) / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-10400 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "Bottled by Bears",
       "tier": "green",
       "tiers": {
@@ -792,6 +780,18 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1050 / AMD RX 560 / Intel Iris Xe, 2 GB VRAM, Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "MATE, This Place is a MESS!",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1660 (6 GB) / AMD Radeon RX 5600 XT (6 GB)",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 (6 GB) / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "BATTLE BEARS GOLD",
@@ -914,18 +914,6 @@
       "note": "Minimální konfigurace: 128MB, Intel core i7"
     },
     {
-      "title": "Armory Keeper",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 660",
-      "cpu": "Intel Core i3 3000 or later",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 660, Intel Core i3 3000 or later"
-    },
-    {
       "title": "Sol One",
       "tier": "red",
       "tiers": {
@@ -936,6 +924,18 @@
       "cpu": "AMD Ryzen 5 5600 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: AMD 6700XT / Nvidia RTX 3070, AMD Ryzen 5 5600 or equivalent"
+    },
+    {
+      "title": "Armory Keeper",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 660",
+      "cpu": "Intel Core i3 3000 or later",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 660, Intel Core i3 3000 or later"
     },
     {
       "title": "Fat Goblins",
@@ -962,18 +962,6 @@
       "note": "Doporučená konfigurace: GeForce RTX 3060 Ti / Radeon RX 6700 XT or better, 8 GB VRAM, Any 64-bit quad core"
     },
     {
-      "title": "Imperial Grace",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DirectX or OpenGL compatible card",
-      "cpu": "x86, x64 architecture with SSE2",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: DirectX or OpenGL compatible card, x86, x64 architecture with SSE2"
-    },
-    {
       "title": "归墟行：人界篇",
       "tier": "red",
       "tiers": {
@@ -984,6 +972,18 @@
       "cpu": "Intel Core i5-12400 / AMD Ryzen 5 5600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 or equivalent, with Vulkan 1.2 support, Intel Core i5-12400 / AMD Ryzen 5 5600"
+    },
+    {
+      "title": "Imperial Grace",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DirectX or OpenGL compatible card",
+      "cpu": "x86, x64 architecture with SSE2",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: DirectX or OpenGL compatible card, x86, x64 architecture with SSE2"
     },
     {
       "title": "ScopeCreep",
