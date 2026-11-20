@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T14:13:33.673Z",
+  "updatedAt": "2026-11-20T15:15:03.169Z",
   "games": [
     {
       "title": "9 Kings",
@@ -434,18 +434,6 @@
       "note": "Minimální konfigurace: GeForce® GTX 1050 Ti 4GB, Core™ i5-9400"
     },
     {
-      "title": "Icy Tower",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "1GB",
-      "cpu": "i3 2GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: 1GB, i3 2GHz"
-    },
-    {
       "title": "FailRooms",
       "tier": "red",
       "tiers": {
@@ -456,6 +444,18 @@
       "cpu": "Intel i5 or AMD Ryzen 7 from 2018 or later",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 or AMD Radeon RX 6700 XT or newer, Intel i5 or AMD Ryzen 7 from 2018 or later"
+    },
+    {
+      "title": "Icy Tower",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "1GB",
+      "cpu": "i3 2GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: 1GB, i3 2GHz"
     },
     {
       "title": "MycoRelic",
@@ -614,30 +614,6 @@
       "note": "Doporučená konfigurace: Nvidia GTX 2070 8GB GDDR6, Intel Core i5-10400"
     },
     {
-      "title": "Towers of Babble",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DirectX 11 compatible GPU, integrated graphics supported",
-      "cpu": "Intel Core i3 or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: DirectX 11 compatible GPU, integrated graphics supported, Intel Core i3 or equivalent"
-    },
-    {
-      "title": "GroundInFlames",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 1650 / RX 6400 (4 ГБ)",
-      "cpu": "i5-10400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1650 / RX 6400 (4 ГБ), i5-10400"
-    },
-    {
       "title": "MATE, This Place is a MESS!",
       "tier": "green",
       "tiers": {
@@ -662,16 +638,28 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1050 / AMD RX 560 / Intel Iris Xe, 2 GB VRAM, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
-      "title": "Takeover 2",
-      "tier": "orange",
+      "title": "Towers of Babble",
+      "tier": "green",
       "tiers": {
-        "allyx": "orange",
+        "allyx": "green",
         "pc": "green"
       },
-      "gpu": "MD Radeon RX 6600 / NVIDIA RTX 2060",
-      "cpu": "AMD Ryzen 5 3600 / Intel Core i5-10400",
+      "gpu": "DirectX 11 compatible GPU, integrated graphics supported",
+      "cpu": "Intel Core i3 or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: DirectX 11 compatible GPU, integrated graphics supported, Intel Core i3 or equivalent"
+    },
+    {
+      "title": "GroundInFlames",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 1650 / RX 6400 (4 ГБ)",
+      "cpu": "i5-10400",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: MD Radeon RX 6600 / NVIDIA RTX 2060, AMD Ryzen 5 3600 / Intel Core i5-10400"
+      "note": "Doporučená konfigurace: GTX 1650 / RX 6400 (4 ГБ), i5-10400"
     },
     {
       "title": "Revenge of the Mage",
@@ -818,18 +806,6 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 660, Intel Core i3 3000 or later"
     },
     {
-      "title": "归墟行：人界篇",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 3060 or equivalent, with Vulkan 1.2 support",
-      "cpu": "Intel Core i5-12400 / AMD Ryzen 5 5600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 or equivalent, with Vulkan 1.2 support, Intel Core i5-12400 / AMD Ryzen 5 5600"
-    },
-    {
       "title": "Volvy’s Adventure: Reslimed",
       "tier": "green",
       "tiers": {
@@ -840,6 +816,18 @@
       "cpu": "Intel Core i5-8600K / AMD Ryzen 5 1600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1080 / Radeon RX Vega 56 / Arc A580, Intel Core i5-8600K / AMD Ryzen 5 1600"
+    },
+    {
+      "title": "归墟行：人界篇",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060 or equivalent, with Vulkan 1.2 support",
+      "cpu": "Intel Core i5-12400 / AMD Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 or equivalent, with Vulkan 1.2 support, Intel Core i5-12400 / AMD Ryzen 5 5600"
     },
     {
       "title": "ScopeCreep",
@@ -938,6 +926,18 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 760 / AMD Radeon R7 260x with 2GB Video RAM, Intel Core i5-4460 / AMD FX-6300"
     },
     {
+      "title": "Clicky Islands",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD Graphics 4000 and higher",
+      "cpu": "2 GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics 4000 and higher, 2 GHz"
+    },
+    {
       "title": "Car Flipper",
       "tier": "red",
       "tiers": {
@@ -974,18 +974,6 @@
       "note": "Minimální konfigurace: 1Gb Video Memory, capable of OpenGL 3.0+ support (2.1 with ARB extensions acceptable), 2.0 Ghz"
     },
     {
-      "title": "Clicky Islands",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel HD Graphics 4000 and higher",
-      "cpu": "2 GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 4000 and higher, 2 GHz"
-    },
-    {
       "title": "System Arrival",
       "tier": "green",
       "tiers": {
@@ -1008,6 +996,30 @@
       "cpu": "Quad-core 2.5 GHz or faster",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: DirectX 11 compatible, 2 GB VRAM, Quad-core 2.5 GHz or faster"
+    },
+    {
+      "title": "Handmancers",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 750",
+      "cpu": "i3 4th gen",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GTX 750, i3 4th gen"
+    },
+    {
+      "title": "Lord of Undead",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "orange"
+      },
+      "gpu": "GeForce RTX 3070",
+      "cpu": "Intel Core i5 / AMD Ryzen 5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3070, Intel Core i5 / AMD Ryzen 5"
     }
   ]
 }
