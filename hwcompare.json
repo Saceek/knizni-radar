@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-21T13:13:51.669Z",
+  "updatedAt": "2026-11-21T14:13:40.538Z",
   "games": [
     {
       "title": "9 Kings",
@@ -72,18 +72,6 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1050 Ti / AMD RX 570 or equivalent, Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent"
-    },
-    {
-      "title": "Booster Pack Heroes",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Any graphics card",
-      "cpu": "Dual-core @ 2.0 Ghz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Any graphics card, Dual-core @ 2.0 Ghz"
     },
     {
       "title": "Blacksmith Master",
@@ -470,18 +458,6 @@
       "note": "Minimální konfigurace: Intel HD Graphics, Intel or AMD Dual Core CPU"
     },
     {
-      "title": "HANDS OVER",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 960 / AMD Radeon R9 280",
-      "cpu": "Intel Core i5-4460 / AMD FX-8350",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD Radeon R9 280, Intel Core i5-4460 / AMD FX-8350"
-    },
-    {
       "title": "Hillthorn",
       "tier": "green",
       "tiers": {
@@ -492,6 +468,18 @@
       "cpu": "Dual Core 2.4 GHz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 950 / AMD Radeon RX 570, Dual Core 2.4 GHz"
+    },
+    {
+      "title": "HANDS OVER",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 960 / AMD Radeon R9 280",
+      "cpu": "Intel Core i5-4460 / AMD FX-8350",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD Radeon R9 280, Intel Core i5-4460 / AMD FX-8350"
     },
     {
       "title": "DAWN AEROWAR",
@@ -590,18 +578,6 @@
       "note": "Doporučená konfigurace: DX10, DX11, DX12 or Vulkan capable GPUs, x86, x64 architecture with SSE2 instruction set support, Arm64"
     },
     {
-      "title": "Bottled by Bears",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 1050 / AMD RX 560 / Intel Iris Xe, 2 GB VRAM",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1050 / AMD RX 560 / Intel Iris Xe, 2 GB VRAM, Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
       "title": "Towers of Babble",
       "tier": "green",
       "tiers": {
@@ -612,6 +588,18 @@
       "cpu": "Intel Core i3 or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: DirectX 11 compatible GPU, integrated graphics supported, Intel Core i3 or equivalent"
+    },
+    {
+      "title": "Bottled by Bears",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 1050 / AMD RX 560 / Intel Iris Xe, 2 GB VRAM",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1050 / AMD RX 560 / Intel Iris Xe, 2 GB VRAM, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
       "title": "GroundInFlames",
@@ -758,16 +746,16 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 or equivalent, with Vulkan 1.2 support, Intel Core i5-12400 / AMD Ryzen 5 5600"
     },
     {
-      "title": "Backseat Champions",
+      "title": "Lord of Undead",
       "tier": "red",
       "tiers": {
         "allyx": "red",
-        "pc": "green"
+        "pc": "orange"
       },
-      "gpu": "NVIDIA GeForce RTX 2060 or AMD Radeon RX 6600 XT",
-      "cpu": "Intel Core i7-13700HX / AMD Ryzen 9 series",
+      "gpu": "GeForce RTX 3070",
+      "cpu": "Intel Core i5 / AMD Ryzen 5",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 or AMD Radeon RX 6600 XT, Intel Core i7-13700HX / AMD Ryzen 9 series"
+      "note": "Doporučená konfigurace: GeForce RTX 3070, Intel Core i5 / AMD Ryzen 5"
     },
     {
       "title": "ScopeCreep",
@@ -782,16 +770,16 @@
       "note": "Minimální konfigurace: OpenGL 3.3+, 2.5 GHz Dual Core"
     },
     {
-      "title": "Lord of Undead",
+      "title": "Backseat Champions",
       "tier": "red",
       "tiers": {
         "allyx": "red",
-        "pc": "orange"
+        "pc": "green"
       },
-      "gpu": "GeForce RTX 3070",
-      "cpu": "Intel Core i5 / AMD Ryzen 5",
+      "gpu": "NVIDIA GeForce RTX 2060 or AMD Radeon RX 6600 XT",
+      "cpu": "Intel Core i7-13700HX / AMD Ryzen 9 series",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3070, Intel Core i5 / AMD Ryzen 5"
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 or AMD Radeon RX 6600 XT, Intel Core i7-13700HX / AMD Ryzen 9 series"
     },
     {
       "title": "Armory Keeper",
