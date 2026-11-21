@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-21T15:13:51.517Z",
+  "updatedAt": "2026-11-21T16:14:54.188Z",
   "games": [
     {
       "title": "9 Kings",
@@ -156,18 +156,6 @@
       "cpu": "An Intel Pentium 4 processor or later that's SSE2 capable",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Integrated Graphics, An Intel Pentium 4 processor or later that's SSE2 capable"
-    },
-    {
-      "title": "JOHN GLEEP",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 1660 Super / AMD Radeon RX 5600 XT",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1660 Super / AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "Dungeonbound",
@@ -782,6 +770,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 or AMD Radeon RX 6600 XT, Intel Core i7-13700HX / AMD Ryzen 9 series"
     },
     {
+      "title": "Water TD",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "GeForce RTX 3060 Ti / Radeon RX 6700 XT or better, 8 GB VRAM",
+      "cpu": "Any 64-bit quad core",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3060 Ti / Radeon RX 6700 XT or better, 8 GB VRAM, Any 64-bit quad core"
+    },
+    {
       "title": "Armory Keeper",
       "tier": "green",
       "tiers": {
@@ -804,18 +804,6 @@
       "cpu": "2 GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 4000 and higher, 2 GHz"
-    },
-    {
-      "title": "Water TD",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "GeForce RTX 3060 Ti / Radeon RX 6700 XT or better, 8 GB VRAM",
-      "cpu": "Any 64-bit quad core",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 Ti / Radeon RX 6700 XT or better, 8 GB VRAM, Any 64-bit quad core"
     },
     {
       "title": "HARMA",
@@ -842,18 +830,6 @@
       "note": "Minimální konfigurace: DirectX or OpenGL compatible card, x86, x64 architecture with SSE2"
     },
     {
-      "title": "500 FINGER FILLET",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "128MB",
-      "cpu": "Intel core i7",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: 128MB, Intel core i7"
-    },
-    {
       "title": "Fat Goblins",
       "tier": "green",
       "tiers": {
@@ -878,16 +854,16 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, i5-7400"
     },
     {
-      "title": "BALL PICKER - Clean Up the Golf Yard",
-      "tier": "orange",
+      "title": "500 FINGER FILLET",
+      "tier": "green",
       "tiers": {
-        "allyx": "orange",
+        "allyx": "green",
         "pc": "green"
       },
-      "gpu": "NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT",
-      "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
+      "gpu": "128MB",
+      "cpu": "Intel core i7",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: 128MB, Intel core i7"
     },
     {
       "title": "Touhou Chess",
@@ -900,6 +876,18 @@
       "cpu": "Quad-core 2.5 GHz or faster",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: DirectX 11 compatible, 2 GB VRAM, Quad-core 2.5 GHz or faster"
+    },
+    {
+      "title": "BALL PICKER - Clean Up the Golf Yard",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT",
+      "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
     },
     {
       "title": "Car Flipper",
@@ -948,6 +936,18 @@
       "cpu": "i3 4th gen",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GTX 750, i3 4th gen"
+    },
+    {
+      "title": "Trust Your Gut",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1060",
+      "cpu": "Intel Core i5-8400 or AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, Intel Core i5-8400 or AMD Ryzen 5 2600"
     },
     {
       "title": "The Cozy Board Game Shop: Tidy Up",
