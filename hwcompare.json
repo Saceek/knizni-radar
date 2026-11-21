@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-21T21:13:57.941Z",
+  "updatedAt": "2026-11-21T22:14:20.308Z",
   "games": [
     {
       "title": "9 Kings",
@@ -350,18 +350,6 @@
       "note": "Doporučená konfigurace: 1Gb Video Memory, Capable of OpenGL 3.0+ Support, Intel(R) Core(TM) i5-3470"
     },
     {
-      "title": "Spirit Crossing",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "RTX 3070 / RX 6700 XT",
-      "cpu": "Core i5-12400 / Ryzen 5 5600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 3070 / RX 6700 XT, Core i5-12400 / Ryzen 5 5600"
-    },
-    {
       "title": "We March as One",
       "tier": "green",
       "tiers": {
@@ -372,6 +360,18 @@
       "cpu": "Quad-core CPU — Intel Core i5-6400 / AMD Ryzen 3 1200",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Any DirectX 11 capable GPU with 1 GB VRAM (GeForce GTX 750 / Radeon R7 260 / Intel UHD 630), Quad-core CPU — Intel Core i5-6400 / AMD Ryzen 3 1200"
+    },
+    {
+      "title": "Spirit Crossing",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "RTX 3070 / RX 6700 XT",
+      "cpu": "Core i5-12400 / Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 3070 / RX 6700 XT, Core i5-12400 / Ryzen 5 5600"
     },
     {
       "title": "ワロタ、俺の家のとなり魔王城www",
@@ -386,18 +386,6 @@
       "note": "Minimální konfigurace: GeForce® GTX 1050 Ti 4GB, Core™ i5-9400"
     },
     {
-      "title": "Dice Have No Eyes",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "1GB VRAM",
-      "cpu": "i5 3GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: 1GB VRAM, i5 3GHz"
-    },
-    {
       "title": "Rock Band Simulator",
       "tier": "green",
       "tiers": {
@@ -408,6 +396,18 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 / AMD RX 580 (4 GB VRAM), Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Dice Have No Eyes",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "1GB VRAM",
+      "cpu": "i5 3GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 1GB VRAM, i5 3GHz"
     },
     {
       "title": "FailRooms",
@@ -494,16 +494,16 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4000 or equivalent, Intel Core i3-2100 / AMD FX-6300 or equivalent"
     },
     {
-      "title": "Stormforge",
-      "tier": "orange",
+      "title": "KORRIDOR",
+      "tier": "green",
       "tiers": {
-        "allyx": "orange",
+        "allyx": "green",
         "pc": "green"
       },
-      "gpu": "NVIDIA Geforce RTX 3060 / AMD Radeon RX 6600 XT",
-      "cpu": "Intel Core i5-11500 / AMD Ryzen 5 5600X",
+      "gpu": "DX10, DX11, DX12 or Vulkan capable GPUs",
+      "cpu": "x86, x64 architecture with SSE2 instruction set support, Arm64",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA Geforce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i5-11500 / AMD Ryzen 5 5600X"
+      "note": "Doporučená konfigurace: DX10, DX11, DX12 or Vulkan capable GPUs, x86, x64 architecture with SSE2 instruction set support, Arm64"
     },
     {
       "title": "MoSimulator",
@@ -518,16 +518,16 @@
       "note": "Doporučená konfigurace: 4GB VRAM, RTX 2060 or better, Modern multi-core processor"
     },
     {
-      "title": "KORRIDOR",
-      "tier": "green",
+      "title": "Stormforge",
+      "tier": "orange",
       "tiers": {
-        "allyx": "green",
+        "allyx": "orange",
         "pc": "green"
       },
-      "gpu": "DX10, DX11, DX12 or Vulkan capable GPUs",
-      "cpu": "x86, x64 architecture with SSE2 instruction set support, Arm64",
+      "gpu": "NVIDIA Geforce RTX 3060 / AMD Radeon RX 6600 XT",
+      "cpu": "Intel Core i5-11500 / AMD Ryzen 5 5600X",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: DX10, DX11, DX12 or Vulkan capable GPUs, x86, x64 architecture with SSE2 instruction set support, Arm64"
+      "note": "Doporučená konfigurace: NVIDIA Geforce RTX 3060 / AMD Radeon RX 6600 XT, Intel Core i5-11500 / AMD Ryzen 5 5600X"
     },
     {
       "title": "Rejected Draft",
@@ -686,18 +686,6 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 630 2GB / AMD Radeon R5 430  2GB, Intel Core IS或AMD equivalent"
     },
     {
-      "title": "Nocturnal 2",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 1050 / AMD Radeon RX 560X (2 GB VRAM)",
-      "cpu": "Intel Core i5-6600 / AMD Ryzen 3 1200",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1050 / AMD Radeon RX 560X (2 GB VRAM), Intel Core i5-6600 / AMD Ryzen 3 1200"
-    },
-    {
       "title": "Lord of Undead",
       "tier": "red",
       "tiers": {
@@ -708,6 +696,18 @@
       "cpu": "Intel Core i5 / AMD Ryzen 5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 3070, Intel Core i5 / AMD Ryzen 5"
+    },
+    {
+      "title": "Nocturnal 2",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 1050 / AMD Radeon RX 560X (2 GB VRAM)",
+      "cpu": "Intel Core i5-6600 / AMD Ryzen 3 1200",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1050 / AMD Radeon RX 560X (2 GB VRAM), Intel Core i5-6600 / AMD Ryzen 3 1200"
     },
     {
       "title": "Astral Hunter: Homebound",
@@ -806,18 +806,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 or AMD Radeon RX 6600 XT, Intel Core i7-13700HX / AMD Ryzen 9 series"
     },
     {
-      "title": "Imperial Grace",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DirectX or OpenGL compatible card",
-      "cpu": "x86, x64 architecture with SSE2",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: DirectX or OpenGL compatible card, x86, x64 architecture with SSE2"
-    },
-    {
       "title": "BALL PICKER - Clean Up the Golf Yard",
       "tier": "orange",
       "tiers": {
@@ -828,6 +816,18 @@
       "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Imperial Grace",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DirectX or OpenGL compatible card",
+      "cpu": "x86, x64 architecture with SSE2",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: DirectX or OpenGL compatible card, x86, x64 architecture with SSE2"
     },
     {
       "title": "Touhou Chess",
@@ -1032,138 +1032,6 @@
       "cpu": "Intel Core i5-3470 / AMD FX-6300",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce GTX 660 / Radeon HD 7870, Intel Core i5-3470 / AMD FX-6300"
-    },
-    {
-      "title": "Well Dweller",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GT 220 (1024 MB), Radeon HD 4650 (1024 VRAM), or equivalent",
-      "cpu": "Intel Pentium E2180 (2 * 2000), AMD Athlon Dual Core 4450e (2 * 2300), or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GT 220 (1024 MB), Radeon HD 4650 (1024 VRAM), or equivalent, Intel Pentium E2180 (2 * 2000), AMD Athlon Dual Core 4450e (2 * 2300), or equivalent"
-    },
-    {
-      "title": "Silver Pines",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NIVIDIA GeForce GTX 770, AMD Radeon R9 380",
-      "cpu": "Intel Core i5-6600 or AMD Ryzen 5 1600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NIVIDIA GeForce GTX 770, AMD Radeon R9 380, Intel Core i5-6600 or AMD Ryzen 5 1600"
-    },
-    {
-      "title": "FINAL FANTASY RESONANCE",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "AMD Radeon™ RX 5500 XT / Intel® Arc™ A580 / NVIDIA® GeForce® GTX 1650",
-      "cpu": "AMD Ryzen™ 5 2500X / Intel® Core™ i3-8100",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: AMD Radeon™ RX 5500 XT / Intel® Arc™ A580 / NVIDIA® GeForce® GTX 1650, AMD Ryzen™ 5 2500X / Intel® Core™ i3-8100"
-    },
-    {
-      "title": "Deer & Boy",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 1060 / Radeon RX 470",
-      "cpu": "Ryzen 3 1200 / Core i5-7400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1060 / Radeon RX 470, Ryzen 3 1200 / Core i5-7400"
-    },
-    {
-      "title": "Hollow Knight: Silksong",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 1050 (2GB), Radeon R9 380 (2GB)",
-      "cpu": "Intel Core i5-3470",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1050 (2GB), Radeon R9 380 (2GB), Intel Core i5-3470"
-    },
-    {
-      "title": "007 First Light",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT",
-      "cpu": "INTEL CORE i5 13500, AMD RYZEN 5 7600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GEFORCE RTX 3060 TI, AMD RX 6700 XT, INTEL DISCRETE GPU EQUIVALENT, INTEL CORE i5 13500, AMD RYZEN 5 7600"
-    },
-    {
-      "title": "Moss: The Forgotten Relic",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Nvidia GeForce GTX 1070 8GB / AMD RX Vega 56 8GB or better",
-      "cpu": "Intel Core i7-4790 / AMD Ryzen 5 1500X or better",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Nvidia GeForce GTX 1070 8GB / AMD RX Vega 56 8GB or better, Intel Core i7-4790 / AMD Ryzen 5 1500X or better"
-    },
-    {
-      "title": "Call of the Elder Gods",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Nvidia GeForce GTX 1650 / AMD Radeon RX 580",
-      "cpu": "Intel Core i5-11600K / AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1650 / AMD Radeon RX 580, Intel Core i5-11600K / AMD Ryzen 5 5600X"
-    },
-    {
-      "title": "REPLACED",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 1060 (6GB) or equivalent",
-      "cpu": "Intel® Core™ i5-8400 Processor",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
-    },
-    {
-      "title": "MOUSE: P.I. For Hire",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600",
-      "cpu": "Intel Core i5 9600 / Ryzen 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600, Intel Core i5 9600 / Ryzen 3600"
-    },
-    {
-      "title": "Hellblade II: Senua’s Saga",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "orange"
-      },
-      "gpu": "Nvidia RTX 3080 | AMD RX 6800 XT | Intel Arc A770",
-      "cpu": "Intel i7-10700K | AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia RTX 3080 | AMD RX 6800 XT | Intel Arc A770, Intel i7-10700K | AMD Ryzen 5 5600X"
     }
   ]
 }
