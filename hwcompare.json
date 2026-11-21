@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-21T11:07:20.225Z",
+  "updatedAt": "2026-11-21T11:12:39.695Z",
   "games": [
     {
       "title": "9 Kings",
@@ -576,6 +576,30 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 / AMD RX 580 (4 GB VRAM), Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Lestvitsa",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GTX 2070 8GB GDDR6",
+      "cpu": "Intel Core i5-10400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GTX 2070 8GB GDDR6, Intel Core i5-10400"
+    },
+    {
+      "title": "KORRIDOR",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DX10, DX11, DX12 or Vulkan capable GPUs",
+      "cpu": "x86, x64 architecture with SSE2 instruction set support, Arm64",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: DX10, DX11, DX12 or Vulkan capable GPUs, x86, x64 architecture with SSE2 instruction set support, Arm64"
     },
     {
       "title": "Lestvitsa",
