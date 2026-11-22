@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22T17:13:37.649Z",
+  "updatedAt": "2026-11-22T18:14:15.149Z",
   "games": [
     {
       "title": "9 Kings",
@@ -566,18 +566,6 @@
       "note": "Doporučená konfigurace: GeForce GTX 1080 / Radeon RX Vega 56 / Arc A580, Intel Core i5-8600K / AMD Ryzen 5 1600"
     },
     {
-      "title": "GroundInFlames",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 1650 / RX 6400 (4 ГБ)",
-      "cpu": "i5-10400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1650 / RX 6400 (4 ГБ), i5-10400"
-    },
-    {
       "title": "Sol One",
       "tier": "red",
       "tiers": {
@@ -588,6 +576,18 @@
       "cpu": "AMD Ryzen 5 5600 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: AMD 6700XT / Nvidia RTX 3070, AMD Ryzen 5 5600 or equivalent"
+    },
+    {
+      "title": "GroundInFlames",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 1650 / RX 6400 (4 ГБ)",
+      "cpu": "i5-10400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1650 / RX 6400 (4 ГБ), i5-10400"
     },
     {
       "title": "Lord of Undead",
@@ -626,18 +626,6 @@
       "note": "Doporučená konfigurace: GTX 1050 Ti / AMD RX 580, Intel Core i5-6600K / AMD Ryzen R5 1600"
     },
     {
-      "title": "99天生存指南",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "Radeon RX 6700 XT, Geforce RTX 2070 or better",
-      "cpu": "Ryzen 5 5600X,Core i5 11600K or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Radeon RX 6700 XT, Geforce RTX 2070 or better, Ryzen 5 5600X,Core i5 11600K or better"
-    },
-    {
       "title": "Engagement",
       "tier": "green",
       "tiers": {
@@ -648,6 +636,18 @@
       "cpu": "Any quad-core x64: Intel Core i5-8400 / AMD Ryzen 5 2600 or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Any discrete GPU or modern integrated: NVIDIA GTX 1050 / AMD RX 560 / Intel Iris Xe or better, Any quad-core x64: Intel Core i5-8400 / AMD Ryzen 5 2600 or better"
+    },
+    {
+      "title": "99天生存指南",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "Radeon RX 6700 XT, Geforce RTX 2070 or better",
+      "cpu": "Ryzen 5 5600X,Core i5 11600K or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Radeon RX 6700 XT, Geforce RTX 2070 or better, Ryzen 5 5600X,Core i5 11600K or better"
     },
     {
       "title": "HARMA",
@@ -698,18 +698,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 (12 GB) or AMD Radeon RX 6700 XT (12 GB), Intel Core i7-11700 or AMD Ryzen 7 5800X"
     },
     {
-      "title": "ScopeCreep",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "OpenGL 3.3+",
-      "cpu": "2.5 GHz Dual Core",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: OpenGL 3.3+, 2.5 GHz Dual Core"
-    },
-    {
       "title": "Clicky Islands",
       "tier": "green",
       "tiers": {
@@ -720,6 +708,18 @@
       "cpu": "2 GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 4000 and higher, 2 GHz"
+    },
+    {
+      "title": "ScopeCreep",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "OpenGL 3.3+",
+      "cpu": "2.5 GHz Dual Core",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: OpenGL 3.3+, 2.5 GHz Dual Core"
     },
     {
       "title": "BALL PICKER - Clean Up the Golf Yard",
@@ -878,6 +878,18 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4000, 2GHz 4 Cores"
     },
     {
+      "title": "Widget Idle",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "AMD Radeon 780M / RX 6400 or Nvidia GTX 1650",
+      "cpu": "AMD Ryzen 7 7840U",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: AMD Radeon 780M / RX 6400 or Nvidia GTX 1650, AMD Ryzen 7 7840U"
+    },
+    {
       "title": "Hazard Levels",
       "tier": "green",
       "tiers": {
@@ -902,18 +914,6 @@
       "note": "Doporučená konfigurace: Integrated Graphics Chip or better, 2.4 GHz Processor or better"
     },
     {
-      "title": "Widget Idle",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "AMD Radeon 780M / RX 6400 or Nvidia GTX 1650",
-      "cpu": "AMD Ryzen 7 7840U",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: AMD Radeon 780M / RX 6400 or Nvidia GTX 1650, AMD Ryzen 7 7840U"
-    },
-    {
       "title": "The Cozy Board Game Shop: Tidy Up",
       "tier": "orange",
       "tiers": {
@@ -926,18 +926,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
-      "title": "Handmancers",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 750",
-      "cpu": "i3 4th gen",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GTX 750, i3 4th gen"
-    },
-    {
       "title": "777 HERO ~The One Who Defies Time~",
       "tier": "green",
       "tiers": {
@@ -948,6 +936,18 @@
       "cpu": "2 cores, 4 threads (comparable to i3-6100 or Ryzen 3 1200)",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Integrated graphics with DirectX 12 support (comparable to Intel UHD 620), 2 cores, 4 threads (comparable to i3-6100 or Ryzen 3 1200)"
+    },
+    {
+      "title": "Handmancers",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 750",
+      "cpu": "i3 4th gen",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GTX 750, i3 4th gen"
     },
     {
       "title": "The Incident at Galley House",
