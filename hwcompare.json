@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22T10:13:44.039Z",
+  "updatedAt": "2026-11-22T11:13:09.740Z",
   "games": [
     {
       "title": "9 Kings",
@@ -446,18 +446,6 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD Radeon R9 280, Intel Core i5-4460 / AMD FX-8350"
     },
     {
-      "title": "BOOM! Buster",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel HD Graphics",
-      "cpu": "Intel or AMD Dual Core CPU",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics, Intel or AMD Dual Core CPU"
-    },
-    {
       "title": "KORRIDOR",
       "tier": "green",
       "tiers": {
@@ -468,6 +456,18 @@
       "cpu": "x86, x64 architecture with SSE2 instruction set support, Arm64",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: DX10, DX11, DX12 or Vulkan capable GPUs, x86, x64 architecture with SSE2 instruction set support, Arm64"
+    },
+    {
+      "title": "BOOM! Buster",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD Graphics",
+      "cpu": "Intel or AMD Dual Core CPU",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics, Intel or AMD Dual Core CPU"
     },
     {
       "title": "Scawy Game",
@@ -578,18 +578,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 (6 GB) / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
-      "title": "GroundInFlames",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 1650 / RX 6400 (4 ГБ)",
-      "cpu": "i5-10400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1650 / RX 6400 (4 ГБ), i5-10400"
-    },
-    {
       "title": "Volvy’s Adventure: Reslimed",
       "tier": "green",
       "tiers": {
@@ -600,6 +588,18 @@
       "cpu": "Intel Core i5-8600K / AMD Ryzen 5 1600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1080 / Radeon RX Vega 56 / Arc A580, Intel Core i5-8600K / AMD Ryzen 5 1600"
+    },
+    {
+      "title": "GroundInFlames",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 1650 / RX 6400 (4 ГБ)",
+      "cpu": "i5-10400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1650 / RX 6400 (4 ГБ), i5-10400"
     },
     {
       "title": "Sol One",
@@ -626,18 +626,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060, Intel Core i7-11700"
     },
     {
-      "title": "BATTLE BEARS GOLD",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 1050 Ti / AMD RX 580",
-      "cpu": "Intel Core i5-6600K / AMD Ryzen R5 1600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1050 Ti / AMD RX 580, Intel Core i5-6600K / AMD Ryzen R5 1600"
-    },
-    {
       "title": "Lord of Undead",
       "tier": "red",
       "tiers": {
@@ -648,6 +636,18 @@
       "cpu": "Intel Core i5 / AMD Ryzen 5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 3070, Intel Core i5 / AMD Ryzen 5"
+    },
+    {
+      "title": "BATTLE BEARS GOLD",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 1050 Ti / AMD RX 580",
+      "cpu": "Intel Core i5-6600K / AMD Ryzen R5 1600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1050 Ti / AMD RX 580, Intel Core i5-6600K / AMD Ryzen R5 1600"
     },
     {
       "title": "99天生存指南",
@@ -722,6 +722,18 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1050 / AMD Radeon RX 560X (2 GB VRAM), Intel Core i5-6600 / AMD Ryzen 3 1200"
     },
     {
+      "title": "Clicky Islands",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD Graphics 4000 and higher",
+      "cpu": "2 GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics 4000 and higher, 2 GHz"
+    },
+    {
       "title": "归墟行：人界篇",
       "tier": "red",
       "tiers": {
@@ -732,6 +744,18 @@
       "cpu": "Intel Core i5-12400 / AMD Ryzen 5 5600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 or equivalent, with Vulkan 1.2 support, Intel Core i5-12400 / AMD Ryzen 5 5600"
+    },
+    {
+      "title": "BALL PICKER - Clean Up the Golf Yard",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT",
+      "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
     },
     {
       "title": "Astral Hunter: Homebound",
@@ -746,18 +770,6 @@
       "note": "Doporučená konfigurace: nVidia GeForce 8600/9600GT, ATI/AMD Radeon HD2600/3600, Intel® Core™ i5 Processors"
     },
     {
-      "title": "Clicky Islands",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel HD Graphics 4000 and higher",
-      "cpu": "2 GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 4000 and higher, 2 GHz"
-    },
-    {
       "title": "Water TD",
       "tier": "red",
       "tiers": {
@@ -768,18 +780,6 @@
       "cpu": "Any 64-bit quad core",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 3060 Ti / Radeon RX 6700 XT or better, 8 GB VRAM, Any 64-bit quad core"
-    },
-    {
-      "title": "BALL PICKER - Clean Up the Golf Yard",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT",
-      "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
     },
     {
       "title": "Car Flipper",
@@ -830,18 +830,6 @@
       "note": "Doporučená konfigurace: DirectX 11 compatible, 2 GB VRAM, Quad-core 2.5 GHz or faster"
     },
     {
-      "title": "Imperial Grace",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DirectX or OpenGL compatible card",
-      "cpu": "x86, x64 architecture with SSE2",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: DirectX or OpenGL compatible card, x86, x64 architecture with SSE2"
-    },
-    {
       "title": "Idle King: Společně za kořistí",
       "tier": "green",
       "tiers": {
@@ -852,6 +840,18 @@
       "cpu": "i5-7400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, i5-7400"
+    },
+    {
+      "title": "Imperial Grace",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DirectX or OpenGL compatible card",
+      "cpu": "x86, x64 architecture with SSE2",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: DirectX or OpenGL compatible card, x86, x64 architecture with SSE2"
     },
     {
       "title": "Fat Goblins",
