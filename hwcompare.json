@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22T14:14:01.611Z",
+  "updatedAt": "2026-11-22T15:14:05.644Z",
   "games": [
     {
       "title": "9 Kings",
@@ -338,18 +338,6 @@
       "note": "Doporučená konfigurace: RTX 3070 / RX 6700 XT, Core i5-12400 / Ryzen 5 5600"
     },
     {
-      "title": "ワロタ、俺の家のとなり魔王城www",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce® GTX 1050 Ti 4GB",
-      "cpu": "Core™ i5-9400",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce® GTX 1050 Ti 4GB, Core™ i5-9400"
-    },
-    {
       "title": "We March as One",
       "tier": "green",
       "tiers": {
@@ -360,6 +348,18 @@
       "cpu": "Quad-core CPU — Intel Core i5-6400 / AMD Ryzen 3 1200",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Any DirectX 11 capable GPU with 1 GB VRAM (GeForce GTX 750 / Radeon R7 260 / Intel UHD 630), Quad-core CPU — Intel Core i5-6400 / AMD Ryzen 3 1200"
+    },
+    {
+      "title": "ワロタ、俺の家のとなり魔王城www",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce® GTX 1050 Ti 4GB",
+      "cpu": "Core™ i5-9400",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce® GTX 1050 Ti 4GB, Core™ i5-9400"
     },
     {
       "title": "Dice Have No Eyes",
@@ -410,18 +410,6 @@
       "note": "Minimální konfigurace: DirectX 11 or DirectX 12 compatible graphics card, Quad-core Intel or AMD, 2.5 GHz or faster"
     },
     {
-      "title": "KORRIDOR",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DX10, DX11, DX12 or Vulkan capable GPUs",
-      "cpu": "x86, x64 architecture with SSE2 instruction set support, Arm64",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: DX10, DX11, DX12 or Vulkan capable GPUs, x86, x64 architecture with SSE2 instruction set support, Arm64"
-    },
-    {
       "title": "HANDS OVER",
       "tier": "green",
       "tiers": {
@@ -432,6 +420,18 @@
       "cpu": "Intel Core i5-4460 / AMD FX-8350",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD Radeon R9 280, Intel Core i5-4460 / AMD FX-8350"
+    },
+    {
+      "title": "Scawy Game",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVidia 3060 or equivalent",
+      "cpu": "Ryzen 9 3900XT or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
     },
     {
       "title": "BOOM! Buster",
@@ -446,16 +446,16 @@
       "note": "Minimální konfigurace: Intel HD Graphics, Intel or AMD Dual Core CPU"
     },
     {
-      "title": "Scawy Game",
-      "tier": "red",
+      "title": "KORRIDOR",
+      "tier": "green",
       "tiers": {
-        "allyx": "red",
+        "allyx": "green",
         "pc": "green"
       },
-      "gpu": "NVidia 3060 or equivalent",
-      "cpu": "Ryzen 9 3900XT or equivalent",
+      "gpu": "DX10, DX11, DX12 or Vulkan capable GPUs",
+      "cpu": "x86, x64 architecture with SSE2 instruction set support, Arm64",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
+      "note": "Doporučená konfigurace: DX10, DX11, DX12 or Vulkan capable GPUs, x86, x64 architecture with SSE2 instruction set support, Arm64"
     },
     {
       "title": "DAWN AEROWAR",
@@ -686,6 +686,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 or equivalent, with Vulkan 1.2 support, Intel Core i5-12400 / AMD Ryzen 5 5600"
     },
     {
+      "title": "Clicky Islands",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD Graphics 4000 and higher",
+      "cpu": "2 GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics 4000 and higher, 2 GHz"
+    },
+    {
       "title": "ScopeCreep",
       "tier": "green",
       "tiers": {
@@ -698,16 +710,16 @@
       "note": "Minimální konfigurace: OpenGL 3.3+, 2.5 GHz Dual Core"
     },
     {
-      "title": "Clicky Islands",
-      "tier": "green",
+      "title": "Car Flipper",
+      "tier": "red",
       "tiers": {
-        "allyx": "green",
+        "allyx": "red",
         "pc": "green"
       },
-      "gpu": "Intel HD Graphics 4000 and higher",
-      "cpu": "2 GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 4000 and higher, 2 GHz"
+      "gpu": "NVIDIA GeForce RTX 3060 (12 GB) or AMD Radeon RX 6700 XT (12 GB)",
+      "cpu": "Intel Core i7-11700 or AMD Ryzen 7 5800X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 (12 GB) or AMD Radeon RX 6700 XT (12 GB), Intel Core i7-11700 or AMD Ryzen 7 5800X"
     },
     {
       "title": "Nocturnal 2",
@@ -734,16 +746,16 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
     },
     {
-      "title": "Car Flipper",
+      "title": "Water TD",
       "tier": "red",
       "tiers": {
         "allyx": "red",
         "pc": "green"
       },
-      "gpu": "NVIDIA GeForce RTX 3060 (12 GB) or AMD Radeon RX 6700 XT (12 GB)",
-      "cpu": "Intel Core i7-11700 or AMD Ryzen 7 5800X",
+      "gpu": "GeForce RTX 3060 Ti / Radeon RX 6700 XT or better, 8 GB VRAM",
+      "cpu": "Any 64-bit quad core",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 (12 GB) or AMD Radeon RX 6700 XT (12 GB), Intel Core i7-11700 or AMD Ryzen 7 5800X"
+      "note": "Doporučená konfigurace: GeForce RTX 3060 Ti / Radeon RX 6700 XT or better, 8 GB VRAM, Any 64-bit quad core"
     },
     {
       "title": "Astral Hunter: Homebound",
@@ -756,18 +768,6 @@
       "cpu": "Intel® Core™ i5 Processors",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: nVidia GeForce 8600/9600GT, ATI/AMD Radeon HD2600/3600, Intel® Core™ i5 Processors"
-    },
-    {
-      "title": "Water TD",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "GeForce RTX 3060 Ti / Radeon RX 6700 XT or better, 8 GB VRAM",
-      "cpu": "Any 64-bit quad core",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 Ti / Radeon RX 6700 XT or better, 8 GB VRAM, Any 64-bit quad core"
     },
     {
       "title": "Armory Keeper",
@@ -1032,18 +1032,6 @@
       "cpu": "Intel Pentium E2180 (2 * 2000), AMD Athlon Dual Core 4450e (2 * 2300), or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce GT 220 (1024 MB), Radeon HD 4650 (1024 VRAM), or equivalent, Intel Pentium E2180 (2 * 2000), AMD Athlon Dual Core 4450e (2 * 2300), or equivalent"
-    },
-    {
-      "title": "Silver Pines",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NIVIDIA GeForce GTX 770, AMD Radeon R9 380",
-      "cpu": "Intel Core i5-6600 or AMD Ryzen 5 1600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NIVIDIA GeForce GTX 770, AMD Radeon R9 380, Intel Core i5-6600 or AMD Ryzen 5 1600"
     }
   ]
 }
