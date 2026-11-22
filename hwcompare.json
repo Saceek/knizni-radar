@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22T11:13:09.740Z",
+  "updatedAt": "2026-11-22T11:21:51.748Z",
   "games": [
     {
       "title": "9 Kings",
@@ -350,18 +350,6 @@
       "note": "Doporučená konfigurace: 1Gb Video Memory, Capable of OpenGL 3.0+ Support, Intel(R) Core(TM) i5-3470"
     },
     {
-      "title": "Spirit Crossing",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "RTX 3070 / RX 6700 XT",
-      "cpu": "Core i5-12400 / Ryzen 5 5600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: RTX 3070 / RX 6700 XT, Core i5-12400 / Ryzen 5 5600"
-    },
-    {
       "title": "We March as One",
       "tier": "green",
       "tiers": {
@@ -372,6 +360,18 @@
       "cpu": "Quad-core CPU — Intel Core i5-6400 / AMD Ryzen 3 1200",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Any DirectX 11 capable GPU with 1 GB VRAM (GeForce GTX 750 / Radeon R7 260 / Intel UHD 630), Quad-core CPU — Intel Core i5-6400 / AMD Ryzen 3 1200"
+    },
+    {
+      "title": "Spirit Crossing",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "RTX 3070 / RX 6700 XT",
+      "cpu": "Core i5-12400 / Ryzen 5 5600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: RTX 3070 / RX 6700 XT, Core i5-12400 / Ryzen 5 5600"
     },
     {
       "title": "ワロタ、俺の家のとなり魔王城www",
@@ -434,18 +434,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 or equivalent, AMD Ryzen 5 1600 or equivalent"
     },
     {
-      "title": "HANDS OVER",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 960 / AMD Radeon R9 280",
-      "cpu": "Intel Core i5-4460 / AMD FX-8350",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD Radeon R9 280, Intel Core i5-4460 / AMD FX-8350"
-    },
-    {
       "title": "KORRIDOR",
       "tier": "green",
       "tiers": {
@@ -456,6 +444,18 @@
       "cpu": "x86, x64 architecture with SSE2 instruction set support, Arm64",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: DX10, DX11, DX12 or Vulkan capable GPUs, x86, x64 architecture with SSE2 instruction set support, Arm64"
+    },
+    {
+      "title": "HANDS OVER",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 960 / AMD Radeon R9 280",
+      "cpu": "Intel Core i5-4460 / AMD FX-8350",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD Radeon R9 280, Intel Core i5-4460 / AMD FX-8350"
     },
     {
       "title": "BOOM! Buster",
@@ -948,6 +948,18 @@
       "cpu": "2.4 GHz Processor or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Integrated Graphics Chip or better, 2.4 GHz Processor or better"
+    },
+    {
+      "title": "Widget Idle",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "AMD Radeon 780M / RX 6400 or Nvidia GTX 1650",
+      "cpu": "AMD Ryzen 7 7840U",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: AMD Radeon 780M / RX 6400 or Nvidia GTX 1650, AMD Ryzen 7 7840U"
     },
     {
       "title": "The Incident at Galley House",
