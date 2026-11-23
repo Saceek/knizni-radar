@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T12:33:02.249Z",
+  "updatedAt": "2026-11-23T13:13:10.807Z",
   "games": [
     {
       "title": "9 Kings",
@@ -410,18 +410,6 @@
       "note": "Doporučená konfigurace: NVidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
     },
     {
-      "title": "MycoRelic",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DirectX 11 or DirectX 12 compatible graphics card",
-      "cpu": "Quad-core Intel or AMD, 2.5 GHz or faster",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: DirectX 11 or DirectX 12 compatible graphics card, Quad-core Intel or AMD, 2.5 GHz or faster"
-    },
-    {
       "title": "HANDS OVER",
       "tier": "green",
       "tiers": {
@@ -432,6 +420,18 @@
       "cpu": "Intel Core i5-4460 / AMD FX-8350",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD Radeon R9 280, Intel Core i5-4460 / AMD FX-8350"
+    },
+    {
+      "title": "MycoRelic",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DirectX 11 or DirectX 12 compatible graphics card",
+      "cpu": "Quad-core Intel or AMD, 2.5 GHz or faster",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: DirectX 11 or DirectX 12 compatible graphics card, Quad-core Intel or AMD, 2.5 GHz or faster"
     },
     {
       "title": "BOOM! Buster",
@@ -530,18 +530,6 @@
       "note": "Minimální konfigurace: DirectX 11 compatible GPU, integrated graphics supported, Intel Core i3 or equivalent"
     },
     {
-      "title": "Bottled by Bears",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 1050 / AMD RX 560 / Intel Iris Xe, 2 GB VRAM",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1050 / AMD RX 560 / Intel Iris Xe, 2 GB VRAM, Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
       "title": "Volvy’s Adventure: Reslimed",
       "tier": "green",
       "tiers": {
@@ -552,6 +540,18 @@
       "cpu": "Intel Core i5-8600K / AMD Ryzen 5 1600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1080 / Radeon RX Vega 56 / Arc A580, Intel Core i5-8600K / AMD Ryzen 5 1600"
+    },
+    {
+      "title": "Bottled by Bears",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 1050 / AMD RX 560 / Intel Iris Xe, 2 GB VRAM",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1050 / AMD RX 560 / Intel Iris Xe, 2 GB VRAM, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
       "title": "MATE, This Place is a MESS!",
@@ -734,6 +734,18 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 660, Intel Core i3 3000 or later"
     },
     {
+      "title": "Trust Your Gut",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1060",
+      "cpu": "Intel Core i5-8400 or AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, Intel Core i5-8400 or AMD Ryzen 5 2600"
+    },
+    {
       "title": "Backseat Champions",
       "tier": "red",
       "tiers": {
@@ -758,18 +770,6 @@
       "note": "Doporučená konfigurace: DirectX 11 compatible, 2 GB VRAM, Quad-core 2.5 GHz or faster"
     },
     {
-      "title": "Trust Your Gut",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1060",
-      "cpu": "Intel Core i5-8400 or AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, Intel Core i5-8400 or AMD Ryzen 5 2600"
-    },
-    {
       "title": "Imperial Grace",
       "tier": "green",
       "tiers": {
@@ -782,18 +782,6 @@
       "note": "Minimální konfigurace: DirectX or OpenGL compatible card, x86, x64 architecture with SSE2"
     },
     {
-      "title": "Idle King: Společně za kořistí",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1060",
-      "cpu": "i5-7400",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, i5-7400"
-    },
-    {
       "title": "Widget Idle",
       "tier": "green",
       "tiers": {
@@ -804,6 +792,18 @@
       "cpu": "AMD Ryzen 7 7840U",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: AMD Radeon 780M / RX 6400 or Nvidia GTX 1650, AMD Ryzen 7 7840U"
+    },
+    {
+      "title": "Idle King: Společně za kořistí",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1060",
+      "cpu": "i5-7400",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, i5-7400"
     },
     {
       "title": "Fat Goblins",
