@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T01:14:22.282Z",
+  "updatedAt": "2026-11-23T02:14:11.233Z",
   "games": [
     {
       "title": "9 Kings",
@@ -230,18 +230,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4070 (12GB) or AMD Radeon RX 7000 (16GB), AMD Ryzen 9 7900 (12 Core) or Intel equivalent"
     },
     {
-      "title": "Drawquarium",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 1060 / AMD RX 580 (6 GB VRAM)",
-      "cpu": "Quad-core Intel i5-8400 / AMD Ryzen 5 1600 (or equivalent)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580 (6 GB VRAM), Quad-core Intel i5-8400 / AMD Ryzen 5 1600 (or equivalent)"
-    },
-    {
       "title": "Rock Band Simulator",
       "tier": "green",
       "tiers": {
@@ -252,6 +240,18 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 / AMD RX 580 (4 GB VRAM), Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Drawquarium",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 1060 / AMD RX 580 (6 GB VRAM)",
+      "cpu": "Quad-core Intel i5-8400 / AMD Ryzen 5 1600 (or equivalent)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580 (6 GB VRAM), Quad-core Intel i5-8400 / AMD Ryzen 5 1600 (or equivalent)"
     },
     {
       "title": "Apotheosis Engine",
@@ -566,18 +566,6 @@
       "note": "Doporučená konfigurace: AMD 6700XT / Nvidia RTX 3070, AMD Ryzen 5 5600 or equivalent"
     },
     {
-      "title": "Lord of Undead",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "orange"
-      },
-      "gpu": "GeForce RTX 3070",
-      "cpu": "Intel Core i5 / AMD Ryzen 5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3070, Intel Core i5 / AMD Ryzen 5"
-    },
-    {
       "title": "MATE, This Place is a MESS!",
       "tier": "green",
       "tiers": {
@@ -588,6 +576,18 @@
       "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 (6 GB) / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-10400 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Lord of Undead",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "orange"
+      },
+      "gpu": "GeForce RTX 3070",
+      "cpu": "Intel Core i5 / AMD Ryzen 5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3070, Intel Core i5 / AMD Ryzen 5"
     },
     {
       "title": "GroundInFlames",
@@ -710,18 +710,6 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 630 2GB / AMD Radeon R5 430  2GB, Intel Core IS或AMD equivalent"
     },
     {
-      "title": "ScopeCreep",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "OpenGL 3.3+",
-      "cpu": "2.5 GHz Dual Core",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: OpenGL 3.3+, 2.5 GHz Dual Core"
-    },
-    {
       "title": "Clicky Islands",
       "tier": "green",
       "tiers": {
@@ -734,16 +722,16 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4000 and higher, 2 GHz"
     },
     {
-      "title": "Astral Hunter: Homebound",
+      "title": "ScopeCreep",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "nVidia GeForce 8600/9600GT, ATI/AMD Radeon HD2600/3600",
-      "cpu": "Intel® Core™ i5 Processors",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: nVidia GeForce 8600/9600GT, ATI/AMD Radeon HD2600/3600, Intel® Core™ i5 Processors"
+      "gpu": "OpenGL 3.3+",
+      "cpu": "2.5 GHz Dual Core",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: OpenGL 3.3+, 2.5 GHz Dual Core"
     },
     {
       "title": "Water TD",
@@ -756,6 +744,18 @@
       "cpu": "Any 64-bit quad core",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 3060 Ti / Radeon RX 6700 XT or better, 8 GB VRAM, Any 64-bit quad core"
+    },
+    {
+      "title": "Astral Hunter: Homebound",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "nVidia GeForce 8600/9600GT, ATI/AMD Radeon HD2600/3600",
+      "cpu": "Intel® Core™ i5 Processors",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: nVidia GeForce 8600/9600GT, ATI/AMD Radeon HD2600/3600, Intel® Core™ i5 Processors"
     },
     {
       "title": "Backseat Champions",
@@ -794,18 +794,6 @@
       "note": "Doporučená konfigurace: DirectX 11 compatible, 2 GB VRAM, Quad-core 2.5 GHz or faster"
     },
     {
-      "title": "Imperial Grace",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DirectX or OpenGL compatible card",
-      "cpu": "x86, x64 architecture with SSE2",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: DirectX or OpenGL compatible card, x86, x64 architecture with SSE2"
-    },
-    {
       "title": "Trust Your Gut",
       "tier": "green",
       "tiers": {
@@ -816,6 +804,18 @@
       "cpu": "Intel Core i5-8400 or AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, Intel Core i5-8400 or AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Imperial Grace",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DirectX or OpenGL compatible card",
+      "cpu": "x86, x64 architecture with SSE2",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: DirectX or OpenGL compatible card, x86, x64 architecture with SSE2"
     },
     {
       "title": "Idle King: Společně za kořistí",
@@ -878,18 +878,6 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4000, 2GHz 4 Cores"
     },
     {
-      "title": "Hazard Levels",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 760 / AMD Radeon R7 260x with 2GB Video RAM",
-      "cpu": "Intel Core i5-4460 / AMD FX-6300",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 760 / AMD Radeon R7 260x with 2GB Video RAM, Intel Core i5-4460 / AMD FX-6300"
-    },
-    {
       "title": "The Cozy Board Game Shop: Tidy Up",
       "tier": "orange",
       "tiers": {
@@ -900,6 +888,18 @@
       "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10400 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Hazard Levels",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 760 / AMD Radeon R7 260x with 2GB Video RAM",
+      "cpu": "Intel Core i5-4460 / AMD FX-6300",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 760 / AMD Radeon R7 260x with 2GB Video RAM, Intel Core i5-4460 / AMD FX-6300"
     },
     {
       "title": "イケ勘 - イケメンになるかどうか勘で付き合うゲーム -",
@@ -1032,6 +1032,18 @@
       "cpu": "Intel Core i5-6600 or AMD Ryzen 5 1600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NIVIDIA GeForce GTX 770, AMD Radeon R9 380, Intel Core i5-6600 or AMD Ryzen 5 1600"
+    },
+    {
+      "title": "FINAL FANTASY RESONANCE",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "AMD Radeon™ RX 5500 XT / Intel® Arc™ A580 / NVIDIA® GeForce® GTX 1650",
+      "cpu": "AMD Ryzen™ 5 2500X / Intel® Core™ i3-8100",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: AMD Radeon™ RX 5500 XT / Intel® Arc™ A580 / NVIDIA® GeForce® GTX 1650, AMD Ryzen™ 5 2500X / Intel® Core™ i3-8100"
     }
   ]
 }
