@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T00:14:09.599Z",
+  "updatedAt": "2026-11-24T01:13:56.296Z",
   "games": [
     {
       "title": "9 Kings",
@@ -338,18 +338,6 @@
       "note": "Minimální konfigurace: GeForce® GTX 1050 Ti 4GB, Core™ i5-9400"
     },
     {
-      "title": "Frontier Tale",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "1Gb Video Memory, Capable of OpenGL 3.0+ Support",
-      "cpu": "Intel(R) Core(TM) i5-3470",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: 1Gb Video Memory, Capable of OpenGL 3.0+ Support, Intel(R) Core(TM) i5-3470"
-    },
-    {
       "title": "KORRIDOR",
       "tier": "green",
       "tiers": {
@@ -360,6 +348,18 @@
       "cpu": "x86, x64 architecture with SSE2 instruction set support, Arm64",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: DX10, DX11, DX12 or Vulkan capable GPUs, x86, x64 architecture with SSE2 instruction set support, Arm64"
+    },
+    {
+      "title": "Frontier Tale",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "1Gb Video Memory, Capable of OpenGL 3.0+ Support",
+      "cpu": "Intel(R) Core(TM) i5-3470",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 1Gb Video Memory, Capable of OpenGL 3.0+ Support, Intel(R) Core(TM) i5-3470"
     },
     {
       "title": "Dice Have No Eyes",
@@ -446,6 +446,18 @@
       "note": "Doporučená konfigurace: 4GB VRAM, RTX 2060 or better, Modern multi-core processor"
     },
     {
+      "title": "Lord of Undead",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "orange"
+      },
+      "gpu": "GeForce RTX 3070",
+      "cpu": "Intel Core i5 / AMD Ryzen 5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3070, Intel Core i5 / AMD Ryzen 5"
+    },
+    {
       "title": "Rejected Draft",
       "tier": "green",
       "tiers": {
@@ -468,18 +480,6 @@
       "cpu": "Intel Core i5-8600K / AMD Ryzen 5 1600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1080 / Radeon RX Vega 56 / Arc A580, Intel Core i5-8600K / AMD Ryzen 5 1600"
-    },
-    {
-      "title": "Lord of Undead",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "orange"
-      },
-      "gpu": "GeForce RTX 3070",
-      "cpu": "Intel Core i5 / AMD Ryzen 5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3070, Intel Core i5 / AMD Ryzen 5"
     },
     {
       "title": "Sol One",
@@ -542,18 +542,6 @@
       "note": "Minimální konfigurace: 1Gb Video Memory, capable of OpenGL 3.0+ support (2.1 with ARB extensions acceptable), 2.0 Ghz"
     },
     {
-      "title": "Clicky Islands",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel HD Graphics 4000 and higher",
-      "cpu": "2 GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 4000 and higher, 2 GHz"
-    },
-    {
       "title": "Car Flipper",
       "tier": "red",
       "tiers": {
@@ -564,6 +552,18 @@
       "cpu": "Intel Core i7-11700 or AMD Ryzen 7 5800X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 (12 GB) or AMD Radeon RX 6700 XT (12 GB), Intel Core i7-11700 or AMD Ryzen 7 5800X"
+    },
+    {
+      "title": "Clicky Islands",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD Graphics 4000 and higher",
+      "cpu": "2 GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics 4000 and higher, 2 GHz"
     },
     {
       "title": "归墟行：人界篇",
@@ -626,18 +626,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060, Intel Core i7-11700"
     },
     {
-      "title": "ScopeCreep",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "OpenGL 3.3+",
-      "cpu": "2.5 GHz Dual Core",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: OpenGL 3.3+, 2.5 GHz Dual Core"
-    },
-    {
       "title": "Touhou Chess",
       "tier": "green",
       "tiers": {
@@ -648,6 +636,18 @@
       "cpu": "Quad-core 2.5 GHz or faster",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: DirectX 11 compatible, 2 GB VRAM, Quad-core 2.5 GHz or faster"
+    },
+    {
+      "title": "ScopeCreep",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "OpenGL 3.3+",
+      "cpu": "2.5 GHz Dual Core",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: OpenGL 3.3+, 2.5 GHz Dual Core"
     },
     {
       "title": "Trust Your Gut",
