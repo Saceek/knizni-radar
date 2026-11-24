@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T01:13:56.296Z",
+  "updatedAt": "2026-11-24T02:13:09.605Z",
   "games": [
     {
       "title": "9 Kings",
@@ -338,18 +338,6 @@
       "note": "Minimální konfigurace: GeForce® GTX 1050 Ti 4GB, Core™ i5-9400"
     },
     {
-      "title": "KORRIDOR",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DX10, DX11, DX12 or Vulkan capable GPUs",
-      "cpu": "x86, x64 architecture with SSE2 instruction set support, Arm64",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: DX10, DX11, DX12 or Vulkan capable GPUs, x86, x64 architecture with SSE2 instruction set support, Arm64"
-    },
-    {
       "title": "Frontier Tale",
       "tier": "green",
       "tiers": {
@@ -360,6 +348,18 @@
       "cpu": "Intel(R) Core(TM) i5-3470",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: 1Gb Video Memory, Capable of OpenGL 3.0+ Support, Intel(R) Core(TM) i5-3470"
+    },
+    {
+      "title": "KORRIDOR",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DX10, DX11, DX12 or Vulkan capable GPUs",
+      "cpu": "x86, x64 architecture with SSE2 instruction set support, Arm64",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: DX10, DX11, DX12 or Vulkan capable GPUs, x86, x64 architecture with SSE2 instruction set support, Arm64"
     },
     {
       "title": "Dice Have No Eyes",
@@ -434,6 +434,18 @@
       "note": "Minimální konfigurace: DirectX 11 or DirectX 12 compatible graphics card, Quad-core Intel or AMD, 2.5 GHz or faster"
     },
     {
+      "title": "Rejected Draft",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Any integrated graphics card with WebGL support",
+      "cpu": "1.1GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Any integrated graphics card with WebGL support, 1.1GHz"
+    },
+    {
       "title": "MoSimulator",
       "tier": "orange",
       "tiers": {
@@ -456,18 +468,6 @@
       "cpu": "Intel Core i5 / AMD Ryzen 5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 3070, Intel Core i5 / AMD Ryzen 5"
-    },
-    {
-      "title": "Rejected Draft",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Any integrated graphics card with WebGL support",
-      "cpu": "1.1GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Any integrated graphics card with WebGL support, 1.1GHz"
     },
     {
       "title": "Volvy’s Adventure: Reslimed",
@@ -494,6 +494,18 @@
       "note": "Doporučená konfigurace: AMD 6700XT / Nvidia RTX 3070, AMD Ryzen 5 5600 or equivalent"
     },
     {
+      "title": "MATE, This Place is a MESS!",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1660 (6 GB) / AMD Radeon RX 5600 XT (6 GB)",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 (6 GB) / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-10400 / AMD Ryzen 5 3600"
+    },
+    {
       "title": "Bottled by Bears",
       "tier": "green",
       "tiers": {
@@ -518,18 +530,6 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD Radeon RX550, Intel® Core™ i5-6402p CPU / AMD Ryzen 5 1600 or higher"
     },
     {
-      "title": "MATE, This Place is a MESS!",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1660 (6 GB) / AMD Radeon RX 5600 XT (6 GB)",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 (6 GB) / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-10400 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "HARMA",
       "tier": "green",
       "tiers": {
@@ -542,18 +542,6 @@
       "note": "Minimální konfigurace: 1Gb Video Memory, capable of OpenGL 3.0+ support (2.1 with ARB extensions acceptable), 2.0 Ghz"
     },
     {
-      "title": "Car Flipper",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 3060 (12 GB) or AMD Radeon RX 6700 XT (12 GB)",
-      "cpu": "Intel Core i7-11700 or AMD Ryzen 7 5800X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 (12 GB) or AMD Radeon RX 6700 XT (12 GB), Intel Core i7-11700 or AMD Ryzen 7 5800X"
-    },
-    {
       "title": "Clicky Islands",
       "tier": "green",
       "tiers": {
@@ -564,6 +552,18 @@
       "cpu": "2 GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 4000 and higher, 2 GHz"
+    },
+    {
+      "title": "Car Flipper",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060 (12 GB) or AMD Radeon RX 6700 XT (12 GB)",
+      "cpu": "Intel Core i7-11700 or AMD Ryzen 7 5800X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 (12 GB) or AMD Radeon RX 6700 XT (12 GB), Intel Core i7-11700 or AMD Ryzen 7 5800X"
     },
     {
       "title": "归墟行：人界篇",
@@ -626,6 +626,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060, Intel Core i7-11700"
     },
     {
+      "title": "Trust Your Gut",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1060",
+      "cpu": "Intel Core i5-8400 or AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, Intel Core i5-8400 or AMD Ryzen 5 2600"
+    },
+    {
       "title": "Touhou Chess",
       "tier": "green",
       "tiers": {
@@ -648,18 +660,6 @@
       "cpu": "2.5 GHz Dual Core",
       "usedMinimum": true,
       "note": "Minimální konfigurace: OpenGL 3.3+, 2.5 GHz Dual Core"
-    },
-    {
-      "title": "Trust Your Gut",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1060",
-      "cpu": "Intel Core i5-8400 or AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, Intel Core i5-8400 or AMD Ryzen 5 2600"
     },
     {
       "title": "底色",
@@ -686,6 +686,18 @@
       "note": "Doporučená konfigurace: GeForce RTX 3060 Ti / Radeon RX 6700 XT or better, 8 GB VRAM, Any 64-bit quad core"
     },
     {
+      "title": "Widget Idle",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "AMD Radeon 780M / RX 6400 or Nvidia GTX 1650",
+      "cpu": "AMD Ryzen 7 7840U",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: AMD Radeon 780M / RX 6400 or Nvidia GTX 1650, AMD Ryzen 7 7840U"
+    },
+    {
       "title": "Astral Hunter: Homebound",
       "tier": "green",
       "tiers": {
@@ -708,18 +720,6 @@
       "cpu": "Intel Core i7-13700HX / AMD Ryzen 9 series",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 or AMD Radeon RX 6600 XT, Intel Core i7-13700HX / AMD Ryzen 9 series"
-    },
-    {
-      "title": "Widget Idle",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "AMD Radeon 780M / RX 6400 or Nvidia GTX 1650",
-      "cpu": "AMD Ryzen 7 7840U",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: AMD Radeon 780M / RX 6400 or Nvidia GTX 1650, AMD Ryzen 7 7840U"
     },
     {
       "title": "Armory Keeper",
