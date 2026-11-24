@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T21:14:03.186Z",
+  "updatedAt": "2026-11-24T22:12:57.538Z",
   "games": [
     {
       "title": "9 Kings",
@@ -302,18 +302,6 @@
       "note": "Doporučená konfigurace: RTX 3070 / RX 6700 XT, Core i5-12400 / Ryzen 5 5600"
     },
     {
-      "title": "Below the Stone",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce 7600 GS (512 MB) or equivalent",
-      "cpu": "Intel Core 2 Duo E6320 (2*1866) or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce 7600 GS (512 MB) or equivalent, Intel Core 2 Duo E6320 (2*1866) or equivalent"
-    },
-    {
       "title": "KORRIDOR",
       "tier": "green",
       "tiers": {
@@ -326,16 +314,16 @@
       "note": "Doporučená konfigurace: DX10, DX11, DX12 or Vulkan capable GPUs, x86, x64 architecture with SSE2 instruction set support, Arm64"
     },
     {
-      "title": "We March as One",
+      "title": "Below the Stone",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "Any DirectX 11 capable GPU with 1 GB VRAM (GeForce GTX 750 / Radeon R7 260 / Intel UHD 630)",
-      "cpu": "Quad-core CPU — Intel Core i5-6400 / AMD Ryzen 3 1200",
+      "gpu": "GeForce 7600 GS (512 MB) or equivalent",
+      "cpu": "Intel Core 2 Duo E6320 (2*1866) or equivalent",
       "usedMinimum": true,
-      "note": "Minimální konfigurace: Any DirectX 11 capable GPU with 1 GB VRAM (GeForce GTX 750 / Radeon R7 260 / Intel UHD 630), Quad-core CPU — Intel Core i5-6400 / AMD Ryzen 3 1200"
+      "note": "Minimální konfigurace: GeForce 7600 GS (512 MB) or equivalent, Intel Core 2 Duo E6320 (2*1866) or equivalent"
     },
     {
       "title": "HANDS OVER",
@@ -348,6 +336,18 @@
       "cpu": "Intel Core i5-4460 / AMD FX-8350",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD Radeon R9 280, Intel Core i5-4460 / AMD FX-8350"
+    },
+    {
+      "title": "We March as One",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Any DirectX 11 capable GPU with 1 GB VRAM (GeForce GTX 750 / Radeon R7 260 / Intel UHD 630)",
+      "cpu": "Quad-core CPU — Intel Core i5-6400 / AMD Ryzen 3 1200",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Any DirectX 11 capable GPU with 1 GB VRAM (GeForce GTX 750 / Radeon R7 260 / Intel UHD 630), Quad-core CPU — Intel Core i5-6400 / AMD Ryzen 3 1200"
     },
     {
       "title": "Frontier Tale",
@@ -842,18 +842,6 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 760 / AMD Radeon R7 260x with 2GB Video RAM, Intel Core i5-4460 / AMD FX-6300"
     },
     {
-      "title": "Traveloot",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Integrated Graphics",
-      "cpu": "2.0GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Integrated Graphics, 2.0GHz"
-    },
-    {
       "title": "Sardoinky",
       "tier": "green",
       "tiers": {
@@ -864,6 +852,18 @@
       "cpu": "2.0 GHz quad-core or better",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Dedicated GPU with OpenGL 3.0+, 2.0 GHz quad-core or better"
+    },
+    {
+      "title": "Traveloot",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Integrated Graphics",
+      "cpu": "2.0GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Integrated Graphics, 2.0GHz"
     },
     {
       "title": "Handmancers",
@@ -878,18 +878,6 @@
       "note": "Minimální konfigurace: GTX 750, i3 4th gen"
     },
     {
-      "title": "Warpack",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 1060 / AMD equivalent",
-      "cpu": "Intel i7 / Ryzen 5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD equivalent, Intel i7 / Ryzen 5"
-    },
-    {
       "title": "Malignus",
       "tier": "green",
       "tiers": {
@@ -900,6 +888,18 @@
       "cpu": "Intel Core i5-12400 / AMD Ryzen 5 5600 (6 cores)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / AMD Radeon RX 6600, 6 GB VRAM, Intel Core i5-12400 / AMD Ryzen 5 5600 (6 cores)"
+    },
+    {
+      "title": "Warpack",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 1060 / AMD equivalent",
+      "cpu": "Intel i7 / Ryzen 5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD equivalent, Intel i7 / Ryzen 5"
     },
     {
       "title": "The Incident at Galley House",
@@ -1068,6 +1068,54 @@
       "cpu": "Intel Core i5-11600K / AMD Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1650 / AMD Radeon RX 580, Intel Core i5-11600K / AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "REPLACED",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 1060 (6GB) or equivalent",
+      "cpu": "Intel® Core™ i5-8400 Processor",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
+    },
+    {
+      "title": "MOUSE: P.I. For Hire",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600",
+      "cpu": "Intel Core i5 9600 / Ryzen 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600, Intel Core i5 9600 / Ryzen 3600"
+    },
+    {
+      "title": "Hellblade II: Senua’s Saga",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "orange"
+      },
+      "gpu": "Nvidia RTX 3080 | AMD RX 6800 XT | Intel Arc A770",
+      "cpu": "Intel i7-10700K | AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia RTX 3080 | AMD RX 6800 XT | Intel Arc A770, Intel i7-10700K | AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "Gears of War: E-Day",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 5060 / NVIDIA GeForce RTX 3060ti / AMD Radeon RX 6700 XT / Radeon RX 9060 XT",
+      "cpu": "AMD Ryzen 5 5600 / Intel i5-11600K",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 5060 / NVIDIA GeForce RTX 3060ti / AMD Radeon RX 6700 XT / Radeon RX 9060 XT, AMD Ryzen 5 5600 / Intel i5-11600K"
     }
   ]
 }
