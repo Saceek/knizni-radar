@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T13:46:03.906Z",
+  "updatedAt": "2026-11-24T14:14:19.675Z",
   "games": [
     {
       "title": "9 Kings",
@@ -230,18 +230,6 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580 (6 GB VRAM), Quad-core Intel i5-8400 / AMD Ryzen 5 1600 (or equivalent)"
     },
     {
-      "title": "Ranger’s Path: National Park Simulator",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "orange"
-      },
-      "gpu": "NVIDIA GeForce RTX 4070 (12GB) or AMD Radeon RX 7000 (16GB)",
-      "cpu": "AMD Ryzen 9 7900 (12 Core) or Intel equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4070 (12GB) or AMD Radeon RX 7000 (16GB), AMD Ryzen 9 7900 (12 Core) or Intel equivalent"
-    },
-    {
       "title": "Apotheosis Engine",
       "tier": "green",
       "tiers": {
@@ -252,6 +240,18 @@
       "cpu": "2.5 GHz quad-core",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Integrated graphics (Intel HD 4000 or newer), 2.5 GHz quad-core"
+    },
+    {
+      "title": "Ranger’s Path: National Park Simulator",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "orange"
+      },
+      "gpu": "NVIDIA GeForce RTX 4070 (12GB) or AMD Radeon RX 7000 (16GB)",
+      "cpu": "AMD Ryzen 9 7900 (12 Core) or Intel equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4070 (12GB) or AMD Radeon RX 7000 (16GB), AMD Ryzen 9 7900 (12 Core) or Intel equivalent"
     },
     {
       "title": "Main Sequence",
@@ -386,6 +386,18 @@
       "note": "Doporučená konfigurace: 1GB VRAM, i5 3GHz"
     },
     {
+      "title": "天坑追匪",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GTX 1060 / Radeon R9 or better",
+      "cpu": "Intel i5 or AMD equivalent or above",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GTX 1060 / Radeon R9 or better, Intel i5 or AMD equivalent or above"
+    },
+    {
       "title": "HANDS OVER",
       "tier": "green",
       "tiers": {
@@ -458,18 +470,6 @@
       "note": "Minimální konfigurace: DirectX 11 or DirectX 12 compatible graphics card, Quad-core Intel or AMD, 2.5 GHz or faster"
     },
     {
-      "title": "天坑追匪",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Nvidia GTX 1060 / Radeon R9 or better",
-      "cpu": "Intel i5 or AMD equivalent or above",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GTX 1060 / Radeon R9 or better, Intel i5 or AMD equivalent or above"
-    },
-    {
       "title": "Rejected Draft",
       "tier": "green",
       "tiers": {
@@ -494,18 +494,6 @@
       "note": "Doporučená konfigurace: GeForce RTX 3070, Intel Core i5 / AMD Ryzen 5"
     },
     {
-      "title": "Bottled by Bears",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 1050 / AMD RX 560 / Intel Iris Xe, 2 GB VRAM",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1050 / AMD RX 560 / Intel Iris Xe, 2 GB VRAM, Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
       "title": "Volvy’s Adventure: Reslimed",
       "tier": "green",
       "tiers": {
@@ -518,18 +506,6 @@
       "note": "Doporučená konfigurace: GeForce GTX 1080 / Radeon RX Vega 56 / Arc A580, Intel Core i5-8600K / AMD Ryzen 5 1600"
     },
     {
-      "title": "MATE, This Place is a MESS!",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1660 (6 GB) / AMD Radeon RX 5600 XT (6 GB)",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 (6 GB) / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-10400 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "Sol One",
       "tier": "red",
       "tiers": {
@@ -540,6 +516,30 @@
       "cpu": "AMD Ryzen 5 5600 or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: AMD 6700XT / Nvidia RTX 3070, AMD Ryzen 5 5600 or equivalent"
+    },
+    {
+      "title": "Bottled by Bears",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 1050 / AMD RX 560 / Intel Iris Xe, 2 GB VRAM",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1050 / AMD RX 560 / Intel Iris Xe, 2 GB VRAM, Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "MATE, This Place is a MESS!",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1660 (6 GB) / AMD Radeon RX 5600 XT (6 GB)",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 (6 GB) / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "MoSimulator",
@@ -830,18 +830,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
-      "title": "SCAD",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel HD Graphics 4000",
-      "cpu": "2GHz 4 Cores",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 4000, 2GHz 4 Cores"
-    },
-    {
       "title": "777 HERO ~The One Who Defies Time~",
       "tier": "green",
       "tiers": {
@@ -854,18 +842,6 @@
       "note": "Minimální konfigurace: Integrated graphics with DirectX 12 support (comparable to Intel UHD 620), 2 cores, 4 threads (comparable to i3-6100 or Ryzen 3 1200)"
     },
     {
-      "title": "Hazard Levels",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 760 / AMD Radeon R7 260x with 2GB Video RAM",
-      "cpu": "Intel Core i5-4460 / AMD FX-6300",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 760 / AMD Radeon R7 260x with 2GB Video RAM, Intel Core i5-4460 / AMD FX-6300"
-    },
-    {
       "title": "Gold Miner: Party Rush",
       "tier": "green",
       "tiers": {
@@ -876,6 +852,30 @@
       "cpu": "Quad-core 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600 or similar)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1050 / Radeon RX 560 or better, Quad-core 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600 or similar)"
+    },
+    {
+      "title": "SCAD",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD Graphics 4000",
+      "cpu": "2GHz 4 Cores",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics 4000, 2GHz 4 Cores"
+    },
+    {
+      "title": "Hazard Levels",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 760 / AMD Radeon R7 260x with 2GB Video RAM",
+      "cpu": "Intel Core i5-4460 / AMD FX-6300",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 760 / AMD Radeon R7 260x with 2GB Video RAM, Intel Core i5-4460 / AMD FX-6300"
     },
     {
       "title": "Handmancers",
