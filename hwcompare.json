@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T11:13:12.010Z",
+  "updatedAt": "2026-11-24T12:13:33.456Z",
   "games": [
     {
       "title": "9 Kings",
@@ -158,18 +158,6 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1660 Super / AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
-      "title": "Milki Delivery",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Integrated graphics should be enough",
-      "cpu": "x86, x64 architecture",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Integrated graphics should be enough, x86, x64 architecture"
-    },
-    {
       "title": "How They Built the Pyramids",
       "tier": "green",
       "tiers": {
@@ -180,6 +168,18 @@
       "cpu": "Intel Core i3 3.0 GHz or Ryzen 3xxx",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Nvidia GeForce GTX 960, Intel Core i3 3.0 GHz or Ryzen 3xxx"
+    },
+    {
+      "title": "Milki Delivery",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Integrated graphics should be enough",
+      "cpu": "x86, x64 architecture",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Integrated graphics should be enough, x86, x64 architecture"
     },
     {
       "title": "Farm & Feast",
@@ -494,18 +494,6 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1050 / AMD RX 560 / Intel Iris Xe, 2 GB VRAM, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
-      "title": "MoSimulator",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "4GB VRAM, RTX 2060 or better",
-      "cpu": "Modern multi-core processor",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: 4GB VRAM, RTX 2060 or better, Modern multi-core processor"
-    },
-    {
       "title": "Sol One",
       "tier": "red",
       "tiers": {
@@ -530,16 +518,16 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 (6 GB) / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
-      "title": "Wall World Strategy",
-      "tier": "green",
+      "title": "MoSimulator",
+      "tier": "orange",
       "tiers": {
-        "allyx": "green",
+        "allyx": "orange",
         "pc": "green"
       },
-      "gpu": "NVIDIA GeForce GTX 960 / AMD Radeon RX550",
-      "cpu": "Intel® Core™ i5-6402p CPU / AMD Ryzen 5 1600 or higher",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD Radeon RX550, Intel® Core™ i5-6402p CPU / AMD Ryzen 5 1600 or higher"
+      "gpu": "4GB VRAM, RTX 2060 or better",
+      "cpu": "Modern multi-core processor",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 4GB VRAM, RTX 2060 or better, Modern multi-core processor"
     },
     {
       "title": "HARMA",
@@ -566,18 +554,6 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4000 and higher, 2 GHz"
     },
     {
-      "title": "Car Flipper",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 3060 (12 GB) or AMD Radeon RX 6700 XT (12 GB)",
-      "cpu": "Intel Core i7-11700 or AMD Ryzen 7 5800X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 (12 GB) or AMD Radeon RX 6700 XT (12 GB), Intel Core i7-11700 or AMD Ryzen 7 5800X"
-    },
-    {
       "title": "Widget Idle",
       "tier": "green",
       "tiers": {
@@ -588,6 +564,18 @@
       "cpu": "AMD Ryzen 7 7840U",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: AMD Radeon 780M / RX 6400 or Nvidia GTX 1650, AMD Ryzen 7 7840U"
+    },
+    {
+      "title": "Car Flipper",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060 (12 GB) or AMD Radeon RX 6700 XT (12 GB)",
+      "cpu": "Intel Core i7-11700 or AMD Ryzen 7 5800X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 (12 GB) or AMD Radeon RX 6700 XT (12 GB), Intel Core i7-11700 or AMD Ryzen 7 5800X"
     },
     {
       "title": "归墟行：人界篇",
@@ -686,18 +674,6 @@
       "note": "Minimální konfigurace: OpenGL 3.3+, 2.5 GHz Dual Core"
     },
     {
-      "title": "底色",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 630 2GB / AMD Radeon R5 430  2GB",
-      "cpu": "Intel Core IS或AMD equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 630 2GB / AMD Radeon R5 430  2GB, Intel Core IS或AMD equivalent"
-    },
-    {
       "title": "Backseat Champions",
       "tier": "red",
       "tiers": {
@@ -708,6 +684,18 @@
       "cpu": "Intel Core i7-13700HX / AMD Ryzen 9 series",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 or AMD Radeon RX 6600 XT, Intel Core i7-13700HX / AMD Ryzen 9 series"
+    },
+    {
+      "title": "底色",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 630 2GB / AMD Radeon R5 430  2GB",
+      "cpu": "Intel Core IS或AMD equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 630 2GB / AMD Radeon R5 430  2GB, Intel Core IS或AMD equivalent"
     },
     {
       "title": "Water TD",
@@ -806,6 +794,18 @@
       "note": "Doporučená konfigurace: Integrated Graphics Chip or better, 2.4 GHz Processor or better"
     },
     {
+      "title": "天坑追匪",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GTX 1060 / Radeon R9 or better",
+      "cpu": "Intel i5 or AMD equivalent or above",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GTX 1060 / Radeon R9 or better, Intel i5 or AMD equivalent or above"
+    },
+    {
       "title": "The Cozy Board Game Shop: Tidy Up",
       "tier": "orange",
       "tiers": {
@@ -866,18 +866,6 @@
       "note": "Minimální konfigurace: GTX 750, i3 4th gen"
     },
     {
-      "title": "Traveloot",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Integrated Graphics",
-      "cpu": "2.0GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Integrated Graphics, 2.0GHz"
-    },
-    {
       "title": "Gold Miner: Party Rush",
       "tier": "green",
       "tiers": {
@@ -888,6 +876,18 @@
       "cpu": "Quad-core 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600 or similar)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1050 / Radeon RX 560 or better, Quad-core 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600 or similar)"
+    },
+    {
+      "title": "Traveloot",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Integrated Graphics",
+      "cpu": "2.0GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Integrated Graphics, 2.0GHz"
     },
     {
       "title": "Sardoinky",
