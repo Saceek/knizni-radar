@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T14:14:19.675Z",
+  "updatedAt": "2026-11-24T15:14:11.322Z",
   "games": [
     {
       "title": "9 Kings",
@@ -98,18 +98,6 @@
       "note": "Minimální konfigurace: Integrated Graphics, An Intel Pentium 4 processor or later that's SSE2 capable"
     },
     {
-      "title": "Blacksmith Master",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA® GeForce® GTX 760 (2 GB) / AMD® Radeon™ RX 550 (4 GB)",
-      "cpu": "Intel® Core™ i7-6700 (quad-core) / AMD® Ryzen™ 5 3400G (quad-core)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 760 (2 GB) / AMD® Radeon™ RX 550 (4 GB), Intel® Core™ i7-6700 (quad-core) / AMD® Ryzen™ 5 3400G (quad-core)"
-    },
-    {
       "title": "One More Lawn",
       "tier": "green",
       "tiers": {
@@ -120,6 +108,18 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 6 GB / AMD Radeon RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Blacksmith Master",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA® GeForce® GTX 760 (2 GB) / AMD® Radeon™ RX 550 (4 GB)",
+      "cpu": "Intel® Core™ i7-6700 (quad-core) / AMD® Ryzen™ 5 3400G (quad-core)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 760 (2 GB) / AMD® Radeon™ RX 550 (4 GB), Intel® Core™ i7-6700 (quad-core) / AMD® Ryzen™ 5 3400G (quad-core)"
     },
     {
       "title": "Scarecrow: 90s Crime Story",
@@ -180,18 +180,6 @@
       "cpu": "x86, x64 architecture",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Integrated graphics should be enough, x86, x64 architecture"
-    },
-    {
-      "title": "Farm & Feast",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 1060 or better",
-      "cpu": "AMD Ryzen 5600G",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1060 or better, AMD Ryzen 5600G"
     },
     {
       "title": "Ski-E-O! Ski Resort Tycoon",
@@ -338,6 +326,18 @@
       "note": "Minimální konfigurace: Any DirectX 11 capable GPU with 1 GB VRAM (GeForce GTX 750 / Radeon R7 260 / Intel UHD 630), Quad-core CPU — Intel Core i5-6400 / AMD Ryzen 3 1200"
     },
     {
+      "title": "Frontier Tale",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "1Gb Video Memory, Capable of OpenGL 3.0+ Support",
+      "cpu": "Intel(R) Core(TM) i5-3470",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 1Gb Video Memory, Capable of OpenGL 3.0+ Support, Intel(R) Core(TM) i5-3470"
+    },
+    {
       "title": "Trakonius",
       "tier": "green",
       "tiers": {
@@ -360,18 +360,6 @@
       "cpu": "Core™ i5-9400",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce® GTX 1050 Ti 4GB, Core™ i5-9400"
-    },
-    {
-      "title": "Frontier Tale",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "1Gb Video Memory, Capable of OpenGL 3.0+ Support",
-      "cpu": "Intel(R) Core(TM) i5-3470",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: 1Gb Video Memory, Capable of OpenGL 3.0+ Support, Intel(R) Core(TM) i5-3470"
     },
     {
       "title": "Dice Have No Eyes",
@@ -470,18 +458,6 @@
       "note": "Minimální konfigurace: DirectX 11 or DirectX 12 compatible graphics card, Quad-core Intel or AMD, 2.5 GHz or faster"
     },
     {
-      "title": "Rejected Draft",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Any integrated graphics card with WebGL support",
-      "cpu": "1.1GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Any integrated graphics card with WebGL support, 1.1GHz"
-    },
-    {
       "title": "Lord of Undead",
       "tier": "red",
       "tiers": {
@@ -506,16 +482,16 @@
       "note": "Doporučená konfigurace: GeForce GTX 1080 / Radeon RX Vega 56 / Arc A580, Intel Core i5-8600K / AMD Ryzen 5 1600"
     },
     {
-      "title": "Sol One",
-      "tier": "red",
+      "title": "MATE, This Place is a MESS!",
+      "tier": "green",
       "tiers": {
-        "allyx": "red",
-        "pc": "orange"
+        "allyx": "green",
+        "pc": "green"
       },
-      "gpu": "AMD 6700XT / Nvidia RTX 3070",
-      "cpu": "AMD Ryzen 5 5600 or equivalent",
+      "gpu": "NVIDIA GeForce GTX 1660 (6 GB) / AMD Radeon RX 5600 XT (6 GB)",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: AMD 6700XT / Nvidia RTX 3070, AMD Ryzen 5 5600 or equivalent"
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 (6 GB) / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "Bottled by Bears",
@@ -530,16 +506,16 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1050 / AMD RX 560 / Intel Iris Xe, 2 GB VRAM, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
-      "title": "MATE, This Place is a MESS!",
-      "tier": "green",
+      "title": "Sol One",
+      "tier": "red",
       "tiers": {
-        "allyx": "green",
-        "pc": "green"
+        "allyx": "red",
+        "pc": "orange"
       },
-      "gpu": "NVIDIA GeForce GTX 1660 (6 GB) / AMD Radeon RX 5600 XT (6 GB)",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "gpu": "AMD 6700XT / Nvidia RTX 3070",
+      "cpu": "AMD Ryzen 5 5600 or equivalent",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 (6 GB) / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-10400 / AMD Ryzen 5 3600"
+      "note": "Doporučená konfigurace: AMD 6700XT / Nvidia RTX 3070, AMD Ryzen 5 5600 or equivalent"
     },
     {
       "title": "MoSimulator",
@@ -686,6 +662,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060, Intel Core i7-11700"
     },
     {
+      "title": "底色",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 630 2GB / AMD Radeon R5 430  2GB",
+      "cpu": "Intel Core IS或AMD equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 630 2GB / AMD Radeon R5 430  2GB, Intel Core IS或AMD equivalent"
+    },
+    {
       "title": "ScopeCreep",
       "tier": "green",
       "tiers": {
@@ -708,18 +696,6 @@
       "cpu": "Intel Core i7-13700HX / AMD Ryzen 9 series",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 or AMD Radeon RX 6600 XT, Intel Core i7-13700HX / AMD Ryzen 9 series"
-    },
-    {
-      "title": "底色",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 630 2GB / AMD Radeon R5 430  2GB",
-      "cpu": "Intel Core IS或AMD equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 630 2GB / AMD Radeon R5 430  2GB, Intel Core IS或AMD equivalent"
     },
     {
       "title": "Water TD",
