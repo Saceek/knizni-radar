@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T16:13:24.094Z",
+  "updatedAt": "2026-11-25T17:13:15.483Z",
   "games": [
     {
       "title": "9 Kings",
@@ -206,6 +206,18 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580 (6 GB VRAM), Quad-core Intel i5-8400 / AMD Ryzen 5 1600 (or equivalent)"
     },
     {
+      "title": "SHRED A BILLION",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT",
+      "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
+    },
+    {
       "title": "Slotbound",
       "tier": "green",
       "tiers": {
@@ -228,18 +240,6 @@
       "cpu": "Intel Core i7",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GeForce GTX 1060, Intel Core i7"
-    },
-    {
-      "title": "SHRED A BILLION",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT",
-      "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
     },
     {
       "title": "Main Sequence",
@@ -470,18 +470,6 @@
       "note": "Doporučená konfigurace: GeForce GTX 1660 / Radeon RX 5600 XT, 4 GB VRAM, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
-      "title": "Lord of Undead",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "orange"
-      },
-      "gpu": "GeForce RTX 3070",
-      "cpu": "Intel Core i5 / AMD Ryzen 5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3070, Intel Core i5 / AMD Ryzen 5"
-    },
-    {
       "title": "Volvy’s Adventure: Reslimed",
       "tier": "green",
       "tiers": {
@@ -492,6 +480,18 @@
       "cpu": "Intel Core i5-8600K / AMD Ryzen 5 1600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1080 / Radeon RX Vega 56 / Arc A580, Intel Core i5-8600K / AMD Ryzen 5 1600"
+    },
+    {
+      "title": "Lord of Undead",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "orange"
+      },
+      "gpu": "GeForce RTX 3070",
+      "cpu": "Intel Core i5 / AMD Ryzen 5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce RTX 3070, Intel Core i5 / AMD Ryzen 5"
     },
     {
       "title": "Bottled by Bears",
@@ -662,18 +662,6 @@
       "note": "Minimální konfigurace: Ati mobility radeon HD 5000, Intel i3 CPU m370 2.40GHz"
     },
     {
-      "title": "Backseat Champions",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 2060 or AMD Radeon RX 6600 XT",
-      "cpu": "Intel Core i7-13700HX / AMD Ryzen 9 series",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 or AMD Radeon RX 6600 XT, Intel Core i7-13700HX / AMD Ryzen 9 series"
-    },
-    {
       "title": "底色",
       "tier": "green",
       "tiers": {
@@ -684,6 +672,18 @@
       "cpu": "Intel Core IS或AMD equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 630 2GB / AMD Radeon R5 430  2GB, Intel Core IS或AMD equivalent"
+    },
+    {
+      "title": "Backseat Champions",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 2060 or AMD Radeon RX 6600 XT",
+      "cpu": "Intel Core i7-13700HX / AMD Ryzen 9 series",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 or AMD Radeon RX 6600 XT, Intel Core i7-13700HX / AMD Ryzen 9 series"
     },
     {
       "title": "Water TD",
@@ -770,16 +770,16 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1660 or equivalent, Intel Core i5-10400 or equivalent"
     },
     {
-      "title": "500 FINGER FILLET",
+      "title": "Sardoinky",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "128MB",
-      "cpu": "Intel core i7",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: 128MB, Intel core i7"
+      "gpu": "Dedicated GPU with OpenGL 3.0+",
+      "cpu": "2.0 GHz quad-core or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Dedicated GPU with OpenGL 3.0+, 2.0 GHz quad-core or better"
     },
     {
       "title": "777 HERO ~The One Who Defies Time~",
@@ -794,16 +794,16 @@
       "note": "Minimální konfigurace: Integrated graphics with DirectX 12 support (comparable to Intel UHD 620), 2 cores, 4 threads (comparable to i3-6100 or Ryzen 3 1200)"
     },
     {
-      "title": "Sardoinky",
+      "title": "500 FINGER FILLET",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "Dedicated GPU with OpenGL 3.0+",
-      "cpu": "2.0 GHz quad-core or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Dedicated GPU with OpenGL 3.0+, 2.0 GHz quad-core or better"
+      "gpu": "128MB",
+      "cpu": "Intel core i7",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: 128MB, Intel core i7"
     },
     {
       "title": "The Cozy Board Game Shop: Tidy Up",
@@ -936,6 +936,18 @@
       "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1660 / AMD RX 5600 XT (6 GB, Vulkan), Intel Core i5-10400 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Underbloom",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Any GPU that runs a web browser (the game draws a 640x360 picture)",
+      "cpu": "Any dual-core processor from 2015 or later",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Any GPU that runs a web browser (the game draws a 640x360 picture), Any dual-core processor from 2015 or later"
     },
     {
       "title": "The Incident at Galley House",
