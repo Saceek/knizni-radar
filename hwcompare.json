@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T08:12:40.585Z",
+  "updatedAt": "2026-11-25T09:13:51.039Z",
   "games": [
     {
       "title": "9 Kings",
@@ -326,6 +326,18 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD Radeon R9 280, Intel Core i5-4460 / AMD FX-8350"
     },
     {
+      "title": "SHRED A BILLION",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT",
+      "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
+    },
+    {
       "title": "We March as One",
       "tier": "green",
       "tiers": {
@@ -336,18 +348,6 @@
       "cpu": "Quad-core CPU — Intel Core i5-6400 / AMD Ryzen 3 1200",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Any DirectX 11 capable GPU with 1 GB VRAM (GeForce GTX 750 / Radeon R7 260 / Intel UHD 630), Quad-core CPU — Intel Core i5-6400 / AMD Ryzen 3 1200"
-    },
-    {
-      "title": "Frontier Tale",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "1Gb Video Memory, Capable of OpenGL 3.0+ Support",
-      "cpu": "Intel(R) Core(TM) i5-3470",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: 1Gb Video Memory, Capable of OpenGL 3.0+ Support, Intel(R) Core(TM) i5-3470"
     },
     {
       "title": "ワロタ、俺の家のとなり魔王城www",
@@ -362,16 +362,16 @@
       "note": "Minimální konfigurace: GeForce® GTX 1050 Ti 4GB, Core™ i5-9400"
     },
     {
-      "title": "SHRED A BILLION",
-      "tier": "orange",
+      "title": "Frontier Tale",
+      "tier": "green",
       "tiers": {
-        "allyx": "orange",
+        "allyx": "green",
         "pc": "green"
       },
-      "gpu": "NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT",
-      "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
+      "gpu": "1Gb Video Memory, Capable of OpenGL 3.0+ Support",
+      "cpu": "Intel(R) Core(TM) i5-3470",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
+      "note": "Doporučená konfigurace: 1Gb Video Memory, Capable of OpenGL 3.0+ Support, Intel(R) Core(TM) i5-3470"
     },
     {
       "title": "Dice Have No Eyes",
@@ -590,18 +590,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 (12 GB) or AMD Radeon RX 6700 XT (12 GB), Intel Core i7-11700 or AMD Ryzen 7 5800X"
     },
     {
-      "title": "Touhou Chess",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DirectX 11 compatible, 2 GB VRAM",
-      "cpu": "Quad-core 2.5 GHz or faster",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: DirectX 11 compatible, 2 GB VRAM, Quad-core 2.5 GHz or faster"
-    },
-    {
       "title": "归墟行：人界篇",
       "tier": "red",
       "tiers": {
@@ -612,6 +600,18 @@
       "cpu": "Intel Core i5-12400 / AMD Ryzen 5 5600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 or equivalent, with Vulkan 1.2 support, Intel Core i5-12400 / AMD Ryzen 5 5600"
+    },
+    {
+      "title": "Touhou Chess",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DirectX 11 compatible, 2 GB VRAM",
+      "cpu": "Quad-core 2.5 GHz or faster",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: DirectX 11 compatible, 2 GB VRAM, Quad-core 2.5 GHz or faster"
     },
     {
       "title": "BALL PICKER - Clean Up the Golf Yard",
@@ -638,18 +638,6 @@
       "note": "Doporučená konfigurace: Any discrete GPU or modern integrated: NVIDIA GTX 1050 / AMD RX 560 / Intel Iris Xe or better, Any quad-core x64: Intel Core i5-8400 / AMD Ryzen 5 2600 or better"
     },
     {
-      "title": "Mirklurk: Every Step Matters",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Ati mobility radeon HD 5000",
-      "cpu": "Intel i3 CPU m370 2.40GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Ati mobility radeon HD 5000, Intel i3 CPU m370 2.40GHz"
-    },
-    {
       "title": "No Asteroids",
       "tier": "green",
       "tiers": {
@@ -660,6 +648,18 @@
       "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1660 / Radeon RX 5600 XT, 4 GB VRAM, Intel Core i5-10400 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Mirklurk: Every Step Matters",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Ati mobility radeon HD 5000",
+      "cpu": "Intel i3 CPU m370 2.40GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Ati mobility radeon HD 5000, Intel i3 CPU m370 2.40GHz"
     },
     {
       "title": "底色",
@@ -866,18 +866,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / AMD Radeon RX 6600, 6 GB VRAM, Intel Core i5-12400 / AMD Ryzen 5 5600 (6 cores)"
     },
     {
-      "title": "Handmancers",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 750",
-      "cpu": "i3 4th gen",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GTX 750, i3 4th gen"
-    },
-    {
       "title": "Warpack",
       "tier": "green",
       "tiers": {
@@ -888,6 +876,18 @@
       "cpu": "Intel i7 / Ryzen 5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD equivalent, Intel i7 / Ryzen 5"
+    },
+    {
+      "title": "Handmancers",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 750",
+      "cpu": "i3 4th gen",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GTX 750, i3 4th gen"
     },
     {
       "title": "The Incident at Galley House",
@@ -1080,30 +1080,6 @@
       "cpu": "Intel Core i5 9600 / Ryzen 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600, Intel Core i5 9600 / Ryzen 3600"
-    },
-    {
-      "title": "Hellblade II: Senua’s Saga",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "orange"
-      },
-      "gpu": "Nvidia RTX 3080 | AMD RX 6800 XT | Intel Arc A770",
-      "cpu": "Intel i7-10700K | AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia RTX 3080 | AMD RX 6800 XT | Intel Arc A770, Intel i7-10700K | AMD Ryzen 5 5600X"
-    },
-    {
-      "title": "Gears of War: E-Day",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 5060 / NVIDIA GeForce RTX 3060ti / AMD Radeon RX 6700 XT / Radeon RX 9060 XT",
-      "cpu": "AMD Ryzen 5 5600 / Intel i5-11600K",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 5060 / NVIDIA GeForce RTX 3060ti / AMD Radeon RX 6700 XT / Radeon RX 9060 XT, AMD Ryzen 5 5600 / Intel i5-11600K"
     }
   ]
 }
