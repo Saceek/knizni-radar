@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T13:13:38.480Z",
+  "updatedAt": "2026-11-26T14:12:59.928Z",
   "games": [
     {
       "title": "9 Kings",
@@ -242,18 +242,6 @@
       "note": "Doporučená konfigurace: DX10, DX11, DX12 or Vulkan capable GPUs, x86, x64 architecture with SSE2 instruction set support, Arm64"
     },
     {
-      "title": "Ranger’s Path: National Park Simulator",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "orange"
-      },
-      "gpu": "NVIDIA GeForce RTX 4070 (12GB) or AMD Radeon RX 7000 (16GB)",
-      "cpu": "AMD Ryzen 9 7900 (12 Core) or Intel equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4070 (12GB) or AMD Radeon RX 7000 (16GB), AMD Ryzen 9 7900 (12 Core) or Intel equivalent"
-    },
-    {
       "title": "Spirit Crossing",
       "tier": "red",
       "tiers": {
@@ -264,6 +252,18 @@
       "cpu": "Core i5-12400 / Ryzen 5 5600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 3070 / RX 6700 XT, Core i5-12400 / Ryzen 5 5600"
+    },
+    {
+      "title": "Ranger’s Path: National Park Simulator",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "orange"
+      },
+      "gpu": "NVIDIA GeForce RTX 4070 (12GB) or AMD Radeon RX 7000 (16GB)",
+      "cpu": "AMD Ryzen 9 7900 (12 Core) or Intel equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4070 (12GB) or AMD Radeon RX 7000 (16GB), AMD Ryzen 9 7900 (12 Core) or Intel equivalent"
     },
     {
       "title": "HANDS OVER",
@@ -350,18 +350,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super (6 GB VRAM) AMD Radeon RX 5600 XT (6 GB VRAM) Intel Arc A750, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
-      "title": "DERELIKT",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1060 or equivalent",
-      "cpu": "AMD Ryzen 5 1600 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 or equivalent, AMD Ryzen 5 1600 or equivalent"
-    },
-    {
       "title": "Widget Idle",
       "tier": "green",
       "tiers": {
@@ -372,6 +360,18 @@
       "cpu": "AMD Ryzen 7 7840U",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: AMD Radeon 780M / RX 6400 or Nvidia GTX 1650, AMD Ryzen 7 7840U"
+    },
+    {
+      "title": "DERELIKT",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1060 or equivalent",
+      "cpu": "AMD Ryzen 5 1600 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 or equivalent, AMD Ryzen 5 1600 or equivalent"
     },
     {
       "title": "Wizdom Academy",
@@ -722,18 +722,6 @@
       "note": "Minimální konfigurace: Integrated graphics with DirectX 12 support (comparable to Intel UHD 620), 2 cores, 4 threads (comparable to i3-6100 or Ryzen 3 1200)"
     },
     {
-      "title": "Fat Goblins",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 1660 or equivalent",
-      "cpu": "Intel Core i5-10400 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1660 or equivalent, Intel Core i5-10400 or equivalent"
-    },
-    {
       "title": "PC Store Together",
       "tier": "green",
       "tiers": {
@@ -744,6 +732,18 @@
       "cpu": "Intel Core i5 @ 2.5 GHz or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 1060 or AMD Radeon RX 6600 XT, Intel Core i5 @ 2.5 GHz or equivalent"
+    },
+    {
+      "title": "Fat Goblins",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 1660 or equivalent",
+      "cpu": "Intel Core i5-10400 or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1660 or equivalent, Intel Core i5-10400 or equivalent"
     },
     {
       "title": "The Cozy Board Game Shop: Tidy Up",
@@ -758,18 +758,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
-      "title": "Traveloot",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Integrated Graphics",
-      "cpu": "2.0GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Integrated Graphics, 2.0GHz"
-    },
-    {
       "title": "Terminus: Day Zero",
       "tier": "green",
       "tiers": {
@@ -780,6 +768,18 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD Radeon RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Traveloot",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Integrated Graphics",
+      "cpu": "2.0GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Integrated Graphics, 2.0GHz"
     },
     {
       "title": "Internet Cafe 98",
