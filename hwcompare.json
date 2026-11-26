@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T02:14:12.710Z",
+  "updatedAt": "2026-11-26T03:14:37.498Z",
   "games": [
     {
       "title": "9 Kings",
@@ -218,18 +218,6 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580 (6 GB VRAM), Quad-core Intel i5-8400 / AMD Ryzen 5 1600 (or equivalent)"
     },
     {
-      "title": "Gold Mining Simulator - Definitive Edition",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Nvidia GeForce GTX 1060",
-      "cpu": "Intel Core i7",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1060, Intel Core i7"
-    },
-    {
       "title": "Slotbound",
       "tier": "green",
       "tiers": {
@@ -242,6 +230,18 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
+      "title": "Gold Mining Simulator - Definitive Edition",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GeForce GTX 1060",
+      "cpu": "Intel Core i7",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Nvidia GeForce GTX 1060, Intel Core i7"
+    },
+    {
       "title": "Main Sequence",
       "tier": "red",
       "tiers": {
@@ -252,6 +252,18 @@
       "cpu": "Intel Core i7-11700K or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 Ti, Intel Core i7-11700K or equivalent"
+    },
+    {
+      "title": "No Asteroids",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 1660 / Radeon RX 5600 XT, 4 GB VRAM",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1660 / Radeon RX 5600 XT, 4 GB VRAM, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "KORRIDOR",
@@ -290,16 +302,16 @@
       "note": "Doporučená konfigurace: RTX 3070 / RX 6700 XT, Core i5-12400 / Ryzen 5 5600"
     },
     {
-      "title": "No Asteroids",
+      "title": "HANDS OVER",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "GeForce GTX 1660 / Radeon RX 5600 XT, 4 GB VRAM",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1660 / Radeon RX 5600 XT, 4 GB VRAM, Intel Core i5-10400 / AMD Ryzen 5 3600"
+      "gpu": "NVIDIA GeForce GTX 960 / AMD Radeon R9 280",
+      "cpu": "Intel Core i5-4460 / AMD FX-8350",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD Radeon R9 280, Intel Core i5-4460 / AMD FX-8350"
     },
     {
       "title": "Kaetram",
@@ -312,18 +324,6 @@
       "cpu": "Intel® Core™ i3-7100",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Intel® HD Graphics 630, Intel® Core™ i3-7100"
-    },
-    {
-      "title": "HANDS OVER",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 960 / AMD Radeon R9 280",
-      "cpu": "Intel Core i5-4460 / AMD FX-8350",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 960 / AMD Radeon R9 280, Intel Core i5-4460 / AMD FX-8350"
     },
     {
       "title": "Below the Stone",
@@ -626,18 +626,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
     },
     {
-      "title": "Engagement",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Any discrete GPU or modern integrated: NVIDIA GTX 1050 / AMD RX 560 / Intel Iris Xe or better",
-      "cpu": "Any quad-core x64: Intel Core i5-8400 / AMD Ryzen 5 2600 or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Any discrete GPU or modern integrated: NVIDIA GTX 1050 / AMD RX 560 / Intel Iris Xe or better, Any quad-core x64: Intel Core i5-8400 / AMD Ryzen 5 2600 or better"
-    },
-    {
       "title": "Zkoušky v čínském stylu",
       "tier": "green",
       "tiers": {
@@ -842,6 +830,18 @@
       "note": "Minimální konfigurace: Integrated Graphics, 2.0GHz"
     },
     {
+      "title": "PC Store Together",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1060 or AMD Radeon RX 6600 XT",
+      "cpu": "Intel Core i5 @ 2.5 GHz or equivalent",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 1060 or AMD Radeon RX 6600 XT, Intel Core i5 @ 2.5 GHz or equivalent"
+    },
+    {
       "title": "SCAD",
       "tier": "green",
       "tiers": {
@@ -876,18 +876,6 @@
       "cpu": "Intel Core i3-2100 or AMD FX-4100",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD 4000 or AMD equivalent, Intel Core i3-2100 or AMD FX-4100"
-    },
-    {
-      "title": "PC Store Together",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1060 or AMD Radeon RX 6600 XT",
-      "cpu": "Intel Core i5 @ 2.5 GHz or equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 1060 or AMD Radeon RX 6600 XT, Intel Core i5 @ 2.5 GHz or equivalent"
     },
     {
       "title": "Hazard Levels",
