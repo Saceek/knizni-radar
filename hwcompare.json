@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T16:13:47.257Z",
+  "updatedAt": "2026-11-26T17:13:32.454Z",
   "games": [
     {
       "title": "9 Kings",
@@ -110,18 +110,6 @@
       "note": "Minimální konfigurace: Integrated graphics (e.g., Intel HD Graphics) or equivalent; dedicated GPU not necessary, Dual-core 2.0 GHz or higher"
     },
     {
-      "title": "How They Built the Pyramids",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Nvidia GeForce GTX 960",
-      "cpu": "Intel Core i3 3.0 GHz or Ryzen 3xxx",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Nvidia GeForce GTX 960, Intel Core i3 3.0 GHz or Ryzen 3xxx"
-    },
-    {
       "title": "SHRED A BILLION",
       "tier": "orange",
       "tiers": {
@@ -132,6 +120,18 @@
       "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "How They Built the Pyramids",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Nvidia GeForce GTX 960",
+      "cpu": "Intel Core i3 3.0 GHz or Ryzen 3xxx",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Nvidia GeForce GTX 960, Intel Core i3 3.0 GHz or Ryzen 3xxx"
     },
     {
       "title": "Milki Delivery",
@@ -374,18 +374,6 @@
       "note": "Doporučená konfigurace: GTX 1660 Super / RTX 2060, 6 Go, i5-10400 / Ryzen 5 3600"
     },
     {
-      "title": "Scawy Game",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVidia 3060 or equivalent",
-      "cpu": "Ryzen 9 3900XT or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
-    },
-    {
       "title": "BOOM! Buster",
       "tier": "green",
       "tiers": {
@@ -470,18 +458,6 @@
       "note": "Doporučená konfigurace: AMD 6700XT / Nvidia RTX 3070, AMD Ryzen 5 5600 or equivalent"
     },
     {
-      "title": "Touhou Chess",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DirectX 11 compatible, 2 GB VRAM",
-      "cpu": "Quad-core 2.5 GHz or faster",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: DirectX 11 compatible, 2 GB VRAM, Quad-core 2.5 GHz or faster"
-    },
-    {
       "title": "Trust Your Gut",
       "tier": "green",
       "tiers": {
@@ -492,6 +468,18 @@
       "cpu": "Intel Core i5-8400 or AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, Intel Core i5-8400 or AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Touhou Chess",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DirectX 11 compatible, 2 GB VRAM",
+      "cpu": "Quad-core 2.5 GHz or faster",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: DirectX 11 compatible, 2 GB VRAM, Quad-core 2.5 GHz or faster"
     },
     {
       "title": "HARMA",
@@ -542,18 +530,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
     },
     {
-      "title": "Zkoušky v čínském stylu",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel HD Graphics 4400",
-      "cpu": "i5",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 4400, i5"
-    },
-    {
       "title": "Mirklurk: Every Step Matters",
       "tier": "green",
       "tiers": {
@@ -564,6 +540,18 @@
       "cpu": "Intel i3 CPU m370 2.40GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Ati mobility radeon HD 5000, Intel i3 CPU m370 2.40GHz"
+    },
+    {
+      "title": "Zkoušky v čínském stylu",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD Graphics 4400",
+      "cpu": "i5",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics 4400, i5"
     },
     {
       "title": "Backseat Champions",
@@ -734,18 +722,6 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD Radeon RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
-      "title": "Traveloot",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Integrated Graphics",
-      "cpu": "2.0GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Integrated Graphics, 2.0GHz"
-    },
-    {
       "title": "Internet Cafe 98",
       "tier": "green",
       "tiers": {
@@ -756,6 +732,18 @@
       "cpu": "Intel Core i3-2100 or AMD FX-4100",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD 4000 or AMD equivalent, Intel Core i3-2100 or AMD FX-4100"
+    },
+    {
+      "title": "Traveloot",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Integrated Graphics",
+      "cpu": "2.0GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Integrated Graphics, 2.0GHz"
     },
     {
       "title": "SCAD",
