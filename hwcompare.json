@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T04:15:33.244Z",
+  "updatedAt": "2026-11-26T05:14:14.449Z",
   "games": [
     {
       "title": "9 Kings",
@@ -422,6 +422,18 @@
       "note": "Minimální konfigurace: Intel HD Graphics, Intel or AMD Dual Core CPU"
     },
     {
+      "title": "Widget Idle",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "AMD Radeon 780M / RX 6400 or Nvidia GTX 1650",
+      "cpu": "AMD Ryzen 7 7840U",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: AMD Radeon 780M / RX 6400 or Nvidia GTX 1650, AMD Ryzen 7 7840U"
+    },
+    {
       "title": "Scawy Game",
       "tier": "red",
       "tiers": {
@@ -444,18 +456,6 @@
       "cpu": "i5-10400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 3060, i5-10400"
-    },
-    {
-      "title": "Widget Idle",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "AMD Radeon 780M / RX 6400 or Nvidia GTX 1650",
-      "cpu": "AMD Ryzen 7 7840U",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: AMD Radeon 780M / RX 6400 or Nvidia GTX 1650, AMD Ryzen 7 7840U"
     },
     {
       "title": "Volvy’s Adventure: Reslimed",
@@ -938,16 +938,16 @@
       "note": "Minimální konfigurace: Integrated graphics, Intel Core i3"
     },
     {
-      "title": "FROG IS CRIME",
+      "title": "Round and Round Inc.",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "1GB",
-      "cpu": "2 GHz",
+      "gpu": "NVIDIA GeForce GTX 1060 / AMD Radeon RX 580",
+      "cpu": "6-core CPU at 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600)",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: 1GB, 2 GHz"
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060 / AMD Radeon RX 580, 6-core CPU at 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600)"
     },
     {
       "title": "Underbloom",
@@ -960,6 +960,18 @@
       "cpu": "Any dual-core processor from 2015 or later",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Any GPU that runs a web browser (the game draws a 640x360 picture), Any dual-core processor from 2015 or later"
+    },
+    {
+      "title": "FROG IS CRIME",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "1GB",
+      "cpu": "2 GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 1GB, 2 GHz"
     },
     {
       "title": "Silver Service: Tidy Up the Grand Buffet",
