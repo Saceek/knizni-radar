@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T20:14:03.672Z",
+  "updatedAt": "2026-11-26T21:12:53.508Z",
   "games": [
     {
       "title": "just volleyball",
@@ -36,18 +36,6 @@
       "cpu": "6-core CPU at 3.5 GHz (Intel Core i5-10400 / AMD Ryzen 5 3600)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1050 Ti / Radeon RX 570, 6-core CPU at 3.5 GHz (Intel Core i5-10400 / AMD Ryzen 5 3600)"
-    },
-    {
-      "title": "Here Comes the Horde",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 1050 / Radeon RX 560, 2 GB VRAM",
-      "cpu": "Intel Core i5-4590 / AMD Ryzen 3 1200",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GeForce GTX 1050 / Radeon RX 560, 2 GB VRAM, Intel Core i5-4590 / AMD Ryzen 3 1200"
     },
     {
       "title": "Dice Hoarder",
@@ -144,6 +132,18 @@
       "cpu": "Intel i5 or AMD equivalent or above",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia GTX 1060 / Radeon R9 or better, Intel i5 or AMD equivalent or above"
+    },
+    {
+      "title": "Here Comes the Horde",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 1050 / Radeon RX 560, 2 GB VRAM",
+      "cpu": "Intel Core i5-4590 / AMD Ryzen 3 1200",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: GeForce GTX 1050 / Radeon RX 560, 2 GB VRAM, Intel Core i5-4590 / AMD Ryzen 3 1200"
     },
     {
       "title": "No Asteroids",
@@ -722,18 +722,6 @@
       "note": "Minimální konfigurace: Integrated Graphics, 2.0GHz"
     },
     {
-      "title": "SCAD",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel HD Graphics 4000",
-      "cpu": "2GHz 4 Cores",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics 4000, 2GHz 4 Cores"
-    },
-    {
       "title": "Malignus",
       "tier": "green",
       "tiers": {
@@ -746,16 +734,16 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / AMD Radeon RX 6600, 6 GB VRAM, Intel Core i5-12400 / AMD Ryzen 5 5600 (6 cores)"
     },
     {
-      "title": "Net Worthless",
+      "title": "SCAD",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "Any dedicated GPU",
-      "cpu": "Quad-core 2.5 GHz+",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Any dedicated GPU, Quad-core 2.5 GHz+"
+      "gpu": "Intel HD Graphics 4000",
+      "cpu": "2GHz 4 Cores",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics 4000, 2GHz 4 Cores"
     },
     {
       "title": "Warpack",
@@ -768,6 +756,18 @@
       "cpu": "Intel i7 / Ryzen 5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD equivalent, Intel i7 / Ryzen 5"
+    },
+    {
+      "title": "Net Worthless",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Any dedicated GPU",
+      "cpu": "Quad-core 2.5 GHz+",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Any dedicated GPU, Quad-core 2.5 GHz+"
     },
     {
       "title": "Func Key",
@@ -794,30 +794,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 SUPER (6 GB) / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
-      "title": "Underbloom",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Any GPU that runs a web browser (the game draws a 640x360 picture)",
-      "cpu": "Any dual-core processor from 2015 or later",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Any GPU that runs a web browser (the game draws a 640x360 picture), Any dual-core processor from 2015 or later"
-    },
-    {
-      "title": "Silver Service: Tidy Up the Grand Buffet",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (6 GB)",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
       "title": "When Chests Rain Tons of Loot",
       "tier": "green",
       "tiers": {
@@ -830,6 +806,18 @@
       "note": "Minimální konfigurace: Integrated Graphics (Intel HD Graphics or AMD APU), Intel Core 2 Duo or equivalent"
     },
     {
+      "title": "Underbloom",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Any GPU that runs a web browser (the game draws a 640x360 picture)",
+      "cpu": "Any dual-core processor from 2015 or later",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Any GPU that runs a web browser (the game draws a 640x360 picture), Any dual-core processor from 2015 or later"
+    },
+    {
       "title": "FROG IS CRIME",
       "tier": "green",
       "tiers": {
@@ -840,6 +828,30 @@
       "cpu": "2 GHz",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: 1GB, 2 GHz"
+    },
+    {
+      "title": "A Thousand Cloys",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 960 (4GB) / AMD Radeon R9 380",
+      "cpu": "2.5Ghz or better",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GTX 960 (4GB) / AMD Radeon R9 380, 2.5Ghz or better"
+    },
+    {
+      "title": "Silver Service: Tidy Up the Grand Buffet",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (6 GB)",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
       "title": "The Incident at Galley House",
