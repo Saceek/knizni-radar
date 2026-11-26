@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T14:12:59.928Z",
+  "updatedAt": "2026-11-26T15:14:41.478Z",
   "games": [
     {
       "title": "9 Kings",
@@ -182,18 +182,6 @@
       "note": "Doporučená konfigurace: NVIDIA RTX 3060 (DLSS) / AMD RX 6600 / 6650 XT (FSR), Intel Core i5-12400 / AMD Ryzen 5 5600X (6-core)"
     },
     {
-      "title": "Drawquarium",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 1060 / AMD RX 580 (6 GB VRAM)",
-      "cpu": "Quad-core Intel i5-8400 / AMD Ryzen 5 1600 (or equivalent)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580 (6 GB VRAM), Quad-core Intel i5-8400 / AMD Ryzen 5 1600 (or equivalent)"
-    },
-    {
       "title": "No Asteroids",
       "tier": "green",
       "tiers": {
@@ -204,6 +192,18 @@
       "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1660 / Radeon RX 5600 XT, 4 GB VRAM, Intel Core i5-10400 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Drawquarium",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 1060 / AMD RX 580 (6 GB VRAM)",
+      "cpu": "Quad-core Intel i5-8400 / AMD Ryzen 5 1600 (or equivalent)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580 (6 GB VRAM), Quad-core Intel i5-8400 / AMD Ryzen 5 1600 (or equivalent)"
     },
     {
       "title": "Slotbound",
@@ -386,6 +386,18 @@
       "note": "Doporučená konfigurace: GTX 1660 Super / RTX 2060, 6 Go, i5-10400 / Ryzen 5 3600"
     },
     {
+      "title": "Scawy Game",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVidia 3060 or equivalent",
+      "cpu": "Ryzen 9 3900XT or equivalent",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
+    },
+    {
       "title": "BOOM! Buster",
       "tier": "green",
       "tiers": {
@@ -408,18 +420,6 @@
       "cpu": "i5-10400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 3060, i5-10400"
-    },
-    {
-      "title": "Scawy Game",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVidia 3060 or equivalent",
-      "cpu": "Ryzen 9 3900XT or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
     },
     {
       "title": "Lord of Undead",
@@ -470,18 +470,6 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4000 and higher, 2 GHz"
     },
     {
-      "title": "Bottled by Bears",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 1050 / AMD RX 560 / Intel Iris Xe, 2 GB VRAM",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1050 / AMD RX 560 / Intel Iris Xe, 2 GB VRAM, Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
       "title": "Sol One",
       "tier": "red",
       "tiers": {
@@ -494,18 +482,6 @@
       "note": "Doporučená konfigurace: AMD 6700XT / Nvidia RTX 3070, AMD Ryzen 5 5600 or equivalent"
     },
     {
-      "title": "Trust Your Gut",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1060",
-      "cpu": "Intel Core i5-8400 or AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, Intel Core i5-8400 or AMD Ryzen 5 2600"
-    },
-    {
       "title": "Touhou Chess",
       "tier": "green",
       "tiers": {
@@ -516,6 +492,18 @@
       "cpu": "Quad-core 2.5 GHz or faster",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: DirectX 11 compatible, 2 GB VRAM, Quad-core 2.5 GHz or faster"
+    },
+    {
+      "title": "Trust Your Gut",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1060",
+      "cpu": "Intel Core i5-8400 or AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, Intel Core i5-8400 or AMD Ryzen 5 2600"
     },
     {
       "title": "HARMA",
@@ -686,6 +674,18 @@
       "note": "Doporučená konfigurace: Dedicated GPU with OpenGL 3.0+, 2.0 GHz quad-core or better"
     },
     {
+      "title": "777 HERO ~The One Who Defies Time~",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Integrated graphics with DirectX 12 support (comparable to Intel UHD 620)",
+      "cpu": "2 cores, 4 threads (comparable to i3-6100 or Ryzen 3 1200)",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Integrated graphics with DirectX 12 support (comparable to Intel UHD 620), 2 cores, 4 threads (comparable to i3-6100 or Ryzen 3 1200)"
+    },
+    {
       "title": "イケ勘 - イケメンになるかどうか勘で付き合うゲーム -",
       "tier": "green",
       "tiers": {
@@ -708,18 +708,6 @@
       "cpu": "i5-7400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, i5-7400"
-    },
-    {
-      "title": "777 HERO ~The One Who Defies Time~",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Integrated graphics with DirectX 12 support (comparable to Intel UHD 620)",
-      "cpu": "2 cores, 4 threads (comparable to i3-6100 or Ryzen 3 1200)",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Integrated graphics with DirectX 12 support (comparable to Intel UHD 620), 2 cores, 4 threads (comparable to i3-6100 or Ryzen 3 1200)"
     },
     {
       "title": "PC Store Together",
@@ -852,18 +840,6 @@
       "cpu": "Intel Core i3",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Integrated graphics, Intel Core i3"
-    },
-    {
-      "title": "Handmancers",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 750",
-      "cpu": "i3 4th gen",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: GTX 750, i3 4th gen"
     },
     {
       "title": "Underbloom",
