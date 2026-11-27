@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T01:13:49.506Z",
+  "updatedAt": "2026-11-27T02:13:44.054Z",
   "games": [
     {
       "title": "just volleyball",
@@ -674,16 +674,16 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, i5-7400"
     },
     {
-      "title": "Fat Goblins",
+      "title": "Internet Cafe 98",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "NVIDIA GTX 1660 or equivalent",
-      "cpu": "Intel Core i5-10400 or equivalent",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1660 or equivalent, Intel Core i5-10400 or equivalent"
+      "gpu": "Intel HD 4000 or AMD equivalent",
+      "cpu": "Intel Core i3-2100 or AMD FX-4100",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD 4000 or AMD equivalent, Intel Core i3-2100 or AMD FX-4100"
     },
     {
       "title": "Terminus: Day Zero",
@@ -696,18 +696,6 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD Radeon RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
-      "title": "Internet Cafe 98",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel HD 4000 or AMD equivalent",
-      "cpu": "Intel Core i3-2100 or AMD FX-4100",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD 4000 or AMD equivalent, Intel Core i3-2100 or AMD FX-4100"
     },
     {
       "title": "Traveloot",
@@ -746,6 +734,18 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4000, 2GHz 4 Cores"
     },
     {
+      "title": "A Thousand Cloys",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 960 (4GB) / AMD Radeon R9 380",
+      "cpu": "2.5Ghz or better",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GTX 960 (4GB) / AMD Radeon R9 380, 2.5Ghz or better"
+    },
+    {
       "title": "Paper2Galgame",
       "tier": "green",
       "tiers": {
@@ -756,30 +756,6 @@
       "cpu": "Intel Core i3 / AMD Ryzen 3",
       "usedMinimum": true,
       "note": "Minimální konfigurace: DirectX 11–compatible integrated or dedicated graphics, Intel Core i3 / AMD Ryzen 3"
-    },
-    {
-      "title": "Warpack",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 1060 / AMD equivalent",
-      "cpu": "Intel i7 / Ryzen 5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD equivalent, Intel i7 / Ryzen 5"
-    },
-    {
-      "title": "RogueDiceR",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 750 or AMD equivalent",
-      "cpu": "Intel Core i5-2500 or AMD equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 750 or AMD equivalent, Intel Core i5-2500 or AMD equivalent"
     },
     {
       "title": "When Chests Rain Tons of Loot",
@@ -794,16 +770,16 @@
       "note": "Minimální konfigurace: Integrated Graphics (Intel HD Graphics or AMD APU), Intel Core 2 Duo or equivalent"
     },
     {
-      "title": "Net Worthless",
+      "title": "Warpack",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "Any dedicated GPU",
-      "cpu": "Quad-core 2.5 GHz+",
+      "gpu": "NVIDIA GTX 1060 / AMD equivalent",
+      "cpu": "Intel i7 / Ryzen 5",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: Any dedicated GPU, Quad-core 2.5 GHz+"
+      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD equivalent, Intel i7 / Ryzen 5"
     },
     {
       "title": "Func Key",
@@ -818,16 +794,28 @@
       "note": "Minimální konfigurace: Integrated graphics, Intel Core i3"
     },
     {
-      "title": "A Thousand Cloys",
+      "title": "RogueDiceR",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "NVIDIA GTX 960 (4GB) / AMD Radeon R9 380",
-      "cpu": "2.5Ghz or better",
+      "gpu": "NVIDIA GeForce GTX 750 or AMD equivalent",
+      "cpu": "Intel Core i5-2500 or AMD equivalent",
       "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GTX 960 (4GB) / AMD Radeon R9 380, 2.5Ghz or better"
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 750 or AMD equivalent, Intel Core i5-2500 or AMD equivalent"
+    },
+    {
+      "title": "Net Worthless",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Any dedicated GPU",
+      "cpu": "Quad-core 2.5 GHz+",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Any dedicated GPU, Quad-core 2.5 GHz+"
     },
     {
       "title": "BORE",
