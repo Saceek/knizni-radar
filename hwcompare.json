@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T18:14:17.520Z",
+  "updatedAt": "2026-11-27T19:14:02.900Z",
   "games": [
     {
       "title": "just volleyball",
@@ -24,18 +24,6 @@
       "cpu": "6-core CPU at 3.5 GHz (Intel Core i5-10400 / AMD Ryzen 5 3600)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce GTX 1050 Ti / Radeon RX 570, 6-core CPU at 3.5 GHz (Intel Core i5-10400 / AMD Ryzen 5 3600)"
-    },
-    {
-      "title": "BitCraft Online",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 1080",
-      "cpu": "i7 3.8 Ghz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1080, i7 3.8 Ghz"
     },
     {
       "title": "Dice Hoarder",
@@ -650,18 +638,6 @@
       "note": "Minimální konfigurace: NVIDIA GTX 960 (4GB) / AMD Radeon R9 380, 2.5Ghz or better"
     },
     {
-      "title": "Traveloot",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Integrated Graphics",
-      "cpu": "2.0GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Integrated Graphics, 2.0GHz"
-    },
-    {
       "title": "When Chests Rain Tons of Loot",
       "tier": "green",
       "tiers": {
@@ -672,6 +648,18 @@
       "cpu": "Intel Core 2 Duo or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Integrated Graphics (Intel HD Graphics or AMD APU), Intel Core 2 Duo or equivalent"
+    },
+    {
+      "title": "Traveloot",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Integrated Graphics",
+      "cpu": "2.0GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Integrated Graphics, 2.0GHz"
     },
     {
       "title": "Malignus",
@@ -1092,6 +1080,18 @@
       "cpu": "Intel i7-10700K | AMD Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia RTX 3080 | AMD RX 6800 XT | Intel Arc A770, Intel i7-10700K | AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "Gears of War: E-Day",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 5060 / NVIDIA GeForce RTX 3060ti / AMD Radeon RX 6700 XT / Radeon RX 9060 XT",
+      "cpu": "AMD Ryzen 5 5600 / Intel i5-11600K",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 5060 / NVIDIA GeForce RTX 3060ti / AMD Radeon RX 6700 XT / Radeon RX 9060 XT, AMD Ryzen 5 5600 / Intel i5-11600K"
     }
   ]
 }
