@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T08:13:14.253Z",
+  "updatedAt": "2026-11-27T09:14:22.292Z",
   "games": [
     {
       "title": "just volleyball",
@@ -506,18 +506,6 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4400, i5"
     },
     {
-      "title": "Backseat Champions",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 2060 or AMD Radeon RX 6600 XT",
-      "cpu": "Intel Core i7-13700HX / AMD Ryzen 9 series",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 or AMD Radeon RX 6600 XT, Intel Core i7-13700HX / AMD Ryzen 9 series"
-    },
-    {
       "title": "PC Store Together",
       "tier": "green",
       "tiers": {
@@ -528,6 +516,18 @@
       "cpu": "Intel Core i5 @ 2.5 GHz or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 1060 or AMD Radeon RX 6600 XT, Intel Core i5 @ 2.5 GHz or equivalent"
+    },
+    {
+      "title": "Backseat Champions",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 2060 or AMD Radeon RX 6600 XT",
+      "cpu": "Intel Core i7-13700HX / AMD Ryzen 9 series",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 or AMD Radeon RX 6600 XT, Intel Core i7-13700HX / AMD Ryzen 9 series"
     },
     {
       "title": "Water TD",
@@ -638,16 +638,16 @@
       "note": "Doporučená konfigurace: Integrated Graphics Chip or better, 2.4 GHz Processor or better"
     },
     {
-      "title": "777 HERO ~The One Who Defies Time~",
+      "title": "Internet Cafe 98",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "Integrated graphics with DirectX 12 support (comparable to Intel UHD 620)",
-      "cpu": "2 cores, 4 threads (comparable to i3-6100 or Ryzen 3 1200)",
+      "gpu": "Intel HD 4000 or AMD equivalent",
+      "cpu": "Intel Core i3-2100 or AMD FX-4100",
       "usedMinimum": true,
-      "note": "Minimální konfigurace: Integrated graphics with DirectX 12 support (comparable to Intel UHD 620), 2 cores, 4 threads (comparable to i3-6100 or Ryzen 3 1200)"
+      "note": "Minimální konfigurace: Intel HD 4000 or AMD equivalent, Intel Core i3-2100 or AMD FX-4100"
     },
     {
       "title": "Idle King: Společně za kořistí",
@@ -660,18 +660,6 @@
       "cpu": "i5-7400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, i5-7400"
-    },
-    {
-      "title": "Internet Cafe 98",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel HD 4000 or AMD equivalent",
-      "cpu": "Intel Core i3-2100 or AMD FX-4100",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD 4000 or AMD equivalent, Intel Core i3-2100 or AMD FX-4100"
     },
     {
       "title": "Terminus: Day Zero",
@@ -746,18 +734,6 @@
       "note": "Minimální konfigurace: Integrated Graphics (Intel HD Graphics or AMD APU), Intel Core 2 Duo or equivalent"
     },
     {
-      "title": "Paper2Galgame",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DirectX 11–compatible integrated or dedicated graphics",
-      "cpu": "Intel Core i3 / AMD Ryzen 3",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: DirectX 11–compatible integrated or dedicated graphics, Intel Core i3 / AMD Ryzen 3"
-    },
-    {
       "title": "Func Key",
       "tier": "green",
       "tiers": {
@@ -768,6 +744,18 @@
       "cpu": "Intel Core i3",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Integrated graphics, Intel Core i3"
+    },
+    {
+      "title": "Paper2Galgame",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DirectX 11–compatible integrated or dedicated graphics",
+      "cpu": "Intel Core i3 / AMD Ryzen 3",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: DirectX 11–compatible integrated or dedicated graphics, Intel Core i3 / AMD Ryzen 3"
     },
     {
       "title": "Warpack",
@@ -1092,42 +1080,6 @@
       "cpu": "Intel® Core™ i5-8400 Processor",
       "usedMinimum": true,
       "note": "Minimální konfigurace: GeForce GTX 1060 (6GB) or equivalent, Intel® Core™ i5-8400 Processor"
-    },
-    {
-      "title": "MOUSE: P.I. For Hire",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600",
-      "cpu": "Intel Core i5 9600 / Ryzen 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce RTX 3060 / Intel Arc B570 / Radeon RX 7600, Intel Core i5 9600 / Ryzen 3600"
-    },
-    {
-      "title": "Hellblade II: Senua’s Saga",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "orange"
-      },
-      "gpu": "Nvidia RTX 3080 | AMD RX 6800 XT | Intel Arc A770",
-      "cpu": "Intel i7-10700K | AMD Ryzen 5 5600X",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Nvidia RTX 3080 | AMD RX 6800 XT | Intel Arc A770, Intel i7-10700K | AMD Ryzen 5 5600X"
-    },
-    {
-      "title": "Gears of War: E-Day",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 5060 / NVIDIA GeForce RTX 3060ti / AMD Radeon RX 6700 XT / Radeon RX 9060 XT",
-      "cpu": "AMD Ryzen 5 5600 / Intel i5-11600K",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 5060 / NVIDIA GeForce RTX 3060ti / AMD Radeon RX 6700 XT / Radeon RX 9060 XT, AMD Ryzen 5 5600 / Intel i5-11600K"
     }
   ]
 }
