@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T05:14:10.871Z",
+  "updatedAt": "2026-11-27T06:13:04.931Z",
   "games": [
     {
       "title": "just volleyball",
@@ -74,18 +74,6 @@
       "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 760 (2 GB) / AMD® Radeon™ RX 550 (4 GB), Intel® Core™ i7-6700 (quad-core) / AMD® Ryzen™ 5 3400G (quad-core)"
     },
     {
-      "title": "Dungeonbound",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Integrated graphics (e.g., Intel HD Graphics) or equivalent; dedicated GPU not necessary",
-      "cpu": "Dual-core 2.0 GHz or higher",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Integrated graphics (e.g., Intel HD Graphics) or equivalent; dedicated GPU not necessary, Dual-core 2.0 GHz or higher"
-    },
-    {
       "title": "SHRED A BILLION",
       "tier": "orange",
       "tiers": {
@@ -96,6 +84,18 @@
       "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Dungeonbound",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Integrated graphics (e.g., Intel HD Graphics) or equivalent; dedicated GPU not necessary",
+      "cpu": "Dual-core 2.0 GHz or higher",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Integrated graphics (e.g., Intel HD Graphics) or equivalent; dedicated GPU not necessary, Dual-core 2.0 GHz or higher"
     },
     {
       "title": "How They Built the Pyramids",
@@ -626,18 +626,6 @@
       "note": "Doporučená konfigurace: nVidia GeForce 8600/9600GT, ATI/AMD Radeon HD2600/3600, Intel® Core™ i5 Processors"
     },
     {
-      "title": "イケ勘 - イケメンになるかどうか勘で付き合うゲーム -",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Integrated Graphics Chip or better",
-      "cpu": "2.4 GHz Processor or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Integrated Graphics Chip or better, 2.4 GHz Processor or better"
-    },
-    {
       "title": "777 HERO ~The One Who Defies Time~",
       "tier": "green",
       "tiers": {
@@ -650,16 +638,16 @@
       "note": "Minimální konfigurace: Integrated graphics with DirectX 12 support (comparable to Intel UHD 620), 2 cores, 4 threads (comparable to i3-6100 or Ryzen 3 1200)"
     },
     {
-      "title": "Internet Cafe 98",
+      "title": "イケ勘 - イケメンになるかどうか勘で付き合うゲーム -",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "Intel HD 4000 or AMD equivalent",
-      "cpu": "Intel Core i3-2100 or AMD FX-4100",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD 4000 or AMD equivalent, Intel Core i3-2100 or AMD FX-4100"
+      "gpu": "Integrated Graphics Chip or better",
+      "cpu": "2.4 GHz Processor or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Integrated Graphics Chip or better, 2.4 GHz Processor or better"
     },
     {
       "title": "Idle King: Společně za kořistí",
@@ -672,6 +660,18 @@
       "cpu": "i5-7400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1060, i5-7400"
+    },
+    {
+      "title": "Internet Cafe 98",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD 4000 or AMD equivalent",
+      "cpu": "Intel Core i3-2100 or AMD FX-4100",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD 4000 or AMD equivalent, Intel Core i3-2100 or AMD FX-4100"
     },
     {
       "title": "Terminus: Day Zero",
@@ -818,18 +818,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 SUPER (6 GB) / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
-      "title": "Silver Service: Tidy Up the Grand Buffet",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (6 GB)",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
       "title": "Underbloom",
       "tier": "green",
       "tiers": {
@@ -840,6 +828,18 @@
       "cpu": "Any dual-core processor from 2015 or later",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Any GPU that runs a web browser (the game draws a 640x360 picture), Any dual-core processor from 2015 or later"
+    },
+    {
+      "title": "Silver Service: Tidy Up the Grand Buffet",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (6 GB)",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
       "title": "FROG IS CRIME",
@@ -1104,6 +1104,18 @@
       "cpu": "Intel i7-10700K | AMD Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia RTX 3080 | AMD RX 6800 XT | Intel Arc A770, Intel i7-10700K | AMD Ryzen 5 5600X"
+    },
+    {
+      "title": "Gears of War: E-Day",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 5060 / NVIDIA GeForce RTX 3060ti / AMD Radeon RX 6700 XT / Radeon RX 9060 XT",
+      "cpu": "AMD Ryzen 5 5600 / Intel i5-11600K",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 5060 / NVIDIA GeForce RTX 3060ti / AMD Radeon RX 6700 XT / Radeon RX 9060 XT, AMD Ryzen 5 5600 / Intel i5-11600K"
     }
   ]
 }
