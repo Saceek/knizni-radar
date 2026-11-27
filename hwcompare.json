@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T21:14:03.258Z",
+  "updatedAt": "2026-11-27T22:14:33.382Z",
   "games": [
     {
       "title": "just volleyball",
@@ -278,18 +278,6 @@
       "note": "Minimální konfigurace: Intel HD Graphics, Intel or AMD Dual Core CPU"
     },
     {
-      "title": "Wizdom Academy",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GTX 1660 Super / RTX 2060, 6 Go",
-      "cpu": "i5-10400 / Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GTX 1660 Super / RTX 2060, 6 Go, i5-10400 / Ryzen 5 3600"
-    },
-    {
       "title": "Dawn of Defense",
       "tier": "red",
       "tiers": {
@@ -300,6 +288,18 @@
       "cpu": "i5-10400",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: RTX 3060, i5-10400"
+    },
+    {
+      "title": "Wizdom Academy",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GTX 1660 Super / RTX 2060, 6 Go",
+      "cpu": "i5-10400 / Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GTX 1660 Super / RTX 2060, 6 Go, i5-10400 / Ryzen 5 3600"
     },
     {
       "title": "Lord of Undead",
@@ -530,18 +530,6 @@
       "note": "Doporučená konfigurace: Dedicated GPU with OpenGL 3.0+, 2.0 GHz quad-core or better"
     },
     {
-      "title": "Graveyard Orbit",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 1060 / AMD RX 580 (4 GB VRAM)",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580 (4 GB VRAM), Intel Core i5-10400 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "Terminus: Day Zero",
       "tier": "green",
       "tiers": {
@@ -552,6 +540,18 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD Radeon RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
+      "title": "Graveyard Orbit",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 1060 / AMD RX 580 (4 GB VRAM)",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580 (4 GB VRAM), Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "Internet Cafe 98",
@@ -650,18 +650,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / AMD Radeon RX 6600, 6 GB VRAM, Intel Core i5-12400 / AMD Ryzen 5 5600 (6 cores)"
     },
     {
-      "title": "Shanhai Phantasm",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 750 / Intel Iris Xe Graphics or better",
-      "cpu": "Intel Core i5 or AMD Ryzen 5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 / Intel Iris Xe Graphics or better, Intel Core i5 or AMD Ryzen 5"
-    },
-    {
       "title": "Paper2Galgame",
       "tier": "green",
       "tiers": {
@@ -674,6 +662,18 @@
       "note": "Minimální konfigurace: DirectX 11–compatible integrated or dedicated graphics, Intel Core i3 / AMD Ryzen 3"
     },
     {
+      "title": "Shanhai Phantasm",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 750 / Intel Iris Xe Graphics or better",
+      "cpu": "Intel Core i5 or AMD Ryzen 5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 / Intel Iris Xe Graphics or better, Intel Core i5 or AMD Ryzen 5"
+    },
+    {
       "title": "SCAD",
       "tier": "green",
       "tiers": {
@@ -684,6 +684,18 @@
       "cpu": "2GHz 4 Cores",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 4000, 2GHz 4 Cores"
+    },
+    {
+      "title": "Cucumber",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DirectX 11-compatible graphics with current manufacturer drivers",
+      "cpu": "64-bit processor (x64) with SSE2",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: DirectX 11-compatible graphics with current manufacturer drivers, 64-bit processor (x64) with SSE2"
     },
     {
       "title": "Func Key",
@@ -708,18 +720,6 @@
       "cpu": "Intel i7 / Ryzen 5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD equivalent, Intel i7 / Ryzen 5"
-    },
-    {
-      "title": "Cucumber",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DirectX 11-compatible graphics with current manufacturer drivers",
-      "cpu": "64-bit processor (x64) with SSE2",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: DirectX 11-compatible graphics with current manufacturer drivers, 64-bit processor (x64) with SSE2"
     },
     {
       "title": "RogueDiceR",
