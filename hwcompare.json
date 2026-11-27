@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T15:13:08.287Z",
+  "updatedAt": "2026-11-27T16:13:53.264Z",
   "games": [
     {
       "title": "just volleyball",
@@ -374,18 +374,6 @@
       "note": "Doporučená konfigurace: GeForce GTX 1080 / Radeon RX Vega 56 / Arc A580, Intel Core i5-8600K / AMD Ryzen 5 1600"
     },
     {
-      "title": "MATE, This Place is a MESS!",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1660 (6 GB) / AMD Radeon RX 5600 XT (6 GB)",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 (6 GB) / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-10400 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "Clicky Islands",
       "tier": "green",
       "tiers": {
@@ -396,6 +384,18 @@
       "cpu": "2 GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 4000 and higher, 2 GHz"
+    },
+    {
+      "title": "MATE, This Place is a MESS!",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1660 (6 GB) / AMD Radeon RX 5600 XT (6 GB)",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 (6 GB) / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "Sol One",
@@ -504,18 +504,6 @@
       "cpu": "i5",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 4400, i5"
-    },
-    {
-      "title": "Backseat Champions",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 2060 or AMD Radeon RX 6600 XT",
-      "cpu": "Intel Core i7-13700HX / AMD Ryzen 9 series",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 2060 or AMD Radeon RX 6600 XT, Intel Core i7-13700HX / AMD Ryzen 9 series"
     },
     {
       "title": "Water TD",
@@ -794,6 +782,18 @@
       "note": "Doporučená konfigurace: Any dedicated GPU, Quad-core 2.5 GHz+"
     },
     {
+      "title": "Silver Service: Tidy Up the Grand Buffet",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (6 GB)",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-8400 / AMD Ryzen 5 2600"
+    },
+    {
       "title": "Underbloom",
       "tier": "green",
       "tiers": {
@@ -816,18 +816,6 @@
       "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 SUPER (6 GB) / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-10400 / AMD Ryzen 5 3600"
-    },
-    {
-      "title": "Silver Service: Tidy Up the Grand Buffet",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (6 GB)",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
       "title": "Cucumber",
@@ -876,6 +864,30 @@
       "cpu": "Intel i5",
       "usedMinimum": true,
       "note": "Minimální konfigurace: DirectX 12 or Vulkan capable (e.g. AMD Radeon Vega 8), Intel i5"
+    },
+    {
+      "title": "Frog Collector",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 960",
+      "cpu": "Intel Core i3-8100 or AMD Ryzen 3 1200",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 960, Intel Core i3-8100 or AMD Ryzen 3 1200"
+    },
+    {
+      "title": "Toto's Journey",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "orange"
+      },
+      "gpu": "NVIDIA GeForce RTX 4070 12 GB",
+      "cpu": "Intel Core i5-12600K / AMD Ryzen 5 5600X",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 4070 12 GB, Intel Core i5-12600K / AMD Ryzen 5 5600X"
     },
     {
       "title": "The Incident at Galley House",
@@ -1092,18 +1104,6 @@
       "cpu": "Intel i7-10700K | AMD Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia RTX 3080 | AMD RX 6800 XT | Intel Arc A770, Intel i7-10700K | AMD Ryzen 5 5600X"
-    },
-    {
-      "title": "Gears of War: E-Day",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 5060 / NVIDIA GeForce RTX 3060ti / AMD Radeon RX 6700 XT / Radeon RX 9060 XT",
-      "cpu": "AMD Ryzen 5 5600 / Intel i5-11600K",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 5060 / NVIDIA GeForce RTX 3060ti / AMD Radeon RX 6700 XT / Radeon RX 9060 XT, AMD Ryzen 5 5600 / Intel i5-11600K"
     }
   ]
 }
