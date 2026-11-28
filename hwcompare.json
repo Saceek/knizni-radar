@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T03:15:00.690Z",
+  "updatedAt": "2026-11-28T04:13:33.332Z",
   "games": [
     {
       "title": "just volleyball",
@@ -302,18 +302,6 @@
       "note": "Doporučená konfigurace: GeForce GTX 1080 / Radeon RX Vega 56 / Arc A580, Intel Core i5-8600K / AMD Ryzen 5 1600"
     },
     {
-      "title": "MATE, This Place is a MESS!",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1660 (6 GB) / AMD Radeon RX 5600 XT (6 GB)",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 (6 GB) / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-10400 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "Clicky Islands",
       "tier": "green",
       "tiers": {
@@ -324,6 +312,18 @@
       "cpu": "2 GHz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics 4000 and higher, 2 GHz"
+    },
+    {
+      "title": "MATE, This Place is a MESS!",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1660 (6 GB) / AMD Radeon RX 5600 XT (6 GB)",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 (6 GB) / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "Sol One",
@@ -434,6 +434,18 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4400, i5"
     },
     {
+      "title": "Gold Miner: Party Rush",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 1050 / Radeon RX 560 or better",
+      "cpu": "Quad-core 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600 or similar)",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1050 / Radeon RX 560 or better, Quad-core 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600 or similar)"
+    },
+    {
       "title": "Water TD",
       "tier": "red",
       "tiers": {
@@ -456,18 +468,6 @@
       "cpu": "2.5 GHz Dual Core",
       "usedMinimum": true,
       "note": "Minimální konfigurace: OpenGL 3.3+, 2.5 GHz Dual Core"
-    },
-    {
-      "title": "Gold Miner: Party Rush",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 1050 / Radeon RX 560 or better",
-      "cpu": "Quad-core 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600 or similar)",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1050 / Radeon RX 560 or better, Quad-core 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600 or similar)"
     },
     {
       "title": "Business Simulator",
@@ -566,6 +566,18 @@
       "note": "Doporučená konfigurace: nVidia GeForce 8600/9600GT, ATI/AMD Radeon HD2600/3600, Intel® Core™ i5 Processors"
     },
     {
+      "title": "Am I Nima",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD Graphics Family",
+      "cpu": "i3–4150 CPU",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics Family, i3–4150 CPU"
+    },
+    {
       "title": "A Thousand Cloys",
       "tier": "green",
       "tiers": {
@@ -600,18 +612,6 @@
       "cpu": "Intel Core 2 Duo or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Integrated Graphics (Intel HD Graphics or AMD APU), Intel Core 2 Duo or equivalent"
-    },
-    {
-      "title": "Am I Nima",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel HD Graphics Family",
-      "cpu": "i3–4150 CPU",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics Family, i3–4150 CPU"
     },
     {
       "title": "Traveloot",
@@ -650,6 +650,18 @@
       "note": "Minimální konfigurace: DirectX 11-compatible graphics with current manufacturer drivers, 64-bit processor (x64) with SSE2"
     },
     {
+      "title": "Shanhai Phantasm",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 750 / Intel Iris Xe Graphics or better",
+      "cpu": "Intel Core i5 or AMD Ryzen 5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 / Intel Iris Xe Graphics or better, Intel Core i5 or AMD Ryzen 5"
+    },
+    {
       "title": "Paper2Galgame",
       "tier": "green",
       "tiers": {
@@ -662,16 +674,28 @@
       "note": "Minimální konfigurace: DirectX 11–compatible integrated or dedicated graphics, Intel Core i3 / AMD Ryzen 3"
     },
     {
-      "title": "Shanhai Phantasm",
+      "title": "Our Life: Now & Forever",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "NVIDIA GeForce GTX 750 / Intel Iris Xe Graphics or better",
-      "cpu": "Intel Core i5 or AMD Ryzen 5",
+      "gpu": "DirectX or OpenGL compatible card",
+      "cpu": "2Ghz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: DirectX or OpenGL compatible card, 2Ghz"
+    },
+    {
+      "title": "HOOD",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Any",
+      "cpu": "Any",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 / Intel Iris Xe Graphics or better, Intel Core i5 or AMD Ryzen 5"
+      "note": "Doporučená konfigurace: Any, Any"
     },
     {
       "title": "SCAD",
@@ -758,30 +782,6 @@
       "note": "Minimální konfigurace: Any GPU that runs a web browser (the game draws a 640x360 picture), Any dual-core processor from 2015 or later"
     },
     {
-      "title": "HOOD",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Any",
-      "cpu": "Any",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Any, Any"
-    },
-    {
-      "title": "Our Life: Now & Forever",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DirectX or OpenGL compatible card",
-      "cpu": "2Ghz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: DirectX or OpenGL compatible card, 2Ghz"
-    },
-    {
       "title": "BORE",
       "tier": "green",
       "tiers": {
@@ -792,6 +792,18 @@
       "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 SUPER (6 GB) / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-10400 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Fish It!: Sort the Aquarium Shop",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1660 Super / AMD Radeon RX 5600 XT (6 GB)",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "FROG IS CRIME",
@@ -818,18 +830,6 @@
       "note": "Doporučená konfigurace: NVidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
     },
     {
-      "title": "Fish It!: Sort the Aquarium Shop",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1660 Super / AMD Radeon RX 5600 XT (6 GB)",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-10400 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "IT THINKS! - Build Your Own GPU",
       "tier": "green",
       "tiers": {
@@ -842,18 +842,6 @@
       "note": "Minimální konfigurace: DirectX 12 or Vulkan capable (e.g. AMD Radeon Vega 8), Intel i5"
     },
     {
-      "title": "Frog Collector",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 960",
-      "cpu": "Intel Core i3-8100 or AMD Ryzen 3 1200",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 960, Intel Core i3-8100 or AMD Ryzen 3 1200"
-    },
-    {
       "title": "Zombie Apocalypse Together",
       "tier": "green",
       "tiers": {
@@ -864,6 +852,18 @@
       "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / RTX 2060 6 GB, AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Frog Collector",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 960",
+      "cpu": "Intel Core i3-8100 or AMD Ryzen 3 1200",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 960, Intel Core i3-8100 or AMD Ryzen 3 1200"
     },
     {
       "title": "Toto's Journey",
