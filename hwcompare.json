@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T11:50:24.204Z",
+  "updatedAt": "2026-11-28T12:12:50.188Z",
   "games": [
     {
       "title": "just volleyball",
@@ -38,18 +38,6 @@
       "note": "Minimální konfigurace: Integrated Graphics, An Intel Pentium 4 processor or later that's SSE2 capable"
     },
     {
-      "title": "No Asteroids",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "GeForce GTX 1660 / Radeon RX 5600 XT, 4 GB VRAM",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: GeForce GTX 1660 / Radeon RX 5600 XT, 4 GB VRAM, Intel Core i5-10400 / AMD Ryzen 5 3600"
-    },
-    {
       "title": "Blacksmith Master",
       "tier": "green",
       "tiers": {
@@ -60,6 +48,18 @@
       "cpu": "Intel® Core™ i7-6700 (quad-core) / AMD® Ryzen™ 5 3400G (quad-core)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA® GeForce® GTX 760 (2 GB) / AMD® Radeon™ RX 550 (4 GB), Intel® Core™ i7-6700 (quad-core) / AMD® Ryzen™ 5 3400G (quad-core)"
+    },
+    {
+      "title": "No Asteroids",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "GeForce GTX 1660 / Radeon RX 5600 XT, 4 GB VRAM",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: GeForce GTX 1660 / Radeon RX 5600 XT, 4 GB VRAM, Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "Dungeonbound",
@@ -278,18 +278,6 @@
       "note": "Doporučená konfigurace: GTX 1660 Super / RTX 2060, 6 Go, i5-10400 / Ryzen 5 3600"
     },
     {
-      "title": "Am I Nima",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel HD Graphics Family",
-      "cpu": "i3–4150 CPU",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics Family, i3–4150 CPU"
-    },
-    {
       "title": "Lord of Undead",
       "tier": "red",
       "tiers": {
@@ -300,6 +288,18 @@
       "cpu": "Intel Core i5 / AMD Ryzen 5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: GeForce RTX 3070, Intel Core i5 / AMD Ryzen 5"
+    },
+    {
+      "title": "Am I Nima",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD Graphics Family",
+      "cpu": "i3–4150 CPU",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics Family, i3–4150 CPU"
     },
     {
       "title": "Volvy’s Adventure: Reslimed",
@@ -458,16 +458,16 @@
       "note": "Doporučená konfigurace: GeForce GTX 1050 / Radeon RX 560 or better, Quad-core 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600 or similar)"
     },
     {
-      "title": "ScopeCreep",
+      "title": "Sardoinky",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "OpenGL 3.3+",
-      "cpu": "2.5 GHz Dual Core",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: OpenGL 3.3+, 2.5 GHz Dual Core"
+      "gpu": "Dedicated GPU with OpenGL 3.0+",
+      "cpu": "2.0 GHz quad-core or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Dedicated GPU with OpenGL 3.0+, 2.0 GHz quad-core or better"
     },
     {
       "title": "Water TD",
@@ -482,16 +482,16 @@
       "note": "Doporučená konfigurace: GeForce RTX 3060 Ti / Radeon RX 6700 XT or better, 8 GB VRAM, Any 64-bit quad core"
     },
     {
-      "title": "Sardoinky",
+      "title": "ScopeCreep",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "Dedicated GPU with OpenGL 3.0+",
-      "cpu": "2.0 GHz quad-core or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Dedicated GPU with OpenGL 3.0+, 2.0 GHz quad-core or better"
+      "gpu": "OpenGL 3.3+",
+      "cpu": "2.5 GHz Dual Core",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: OpenGL 3.3+, 2.5 GHz Dual Core"
     },
     {
       "title": "底色",
@@ -554,6 +554,18 @@
       "note": "Doporučená konfigurace: Integrated Graphics Chip or better, 2.4 GHz Processor or better"
     },
     {
+      "title": "A Thousand Cloys",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GTX 960 (4GB) / AMD Radeon R9 380",
+      "cpu": "2.5Ghz or better",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: NVIDIA GTX 960 (4GB) / AMD Radeon R9 380, 2.5Ghz or better"
+    },
+    {
       "title": "Our Life: Now & Forever",
       "tier": "green",
       "tiers": {
@@ -566,16 +578,16 @@
       "note": "Minimální konfigurace: DirectX or OpenGL compatible card, 2Ghz"
     },
     {
-      "title": "A Thousand Cloys",
+      "title": "HOOD",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "NVIDIA GTX 960 (4GB) / AMD Radeon R9 380",
-      "cpu": "2.5Ghz or better",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GTX 960 (4GB) / AMD Radeon R9 380, 2.5Ghz or better"
+      "gpu": "Any",
+      "cpu": "Any",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Any, Any"
     },
     {
       "title": "Astral Hunter: Homebound",
@@ -600,18 +612,6 @@
       "cpu": "Intel Core 2 Duo or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Integrated Graphics (Intel HD Graphics or AMD APU), Intel Core 2 Duo or equivalent"
-    },
-    {
-      "title": "HOOD",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Any",
-      "cpu": "Any",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Any, Any"
     },
     {
       "title": "Idle King: Společně za kořistí",
@@ -758,18 +758,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
-      "title": "Net Worthless",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Any dedicated GPU",
-      "cpu": "Quad-core 2.5 GHz+",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Any dedicated GPU, Quad-core 2.5 GHz+"
-    },
-    {
       "title": "Underbloom",
       "tier": "green",
       "tiers": {
@@ -780,6 +768,18 @@
       "cpu": "Any dual-core processor from 2015 or later",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Any GPU that runs a web browser (the game draws a 640x360 picture), Any dual-core processor from 2015 or later"
+    },
+    {
+      "title": "Net Worthless",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Any dedicated GPU",
+      "cpu": "Quad-core 2.5 GHz+",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Any dedicated GPU, Quad-core 2.5 GHz+"
     },
     {
       "title": "Fish It!: Sort the Aquarium Shop",
@@ -830,18 +830,6 @@
       "note": "Doporučená konfigurace: NVidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
     },
     {
-      "title": "FROG IS CRIME",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "1GB",
-      "cpu": "2 GHz",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: 1GB, 2 GHz"
-    },
-    {
       "title": "IT THINKS! - Build Your Own GPU",
       "tier": "green",
       "tiers": {
@@ -852,6 +840,18 @@
       "cpu": "Intel i5",
       "usedMinimum": true,
       "note": "Minimální konfigurace: DirectX 12 or Vulkan capable (e.g. AMD Radeon Vega 8), Intel i5"
+    },
+    {
+      "title": "FROG IS CRIME",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "1GB",
+      "cpu": "2 GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 1GB, 2 GHz"
     },
     {
       "title": "Frog Collector",
