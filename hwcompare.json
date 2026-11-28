@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T04:13:33.332Z",
+  "updatedAt": "2026-11-28T05:13:29.021Z",
   "games": [
     {
       "title": "just volleyball",
@@ -14,18 +14,6 @@
       "note": "Doporučená konfigurace: NVIDIA GTX 1050 Ti / AMD RX 570 or equivalent, Intel Core i5-8400 / AMD Ryzen 5 2600 or equivalent"
     },
     {
-      "title": "Dice Hoarder",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA® GeForce GTX 1080",
-      "cpu": "Intel Core i7-8700",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA® GeForce GTX 1080, Intel Core i7-8700"
-    },
-    {
       "title": "SHRED A BILLION",
       "tier": "orange",
       "tiers": {
@@ -36,6 +24,18 @@
       "cpu": "Intel Core i7-8700 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "Dice Hoarder",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA® GeForce GTX 1080",
+      "cpu": "Intel Core i7-8700",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA® GeForce GTX 1080, Intel Core i7-8700"
     },
     {
       "title": "Melvor Idle 2: A RuneScape Adventure",
@@ -374,18 +374,6 @@
       "note": "Minimální konfigurace: 1Gb Video Memory, capable of OpenGL 3.0+ support (2.1 with ARB extensions acceptable), 2.0 Ghz"
     },
     {
-      "title": "MoSimulator",
-      "tier": "orange",
-      "tiers": {
-        "allyx": "orange",
-        "pc": "green"
-      },
-      "gpu": "4GB VRAM, RTX 2060 or better",
-      "cpu": "Modern multi-core processor",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: 4GB VRAM, RTX 2060 or better, Modern multi-core processor"
-    },
-    {
       "title": "PC Store Together",
       "tier": "green",
       "tiers": {
@@ -396,6 +384,18 @@
       "cpu": "Intel Core i5 @ 2.5 GHz or equivalent",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 1060 or AMD Radeon RX 6600 XT, Intel Core i5 @ 2.5 GHz or equivalent"
+    },
+    {
+      "title": "MoSimulator",
+      "tier": "orange",
+      "tiers": {
+        "allyx": "orange",
+        "pc": "green"
+      },
+      "gpu": "4GB VRAM, RTX 2060 or better",
+      "cpu": "Modern multi-core processor",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: 4GB VRAM, RTX 2060 or better, Modern multi-core processor"
     },
     {
       "title": "BALL PICKER - Clean Up the Golf Yard",
@@ -506,6 +506,18 @@
       "note": "Doporučená konfigurace: Dedicated GPU with OpenGL 3.0+, 2.0 GHz quad-core or better"
     },
     {
+      "title": "Am I Nima",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD Graphics Family",
+      "cpu": "i3–4150 CPU",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics Family, i3–4150 CPU"
+    },
+    {
       "title": "Internet Cafe 98",
       "tier": "green",
       "tiers": {
@@ -566,18 +578,6 @@
       "note": "Doporučená konfigurace: nVidia GeForce 8600/9600GT, ATI/AMD Radeon HD2600/3600, Intel® Core™ i5 Processors"
     },
     {
-      "title": "Am I Nima",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel HD Graphics Family",
-      "cpu": "i3–4150 CPU",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics Family, i3–4150 CPU"
-    },
-    {
       "title": "A Thousand Cloys",
       "tier": "green",
       "tiers": {
@@ -626,6 +626,18 @@
       "note": "Minimální konfigurace: Integrated Graphics, 2.0GHz"
     },
     {
+      "title": "Our Life: Now & Forever",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DirectX or OpenGL compatible card",
+      "cpu": "2Ghz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: DirectX or OpenGL compatible card, 2Ghz"
+    },
+    {
       "title": "Malignus",
       "tier": "green",
       "tiers": {
@@ -636,6 +648,18 @@
       "cpu": "Intel Core i5-12400 / AMD Ryzen 5 5600 (6 cores)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / AMD Radeon RX 6600, 6 GB VRAM, Intel Core i5-12400 / AMD Ryzen 5 5600 (6 cores)"
+    },
+    {
+      "title": "HOOD",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Any",
+      "cpu": "Any",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Any, Any"
     },
     {
       "title": "Cucumber",
@@ -672,30 +696,6 @@
       "cpu": "Intel Core i3 / AMD Ryzen 3",
       "usedMinimum": true,
       "note": "Minimální konfigurace: DirectX 11–compatible integrated or dedicated graphics, Intel Core i3 / AMD Ryzen 3"
-    },
-    {
-      "title": "Our Life: Now & Forever",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DirectX or OpenGL compatible card",
-      "cpu": "2Ghz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: DirectX or OpenGL compatible card, 2Ghz"
-    },
-    {
-      "title": "HOOD",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Any",
-      "cpu": "Any",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Any, Any"
     },
     {
       "title": "SCAD",
