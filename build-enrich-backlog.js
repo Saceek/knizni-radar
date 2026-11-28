@@ -143,13 +143,55 @@ function bestCsfdMatch(items, title) {
   return bestScore >= 0.5 ? best : null;
 }
 
+// ---- plakát odjinud, když ho ČSFD nemá (menší dokumenty, sportovní série) ----
+const badPoster = (u) => !u || u.startsWith("data:") || /logo-social|placeholder|poster-free/i.test(u);
+const normT = (s) => (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, " ").trim();
+const yearOk = (a, b) => !a || !b || Math.abs(+a - +b) <= 1;
+
+// JustWatch (zná české i originální názvy)
+async function justWatchPoster(title, year, isSeries) {
+  const q = `query S($c: Country!, $q: String!) { popularTitles(country: $c, first: 5, filter: { searchQuery: $q }) {
+    edges { node { objectType content(country: $c, language: "cs") { title originalTitle originalReleaseYear posterUrl } } } } }`;
+  const r = await fetch("https://apis.justwatch.com/graphql", { method: "POST", headers: { "Content-Type": "application/json", "User-Agent": UA },
+    body: JSON.stringify({ query: q, variables: { c: "CZ", q: title } }) });
+  const j = await r.json();
+  const hit = (j.data?.popularTitles?.edges || []).map((e) => e.node).find((n) => {
+    const c = n.content || {};
+    return c.posterUrl && n.objectType === (isSeries ? "SHOW" : "MOVIE") && [c.title, c.originalTitle].some((t) => normT(t) === normT(title)) && yearOk(c.originalReleaseYear, year);
+  });
+  return hit ? "https://images.justwatch.com" + hit.content.posterUrl.replace("{profile}", "s332").replace("{format}", "jpg") : null;
+}
+
+// IMDb – veřejné našeptávání (bez klíče), zná i malé dokumenty a minisérie
+async function imdbPoster(title, year) {
+  const r = await fetch(`https://v3.sg.media-imdb.com/suggestion/x/${encodeURIComponent(title.toLowerCase())}.json`, { headers: { "User-Agent": UA } });
+  const j = await r.json();
+  const hit = (j.d || []).find((x) => x.i?.imageUrl && /^tt/.test(x.id) && normT(x.l) === normT(title) && yearOk(x.y, year));
+  return hit ? hit.i.imageUrl.replace(/\._V1_.*\.jpg$/, "._V1_SX400.jpg") : null;
+}
+
+async function fillMissingPosters(backlog) {
+  let n = 0;
+  for (const item of backlog.filter((x) => x._category === "movie" && badPoster(x.poster))) {
+    try {
+      const p = (await justWatchPoster(item.title, item.year, item.type === "seriál")) || (await imdbPoster(item.title, item.year));
+      console.log(`  plakát ${item.title}: ${p ? "✓ " + p : "✗ nenalezen"}`);
+      if (p) { item.poster = p; n++; }
+      else if (item.poster && badPoster(item.poster)) { delete item.poster; n++; }   // logo ČSFD radši vůbec
+    } catch (e) { console.warn(`  ! plakát ${item.title}: ${e.message}`); }
+    await sleep(400);
+  }
+  return n;
+}
+
 async function scrapeCsfdDetail(page, url, fallbackTitle) {
   await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
   await page.waitForTimeout(CSFD_WAIT);
   const detailHtml = await page.content();
   const $d = cheerio.load(detailHtml);
 
-  const poster = $d("meta[property='og:image']").attr("content") || null;
+  const og = $d("meta[property='og:image']").attr("content") || null;
+  const poster = badPoster(og) ? null : og;   // bez plakátu dává ČSFD logo webu – doplní fillMissingPosters
   const titleFromPage = $d("h1").first().text().trim() || fallbackTitle;
   const originText = $d(".origin").text().replace(/\s+/g, " ").trim();
   const country = (originText.split(/\d{4}/)[0] || "").replace(/[,·]/g, "").trim() || null;
@@ -347,7 +389,8 @@ async function main() {
   const toEnrichMovies = backlog.filter((item) => item._category === "movie" && item.rating == null);
   const toEnrichPalmknihy = backlog.filter((item) => (item._category === "book" || !item._category) && item.palmknihy === undefined);
 
-  if (!toEnrich.length && !toEnrichMovies.length && !toEnrichPalmknihy.length && !toEnrichPages.length && !changed) { console.log("[enrich] vše obohaceno, nic k dělání"); return; }
+  const needPoster = backlog.some((x) => x._category === "movie" && badPoster(x.poster));
+  if (!toEnrich.length && !toEnrichMovies.length && !toEnrichPalmknihy.length && !toEnrichPages.length && !changed && !needPoster) { console.log("[enrich] vše obohaceno, nic k dělání"); return; }
   if (toEnrich.length) console.log(`[enrich] ${toEnrich.length} knih k obohacení`);
   for (const item of toEnrich) {
     console.log(`  → ${item.title}`);
@@ -447,6 +490,8 @@ async function main() {
 
     await browser.close();
   }
+
+  if (needPoster || toEnrichMovies.length) changed += await fillMissingPosters(backlog);
 
   if (changed > 0) {
     fs.writeFileSync(BACKLOG_FILE, JSON.stringify(backlog, null, 2));

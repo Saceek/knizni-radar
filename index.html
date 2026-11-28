@@ -737,7 +737,7 @@ function progressSlotHtml(cat){
 
   const pct = item.total ? Math.min(100, Math.round(item.current/item.total*100)) : 0;
   const isGame = cat.startsWith("game");
-  const img = item.image
+  const img = !badImg(item.image)
     ? (isGame ? imgTag(item.image) : `${imgTag(item.image,'class="bl"')}${imgTag(item.image,'class="fg"')}<div class="bt"><b>${esc(item.title)}</b><small>${esc(item.sub||cfg.label)}</small></div>`)
     : `<div class="noimg" style="background:${grad(item.title)}">${esc(item.title)}</div>`;
   return `<div class="cont">
@@ -1332,6 +1332,8 @@ function ptBadge(title, url){
 // Quest drží vlastní kopii názvu a obrázku z chvíle spuštění. Titul přidaný odkazem a hned rozjetý
 // tak zůstal s názvem z adresy a bez plakátu, i když je obohacení později doplní do Mého seznamu.
 // Spáruje se podle odkazu (ČSFD / Steam / databazeknih ID) a chybějící údaje se převezmou.
+// logo ČSFD (og:image u titulů bez plakátu) a zástupné obrázky = jako by obrázek nebyl
+const badImg = u => !u || /^data:|logo-social|placeholder|poster-free/i.test(u);
 const urlKey = u => { u=String(u||""); const m=u.match(/csfd\.cz\/(?:film|serial)\/(\d+)/)||u.match(/store\.steampowered\.com\/app\/(\d+)/)||u.match(/databazeknih\.cz\/(?:prehled-knihy|knihy)\/[^?#]*?-(\d+)\/?(?:[?#]|$)/); return m ? m[0].replace(/\/$/,"") : u.replace(/[?#].*$/,"").replace(/\/(prehled\/?)?$/,""); };
 function healQuests(){
   if(!S.progress) return;
@@ -1346,7 +1348,7 @@ function healQuests(){
     if(!b) continue;
     const img = b.cover||b.poster||b.image||null;
     const sub = b.author||b.year||null;
-    if(!item.image && img){ item.image = img; changed = true; }
+    if(badImg(item.image) && !badImg(img)){ item.image = img; changed = true; }
     if(!item.sub && sub){ item.sub = sub; changed = true; }
     if(k && b.title && item.title!==b.title){ item.title = b.title; changed = true; }  // jen při shodě odkazu
   }
@@ -1691,7 +1693,7 @@ function backlogComicTile(c){
     below:`<div class="qa">${startBtn("comic", c.title)}<button class="qb ico" data-setcatval="book" data-setcattitle="${esc(c.title)}" title="Přeřadit do knih">${icon("book")}</button>${rmBtn(c.title,"comic")}${xpTag(60)}</div>`});
 }
 function backlogMovieTile(m){
-  return pTile({title:m.title, img:m.poster, rating:m.rating, ratingTitle:"ČSFD", href:m.url,
+  return pTile({title:m.title, img:badImg(m.poster)?null:m.poster, rating:m.rating, ratingTitle:"ČSFD", href:m.url,
     sub:`${m.type==="seriál"?"Seriál":"Film"}${(m.vod||[])[0]?` · <span class="vod ${vodClass(m.vod[0])}">${esc(m.vod[0])}</span>`:m.year?` · ${esc(m.year)}`:""}`,
     below:`<div class="qa">${questPlatBtn("movie_solo",m.title,icon("film"),"Začít sám")}${questPlatBtn("movie_duo",m.title,icon("heart"),"Začít s manželkou")}${rmBtn(m.title,"movie")}${xpTag(50)}</div>`});
 }
