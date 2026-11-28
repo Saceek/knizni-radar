@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T05:13:29.021Z",
+  "updatedAt": "2026-11-28T06:13:41.802Z",
   "games": [
     {
       "title": "just volleyball",
@@ -422,6 +422,18 @@
       "note": "Minimální konfigurace: Ati mobility radeon HD 5000, Intel i3 CPU m370 2.40GHz"
     },
     {
+      "title": "Am I Nima",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD Graphics Family",
+      "cpu": "i3–4150 CPU",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics Family, i3–4150 CPU"
+    },
+    {
       "title": "Zkoušky v čínském stylu",
       "tier": "green",
       "tiers": {
@@ -470,6 +482,18 @@
       "note": "Minimální konfigurace: OpenGL 3.3+, 2.5 GHz Dual Core"
     },
     {
+      "title": "Sardoinky",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Dedicated GPU with OpenGL 3.0+",
+      "cpu": "2.0 GHz quad-core or better",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Dedicated GPU with OpenGL 3.0+, 2.0 GHz quad-core or better"
+    },
+    {
       "title": "Business Simulator",
       "tier": "green",
       "tiers": {
@@ -494,30 +518,6 @@
       "note": "Minimální konfigurace: NVIDIA GeForce GTX 630 2GB / AMD Radeon R5 430  2GB, Intel Core IS或AMD equivalent"
     },
     {
-      "title": "Sardoinky",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Dedicated GPU with OpenGL 3.0+",
-      "cpu": "2.0 GHz quad-core or better",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Dedicated GPU with OpenGL 3.0+, 2.0 GHz quad-core or better"
-    },
-    {
-      "title": "Am I Nima",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Intel HD Graphics Family",
-      "cpu": "i3–4150 CPU",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Intel HD Graphics Family, i3–4150 CPU"
-    },
-    {
       "title": "Internet Cafe 98",
       "tier": "green",
       "tiers": {
@@ -540,18 +540,6 @@
       "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD Radeon RX 580, Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
-      "title": "Graveyard Orbit",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GTX 1060 / AMD RX 580 (4 GB VRAM)",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 580 (4 GB VRAM), Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "イケ勘 - イケメンになるかどうか勘で付き合うゲーム -",
@@ -626,6 +614,18 @@
       "note": "Minimální konfigurace: Integrated Graphics, 2.0GHz"
     },
     {
+      "title": "HOOD",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Any",
+      "cpu": "Any",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Any, Any"
+    },
+    {
       "title": "Our Life: Now & Forever",
       "tier": "green",
       "tiers": {
@@ -648,18 +648,6 @@
       "cpu": "Intel Core i5-12400 / AMD Ryzen 5 5600 (6 cores)",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / AMD Radeon RX 6600, 6 GB VRAM, Intel Core i5-12400 / AMD Ryzen 5 5600 (6 cores)"
-    },
-    {
-      "title": "HOOD",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Any",
-      "cpu": "Any",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: Any, Any"
     },
     {
       "title": "Cucumber",
@@ -710,18 +698,6 @@
       "note": "Minimální konfigurace: Intel HD Graphics 4000, 2GHz 4 Cores"
     },
     {
-      "title": "Func Key",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Integrated graphics",
-      "cpu": "Intel Core i3",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Integrated graphics, Intel Core i3"
-    },
-    {
       "title": "Warpack",
       "tier": "green",
       "tiers": {
@@ -732,6 +708,18 @@
       "cpu": "Intel i7 / Ryzen 5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD equivalent, Intel i7 / Ryzen 5"
+    },
+    {
+      "title": "Func Key",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Integrated graphics",
+      "cpu": "Intel Core i3",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Integrated graphics, Intel Core i3"
     },
     {
       "title": "RogueDiceR",
@@ -758,18 +746,6 @@
       "note": "Doporučená konfigurace: Any dedicated GPU, Quad-core 2.5 GHz+"
     },
     {
-      "title": "Silver Service: Tidy Up the Grand Buffet",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (6 GB)",
-      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-8400 / AMD Ryzen 5 2600"
-    },
-    {
       "title": "Underbloom",
       "tier": "green",
       "tiers": {
@@ -782,16 +758,16 @@
       "note": "Minimální konfigurace: Any GPU that runs a web browser (the game draws a 640x360 picture), Any dual-core processor from 2015 or later"
     },
     {
-      "title": "BORE",
+      "title": "Silver Service: Tidy Up the Grand Buffet",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "NVIDIA GeForce GTX 1660 SUPER (6 GB) / AMD Radeon RX 5600 XT (6 GB)",
-      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "gpu": "NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (6 GB)",
+      "cpu": "Intel Core i5-8400 / AMD Ryzen 5 2600",
       "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 SUPER (6 GB) / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-10400 / AMD Ryzen 5 3600"
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-8400 / AMD Ryzen 5 2600"
     },
     {
       "title": "Fish It!: Sort the Aquarium Shop",
@@ -804,6 +780,18 @@
       "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-10400 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "BORE",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 1660 SUPER (6 GB) / AMD Radeon RX 5600 XT (6 GB)",
+      "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 SUPER (6 GB) / AMD Radeon RX 5600 XT (6 GB), Intel Core i5-10400 / AMD Ryzen 5 3600"
     },
     {
       "title": "FROG IS CRIME",
