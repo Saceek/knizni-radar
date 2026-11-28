@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T01:13:17.475Z",
+  "updatedAt": "2026-11-28T02:14:15.016Z",
   "games": [
     {
       "title": "just volleyball",
@@ -638,6 +638,18 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / AMD Radeon RX 6600, 6 GB VRAM, Intel Core i5-12400 / AMD Ryzen 5 5600 (6 cores)"
     },
     {
+      "title": "Cucumber",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DirectX 11-compatible graphics with current manufacturer drivers",
+      "cpu": "64-bit processor (x64) with SSE2",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: DirectX 11-compatible graphics with current manufacturer drivers, 64-bit processor (x64) with SSE2"
+    },
+    {
       "title": "Paper2Galgame",
       "tier": "green",
       "tiers": {
@@ -660,18 +672,6 @@
       "cpu": "Intel Core i5 or AMD Ryzen 5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 / Intel Iris Xe Graphics or better, Intel Core i5 or AMD Ryzen 5"
-    },
-    {
-      "title": "Cucumber",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DirectX 11-compatible graphics with current manufacturer drivers",
-      "cpu": "64-bit processor (x64) with SSE2",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: DirectX 11-compatible graphics with current manufacturer drivers, 64-bit processor (x64) with SSE2"
     },
     {
       "title": "SCAD",
@@ -708,6 +708,18 @@
       "cpu": "Intel i7 / Ryzen 5",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD equivalent, Intel i7 / Ryzen 5"
+    },
+    {
+      "title": "Am I Nima",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Intel HD Graphics Family",
+      "cpu": "i3–4150 CPU",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Intel HD Graphics Family, i3–4150 CPU"
     },
     {
       "title": "RogueDiceR",
@@ -758,6 +770,18 @@
       "note": "Minimální konfigurace: Any GPU that runs a web browser (the game draws a 640x360 picture), Any dual-core processor from 2015 or later"
     },
     {
+      "title": "Our Life: Now & Forever",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DirectX or OpenGL compatible card",
+      "cpu": "2Ghz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: DirectX or OpenGL compatible card, 2Ghz"
+    },
+    {
       "title": "BORE",
       "tier": "green",
       "tiers": {
@@ -792,6 +816,18 @@
       "cpu": "Ryzen 9 3900XT or equivalent",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
+    },
+    {
+      "title": "HOOD",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Any",
+      "cpu": "Any",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: Any, Any"
     },
     {
       "title": "Fish It!: Sort the Aquarium Shop",
@@ -1056,18 +1092,6 @@
       "cpu": "Intel i7-10700K | AMD Ryzen 5 5600X",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: Nvidia RTX 3080 | AMD RX 6800 XT | Intel Arc A770, Intel i7-10700K | AMD Ryzen 5 5600X"
-    },
-    {
-      "title": "Gears of War: E-Day",
-      "tier": "red",
-      "tiers": {
-        "allyx": "red",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce RTX 5060 / NVIDIA GeForce RTX 3060ti / AMD Radeon RX 6700 XT / Radeon RX 9060 XT",
-      "cpu": "AMD Ryzen 5 5600 / Intel i5-11600K",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 5060 / NVIDIA GeForce RTX 3060ti / AMD Radeon RX 6700 XT / Radeon RX 9060 XT, AMD Ryzen 5 5600 / Intel i5-11600K"
     }
   ]
 }
