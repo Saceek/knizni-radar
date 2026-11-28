@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T06:13:41.802Z",
+  "updatedAt": "2026-11-28T07:13:47.548Z",
   "games": [
     {
       "title": "just volleyball",
@@ -410,18 +410,6 @@
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1080 / AMD Radeon RX 5700 XT, Intel Core i7-8700 / AMD Ryzen 5 3600"
     },
     {
-      "title": "Mirklurk: Every Step Matters",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Ati mobility radeon HD 5000",
-      "cpu": "Intel i3 CPU m370 2.40GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Ati mobility radeon HD 5000, Intel i3 CPU m370 2.40GHz"
-    },
-    {
       "title": "Am I Nima",
       "tier": "green",
       "tiers": {
@@ -432,6 +420,18 @@
       "cpu": "i3–4150 CPU",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Intel HD Graphics Family, i3–4150 CPU"
+    },
+    {
+      "title": "Mirklurk: Every Step Matters",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Ati mobility radeon HD 5000",
+      "cpu": "Intel i3 CPU m370 2.40GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Ati mobility radeon HD 5000, Intel i3 CPU m370 2.40GHz"
     },
     {
       "title": "Zkoušky v čínském stylu",
@@ -458,6 +458,18 @@
       "note": "Doporučená konfigurace: GeForce GTX 1050 / Radeon RX 560 or better, Quad-core 3.0 GHz (Intel Core i5-8400 / AMD Ryzen 5 2600 or similar)"
     },
     {
+      "title": "ScopeCreep",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "OpenGL 3.3+",
+      "cpu": "2.5 GHz Dual Core",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: OpenGL 3.3+, 2.5 GHz Dual Core"
+    },
+    {
       "title": "Water TD",
       "tier": "red",
       "tiers": {
@@ -470,16 +482,16 @@
       "note": "Doporučená konfigurace: GeForce RTX 3060 Ti / Radeon RX 6700 XT or better, 8 GB VRAM, Any 64-bit quad core"
     },
     {
-      "title": "ScopeCreep",
+      "title": "底色",
       "tier": "green",
       "tiers": {
         "allyx": "green",
         "pc": "green"
       },
-      "gpu": "OpenGL 3.3+",
-      "cpu": "2.5 GHz Dual Core",
+      "gpu": "NVIDIA GeForce GTX 630 2GB / AMD Radeon R5 430  2GB",
+      "cpu": "Intel Core IS或AMD equivalent",
       "usedMinimum": true,
-      "note": "Minimální konfigurace: OpenGL 3.3+, 2.5 GHz Dual Core"
+      "note": "Minimální konfigurace: NVIDIA GeForce GTX 630 2GB / AMD Radeon R5 430  2GB, Intel Core IS或AMD equivalent"
     },
     {
       "title": "Sardoinky",
@@ -504,18 +516,6 @@
       "cpu": "i5 7600K / Ryzen 5 2600x",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GTX 1060 / AMD RX 480, i5 7600K / Ryzen 5 2600x"
-    },
-    {
-      "title": "底色",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 630 2GB / AMD Radeon R5 430  2GB",
-      "cpu": "Intel Core IS或AMD equivalent",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: NVIDIA GeForce GTX 630 2GB / AMD Radeon R5 430  2GB, Intel Core IS或AMD equivalent"
     },
     {
       "title": "Internet Cafe 98",
@@ -554,18 +554,6 @@
       "note": "Doporučená konfigurace: Integrated Graphics Chip or better, 2.4 GHz Processor or better"
     },
     {
-      "title": "Astral Hunter: Homebound",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "nVidia GeForce 8600/9600GT, ATI/AMD Radeon HD2600/3600",
-      "cpu": "Intel® Core™ i5 Processors",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: nVidia GeForce 8600/9600GT, ATI/AMD Radeon HD2600/3600, Intel® Core™ i5 Processors"
-    },
-    {
       "title": "A Thousand Cloys",
       "tier": "green",
       "tiers": {
@@ -576,6 +564,18 @@
       "cpu": "2.5Ghz or better",
       "usedMinimum": true,
       "note": "Minimální konfigurace: NVIDIA GTX 960 (4GB) / AMD Radeon R9 380, 2.5Ghz or better"
+    },
+    {
+      "title": "Astral Hunter: Homebound",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "nVidia GeForce 8600/9600GT, ATI/AMD Radeon HD2600/3600",
+      "cpu": "Intel® Core™ i5 Processors",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: nVidia GeForce 8600/9600GT, ATI/AMD Radeon HD2600/3600, Intel® Core™ i5 Processors"
     },
     {
       "title": "Idle King: Společně za kořistí",
@@ -602,18 +602,6 @@
       "note": "Minimální konfigurace: Integrated Graphics (Intel HD Graphics or AMD APU), Intel Core 2 Duo or equivalent"
     },
     {
-      "title": "Traveloot",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "Integrated Graphics",
-      "cpu": "2.0GHz",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: Integrated Graphics, 2.0GHz"
-    },
-    {
       "title": "HOOD",
       "tier": "green",
       "tiers": {
@@ -636,6 +624,18 @@
       "cpu": "2Ghz",
       "usedMinimum": true,
       "note": "Minimální konfigurace: DirectX or OpenGL compatible card, 2Ghz"
+    },
+    {
+      "title": "Traveloot",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "Integrated Graphics",
+      "cpu": "2.0GHz",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: Integrated Graphics, 2.0GHz"
     },
     {
       "title": "Malignus",
@@ -662,18 +662,6 @@
       "note": "Minimální konfigurace: DirectX 11-compatible graphics with current manufacturer drivers, 64-bit processor (x64) with SSE2"
     },
     {
-      "title": "Shanhai Phantasm",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "NVIDIA GeForce GTX 750 / Intel Iris Xe Graphics or better",
-      "cpu": "Intel Core i5 or AMD Ryzen 5",
-      "usedMinimum": false,
-      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 / Intel Iris Xe Graphics or better, Intel Core i5 or AMD Ryzen 5"
-    },
-    {
       "title": "Paper2Galgame",
       "tier": "green",
       "tiers": {
@@ -684,6 +672,18 @@
       "cpu": "Intel Core i3 / AMD Ryzen 3",
       "usedMinimum": true,
       "note": "Minimální konfigurace: DirectX 11–compatible integrated or dedicated graphics, Intel Core i3 / AMD Ryzen 3"
+    },
+    {
+      "title": "Shanhai Phantasm",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce GTX 750 / Intel Iris Xe Graphics or better",
+      "cpu": "Intel Core i5 or AMD Ryzen 5",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce GTX 750 / Intel Iris Xe Graphics or better, Intel Core i5 or AMD Ryzen 5"
     },
     {
       "title": "SCAD",
@@ -720,6 +720,18 @@
       "cpu": "Intel Core i3",
       "usedMinimum": true,
       "note": "Minimální konfigurace: Integrated graphics, Intel Core i3"
+    },
+    {
+      "title": "Arctic Drive",
+      "tier": "red",
+      "tiers": {
+        "allyx": "red",
+        "pc": "green"
+      },
+      "gpu": "NVIDIA GeForce RTX 3060 or equivalent",
+      "cpu": "Intel Core i5 10400 3.1 GHz or AMD Ryzen 5 2600x 3.1 GHz",
+      "usedMinimum": false,
+      "note": "Doporučená konfigurace: NVIDIA GeForce RTX 3060 or equivalent, Intel Core i5 10400 3.1 GHz or AMD Ryzen 5 2600x 3.1 GHz"
     },
     {
       "title": "RogueDiceR",
@@ -818,18 +830,6 @@
       "note": "Doporučená konfigurace: NVidia 3060 or equivalent, Ryzen 9 3900XT or equivalent"
     },
     {
-      "title": "IT THINKS! - Build Your Own GPU",
-      "tier": "green",
-      "tiers": {
-        "allyx": "green",
-        "pc": "green"
-      },
-      "gpu": "DirectX 12 or Vulkan capable (e.g. AMD Radeon Vega 8)",
-      "cpu": "Intel i5",
-      "usedMinimum": true,
-      "note": "Minimální konfigurace: DirectX 12 or Vulkan capable (e.g. AMD Radeon Vega 8), Intel i5"
-    },
-    {
       "title": "Zombie Apocalypse Together",
       "tier": "green",
       "tiers": {
@@ -840,6 +840,18 @@
       "cpu": "Intel Core i5-10400 / AMD Ryzen 5 3600",
       "usedMinimum": false,
       "note": "Doporučená konfigurace: NVIDIA GeForce GTX 1660 Super / RTX 2060 6 GB, AMD Radeon RX 5600 XT, Intel Core i5-10400 / AMD Ryzen 5 3600"
+    },
+    {
+      "title": "IT THINKS! - Build Your Own GPU",
+      "tier": "green",
+      "tiers": {
+        "allyx": "green",
+        "pc": "green"
+      },
+      "gpu": "DirectX 12 or Vulkan capable (e.g. AMD Radeon Vega 8)",
+      "cpu": "Intel i5",
+      "usedMinimum": true,
+      "note": "Minimální konfigurace: DirectX 12 or Vulkan capable (e.g. AMD Radeon Vega 8), Intel i5"
     },
     {
       "title": "Frog Collector",
